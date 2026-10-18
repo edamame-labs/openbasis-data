@@ -1,0 +1,5684 @@
+{
+ "generatedAt": "2026-10-18T23:05:06.839Z",
+ "state": "NH",
+ "blocks": 25317,
+ "layers": [
+  {
+   "id": "cd",
+   "label": "Congress",
+   "body": "U.S. House",
+   "jurisdiction": "New Hampshire",
+   "districtLabel": "Congressional District"
+  },
+  {
+   "id": "sldu",
+   "label": "State Senate",
+   "body": "New Hampshire State Senate",
+   "jurisdiction": "New Hampshire",
+   "districtLabel": "Senate District"
+  },
+  {
+   "id": "sldl",
+   "label": "State House",
+   "body": "New Hampshire House of Representatives",
+   "jurisdiction": "New Hampshire",
+   "districtLabel": "House District"
+  }
+ ],
+ "districts": {
+  "cd:1": {
+   "layer": "cd",
+   "district": "1",
+   "pop": 688764,
+   "bbox": [
+    -71.70635,
+    42.79075,
+    -70.60562,
+    44.2849
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:20",
+     "pop": 57841
+    },
+    {
+     "key": "sldu:16",
+     "pop": 57841
+    },
+    {
+     "key": "sldu:23",
+     "pop": 57395
+    },
+    {
+     "key": "sldu:21",
+     "pop": 56894
+    },
+    {
+     "key": "sldu:4",
+     "pop": 56519
+    },
+    {
+     "key": "sldu:24",
+     "pop": 56483
+    },
+    {
+     "key": "sldu:6",
+     "pop": 55976
+    },
+    {
+     "key": "sldu:3",
+     "pop": 53159
+    },
+    {
+     "key": "sldu:18",
+     "pop": 48107
+    },
+    {
+     "key": "sldu:19",
+     "pop": 43315
+    },
+    {
+     "key": "sldu:2",
+     "pop": 41572
+    },
+    {
+     "key": "sldl:rockingham13",
+     "pop": 34317
+    },
+    {
+     "key": "sldu:14",
+     "pop": 31772
+    },
+    {
+     "key": "sldu:11",
+     "pop": 26632
+    },
+    {
+     "key": "sldl:hillsborough12",
+     "pop": 26632
+    },
+    {
+     "key": "sldl:rockingham16",
+     "pop": 25826
+    },
+    {
+     "key": "sldu:9",
+     "pop": 23322
+    },
+    {
+     "key": "sldl:hillsborough2",
+     "pop": 23322
+    },
+    {
+     "key": "sldl:hillsborough29",
+     "pop": 18577
+    },
+    {
+     "key": "sldl:rockingham29",
+     "pop": 16214
+    },
+    {
+     "key": "sldl:rockingham11",
+     "pop": 16049
+    },
+    {
+     "key": "sldl:strafford10",
+     "pop": 15490
+    },
+    {
+     "key": "sldl:merrimack10",
+     "pop": 14871
+    },
+    {
+     "key": "sldl:strafford12",
+     "pop": 14452
+    },
+    {
+     "key": "sldl:belknap6",
+     "pop": 14398
+    },
+    {
+     "key": "sldl:belknap5",
+     "pop": 14117
+    },
+    {
+     "key": "sldl:strafford4",
+     "pop": 13556
+    },
+    {
+     "key": "sldl:rockingham20",
+     "pop": 13544
+    },
+    {
+     "key": "sldl:strafford11",
+     "pop": 11510
+    },
+    {
+     "key": "sldl:rockingham10",
+     "pop": 11199
+    },
+    {
+     "key": "sldl:belknap7",
+     "pop": 10809
+    },
+    {
+     "key": "sldl:rockingham4",
+     "pop": 10684
+    },
+    {
+     "key": "sldl:carroll3",
+     "pop": 10295
+    },
+    {
+     "key": "sldu:17",
+     "pop": 10144
+    },
+    {
+     "key": "sldl:rockingham2",
+     "pop": 9959
+    },
+    {
+     "key": "sldl:strafford2",
+     "pop": 9901
+    },
+    {
+     "key": "sldl:carroll1",
+     "pop": 9822
+    },
+    {
+     "key": "sldl:carroll4",
+     "pop": 9741
+    },
+    {
+     "key": "sldl:hillsborough21",
+     "pop": 9696
+    },
+    {
+     "key": "sldl:hillsborough17",
+     "pop": 9677
+    },
+    {
+     "key": "sldl:hillsborough22",
+     "pop": 9665
+    },
+    {
+     "key": "sldl:hillsborough26",
+     "pop": 9644
+    },
+    {
+     "key": "sldl:hillsborough24",
+     "pop": 9643
+    },
+    {
+     "key": "sldl:hillsborough18",
+     "pop": 9637
+    },
+    {
+     "key": "sldl:hillsborough25",
+     "pop": 9631
+    },
+    {
+     "key": "sldl:hillsborough20",
+     "pop": 9627
+    },
+    {
+     "key": "sldl:hillsborough15",
+     "pop": 9622
+    },
+    {
+     "key": "sldl:hillsborough23",
+     "pop": 9611
+    },
+    {
+     "key": "sldl:rockingham24",
+     "pop": 9610
+    },
+    {
+     "key": "sldl:hillsborough19",
+     "pop": 9608
+    },
+    {
+     "key": "sldl:hillsborough16",
+     "pop": 9583
+    },
+    {
+     "key": "sldl:rockingham15",
+     "pop": 8998
+    },
+    {
+     "key": "sldl:carroll6",
+     "pop": 8883
+    },
+    {
+     "key": "sldl:rockingham14",
+     "pop": 8643
+    },
+    {
+     "key": "sldl:rockingham30",
+     "pop": 8401
+    },
+    {
+     "key": "sldu:22",
+     "pop": 7830
+    },
+    {
+     "key": "sldl:rockingham12",
+     "pop": 7669
+    },
+    {
+     "key": "sldl:belknap4",
+     "pop": 7314
+    },
+    {
+     "key": "sldl:rockingham5",
+     "pop": 7125
+    },
+    {
+     "key": "sldl:belknap3",
+     "pop": 6988
+    },
+    {
+     "key": "sldl:strafford1",
+     "pop": 6722
+    },
+    {
+     "key": "sldl:belknap2",
+     "pop": 6662
+    },
+    {
+     "key": "sldl:rockingham9",
+     "pop": 6548
+    },
+    {
+     "key": "sldl:strafford16",
+     "pop": 5814
+    },
+    {
+     "key": "sldl:strafford13",
+     "pop": 5511
+    },
+    {
+     "key": "sldl:strafford8",
+     "pop": 5498
+    },
+    {
+     "key": "sldl:strafford14",
+     "pop": 5482
+    },
+    {
+     "key": "sldl:strafford17",
+     "pop": 5440
+    },
+    {
+     "key": "sldl:strafford15",
+     "pop": 5422
+    },
+    {
+     "key": "sldl:strafford9",
+     "pop": 5410
+    },
+    {
+     "key": "sldl:strafford7",
+     "pop": 5390
+    },
+    {
+     "key": "sldl:strafford6",
+     "pop": 5388
+    },
+    {
+     "key": "sldl:strafford5",
+     "pop": 5387
+    },
+    {
+     "key": "sldl:rockingham3",
+     "pop": 5232
+    },
+    {
+     "key": "sldl:rockingham1",
+     "pop": 5229
+    },
+    {
+     "key": "sldl:rockingham22",
+     "pop": 5227
+    },
+    {
+     "key": "sldl:rockingham21",
+     "pop": 5087
+    },
+    {
+     "key": "sldl:rockingham7",
+     "pop": 4739
+    },
+    {
+     "key": "sldl:rockingham28",
+     "pop": 4549
+    },
+    {
+     "key": "sldl:rockingham23",
+     "pop": 4538
+    },
+    {
+     "key": "sldl:rockingham26",
+     "pop": 4528
+    },
+    {
+     "key": "sldl:strafford3",
+     "pop": 4516
+    },
+    {
+     "key": "sldl:rockingham19",
+     "pop": 4498
+    },
+    {
+     "key": "sldl:rockingham6",
+     "pop": 4490
+    },
+    {
+     "key": "sldl:rockingham8",
+     "pop": 4408
+    },
+    {
+     "key": "sldl:rockingham27",
+     "pop": 4376
+    },
+    {
+     "key": "sldl:carroll5",
+     "pop": 4372
+    },
+    {
+     "key": "sldu:7",
+     "pop": 3962
+    },
+    {
+     "key": "sldl:carroll2",
+     "pop": 3741
+    }
+   ]
+  },
+  "cd:2": {
+   "layer": "cd",
+   "district": "2",
+   "pop": 688765,
+   "bbox": [
+    -72.55709,
+    42.69704,
+    -71.00998,
+    45.30578
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:13",
+     "pop": 60526
+    },
+    {
+     "key": "sldu:12",
+     "pop": 59879
+    },
+    {
+     "key": "sldu:5",
+     "pop": 58966
+    },
+    {
+     "key": "sldu:15",
+     "pop": 58119
+    },
+    {
+     "key": "sldu:8",
+     "pop": 56429
+    },
+    {
+     "key": "sldu:10",
+     "pop": 56160
+    },
+    {
+     "key": "sldu:1",
+     "pop": 55947
+    },
+    {
+     "key": "sldu:7",
+     "pop": 52297
+    },
+    {
+     "key": "sldu:22",
+     "pop": 51398
+    },
+    {
+     "key": "sldu:17",
+     "pop": 45821
+    },
+    {
+     "key": "sldu:9",
+     "pop": 32947
+    },
+    {
+     "key": "sldu:11",
+     "pop": 31780
+    },
+    {
+     "key": "sldl:rockingham25",
+     "pop": 30089
+    },
+    {
+     "key": "sldu:14",
+     "pop": 25394
+    },
+    {
+     "key": "sldl:hillsborough13",
+     "pop": 25394
+    },
+    {
+     "key": "sldl:hillsborough43",
+     "pop": 16131
+    },
+    {
+     "key": "sldu:19",
+     "pop": 15817
+    },
+    {
+     "key": "sldl:rockingham17",
+     "pop": 15817
+    },
+    {
+     "key": "sldu:2",
+     "pop": 14876
+    },
+    {
+     "key": "sldl:hillsborough1",
+     "pop": 14222
+    },
+    {
+     "key": "sldl:merrimack9",
+     "pop": 14143
+    },
+    {
+     "key": "sldl:sullivan6",
+     "pop": 13750
+    },
+    {
+     "key": "sldl:grafton12",
+     "pop": 13615
+    },
+    {
+     "key": "sldl:sullivan3",
+     "pop": 12623
+    },
+    {
+     "key": "sldl:hillsborough34",
+     "pop": 11753
+    },
+    {
+     "key": "sldl:grafton1",
+     "pop": 10799
+    },
+    {
+     "key": "sldl:merrimack8",
+     "pop": 10784
+    },
+    {
+     "key": "sldl:grafton8",
+     "pop": 10624
+    },
+    {
+     "key": "sldl:hillsborough9",
+     "pop": 10603
+    },
+    {
+     "key": "sldl:hillsborough32",
+     "pop": 10482
+    },
+    {
+     "key": "sldl:hillsborough42",
+     "pop": 10394
+    },
+    {
+     "key": "sldl:hillsborough10",
+     "pop": 10369
+    },
+    {
+     "key": "sldl:hillsborough30",
+     "pop": 10353
+    },
+    {
+     "key": "sldl:hillsborough4",
+     "pop": 10348
+    },
+    {
+     "key": "sldl:hillsborough11",
+     "pop": 10267
+    },
+    {
+     "key": "sldl:hillsborough5",
+     "pop": 10119
+    },
+    {
+     "key": "sldl:hillsborough3",
+     "pop": 10074
+    },
+    {
+     "key": "sldl:hillsborough6",
+     "pop": 9869
+    },
+    {
+     "key": "sldl:hillsborough8",
+     "pop": 9853
+    },
+    {
+     "key": "sldl:hillsborough7",
+     "pop": 9820
+    },
+    {
+     "key": "sldl:coos5",
+     "pop": 9425
+    },
+    {
+     "key": "sldl:cheshire6",
+     "pop": 9206
+    },
+    {
+     "key": "sldl:hillsborough28",
+     "pop": 9092
+    },
+    {
+     "key": "sldl:hillsborough36",
+     "pop": 9061
+    },
+    {
+     "key": "sldl:merrimack3",
+     "pop": 8741
+    },
+    {
+     "key": "sldu:18",
+     "pop": 8478
+    },
+    {
+     "key": "sldl:hillsborough14",
+     "pop": 8478
+    },
+    {
+     "key": "sldl:cheshire10",
+     "pop": 8467
+    },
+    {
+     "key": "sldl:hillsborough35",
+     "pop": 8342
+    },
+    {
+     "key": "sldl:merrimack5",
+     "pop": 8008
+    },
+    {
+     "key": "sldl:merrimack4",
+     "pop": 7965
+    },
+    {
+     "key": "sldl:merrimack12",
+     "pop": 7207
+    },
+    {
+     "key": "sldl:rockingham18",
+     "pop": 7087
+    },
+    {
+     "key": "sldl:grafton5",
+     "pop": 6999
+    },
+    {
+     "key": "sldl:coos1",
+     "pop": 6939
+    },
+    {
+     "key": "sldl:cheshire13",
+     "pop": 6852
+    },
+    {
+     "key": "sldl:hillsborough33",
+     "pop": 6777
+    },
+    {
+     "key": "sldl:merrimack13",
+     "pop": 6740
+    },
+    {
+     "key": "sldl:merrimack7",
+     "pop": 6572
+    },
+    {
+     "key": "sldl:cheshire14",
+     "pop": 6476
+    },
+    {
+     "key": "sldl:merrimack2",
+     "pop": 4872
+    },
+    {
+     "key": "sldl:rockingham2",
+     "pop": 4855
+    },
+    {
+     "key": "sldl:merrimack14",
+     "pop": 4834
+    },
+    {
+     "key": "sldl:grafton15",
+     "pop": 4786
+    },
+    {
+     "key": "sldl:grafton13",
+     "pop": 4762
+    },
+    {
+     "key": "sldl:cheshire9",
+     "pop": 4739
+    },
+    {
+     "key": "sldl:grafton14",
+     "pop": 4734
+    },
+    {
+     "key": "sldl:merrimack11",
+     "pop": 4707
+    },
+    {
+     "key": "sldl:cheshire1",
+     "pop": 4691
+    },
+    {
+     "key": "sldl:cheshire3",
+     "pop": 4676
+    },
+    {
+     "key": "sldl:rockingham1",
+     "pop": 4641
+    },
+    {
+     "key": "sldl:cheshire4",
+     "pop": 4620
+    },
+    {
+     "key": "sldl:sullivan4",
+     "pop": 4610
+    },
+    {
+     "key": "sldl:sullivan5",
+     "pop": 4601
+    },
+    {
+     "key": "sldl:cheshire8",
+     "pop": 4587
+    },
+    {
+     "key": "sldl:merrimack16",
+     "pop": 4567
+    },
+    {
+     "key": "sldl:cheshire2",
+     "pop": 4550
+    },
+    {
+     "key": "sldl:merrimack23",
+     "pop": 4543
+    },
+    {
+     "key": "sldl:merrimack17",
+     "pop": 4512
+    },
+    {
+     "key": "sldl:cheshire7",
+     "pop": 4510
+    },
+    {
+     "key": "sldl:cheshire12",
+     "pop": 4481
+    },
+    {
+     "key": "sldl:grafton16",
+     "pop": 4465
+    },
+    {
+     "key": "sldl:cheshire5",
+     "pop": 4453
+    },
+    {
+     "key": "sldl:merrimack15",
+     "pop": 4452
+    },
+    {
+     "key": "sldl:merrimack24",
+     "pop": 4421
+    },
+    {
+     "key": "sldl:grafton9",
+     "pop": 4410
+    },
+    {
+     "key": "sldl:grafton10",
+     "pop": 4404
+    },
+    {
+     "key": "sldl:merrimack18",
+     "pop": 4398
+    },
+    {
+     "key": "sldl:grafton11",
+     "pop": 4362
+    },
+    {
+     "key": "sldl:coos4",
+     "pop": 4353
+    },
+    {
+     "key": "sldl:merrimack19",
+     "pop": 4338
+    },
+    {
+     "key": "sldl:merrimack21",
+     "pop": 4310
+    },
+    {
+     "key": "sldl:merrimack20",
+     "pop": 4231
+    },
+    {
+     "key": "sldl:merrimack22",
+     "pop": 4204
+    },
+    {
+     "key": "sldl:cheshire11",
+     "pop": 4150
+    },
+    {
+     "key": "sldl:sullivan2",
+     "pop": 4075
+    },
+    {
+     "key": "sldl:merrimack1",
+     "pop": 3998
+    },
+    {
+     "key": "sldu:3",
+     "pop": 3931
+    },
+    {
+     "key": "sldl:coos2",
+     "pop": 3609
+    },
+    {
+     "key": "sldl:grafton6",
+     "pop": 3580
+    },
+    {
+     "key": "sldl:grafton2",
+     "pop": 3567
+    },
+    {
+     "key": "sldl:coos3",
+     "pop": 3556
+    },
+    {
+     "key": "sldl:hillsborough27",
+     "pop": 3514
+    },
+    {
+     "key": "sldl:hillsborough31",
+     "pop": 3447
+    },
+    {
+     "key": "sldl:belknap1",
+     "pop": 3417
+    },
+    {
+     "key": "sldl:sullivan1",
+     "pop": 3404
+    },
+    {
+     "key": "sldl:coos6",
+     "pop": 3386
+    },
+    {
+     "key": "sldl:merrimack6",
+     "pop": 3385
+    },
+    {
+     "key": "sldl:grafton3",
+     "pop": 3359
+    },
+    {
+     "key": "sldl:grafton7",
+     "pop": 3343
+    },
+    {
+     "key": "sldl:grafton4",
+     "pop": 3309
+    },
+    {
+     "key": "sldl:carroll2",
+     "pop": 3253
+    },
+    {
+     "key": "sldl:merrimack10",
+     "pop": 3005
+    }
+   ]
+  },
+  "sldu:16": {
+   "layer": "sldu",
+   "district": "16",
+   "pop": 57841,
+   "bbox": [
+    -71.64129,
+    42.96935,
+    -71.13092,
+    43.12226
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 57841
+    },
+    {
+     "key": "sldl:hillsborough29",
+     "pop": 18577
+    },
+    {
+     "key": "sldl:merrimack10",
+     "pop": 14871
+    },
+    {
+     "key": "sldl:rockingham4",
+     "pop": 10684
+    },
+    {
+     "key": "sldl:hillsborough21",
+     "pop": 9696
+    },
+    {
+     "key": "sldl:rockingham2",
+     "pop": 4013
+    }
+   ]
+  },
+  "sldu:20": {
+   "layer": "sldu",
+   "district": "20",
+   "pop": 57841,
+   "bbox": [
+    -71.51277,
+    42.96433,
+    -71.39228,
+    43.05178
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 57841
+    },
+    {
+     "key": "sldl:hillsborough17",
+     "pop": 9677
+    },
+    {
+     "key": "sldl:hillsborough22",
+     "pop": 9665
+    },
+    {
+     "key": "sldl:hillsborough24",
+     "pop": 9643
+    },
+    {
+     "key": "sldl:hillsborough18",
+     "pop": 9637
+    },
+    {
+     "key": "sldl:hillsborough23",
+     "pop": 9611
+    },
+    {
+     "key": "sldl:hillsborough19",
+     "pop": 9608
+    }
+   ]
+  },
+  "sldu:3": {
+   "layer": "sldu",
+   "district": "03",
+   "pop": 57090,
+   "bbox": [
+    -71.77229,
+    43.37387,
+    -70.95063,
+    44.34103
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 53159
+    },
+    {
+     "key": "sldl:carroll3",
+     "pop": 10295
+    },
+    {
+     "key": "sldl:carroll1",
+     "pop": 9822
+    },
+    {
+     "key": "sldl:carroll4",
+     "pop": 9741
+    },
+    {
+     "key": "sldl:carroll6",
+     "pop": 8883
+    },
+    {
+     "key": "sldl:carroll2",
+     "pop": 5528
+    },
+    {
+     "key": "sldl:strafford2",
+     "pop": 4482
+    },
+    {
+     "key": "sldl:carroll5",
+     "pop": 4372
+    },
+    {
+     "key": "cd:2",
+     "pop": 3931
+    },
+    {
+     "key": "sldl:strafford3",
+     "pop": 1823
+    },
+    {
+     "key": "sldl:grafton3",
+     "pop": 1633
+    },
+    {
+     "key": "sldl:grafton4",
+     "pop": 508
+    }
+   ]
+  },
+  "sldu:5": {
+   "layer": "sldu",
+   "district": "05",
+   "pop": 58966,
+   "bbox": [
+    -72.39887,
+    43.38026,
+    -71.65852,
+    43.95738
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 58966
+    },
+    {
+     "key": "sldl:grafton12",
+     "pop": 13615
+    },
+    {
+     "key": "sldl:grafton8",
+     "pop": 6682
+    },
+    {
+     "key": "sldl:grafton15",
+     "pop": 4786
+    },
+    {
+     "key": "sldl:grafton13",
+     "pop": 4762
+    },
+    {
+     "key": "sldl:grafton14",
+     "pop": 4734
+    },
+    {
+     "key": "sldl:grafton16",
+     "pop": 4465
+    },
+    {
+     "key": "sldl:merrimack7",
+     "pop": 4400
+    },
+    {
+     "key": "sldl:grafton9",
+     "pop": 4133
+    },
+    {
+     "key": "sldl:sullivan2",
+     "pop": 4075
+    },
+    {
+     "key": "sldl:sullivan1",
+     "pop": 3404
+    },
+    {
+     "key": "sldl:grafton6",
+     "pop": 2082
+    },
+    {
+     "key": "sldl:sullivan5",
+     "pop": 1259
+    },
+    {
+     "key": "sldl:grafton11",
+     "pop": 569
+    }
+   ]
+  },
+  "sldu:2": {
+   "layer": "sldu",
+   "district": "02",
+   "pop": 56448,
+   "bbox": [
+    -71.74932,
+    43.4113,
+    -71.3115,
+    44.02865
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 41572
+    },
+    {
+     "key": "cd:2",
+     "pop": 14876
+    },
+    {
+     "key": "sldl:belknap5",
+     "pop": 14117
+    },
+    {
+     "key": "sldl:belknap6",
+     "pop": 10453
+    },
+    {
+     "key": "sldl:belknap4",
+     "pop": 7314
+    },
+    {
+     "key": "sldl:belknap2",
+     "pop": 6662
+    },
+    {
+     "key": "sldl:grafton8",
+     "pop": 3942
+    },
+    {
+     "key": "sldl:belknap1",
+     "pop": 3417
+    },
+    {
+     "key": "sldl:grafton7",
+     "pop": 3343
+    },
+    {
+     "key": "sldl:belknap3",
+     "pop": 3026
+    },
+    {
+     "key": "sldl:grafton4",
+     "pop": 2708
+    },
+    {
+     "key": "sldl:carroll2",
+     "pop": 1466
+    }
+   ]
+  },
+  "sldu:6": {
+   "layer": "sldu",
+   "district": "06",
+   "pop": 55976,
+   "bbox": [
+    -71.47145,
+    43.2036,
+    -70.89633,
+    43.62879
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 55976
+    },
+    {
+     "key": "sldl:strafford1",
+     "pop": 6722
+    },
+    {
+     "key": "sldl:belknap7",
+     "pop": 5894
+    },
+    {
+     "key": "sldl:strafford8",
+     "pop": 5498
+    },
+    {
+     "key": "sldl:strafford2",
+     "pop": 5419
+    },
+    {
+     "key": "sldl:strafford9",
+     "pop": 5410
+    },
+    {
+     "key": "sldl:strafford7",
+     "pop": 5390
+    },
+    {
+     "key": "sldl:strafford6",
+     "pop": 5388
+    },
+    {
+     "key": "sldl:strafford5",
+     "pop": 5387
+    },
+    {
+     "key": "sldl:strafford4",
+     "pop": 4230
+    },
+    {
+     "key": "sldl:belknap6",
+     "pop": 3945
+    },
+    {
+     "key": "sldl:strafford3",
+     "pop": 2693
+    }
+   ]
+  },
+  "sldu:15": {
+   "layer": "sldu",
+   "district": "15",
+   "pop": 58119,
+   "bbox": [
+    -71.78782,
+    43.07597,
+    -71.45695,
+    43.30947
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 58119
+    },
+    {
+     "key": "sldl:merrimack9",
+     "pop": 14143
+    },
+    {
+     "key": "sldl:merrimack16",
+     "pop": 4567
+    },
+    {
+     "key": "sldl:merrimack23",
+     "pop": 4543
+    },
+    {
+     "key": "sldl:merrimack17",
+     "pop": 4512
+    },
+    {
+     "key": "sldl:merrimack15",
+     "pop": 4452
+    },
+    {
+     "key": "sldl:merrimack24",
+     "pop": 4421
+    },
+    {
+     "key": "sldl:merrimack18",
+     "pop": 4398
+    },
+    {
+     "key": "sldl:merrimack19",
+     "pop": 4338
+    },
+    {
+     "key": "sldl:merrimack21",
+     "pop": 4310
+    },
+    {
+     "key": "sldl:merrimack20",
+     "pop": 4231
+    },
+    {
+     "key": "sldl:merrimack22",
+     "pop": 4204
+    }
+   ]
+  },
+  "sldu:13": {
+   "layer": "sldu",
+   "district": "13",
+   "pop": 60526,
+   "bbox": [
+    -71.50105,
+    42.70005,
+    -71.43234,
+    42.80063
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 60526
+    },
+    {
+     "key": "sldl:hillsborough10",
+     "pop": 10369
+    },
+    {
+     "key": "sldl:hillsborough11",
+     "pop": 10267
+    },
+    {
+     "key": "sldl:hillsborough3",
+     "pop": 10074
+    },
+    {
+     "key": "sldl:hillsborough6",
+     "pop": 9869
+    },
+    {
+     "key": "sldl:hillsborough8",
+     "pop": 9853
+    },
+    {
+     "key": "sldl:hillsborough7",
+     "pop": 9820
+    },
+    {
+     "key": "sldl:hillsborough4",
+     "pop": 274
+    }
+   ]
+  },
+  "sldu:23": {
+   "layer": "sldu",
+   "district": "23",
+   "pop": 57395,
+   "bbox": [
+    -71.31097,
+    42.83337,
+    -70.8114,
+    43.08202
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 57395
+    },
+    {
+     "key": "sldl:rockingham14",
+     "pop": 8643
+    },
+    {
+     "key": "sldl:rockingham30",
+     "pop": 8401
+    },
+    {
+     "key": "sldl:rockingham5",
+     "pop": 7125
+    },
+    {
+     "key": "sldl:rockingham9",
+     "pop": 6548
+    },
+    {
+     "key": "sldl:rockingham20",
+     "pop": 5714
+    },
+    {
+     "key": "sldl:rockingham3",
+     "pop": 5232
+    },
+    {
+     "key": "sldl:rockingham7",
+     "pop": 4739
+    },
+    {
+     "key": "sldl:rockingham6",
+     "pop": 4490
+    },
+    {
+     "key": "sldl:rockingham8",
+     "pop": 4408
+    },
+    {
+     "key": "sldl:rockingham19",
+     "pop": 2095
+    }
+   ]
+  },
+  "sldu:21": {
+   "layer": "sldu",
+   "district": "21",
+   "pop": 56894,
+   "bbox": [
+    -71.07292,
+    43.0135,
+    -70.7012,
+    43.21581
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 56894
+    },
+    {
+     "key": "sldl:strafford10",
+     "pop": 15490
+    },
+    {
+     "key": "sldl:rockingham10",
+     "pop": 11199
+    },
+    {
+     "key": "sldl:strafford11",
+     "pop": 6438
+    },
+    {
+     "key": "sldl:rockingham22",
+     "pop": 5227
+    },
+    {
+     "key": "sldl:rockingham21",
+     "pop": 5087
+    },
+    {
+     "key": "sldl:rockingham28",
+     "pop": 4549
+    },
+    {
+     "key": "sldl:rockingham26",
+     "pop": 4528
+    },
+    {
+     "key": "sldl:rockingham27",
+     "pop": 4376
+    }
+   ]
+  },
+  "sldu:11": {
+   "layer": "sldu",
+   "district": "11",
+   "pop": 58412,
+   "bbox": [
+    -71.82795,
+    42.76867,
+    -71.45257,
+    42.94346
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 31780
+    },
+    {
+     "key": "cd:1",
+     "pop": 26632
+    },
+    {
+     "key": "sldl:hillsborough12",
+     "pop": 26632
+    },
+    {
+     "key": "sldl:hillsborough43",
+     "pop": 16131
+    },
+    {
+     "key": "sldl:hillsborough34",
+     "pop": 11753
+    },
+    {
+     "key": "sldl:hillsborough32",
+     "pop": 3896
+    }
+   ]
+  },
+  "sldu:7": {
+   "layer": "sldu",
+   "district": "07",
+   "pop": 56259,
+   "bbox": [
+    -72.16557,
+    43.09169,
+    -71.5103,
+    43.73839
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 52297
+    },
+    {
+     "key": "sldl:merrimack8",
+     "pop": 10784
+    },
+    {
+     "key": "sldl:merrimack3",
+     "pop": 8741
+    },
+    {
+     "key": "sldl:merrimack5",
+     "pop": 8008
+    },
+    {
+     "key": "sldl:hillsborough30",
+     "pop": 5939
+    },
+    {
+     "key": "sldl:grafton10",
+     "pop": 4404
+    },
+    {
+     "key": "sldl:merrimack1",
+     "pop": 3998
+    },
+    {
+     "key": "cd:1",
+     "pop": 3962
+    },
+    {
+     "key": "sldl:belknap3",
+     "pop": 3962
+    },
+    {
+     "key": "sldl:grafton11",
+     "pop": 3793
+    },
+    {
+     "key": "sldl:merrimack6",
+     "pop": 3385
+    },
+    {
+     "key": "sldl:merrimack7",
+     "pop": 2172
+    },
+    {
+     "key": "sldl:sullivan4",
+     "pop": 796
+    },
+    {
+     "key": "sldl:grafton9",
+     "pop": 277
+    }
+   ]
+  },
+  "sldu:9": {
+   "layer": "sldu",
+   "district": "09",
+   "pop": 56269,
+   "bbox": [
+    -72.55709,
+    42.71623,
+    -71.45257,
+    43.03297
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 32947
+    },
+    {
+     "key": "cd:1",
+     "pop": 23322
+    },
+    {
+     "key": "sldl:hillsborough2",
+     "pop": 23322
+    },
+    {
+     "key": "sldl:hillsborough42",
+     "pop": 10394
+    },
+    {
+     "key": "sldl:cheshire13",
+     "pop": 5320
+    },
+    {
+     "key": "sldl:cheshire12",
+     "pop": 4481
+    },
+    {
+     "key": "sldl:cheshire11",
+     "pop": 4150
+    },
+    {
+     "key": "sldl:cheshire6",
+     "pop": 3948
+    },
+    {
+     "key": "sldl:hillsborough31",
+     "pop": 1716
+    },
+    {
+     "key": "sldl:hillsborough32",
+     "pop": 1382
+    },
+    {
+     "key": "sldl:cheshire10",
+     "pop": 1197
+    },
+    {
+     "key": "sldl:hillsborough33",
+     "pop": 359
+    }
+   ]
+  },
+  "sldu:1": {
+   "layer": "sldu",
+   "district": "01",
+   "pop": 55947,
+   "bbox": [
+    -72.11705,
+    43.7684,
+    -71.01288,
+    45.30578
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 55947
+    },
+    {
+     "key": "sldl:grafton1",
+     "pop": 10799
+    },
+    {
+     "key": "sldl:coos5",
+     "pop": 9425
+    },
+    {
+     "key": "sldl:grafton5",
+     "pop": 6999
+    },
+    {
+     "key": "sldl:coos1",
+     "pop": 6939
+    },
+    {
+     "key": "sldl:coos4",
+     "pop": 4353
+    },
+    {
+     "key": "sldl:coos2",
+     "pop": 3609
+    },
+    {
+     "key": "sldl:grafton2",
+     "pop": 3567
+    },
+    {
+     "key": "sldl:coos3",
+     "pop": 3556
+    },
+    {
+     "key": "sldl:coos6",
+     "pop": 3383
+    },
+    {
+     "key": "sldl:grafton3",
+     "pop": 1726
+    },
+    {
+     "key": "sldl:grafton6",
+     "pop": 1498
+    }
+   ]
+  },
+  "sldu:10": {
+   "layer": "sldu",
+   "district": "10",
+   "pop": 56160,
+   "bbox": [
+    -72.55558,
+    42.80558,
+    -71.87533,
+    43.16995
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 56160
+    },
+    {
+     "key": "sldl:cheshire10",
+     "pop": 7270
+    },
+    {
+     "key": "sldl:hillsborough33",
+     "pop": 6418
+    },
+    {
+     "key": "sldl:cheshire6",
+     "pop": 5258
+    },
+    {
+     "key": "sldl:cheshire1",
+     "pop": 4691
+    },
+    {
+     "key": "sldl:cheshire3",
+     "pop": 4676
+    },
+    {
+     "key": "sldl:cheshire4",
+     "pop": 4620
+    },
+    {
+     "key": "sldl:cheshire8",
+     "pop": 4587
+    },
+    {
+     "key": "sldl:cheshire2",
+     "pop": 4550
+    },
+    {
+     "key": "sldl:cheshire7",
+     "pop": 4510
+    },
+    {
+     "key": "sldl:cheshire5",
+     "pop": 4453
+    },
+    {
+     "key": "sldl:cheshire9",
+     "pop": 1864
+    },
+    {
+     "key": "sldl:hillsborough31",
+     "pop": 1731
+    },
+    {
+     "key": "sldl:cheshire13",
+     "pop": 1532
+    }
+   ]
+  },
+  "sldu:8": {
+   "layer": "sldu",
+   "district": "08",
+   "pop": 56429,
+   "bbox": [
+    -72.45295,
+    42.95005,
+    -71.51115,
+    43.49335
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 56429
+    },
+    {
+     "key": "sldl:sullivan6",
+     "pop": 13750
+    },
+    {
+     "key": "sldl:sullivan3",
+     "pop": 12623
+    },
+    {
+     "key": "sldl:hillsborough28",
+     "pop": 9092
+    },
+    {
+     "key": "sldl:hillsborough30",
+     "pop": 4414
+    },
+    {
+     "key": "sldl:sullivan4",
+     "pop": 3814
+    },
+    {
+     "key": "sldl:hillsborough27",
+     "pop": 3514
+    },
+    {
+     "key": "sldl:sullivan5",
+     "pop": 3342
+    },
+    {
+     "key": "sldl:merrimack10",
+     "pop": 3005
+    },
+    {
+     "key": "sldl:cheshire9",
+     "pop": 2875
+    }
+   ]
+  },
+  "sldu:14": {
+   "layer": "sldu",
+   "district": "14",
+   "pop": 57166,
+   "bbox": [
+    -71.46331,
+    42.69894,
+    -71.28817,
+    43.04105
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 31772
+    },
+    {
+     "key": "sldl:rockingham16",
+     "pop": 25826
+    },
+    {
+     "key": "cd:2",
+     "pop": 25394
+    },
+    {
+     "key": "sldl:hillsborough13",
+     "pop": 25394
+    },
+    {
+     "key": "sldl:rockingham2",
+     "pop": 5946
+    }
+   ]
+  },
+  "sldu:24": {
+   "layer": "sldu",
+   "district": "24",
+   "pop": 56483,
+   "bbox": [
+    -71.01376,
+    42.88855,
+    -70.60562,
+    43.07713
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 56483
+    },
+    {
+     "key": "sldl:rockingham29",
+     "pop": 16214
+    },
+    {
+     "key": "sldl:rockingham11",
+     "pop": 16049
+    },
+    {
+     "key": "sldl:rockingham24",
+     "pop": 9610
+    },
+    {
+     "key": "sldl:rockingham12",
+     "pop": 7669
+    },
+    {
+     "key": "sldl:rockingham23",
+     "pop": 4538
+    },
+    {
+     "key": "sldl:rockingham19",
+     "pop": 2403
+    }
+   ]
+  },
+  "sldu:12": {
+   "layer": "sldu",
+   "district": "12",
+   "pop": 59879,
+   "bbox": [
+    -72.09126,
+    42.70134,
+    -71.46815,
+    42.80587
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 59879
+    },
+    {
+     "key": "sldl:hillsborough9",
+     "pop": 10603
+    },
+    {
+     "key": "sldl:hillsborough5",
+     "pop": 10119
+    },
+    {
+     "key": "sldl:hillsborough4",
+     "pop": 10074
+    },
+    {
+     "key": "sldl:hillsborough36",
+     "pop": 9061
+    },
+    {
+     "key": "sldl:hillsborough35",
+     "pop": 8342
+    },
+    {
+     "key": "sldl:cheshire14",
+     "pop": 6476
+    },
+    {
+     "key": "sldl:hillsborough32",
+     "pop": 5204
+    }
+   ]
+  },
+  "sldu:17": {
+   "layer": "sldu",
+   "district": "17",
+   "pop": 55965,
+   "bbox": [
+    -71.65205,
+    43.06254,
+    -71.02669,
+    43.45554
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 45821
+    },
+    {
+     "key": "cd:1",
+     "pop": 10144
+    },
+    {
+     "key": "sldl:rockingham1",
+     "pop": 9870
+    },
+    {
+     "key": "sldl:merrimack4",
+     "pop": 7965
+    },
+    {
+     "key": "sldl:merrimack12",
+     "pop": 7207
+    },
+    {
+     "key": "sldl:merrimack13",
+     "pop": 6740
+    },
+    {
+     "key": "sldl:belknap7",
+     "pop": 4915
+    },
+    {
+     "key": "sldl:merrimack2",
+     "pop": 4872
+    },
+    {
+     "key": "sldl:rockingham2",
+     "pop": 4855
+    },
+    {
+     "key": "sldl:merrimack14",
+     "pop": 4834
+    },
+    {
+     "key": "sldl:merrimack11",
+     "pop": 4707
+    }
+   ]
+  },
+  "sldu:4": {
+   "layer": "sldu",
+   "district": "04",
+   "pop": 56519,
+   "bbox": [
+    -71.13361,
+    43.11766,
+    -70.80952,
+    43.28969
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 56519
+    },
+    {
+     "key": "sldl:strafford12",
+     "pop": 14452
+    },
+    {
+     "key": "sldl:strafford4",
+     "pop": 9326
+    },
+    {
+     "key": "sldl:strafford16",
+     "pop": 5814
+    },
+    {
+     "key": "sldl:strafford13",
+     "pop": 5511
+    },
+    {
+     "key": "sldl:strafford14",
+     "pop": 5482
+    },
+    {
+     "key": "sldl:strafford17",
+     "pop": 5440
+    },
+    {
+     "key": "sldl:strafford15",
+     "pop": 5422
+    },
+    {
+     "key": "sldl:strafford11",
+     "pop": 5072
+    }
+   ]
+  },
+  "sldu:22": {
+   "layer": "sldu",
+   "district": "22",
+   "pop": 59228,
+   "bbox": [
+    -71.38696,
+    42.69704,
+    -71.05395,
+    42.87985
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 51398
+    },
+    {
+     "key": "sldl:rockingham25",
+     "pop": 30089
+    },
+    {
+     "key": "sldl:hillsborough1",
+     "pop": 14222
+    },
+    {
+     "key": "cd:1",
+     "pop": 7830
+    },
+    {
+     "key": "sldl:rockingham20",
+     "pop": 7830
+    },
+    {
+     "key": "sldl:rockingham18",
+     "pop": 7087
+    }
+   ]
+  },
+  "sldu:18": {
+   "layer": "sldu",
+   "district": "18",
+   "pop": 56585,
+   "bbox": [
+    -71.48629,
+    42.79647,
+    -71.37543,
+    43.00901
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 48107
+    },
+    {
+     "key": "sldl:hillsborough26",
+     "pop": 9644
+    },
+    {
+     "key": "sldl:hillsborough25",
+     "pop": 9631
+    },
+    {
+     "key": "sldl:hillsborough20",
+     "pop": 9627
+    },
+    {
+     "key": "sldl:hillsborough15",
+     "pop": 9622
+    },
+    {
+     "key": "sldl:hillsborough16",
+     "pop": 9583
+    },
+    {
+     "key": "cd:2",
+     "pop": 8478
+    },
+    {
+     "key": "sldl:hillsborough14",
+     "pop": 8478
+    }
+   ]
+  },
+  "sldu:19": {
+   "layer": "sldu",
+   "district": "19",
+   "pop": 59132,
+   "bbox": [
+    -71.3662,
+    42.76011,
+    -71.10649,
+    42.94183
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 43315
+    },
+    {
+     "key": "sldl:rockingham13",
+     "pop": 34317
+    },
+    {
+     "key": "cd:2",
+     "pop": 15817
+    },
+    {
+     "key": "sldl:rockingham17",
+     "pop": 15817
+    },
+    {
+     "key": "sldl:rockingham15",
+     "pop": 8998
+    }
+   ]
+  },
+  "sldl:coos5": {
+   "layer": "sldl",
+   "district": "Coos 05",
+   "pop": 9425,
+   "bbox": [
+    -71.39762,
+    44.44496,
+    -71.12395,
+    44.52805
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 9425
+    },
+    {
+     "key": "sldu:1",
+     "pop": 9425
+    }
+   ]
+  },
+  "sldl:hillsborough24": {
+   "layer": "sldl",
+   "district": "Hillsborough 24",
+   "pop": 9643,
+   "bbox": [
+    -71.4579,
+    42.9872,
+    -71.41393,
+    43.00161
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9643
+    },
+    {
+     "key": "sldu:20",
+     "pop": 9643
+    }
+   ]
+  },
+  "sldl:grafton11": {
+   "layer": "sldl",
+   "district": "Grafton 11",
+   "pop": 4362,
+   "bbox": [
+    -72.06952,
+    43.52888,
+    -71.73371,
+    43.80407
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4362
+    },
+    {
+     "key": "sldu:7",
+     "pop": 3793
+    },
+    {
+     "key": "sldu:5",
+     "pop": 569
+    }
+   ]
+  },
+  "sldl:grafton8": {
+   "layer": "sldl",
+   "district": "Grafton 08",
+   "pop": 10624,
+   "bbox": [
+    -71.78449,
+    43.68451,
+    -71.52139,
+    43.80244
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10624
+    },
+    {
+     "key": "sldu:5",
+     "pop": 6682
+    },
+    {
+     "key": "sldu:2",
+     "pop": 3942
+    }
+   ]
+  },
+  "sldl:rockingham23": {
+   "layer": "sldl",
+   "district": "Rockingham 23",
+   "pop": 4538,
+   "bbox": [
+    -70.88802,
+    42.95078,
+    -70.76284,
+    43.007
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4538
+    },
+    {
+     "key": "sldu:24",
+     "pop": 4538
+    }
+   ]
+  },
+  "sldl:rockingham29": {
+   "layer": "sldl",
+   "district": "Rockingham 29",
+   "pop": 16214,
+   "bbox": [
+    -70.90203,
+    42.88858,
+    -70.77764,
+    42.97102
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 16214
+    },
+    {
+     "key": "sldu:24",
+     "pop": 16214
+    }
+   ]
+  },
+  "sldl:rockingham28": {
+   "layer": "sldl",
+   "district": "Rockingham 28",
+   "pop": 4549,
+   "bbox": [
+    -70.77707,
+    43.0618,
+    -70.7582,
+    43.07965
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4549
+    },
+    {
+     "key": "sldu:21",
+     "pop": 4549
+    }
+   ]
+  },
+  "sldl:sullivan2": {
+   "layer": "sldl",
+   "district": "Sullivan 02",
+   "pop": 4075,
+   "bbox": [
+    -72.39887,
+    43.42373,
+    -72.17119,
+    43.60021
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4075
+    },
+    {
+     "key": "sldu:5",
+     "pop": 4075
+    }
+   ]
+  },
+  "sldl:strafford17": {
+   "layer": "sldl",
+   "district": "Strafford 17",
+   "pop": 5440,
+   "bbox": [
+    -70.96153,
+    43.16683,
+    -70.87537,
+    43.21795
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5440
+    },
+    {
+     "key": "sldu:4",
+     "pop": 5440
+    }
+   ]
+  },
+  "sldl:coos2": {
+   "layer": "sldl",
+   "district": "Coos 02",
+   "pop": 3609,
+   "bbox": [
+    -71.50661,
+    44.51556,
+    -71.02852,
+    45.30578
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3609
+    },
+    {
+     "key": "sldu:1",
+     "pop": 3609
+    }
+   ]
+  },
+  "sldl:coos3": {
+   "layer": "sldl",
+   "district": "Coos 03",
+   "pop": 3556,
+   "bbox": [
+    -71.60203,
+    44.77087,
+    -71.29011,
+    45.00832
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3556
+    },
+    {
+     "key": "sldu:1",
+     "pop": 3556
+    }
+   ]
+  },
+  "sldl:coos4": {
+   "layer": "sldl",
+   "district": "Coos 04",
+   "pop": 4353,
+   "bbox": [
+    -71.68692,
+    44.21217,
+    -71.33253,
+    44.57036
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4353
+    },
+    {
+     "key": "sldu:1",
+     "pop": 4353
+    }
+   ]
+  },
+  "sldl:grafton1": {
+   "layer": "sldl",
+   "district": "Grafton 01",
+   "pop": 10799,
+   "bbox": [
+    -72.06843,
+    44.11286,
+    -71.69689,
+    44.40635
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10799
+    },
+    {
+     "key": "sldu:1",
+     "pop": 10799
+    }
+   ]
+  },
+  "sldl:grafton3": {
+   "layer": "sldl",
+   "district": "Grafton 03",
+   "pop": 3359,
+   "bbox": [
+    -71.8575,
+    43.91959,
+    -71.34666,
+    44.1975
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3359
+    },
+    {
+     "key": "sldu:1",
+     "pop": 1726
+    },
+    {
+     "key": "sldu:3",
+     "pop": 1633
+    }
+   ]
+  },
+  "sldl:grafton5": {
+   "layer": "sldl",
+   "district": "Grafton 05",
+   "pop": 6999,
+   "bbox": [
+    -72.11705,
+    43.88577,
+    -71.78986,
+    44.20765
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 6999
+    },
+    {
+     "key": "sldu:1",
+     "pop": 6999
+    }
+   ]
+  },
+  "sldl:hillsborough2": {
+   "layer": "sldl",
+   "district": "Hillsborough 02",
+   "pop": 23322,
+   "bbox": [
+    -71.61645,
+    42.89627,
+    -71.45257,
+    42.98288
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 23322
+    },
+    {
+     "key": "sldu:9",
+     "pop": 23322
+    }
+   ]
+  },
+  "sldl:hillsborough3": {
+   "layer": "sldl",
+   "district": "Hillsborough 03",
+   "pop": 10074,
+   "bbox": [
+    -71.49343,
+    42.74698,
+    -71.45185,
+    42.77666
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10074
+    },
+    {
+     "key": "sldu:13",
+     "pop": 10074
+    }
+   ]
+  },
+  "sldl:coos1": {
+   "layer": "sldl",
+   "district": "Coos 01",
+   "pop": 6939,
+   "bbox": [
+    -71.76568,
+    44.33212,
+    -71.41309,
+    44.78686
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 6939
+    },
+    {
+     "key": "sldu:1",
+     "pop": 6939
+    }
+   ]
+  },
+  "sldl:cheshire2": {
+   "layer": "sldl",
+   "district": "Cheshire 02",
+   "pop": 4550,
+   "bbox": [
+    -72.33718,
+    42.93363,
+    -72.26503,
+    42.99011
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4550
+    },
+    {
+     "key": "sldu:10",
+     "pop": 4550
+    }
+   ]
+  },
+  "sldl:hillsborough4": {
+   "layer": "sldl",
+   "district": "Hillsborough 04",
+   "pop": 10348,
+   "bbox": [
+    -71.54382,
+    42.76771,
+    -71.46442,
+    42.80585
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10348
+    },
+    {
+     "key": "sldu:12",
+     "pop": 10074
+    },
+    {
+     "key": "sldu:13",
+     "pop": 274
+    }
+   ]
+  },
+  "sldl:hillsborough5": {
+   "layer": "sldl",
+   "district": "Hillsborough 05",
+   "pop": 10119,
+   "bbox": [
+    -71.56141,
+    42.73942,
+    -71.49276,
+    42.8041
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10119
+    },
+    {
+     "key": "sldu:12",
+     "pop": 10119
+    }
+   ]
+  },
+  "sldl:hillsborough7": {
+   "layer": "sldl",
+   "district": "Hillsborough 07",
+   "pop": 9820,
+   "bbox": [
+    -71.46399,
+    42.70005,
+    -71.43234,
+    42.76379
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 9820
+    },
+    {
+     "key": "sldu:13",
+     "pop": 9820
+    }
+   ]
+  },
+  "sldl:hillsborough8": {
+   "layer": "sldl",
+   "district": "Hillsborough 08",
+   "pop": 9853,
+   "bbox": [
+    -71.49593,
+    42.73163,
+    -71.4548,
+    42.75488
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 9853
+    },
+    {
+     "key": "sldu:13",
+     "pop": 9853
+    }
+   ]
+  },
+  "sldl:hillsborough17": {
+   "layer": "sldl",
+   "district": "Hillsborough 17",
+   "pop": 9677,
+   "bbox": [
+    -71.46,
+    42.99554,
+    -71.39228,
+    43.01839
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9677
+    },
+    {
+     "key": "sldu:20",
+     "pop": 9677
+    }
+   ]
+  },
+  "sldl:hillsborough20": {
+   "layer": "sldl",
+   "district": "Hillsborough 20",
+   "pop": 9627,
+   "bbox": [
+    -71.47583,
+    42.94733,
+    -71.43621,
+    42.97737
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9627
+    },
+    {
+     "key": "sldu:18",
+     "pop": 9627
+    }
+   ]
+  },
+  "sldl:hillsborough26": {
+   "layer": "sldl",
+   "district": "Hillsborough 26",
+   "pop": 9644,
+   "bbox": [
+    -71.46196,
+    42.96972,
+    -71.4214,
+    42.98325
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9644
+    },
+    {
+     "key": "sldu:18",
+     "pop": 9644
+    }
+   ]
+  },
+  "sldl:hillsborough36": {
+   "layer": "sldl",
+   "district": "Hillsborough 36",
+   "pop": 9061,
+   "bbox": [
+    -71.82142,
+    42.70444,
+    -71.63056,
+    42.797
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 9061
+    },
+    {
+     "key": "sldu:12",
+     "pop": 9061
+    }
+   ]
+  },
+  "sldl:hillsborough42": {
+   "layer": "sldl",
+   "district": "Hillsborough 42",
+   "pop": 10394,
+   "bbox": [
+    -71.85505,
+    42.8506,
+    -71.61035,
+    43.03297
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10394
+    },
+    {
+     "key": "sldu:9",
+     "pop": 10394
+    }
+   ]
+  },
+  "sldl:hillsborough43": {
+   "layer": "sldl",
+   "district": "Hillsborough 43",
+   "pop": 16131,
+   "bbox": [
+    -71.72966,
+    42.76867,
+    -71.60588,
+    42.86653
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 16131
+    },
+    {
+     "key": "sldu:11",
+     "pop": 16131
+    }
+   ]
+  },
+  "sldl:rockingham8": {
+   "layer": "sldl",
+   "district": "Rockingham 08",
+   "pop": 4408,
+   "bbox": [
+    -71.1495,
+    42.89544,
+    -71.09232,
+    42.95984
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4408
+    },
+    {
+     "key": "sldu:23",
+     "pop": 4408
+    }
+   ]
+  },
+  "sldl:merrimack11": {
+   "layer": "sldl",
+   "district": "Merrimack 11",
+   "pop": 4707,
+   "bbox": [
+    -71.46636,
+    43.10204,
+    -71.31771,
+    43.17519
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4707
+    },
+    {
+     "key": "sldu:17",
+     "pop": 4707
+    }
+   ]
+  },
+  "sldl:merrimack22": {
+   "layer": "sldl",
+   "district": "Merrimack 22",
+   "pop": 4204,
+   "bbox": [
+    -71.53105,
+    43.15832,
+    -71.45695,
+    43.25189
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4204
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4204
+    }
+   ]
+  },
+  "sldl:rockingham2": {
+   "layer": "sldl",
+   "district": "Rockingham 02",
+   "pop": 14814,
+   "bbox": [
+    -71.40296,
+    42.93573,
+    -71.15674,
+    43.2186
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9959
+    },
+    {
+     "key": "sldu:14",
+     "pop": 5946
+    },
+    {
+     "key": "cd:2",
+     "pop": 4855
+    },
+    {
+     "key": "sldu:17",
+     "pop": 4855
+    },
+    {
+     "key": "sldu:16",
+     "pop": 4013
+    }
+   ]
+  },
+  "sldl:hillsborough6": {
+   "layer": "sldl",
+   "district": "Hillsborough 06",
+   "pop": 9869,
+   "bbox": [
+    -71.47893,
+    42.76129,
+    -71.44365,
+    42.80063
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 9869
+    },
+    {
+     "key": "sldu:13",
+     "pop": 9869
+    }
+   ]
+  },
+  "sldl:merrimack6": {
+   "layer": "sldl",
+   "district": "Merrimack 06",
+   "pop": 3385,
+   "bbox": [
+    -72.01441,
+    43.27818,
+    -71.84823,
+    43.53385
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3385
+    },
+    {
+     "key": "sldu:7",
+     "pop": 3385
+    }
+   ]
+  },
+  "sldl:merrimack8": {
+   "layer": "sldl",
+   "district": "Merrimack 08",
+   "pop": 10784,
+   "bbox": [
+    -72.06544,
+    43.11514,
+    -71.72574,
+    43.39525
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10784
+    },
+    {
+     "key": "sldu:7",
+     "pop": 10784
+    }
+   ]
+  },
+  "sldl:merrimack9": {
+   "layer": "sldl",
+   "district": "Merrimack 09",
+   "pop": 14143,
+   "bbox": [
+    -71.78782,
+    43.07597,
+    -71.46185,
+    43.26014
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 14143
+    },
+    {
+     "key": "sldu:15",
+     "pop": 14143
+    }
+   ]
+  },
+  "sldl:merrimack10": {
+   "layer": "sldl",
+   "district": "Merrimack 10",
+   "pop": 17876,
+   "bbox": [
+    -71.66777,
+    43.00931,
+    -71.35612,
+    43.16023
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 14871
+    },
+    {
+     "key": "sldu:16",
+     "pop": 14871
+    },
+    {
+     "key": "cd:2",
+     "pop": 3005
+    },
+    {
+     "key": "sldu:8",
+     "pop": 3005
+    }
+   ]
+  },
+  "sldl:grafton16": {
+   "layer": "sldl",
+   "district": "Grafton 16",
+   "pop": 4465,
+   "bbox": [
+    -72.20831,
+    43.52886,
+    -72.02015,
+    43.65852
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4465
+    },
+    {
+     "key": "sldu:5",
+     "pop": 4465
+    }
+   ]
+  },
+  "sldl:rockingham15": {
+   "layer": "sldl",
+   "district": "Rockingham 15",
+   "pop": 8998,
+   "bbox": [
+    -71.21944,
+    42.85346,
+    -71.10649,
+    42.91226
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 8998
+    },
+    {
+     "key": "sldu:19",
+     "pop": 8998
+    }
+   ]
+  },
+  "sldl:strafford14": {
+   "layer": "sldl",
+   "district": "Strafford 14",
+   "pop": 5482,
+   "bbox": [
+    -70.89655,
+    43.19476,
+    -70.8667,
+    43.22173
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5482
+    },
+    {
+     "key": "sldu:4",
+     "pop": 5482
+    }
+   ]
+  },
+  "sldl:grafton15": {
+   "layer": "sldl",
+   "district": "Grafton 15",
+   "pop": 4786,
+   "bbox": [
+    -72.26886,
+    43.61279,
+    -72.16041,
+    43.68415
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4786
+    },
+    {
+     "key": "sldu:5",
+     "pop": 4786
+    }
+   ]
+  },
+  "sldl:rockingham4": {
+   "layer": "sldl",
+   "district": "Rockingham 04",
+   "pop": 10684,
+   "bbox": [
+    -71.26769,
+    42.98448,
+    -71.13092,
+    43.08013
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 10684
+    },
+    {
+     "key": "sldu:16",
+     "pop": 10684
+    }
+   ]
+  },
+  "sldl:strafford9": {
+   "layer": "sldl",
+   "district": "Strafford 09",
+   "pop": 5410,
+   "bbox": [
+    -70.98011,
+    43.29352,
+    -70.94799,
+    43.33068
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5410
+    },
+    {
+     "key": "sldu:6",
+     "pop": 5410
+    }
+   ]
+  },
+  "sldl:rockingham7": {
+   "layer": "sldl",
+   "district": "Rockingham 07",
+   "pop": 4739,
+   "bbox": [
+    -71.17928,
+    42.9591,
+    -71.08028,
+    43.02122
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4739
+    },
+    {
+     "key": "sldu:23",
+     "pop": 4739
+    }
+   ]
+  },
+  "sldl:rockingham6": {
+   "layer": "sldl",
+   "district": "Rockingham 06",
+   "pop": 4490,
+   "bbox": [
+    -71.08807,
+    42.95828,
+    -70.99991,
+    43.02088
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4490
+    },
+    {
+     "key": "sldu:23",
+     "pop": 4490
+    }
+   ]
+  },
+  "sldl:hillsborough22": {
+   "layer": "sldl",
+   "district": "Hillsborough 22",
+   "pop": 9665,
+   "bbox": [
+    -71.5014,
+    42.98291,
+    -71.46938,
+    43.00571
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9665
+    },
+    {
+     "key": "sldu:20",
+     "pop": 9665
+    }
+   ]
+  },
+  "sldl:merrimack20": {
+   "layer": "sldl",
+   "district": "Merrimack 20",
+   "pop": 4231,
+   "bbox": [
+    -71.56385,
+    43.17612,
+    -71.51077,
+    43.20897
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4231
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4231
+    }
+   ]
+  },
+  "sldl:carroll1": {
+   "layer": "sldl",
+   "district": "Carroll 01",
+   "pop": 9822,
+   "bbox": [
+    -71.16701,
+    43.92441,
+    -70.99317,
+    44.07682
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9822
+    },
+    {
+     "key": "sldu:3",
+     "pop": 9822
+    }
+   ]
+  },
+  "sldl:merrimack13": {
+   "layer": "sldl",
+   "district": "Merrimack 13",
+   "pop": 6740,
+   "bbox": [
+    -71.46223,
+    43.20105,
+    -71.23601,
+    43.34658
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 6740
+    },
+    {
+     "key": "sldu:17",
+     "pop": 6740
+    }
+   ]
+  },
+  "sldl:merrimack14": {
+   "layer": "sldl",
+   "district": "Merrimack 14",
+   "pop": 4834,
+   "bbox": [
+    -71.4165,
+    43.16206,
+    -71.26207,
+    43.26803
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4834
+    },
+    {
+     "key": "sldu:17",
+     "pop": 4834
+    }
+   ]
+  },
+  "sldl:rockingham20": {
+   "layer": "sldl",
+   "district": "Rockingham 20",
+   "pop": 13544,
+   "bbox": [
+    -71.13646,
+    42.80627,
+    -70.91452,
+    42.90092
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 13544
+    },
+    {
+     "key": "sldu:22",
+     "pop": 7830
+    },
+    {
+     "key": "sldu:23",
+     "pop": 5714
+    }
+   ]
+  },
+  "sldl:rockingham21": {
+   "layer": "sldl",
+   "district": "Rockingham 21",
+   "pop": 5087,
+   "bbox": [
+    -70.87998,
+    43.05902,
+    -70.75255,
+    43.12712
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5087
+    },
+    {
+     "key": "sldu:21",
+     "pop": 5087
+    }
+   ]
+  },
+  "sldl:rockingham22": {
+   "layer": "sldl",
+   "district": "Rockingham 22",
+   "pop": 5227,
+   "bbox": [
+    -70.7707,
+    43.04524,
+    -70.7012,
+    43.07957
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5227
+    },
+    {
+     "key": "sldu:21",
+     "pop": 5227
+    }
+   ]
+  },
+  "sldl:merrimack15": {
+   "layer": "sldl",
+   "district": "Merrimack 15",
+   "pop": 4452,
+   "bbox": [
+    -71.668,
+    43.23377,
+    -71.56294,
+    43.29214
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4452
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4452
+    }
+   ]
+  },
+  "sldl:merrimack16": {
+   "layer": "sldl",
+   "district": "Merrimack 16",
+   "pop": 4567,
+   "bbox": [
+    -71.66228,
+    43.21606,
+    -71.57163,
+    43.26993
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4567
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4567
+    }
+   ]
+  },
+  "sldl:cheshire1": {
+   "layer": "sldl",
+   "district": "Cheshire 01",
+   "pop": 4691,
+   "bbox": [
+    -72.31047,
+    42.90426,
+    -72.22196,
+    42.93461
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4691
+    },
+    {
+     "key": "sldu:10",
+     "pop": 4691
+    }
+   ]
+  },
+  "sldl:merrimack12": {
+   "layer": "sldl",
+   "district": "Merrimack 12",
+   "pop": 7207,
+   "bbox": [
+    -71.50286,
+    43.1275,
+    -71.39434,
+    43.24893
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 7207
+    },
+    {
+     "key": "sldu:17",
+     "pop": 7207
+    }
+   ]
+  },
+  "sldl:merrimack19": {
+   "layer": "sldl",
+   "district": "Merrimack 19",
+   "pop": 4338,
+   "bbox": [
+    -71.63864,
+    43.15698,
+    -71.54066,
+    43.25538
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4338
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4338
+    }
+   ]
+  },
+  "sldl:belknap1": {
+   "layer": "sldl",
+   "district": "Belknap 01",
+   "pop": 3417,
+   "bbox": [
+    -71.73171,
+    43.53762,
+    -71.43989,
+    43.76098
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3417
+    },
+    {
+     "key": "sldu:2",
+     "pop": 3417
+    }
+   ]
+  },
+  "sldl:belknap6": {
+   "layer": "sldl",
+   "district": "Belknap 06",
+   "pop": 14398,
+   "bbox": [
+    -71.48469,
+    43.34658,
+    -71.26577,
+    43.64057
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 14398
+    },
+    {
+     "key": "sldu:2",
+     "pop": 10453
+    },
+    {
+     "key": "sldu:6",
+     "pop": 3945
+    }
+   ]
+  },
+  "sldl:belknap3": {
+   "layer": "sldl",
+   "district": "Belknap 03",
+   "pop": 6988,
+   "bbox": [
+    -71.70635,
+    43.43489,
+    -71.49994,
+    43.58201
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 6988
+    },
+    {
+     "key": "sldu:7",
+     "pop": 3962
+    },
+    {
+     "key": "sldu:2",
+     "pop": 3026
+    }
+   ]
+  },
+  "sldl:belknap5": {
+   "layer": "sldl",
+   "district": "Belknap 05",
+   "pop": 14117,
+   "bbox": [
+    -71.53552,
+    43.5009,
+    -71.42838,
+    43.62949
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 14117
+    },
+    {
+     "key": "sldu:2",
+     "pop": 14117
+    }
+   ]
+  },
+  "sldl:belknap2": {
+   "layer": "sldl",
+   "district": "Belknap 02",
+   "pop": 6662,
+   "bbox": [
+    -71.64279,
+    43.55307,
+    -71.34424,
+    43.69866
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 6662
+    },
+    {
+     "key": "sldu:2",
+     "pop": 6662
+    }
+   ]
+  },
+  "sldl:belknap7": {
+   "layer": "sldl",
+   "district": "Belknap 07",
+   "pop": 10809,
+   "bbox": [
+    -71.34905,
+    43.28499,
+    -71.15936,
+    43.62879
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 10809
+    },
+    {
+     "key": "sldu:6",
+     "pop": 5894
+    },
+    {
+     "key": "sldu:17",
+     "pop": 4915
+    }
+   ]
+  },
+  "sldl:rockingham3": {
+   "layer": "sldl",
+   "district": "Rockingham 03",
+   "pop": 5232,
+   "bbox": [
+    -71.31097,
+    42.91989,
+    -71.16789,
+    43.0214
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5232
+    },
+    {
+     "key": "sldu:23",
+     "pop": 5232
+    }
+   ]
+  },
+  "sldl:rockingham5": {
+   "layer": "sldl",
+   "district": "Rockingham 05",
+   "pop": 7125,
+   "bbox": [
+    -71.15015,
+    43.02042,
+    -71.01098,
+    43.08199
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 7125
+    },
+    {
+     "key": "sldu:23",
+     "pop": 7125
+    }
+   ]
+  },
+  "sldl:rockingham24": {
+   "layer": "sldl",
+   "district": "Rockingham 24",
+   "pop": 9610,
+   "bbox": [
+    -70.90759,
+    42.96603,
+    -70.60562,
+    43.07713
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9610
+    },
+    {
+     "key": "sldu:24",
+     "pop": 9610
+    }
+   ]
+  },
+  "sldl:rockingham26": {
+   "layer": "sldl",
+   "district": "Rockingham 26",
+   "pop": 4528,
+   "bbox": [
+    -70.8231,
+    43.01671,
+    -70.7713,
+    43.09425
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4528
+    },
+    {
+     "key": "sldu:21",
+     "pop": 4528
+    }
+   ]
+  },
+  "sldl:hillsborough25": {
+   "layer": "sldl",
+   "district": "Hillsborough 25",
+   "pop": 9631,
+   "bbox": [
+    -71.45742,
+    42.98026,
+    -71.41984,
+    42.98939
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9631
+    },
+    {
+     "key": "sldu:18",
+     "pop": 9631
+    }
+   ]
+  },
+  "sldl:rockingham30": {
+   "layer": "sldl",
+   "district": "Rockingham 30",
+   "pop": 8401,
+   "bbox": [
+    -70.91772,
+    42.86087,
+    -70.8114,
+    42.90695
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 8401
+    },
+    {
+     "key": "sldu:23",
+     "pop": 8401
+    }
+   ]
+  },
+  "sldl:strafford1": {
+   "layer": "sldl",
+   "district": "Strafford 01",
+   "pop": 6722,
+   "bbox": [
+    -71.15936,
+    43.29934,
+    -70.99122,
+    43.42436
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 6722
+    },
+    {
+     "key": "sldu:6",
+     "pop": 6722
+    }
+   ]
+  },
+  "sldl:strafford3": {
+   "layer": "sldl",
+   "district": "Strafford 03",
+   "pop": 4516,
+   "bbox": [
+    -71.1908,
+    43.35512,
+    -71.02424,
+    43.57279
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4516
+    },
+    {
+     "key": "sldu:6",
+     "pop": 2693
+    },
+    {
+     "key": "sldu:3",
+     "pop": 1823
+    }
+   ]
+  },
+  "sldl:strafford4": {
+   "layer": "sldl",
+   "district": "Strafford 04",
+   "pop": 13556,
+   "bbox": [
+    -71.24732,
+    43.13795,
+    -70.95277,
+    43.35512
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 13556
+    },
+    {
+     "key": "sldu:4",
+     "pop": 9326
+    },
+    {
+     "key": "sldu:6",
+     "pop": 4230
+    }
+   ]
+  },
+  "sldl:strafford5": {
+   "layer": "sldl",
+   "district": "Strafford 05",
+   "pop": 5387,
+   "bbox": [
+    -70.97973,
+    43.27225,
+    -70.89631,
+    43.35779
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5387
+    },
+    {
+     "key": "sldu:6",
+     "pop": 5387
+    }
+   ]
+  },
+  "sldl:strafford15": {
+   "layer": "sldl",
+   "district": "Strafford 15",
+   "pop": 5422,
+   "bbox": [
+    -70.88581,
+    43.17274,
+    -70.81902,
+    43.20769
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5422
+    },
+    {
+     "key": "sldu:4",
+     "pop": 5422
+    }
+   ]
+  },
+  "sldl:strafford16": {
+   "layer": "sldl",
+   "district": "Strafford 16",
+   "pop": 5814,
+   "bbox": [
+    -70.89162,
+    43.11764,
+    -70.82002,
+    43.19548
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5814
+    },
+    {
+     "key": "sldu:4",
+     "pop": 5814
+    }
+   ]
+  },
+  "sldl:rockingham11": {
+   "layer": "sldl",
+   "district": "Rockingham 11",
+   "pop": 16049,
+   "bbox": [
+    -71.01376,
+    42.9567,
+    -70.88802,
+    43.03394
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 16049
+    },
+    {
+     "key": "sldu:24",
+     "pop": 16049
+    }
+   ]
+  },
+  "sldl:rockingham12": {
+   "layer": "sldl",
+   "district": "Rockingham 12",
+   "pop": 7669,
+   "bbox": [
+    -70.93986,
+    42.97102,
+    -70.85867,
+    43.0599
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 7669
+    },
+    {
+     "key": "sldu:24",
+     "pop": 7669
+    }
+   ]
+  },
+  "sldl:sullivan1": {
+   "layer": "sldl",
+   "district": "Sullivan 01",
+   "pop": 3404,
+   "bbox": [
+    -72.21503,
+    43.46885,
+    -72.09089,
+    43.57399
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3404
+    },
+    {
+     "key": "sldu:5",
+     "pop": 3404
+    }
+   ]
+  },
+  "sldl:sullivan3": {
+   "layer": "sldl",
+   "district": "Sullivan 03",
+   "pop": 12623,
+   "bbox": [
+    -72.45295,
+    43.15786,
+    -72.12585,
+    43.42373
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 12623
+    },
+    {
+     "key": "sldu:8",
+     "pop": 12623
+    }
+   ]
+  },
+  "sldl:sullivan6": {
+   "layer": "sldl",
+   "district": "Sullivan 06",
+   "pop": 13750,
+   "bbox": [
+    -72.41602,
+    43.32199,
+    -72.11139,
+    43.49335
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 13750
+    },
+    {
+     "key": "sldu:8",
+     "pop": 13750
+    }
+   ]
+  },
+  "sldl:grafton7": {
+   "layer": "sldl",
+   "district": "Grafton 07",
+   "pop": 3343,
+   "bbox": [
+    -71.74932,
+    43.78236,
+    -71.5438,
+    43.88241
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3343
+    },
+    {
+     "key": "sldu:2",
+     "pop": 3343
+    }
+   ]
+  },
+  "sldl:grafton9": {
+   "layer": "sldl",
+   "district": "Grafton 09",
+   "pop": 4410,
+   "bbox": [
+    -72.16041,
+    43.60571,
+    -71.8854,
+    43.83794
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4410
+    },
+    {
+     "key": "sldu:5",
+     "pop": 4133
+    },
+    {
+     "key": "sldu:7",
+     "pop": 277
+    }
+   ]
+  },
+  "sldl:grafton10": {
+   "layer": "sldl",
+   "district": "Grafton 10",
+   "pop": 4404,
+   "bbox": [
+    -71.79238,
+    43.56341,
+    -71.64699,
+    43.71755
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4404
+    },
+    {
+     "key": "sldu:7",
+     "pop": 4404
+    }
+   ]
+  },
+  "sldl:grafton12": {
+   "layer": "sldl",
+   "district": "Grafton 12",
+   "pop": 13615,
+   "bbox": [
+    -72.30513,
+    43.65852,
+    -72.02697,
+    43.87267
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 13615
+    },
+    {
+     "key": "sldu:5",
+     "pop": 13615
+    }
+   ]
+  },
+  "sldl:grafton13": {
+   "layer": "sldl",
+   "district": "Grafton 13",
+   "pop": 4762,
+   "bbox": [
+    -72.33515,
+    43.59364,
+    -72.25949,
+    43.69248
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4762
+    },
+    {
+     "key": "sldu:5",
+     "pop": 4762
+    }
+   ]
+  },
+  "sldl:grafton14": {
+   "layer": "sldl",
+   "district": "Grafton 14",
+   "pop": 4734,
+   "bbox": [
+    -72.2985,
+    43.58521,
+    -72.1912,
+    43.68713
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4734
+    },
+    {
+     "key": "sldu:5",
+     "pop": 4734
+    }
+   ]
+  },
+  "sldl:rockingham1": {
+   "layer": "sldl",
+   "district": "Rockingham 01",
+   "pop": 9870,
+   "bbox": [
+    -71.2808,
+    43.06254,
+    -71.02669,
+    43.27523
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:17",
+     "pop": 9870
+    },
+    {
+     "key": "cd:1",
+     "pop": 5229
+    },
+    {
+     "key": "cd:2",
+     "pop": 4641
+    }
+   ]
+  },
+  "sldl:carroll4": {
+   "layer": "sldl",
+   "district": "Carroll 04",
+   "pop": 9741,
+   "bbox": [
+    -71.18973,
+    43.48291,
+    -70.95063,
+    43.96415
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9741
+    },
+    {
+     "key": "sldu:3",
+     "pop": 9741
+    }
+   ]
+  },
+  "sldl:sullivan5": {
+   "layer": "sldl",
+   "district": "Sullivan 05",
+   "pop": 4601,
+   "bbox": [
+    -72.12743,
+    43.32963,
+    -71.93531,
+    43.55317
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4601
+    },
+    {
+     "key": "sldu:8",
+     "pop": 3342
+    },
+    {
+     "key": "sldu:5",
+     "pop": 1259
+    }
+   ]
+  },
+  "sldl:merrimack21": {
+   "layer": "sldl",
+   "district": "Merrimack 21",
+   "pop": 4310,
+   "bbox": [
+    -71.59728,
+    43.15185,
+    -71.5297,
+    43.19603
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4310
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4310
+    }
+   ]
+  },
+  "sldl:cheshire12": {
+   "layer": "sldl",
+   "district": "Cheshire 12",
+   "pop": 4481,
+   "bbox": [
+    -72.23815,
+    42.71623,
+    -72.07863,
+    42.8685
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4481
+    },
+    {
+     "key": "sldu:9",
+     "pop": 4481
+    }
+   ]
+  },
+  "sldl:grafton4": {
+   "layer": "sldl",
+   "district": "Grafton 04",
+   "pop": 3309,
+   "bbox": [
+    -71.82602,
+    43.85557,
+    -71.36196,
+    44.02865
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3309
+    },
+    {
+     "key": "sldu:2",
+     "pop": 2708
+    },
+    {
+     "key": "sldu:3",
+     "pop": 508
+    }
+   ]
+  },
+  "sldl:grafton2": {
+   "layer": "sldl",
+   "district": "Grafton 02",
+   "pop": 3567,
+   "bbox": [
+    -71.79439,
+    44.11206,
+    -71.41317,
+    44.33658
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3567
+    },
+    {
+     "key": "sldu:1",
+     "pop": 3567
+    }
+   ]
+  },
+  "sldl:hillsborough14": {
+   "layer": "sldl",
+   "district": "Hillsborough 14",
+   "pop": 8478,
+   "bbox": [
+    -71.48629,
+    42.79647,
+    -71.42184,
+    42.90458
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 8478
+    },
+    {
+     "key": "sldu:18",
+     "pop": 8478
+    }
+   ]
+  },
+  "sldl:rockingham25": {
+   "layer": "sldl",
+   "district": "Rockingham 25",
+   "pop": 30089,
+   "bbox": [
+    -71.28426,
+    42.73734,
+    -71.16665,
+    42.85222
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 30089
+    },
+    {
+     "key": "sldu:22",
+     "pop": 30089
+    }
+   ]
+  },
+  "sldl:strafford12": {
+   "layer": "sldl",
+   "district": "Strafford 12",
+   "pop": 14452,
+   "bbox": [
+    -70.92758,
+    43.19571,
+    -70.80952,
+    43.28736
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 14452
+    },
+    {
+     "key": "sldu:4",
+     "pop": 14452
+    }
+   ]
+  },
+  "sldl:rockingham27": {
+   "layer": "sldl",
+   "district": "Rockingham 27",
+   "pop": 4376,
+   "bbox": [
+    -70.80139,
+    43.0135,
+    -70.74214,
+    43.06268
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4376
+    },
+    {
+     "key": "sldu:21",
+     "pop": 4376
+    }
+   ]
+  },
+  "sldl:merrimack23": {
+   "layer": "sldl",
+   "district": "Merrimack 23",
+   "pop": 4543,
+   "bbox": [
+    -71.51348,
+    43.2125,
+    -71.47048,
+    43.23539
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4543
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4543
+    }
+   ]
+  },
+  "sldl:cheshire5": {
+   "layer": "sldl",
+   "district": "Cheshire 05",
+   "pop": 4453,
+   "bbox": [
+    -72.46784,
+    42.97653,
+    -72.29501,
+    43.16135
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4453
+    },
+    {
+     "key": "sldu:10",
+     "pop": 4453
+    }
+   ]
+  },
+  "sldl:merrimack4": {
+   "layer": "sldl",
+   "district": "Merrimack 04",
+   "pop": 7965,
+   "bbox": [
+    -71.64633,
+    43.24518,
+    -71.34905,
+    43.4113
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 7965
+    },
+    {
+     "key": "sldu:17",
+     "pop": 7965
+    }
+   ]
+  },
+  "sldl:rockingham14": {
+   "layer": "sldl",
+   "district": "Rockingham 14",
+   "pop": 8643,
+   "bbox": [
+    -71.12523,
+    42.85757,
+    -70.97685,
+    42.9592
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 8643
+    },
+    {
+     "key": "sldu:23",
+     "pop": 8643
+    }
+   ]
+  },
+  "sldl:rockingham16": {
+   "layer": "sldl",
+   "district": "Rockingham 16",
+   "pop": 25826,
+   "bbox": [
+    -71.45123,
+    42.79896,
+    -71.33269,
+    42.94714
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 25826
+    },
+    {
+     "key": "sldu:14",
+     "pop": 25826
+    }
+   ]
+  },
+  "sldl:rockingham17": {
+   "layer": "sldl",
+   "district": "Rockingham 17",
+   "pop": 15817,
+   "bbox": [
+    -71.3662,
+    42.76011,
+    -71.23703,
+    42.8507
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 15817
+    },
+    {
+     "key": "sldu:19",
+     "pop": 15817
+    }
+   ]
+  },
+  "sldl:merrimack17": {
+   "layer": "sldl",
+   "district": "Merrimack 17",
+   "pop": 4512,
+   "bbox": [
+    -71.58216,
+    43.21989,
+    -71.53711,
+    43.27136
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4512
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4512
+    }
+   ]
+  },
+  "sldl:hillsborough9": {
+   "layer": "sldl",
+   "district": "Hillsborough 09",
+   "pop": 10603,
+   "bbox": [
+    -71.5427,
+    42.70134,
+    -71.48591,
+    42.7641
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10603
+    },
+    {
+     "key": "sldu:12",
+     "pop": 10603
+    }
+   ]
+  },
+  "sldl:hillsborough33": {
+   "layer": "sldl",
+   "district": "Hillsborough 33",
+   "pop": 6777,
+   "bbox": [
+    -72.00347,
+    42.78787,
+    -71.87533,
+    42.94567
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 6777
+    },
+    {
+     "key": "sldu:10",
+     "pop": 6418
+    },
+    {
+     "key": "sldu:9",
+     "pop": 359
+    }
+   ]
+  },
+  "sldl:merrimack1": {
+   "layer": "sldl",
+   "district": "Merrimack 01",
+   "pop": 3998,
+   "bbox": [
+    -71.71649,
+    43.26625,
+    -71.58541,
+    43.38536
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3998
+    },
+    {
+     "key": "sldu:7",
+     "pop": 3998
+    }
+   ]
+  },
+  "sldl:hillsborough15": {
+   "layer": "sldl",
+   "district": "Hillsborough 15",
+   "pop": 9622,
+   "bbox": [
+    -71.46065,
+    42.8904,
+    -71.38406,
+    42.97396
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9622
+    },
+    {
+     "key": "sldu:18",
+     "pop": 9622
+    }
+   ]
+  },
+  "sldl:belknap4": {
+   "layer": "sldl",
+   "district": "Belknap 04",
+   "pop": 7314,
+   "bbox": [
+    -71.54942,
+    43.4113,
+    -71.39677,
+    43.53089
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 7314
+    },
+    {
+     "key": "sldu:2",
+     "pop": 7314
+    }
+   ]
+  },
+  "sldl:hillsborough13": {
+   "layer": "sldl",
+   "district": "Hillsborough 13",
+   "pop": 25394,
+   "bbox": [
+    -71.46331,
+    42.69894,
+    -71.36068,
+    42.82484
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 25394
+    },
+    {
+     "key": "sldu:14",
+     "pop": 25394
+    }
+   ]
+  },
+  "sldl:hillsborough27": {
+   "layer": "sldl",
+   "district": "Hillsborough 27",
+   "pop": 3514,
+   "bbox": [
+    -71.91595,
+    42.95005,
+    -71.74756,
+    43.12427
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3514
+    },
+    {
+     "key": "sldu:8",
+     "pop": 3514
+    }
+   ]
+  },
+  "sldl:hillsborough29": {
+   "layer": "sldl",
+   "district": "Hillsborough 29",
+   "pop": 18577,
+   "bbox": [
+    -71.64129,
+    42.96935,
+    -71.49638,
+    43.06891
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 18577
+    },
+    {
+     "key": "sldu:16",
+     "pop": 18577
+    }
+   ]
+  },
+  "sldl:hillsborough30": {
+   "layer": "sldl",
+   "district": "Hillsborough 30",
+   "pop": 10353,
+   "bbox": [
+    -72.0588,
+    42.98293,
+    -71.8561,
+    43.2071
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10353
+    },
+    {
+     "key": "sldu:7",
+     "pop": 5939
+    },
+    {
+     "key": "sldu:8",
+     "pop": 4414
+    }
+   ]
+  },
+  "sldl:hillsborough32": {
+   "layer": "sldl",
+   "district": "Hillsborough 32",
+   "pop": 10482,
+   "bbox": [
+    -71.94428,
+    42.70894,
+    -71.71901,
+    42.88416
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10482
+    },
+    {
+     "key": "sldu:12",
+     "pop": 5204
+    },
+    {
+     "key": "sldu:11",
+     "pop": 3896
+    },
+    {
+     "key": "sldu:9",
+     "pop": 1382
+    }
+   ]
+  },
+  "sldl:hillsborough34": {
+   "layer": "sldl",
+   "district": "Hillsborough 34",
+   "pop": 11753,
+   "bbox": [
+    -71.66672,
+    42.79821,
+    -71.55795,
+    42.94346
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 11753
+    },
+    {
+     "key": "sldu:11",
+     "pop": 11753
+    }
+   ]
+  },
+  "sldl:coos6": {
+   "layer": "sldl",
+   "district": "Coos 06",
+   "pop": 3386,
+   "bbox": [
+    -71.44068,
+    44.08575,
+    -71.00998,
+    44.61128
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3386
+    },
+    {
+     "key": "sldu:1",
+     "pop": 3383
+    }
+   ]
+  },
+  "sldl:merrimack5": {
+   "layer": "sldl",
+   "district": "Merrimack 05",
+   "pop": 8008,
+   "bbox": [
+    -71.93099,
+    43.24048,
+    -71.64984,
+    43.6112
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 8008
+    },
+    {
+     "key": "sldu:7",
+     "pop": 8008
+    }
+   ]
+  },
+  "sldl:rockingham10": {
+   "layer": "sldl",
+   "district": "Rockingham 10",
+   "pop": 11199,
+   "bbox": [
+    -71.01378,
+    43.01922,
+    -70.87544,
+    43.09016
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 11199
+    },
+    {
+     "key": "sldu:21",
+     "pop": 11199
+    }
+   ]
+  },
+  "sldl:hillsborough35": {
+   "layer": "sldl",
+   "district": "Hillsborough 35",
+   "pop": 8342,
+   "bbox": [
+    -71.64166,
+    42.70267,
+    -71.52481,
+    42.80357
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 8342
+    },
+    {
+     "key": "sldu:12",
+     "pop": 8342
+    }
+   ]
+  },
+  "sldl:grafton6": {
+   "layer": "sldl",
+   "district": "Grafton 06",
+   "pop": 3580,
+   "bbox": [
+    -72.17358,
+    43.7684,
+    -71.72268,
+    43.95738
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3580
+    },
+    {
+     "key": "sldu:5",
+     "pop": 2082
+    },
+    {
+     "key": "sldu:1",
+     "pop": 1498
+    }
+   ]
+  },
+  "sldl:hillsborough10": {
+   "layer": "sldl",
+   "district": "Hillsborough 10",
+   "pop": 10369,
+   "bbox": [
+    -71.50105,
+    42.70042,
+    -71.45153,
+    42.74099
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10369
+    },
+    {
+     "key": "sldu:13",
+     "pop": 10369
+    }
+   ]
+  },
+  "sldl:hillsborough11": {
+   "layer": "sldl",
+   "district": "Hillsborough 11",
+   "pop": 10267,
+   "bbox": [
+    -71.48249,
+    42.70034,
+    -71.44204,
+    42.73466
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 10267
+    },
+    {
+     "key": "sldu:13",
+     "pop": 10267
+    }
+   ]
+  },
+  "sldl:hillsborough16": {
+   "layer": "sldl",
+   "district": "Hillsborough 16",
+   "pop": 9583,
+   "bbox": [
+    -71.42556,
+    42.93835,
+    -71.37543,
+    43.00901
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9583
+    },
+    {
+     "key": "sldu:18",
+     "pop": 9583
+    }
+   ]
+  },
+  "sldl:merrimack2": {
+   "layer": "sldl",
+   "district": "Merrimack 02",
+   "pop": 4872,
+   "bbox": [
+    -71.65205,
+    43.36349,
+    -71.47145,
+    43.45554
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4872
+    },
+    {
+     "key": "sldu:17",
+     "pop": 4872
+    }
+   ]
+  },
+  "sldl:merrimack3": {
+   "layer": "sldl",
+   "district": "Merrimack 03",
+   "pop": 8741,
+   "bbox": [
+    -71.73366,
+    43.3777,
+    -71.61998,
+    43.51793
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 8741
+    },
+    {
+     "key": "sldu:7",
+     "pop": 8741
+    }
+   ]
+  },
+  "sldl:cheshire8": {
+   "layer": "sldl",
+   "district": "Cheshire 08",
+   "pop": 4587,
+   "bbox": [
+    -72.25957,
+    42.84497,
+    -72.00122,
+    43.05339
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4587
+    },
+    {
+     "key": "sldu:10",
+     "pop": 4587
+    }
+   ]
+  },
+  "sldl:strafford6": {
+   "layer": "sldl",
+   "district": "Strafford 06",
+   "pop": 5388,
+   "bbox": [
+    -70.98053,
+    43.25821,
+    -70.91204,
+    43.30664
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5388
+    },
+    {
+     "key": "sldu:6",
+     "pop": 5388
+    }
+   ]
+  },
+  "sldl:strafford8": {
+   "layer": "sldl",
+   "district": "Strafford 08",
+   "pop": 5498,
+   "bbox": [
+    -71.02989,
+    43.27431,
+    -70.97567,
+    43.32113
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5498
+    },
+    {
+     "key": "sldu:6",
+     "pop": 5498
+    }
+   ]
+  },
+  "sldl:strafford10": {
+   "layer": "sldl",
+   "district": "Strafford 10",
+   "pop": 15490,
+   "bbox": [
+    -70.9808,
+    43.08042,
+    -70.8469,
+    43.16292
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 15490
+    },
+    {
+     "key": "sldu:21",
+     "pop": 15490
+    }
+   ]
+  },
+  "sldl:strafford11": {
+   "layer": "sldl",
+   "district": "Strafford 11",
+   "pop": 11510,
+   "bbox": [
+    -71.07292,
+    43.08175,
+    -70.84006,
+    43.21581
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 11510
+    },
+    {
+     "key": "sldu:21",
+     "pop": 6438
+    },
+    {
+     "key": "sldu:4",
+     "pop": 5072
+    }
+   ]
+  },
+  "sldl:strafford13": {
+   "layer": "sldl",
+   "district": "Strafford 13",
+   "pop": 5511,
+   "bbox": [
+    -70.95961,
+    43.20004,
+    -70.88083,
+    43.25495
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5511
+    },
+    {
+     "key": "sldu:4",
+     "pop": 5511
+    }
+   ]
+  },
+  "sldl:rockingham13": {
+   "layer": "sldl",
+   "district": "Rockingham 13",
+   "pop": 34317,
+   "bbox": [
+    -71.34664,
+    42.84098,
+    -71.20691,
+    42.94183
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 34317
+    },
+    {
+     "key": "sldu:19",
+     "pop": 34317
+    }
+   ]
+  },
+  "sldl:sullivan4": {
+   "layer": "sldl",
+   "district": "Sullivan 04",
+   "pop": 4610,
+   "bbox": [
+    -72.43209,
+    43.12881,
+    -72.00907,
+    43.34085
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4610
+    },
+    {
+     "key": "sldu:8",
+     "pop": 3814
+    },
+    {
+     "key": "sldu:7",
+     "pop": 796
+    }
+   ]
+  },
+  "sldl:merrimack7": {
+   "layer": "sldl",
+   "district": "Merrimack 07",
+   "pop": 6572,
+   "bbox": [
+    -72.09015,
+    43.25508,
+    -71.90702,
+    43.46492
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 6572
+    },
+    {
+     "key": "sldu:5",
+     "pop": 4400
+    },
+    {
+     "key": "sldu:7",
+     "pop": 2172
+    }
+   ]
+  },
+  "sldl:cheshire7": {
+   "layer": "sldl",
+   "district": "Cheshire 07",
+   "pop": 4510,
+   "bbox": [
+    -72.29411,
+    42.91375,
+    -72.21706,
+    43.00003
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4510
+    },
+    {
+     "key": "sldu:10",
+     "pop": 4510
+    }
+   ]
+  },
+  "sldl:hillsborough1": {
+   "layer": "sldl",
+   "district": "Hillsborough 01",
+   "pop": 14222,
+   "bbox": [
+    -71.38696,
+    42.69704,
+    -71.24548,
+    42.78524
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 14222
+    },
+    {
+     "key": "sldu:22",
+     "pop": 14222
+    }
+   ]
+  },
+  "sldl:hillsborough23": {
+   "layer": "sldl",
+   "district": "Hillsborough 23",
+   "pop": 9611,
+   "bbox": [
+    -71.47381,
+    42.97306,
+    -71.4574,
+    43.00948
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9611
+    },
+    {
+     "key": "sldu:20",
+     "pop": 9611
+    }
+   ]
+  },
+  "sldl:cheshire14": {
+   "layer": "sldl",
+   "district": "Cheshire 14",
+   "pop": 6476,
+   "bbox": [
+    -72.09126,
+    42.7121,
+    -71.92899,
+    42.79331
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 6476
+    },
+    {
+     "key": "sldu:12",
+     "pop": 6476
+    }
+   ]
+  },
+  "sldl:cheshire13": {
+   "layer": "sldl",
+   "district": "Cheshire 13",
+   "pop": 6852,
+   "bbox": [
+    -72.15626,
+    42.7894,
+    -71.97471,
+    42.92252
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 6852
+    },
+    {
+     "key": "sldu:9",
+     "pop": 5320
+    },
+    {
+     "key": "sldu:10",
+     "pop": 1532
+    }
+   ]
+  },
+  "sldl:carroll2": {
+   "layer": "sldl",
+   "district": "Carroll 02",
+   "pop": 6994,
+   "bbox": [
+    -71.5646,
+    43.76482,
+    -71.00017,
+    44.2849
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:3",
+     "pop": 5528
+    },
+    {
+     "key": "cd:1",
+     "pop": 3741
+    },
+    {
+     "key": "cd:2",
+     "pop": 3253
+    },
+    {
+     "key": "sldu:2",
+     "pop": 1466
+    }
+   ]
+  },
+  "sldl:carroll3": {
+   "layer": "sldl",
+   "district": "Carroll 03",
+   "pop": 10295,
+   "bbox": [
+    -71.53233,
+    43.62677,
+    -71.08232,
+    43.96372
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 10295
+    },
+    {
+     "key": "sldu:3",
+     "pop": 10295
+    }
+   ]
+  },
+  "sldl:carroll5": {
+   "layer": "sldl",
+   "district": "Carroll 05",
+   "pop": 4372,
+   "bbox": [
+    -71.27993,
+    43.63638,
+    -71.01385,
+    43.83304
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4372
+    },
+    {
+     "key": "sldu:3",
+     "pop": 4372
+    }
+   ]
+  },
+  "sldl:carroll6": {
+   "layer": "sldl",
+   "district": "Carroll 06",
+   "pop": 8883,
+   "bbox": [
+    -71.34069,
+    43.53896,
+    -71.05916,
+    43.77039
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 8883
+    },
+    {
+     "key": "sldu:3",
+     "pop": 8883
+    }
+   ]
+  },
+  "sldl:cheshire3": {
+   "layer": "sldl",
+   "district": "Cheshire 03",
+   "pop": 4676,
+   "bbox": [
+    -72.38283,
+    42.91068,
+    -72.27798,
+    42.97956
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4676
+    },
+    {
+     "key": "sldu:10",
+     "pop": 4676
+    }
+   ]
+  },
+  "sldl:cheshire4": {
+   "layer": "sldl",
+   "district": "Cheshire 04",
+   "pop": 4620,
+   "bbox": [
+    -72.34765,
+    42.93238,
+    -72.27862,
+    42.98159
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4620
+    },
+    {
+     "key": "sldu:10",
+     "pop": 4620
+    }
+   ]
+  },
+  "sldl:cheshire10": {
+   "layer": "sldl",
+   "district": "Cheshire 10",
+   "pop": 8467,
+   "bbox": [
+    -72.38923,
+    42.71958,
+    -72.20357,
+    42.9112
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 8467
+    },
+    {
+     "key": "sldu:10",
+     "pop": 7270
+    },
+    {
+     "key": "sldu:9",
+     "pop": 1197
+    }
+   ]
+  },
+  "sldl:cheshire11": {
+   "layer": "sldl",
+   "district": "Cheshire 11",
+   "pop": 4150,
+   "bbox": [
+    -72.47728,
+    42.72287,
+    -72.32073,
+    42.85307
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4150
+    },
+    {
+     "key": "sldu:9",
+     "pop": 4150
+    }
+   ]
+  },
+  "sldl:merrimack18": {
+   "layer": "sldl",
+   "district": "Merrimack 18",
+   "pop": 4398,
+   "bbox": [
+    -71.55556,
+    43.2041,
+    -71.52088,
+    43.22936
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4398
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4398
+    }
+   ]
+  },
+  "sldl:hillsborough18": {
+   "layer": "sldl",
+   "district": "Hillsborough 18",
+   "pop": 9637,
+   "bbox": [
+    -71.51277,
+    42.9966,
+    -71.4695,
+    43.05178
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9637
+    },
+    {
+     "key": "sldu:20",
+     "pop": 9637
+    }
+   ]
+  },
+  "sldl:rockingham19": {
+   "layer": "sldl",
+   "district": "Rockingham 19",
+   "pop": 4498,
+   "bbox": [
+    -70.98269,
+    42.88855,
+    -70.82204,
+    42.9672
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 4498
+    },
+    {
+     "key": "sldu:24",
+     "pop": 2403
+    },
+    {
+     "key": "sldu:23",
+     "pop": 2095
+    }
+   ]
+  },
+  "sldl:hillsborough28": {
+   "layer": "sldl",
+   "district": "Hillsborough 28",
+   "pop": 9092,
+   "bbox": [
+    -71.81028,
+    43.01415,
+    -71.6349,
+    43.15253
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 9092
+    },
+    {
+     "key": "sldu:8",
+     "pop": 9092
+    }
+   ]
+  },
+  "sldl:merrimack24": {
+   "layer": "sldl",
+   "district": "Merrimack 24",
+   "pop": 4421,
+   "bbox": [
+    -71.57555,
+    43.21953,
+    -71.46234,
+    43.30947
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4421
+    },
+    {
+     "key": "sldu:15",
+     "pop": 4421
+    }
+   ]
+  },
+  "sldl:hillsborough12": {
+   "layer": "sldl",
+   "district": "Hillsborough 12",
+   "pop": 26632,
+   "bbox": [
+    -71.57751,
+    42.79075,
+    -71.45257,
+    42.91107
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 26632
+    },
+    {
+     "key": "sldu:11",
+     "pop": 26632
+    }
+   ]
+  },
+  "sldl:strafford7": {
+   "layer": "sldl",
+   "district": "Strafford 07",
+   "pop": 5390,
+   "bbox": [
+    -71.02065,
+    43.22574,
+    -70.92465,
+    43.28968
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 5390
+    },
+    {
+     "key": "sldu:6",
+     "pop": 5390
+    }
+   ]
+  },
+  "sldl:hillsborough31": {
+   "layer": "sldl",
+   "district": "Hillsborough 31",
+   "pop": 3447,
+   "bbox": [
+    -72.06222,
+    42.87866,
+    -71.80256,
+    43.01873
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 3447
+    },
+    {
+     "key": "sldu:10",
+     "pop": 1731
+    },
+    {
+     "key": "sldu:9",
+     "pop": 1716
+    }
+   ]
+  },
+  "sldl:cheshire9": {
+   "layer": "sldl",
+   "district": "Cheshire 09",
+   "pop": 4739,
+   "bbox": [
+    -72.37642,
+    42.98991,
+    -72.03408,
+    43.18197
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 4739
+    },
+    {
+     "key": "sldu:8",
+     "pop": 2875
+    },
+    {
+     "key": "sldu:10",
+     "pop": 1864
+    }
+   ]
+  },
+  "sldl:cheshire6": {
+   "layer": "sldl",
+   "district": "Cheshire 06",
+   "pop": 9206,
+   "bbox": [
+    -72.55709,
+    42.72669,
+    -72.34659,
+    43.02062
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 9206
+    },
+    {
+     "key": "sldu:10",
+     "pop": 5258
+    },
+    {
+     "key": "sldu:9",
+     "pop": 3948
+    }
+   ]
+  },
+  "sldl:strafford2": {
+   "layer": "sldl",
+   "district": "Strafford 02",
+   "pop": 9901,
+   "bbox": [
+    -71.08533,
+    43.26803,
+    -70.95373,
+    43.5413
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9901
+    },
+    {
+     "key": "sldu:6",
+     "pop": 5419
+    },
+    {
+     "key": "sldu:3",
+     "pop": 4482
+    }
+   ]
+  },
+  "sldl:rockingham18": {
+   "layer": "sldl",
+   "district": "Rockingham 18",
+   "pop": 7087,
+   "bbox": [
+    -71.20854,
+    42.80888,
+    -71.11218,
+    42.86672
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 7087
+    },
+    {
+     "key": "sldu:22",
+     "pop": 7087
+    }
+   ]
+  },
+  "sldl:rockingham9": {
+   "layer": "sldl",
+   "district": "Rockingham 09",
+   "pop": 6548,
+   "bbox": [
+    -71.22371,
+    42.89765,
+    -71.14627,
+    42.96512
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 6548
+    },
+    {
+     "key": "sldu:23",
+     "pop": 6548
+    }
+   ]
+  },
+  "sldl:hillsborough21": {
+   "layer": "sldl",
+   "district": "Hillsborough 21",
+   "pop": 9696,
+   "bbox": [
+    -71.48021,
+    43.00598,
+    -71.43635,
+    43.044
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9696
+    },
+    {
+     "key": "sldu:16",
+     "pop": 9696
+    }
+   ]
+  },
+  "sldl:hillsborough19": {
+   "layer": "sldl",
+   "district": "Hillsborough 19",
+   "pop": 9608,
+   "bbox": [
+    -71.50051,
+    42.96433,
+    -71.46847,
+    42.99859
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 9608
+    },
+    {
+     "key": "sldu:20",
+     "pop": 9608
+    }
+   ]
+  }
+ }
+}

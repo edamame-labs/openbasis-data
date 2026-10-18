@@ -1,0 +1,101 @@
+{
+ "generatedAt": "2026-10-18T23:12:49.102Z",
+ "states": [
+  {
+   "state": "CA",
+   "population": 39538223,
+   "blocks": 377591,
+   "layers": [
+    {
+     "id": "cd",
+     "districts": 52
+    },
+    {
+     "id": "cd120",
+     "districts": 52
+    },
+    {
+     "id": "sldu",
+     "districts": 40
+    },
+    {
+     "id": "sldl",
+     "districts": 80
+    },
+    {
+     "id": "sf",
+     "districts": 11
+    },
+    {
+     "id": "oak",
+     "districts": 7
+    },
+    {
+     "id": "sj",
+     "districts": 10
+    }
+   ]
+  },
+  {
+   "state": "MD",
+   "population": 6177224,
+   "blocks": 65274,
+   "layers": [
+    {
+     "id": "cd",
+     "districts": 8
+    },
+    {
+     "id": "sldu",
+     "districts": 47
+    },
+    {
+     "id": "sldl",
+     "districts": 71
+    }
+   ]
+  },
+  {
+   "state": "NH",
+   "population": 1377529,
+   "blocks": 25317,
+   "layers": [
+    {
+     "id": "cd",
+     "districts": 2
+    },
+    {
+     "id": "sldu",
+     "districts": 24
+    },
+    {
+     "id": "sldl",
+     "districts": 164
+    }
+   ]
+  },
+  {
+   "state": "TX",
+   "population": 29145505,
+   "blocks": 449085,
+   "layers": [
+    {
+     "id": "cd",
+     "districts": 38
+    },
+    {
+     "id": "cd120",
+     "districts": 38
+    },
+    {
+     "id": "sldu",
+     "districts": 31
+    },
+    {
+     "id": "sldl",
+     "districts": 150
+    }
+   ]
+  }
+ ]
+}
