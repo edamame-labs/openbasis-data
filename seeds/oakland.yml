@@ -1,0 +1,44 @@
+# oaklandca.gov returns 403 to non-browser clients, so this roster is maintained by hand.
+# Re-verify against the source URL and bump verifiedAt when editing.
+jurisdiction: Oakland
+slug: oakland
+body: Oakland City Council
+source:
+  name: oaklandca.gov
+  url: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members
+  verifiedAt: "2026-10-18"
+defaults:
+  address: 1 Frank H. Ogawa Plaza, Oakland, CA 94612
+members:
+  - name: Rowena Brown
+    office: Councilmember
+    district: At-Large
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/Councilmember-At-Large
+  - name: Zac Unger
+    office: Councilmember
+    district: "1"
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/District-1
+  - name: Charlene Wang
+    office: Councilmember
+    district: "2"
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/District-2
+  - name: Carroll Fife
+    office: Councilmember
+    district: "3"
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/District-3
+  - name: Janani Ramachandran
+    office: Councilmember
+    district: "4"
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/District-4
+  - name: Noel Gallo
+    office: Councilmember
+    district: "5"
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/District-5
+  - name: Kevin Jenkins
+    office: Councilmember (Council President)
+    district: "6"
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/District-6
+  - name: Ken Houston
+    office: Councilmember
+    district: "7"
+    website: https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members/District-7

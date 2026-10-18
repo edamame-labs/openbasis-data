@@ -1,0 +1,24 @@
+# sanjoseca.gov returns 403 to non-browser clients, so this roster is maintained by hand.
+# Re-verify against the source URL and bump verifiedAt when editing.
+jurisdiction: San Jose
+slug: san-jose
+body: San Jose City Council
+source:
+  name: sanjoseca.gov
+  url: https://www.sanjoseca.gov/your-government/departments-offices/mayor-and-city-council
+  verifiedAt: "2026-10-18"
+defaults:
+  address: 200 E. Santa Clara St., San Jose, CA 95113
+  website: https://www.sanjoseca.gov/your-government/departments-offices/mayor-and-city-council
+members:
+  - { name: Matt Mahan, office: Mayor, body: San Jose City Government, phone: 408-535-4800, termEnd: "2028-12-31" }
+  - { name: Rosemary Kamei, office: Councilmember, district: "1", phone: 408-535-4901, termEnd: "2026-12-31" }
+  - { name: Pamela Campos, office: Councilmember, district: "2", phone: 408-535-4902, termEnd: "2028-12-31" }
+  - { name: Anthony Tordillos, office: Councilmember, district: "3", phone: 408-535-4903, termEnd: "2026-12-31" }
+  - { name: David Cohen, office: Councilmember, district: "4", phone: 408-535-4904, termEnd: "2028-12-31" }
+  - { name: Peter Ortiz, office: Councilmember, district: "5", phone: 408-535-4905, termEnd: "2026-12-31" }
+  - { name: Michael Mulcahy, office: Councilmember, district: "6", phone: 408-535-4906, termEnd: "2028-12-31" }
+  - { name: Bien Doan, office: Councilmember, district: "7", phone: 408-535-4907, termEnd: "2026-12-31" }
+  - { name: Domingo Candelas, office: Councilmember, district: "8", phone: 408-535-4908, termEnd: "2028-12-31" }
+  - { name: Pam Foley, office: Councilmember, district: "9", phone: 408-535-4909, termEnd: "2026-12-31" }
+  - { name: George Casey, office: Councilmember, district: "10", phone: 408-535-4910, termEnd: "2028-12-31" }
