@@ -23,7 +23,7 @@ To pin a version, put a commit SHA in place of `main`.
 
 | Level | Officials | Districts (boundaries) |
 |---|---|---|
-| Federal | 2 U.S. senators, 52 U.S. representatives | 52 congressional districts (119th Congress) |
+| Federal | 2 U.S. senators, 52 U.S. representatives | 52 congressional districts (119th Congress, current) and 52 under the Prop 50 map (120th Congress, from January 2027) |
 | State | State Senate, Assembly, Governor, Lt. Governor, Attorney General, Secretary of State | 40 Senate, 80 Assembly districts |
 | City | Mayors and councils of San Francisco, Oakland, San Jose | 11 + 7 + 10 council districts |
 
@@ -37,6 +37,7 @@ To pin a version, put a commit SHA in place of `main`.
 | SF Board of Supervisors | [sf.gov](https://www.sf.gov/departments--board-supervisors) | Scraped from the board page and profiles |
 | Oakland, San Jose councils | [oaklandca.gov](https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members), [sanjoseca.gov](https://www.sanjoseca.gov/your-government/departments-offices/mayor-and-city-council) | **By hand** in `seeds/` (both sites return HTTP 403 to scripts) |
 | Congressional and legislative boundaries | U.S. Census [TIGERweb](https://tigerweb.geo.census.gov/) (analysis) and [cartographic boundary files](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) (display) | ArcGIS REST / shapefile |
+| 2027 congressional boundaries (Prop 50) | U.S. Census TIGERweb "120th Congressional Districts" (January 1, 2026 vintage) | ArcGIS REST |
 | SF supervisor districts | [DataSF](https://data.sfgov.org/d/f2zs-jevy) | GeoJSON |
 | Oakland council districts | [City of Oakland GIS](https://services.arcgis.com/9tC74aDHuml0x5Yz/arcgis/rest/services/CouncilDistrict_2022_Revised/FeatureServer/0) | ArcGIS REST |
 | San Jose council districts | [City of San Jose GIS](https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/120) | ArcGIS REST |
@@ -66,11 +67,11 @@ Overlap is measured in **people, not area**. For every populated 2020 Census blo
 
 ### Boundaries
 
-Overlaps are computed from TIGERweb geometry at about 10 m precision. The files in `data/boundaries/` are for display only. Statewide layers come from Census cartographic boundary files, which are clipped to the shoreline. All layers are simplified with [mapshaper](https://github.com/mbloch/mapshaper) using topology-preserving simplification, so neighboring districts still share edges.
+Overlaps are computed from TIGERweb geometry at about 10 m precision. The files in `data/boundaries/` are for display only. Statewide layers come from Census cartographic boundary files, which are clipped to the shoreline. The 2027 congressional layer has no cartographic file yet, so its display boundaries are clipped to the 119th Congress cartographic outline instead. All layers are simplified with [mapshaper](https://github.com/mbloch/mapshaper) using topology-preserving simplification, so neighboring districts still share edges.
 
 ## Known limitations
 
-- **Congressional lines.** These are the 119th Congress districts that current members represent. Under Proposition 50 (2025), new lines take effect with the 120th Congress in January 2027 and aren't included yet.
+- **Two congressional maps.** `cd` is the 119th Congress map that current members represent. `cd120` is the Proposition 50 (2025) map used in the November 3, 2026 election, which takes effect January 3, 2027. Its seats have no officials attached until the winners are seated. Overlaps between the two show where each current member's constituents land under the new map.
 - **Hand-maintained seeds.** The Oakland and San Jose rosters are hand-maintained, and each file records the date it was last checked against the city site. They won't pick up mid-term changes automatically.
 - **SF in CI.** sf.gov blocks GitHub Actions, so the weekly refresh carries the SF supervisor roster forward. It's refreshed whenever the pipeline runs from an ordinary network. `runs` in `officials.json` shows when.
 - **Vacancies.** The State Legislature has 120 seats but the source lists 118 people, which likely reflects vacancies.
@@ -110,7 +111,8 @@ Layers:
 
 | Layer | Meaning | Matches `Official.body` |
 |---|---|---|
-| `cd` | U.S. House | `U.S. House` |
+| `cd` | U.S. House, current (119th Congress) | `U.S. House` |
+| `cd120` | U.S. House from Jan 2027 (Prop 50) | `U.S. House (2027)`, no officials yet |
 | `sldu` | State Senate | `California State Senate` |
 | `sldl` | State Assembly | `California State Assembly` |
 | `sf` | SF Board of Supervisors | `San Francisco Board of Supervisors` |
