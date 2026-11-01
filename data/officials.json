@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T11:42:03.800Z",
+  "generatedAt": "2026-11-01T12:08:05.071Z",
   "officials": [
     {
       "id": "us-house-ak-nicholas-j-begich-iii",
@@ -147844,6 +147844,28 @@
       ]
     },
     {
+      "level": "state",
+      "state": "NM",
+      "jurisdiction": "New Mexico",
+      "body": "New Mexico House of Representatives",
+      "id": "nm-house-yolanda-jaramillo",
+      "name": "Yolanda Jaramillo",
+      "givenName": "Yolanda",
+      "familyName": "Jaramillo",
+      "office": "State Representative",
+      "district": "41",
+      "party": "Democratic",
+      "email": "yolanda.jaramillo@nmlegis.gov",
+      "website": "https://www.nmlegis.gov/Members/Legislator?SponCode=HJAYO",
+      "sources": [
+        {
+          "name": "New Mexico Legislature",
+          "url": "https://www.nmlegis.gov/Members/Legislator?SponCode=HJAYO",
+          "retrievedAt": "2026-11-01"
+        }
+      ]
+    },
+    {
       "id": "nm-house-kristina-ortez",
       "name": "Kristina Ortez",
       "givenName": "Kristina",
@@ -184759,6 +184781,33 @@
       "photo": "https://scstatehouse.gov/images/members/1217045309.jpg",
       "ids": {
         "openstates": "ocd-person/f946b369-cfbd-4cc5-84f2-4cc343beb03a"
+      },
+      "sources": [
+        {
+          "name": "Open States",
+          "url": "https://data.openstates.org/people/current/sc.csv",
+          "retrievedAt": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "sc-house-luke-rankin",
+      "name": "Luke Rankin",
+      "givenName": "Luke",
+      "familyName": "Rankin",
+      "level": "state",
+      "state": "SC",
+      "jurisdiction": "South Carolina",
+      "office": "State Representative",
+      "body": "South Carolina House of Representatives",
+      "district": "14",
+      "party": "Republican",
+      "gender": "Male",
+      "email": "lukerankin@schouse.gov",
+      "website": "https://www.scstatehouse.gov/member.php?code=1510227092",
+      "photo": "https://lirp.cdn-website.com/44a83ceb/dms3rep/multi/opt/P1011798-1920w.jpg",
+      "ids": {
+        "openstates": "ocd-person/94b1b04a-1be7-4128-b7ac-0c3b299b7d53"
       },
       "sources": [
         {
@@ -239078,7 +239127,7 @@
     },
     {
       "source": "seeds",
-      "count": 19,
+      "count": 20,
       "ids": [
         "ca-oakland-councilmember-rowena-brown",
         "ca-oakland-councilmember-zac-unger",
@@ -239098,7 +239147,8 @@
         "ca-san-jose-councilmember-bien-doan",
         "ca-san-jose-councilmember-domingo-candelas",
         "ca-san-jose-councilmember-pam-foley",
-        "ca-san-jose-councilmember-george-casey"
+        "ca-san-jose-councilmember-george-casey",
+        "nm-house-yolanda-jaramillo"
       ]
     },
     {

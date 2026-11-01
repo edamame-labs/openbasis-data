@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-01T11:45:01.795Z",
+ "generatedAt": "2026-11-01T12:08:46.664Z",
  "states": [
   {
    "state": "AK",
@@ -818,7 +818,7 @@
   },
   {
    "state": "TN",
-   "population": 6910833,
+   "population": 6910840,
    "blocks": 133846,
    "layers": [
     {
@@ -963,7 +963,7 @@
   },
   {
    "state": "WV",
-   "population": 1793617,
+   "population": 1793716,
    "blocks": 51850,
    "layers": [
     {

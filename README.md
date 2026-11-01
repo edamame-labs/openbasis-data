@@ -14,12 +14,14 @@ Every record links back to the public source it came from, and the methodology b
 |---|---|
 | [`data/officials.json`](data/officials.json) | Every official, with contact info, cross-reference IDs, and the source of each record |
 | [`data/officials.csv`](data/officials.csv) | A flat export of the main directory fields; includes `state`, `seat` and `voting` |
+| [`data/seat-reviews.json`](data/seat-reviews.json) | Dated official-source vacancy checks, historical evidence and unresolved issues |
+| `data/states/<st>/assignment-audit.json` | Exact Census point recovery audit for states rebuilt with that method |
 | [`data/coverage.json`](data/coverage.json) | Per-state validation status, findings, unmatched officials, seat shortfalls, population differences and source versions |
 | [`data/states/index.json`](data/states/index.json) | One summary row per state: population, block count, and district count per layer |
 | `data/states/<st>/districts.json` | The state's district layers. Each district has its 2020 population and the districts in other layers it shares residents with |
 | `data/states/<st>/overlaps.csv` | The state's overlaps as a flat table: one row per pair of districts |
 | `data/states/<st>/boundaries/*.geojson` | Simplified district boundaries, one file per layer, meant for maps rather than analysis |
-| [`seeds/<st>/*.yml`](seeds) | Hand-maintained rosters for sites that can't be fetched automatically |
+| [`seeds/<st>/*.yml`](seeds) | Hand-maintained rosters and temporary official-source corrections |
 
 `<st>` is the lowercase postal code, for example `data/states/ca/districts.json`.
 
@@ -57,7 +59,7 @@ Each official carries a `sources` list with the URL and retrieval date of every 
 
 ### Merging officials
 
-When two sources describe the same person, records are matched on level + state + jurisdiction + normalized name. Sources are applied in a fixed priority order: earlier ones win on conflicting fields, and later ones only fill gaps. For local offices, official city websites outrank Open States.
+When two sources describe the same person, records are matched on level + state + jurisdiction + body + canonical district + normalized name. Two people with the same name in different chambers or districts remain separate. Ambiguous conflicting Open States identities cause ingestion to fail rather than silently merge. Source-run IDs are reconciled with final record IDs after merging. Sources are applied in a fixed priority order: earlier ones win on conflicting fields, and later ones only fill gaps. For local offices, official city websites outrank Open States.
 
 ### When a source breaks
 
@@ -69,9 +71,9 @@ District names differ between sources ("Coos 05" vs "Coos 5", "Third Middlesex" 
 
 ### District overlaps
 
-Overlap is measured in **people, not area**. For every populated 2020 Census block (about 8 million nationwide), the block's interior point is assigned to the district containing it in each layer. Two districts overlap by the total population of the blocks they share. Blocks never cross state lines, so each state is computed on its own.
+Overlap is measured in **people, not area**. For every populated 2020 Census block (about 5.8 million across the 50 states), the block's interior point is assigned to the district containing it in each layer. Two districts overlap by the total population of the blocks they share. Blocks never cross state lines, so each state is computed on its own.
 
-- Legislative districts are drawn from whole Census blocks, so this is essentially exact for them. City council lines may occasionally split a block; in that case the whole block goes to the district containing its interior point.
+- Legislative districts are drawn from whole Census blocks. If an interior point falls outside the generalized analysis polygons, the pipeline queries Census's exact server-side point intersection for that point. Only one unambiguous, known district is accepted; no nearest-district or proportional allocation is used. Rebuilt states publish `assignment-audit.json` with every recovered point, population and query URL. City council lines may occasionally split a block; in that case the whole block goes to the district containing its interior point.
 - Pairs that share fewer than 100 people, or under 0.1% of the smaller district, are dropped as boundary noise.
 - Sanity check: each state's congressional layer sums to its 2020 Census population, and every other statewide layer sums to the same total.
 
@@ -89,11 +91,15 @@ Overlaps are computed from TIGERweb geometry at about 10 m precision. The files 
 - `auto-validated`: automated checks passed. Warnings, including apparent vacancies, still require official-source review.
 - `reviewed`: automated checks passed and a historical manual-review date exists. `reviewedAt` is that historical date, not a claim that the current snapshot was manually reviewed again.
 
-Checks compare each state's House and legislative member counts to independent chamber-size references, require two U.S. senators and one governor, match officials to analysis districts, compare display and analysis district keys, and verify symmetric population overlaps. Every statewide layer is compared independently with the state's **2020 resident population**, rather than only with another computed layer. Population differences up to 0.1% are warnings; larger differences fail. Unmatched geographic members over 10% fail unless an explicitly documented exception applies. Smaller mismatches remain visible as warnings.
+Checks compare each state's House and legislative member counts to independent chamber-size references, require two U.S. senators and one governor, match officials to analysis districts, compare display and analysis district keys, and verify symmetric population overlaps. Every statewide layer is compared independently with the state's **2020 resident population**, rather than only with another computed layer. Every statewide layer must equal the independent Census total exactly; any difference fails. Unmatched geographic members over 10% fail unless an explicitly documented exception applies. Smaller mismatches remain visible as warnings.
 
 The report includes `inputSha256`, a fingerprint of the exact officials, CSV, geometry and index files checked; changing any input requires a new report before publication.
 
-Each layer's report lists unmatched officials and districts without matched officials. `seats[].unconfirmedShortfall` is a count requiring investigation, **not** a confirmed vacancy count. Non-voting Maine tribal representatives are excluded from voting-seat totals and kept in the directory. Citywide council members are reported separately from ward-based members.
+Each layer's report lists unmatched officials and districts without matched officials. `seats[].confirmedVacancies` counts only applicable, dated official evidence; `seats[].unconfirmedShortfall` is the remaining count requiring investigation, **not** a confirmed vacancy count. Non-voting Maine tribal representatives are excluded from voting-seat totals and kept in the directory. Citywide council members are reported separately from ward-based members.
+
+[`data/seat-reviews.json`](data/seat-reviews.json) records the evidence behind seat checks: explicit vacancy confirmations, historical confirmations, confirmed departures, unresolved conflicts, and resolved data errors. A departure notice alone is not automatically counted as a currently vacant seat. Each confirmation expires after its `validUntil` date and stops applying if the chamber roster fingerprint changes. District subjects and observed empty districts are not automatically confirmed vacancies. Historical NH Clerk figures remain historical evidence.
+
+Temporary statewide corrections may be maintained in `seeds/<st>/*.yml` with an explicit `level`, stable member `id`, official source, verification date and `expiresAt`. They only fill an unoccupied seat and yield to an automatically collected successor. The current NM District 41 correction expires on December 1, 2026 unless reverified.
 
 The report records official-data and geometry generation times separately, independent Census/NCSL reference URLs, geometry vintages and analysis endpoints. Congressional `cd120` reflects the Census January 1, 2026 vintage and may omit later changes. Display state-legislative boundaries use GENZ2024; mismatches with analysis boundaries fail validation.
 
@@ -107,7 +113,7 @@ The report records official-data and geometry generation times separately, indep
 - **Idaho House positions.** `district` is the shared geographic district; `seat` preserves the A/B position from the upstream district label. These are not separate geographic subdistricts.
 - **Maine tribal representatives.** Non-voting representatives are included with `voting: false` and office `Non-voting Tribal Representative`. They represent tribal communities, have no Census legislative-district polygon, and do not count against the 151 voting seats.
 - **Unconfirmed shortfalls.** The nationwide roster may contain fewer members than statutory seats. Consult `coverage.json` and the chamber's own current roster before interpreting a gap as a vacancy.
-- **Small population gaps.** Block-point assignment against generalized analysis geometry may leave a small number of residents unassigned. These differences are recorded per layer in `coverage.json`; published layers must remain within the 0.1% validation threshold.
+- **Boundary precision.** Generalized analysis geometry can miss block interior points. Exact Census point intersection resolves these cases, with a public audit trail; unresolved or ambiguous assignments block publication. Display GeoJSON remains simplified and should not be used for precision analysis.
 - **Population vintage.** Population is from the 2020 Census, not current estimates.
 
 ## Corrections

@@ -1,0 +1,63 @@
+{
+  "state": "TN",
+  "generatedAt": "2026-11-01T12:06:41.328Z",
+  "method": "Generalized polygon assignment, with exact Census server-side point intersection for initially unassigned statewide blocks. Ambiguous points remain unresolved.",
+  "totalBlockPopulation": 6910840,
+  "layers": [
+    {
+      "layer": "cd",
+      "initiallyUnassignedBlocks": 1,
+      "initiallyUnassignedPopulation": 7,
+      "recovered": [
+        {
+          "blockIndex": 75980,
+          "lon": -85.2832147,
+          "lat": 34.9848423,
+          "population": 7,
+          "district": "cd:3",
+          "source": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/4/query?where=STATE%3D%2747%27&geometry=%7B%22x%22%3A-85.2832147%2C%22y%22%3A34.9848423%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=CD119&returnGeometry=false&f=json"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "layer": "cd120",
+      "initiallyUnassignedBlocks": 1,
+      "initiallyUnassignedPopulation": 7,
+      "recovered": [
+        {
+          "blockIndex": 75980,
+          "lon": -85.2832147,
+          "lat": 34.9848423,
+          "population": 7,
+          "district": "cd120:3",
+          "source": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/0/query?where=STATE%3D%2747%27&geometry=%7B%22x%22%3A-85.2832147%2C%22y%22%3A34.9848423%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=CD120&returnGeometry=false&f=json"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "layer": "sldu",
+      "initiallyUnassignedBlocks": 0,
+      "initiallyUnassignedPopulation": 0,
+      "recovered": [],
+      "unresolved": []
+    },
+    {
+      "layer": "sldl",
+      "initiallyUnassignedBlocks": 1,
+      "initiallyUnassignedPopulation": 7,
+      "recovered": [
+        {
+          "blockIndex": 75980,
+          "lon": -85.2832147,
+          "lat": 34.9848423,
+          "population": 7,
+          "district": "sldl:30",
+          "source": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/6/query?where=STATE%3D%2747%27&geometry=%7B%22x%22%3A-85.2832147%2C%22y%22%3A34.9848423%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=BASENAME&returnGeometry=false&f=json"
+        }
+      ],
+      "unresolved": []
+    }
+  ]
+}
