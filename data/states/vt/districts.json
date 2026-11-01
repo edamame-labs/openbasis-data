@@ -1,0 +1,3812 @@
+{
+ "generatedAt": "2026-11-01T11:44:34.467Z",
+ "state": "VT",
+ "blocks": 17976,
+ "layers": [
+  {
+   "id": "cd",
+   "label": "Congress",
+   "body": "U.S. House",
+   "jurisdiction": "Vermont",
+   "districtLabel": "Congressional District"
+  },
+  {
+   "id": "sldu",
+   "label": "State Senate",
+   "body": "Vermont State Senate",
+   "jurisdiction": "Vermont",
+   "districtLabel": "Senate District"
+  },
+  {
+   "id": "sldl",
+   "label": "State House",
+   "body": "Vermont House of Representatives",
+   "jurisdiction": "Vermont",
+   "districtLabel": "House District"
+  }
+ ],
+ "districts": {
+  "cd:0": {
+   "layer": "cd",
+   "district": "0",
+   "pop": 643077,
+   "bbox": [
+    -73.4379,
+    42.72693,
+    -71.46505,
+    45.01666
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 69199
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 67285
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 65305
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 60068
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 59933
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 44508
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 41967
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 41285
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 40425
+    },
+    {
+     "key": "sldu:caledonia",
+     "pop": 22630
+    },
+    {
+     "key": "sldu:essex",
+     "pop": 22290
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 22103
+    },
+    {
+     "key": "sldu:chittendennorth",
+     "pop": 22073
+    },
+    {
+     "key": "sldu:lamoille",
+     "pop": 22068
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 21954
+    },
+    {
+     "key": "sldu:grandisle",
+     "pop": 19984
+    },
+    {
+     "key": "sldl:chittenden2",
+     "pop": 9293
+    },
+    {
+     "key": "sldl:chittenden22",
+     "pop": 9133
+    },
+    {
+     "key": "sldl:caledoniaessex",
+     "pop": 9080
+    },
+    {
+     "key": "sldl:windsor3",
+     "pop": 9062
+    },
+    {
+     "key": "sldl:rutland2",
+     "pop": 9056
+    },
+    {
+     "key": "sldl:windsororange2",
+     "pop": 9041
+    },
+    {
+     "key": "sldl:windsor6",
+     "pop": 9008
+    },
+    {
+     "key": "sldl:franklin1",
+     "pop": 8949
+    },
+    {
+     "key": "sldl:addison4",
+     "pop": 8940
+    },
+    {
+     "key": "sldl:orleanslamoille",
+     "pop": 8891
+    },
+    {
+     "key": "sldl:lamoillewashington",
+     "pop": 8884
+    },
+    {
+     "key": "sldl:franklin4",
+     "pop": 8837
+    },
+    {
+     "key": "sldl:chittenden20",
+     "pop": 8817
+    },
+    {
+     "key": "sldl:washington1",
+     "pop": 8767
+    },
+    {
+     "key": "sldl:franklin5",
+     "pop": 8728
+    },
+    {
+     "key": "sldl:chittenden19",
+     "pop": 8707
+    },
+    {
+     "key": "sldl:chittenden23",
+     "pop": 8687
+    },
+    {
+     "key": "sldl:grandislechittenden",
+     "pop": 8675
+    },
+    {
+     "key": "sldl:washingtonchittenden",
+     "pop": 8595
+    },
+    {
+     "key": "sldl:lamoille2",
+     "pop": 8539
+    },
+    {
+     "key": "sldl:washington3",
+     "pop": 8491
+    },
+    {
+     "key": "sldl:washingtonorange",
+     "pop": 8470
+    },
+    {
+     "key": "sldl:caledonia3",
+     "pop": 8429
+    },
+    {
+     "key": "sldl:windham3",
+     "pop": 8388
+    },
+    {
+     "key": "sldl:washington2",
+     "pop": 8351
+    },
+    {
+     "key": "sldl:windsor1",
+     "pop": 8349
+    },
+    {
+     "key": "sldl:chittenden18",
+     "pop": 8315
+    },
+    {
+     "key": "sldl:addison1",
+     "pop": 8239
+    },
+    {
+     "key": "sldl:chittenden3",
+     "pop": 8233
+    },
+    {
+     "key": "sldl:orangewashingtonaddison",
+     "pop": 8204
+    },
+    {
+     "key": "sldl:chittenden14",
+     "pop": 8185
+    },
+    {
+     "key": "sldl:chittenden15",
+     "pop": 8172
+    },
+    {
+     "key": "sldl:addison3",
+     "pop": 8144
+    },
+    {
+     "key": "sldl:bennington5",
+     "pop": 8144
+    },
+    {
+     "key": "sldl:chittendenfranklin",
+     "pop": 8116
+    },
+    {
+     "key": "sldl:bennington2",
+     "pop": 8078
+    },
+    {
+     "key": "sldl:washington4",
+     "pop": 8074
+    },
+    {
+     "key": "sldl:chittenden16",
+     "pop": 8044
+    },
+    {
+     "key": "sldl:chittenden21",
+     "pop": 7997
+    },
+    {
+     "key": "sldl:chittenden13",
+     "pop": 7982
+    },
+    {
+     "key": "sldl:bennington4",
+     "pop": 7962
+    },
+    {
+     "key": "sldl:franklin6",
+     "pop": 4663
+    },
+    {
+     "key": "sldl:windham5",
+     "pop": 4658
+    },
+    {
+     "key": "sldl:rutlandwindsor",
+     "pop": 4653
+    },
+    {
+     "key": "sldl:franklin8",
+     "pop": 4631
+    },
+    {
+     "key": "sldl:chittenden12",
+     "pop": 4627
+    },
+    {
+     "key": "sldl:rutland8",
+     "pop": 4625
+    },
+    {
+     "key": "sldl:franklin3",
+     "pop": 4622
+    },
+    {
+     "key": "sldl:chittenden4",
+     "pop": 4614
+    },
+    {
+     "key": "sldl:franklin2",
+     "pop": 4612
+    },
+    {
+     "key": "sldl:essexorleans",
+     "pop": 4607
+    },
+    {
+     "key": "sldl:orleans1",
+     "pop": 4579
+    },
+    {
+     "key": "sldl:lamoille1",
+     "pop": 4551
+    },
+    {
+     "key": "sldl:rutland7",
+     "pop": 4545
+    },
+    {
+     "key": "sldl:lamoille3",
+     "pop": 4525
+    },
+    {
+     "key": "sldl:rutland4",
+     "pop": 4500
+    },
+    {
+     "key": "sldl:caledoniawashington",
+     "pop": 4493
+    },
+    {
+     "key": "sldl:windsor4",
+     "pop": 4489
+    },
+    {
+     "key": "sldl:windham4",
+     "pop": 4482
+    },
+    {
+     "key": "sldl:washington6",
+     "pop": 4480
+    },
+    {
+     "key": "sldl:windsorwindham",
+     "pop": 4479
+    },
+    {
+     "key": "sldl:orangecaledonia",
+     "pop": 4476
+    },
+    {
+     "key": "sldl:windsor2",
+     "pop": 4463
+    },
+    {
+     "key": "sldl:rutland3",
+     "pop": 4458
+    },
+    {
+     "key": "sldl:orleans2",
+     "pop": 4455
+    },
+    {
+     "key": "sldl:bennington1",
+     "pop": 4413
+    },
+    {
+     "key": "sldl:orange2",
+     "pop": 4399
+    },
+    {
+     "key": "sldl:washington5",
+     "pop": 4377
+    },
+    {
+     "key": "sldl:windham6",
+     "pop": 4370
+    },
+    {
+     "key": "sldl:benningtonrutland",
+     "pop": 4335
+    },
+    {
+     "key": "sldl:windsor5",
+     "pop": 4333
+    },
+    {
+     "key": "sldl:addison2",
+     "pop": 4329
+    },
+    {
+     "key": "sldl:windham1",
+     "pop": 4312
+    },
+    {
+     "key": "sldl:rutland11",
+     "pop": 4297
+    },
+    {
+     "key": "sldl:windhamwindsorbennington",
+     "pop": 4292
+    },
+    {
+     "key": "sldl:rutland6",
+     "pop": 4275
+    },
+    {
+     "key": "sldl:chittenden24",
+     "pop": 4274
+    },
+    {
+     "key": "sldl:orleans3",
+     "pop": 4273
+    },
+    {
+     "key": "sldl:chittenden6",
+     "pop": 4261
+    },
+    {
+     "key": "sldl:chittenden7",
+     "pop": 4250
+    },
+    {
+     "key": "sldl:orleans4",
+     "pop": 4244
+    },
+    {
+     "key": "sldl:chittenden8",
+     "pop": 4230
+    },
+    {
+     "key": "sldl:orange1",
+     "pop": 4207
+    },
+    {
+     "key": "sldl:orange3",
+     "pop": 4201
+    },
+    {
+     "key": "sldl:chittenden25",
+     "pop": 4197
+    },
+    {
+     "key": "sldl:addisonrutland",
+     "pop": 4184
+    },
+    {
+     "key": "sldl:chittenden10",
+     "pop": 4170
+    },
+    {
+     "key": "sldl:chittenden1",
+     "pop": 4167
+    },
+    {
+     "key": "sldl:addison5",
+     "pop": 4147
+    },
+    {
+     "key": "sldl:rutland9",
+     "pop": 4129
+    },
+    {
+     "key": "sldl:windham2",
+     "pop": 4118
+    },
+    {
+     "key": "sldl:windsoraddison",
+     "pop": 4118
+    },
+    {
+     "key": "sldl:essexcaledonia",
+     "pop": 4112
+    },
+    {
+     "key": "sldl:rutland5",
+     "pop": 4110
+    },
+    {
+     "key": "sldl:caledonia1",
+     "pop": 4096
+    },
+    {
+     "key": "sldl:windsororange1",
+     "pop": 4087
+    },
+    {
+     "key": "sldl:caledonia2",
+     "pop": 4084
+    },
+    {
+     "key": "sldl:windham8",
+     "pop": 4079
+    },
+    {
+     "key": "sldl:chittenden11",
+     "pop": 4066
+    },
+    {
+     "key": "sldl:windham7",
+     "pop": 4054
+    },
+    {
+     "key": "sldl:windham9",
+     "pop": 4051
+    },
+    {
+     "key": "sldl:rutland1",
+     "pop": 4047
+    },
+    {
+     "key": "sldl:chittenden17",
+     "pop": 4045
+    },
+    {
+     "key": "sldl:bennington3",
+     "pop": 4029
+    },
+    {
+     "key": "sldl:rutlandbennington",
+     "pop": 4024
+    },
+    {
+     "key": "sldl:chittenden9",
+     "pop": 4009
+    },
+    {
+     "key": "sldl:chittenden5",
+     "pop": 3996
+    },
+    {
+     "key": "sldl:franklin7",
+     "pop": 3994
+    },
+    {
+     "key": "sldl:rutland10",
+     "pop": 3949
+    }
+   ]
+  },
+  "sldu:chittendensoutheast": {
+   "layer": "sldu",
+   "district": "Chittenden South East",
+   "pop": 69199,
+   "bbox": [
+    -73.33495,
+    44.26011,
+    -72.80237,
+    44.6312
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 69199
+    },
+    {
+     "key": "sldl:chittenden2",
+     "pop": 9293
+    },
+    {
+     "key": "sldl:chittenden3",
+     "pop": 8233
+    },
+    {
+     "key": "sldl:chittenden13",
+     "pop": 7982
+    },
+    {
+     "key": "sldl:chittenden12",
+     "pop": 4627
+    },
+    {
+     "key": "sldl:chittenden4",
+     "pop": 4614
+    },
+    {
+     "key": "sldl:chittenden6",
+     "pop": 4261
+    },
+    {
+     "key": "sldl:chittenden7",
+     "pop": 4250
+    },
+    {
+     "key": "sldl:chittenden8",
+     "pop": 4230
+    },
+    {
+     "key": "sldl:chittenden10",
+     "pop": 4170
+    },
+    {
+     "key": "sldl:chittenden1",
+     "pop": 4167
+    },
+    {
+     "key": "sldl:chittenden11",
+     "pop": 4066
+    },
+    {
+     "key": "sldl:chittenden9",
+     "pop": 4009
+    },
+    {
+     "key": "sldl:chittenden5",
+     "pop": 3996
+    },
+    {
+     "key": "sldl:washingtonchittenden",
+     "pop": 1301
+    }
+   ]
+  },
+  "sldu:essex": {
+   "layer": "sldu",
+   "district": "Essex",
+   "pop": 22290,
+   "bbox": [
+    -72.24674,
+    44.34797,
+    -71.46505,
+    45.01364
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 22290
+    },
+    {
+     "key": "sldl:caledonia3",
+     "pop": 5491
+    },
+    {
+     "key": "sldl:orleans1",
+     "pop": 4579
+    },
+    {
+     "key": "sldl:orleans2",
+     "pop": 4455
+    },
+    {
+     "key": "sldl:essexorleans",
+     "pop": 3588
+    },
+    {
+     "key": "sldl:essexcaledonia",
+     "pop": 2461
+    },
+    {
+     "key": "sldl:caledoniaessex",
+     "pop": 1716
+    }
+   ]
+  },
+  "sldu:franklin": {
+   "layer": "sldu",
+   "district": "Franklin",
+   "pop": 44508,
+   "bbox": [
+    -73.35463,
+    44.65115,
+    -72.5365,
+    45.01666
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 44508
+    },
+    {
+     "key": "sldl:franklin4",
+     "pop": 8837
+    },
+    {
+     "key": "sldl:franklin5",
+     "pop": 8728
+    },
+    {
+     "key": "sldl:franklin8",
+     "pop": 4631
+    },
+    {
+     "key": "sldl:franklin3",
+     "pop": 4622
+    },
+    {
+     "key": "sldl:franklin2",
+     "pop": 4612
+    },
+    {
+     "key": "sldl:franklin1",
+     "pop": 3935
+    },
+    {
+     "key": "sldl:franklin6",
+     "pop": 3317
+    },
+    {
+     "key": "sldl:franklin7",
+     "pop": 2810
+    },
+    {
+     "key": "sldl:grandislechittenden",
+     "pop": 2106
+    },
+    {
+     "key": "sldl:chittendenfranklin",
+     "pop": 910
+    }
+   ]
+  },
+  "sldu:grandisle": {
+   "layer": "sldu",
+   "district": "Grand Isle",
+   "pop": 19984,
+   "bbox": [
+    -73.39023,
+    44.49268,
+    -73.09792,
+    44.92792
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 19984
+    },
+    {
+     "key": "sldl:chittenden19",
+     "pop": 8707
+    },
+    {
+     "key": "sldl:chittenden20",
+     "pop": 6090
+    },
+    {
+     "key": "sldl:grandislechittenden",
+     "pop": 5187
+    }
+   ]
+  },
+  "sldu:lamoille": {
+   "layer": "sldu",
+   "district": "Lamoille",
+   "pop": 22068,
+   "bbox": [
+    -73.00471,
+    44.42398,
+    -72.36838,
+    44.80404
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 22068
+    },
+    {
+     "key": "sldl:lamoille2",
+     "pop": 8539
+    },
+    {
+     "key": "sldl:lamoillewashington",
+     "pop": 6320
+    },
+    {
+     "key": "sldl:lamoille3",
+     "pop": 4525
+    },
+    {
+     "key": "sldl:franklin6",
+     "pop": 1346
+    },
+    {
+     "key": "sldl:orleanslamoille",
+     "pop": 1338
+    }
+   ]
+  },
+  "sldu:addison": {
+   "layer": "sldu",
+   "district": "Addison",
+   "pop": 40425,
+   "bbox": [
+    -73.4379,
+    43.75308,
+    -72.71228,
+    44.36247
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 40425
+    },
+    {
+     "key": "sldl:addison4",
+     "pop": 8940
+    },
+    {
+     "key": "sldl:addison1",
+     "pop": 8239
+    },
+    {
+     "key": "sldl:addison3",
+     "pop": 8144
+    },
+    {
+     "key": "sldl:addison2",
+     "pop": 4329
+    },
+    {
+     "key": "sldl:addison5",
+     "pop": 4147
+    },
+    {
+     "key": "sldl:addisonrutland",
+     "pop": 2904
+    },
+    {
+     "key": "sldl:washingtonchittenden",
+     "pop": 1963
+    },
+    {
+     "key": "sldl:windsoraddison",
+     "pop": 1458
+    },
+    {
+     "key": "sldl:orangewashingtonaddison",
+     "pop": 301
+    }
+   ]
+  },
+  "sldu:orange": {
+   "layer": "sldu",
+   "district": "Orange",
+   "pop": 21954,
+   "bbox": [
+    -72.70284,
+    43.81045,
+    -72.07917,
+    44.19266
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 21954
+    },
+    {
+     "key": "sldl:orangewashingtonaddison",
+     "pop": 6018
+    },
+    {
+     "key": "sldl:orange2",
+     "pop": 4399
+    },
+    {
+     "key": "sldl:orange3",
+     "pop": 4201
+    },
+    {
+     "key": "sldl:orange1",
+     "pop": 3159
+    },
+    {
+     "key": "sldl:windsororange1",
+     "pop": 1337
+    },
+    {
+     "key": "sldl:orangecaledonia",
+     "pop": 1199
+    },
+    {
+     "key": "sldl:windsororange2",
+     "pop": 1094
+    },
+    {
+     "key": "sldl:washingtonorange",
+     "pop": 547
+    }
+   ]
+  },
+  "sldu:orleans": {
+   "layer": "sldu",
+   "district": "Orleans",
+   "pop": 22103,
+   "bbox": [
+    -72.67843,
+    44.54249,
+    -71.83707,
+    45.00883
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 22103
+    },
+    {
+     "key": "sldl:orleanslamoille",
+     "pop": 7553
+    },
+    {
+     "key": "sldl:orleans3",
+     "pop": 4273
+    },
+    {
+     "key": "sldl:orleans4",
+     "pop": 4244
+    },
+    {
+     "key": "sldl:caledonia3",
+     "pop": 2179
+    },
+    {
+     "key": "sldl:essexcaledonia",
+     "pop": 1651
+    },
+    {
+     "key": "sldl:franklin7",
+     "pop": 1184
+    },
+    {
+     "key": "sldl:essexorleans",
+     "pop": 1019
+    }
+   ]
+  },
+  "sldu:rutland": {
+   "layer": "sldu",
+   "district": "Rutland",
+   "pop": 60068,
+   "bbox": [
+    -73.43123,
+    43.29055,
+    -72.6998,
+    43.85806
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 60068
+    },
+    {
+     "key": "sldl:rutland2",
+     "pop": 9056
+    },
+    {
+     "key": "sldl:rutland8",
+     "pop": 4625
+    },
+    {
+     "key": "sldl:rutland7",
+     "pop": 4545
+    },
+    {
+     "key": "sldl:rutland4",
+     "pop": 4500
+    },
+    {
+     "key": "sldl:rutland3",
+     "pop": 4458
+    },
+    {
+     "key": "sldl:rutland6",
+     "pop": 4275
+    },
+    {
+     "key": "sldl:rutland9",
+     "pop": 4129
+    },
+    {
+     "key": "sldl:rutland5",
+     "pop": 4110
+    },
+    {
+     "key": "sldl:rutland1",
+     "pop": 4047
+    },
+    {
+     "key": "sldl:rutland10",
+     "pop": 3949
+    },
+    {
+     "key": "sldl:rutland11",
+     "pop": 3793
+    },
+    {
+     "key": "sldl:rutlandbennington",
+     "pop": 3326
+    },
+    {
+     "key": "sldl:rutlandwindsor",
+     "pop": 2481
+    },
+    {
+     "key": "sldl:benningtonrutland",
+     "pop": 1494
+    },
+    {
+     "key": "sldl:addisonrutland",
+     "pop": 1280
+    }
+   ]
+  },
+  "sldu:washington": {
+   "layer": "sldu",
+   "district": "Washington",
+   "pop": 67285,
+   "bbox": [
+    -72.9522,
+    43.90796,
+    -72.21708,
+    44.5634
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 67285
+    },
+    {
+     "key": "sldl:washington1",
+     "pop": 8767
+    },
+    {
+     "key": "sldl:washington3",
+     "pop": 8491
+    },
+    {
+     "key": "sldl:washington2",
+     "pop": 8351
+    },
+    {
+     "key": "sldl:washington4",
+     "pop": 8074
+    },
+    {
+     "key": "sldl:washingtonorange",
+     "pop": 7923
+    },
+    {
+     "key": "sldl:washingtonchittenden",
+     "pop": 5331
+    },
+    {
+     "key": "sldl:lamoille1",
+     "pop": 4551
+    },
+    {
+     "key": "sldl:washington6",
+     "pop": 4480
+    },
+    {
+     "key": "sldl:washington5",
+     "pop": 4377
+    },
+    {
+     "key": "sldl:lamoillewashington",
+     "pop": 2564
+    },
+    {
+     "key": "sldl:orangewashingtonaddison",
+     "pop": 1885
+    },
+    {
+     "key": "sldl:caledoniawashington",
+     "pop": 1443
+    },
+    {
+     "key": "sldl:orange1",
+     "pop": 1048
+    }
+   ]
+  },
+  "sldu:windham": {
+   "layer": "sldu",
+   "district": "Windham",
+   "pop": 41285,
+   "bbox": [
+    -72.9301,
+    42.72693,
+    -72.43221,
+    43.2359
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 41285
+    },
+    {
+     "key": "sldl:windham3",
+     "pop": 8388
+    },
+    {
+     "key": "sldl:windham5",
+     "pop": 4658
+    },
+    {
+     "key": "sldl:windham4",
+     "pop": 4482
+    },
+    {
+     "key": "sldl:windham1",
+     "pop": 4312
+    },
+    {
+     "key": "sldl:windham8",
+     "pop": 4079
+    },
+    {
+     "key": "sldl:windham7",
+     "pop": 4054
+    },
+    {
+     "key": "sldl:windham9",
+     "pop": 4051
+    },
+    {
+     "key": "sldl:windham2",
+     "pop": 3672
+    },
+    {
+     "key": "sldl:windham6",
+     "pop": 2115
+    },
+    {
+     "key": "sldl:windsorwindham",
+     "pop": 1474
+    }
+   ]
+  },
+  "sldu:bennington": {
+   "layer": "sldu",
+   "district": "Bennington",
+   "pop": 41967,
+   "bbox": [
+    -73.29094,
+    42.73929,
+    -72.72764,
+    43.3145
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 41967
+    },
+    {
+     "key": "sldl:bennington5",
+     "pop": 8144
+    },
+    {
+     "key": "sldl:bennington2",
+     "pop": 8078
+    },
+    {
+     "key": "sldl:bennington4",
+     "pop": 7962
+    },
+    {
+     "key": "sldl:bennington1",
+     "pop": 4413
+    },
+    {
+     "key": "sldl:bennington3",
+     "pop": 4029
+    },
+    {
+     "key": "sldl:windhamwindsorbennington",
+     "pop": 3101
+    },
+    {
+     "key": "sldl:benningtonrutland",
+     "pop": 2841
+    },
+    {
+     "key": "sldl:windham6",
+     "pop": 2255
+    },
+    {
+     "key": "sldl:rutlandbennington",
+     "pop": 698
+    },
+    {
+     "key": "sldl:windham2",
+     "pop": 446
+    }
+   ]
+  },
+  "sldu:windsor": {
+   "layer": "sldu",
+   "district": "Windsor",
+   "pop": 59933,
+   "bbox": [
+    -72.87435,
+    43.22258,
+    -72.16788,
+    43.91124
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 59933
+    },
+    {
+     "key": "sldl:windsor3",
+     "pop": 9062
+    },
+    {
+     "key": "sldl:windsor6",
+     "pop": 9008
+    },
+    {
+     "key": "sldl:windsor1",
+     "pop": 8349
+    },
+    {
+     "key": "sldl:windsororange2",
+     "pop": 7947
+    },
+    {
+     "key": "sldl:windsor4",
+     "pop": 4489
+    },
+    {
+     "key": "sldl:windsor2",
+     "pop": 4463
+    },
+    {
+     "key": "sldl:windsor5",
+     "pop": 4333
+    },
+    {
+     "key": "sldl:windsorwindham",
+     "pop": 3005
+    },
+    {
+     "key": "sldl:windsororange1",
+     "pop": 2750
+    },
+    {
+     "key": "sldl:windsoraddison",
+     "pop": 2660
+    },
+    {
+     "key": "sldl:rutlandwindsor",
+     "pop": 2172
+    },
+    {
+     "key": "sldl:windhamwindsorbennington",
+     "pop": 1191
+    },
+    {
+     "key": "sldl:rutland11",
+     "pop": 504
+    }
+   ]
+  },
+  "sldu:caledonia": {
+   "layer": "sldu",
+   "district": "Caledonia",
+   "pop": 22630,
+   "bbox": [
+    -72.43468,
+    44.02975,
+    -71.8379,
+    44.6241
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 22630
+    },
+    {
+     "key": "sldl:caledoniaessex",
+     "pop": 7364
+    },
+    {
+     "key": "sldl:caledonia1",
+     "pop": 4096
+    },
+    {
+     "key": "sldl:caledonia2",
+     "pop": 4084
+    },
+    {
+     "key": "sldl:orangecaledonia",
+     "pop": 3277
+    },
+    {
+     "key": "sldl:caledoniawashington",
+     "pop": 3050
+    },
+    {
+     "key": "sldl:caledonia3",
+     "pop": 759
+    }
+   ]
+  },
+  "sldu:chittendencentral": {
+   "layer": "sldu",
+   "district": "Chittenden Central",
+   "pop": 65305,
+   "bbox": [
+    -73.27703,
+    44.46578,
+    -73.0385,
+    44.53988
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 65305
+    },
+    {
+     "key": "sldl:chittenden22",
+     "pop": 9133
+    },
+    {
+     "key": "sldl:chittenden23",
+     "pop": 8687
+    },
+    {
+     "key": "sldl:chittenden18",
+     "pop": 8315
+    },
+    {
+     "key": "sldl:chittenden14",
+     "pop": 8185
+    },
+    {
+     "key": "sldl:chittenden15",
+     "pop": 8172
+    },
+    {
+     "key": "sldl:chittenden16",
+     "pop": 8044
+    },
+    {
+     "key": "sldl:chittenden21",
+     "pop": 7997
+    },
+    {
+     "key": "sldl:chittenden17",
+     "pop": 4045
+    },
+    {
+     "key": "sldl:chittenden20",
+     "pop": 2727
+    }
+   ]
+  },
+  "sldu:chittendennorth": {
+   "layer": "sldu",
+   "district": "Chittenden North",
+   "pop": 22073,
+   "bbox": [
+    -73.25628,
+    44.46804,
+    -72.90996,
+    44.77299
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 22073
+    },
+    {
+     "key": "sldl:chittendenfranklin",
+     "pop": 7206
+    },
+    {
+     "key": "sldl:franklin1",
+     "pop": 5014
+    },
+    {
+     "key": "sldl:chittenden24",
+     "pop": 4274
+    },
+    {
+     "key": "sldl:chittenden25",
+     "pop": 4197
+    },
+    {
+     "key": "sldl:grandislechittenden",
+     "pop": 1382
+    }
+   ]
+  },
+  "sldl:franklin3": {
+   "layer": "sldl",
+   "district": "Franklin-3",
+   "pop": 4622,
+   "bbox": [
+    -73.10141,
+    44.80447,
+    -73.06821,
+    44.82506
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4622
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 4622
+    }
+   ]
+  },
+  "sldl:windsorwindham": {
+   "layer": "sldl",
+   "district": "Windsor-Windham",
+   "pop": 4479,
+   "bbox": [
+    -72.77337,
+    43.07088,
+    -72.54545,
+    43.35197
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4479
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 3005
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 1474
+    }
+   ]
+  },
+  "sldl:windham4": {
+   "layer": "sldl",
+   "district": "Windham-4",
+   "pop": 4482,
+   "bbox": [
+    -72.67736,
+    42.89593,
+    -72.4432,
+    43.02347
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4482
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 4482
+    }
+   ]
+  },
+  "sldl:windsororange1": {
+   "layer": "sldl",
+   "district": "Windsor-Orange-1",
+   "pop": 4087,
+   "bbox": [
+    -72.64469,
+    43.75653,
+    -72.3942,
+    43.96619
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4087
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 2750
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 1337
+    }
+   ]
+  },
+  "sldl:rutland3": {
+   "layer": "sldl",
+   "district": "Rutland-3",
+   "pop": 4458,
+   "bbox": [
+    -73.24332,
+    43.58485,
+    -73.09554,
+    43.6802
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4458
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4458
+    }
+   ]
+  },
+  "sldl:lamoille2": {
+   "layer": "sldl",
+   "district": "Lamoille-2",
+   "pop": 8539,
+   "bbox": [
+    -72.76362,
+    44.51202,
+    -72.36838,
+    44.80404
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8539
+    },
+    {
+     "key": "sldu:lamoille",
+     "pop": 8539
+    }
+   ]
+  },
+  "sldl:grandislechittenden": {
+   "layer": "sldl",
+   "district": "Grand Isle-Chittenden",
+   "pop": 8675,
+   "bbox": [
+    -73.39023,
+    44.56426,
+    -73.1282,
+    45.01342
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8675
+    },
+    {
+     "key": "sldu:grandisle",
+     "pop": 5187
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 2106
+    },
+    {
+     "key": "sldu:chittendennorth",
+     "pop": 1382
+    }
+   ]
+  },
+  "sldl:bennington1": {
+   "layer": "sldl",
+   "district": "Bennington-1",
+   "pop": 4413,
+   "bbox": [
+    -73.29094,
+    42.73929,
+    -72.92333,
+    42.93266
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4413
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 4413
+    }
+   ]
+  },
+  "sldl:windham7": {
+   "layer": "sldl",
+   "district": "Windham-7",
+   "pop": 4054,
+   "bbox": [
+    -72.68063,
+    42.82488,
+    -72.58017,
+    42.89966
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4054
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 4054
+    }
+   ]
+  },
+  "sldl:windham8": {
+   "layer": "sldl",
+   "district": "Windham-8",
+   "pop": 4079,
+   "bbox": [
+    -72.58944,
+    42.82401,
+    -72.54627,
+    42.85193
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4079
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 4079
+    }
+   ]
+  },
+  "sldl:windham1": {
+   "layer": "sldl",
+   "district": "Windham-1",
+   "pop": 4312,
+   "bbox": [
+    -72.68576,
+    42.72693,
+    -72.45841,
+    42.82728
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4312
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 4312
+    }
+   ]
+  },
+  "sldl:rutlandwindsor": {
+   "layer": "sldl",
+   "district": "Rutland-Windsor",
+   "pop": 4653,
+   "bbox": [
+    -72.93415,
+    43.32243,
+    -72.6608,
+    43.57982
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4653
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 2481
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 2172
+    }
+   ]
+  },
+  "sldl:windham9": {
+   "layer": "sldl",
+   "district": "Windham-9",
+   "pop": 4051,
+   "bbox": [
+    -72.62216,
+    42.84637,
+    -72.53284,
+    42.8982
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4051
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 4051
+    }
+   ]
+  },
+  "sldl:washington1": {
+   "layer": "sldl",
+   "district": "Washington-1",
+   "pop": 8767,
+   "bbox": [
+    -72.78307,
+    44.08784,
+    -72.51977,
+    44.27195
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8767
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 8767
+    }
+   ]
+  },
+  "sldl:chittenden8": {
+   "layer": "sldl",
+   "district": "Chittenden-8",
+   "pop": 4230,
+   "bbox": [
+    -73.21205,
+    44.37289,
+    -73.08698,
+    44.44786
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4230
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4230
+    }
+   ]
+  },
+  "sldl:chittenden9": {
+   "layer": "sldl",
+   "district": "Chittenden-9",
+   "pop": 4009,
+   "bbox": [
+    -73.17868,
+    44.43577,
+    -73.13479,
+    44.46699
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4009
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4009
+    }
+   ]
+  },
+  "sldl:chittendenfranklin": {
+   "layer": "sldl",
+   "district": "Chittenden-Franklin",
+   "pop": 8116,
+   "bbox": [
+    -73.19845,
+    44.58185,
+    -73.08189,
+    44.69898
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8116
+    },
+    {
+     "key": "sldu:chittendennorth",
+     "pop": 7206
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 910
+    }
+   ]
+  },
+  "sldl:bennington4": {
+   "layer": "sldl",
+   "district": "Bennington-4",
+   "pop": 7962,
+   "bbox": [
+    -73.27008,
+    43.02576,
+    -73.0017,
+    43.21701
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 7962
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 7962
+    }
+   ]
+  },
+  "sldl:chittenden1": {
+   "layer": "sldl",
+   "district": "Chittenden-1",
+   "pop": 4167,
+   "bbox": [
+    -73.08144,
+    44.34544,
+    -72.91874,
+    44.43361
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4167
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4167
+    }
+   ]
+  },
+  "sldl:franklin5": {
+   "layer": "sldl",
+   "district": "Franklin-5",
+   "pop": 8728,
+   "bbox": [
+    -73.17041,
+    44.91065,
+    -72.5365,
+    45.01666
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8728
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 8728
+    }
+   ]
+  },
+  "sldl:chittenden7": {
+   "layer": "sldl",
+   "district": "Chittenden-7",
+   "pop": 4250,
+   "bbox": [
+    -73.22303,
+    44.35856,
+    -73.08925,
+    44.42253
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4250
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4250
+    }
+   ]
+  },
+  "sldl:addison4": {
+   "layer": "sldl",
+   "district": "Addison-4",
+   "pop": 8940,
+   "bbox": [
+    -73.1968,
+    44.03398,
+    -72.9052,
+    44.30374
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8940
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 8940
+    }
+   ]
+  },
+  "sldl:rutlandbennington": {
+   "layer": "sldl",
+   "district": "Rutland-Bennington",
+   "pop": 4024,
+   "bbox": [
+    -73.25916,
+    43.21368,
+    -73.00531,
+    43.53865
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4024
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 3326
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 698
+    }
+   ]
+  },
+  "sldl:windham6": {
+   "layer": "sldl",
+   "district": "Windham-6",
+   "pop": 4370,
+   "bbox": [
+    -72.9301,
+    42.73318,
+    -72.68063,
+    42.92744
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4370
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 2255
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 2115
+    }
+   ]
+  },
+  "sldl:chittenden14": {
+   "layer": "sldl",
+   "district": "Chittenden-14",
+   "pop": 8185,
+   "bbox": [
+    -73.21114,
+    44.46578,
+    -73.19244,
+    44.48066
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8185
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 8185
+    }
+   ]
+  },
+  "sldl:addison5": {
+   "layer": "sldl",
+   "district": "Addison-5",
+   "pop": 4147,
+   "bbox": [
+    -73.41251,
+    43.93044,
+    -73.09545,
+    44.17671
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4147
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 4147
+    }
+   ]
+  },
+  "sldl:addison2": {
+   "layer": "sldl",
+   "district": "Addison-2",
+   "pop": 4329,
+   "bbox": [
+    -73.25925,
+    43.80486,
+    -72.90591,
+    44.04501
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4329
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 4329
+    }
+   ]
+  },
+  "sldl:caledonia3": {
+   "layer": "sldl",
+   "district": "Caledonia-3",
+   "pop": 8429,
+   "bbox": [
+    -72.23724,
+    44.49135,
+    -71.83707,
+    44.76944
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8429
+    },
+    {
+     "key": "sldu:essex",
+     "pop": 5491
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 2179
+    },
+    {
+     "key": "sldu:caledonia",
+     "pop": 759
+    }
+   ]
+  },
+  "sldl:chittenden10": {
+   "layer": "sldl",
+   "district": "Chittenden-10",
+   "pop": 4170,
+   "bbox": [
+    -73.18996,
+    44.45293,
+    -73.13484,
+    44.50103
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4170
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4170
+    }
+   ]
+  },
+  "sldl:windham2": {
+   "layer": "sldl",
+   "district": "Windham-2",
+   "pop": 4118,
+   "bbox": [
+    -73.00813,
+    42.92228,
+    -72.70848,
+    43.16615
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4118
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 3672
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 446
+    }
+   ]
+  },
+  "sldl:chittenden18": {
+   "layer": "sldl",
+   "district": "Chittenden-18",
+   "pop": 8315,
+   "bbox": [
+    -73.27703,
+    44.49718,
+    -73.24133,
+    44.53987
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8315
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 8315
+    }
+   ]
+  },
+  "sldl:orleans2": {
+   "layer": "sldl",
+   "district": "Orleans-2",
+   "pop": 4455,
+   "bbox": [
+    -72.24367,
+    44.90086,
+    -72.16958,
+    44.96618
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4455
+    },
+    {
+     "key": "sldu:essex",
+     "pop": 4455
+    }
+   ]
+  },
+  "sldl:washington4": {
+   "layer": "sldl",
+   "district": "Washington-4",
+   "pop": 8074,
+   "bbox": [
+    -72.61245,
+    44.23492,
+    -72.52509,
+    44.31331
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8074
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 8074
+    }
+   ]
+  },
+  "sldl:chittenden17": {
+   "layer": "sldl",
+   "district": "Chittenden-17",
+   "pop": 4045,
+   "bbox": [
+    -73.27389,
+    44.47523,
+    -73.20116,
+    44.52899
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4045
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 4045
+    }
+   ]
+  },
+  "sldl:chittenden19": {
+   "layer": "sldl",
+   "district": "Chittenden-19",
+   "pop": 8707,
+   "bbox": [
+    -73.36286,
+    44.49268,
+    -73.17196,
+    44.59255
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8707
+    },
+    {
+     "key": "sldu:grandisle",
+     "pop": 8707
+    }
+   ]
+  },
+  "sldl:chittenden20": {
+   "layer": "sldl",
+   "district": "Chittenden-20",
+   "pop": 8817,
+   "bbox": [
+    -73.27056,
+    44.48651,
+    -73.09792,
+    44.6135
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8817
+    },
+    {
+     "key": "sldu:grandisle",
+     "pop": 6090
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 2727
+    }
+   ]
+  },
+  "sldl:chittenden15": {
+   "layer": "sldl",
+   "district": "Chittenden-15",
+   "pop": 8172,
+   "bbox": [
+    -73.21146,
+    44.47248,
+    -73.1762,
+    44.49117
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8172
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 8172
+    }
+   ]
+  },
+  "sldl:chittenden22": {
+   "layer": "sldl",
+   "district": "Chittenden-22",
+   "pop": 9133,
+   "bbox": [
+    -73.14455,
+    44.47192,
+    -73.08152,
+    44.50432
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 9133
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 9133
+    }
+   ]
+  },
+  "sldl:chittenden23": {
+   "layer": "sldl",
+   "district": "Chittenden-23",
+   "pop": 8687,
+   "bbox": [
+    -73.1584,
+    44.47835,
+    -73.0385,
+    44.52836
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8687
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 8687
+    }
+   ]
+  },
+  "sldl:chittenden24": {
+   "layer": "sldl",
+   "district": "Chittenden-24",
+   "pop": 4274,
+   "bbox": [
+    -73.12909,
+    44.46804,
+    -72.97132,
+    44.57051
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4274
+    },
+    {
+     "key": "sldu:chittendennorth",
+     "pop": 4274
+    }
+   ]
+  },
+  "sldl:chittenden25": {
+   "layer": "sldl",
+   "district": "Chittenden-25",
+   "pop": 4197,
+   "bbox": [
+    -73.13098,
+    44.55036,
+    -72.90996,
+    44.66962
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4197
+    },
+    {
+     "key": "sldu:chittendennorth",
+     "pop": 4197
+    }
+   ]
+  },
+  "sldl:caledonia1": {
+   "layer": "sldl",
+   "district": "Caledonia-1",
+   "pop": 4096,
+   "bbox": [
+    -72.18812,
+    44.15599,
+    -71.8379,
+    44.44114
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4096
+    },
+    {
+     "key": "sldu:caledonia",
+     "pop": 4096
+    }
+   ]
+  },
+  "sldl:rutland7": {
+   "layer": "sldl",
+   "district": "Rutland-7",
+   "pop": 4545,
+   "bbox": [
+    -73.0115,
+    43.60416,
+    -72.97395,
+    43.63127
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4545
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4545
+    }
+   ]
+  },
+  "sldl:orangewashingtonaddison": {
+   "layer": "sldl",
+   "district": "Orange-Washington-Addison",
+   "pop": 8204,
+   "bbox": [
+    -72.91225,
+    43.87309,
+    -72.51028,
+    44.1267
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8204
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 6018
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 1885
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 301
+    }
+   ]
+  },
+  "sldl:chittenden16": {
+   "layer": "sldl",
+   "district": "Chittenden-16",
+   "pop": 8044,
+   "bbox": [
+    -73.22856,
+    44.47332,
+    -73.20457,
+    44.49146
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8044
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 8044
+    }
+   ]
+  },
+  "sldl:rutland5": {
+   "layer": "sldl",
+   "district": "Rutland-5",
+   "pop": 4110,
+   "bbox": [
+    -72.97108,
+    43.59114,
+    -72.94558,
+    43.62179
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4110
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4110
+    }
+   ]
+  },
+  "sldl:franklin4": {
+   "layer": "sldl",
+   "district": "Franklin-4",
+   "pop": 8837,
+   "bbox": [
+    -73.24094,
+    44.816,
+    -72.81477,
+    45.01383
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8837
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 8837
+    }
+   ]
+  },
+  "sldl:franklin8": {
+   "layer": "sldl",
+   "district": "Franklin-8",
+   "pop": 4631,
+   "bbox": [
+    -73.10539,
+    44.77299,
+    -73.06388,
+    44.81336
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4631
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 4631
+    }
+   ]
+  },
+  "sldl:lamoille1": {
+   "layer": "sldl",
+   "district": "Lamoille-1",
+   "pop": 4551,
+   "bbox": [
+    -72.8383,
+    44.3983,
+    -72.59729,
+    44.5634
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4551
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 4551
+    }
+   ]
+  },
+  "sldl:chittenden12": {
+   "layer": "sldl",
+   "district": "Chittenden-12",
+   "pop": 4627,
+   "bbox": [
+    -73.32124,
+    44.42066,
+    -73.17488,
+    44.52993
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4627
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4627
+    }
+   ]
+  },
+  "sldl:caledoniawashington": {
+   "layer": "sldl",
+   "district": "Caledonia-Washington",
+   "pop": 4493,
+   "bbox": [
+    -72.38548,
+    44.2766,
+    -72.0451,
+    44.51862
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4493
+    },
+    {
+     "key": "sldu:caledonia",
+     "pop": 3050
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 1443
+    }
+   ]
+  },
+  "sldl:washington3": {
+   "layer": "sldl",
+   "district": "Washington-3",
+   "pop": 8491,
+   "bbox": [
+    -72.53819,
+    44.18014,
+    -72.48283,
+    44.21622
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8491
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 8491
+    }
+   ]
+  },
+  "sldl:orleans4": {
+   "layer": "sldl",
+   "district": "Orleans-4",
+   "pop": 4244,
+   "bbox": [
+    -72.48279,
+    44.54249,
+    -72.14657,
+    44.79458
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4244
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 4244
+    }
+   ]
+  },
+  "sldl:rutland2": {
+   "layer": "sldl",
+   "district": "Rutland-2",
+   "pop": 9056,
+   "bbox": [
+    -73.10454,
+    43.39434,
+    -72.87076,
+    43.66685
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 9056
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 9056
+    }
+   ]
+  },
+  "sldl:orangecaledonia": {
+   "layer": "sldl",
+   "district": "Orange-Caledonia",
+   "pop": 4476,
+   "bbox": [
+    -72.36888,
+    44.02975,
+    -72.03068,
+    44.29878
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4476
+    },
+    {
+     "key": "sldu:caledonia",
+     "pop": 3277
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 1199
+    }
+   ]
+  },
+  "sldl:washington5": {
+   "layer": "sldl",
+   "district": "Washington-5",
+   "pop": 4377,
+   "bbox": [
+    -72.71674,
+    44.23386,
+    -72.42927,
+    44.3983
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4377
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 4377
+    }
+   ]
+  },
+  "sldl:washington6": {
+   "layer": "sldl",
+   "district": "Washington-6",
+   "pop": 4480,
+   "bbox": [
+    -72.55078,
+    44.20389,
+    -72.27013,
+    44.42583
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4480
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 4480
+    }
+   ]
+  },
+  "sldl:washingtonchittenden": {
+   "layer": "sldl",
+   "district": "Washington-Chittenden",
+   "pop": 8595,
+   "bbox": [
+    -73.03279,
+    44.16141,
+    -72.65434,
+    44.47032
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8595
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 5331
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 1963
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 1301
+    }
+   ]
+  },
+  "sldl:washingtonorange": {
+   "layer": "sldl",
+   "district": "Washington-Orange",
+   "pop": 8470,
+   "bbox": [
+    -72.55971,
+    44.11215,
+    -72.4192,
+    44.24167
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8470
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 7923
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 547
+    }
+   ]
+  },
+  "sldl:windhamwindsorbennington": {
+   "layer": "sldl",
+   "district": "Windham-Windsor-Bennington",
+   "pop": 4292,
+   "bbox": [
+    -73.00748,
+    43.11393,
+    -72.68144,
+    43.38061
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4292
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 3101
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 1191
+    }
+   ]
+  },
+  "sldl:windsor1": {
+   "layer": "sldl",
+   "district": "Windsor-1",
+   "pop": 8349,
+   "bbox": [
+    -72.53283,
+    43.42863,
+    -72.3279,
+    43.63106
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8349
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 8349
+    }
+   ]
+  },
+  "sldl:orleans1": {
+   "layer": "sldl",
+   "district": "Orleans-1",
+   "pop": 4579,
+   "bbox": [
+    -72.24674,
+    44.86441,
+    -72.05133,
+    45.00627
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4579
+    },
+    {
+     "key": "sldu:essex",
+     "pop": 4579
+    }
+   ]
+  },
+  "sldl:caledoniaessex": {
+   "layer": "sldl",
+   "district": "Caledonia-Essex",
+   "pop": 9080,
+   "bbox": [
+    -72.0835,
+    44.34797,
+    -71.73873,
+    44.57204
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 9080
+    },
+    {
+     "key": "sldu:caledonia",
+     "pop": 7364
+    },
+    {
+     "key": "sldu:essex",
+     "pop": 1716
+    }
+   ]
+  },
+  "sldl:rutland8": {
+   "layer": "sldl",
+   "district": "Rutland-8",
+   "pop": 4625,
+   "bbox": [
+    -73.13148,
+    43.6107,
+    -72.93996,
+    43.75886
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4625
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4625
+    }
+   ]
+  },
+  "sldl:chittenden2": {
+   "layer": "sldl",
+   "district": "Chittenden-2",
+   "pop": 9293,
+   "bbox": [
+    -73.13992,
+    44.36954,
+    -73.01897,
+    44.48323
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 9293
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 9293
+    }
+   ]
+  },
+  "sldl:chittenden3": {
+   "layer": "sldl",
+   "district": "Chittenden-3",
+   "pop": 8233,
+   "bbox": [
+    -73.03325,
+    44.42907,
+    -72.80364,
+    44.6312
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8233
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 8233
+    }
+   ]
+  },
+  "sldl:chittenden5": {
+   "layer": "sldl",
+   "district": "Chittenden-5",
+   "pop": 3996,
+   "bbox": [
+    -73.32699,
+    44.26011,
+    -73.13127,
+    44.36221
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 3996
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 3996
+    }
+   ]
+  },
+  "sldl:chittenden6": {
+   "layer": "sldl",
+   "district": "Chittenden-6",
+   "pop": 4261,
+   "bbox": [
+    -73.33495,
+    44.34337,
+    -73.19624,
+    44.44777
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4261
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4261
+    }
+   ]
+  },
+  "sldl:franklin6": {
+   "layer": "sldl",
+   "district": "Franklin-6",
+   "pop": 4663,
+   "bbox": [
+    -73.08483,
+    44.64571,
+    -72.67838,
+    44.88245
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4663
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 3317
+    },
+    {
+     "key": "sldu:lamoille",
+     "pop": 1346
+    }
+   ]
+  },
+  "sldl:franklin7": {
+   "layer": "sldl",
+   "district": "Franklin-7",
+   "pop": 3994,
+   "bbox": [
+    -72.83947,
+    44.7809,
+    -72.53328,
+    44.92844
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 3994
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 2810
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 1184
+    }
+   ]
+  },
+  "sldl:lamoille3": {
+   "layer": "sldl",
+   "district": "Lamoille-3",
+   "pop": 4525,
+   "bbox": [
+    -72.92728,
+    44.54105,
+    -72.7069,
+    44.77703
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4525
+    },
+    {
+     "key": "sldu:lamoille",
+     "pop": 4525
+    }
+   ]
+  },
+  "sldl:lamoillewashington": {
+   "layer": "sldl",
+   "district": "Lamoille-Washington",
+   "pop": 8884,
+   "bbox": [
+    -72.76967,
+    44.34542,
+    -72.32138,
+    44.60385
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8884
+    },
+    {
+     "key": "sldu:lamoille",
+     "pop": 6320
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 2564
+    }
+   ]
+  },
+  "sldl:bennington5": {
+   "layer": "sldl",
+   "district": "Bennington-5",
+   "pop": 8144,
+   "bbox": [
+    -73.22273,
+    42.79364,
+    -73.13711,
+    42.88927
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8144
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 8144
+    }
+   ]
+  },
+  "sldl:benningtonrutland": {
+   "layer": "sldl",
+   "district": "Bennington-Rutland",
+   "pop": 4335,
+   "bbox": [
+    -73.13014,
+    43.20483,
+    -72.81962,
+    43.40301
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4335
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 2841
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 1494
+    }
+   ]
+  },
+  "sldl:chittenden11": {
+   "layer": "sldl",
+   "district": "Chittenden-11",
+   "pop": 4066,
+   "bbox": [
+    -73.20944,
+    44.44225,
+    -73.17709,
+    44.47418
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4066
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4066
+    }
+   ]
+  },
+  "sldl:chittenden13": {
+   "layer": "sldl",
+   "district": "Chittenden-13",
+   "pop": 7982,
+   "bbox": [
+    -73.25531,
+    44.44593,
+    -73.18998,
+    44.47565
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 7982
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 7982
+    }
+   ]
+  },
+  "sldl:rutland4": {
+   "layer": "sldl",
+   "district": "Rutland-4",
+   "pop": 4500,
+   "bbox": [
+    -73.00307,
+    43.6081,
+    -72.9375,
+    43.66947
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4500
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4500
+    }
+   ]
+  },
+  "sldl:rutland9": {
+   "layer": "sldl",
+   "district": "Rutland-9",
+   "pop": 4129,
+   "bbox": [
+    -73.15617,
+    43.75074,
+    -73.00352,
+    43.84672
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4129
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4129
+    }
+   ]
+  },
+  "sldl:rutland10": {
+   "layer": "sldl",
+   "district": "Rutland-10",
+   "pop": 3949,
+   "bbox": [
+    -73.43123,
+    43.53955,
+    -73.23077,
+    43.76453
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 3949
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 3949
+    }
+   ]
+  },
+  "sldl:rutland11": {
+   "layer": "sldl",
+   "district": "Rutland-11",
+   "pop": 4297,
+   "bbox": [
+    -73.01707,
+    43.5748,
+    -72.6998,
+    43.85806
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4297
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 3793
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 504
+    }
+   ]
+  },
+  "sldl:washington2": {
+   "layer": "sldl",
+   "district": "Washington-2",
+   "pop": 8351,
+   "bbox": [
+    -72.9522,
+    44.05188,
+    -72.63911,
+    44.3669
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8351
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 8351
+    }
+   ]
+  },
+  "sldl:windsor2": {
+   "layer": "sldl",
+   "district": "Windsor-2",
+   "pop": 4463,
+   "bbox": [
+    -72.66247,
+    43.33778,
+    -72.38982,
+    43.4571
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4463
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 4463
+    }
+   ]
+  },
+  "sldl:windsor4": {
+   "layer": "sldl",
+   "district": "Windsor-4",
+   "pop": 4489,
+   "bbox": [
+    -72.75795,
+    43.55802,
+    -72.3623,
+    43.79437
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4489
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 4489
+    }
+   ]
+  },
+  "sldl:windsor5": {
+   "layer": "sldl",
+   "district": "Windsor-5",
+   "pop": 4333,
+   "bbox": [
+    -72.78993,
+    43.4436,
+    -72.46624,
+    43.66125
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4333
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 4333
+    }
+   ]
+  },
+  "sldl:windsor6": {
+   "layer": "sldl",
+   "district": "Windsor-6",
+   "pop": 9008,
+   "bbox": [
+    -72.45804,
+    43.60573,
+    -72.30139,
+    43.7088
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 9008
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 9008
+    }
+   ]
+  },
+  "sldl:windsoraddison": {
+   "layer": "sldl",
+   "district": "Windsor-Addison",
+   "pop": 4118,
+   "bbox": [
+    -73.00164,
+    43.68422,
+    -72.5736,
+    43.9742
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4118
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 2660
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 1458
+    }
+   ]
+  },
+  "sldl:windsororange2": {
+   "layer": "sldl",
+   "district": "Windsor-Orange-2",
+   "pop": 9041,
+   "bbox": [
+    -72.52834,
+    43.69233,
+    -72.16788,
+    43.92897
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 9041
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 7947
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 1094
+    }
+   ]
+  },
+  "sldl:windham3": {
+   "layer": "sldl",
+   "district": "Windham-3",
+   "pop": 8388,
+   "bbox": [
+    -72.65091,
+    42.96836,
+    -72.43221,
+    43.2359
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8388
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 8388
+    }
+   ]
+  },
+  "sldl:windham5": {
+   "layer": "sldl",
+   "district": "Windham-5",
+   "pop": 4658,
+   "bbox": [
+    -72.80291,
+    42.82728,
+    -72.59618,
+    43.13786
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4658
+    },
+    {
+     "key": "sldu:windham",
+     "pop": 4658
+    }
+   ]
+  },
+  "sldl:rutland6": {
+   "layer": "sldl",
+   "district": "Rutland-6",
+   "pop": 4275,
+   "bbox": [
+    -73.0113,
+    43.58673,
+    -72.96368,
+    43.61134
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4275
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4275
+    }
+   ]
+  },
+  "sldl:orange1": {
+   "layer": "sldl",
+   "district": "Orange-1",
+   "pop": 4207,
+   "bbox": [
+    -72.50242,
+    43.90322,
+    -72.19157,
+    44.22078
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4207
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 3159
+    },
+    {
+     "key": "sldu:washington",
+     "pop": 1048
+    }
+   ]
+  },
+  "sldl:chittenden4": {
+   "layer": "sldl",
+   "district": "Chittenden-4",
+   "pop": 4614,
+   "bbox": [
+    -73.16529,
+    44.27506,
+    -73.01652,
+    44.37496
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4614
+    },
+    {
+     "key": "sldu:chittendensoutheast",
+     "pop": 4614
+    }
+   ]
+  },
+  "sldl:orleans3": {
+   "layer": "sldl",
+   "district": "Orleans-3",
+   "pop": 4273,
+   "bbox": [
+    -72.25885,
+    44.68508,
+    -71.93929,
+    44.8869
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4273
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 4273
+    }
+   ]
+  },
+  "sldl:addison3": {
+   "layer": "sldl",
+   "district": "Addison-3",
+   "pop": 8144,
+   "bbox": [
+    -73.4379,
+    44.02111,
+    -73.16826,
+    44.26663
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8144
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 8144
+    }
+   ]
+  },
+  "sldl:addisonrutland": {
+   "layer": "sldl",
+   "district": "Addison-Rutland",
+   "pop": 4184,
+   "bbox": [
+    -73.40811,
+    43.67601,
+    -73.10822,
+    43.94722
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4184
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 2904
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 1280
+    }
+   ]
+  },
+  "sldl:chittenden21": {
+   "layer": "sldl",
+   "district": "Chittenden-21",
+   "pop": 7997,
+   "bbox": [
+    -73.20233,
+    44.48411,
+    -73.166,
+    44.50604
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 7997
+    },
+    {
+     "key": "sldu:chittendencentral",
+     "pop": 7997
+    }
+   ]
+  },
+  "sldl:windsor3": {
+   "layer": "sldl",
+   "district": "Windsor-3",
+   "pop": 9062,
+   "bbox": [
+    -72.54914,
+    43.23326,
+    -72.39531,
+    43.34527
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 9062
+    },
+    {
+     "key": "sldu:windsor",
+     "pop": 9062
+    }
+   ]
+  },
+  "sldl:orleanslamoille": {
+   "layer": "sldl",
+   "district": "Orleans-Lamoille",
+   "pop": 8891,
+   "bbox": [
+    -72.66139,
+    44.64214,
+    -72.16121,
+    45.00883
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8891
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 7553
+    },
+    {
+     "key": "sldu:lamoille",
+     "pop": 1338
+    }
+   ]
+  },
+  "sldl:orange2": {
+   "layer": "sldl",
+   "district": "Orange-2",
+   "pop": 4399,
+   "bbox": [
+    -72.28473,
+    43.87167,
+    -72.07917,
+    44.06158
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4399
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 4399
+    }
+   ]
+  },
+  "sldl:bennington2": {
+   "layer": "sldl",
+   "district": "Bennington-2",
+   "pop": 8078,
+   "bbox": [
+    -73.27832,
+    42.83702,
+    -73.146,
+    42.93442
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8078
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 8078
+    }
+   ]
+  },
+  "sldl:orange3": {
+   "layer": "sldl",
+   "district": "Orange-3",
+   "pop": 4201,
+   "bbox": [
+    -72.6291,
+    43.92897,
+    -72.3819,
+    44.16291
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4201
+    },
+    {
+     "key": "sldu:orange",
+     "pop": 4201
+    }
+   ]
+  },
+  "sldl:rutland1": {
+   "layer": "sldl",
+   "district": "Rutland-1",
+   "pop": 4047,
+   "bbox": [
+    -73.25085,
+    43.40783,
+    -73.03497,
+    43.63271
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4047
+    },
+    {
+     "key": "sldu:rutland",
+     "pop": 4047
+    }
+   ]
+  },
+  "sldl:caledonia2": {
+   "layer": "sldl",
+   "district": "Caledonia-2",
+   "pop": 4084,
+   "bbox": [
+    -72.43468,
+    44.4197,
+    -72.13776,
+    44.58416
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4084
+    },
+    {
+     "key": "sldu:caledonia",
+     "pop": 4084
+    }
+   ]
+  },
+  "sldl:essexcaledonia": {
+   "layer": "sldl",
+   "district": "Essex-Caledonia",
+   "pop": 4112,
+   "bbox": [
+    -71.99981,
+    44.40748,
+    -71.53491,
+    44.8792
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4112
+    },
+    {
+     "key": "sldu:essex",
+     "pop": 2461
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 1651
+    }
+   ]
+  },
+  "sldl:essexorleans": {
+   "layer": "sldl",
+   "district": "Essex-Orleans",
+   "pop": 4607,
+   "bbox": [
+    -72.11943,
+    44.7269,
+    -71.46505,
+    45.01364
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4607
+    },
+    {
+     "key": "sldu:essex",
+     "pop": 3588
+    },
+    {
+     "key": "sldu:orleans",
+     "pop": 1019
+    }
+   ]
+  },
+  "sldl:franklin1": {
+   "layer": "sldl",
+   "district": "Franklin-1",
+   "pop": 8949,
+   "bbox": [
+    -73.22885,
+    44.63321,
+    -72.92264,
+    44.79633
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8949
+    },
+    {
+     "key": "sldu:chittendennorth",
+     "pop": 5014
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 3935
+    }
+   ]
+  },
+  "sldl:franklin2": {
+   "layer": "sldl",
+   "district": "Franklin-2",
+   "pop": 4612,
+   "bbox": [
+    -73.25901,
+    44.72287,
+    -72.9754,
+    44.88682
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4612
+    },
+    {
+     "key": "sldu:franklin",
+     "pop": 4612
+    }
+   ]
+  },
+  "sldl:addison1": {
+   "layer": "sldl",
+   "district": "Addison-1",
+   "pop": 8239,
+   "bbox": [
+    -73.19054,
+    43.95178,
+    -73.05814,
+    44.0576
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 8239
+    },
+    {
+     "key": "sldu:addison",
+     "pop": 8239
+    }
+   ]
+  },
+  "sldl:bennington3": {
+   "layer": "sldl",
+   "district": "Bennington-3",
+   "pop": 4029,
+   "bbox": [
+    -73.27474,
+    42.93025,
+    -72.99732,
+    43.11911
+   ],
+   "overlaps": [
+    {
+     "key": "cd:0",
+     "pop": 4029
+    },
+    {
+     "key": "sldu:bennington",
+     "pop": 4029
+    }
+   ]
+  }
+ }
+}

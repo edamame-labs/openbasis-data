@@ -1,0 +1,5923 @@
+{
+ "generatedAt": "2026-11-01T11:41:50.000Z",
+ "state": "MN",
+ "blocks": 137689,
+ "layers": [
+  {
+   "id": "cd",
+   "label": "Congress",
+   "body": "U.S. House",
+   "jurisdiction": "Minnesota",
+   "districtLabel": "Congressional District"
+  },
+  {
+   "id": "sldu",
+   "label": "State Senate",
+   "body": "Minnesota State Senate",
+   "jurisdiction": "Minnesota",
+   "districtLabel": "Senate District"
+  },
+  {
+   "id": "sldl",
+   "label": "State House",
+   "body": "Minnesota House of Representatives",
+   "jurisdiction": "Minnesota",
+   "districtLabel": "House District"
+  }
+ ],
+ "districts": {
+  "cd:3": {
+   "layer": "cd",
+   "district": "3",
+   "pop": 713311,
+   "bbox": [
+    -93.76838,
+    44.78511,
+    -93.19728,
+    45.24662
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:45",
+     "pop": 85939
+    },
+    {
+     "key": "sldu:37",
+     "pop": 85837
+    },
+    {
+     "key": "sldu:49",
+     "pop": 85347
+    },
+    {
+     "key": "sldu:42",
+     "pop": 85056
+    },
+    {
+     "key": "sldu:34",
+     "pop": 84988
+    },
+    {
+     "key": "sldu:35",
+     "pop": 78163
+    },
+    {
+     "key": "sldu:50",
+     "pop": 74023
+    },
+    {
+     "key": "sldu:38",
+     "pop": 51961
+    },
+    {
+     "key": "sldl:45b",
+     "pop": 42996
+    },
+    {
+     "key": "sldl:37b",
+     "pop": 42986
+    },
+    {
+     "key": "sldu:51",
+     "pop": 42947
+    },
+    {
+     "key": "sldl:51b",
+     "pop": 42947
+    },
+    {
+     "key": "sldl:45a",
+     "pop": 42943
+    },
+    {
+     "key": "sldl:35a",
+     "pop": 42891
+    },
+    {
+     "key": "sldl:34b",
+     "pop": 42869
+    },
+    {
+     "key": "sldl:38a",
+     "pop": 42860
+    },
+    {
+     "key": "sldl:37a",
+     "pop": 42851
+    },
+    {
+     "key": "sldl:49b",
+     "pop": 42719
+    },
+    {
+     "key": "sldl:49a",
+     "pop": 42628
+    },
+    {
+     "key": "sldl:42b",
+     "pop": 42547
+    },
+    {
+     "key": "sldl:50b",
+     "pop": 42547
+    },
+    {
+     "key": "sldl:42a",
+     "pop": 42509
+    },
+    {
+     "key": "sldl:34a",
+     "pop": 42119
+    },
+    {
+     "key": "sldl:35b",
+     "pop": 35272
+    },
+    {
+     "key": "sldu:46",
+     "pop": 34748
+    },
+    {
+     "key": "sldl:46b",
+     "pop": 34748
+    },
+    {
+     "key": "sldl:50a",
+     "pop": 31476
+    },
+    {
+     "key": "sldl:38b",
+     "pop": 9101
+    },
+    {
+     "key": "sldu:43",
+     "pop": 2792
+    },
+    {
+     "key": "sldl:43b",
+     "pop": 2792
+    },
+    {
+     "key": "sldu:31",
+     "pop": 1510
+    },
+    {
+     "key": "sldl:31a",
+     "pop": 1510
+    }
+   ]
+  },
+  "cd:1": {
+   "layer": "cd",
+   "district": "1",
+   "pop": 713311,
+   "bbox": [
+    -96.45347,
+    43.49936,
+    -91.21729,
+    44.71434
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:25",
+     "pop": 85190
+    },
+    {
+     "key": "sldu:26",
+     "pop": 85003
+    },
+    {
+     "key": "sldu:23",
+     "pop": 84988
+    },
+    {
+     "key": "sldu:24",
+     "pop": 84622
+    },
+    {
+     "key": "sldu:18",
+     "pop": 84314
+    },
+    {
+     "key": "sldu:20",
+     "pop": 83871
+    },
+    {
+     "key": "sldu:19",
+     "pop": 82220
+    },
+    {
+     "key": "sldu:21",
+     "pop": 50552
+    },
+    {
+     "key": "sldu:22",
+     "pop": 47313
+    },
+    {
+     "key": "sldl:25a",
+     "pop": 42869
+    },
+    {
+     "key": "sldl:26b",
+     "pop": 42834
+    },
+    {
+     "key": "sldl:18b",
+     "pop": 42684
+    },
+    {
+     "key": "sldl:23a",
+     "pop": 42672
+    },
+    {
+     "key": "sldl:19b",
+     "pop": 42572
+    },
+    {
+     "key": "sldl:22a",
+     "pop": 42499
+    },
+    {
+     "key": "sldl:24b",
+     "pop": 42322
+    },
+    {
+     "key": "sldl:25b",
+     "pop": 42321
+    },
+    {
+     "key": "sldl:23b",
+     "pop": 42316
+    },
+    {
+     "key": "sldl:24a",
+     "pop": 42300
+    },
+    {
+     "key": "sldl:20b",
+     "pop": 42198
+    },
+    {
+     "key": "sldl:26a",
+     "pop": 42169
+    },
+    {
+     "key": "sldl:20a",
+     "pop": 41673
+    },
+    {
+     "key": "sldl:18a",
+     "pop": 41630
+    },
+    {
+     "key": "sldl:19a",
+     "pop": 39648
+    },
+    {
+     "key": "sldl:21b",
+     "pop": 36913
+    },
+    {
+     "key": "sldu:15",
+     "pop": 23053
+    },
+    {
+     "key": "sldl:15b",
+     "pop": 23053
+    },
+    {
+     "key": "sldl:21a",
+     "pop": 13639
+    },
+    {
+     "key": "sldl:22b",
+     "pop": 4814
+    },
+    {
+     "key": "sldu:58",
+     "pop": 2185
+    },
+    {
+     "key": "sldl:58b",
+     "pop": 2185
+    }
+   ]
+  },
+  "cd:8": {
+   "layer": "cd",
+   "district": "8",
+   "pop": 713312,
+   "bbox": [
+    -96.06772,
+    45.07412,
+    -89.48339,
+    49.38448
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:2",
+     "pop": 85461
+    },
+    {
+     "key": "sldu:8",
+     "pop": 85155
+    },
+    {
+     "key": "sldu:11",
+     "pop": 85150
+    },
+    {
+     "key": "sldu:28",
+     "pop": 84944
+    },
+    {
+     "key": "sldu:3",
+     "pop": 84754
+    },
+    {
+     "key": "sldu:7",
+     "pop": 84730
+    },
+    {
+     "key": "sldu:6",
+     "pop": 84563
+    },
+    {
+     "key": "sldu:33",
+     "pop": 45391
+    },
+    {
+     "key": "sldl:2a",
+     "pop": 42871
+    },
+    {
+     "key": "sldl:28a",
+     "pop": 42711
+    },
+    {
+     "key": "sldl:11b",
+     "pop": 42604
+    },
+    {
+     "key": "sldl:8b",
+     "pop": 42602
+    },
+    {
+     "key": "sldl:2b",
+     "pop": 42590
+    },
+    {
+     "key": "sldl:8a",
+     "pop": 42553
+    },
+    {
+     "key": "sldl:11a",
+     "pop": 42546
+    },
+    {
+     "key": "sldl:7a",
+     "pop": 42472
+    },
+    {
+     "key": "sldl:3a",
+     "pop": 42417
+    },
+    {
+     "key": "sldl:3b",
+     "pop": 42337
+    },
+    {
+     "key": "sldl:6a",
+     "pop": 42298
+    },
+    {
+     "key": "sldl:6b",
+     "pop": 42265
+    },
+    {
+     "key": "sldl:7b",
+     "pop": 42258
+    },
+    {
+     "key": "sldl:28b",
+     "pop": 42233
+    },
+    {
+     "key": "sldu:10",
+     "pop": 37999
+    },
+    {
+     "key": "sldl:33a",
+     "pop": 31502
+    },
+    {
+     "key": "sldl:10a",
+     "pop": 23338
+    },
+    {
+     "key": "sldu:5",
+     "pop": 20791
+    },
+    {
+     "key": "sldl:5a",
+     "pop": 15675
+    },
+    {
+     "key": "sldl:10b",
+     "pop": 14661
+    },
+    {
+     "key": "sldl:33b",
+     "pop": 13889
+    },
+    {
+     "key": "sldu:27",
+     "pop": 12262
+    },
+    {
+     "key": "sldl:27b",
+     "pop": 12262
+    },
+    {
+     "key": "sldl:5b",
+     "pop": 5116
+    },
+    {
+     "key": "sldu:31",
+     "pop": 2112
+    },
+    {
+     "key": "sldl:31b",
+     "pop": 2112
+    }
+   ]
+  },
+  "cd:5": {
+   "layer": "cd",
+   "district": "5",
+   "pop": 713312,
+   "bbox": [
+    -93.41051,
+    44.86174,
+    -93.17722,
+    45.12476
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:62",
+     "pop": 85241
+    },
+    {
+     "key": "sldu:61",
+     "pop": 85044
+    },
+    {
+     "key": "sldu:60",
+     "pop": 84969
+    },
+    {
+     "key": "sldu:59",
+     "pop": 84924
+    },
+    {
+     "key": "sldu:63",
+     "pop": 84624
+    },
+    {
+     "key": "sldu:43",
+     "pop": 82514
+    },
+    {
+     "key": "sldu:39",
+     "pop": 68761
+    },
+    {
+     "key": "sldu:46",
+     "pop": 50010
+    },
+    {
+     "key": "sldl:43a",
+     "pop": 42830
+    },
+    {
+     "key": "sldl:61b",
+     "pop": 42825
+    },
+    {
+     "key": "sldl:60a",
+     "pop": 42800
+    },
+    {
+     "key": "sldl:62a",
+     "pop": 42714
+    },
+    {
+     "key": "sldu:51",
+     "pop": 42586
+    },
+    {
+     "key": "sldl:51a",
+     "pop": 42586
+    },
+    {
+     "key": "sldl:62b",
+     "pop": 42527
+    },
+    {
+     "key": "sldl:59b",
+     "pop": 42494
+    },
+    {
+     "key": "sldl:46a",
+     "pop": 42479
+    },
+    {
+     "key": "sldl:59a",
+     "pop": 42430
+    },
+    {
+     "key": "sldl:63a",
+     "pop": 42332
+    },
+    {
+     "key": "sldl:63b",
+     "pop": 42292
+    },
+    {
+     "key": "sldl:61a",
+     "pop": 42219
+    },
+    {
+     "key": "sldl:60b",
+     "pop": 42169
+    },
+    {
+     "key": "sldl:39a",
+     "pop": 42150
+    },
+    {
+     "key": "sldl:43b",
+     "pop": 39684
+    },
+    {
+     "key": "sldu:38",
+     "pop": 33782
+    },
+    {
+     "key": "sldl:38b",
+     "pop": 33782
+    },
+    {
+     "key": "sldl:39b",
+     "pop": 26611
+    },
+    {
+     "key": "sldu:50",
+     "pop": 10857
+    },
+    {
+     "key": "sldl:50a",
+     "pop": 10857
+    },
+    {
+     "key": "sldl:46b",
+     "pop": 7531
+    }
+   ]
+  },
+  "cd:4": {
+   "layer": "cd",
+   "district": "4",
+   "pop": 713312,
+   "bbox": [
+    -93.22812,
+    44.86186,
+    -92.75064,
+    45.12453
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:67",
+     "pop": 85049
+    },
+    {
+     "key": "sldu:40",
+     "pop": 85043
+    },
+    {
+     "key": "sldu:44",
+     "pop": 85031
+    },
+    {
+     "key": "sldu:64",
+     "pop": 85022
+    },
+    {
+     "key": "sldu:66",
+     "pop": 84350
+    },
+    {
+     "key": "sldu:47",
+     "pop": 77550
+    },
+    {
+     "key": "sldu:65",
+     "pop": 73878
+    },
+    {
+     "key": "sldu:36",
+     "pop": 55507
+    },
+    {
+     "key": "sldl:36b",
+     "pop": 42879
+    },
+    {
+     "key": "sldl:40a",
+     "pop": 42860
+    },
+    {
+     "key": "sldl:44b",
+     "pop": 42858
+    },
+    {
+     "key": "sldl:67b",
+     "pop": 42814
+    },
+    {
+     "key": "sldl:64b",
+     "pop": 42650
+    },
+    {
+     "key": "sldl:64a",
+     "pop": 42372
+    },
+    {
+     "key": "sldl:67a",
+     "pop": 42235
+    },
+    {
+     "key": "sldl:47a",
+     "pop": 42231
+    },
+    {
+     "key": "sldl:65a",
+     "pop": 42216
+    },
+    {
+     "key": "sldl:66b",
+     "pop": 42184
+    },
+    {
+     "key": "sldl:40b",
+     "pop": 42183
+    },
+    {
+     "key": "sldl:44a",
+     "pop": 42173
+    },
+    {
+     "key": "sldl:66a",
+     "pop": 42166
+    },
+    {
+     "key": "sldu:33",
+     "pop": 39651
+    },
+    {
+     "key": "sldl:47b",
+     "pop": 35319
+    },
+    {
+     "key": "sldl:65b",
+     "pop": 31662
+    },
+    {
+     "key": "sldl:33b",
+     "pop": 28446
+    },
+    {
+     "key": "sldu:41",
+     "pop": 26384
+    },
+    {
+     "key": "sldl:41a",
+     "pop": 26384
+    },
+    {
+     "key": "sldu:39",
+     "pop": 15847
+    },
+    {
+     "key": "sldl:39b",
+     "pop": 15642
+    },
+    {
+     "key": "sldl:36a",
+     "pop": 12628
+    },
+    {
+     "key": "sldl:33a",
+     "pop": 11205
+    },
+    {
+     "key": "sldl:39a",
+     "pop": 205
+    }
+   ]
+  },
+  "cd:2": {
+   "layer": "cd",
+   "district": "2",
+   "pop": 713312,
+   "bbox": [
+    -94.02525,
+    44.19584,
+    -92.73189,
+    44.92329
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:54",
+     "pop": 85890
+    },
+    {
+     "key": "sldu:52",
+     "pop": 85337
+    },
+    {
+     "key": "sldu:55",
+     "pop": 85190
+    },
+    {
+     "key": "sldu:56",
+     "pop": 85083
+    },
+    {
+     "key": "sldu:53",
+     "pop": 84998
+    },
+    {
+     "key": "sldu:57",
+     "pop": 84727
+    },
+    {
+     "key": "sldu:58",
+     "pop": 83260
+    },
+    {
+     "key": "sldu:41",
+     "pop": 58369
+    },
+    {
+     "key": "sldl:52a",
+     "pop": 42994
+    },
+    {
+     "key": "sldl:54a",
+     "pop": 42992
+    },
+    {
+     "key": "sldl:58a",
+     "pop": 42940
+    },
+    {
+     "key": "sldl:54b",
+     "pop": 42898
+    },
+    {
+     "key": "sldl:55a",
+     "pop": 42831
+    },
+    {
+     "key": "sldl:56a",
+     "pop": 42750
+    },
+    {
+     "key": "sldl:53b",
+     "pop": 42507
+    },
+    {
+     "key": "sldl:53a",
+     "pop": 42491
+    },
+    {
+     "key": "sldl:57b",
+     "pop": 42406
+    },
+    {
+     "key": "sldl:41b",
+     "pop": 42393
+    },
+    {
+     "key": "sldl:55b",
+     "pop": 42359
+    },
+    {
+     "key": "sldl:52b",
+     "pop": 42343
+    },
+    {
+     "key": "sldl:56b",
+     "pop": 42333
+    },
+    {
+     "key": "sldl:57a",
+     "pop": 42321
+    },
+    {
+     "key": "sldl:58b",
+     "pop": 40320
+    },
+    {
+     "key": "sldu:22",
+     "pop": 37483
+    },
+    {
+     "key": "sldl:22b",
+     "pop": 37483
+    },
+    {
+     "key": "sldl:41a",
+     "pop": 15976
+    },
+    {
+     "key": "sldu:65",
+     "pop": 10946
+    },
+    {
+     "key": "sldl:65b",
+     "pop": 10946
+    },
+    {
+     "key": "sldu:47",
+     "pop": 7306
+    },
+    {
+     "key": "sldl:47b",
+     "pop": 7306
+    },
+    {
+     "key": "sldu:19",
+     "pop": 2652
+    },
+    {
+     "key": "sldl:19a",
+     "pop": 2652
+    },
+    {
+     "key": "sldu:18",
+     "pop": 1185
+    },
+    {
+     "key": "sldl:18a",
+     "pop": 1185
+    },
+    {
+     "key": "sldu:20",
+     "pop": 886
+    },
+    {
+     "key": "sldl:20a",
+     "pop": 886
+    }
+   ]
+  },
+  "cd:7": {
+   "layer": "cd",
+   "district": "7",
+   "pop": 713312,
+   "bbox": [
+    -97.23909,
+    43.84762,
+    -93.76366,
+    49.00045
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:12",
+     "pop": 85363
+    },
+    {
+     "key": "sldu:16",
+     "pop": 85283
+    },
+    {
+     "key": "sldu:1",
+     "pop": 85175
+    },
+    {
+     "key": "sldu:4",
+     "pop": 85002
+    },
+    {
+     "key": "sldu:9",
+     "pop": 84673
+    },
+    {
+     "key": "sldu:5",
+     "pop": 64611
+    },
+    {
+     "key": "sldu:15",
+     "pop": 61812
+    },
+    {
+     "key": "sldu:17",
+     "pop": 58377
+    },
+    {
+     "key": "sldl:12b",
+     "pop": 43008
+    },
+    {
+     "key": "sldl:16a",
+     "pop": 42670
+    },
+    {
+     "key": "sldl:16b",
+     "pop": 42613
+    },
+    {
+     "key": "sldl:1b",
+     "pop": 42605
+    },
+    {
+     "key": "sldl:1a",
+     "pop": 42570
+    },
+    {
+     "key": "sldl:4b",
+     "pop": 42530
+    },
+    {
+     "key": "sldl:15a",
+     "pop": 42474
+    },
+    {
+     "key": "sldl:4a",
+     "pop": 42472
+    },
+    {
+     "key": "sldl:12a",
+     "pop": 42355
+    },
+    {
+     "key": "sldl:9a",
+     "pop": 42345
+    },
+    {
+     "key": "sldl:9b",
+     "pop": 42328
+    },
+    {
+     "key": "sldl:5b",
+     "pop": 37733
+    },
+    {
+     "key": "sldl:17a",
+     "pop": 37233
+    },
+    {
+     "key": "sldu:13",
+     "pop": 35249
+    },
+    {
+     "key": "sldu:21",
+     "pop": 34760
+    },
+    {
+     "key": "sldu:10",
+     "pop": 31565
+    },
+    {
+     "key": "sldl:21a",
+     "pop": 28824
+    },
+    {
+     "key": "sldl:13a",
+     "pop": 28656
+    },
+    {
+     "key": "sldl:5a",
+     "pop": 26878
+    },
+    {
+     "key": "sldl:17b",
+     "pop": 21144
+    },
+    {
+     "key": "sldl:10a",
+     "pop": 19612
+    },
+    {
+     "key": "sldl:15b",
+     "pop": 19338
+    },
+    {
+     "key": "sldl:10b",
+     "pop": 11953
+    },
+    {
+     "key": "sldl:13b",
+     "pop": 6593
+    },
+    {
+     "key": "sldl:21b",
+     "pop": 5936
+    },
+    {
+     "key": "sldu:29",
+     "pop": 1442
+    },
+    {
+     "key": "sldl:29a",
+     "pop": 1442
+    }
+   ]
+  },
+  "cd:6": {
+   "layer": "cd",
+   "district": "6",
+   "pop": 713312,
+   "bbox": [
+    -94.50614,
+    44.63514,
+    -93.01841,
+    45.82425
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:32",
+     "pop": 85959
+    },
+    {
+     "key": "sldu:30",
+     "pop": 85767
+    },
+    {
+     "key": "sldu:48",
+     "pop": 85627
+    },
+    {
+     "key": "sldu:14",
+     "pop": 85276
+    },
+    {
+     "key": "sldu:29",
+     "pop": 84292
+    },
+    {
+     "key": "sldu:31",
+     "pop": 82241
+    },
+    {
+     "key": "sldu:27",
+     "pop": 73330
+    },
+    {
+     "key": "sldu:13",
+     "pop": 50501
+    },
+    {
+     "key": "sldl:32a",
+     "pop": 42983
+    },
+    {
+     "key": "sldl:32b",
+     "pop": 42976
+    },
+    {
+     "key": "sldl:30a",
+     "pop": 42966
+    },
+    {
+     "key": "sldl:48b",
+     "pop": 42903
+    },
+    {
+     "key": "sldl:14a",
+     "pop": 42844
+    },
+    {
+     "key": "sldl:30b",
+     "pop": 42801
+    },
+    {
+     "key": "sldl:29b",
+     "pop": 42733
+    },
+    {
+     "key": "sldl:48a",
+     "pop": 42724
+    },
+    {
+     "key": "sldl:27a",
+     "pop": 42685
+    },
+    {
+     "key": "sldl:14b",
+     "pop": 42432
+    },
+    {
+     "key": "sldl:29a",
+     "pop": 41559
+    },
+    {
+     "key": "sldl:31a",
+     "pop": 41386
+    },
+    {
+     "key": "sldl:31b",
+     "pop": 40855
+    },
+    {
+     "key": "sldl:13b",
+     "pop": 36384
+    },
+    {
+     "key": "sldl:27b",
+     "pop": 30645
+    },
+    {
+     "key": "sldu:36",
+     "pop": 30320
+    },
+    {
+     "key": "sldl:36a",
+     "pop": 30320
+    },
+    {
+     "key": "sldu:17",
+     "pop": 26449
+    },
+    {
+     "key": "sldl:17b",
+     "pop": 21295
+    },
+    {
+     "key": "sldu:10",
+     "pop": 16255
+    },
+    {
+     "key": "sldl:10b",
+     "pop": 16255
+    },
+    {
+     "key": "sldl:13a",
+     "pop": 14117
+    },
+    {
+     "key": "sldu:35",
+     "pop": 7245
+    },
+    {
+     "key": "sldl:35b",
+     "pop": 7245
+    },
+    {
+     "key": "sldl:17a",
+     "pop": 5154
+    }
+   ]
+  },
+  "sldu:66": {
+   "layer": "sldu",
+   "district": "66",
+   "pop": 84350,
+   "bbox": [
+    -93.20777,
+    44.95159,
+    -93.06596,
+    45.01043
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 84350
+    },
+    {
+     "key": "sldl:66b",
+     "pop": 42184
+    },
+    {
+     "key": "sldl:66a",
+     "pop": 42166
+    }
+   ]
+  },
+  "sldu:9": {
+   "layer": "sldu",
+   "district": "9",
+   "pop": 84673,
+   "bbox": [
+    -96.85683,
+    45.58522,
+    -95.14575,
+    46.71816
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 84673
+    },
+    {
+     "key": "sldl:9a",
+     "pop": 42345
+    },
+    {
+     "key": "sldl:9b",
+     "pop": 42328
+    }
+   ]
+  },
+  "sldu:50": {
+   "layer": "sldu",
+   "district": "50",
+   "pop": 84880,
+   "bbox": [
+    -93.39952,
+    44.78512,
+    -93.3086,
+    44.9306
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 74023
+    },
+    {
+     "key": "sldl:50b",
+     "pop": 42547
+    },
+    {
+     "key": "sldl:50a",
+     "pop": 42333
+    },
+    {
+     "key": "cd:5",
+     "pop": 10857
+    }
+   ]
+  },
+  "sldu:51": {
+   "layer": "sldu",
+   "district": "51",
+   "pop": 85533,
+   "bbox": [
+    -93.33159,
+    44.7911,
+    -93.17722,
+    44.90541
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42947
+    },
+    {
+     "key": "sldl:51b",
+     "pop": 42947
+    },
+    {
+     "key": "cd:5",
+     "pop": 42586
+    },
+    {
+     "key": "sldl:51a",
+     "pop": 42586
+    }
+   ]
+  },
+  "sldu:52": {
+   "layer": "sldu",
+   "district": "52",
+   "pop": 85337,
+   "bbox": [
+    -93.29001,
+    44.75945,
+    -93.10555,
+    44.90888
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 85337
+    },
+    {
+     "key": "sldl:52a",
+     "pop": 42994
+    },
+    {
+     "key": "sldl:52b",
+     "pop": 42343
+    }
+   ]
+  },
+  "sldu:53": {
+   "layer": "sldu",
+   "district": "53",
+   "pop": 84998,
+   "bbox": [
+    -93.15303,
+    44.77556,
+    -92.93458,
+    44.91976
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 84998
+    },
+    {
+     "key": "sldl:53b",
+     "pop": 42507
+    },
+    {
+     "key": "sldl:53a",
+     "pop": 42491
+    }
+   ]
+  },
+  "sldu:10": {
+   "layer": "sldu",
+   "district": "10",
+   "pop": 85819,
+   "bbox": [
+    -94.64882,
+    45.55923,
+    -93.05371,
+    46.59504
+   ],
+   "overlaps": [
+    {
+     "key": "sldl:10a",
+     "pop": 42950
+    },
+    {
+     "key": "sldl:10b",
+     "pop": 42869
+    },
+    {
+     "key": "cd:8",
+     "pop": 37999
+    },
+    {
+     "key": "cd:7",
+     "pop": 31565
+    },
+    {
+     "key": "cd:6",
+     "pop": 16255
+    }
+   ]
+  },
+  "sldu:54": {
+   "layer": "sldu",
+   "district": "54",
+   "pop": 85890,
+   "bbox": [
+    -93.6547,
+    44.63049,
+    -93.37966,
+    44.81307
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 85890
+    },
+    {
+     "key": "sldl:54a",
+     "pop": 42992
+    },
+    {
+     "key": "sldl:54b",
+     "pop": 42898
+    }
+   ]
+  },
+  "sldu:12": {
+   "layer": "sldu",
+   "district": "12",
+   "pop": 85363,
+   "bbox": [
+    -96.83545,
+    45.1512,
+    -94.63892,
+    46.10751
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 85363
+    },
+    {
+     "key": "sldl:12b",
+     "pop": 43008
+    },
+    {
+     "key": "sldl:12a",
+     "pop": 42355
+    }
+   ]
+  },
+  "sldu:57": {
+   "layer": "sldu",
+   "district": "57",
+   "pop": 84727,
+   "bbox": [
+    -93.40047,
+    44.54372,
+    -93.15649,
+    44.71753
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 84727
+    },
+    {
+     "key": "sldl:57b",
+     "pop": 42406
+    },
+    {
+     "key": "sldl:57a",
+     "pop": 42321
+    }
+   ]
+  },
+  "sldu:14": {
+   "layer": "sldu",
+   "district": "14",
+   "pop": 85276,
+   "bbox": [
+    -94.31892,
+    45.41298,
+    -94.00688,
+    45.64774
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 85276
+    },
+    {
+     "key": "sldl:14a",
+     "pop": 42844
+    },
+    {
+     "key": "sldl:14b",
+     "pop": 42432
+    }
+   ]
+  },
+  "sldu:39": {
+   "layer": "sldu",
+   "district": "39",
+   "pop": 84608,
+   "bbox": [
+    -93.29609,
+    45.00604,
+    -93.18263,
+    45.12476
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 68761
+    },
+    {
+     "key": "sldl:39a",
+     "pop": 42355
+    },
+    {
+     "key": "sldl:39b",
+     "pop": 42253
+    },
+    {
+     "key": "cd:4",
+     "pop": 15847
+    }
+   ]
+  },
+  "sldu:33": {
+   "layer": "sldu",
+   "district": "33",
+   "pop": 85042,
+   "bbox": [
+    -93.02052,
+    44.99975,
+    -92.73953,
+    45.29693
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 45391
+    },
+    {
+     "key": "sldl:33a",
+     "pop": 42707
+    },
+    {
+     "key": "sldl:33b",
+     "pop": 42335
+    },
+    {
+     "key": "cd:4",
+     "pop": 39651
+    }
+   ]
+  },
+  "sldu:30": {
+   "layer": "sldu",
+   "district": "30",
+   "pop": 85767,
+   "bbox": [
+    -93.89058,
+    45.07586,
+    -93.3473,
+    45.38586
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 85767
+    },
+    {
+     "key": "sldl:30a",
+     "pop": 42966
+    },
+    {
+     "key": "sldl:30b",
+     "pop": 42801
+    }
+   ]
+  },
+  "sldu:28": {
+   "layer": "sldu",
+   "district": "28",
+   "pop": 84944,
+   "bbox": [
+    -93.5128,
+    45.29604,
+    -92.64651,
+    45.73094
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 84944
+    },
+    {
+     "key": "sldl:28a",
+     "pop": 42711
+    },
+    {
+     "key": "sldl:28b",
+     "pop": 42233
+    }
+   ]
+  },
+  "sldu:17": {
+   "layer": "sldu",
+   "district": "17",
+   "pop": 84826,
+   "bbox": [
+    -94.62949,
+    44.45587,
+    -93.59426,
+    45.23896
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 58377
+    },
+    {
+     "key": "sldl:17b",
+     "pop": 42439
+    },
+    {
+     "key": "sldl:17a",
+     "pop": 42387
+    },
+    {
+     "key": "cd:6",
+     "pop": 26449
+    }
+   ]
+  },
+  "sldu:7": {
+   "layer": "sldu",
+   "district": "7",
+   "pop": 84730,
+   "bbox": [
+    -93.80084,
+    46.59331,
+    -92.17453,
+    47.80809
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 84730
+    },
+    {
+     "key": "sldl:7a",
+     "pop": 42472
+    },
+    {
+     "key": "sldl:7b",
+     "pop": 42258
+    }
+   ]
+  },
+  "sldu:19": {
+   "layer": "sldu",
+   "district": "19",
+   "pop": 84872,
+   "bbox": [
+    -93.76836,
+    44.02186,
+    -92.76691,
+    44.371
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 82220
+    },
+    {
+     "key": "sldl:19b",
+     "pop": 42572
+    },
+    {
+     "key": "sldl:19a",
+     "pop": 42300
+    },
+    {
+     "key": "cd:2",
+     "pop": 2652
+    }
+   ]
+  },
+  "sldu:60": {
+   "layer": "sldu",
+   "district": "60",
+   "pop": 84969,
+   "bbox": [
+    -93.28343,
+    44.96001,
+    -93.20756,
+    45.03567
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 84969
+    },
+    {
+     "key": "sldl:60a",
+     "pop": 42800
+    },
+    {
+     "key": "sldl:60b",
+     "pop": 42169
+    }
+   ]
+  },
+  "sldu:63": {
+   "layer": "sldu",
+   "district": "63",
+   "pop": 84624,
+   "bbox": [
+    -93.31882,
+    44.89044,
+    -93.19404,
+    44.96725
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 84624
+    },
+    {
+     "key": "sldl:63a",
+     "pop": 42332
+    },
+    {
+     "key": "sldl:63b",
+     "pop": 42292
+    }
+   ]
+  },
+  "sldu:20": {
+   "layer": "sldu",
+   "district": "20",
+   "pop": 84757,
+   "bbox": [
+    -92.9208,
+    43.84703,
+    -91.83876,
+    44.71434
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 83871
+    },
+    {
+     "key": "sldl:20a",
+     "pop": 42559
+    },
+    {
+     "key": "sldl:20b",
+     "pop": 42198
+    },
+    {
+     "key": "cd:2",
+     "pop": 886
+    }
+   ]
+  },
+  "sldu:21": {
+   "layer": "sldu",
+   "district": "21",
+   "pop": 85312,
+   "bbox": [
+    -96.45353,
+    43.49986,
+    -94.60094,
+    44.63135
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 50552
+    },
+    {
+     "key": "sldl:21b",
+     "pop": 42849
+    },
+    {
+     "key": "sldl:21a",
+     "pop": 42463
+    },
+    {
+     "key": "cd:7",
+     "pop": 34760
+    }
+   ]
+  },
+  "sldu:67": {
+   "layer": "sldu",
+   "district": "67",
+   "pop": 85049,
+   "bbox": [
+    -93.0789,
+    44.89075,
+    -93.00433,
+    44.99199
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 85049
+    },
+    {
+     "key": "sldl:67b",
+     "pop": 42814
+    },
+    {
+     "key": "sldl:67a",
+     "pop": 42235
+    }
+   ]
+  },
+  "sldu:24": {
+   "layer": "sldu",
+   "district": "24",
+   "pop": 84622,
+   "bbox": [
+    -93.04597,
+    43.83385,
+    -92.38892,
+    44.19693
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 84622
+    },
+    {
+     "key": "sldl:24b",
+     "pop": 42322
+    },
+    {
+     "key": "sldl:24a",
+     "pop": 42300
+    }
+   ]
+  },
+  "sldu:26": {
+   "layer": "sldu",
+   "district": "26",
+   "pop": 85003,
+   "bbox": [
+    -92.56977,
+    43.50024,
+    -91.21729,
+    44.18247
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 85003
+    },
+    {
+     "key": "sldl:26b",
+     "pop": 42834
+    },
+    {
+     "key": "sldl:26a",
+     "pop": 42169
+    }
+   ]
+  },
+  "sldu:27": {
+   "layer": "sldu",
+   "district": "27",
+   "pop": 85592,
+   "bbox": [
+    -94.15428,
+    45.29485,
+    -93.26033,
+    45.64926
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 73330
+    },
+    {
+     "key": "sldl:27b",
+     "pop": 42907
+    },
+    {
+     "key": "sldl:27a",
+     "pop": 42685
+    },
+    {
+     "key": "cd:8",
+     "pop": 12262
+    }
+   ]
+  },
+  "sldu:59": {
+   "layer": "sldu",
+   "district": "59",
+   "pop": 84924,
+   "bbox": [
+    -93.32323,
+    44.97,
+    -93.24541,
+    45.05125
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 84924
+    },
+    {
+     "key": "sldl:59b",
+     "pop": 42494
+    },
+    {
+     "key": "sldl:59a",
+     "pop": 42430
+    }
+   ]
+  },
+  "sldu:42": {
+   "layer": "sldu",
+   "district": "42",
+   "pop": 85056,
+   "bbox": [
+    -93.52265,
+    44.97821,
+    -93.40064,
+    45.08459
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 85056
+    },
+    {
+     "key": "sldl:42b",
+     "pop": 42547
+    },
+    {
+     "key": "sldl:42a",
+     "pop": 42509
+    }
+   ]
+  },
+  "sldu:64": {
+   "layer": "sldu",
+   "district": "64",
+   "pop": 85022,
+   "bbox": [
+    -93.20779,
+    44.8874,
+    -93.10432,
+    44.95967
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 85022
+    },
+    {
+     "key": "sldl:64b",
+     "pop": 42650
+    },
+    {
+     "key": "sldl:64a",
+     "pop": 42372
+    }
+   ]
+  },
+  "sldu:65": {
+   "layer": "sldu",
+   "district": "65",
+   "pop": 84824,
+   "bbox": [
+    -93.16699,
+    44.90329,
+    -93.04945,
+    44.97739
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 73878
+    },
+    {
+     "key": "sldl:65b",
+     "pop": 42608
+    },
+    {
+     "key": "sldl:65a",
+     "pop": 42216
+    },
+    {
+     "key": "cd:2",
+     "pop": 10946
+    }
+   ]
+  },
+  "sldu:61": {
+   "layer": "sldu",
+   "district": "61",
+   "pop": 85044,
+   "bbox": [
+    -93.32916,
+    44.89434,
+    -93.25304,
+    44.98204
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 85044
+    },
+    {
+     "key": "sldl:61b",
+     "pop": 42825
+    },
+    {
+     "key": "sldl:61a",
+     "pop": 42219
+    }
+   ]
+  },
+  "sldu:32": {
+   "layer": "sldu",
+   "district": "32",
+   "pop": 85959,
+   "bbox": [
+    -93.26689,
+    45.12422,
+    -93.01922,
+    45.32636
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 85959
+    },
+    {
+     "key": "sldl:32a",
+     "pop": 42983
+    },
+    {
+     "key": "sldl:32b",
+     "pop": 42976
+    }
+   ]
+  },
+  "sldu:35": {
+   "layer": "sldu",
+   "district": "35",
+   "pop": 85408,
+   "bbox": [
+    -93.42641,
+    45.12915,
+    -93.26554,
+    45.24109
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 78163
+    },
+    {
+     "key": "sldl:35a",
+     "pop": 42891
+    },
+    {
+     "key": "sldl:35b",
+     "pop": 42517
+    },
+    {
+     "key": "cd:6",
+     "pop": 7245
+    }
+   ]
+  },
+  "sldu:11": {
+   "layer": "sldu",
+   "district": "11",
+   "pop": 85150,
+   "bbox": [
+    -93.3895,
+    45.64386,
+    -92.29158,
+    46.9421
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 85150
+    },
+    {
+     "key": "sldl:11b",
+     "pop": 42604
+    },
+    {
+     "key": "sldl:11a",
+     "pop": 42546
+    }
+   ]
+  },
+  "sldu:40": {
+   "layer": "sldu",
+   "district": "40",
+   "pop": 85043,
+   "bbox": [
+    -93.22797,
+    44.99175,
+    -93.10587,
+    45.12453
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 85043
+    },
+    {
+     "key": "sldl:40a",
+     "pop": 42860
+    },
+    {
+     "key": "sldl:40b",
+     "pop": 42183
+    }
+   ]
+  },
+  "sldu:56": {
+   "layer": "sldu",
+   "district": "56",
+   "pop": 85083,
+   "bbox": [
+    -93.24834,
+    44.71703,
+    -93.03407,
+    44.79121
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 85083
+    },
+    {
+     "key": "sldl:56a",
+     "pop": 42750
+    },
+    {
+     "key": "sldl:56b",
+     "pop": 42333
+    }
+   ]
+  },
+  "sldu:22": {
+   "layer": "sldu",
+   "district": "22",
+   "pop": 84796,
+   "bbox": [
+    -94.85467,
+    43.5001,
+    -93.40227,
+    44.69621
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 47313
+    },
+    {
+     "key": "sldl:22a",
+     "pop": 42499
+    },
+    {
+     "key": "sldl:22b",
+     "pop": 42297
+    },
+    {
+     "key": "cd:2",
+     "pop": 37483
+    }
+   ]
+  },
+  "sldu:31": {
+   "layer": "sldu",
+   "district": "31",
+   "pop": 85863,
+   "bbox": [
+    -93.51265,
+    45.21228,
+    -93.01841,
+    45.47137
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 82241
+    },
+    {
+     "key": "sldl:31b",
+     "pop": 42967
+    },
+    {
+     "key": "sldl:31a",
+     "pop": 42896
+    },
+    {
+     "key": "cd:8",
+     "pop": 2112
+    },
+    {
+     "key": "cd:3",
+     "pop": 1510
+    }
+   ]
+  },
+  "sldu:44": {
+   "layer": "sldu",
+   "district": "44",
+   "pop": 85031,
+   "bbox": [
+    -93.10629,
+    44.94852,
+    -92.93384,
+    45.04689
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 85031
+    },
+    {
+     "key": "sldl:44b",
+     "pop": 42858
+    },
+    {
+     "key": "sldl:44a",
+     "pop": 42173
+    }
+   ]
+  },
+  "sldu:47": {
+   "layer": "sldu",
+   "district": "47",
+   "pop": 84856,
+   "bbox": [
+    -93.00513,
+    44.86194,
+    -92.86241,
+    44.98107
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 77550
+    },
+    {
+     "key": "sldl:47b",
+     "pop": 42625
+    },
+    {
+     "key": "sldl:47a",
+     "pop": 42231
+    },
+    {
+     "key": "cd:2",
+     "pop": 7306
+    }
+   ]
+  },
+  "sldu:62": {
+   "layer": "sldu",
+   "district": "62",
+   "pop": 85241,
+   "bbox": [
+    -93.28832,
+    44.91604,
+    -93.23835,
+    44.96684
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 85241
+    },
+    {
+     "key": "sldl:62a",
+     "pop": 42714
+    },
+    {
+     "key": "sldl:62b",
+     "pop": 42527
+    }
+   ]
+  },
+  "sldu:23": {
+   "layer": "sldu",
+   "district": "23",
+   "pop": 84988,
+   "bbox": [
+    -94.12815,
+    43.49936,
+    -92.55945,
+    44.02296
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 84988
+    },
+    {
+     "key": "sldl:23a",
+     "pop": 42672
+    },
+    {
+     "key": "sldl:23b",
+     "pop": 42316
+    }
+   ]
+  },
+  "sldu:16": {
+   "layer": "sldu",
+   "district": "16",
+   "pop": 85283,
+   "bbox": [
+    -96.03699,
+    44.45603,
+    -94.38325,
+    45.41299
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 85283
+    },
+    {
+     "key": "sldl:16a",
+     "pop": 42670
+    },
+    {
+     "key": "sldl:16b",
+     "pop": 42613
+    }
+   ]
+  },
+  "sldu:46": {
+   "layer": "sldu",
+   "district": "46",
+   "pop": 84758,
+   "bbox": [
+    -93.42891,
+    44.88747,
+    -93.32869,
+    44.97855
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 50010
+    },
+    {
+     "key": "sldl:46a",
+     "pop": 42479
+    },
+    {
+     "key": "sldl:46b",
+     "pop": 42279
+    },
+    {
+     "key": "cd:3",
+     "pop": 34748
+    }
+   ]
+  },
+  "sldu:36": {
+   "layer": "sldu",
+   "district": "36",
+   "pop": 85827,
+   "bbox": [
+    -93.16361,
+    45.03405,
+    -92.96959,
+    45.21104
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 55507
+    },
+    {
+     "key": "sldl:36a",
+     "pop": 42948
+    },
+    {
+     "key": "sldl:36b",
+     "pop": 42879
+    },
+    {
+     "key": "cd:6",
+     "pop": 30320
+    }
+   ]
+  },
+  "sldu:34": {
+   "layer": "sldu",
+   "district": "34",
+   "pop": 85038,
+   "bbox": [
+    -93.65892,
+    45.07172,
+    -93.26578,
+    45.24662
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 84988
+    },
+    {
+     "key": "sldl:34b",
+     "pop": 42869
+    },
+    {
+     "key": "sldl:34a",
+     "pop": 42169
+    }
+   ]
+  },
+  "sldu:4": {
+   "layer": "sldu",
+   "district": "4",
+   "pop": 85002,
+   "bbox": [
+    -96.84012,
+    46.62869,
+    -95.79041,
+    47.15181
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 85002
+    },
+    {
+     "key": "sldl:4b",
+     "pop": 42530
+    },
+    {
+     "key": "sldl:4a",
+     "pop": 42472
+    }
+   ]
+  },
+  "sldu:48": {
+   "layer": "sldu",
+   "district": "48",
+   "pop": 85627,
+   "bbox": [
+    -93.91483,
+    44.71687,
+    -93.52016,
+    44.89541
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 85627
+    },
+    {
+     "key": "sldl:48b",
+     "pop": 42903
+    },
+    {
+     "key": "sldl:48a",
+     "pop": 42724
+    }
+   ]
+  },
+  "sldu:5": {
+   "layer": "sldu",
+   "district": "5",
+   "pop": 85402,
+   "bbox": [
+    -95.79612,
+    45.77342,
+    -94.32729,
+    47.23983
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 64611
+    },
+    {
+     "key": "sldl:5b",
+     "pop": 42849
+    },
+    {
+     "key": "sldl:5a",
+     "pop": 42553
+    },
+    {
+     "key": "cd:8",
+     "pop": 20791
+    }
+   ]
+  },
+  "sldu:49": {
+   "layer": "sldu",
+   "district": "49",
+   "pop": 85347,
+   "bbox": [
+    -93.52335,
+    44.79873,
+    -93.39836,
+    44.93175
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 85347
+    },
+    {
+     "key": "sldl:49b",
+     "pop": 42719
+    },
+    {
+     "key": "sldl:49a",
+     "pop": 42628
+    }
+   ]
+  },
+  "sldu:6": {
+   "layer": "sldu",
+   "district": "6",
+   "pop": 84563,
+   "bbox": [
+    -94.40756,
+    46.2431,
+    -93.44392,
+    47.28247
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 84563
+    },
+    {
+     "key": "sldl:6a",
+     "pop": 42298
+    },
+    {
+     "key": "sldl:6b",
+     "pop": 42265
+    }
+   ]
+  },
+  "sldu:37": {
+   "layer": "sldu",
+   "district": "37",
+   "pop": 85837,
+   "bbox": [
+    -93.76753,
+    44.97702,
+    -93.40069,
+    45.15291
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 85837
+    },
+    {
+     "key": "sldl:37b",
+     "pop": 42986
+    },
+    {
+     "key": "sldl:37a",
+     "pop": 42851
+    }
+   ]
+  },
+  "sldu:38": {
+   "layer": "sldu",
+   "district": "38",
+   "pop": 85743,
+   "bbox": [
+    -93.41361,
+    45.04033,
+    -93.28068,
+    45.12362
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 51961
+    },
+    {
+     "key": "sldl:38b",
+     "pop": 42883
+    },
+    {
+     "key": "sldl:38a",
+     "pop": 42860
+    },
+    {
+     "key": "cd:5",
+     "pop": 33782
+    }
+   ]
+  },
+  "sldu:41": {
+   "layer": "sldu",
+   "district": "41",
+   "pop": 84753,
+   "bbox": [
+    -93.02152,
+    44.70234,
+    -92.75064,
+    45.10845
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 58369
+    },
+    {
+     "key": "sldl:41b",
+     "pop": 42393
+    },
+    {
+     "key": "sldl:41a",
+     "pop": 42360
+    },
+    {
+     "key": "cd:4",
+     "pop": 26384
+    }
+   ]
+  },
+  "sldu:1": {
+   "layer": "sldu",
+   "district": "1",
+   "pop": 85175,
+   "bbox": [
+    -97.23909,
+    47.06388,
+    -95.08979,
+    49.00045
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 85175
+    },
+    {
+     "key": "sldl:1b",
+     "pop": 42605
+    },
+    {
+     "key": "sldl:1a",
+     "pop": 42570
+    }
+   ]
+  },
+  "sldu:45": {
+   "layer": "sldu",
+   "district": "45",
+   "pop": 85939,
+   "bbox": [
+    -93.76838,
+    44.89066,
+    -93.39874,
+    45.00056
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 85939
+    },
+    {
+     "key": "sldl:45b",
+     "pop": 42996
+    },
+    {
+     "key": "sldl:45a",
+     "pop": 42943
+    }
+   ]
+  },
+  "sldu:2": {
+   "layer": "sldu",
+   "district": "2",
+   "pop": 85461,
+   "bbox": [
+    -96.06772,
+    46.97615,
+    -93.69829,
+    49.38448
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 85461
+    },
+    {
+     "key": "sldl:2a",
+     "pop": 42871
+    },
+    {
+     "key": "sldl:2b",
+     "pop": 42590
+    }
+   ]
+  },
+  "sldu:3": {
+   "layer": "sldu",
+   "district": "3",
+   "pop": 84754,
+   "bbox": [
+    -94.43028,
+    46.64924,
+    -89.48339,
+    48.71194
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 84754
+    },
+    {
+     "key": "sldl:3a",
+     "pop": 42417
+    },
+    {
+     "key": "sldl:3b",
+     "pop": 42337
+    }
+   ]
+  },
+  "sldu:18": {
+   "layer": "sldu",
+   "district": "18",
+   "pop": 85499,
+   "bbox": [
+    -94.78671,
+    44.12295,
+    -93.86827,
+    44.45695
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 84314
+    },
+    {
+     "key": "sldl:18a",
+     "pop": 42815
+    },
+    {
+     "key": "sldl:18b",
+     "pop": 42684
+    },
+    {
+     "key": "cd:2",
+     "pop": 1185
+    }
+   ]
+  },
+  "sldu:8": {
+   "layer": "sldu",
+   "district": "8",
+   "pop": 85155,
+   "bbox": [
+    -92.2694,
+    46.64984,
+    -91.79453,
+    46.92875
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 85155
+    },
+    {
+     "key": "sldl:8b",
+     "pop": 42602
+    },
+    {
+     "key": "sldl:8a",
+     "pop": 42553
+    }
+   ]
+  },
+  "sldu:15": {
+   "layer": "sldu",
+   "district": "15",
+   "pop": 84865,
+   "bbox": [
+    -96.45295,
+    44.10773,
+    -94.12815,
+    45.26935
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 61812
+    },
+    {
+     "key": "sldl:15a",
+     "pop": 42474
+    },
+    {
+     "key": "sldl:15b",
+     "pop": 42391
+    },
+    {
+     "key": "cd:1",
+     "pop": 23053
+    }
+   ]
+  },
+  "sldu:55": {
+   "layer": "sldu",
+   "district": "55",
+   "pop": 85190,
+   "bbox": [
+    -93.39902,
+    44.71604,
+    -93.24731,
+    44.80013
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 85190
+    },
+    {
+     "key": "sldl:55a",
+     "pop": 42831
+    },
+    {
+     "key": "sldl:55b",
+     "pop": 42359
+    }
+   ]
+  },
+  "sldu:13": {
+   "layer": "sldu",
+   "district": "13",
+   "pop": 85750,
+   "bbox": [
+    -94.76323,
+    45.2823,
+    -94.04802,
+    45.77529
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 50501
+    },
+    {
+     "key": "sldl:13b",
+     "pop": 42977
+    },
+    {
+     "key": "sldl:13a",
+     "pop": 42773
+    },
+    {
+     "key": "cd:7",
+     "pop": 35249
+    }
+   ]
+  },
+  "sldu:58": {
+   "layer": "sldu",
+   "district": "58",
+   "pop": 85445,
+   "bbox": [
+    -93.64576,
+    44.37032,
+    -92.73189,
+    44.77556
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 83260
+    },
+    {
+     "key": "sldl:58a",
+     "pop": 42940
+    },
+    {
+     "key": "sldl:58b",
+     "pop": 42505
+    },
+    {
+     "key": "cd:1",
+     "pop": 2185
+    }
+   ]
+  },
+  "sldu:29": {
+   "layer": "sldu",
+   "district": "29",
+   "pop": 85734,
+   "bbox": [
+    -94.38347,
+    44.97765,
+    -93.70424,
+    45.42367
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 84292
+    },
+    {
+     "key": "sldl:29a",
+     "pop": 43001
+    },
+    {
+     "key": "sldl:29b",
+     "pop": 42733
+    },
+    {
+     "key": "cd:7",
+     "pop": 1442
+    }
+   ]
+  },
+  "sldu:25": {
+   "layer": "sldu",
+   "district": "25",
+   "pop": 85190,
+   "bbox": [
+    -92.57335,
+    43.99998,
+    -92.31891,
+    44.19487
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 85190
+    },
+    {
+     "key": "sldl:25a",
+     "pop": 42869
+    },
+    {
+     "key": "sldl:25b",
+     "pop": 42321
+    }
+   ]
+  },
+  "sldu:43": {
+   "layer": "sldu",
+   "district": "43",
+   "pop": 85306,
+   "bbox": [
+    -93.42081,
+    44.96648,
+    -93.31837,
+    45.06574
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 82514
+    },
+    {
+     "key": "sldl:43a",
+     "pop": 42830
+    },
+    {
+     "key": "sldl:43b",
+     "pop": 42476
+    },
+    {
+     "key": "cd:3",
+     "pop": 2792
+    }
+   ]
+  },
+  "sldl:50b": {
+   "layer": "sldl",
+   "district": "50B",
+   "pop": 42547,
+   "bbox": [
+    -93.39906,
+    44.78512,
+    -93.3086,
+    44.86204
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42547
+    },
+    {
+     "key": "sldu:50",
+     "pop": 42547
+    }
+   ]
+  },
+  "sldl:19a": {
+   "layer": "sldl",
+   "district": "19A",
+   "pop": 42300,
+   "bbox": [
+    -93.76836,
+    44.02207,
+    -92.76691,
+    44.371
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:19",
+     "pop": 42300
+    },
+    {
+     "key": "cd:1",
+     "pop": 39648
+    },
+    {
+     "key": "cd:2",
+     "pop": 2652
+    }
+   ]
+  },
+  "sldl:7a": {
+   "layer": "sldl",
+   "district": "7A",
+   "pop": 42472,
+   "bbox": [
+    -93.80084,
+    46.59331,
+    -92.68287,
+    47.54513
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42472
+    },
+    {
+     "key": "sldu:7",
+     "pop": 42472
+    }
+   ]
+  },
+  "sldl:19b": {
+   "layer": "sldl",
+   "district": "19B",
+   "pop": 42572,
+   "bbox": [
+    -93.64721,
+    44.02186,
+    -93.04562,
+    44.19672
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42572
+    },
+    {
+     "key": "sldu:19",
+     "pop": 42572
+    }
+   ]
+  },
+  "sldl:47a": {
+   "layer": "sldl",
+   "district": "47A",
+   "pop": 42231,
+   "bbox": [
+    -93.00513,
+    44.89077,
+    -92.90342,
+    44.98107
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42231
+    },
+    {
+     "key": "sldu:47",
+     "pop": 42231
+    }
+   ]
+  },
+  "sldl:59b": {
+   "layer": "sldl",
+   "district": "59B",
+   "pop": 42494,
+   "bbox": [
+    -93.31857,
+    44.97,
+    -93.24541,
+    45.01287
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42494
+    },
+    {
+     "key": "sldu:59",
+     "pop": 42494
+    }
+   ]
+  },
+  "sldl:47b": {
+   "layer": "sldl",
+   "district": "47B",
+   "pop": 42625,
+   "bbox": [
+    -92.98416,
+    44.86194,
+    -92.86241,
+    44.94933
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:47",
+     "pop": 42625
+    },
+    {
+     "key": "cd:4",
+     "pop": 35319
+    },
+    {
+     "key": "cd:2",
+     "pop": 7306
+    }
+   ]
+  },
+  "sldl:35b": {
+   "layer": "sldl",
+   "district": "35B",
+   "pop": 42517,
+   "bbox": [
+    -93.33637,
+    45.12915,
+    -93.26554,
+    45.23371
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:35",
+     "pop": 42517
+    },
+    {
+     "key": "cd:3",
+     "pop": 35272
+    },
+    {
+     "key": "cd:6",
+     "pop": 7245
+    }
+   ]
+  },
+  "sldl:11a": {
+   "layer": "sldl",
+   "district": "11A",
+   "pop": 42546,
+   "bbox": [
+    -93.06487,
+    46.15647,
+    -92.29158,
+    46.9421
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42546
+    },
+    {
+     "key": "sldu:11",
+     "pop": 42546
+    }
+   ]
+  },
+  "sldl:34a": {
+   "layer": "sldl",
+   "district": "34A",
+   "pop": 42169,
+   "bbox": [
+    -93.65892,
+    45.15188,
+    -93.35227,
+    45.24662
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:34",
+     "pop": 42169
+    },
+    {
+     "key": "cd:3",
+     "pop": 42119
+    }
+   ]
+  },
+  "sldl:46b": {
+   "layer": "sldl",
+   "district": "46B",
+   "pop": 42279,
+   "bbox": [
+    -93.42891,
+    44.88747,
+    -93.33898,
+    44.94955
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:46",
+     "pop": 42279
+    },
+    {
+     "key": "cd:3",
+     "pop": 34748
+    },
+    {
+     "key": "cd:5",
+     "pop": 7531
+    }
+   ]
+  },
+  "sldl:22a": {
+   "layer": "sldl",
+   "district": "22A",
+   "pop": 42499,
+   "bbox": [
+    -94.85467,
+    43.5001,
+    -93.76776,
+    44.18489
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42499
+    },
+    {
+     "key": "sldu:22",
+     "pop": 42499
+    }
+   ]
+  },
+  "sldl:34b": {
+   "layer": "sldl",
+   "district": "34B",
+   "pop": 42869,
+   "bbox": [
+    -93.40207,
+    45.07172,
+    -93.26578,
+    45.1702
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42869
+    },
+    {
+     "key": "sldu:34",
+     "pop": 42869
+    }
+   ]
+  },
+  "sldl:10a": {
+   "layer": "sldl",
+   "district": "10A",
+   "pop": 42950,
+   "bbox": [
+    -94.64882,
+    45.90369,
+    -93.05371,
+    46.59504
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:10",
+     "pop": 42950
+    },
+    {
+     "key": "cd:8",
+     "pop": 23338
+    },
+    {
+     "key": "cd:7",
+     "pop": 19612
+    }
+   ]
+  },
+  "sldl:50a": {
+   "layer": "sldl",
+   "district": "50A",
+   "pop": 42333,
+   "bbox": [
+    -93.39952,
+    44.85148,
+    -93.30868,
+    44.9306
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:50",
+     "pop": 42333
+    },
+    {
+     "key": "cd:3",
+     "pop": 31476
+    },
+    {
+     "key": "cd:5",
+     "pop": 10857
+    }
+   ]
+  },
+  "sldl:66a": {
+   "layer": "sldl",
+   "district": "66A",
+   "pop": 42166,
+   "bbox": [
+    -93.20777,
+    44.95159,
+    -93.13628,
+    45.01043
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42166
+    },
+    {
+     "key": "sldu:66",
+     "pop": 42166
+    }
+   ]
+  },
+  "sldl:46a": {
+   "layer": "sldl",
+   "district": "46A",
+   "pop": 42479,
+   "bbox": [
+    -93.41051,
+    44.93037,
+    -93.32869,
+    44.97855
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42479
+    },
+    {
+     "key": "sldu:46",
+     "pop": 42479
+    }
+   ]
+  },
+  "sldl:58a": {
+   "layer": "sldl",
+   "district": "58A",
+   "pop": 42940,
+   "bbox": [
+    -93.64576,
+    44.37041,
+    -93.12927,
+    44.63074
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42940
+    },
+    {
+     "key": "sldu:58",
+     "pop": 42940
+    }
+   ]
+  },
+  "sldl:66b": {
+   "layer": "sldl",
+   "district": "66B",
+   "pop": 42184,
+   "bbox": [
+    -93.15531,
+    44.96484,
+    -93.06596,
+    44.99198
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42184
+    },
+    {
+     "key": "sldu:66",
+     "pop": 42184
+    }
+   ]
+  },
+  "sldl:51a": {
+   "layer": "sldl",
+   "district": "51A",
+   "pop": 42586,
+   "bbox": [
+    -93.31883,
+    44.86174,
+    -93.17722,
+    44.90541
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42586
+    },
+    {
+     "key": "sldu:51",
+     "pop": 42586
+    }
+   ]
+  },
+  "sldl:8a": {
+   "layer": "sldl",
+   "district": "8A",
+   "pop": 42553,
+   "bbox": [
+    -92.2694,
+    46.64984,
+    -92.00174,
+    46.81322
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42553
+    },
+    {
+     "key": "sldu:8",
+     "pop": 42553
+    }
+   ]
+  },
+  "sldl:36a": {
+   "layer": "sldl",
+   "district": "36A",
+   "pop": 42948,
+   "bbox": [
+    -93.16361,
+    45.0791,
+    -92.98452,
+    45.21104
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:36",
+     "pop": 42948
+    },
+    {
+     "key": "cd:6",
+     "pop": 30320
+    },
+    {
+     "key": "cd:4",
+     "pop": 12628
+    }
+   ]
+  },
+  "sldl:48b": {
+   "layer": "sldl",
+   "district": "48B",
+   "pop": 42903,
+   "bbox": [
+    -93.65207,
+    44.78211,
+    -93.52016,
+    44.89152
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42903
+    },
+    {
+     "key": "sldu:48",
+     "pop": 42903
+    }
+   ]
+  },
+  "sldl:36b": {
+   "layer": "sldl",
+   "district": "36B",
+   "pop": 42879,
+   "bbox": [
+    -93.10653,
+    45.03405,
+    -92.96959,
+    45.1019
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42879
+    },
+    {
+     "key": "sldu:36",
+     "pop": 42879
+    }
+   ]
+  },
+  "sldl:24b": {
+   "layer": "sldl",
+   "district": "24B",
+   "pop": 42322,
+   "bbox": [
+    -92.5583,
+    43.96374,
+    -92.38892,
+    44.0436
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42322
+    },
+    {
+     "key": "sldu:24",
+     "pop": 42322
+    }
+   ]
+  },
+  "sldl:12b": {
+   "layer": "sldl",
+   "district": "12B",
+   "pop": 43008,
+   "bbox": [
+    -95.51035,
+    45.58549,
+    -94.7669,
+    46.10751
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 43008
+    },
+    {
+     "key": "sldu:12",
+     "pop": 43008
+    }
+   ]
+  },
+  "sldl:1a": {
+   "layer": "sldl",
+   "district": "1A",
+   "pop": 42570,
+   "bbox": [
+    -97.23909,
+    47.93397,
+    -95.08979,
+    49.00045
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42570
+    },
+    {
+     "key": "sldu:1",
+     "pop": 42570
+    }
+   ]
+  },
+  "sldl:29a": {
+   "layer": "sldl",
+   "district": "29A",
+   "pop": 43001,
+   "bbox": [
+    -94.38347,
+    44.97765,
+    -93.71734,
+    45.42367
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:29",
+     "pop": 43001
+    },
+    {
+     "key": "cd:6",
+     "pop": 41559
+    },
+    {
+     "key": "cd:7",
+     "pop": 1442
+    }
+   ]
+  },
+  "sldl:52a": {
+   "layer": "sldl",
+   "district": "52A",
+   "pop": 42994,
+   "bbox": [
+    -93.29001,
+    44.75945,
+    -93.14563,
+    44.862
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42994
+    },
+    {
+     "key": "sldu:52",
+     "pop": 42994
+    }
+   ]
+  },
+  "sldl:52b": {
+   "layer": "sldl",
+   "district": "52B",
+   "pop": 42343,
+   "bbox": [
+    -93.20135,
+    44.7899,
+    -93.10555,
+    44.90888
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42343
+    },
+    {
+     "key": "sldu:52",
+     "pop": 42343
+    }
+   ]
+  },
+  "sldl:40b": {
+   "layer": "sldl",
+   "district": "40B",
+   "pop": 42183,
+   "bbox": [
+    -93.20811,
+    44.99175,
+    -93.10587,
+    45.08957
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42183
+    },
+    {
+     "key": "sldu:40",
+     "pop": 42183
+    }
+   ]
+  },
+  "sldl:37b": {
+   "layer": "sldl",
+   "district": "37B",
+   "pop": 42986,
+   "bbox": [
+    -93.50509,
+    45.0647,
+    -93.40069,
+    45.15273
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42986
+    },
+    {
+     "key": "sldu:37",
+     "pop": 42986
+    }
+   ]
+  },
+  "sldl:25b": {
+   "layer": "sldl",
+   "district": "25B",
+   "pop": 42321,
+   "bbox": [
+    -92.50002,
+    43.99998,
+    -92.41401,
+    44.06849
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42321
+    },
+    {
+     "key": "sldu:25",
+     "pop": 42321
+    }
+   ]
+  },
+  "sldl:65a": {
+   "layer": "sldl",
+   "district": "65A",
+   "pop": 42216,
+   "bbox": [
+    -93.16699,
+    44.94739,
+    -93.08875,
+    44.97739
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42216
+    },
+    {
+     "key": "sldu:65",
+     "pop": 42216
+    }
+   ]
+  },
+  "sldl:26a": {
+   "layer": "sldl",
+   "district": "26A",
+   "pop": 42169,
+   "bbox": [
+    -91.95952,
+    43.84682,
+    -91.28414,
+    44.18247
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42169
+    },
+    {
+     "key": "sldu:26",
+     "pop": 42169
+    }
+   ]
+  },
+  "sldl:64a": {
+   "layer": "sldl",
+   "district": "64A",
+   "pop": 42372,
+   "bbox": [
+    -93.20779,
+    44.92693,
+    -93.10432,
+    44.95967
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42372
+    },
+    {
+     "key": "sldu:64",
+     "pop": 42372
+    }
+   ]
+  },
+  "sldl:12a": {
+   "layer": "sldl",
+   "district": "12A",
+   "pop": 42355,
+   "bbox": [
+    -96.83545,
+    45.1512,
+    -94.63892,
+    45.77395
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42355
+    },
+    {
+     "key": "sldu:12",
+     "pop": 42355
+    }
+   ]
+  },
+  "sldl:11b": {
+   "layer": "sldl",
+   "district": "11B",
+   "pop": 42604,
+   "bbox": [
+    -93.3895,
+    45.64385,
+    -92.29357,
+    46.33258
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42604
+    },
+    {
+     "key": "sldu:11",
+     "pop": 42604
+    }
+   ]
+  },
+  "sldl:43b": {
+   "layer": "sldl",
+   "district": "43B",
+   "pop": 42476,
+   "bbox": [
+    -93.42081,
+    44.96648,
+    -93.31837,
+    45.04237
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:43",
+     "pop": 42476
+    },
+    {
+     "key": "cd:5",
+     "pop": 39684
+    },
+    {
+     "key": "cd:3",
+     "pop": 2792
+    }
+   ]
+  },
+  "sldl:9a": {
+   "layer": "sldl",
+   "district": "9A",
+   "pop": 42345,
+   "bbox": [
+    -96.85683,
+    45.58522,
+    -95.75839,
+    46.71816
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42345
+    },
+    {
+     "key": "sldu:9",
+     "pop": 42345
+    }
+   ]
+  },
+  "sldl:43a": {
+   "layer": "sldl",
+   "district": "43A",
+   "pop": 42830,
+   "bbox": [
+    -93.40081,
+    45.00731,
+    -93.33835,
+    45.06574
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42830
+    },
+    {
+     "key": "sldu:43",
+     "pop": 42830
+    }
+   ]
+  },
+  "sldl:18a": {
+   "layer": "sldl",
+   "district": "18A",
+   "pop": 42815,
+   "bbox": [
+    -94.78671,
+    44.15395,
+    -93.88849,
+    44.45695
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:18",
+     "pop": 42815
+    },
+    {
+     "key": "cd:1",
+     "pop": 41630
+    },
+    {
+     "key": "cd:2",
+     "pop": 1185
+    }
+   ]
+  },
+  "sldl:6a": {
+   "layer": "sldl",
+   "district": "6A",
+   "pop": 42298,
+   "bbox": [
+    -94.40756,
+    46.2431,
+    -93.44392,
+    47.28247
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42298
+    },
+    {
+     "key": "sldu:6",
+     "pop": 42298
+    }
+   ]
+  },
+  "sldl:18b": {
+   "layer": "sldl",
+   "district": "18B",
+   "pop": 42684,
+   "bbox": [
+    -94.04559,
+    44.12295,
+    -93.86827,
+    44.18845
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42684
+    },
+    {
+     "key": "sldu:18",
+     "pop": 42684
+    }
+   ]
+  },
+  "sldl:6b": {
+   "layer": "sldl",
+   "district": "6B",
+   "pop": 42265,
+   "bbox": [
+    -94.34602,
+    46.24348,
+    -94.03178,
+    46.71849
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42265
+    },
+    {
+     "key": "sldu:6",
+     "pop": 42265
+    }
+   ]
+  },
+  "sldl:58b": {
+   "layer": "sldl",
+   "district": "58B",
+   "pop": 42505,
+   "bbox": [
+    -93.28169,
+    44.37032,
+    -92.73189,
+    44.77556
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:58",
+     "pop": 42505
+    },
+    {
+     "key": "cd:2",
+     "pop": 40320
+    },
+    {
+     "key": "cd:1",
+     "pop": 2185
+    }
+   ]
+  },
+  "sldl:20a": {
+   "layer": "sldl",
+   "district": "20A",
+   "pop": 42559,
+   "bbox": [
+    -92.9208,
+    44.27911,
+    -91.97023,
+    44.71434
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:20",
+     "pop": 42559
+    },
+    {
+     "key": "cd:1",
+     "pop": 41673
+    },
+    {
+     "key": "cd:2",
+     "pop": 886
+    }
+   ]
+  },
+  "sldl:20b": {
+   "layer": "sldl",
+   "district": "20B",
+   "pop": 42198,
+   "bbox": [
+    -92.79164,
+    43.84703,
+    -91.83876,
+    44.36992
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42198
+    },
+    {
+     "key": "sldu:20",
+     "pop": 42198
+    }
+   ]
+  },
+  "sldl:60b": {
+   "layer": "sldl",
+   "district": "60B",
+   "pop": 42169,
+   "bbox": [
+    -93.25669,
+    44.96001,
+    -93.20759,
+    44.99149
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42169
+    },
+    {
+     "key": "sldu:60",
+     "pop": 42169
+    }
+   ]
+  },
+  "sldl:29b": {
+   "layer": "sldl",
+   "district": "29B",
+   "pop": 42733,
+   "bbox": [
+    -94.02499,
+    45.13779,
+    -93.70424,
+    45.38881
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42733
+    },
+    {
+     "key": "sldu:29",
+     "pop": 42733
+    }
+   ]
+  },
+  "sldl:5a": {
+   "layer": "sldl",
+   "district": "5A",
+   "pop": 42553,
+   "bbox": [
+    -95.79612,
+    46.36867,
+    -94.32776,
+    47.23983
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:5",
+     "pop": 42553
+    },
+    {
+     "key": "cd:7",
+     "pop": 26878
+    },
+    {
+     "key": "cd:8",
+     "pop": 15675
+    }
+   ]
+  },
+  "sldl:17b": {
+   "layer": "sldl",
+   "district": "17B",
+   "pop": 42439,
+   "bbox": [
+    -94.62434,
+    44.45587,
+    -93.59426,
+    44.9788
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:17",
+     "pop": 42439
+    },
+    {
+     "key": "cd:6",
+     "pop": 21295
+    },
+    {
+     "key": "cd:7",
+     "pop": 21144
+    }
+   ]
+  },
+  "sldl:57a": {
+   "layer": "sldl",
+   "district": "57A",
+   "pop": 42321,
+   "bbox": [
+    -93.40047,
+    44.54372,
+    -93.15693,
+    44.71752
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42321
+    },
+    {
+     "key": "sldu:57",
+     "pop": 42321
+    }
+   ]
+  },
+  "sldl:45a": {
+   "layer": "sldl",
+   "district": "45A",
+   "pop": 42943,
+   "bbox": [
+    -93.76838,
+    44.89066,
+    -93.5224,
+    45.00056
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42943
+    },
+    {
+     "key": "sldu:45",
+     "pop": 42943
+    }
+   ]
+  },
+  "sldl:45b": {
+   "layer": "sldl",
+   "district": "45B",
+   "pop": 42996,
+   "bbox": [
+    -93.55829,
+    44.89799,
+    -93.39874,
+    44.98225
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42996
+    },
+    {
+     "key": "sldu:45",
+     "pop": 42996
+    }
+   ]
+  },
+  "sldl:4b": {
+   "layer": "sldl",
+   "district": "4B",
+   "pop": 42530,
+   "bbox": [
+    -96.84012,
+    46.62869,
+    -95.79041,
+    47.15181
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42530
+    },
+    {
+     "key": "sldu:4",
+     "pop": 42530
+    }
+   ]
+  },
+  "sldl:56a": {
+   "layer": "sldl",
+   "district": "56A",
+   "pop": 42750,
+   "bbox": [
+    -93.24834,
+    44.71703,
+    -93.15678,
+    44.77605
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42750
+    },
+    {
+     "key": "sldu:56",
+     "pop": 42750
+    }
+   ]
+  },
+  "sldl:21a": {
+   "layer": "sldl",
+   "district": "21A",
+   "pop": 42463,
+   "bbox": [
+    -96.45353,
+    43.5,
+    -94.85912,
+    44.63135
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:21",
+     "pop": 42463
+    },
+    {
+     "key": "cd:7",
+     "pop": 28824
+    },
+    {
+     "key": "cd:1",
+     "pop": 13639
+    }
+   ]
+  },
+  "sldl:33b": {
+   "layer": "sldl",
+   "district": "33B",
+   "pop": 42335,
+   "bbox": [
+    -93.01955,
+    44.99975,
+    -92.73953,
+    45.29693
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:33",
+     "pop": 42335
+    },
+    {
+     "key": "cd:4",
+     "pop": 28446
+    },
+    {
+     "key": "cd:8",
+     "pop": 13889
+    }
+   ]
+  },
+  "sldl:64b": {
+   "layer": "sldl",
+   "district": "64B",
+   "pop": 42650,
+   "bbox": [
+    -93.20136,
+    44.8874,
+    -93.11594,
+    44.9343
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42650
+    },
+    {
+     "key": "sldu:64",
+     "pop": 42650
+    }
+   ]
+  },
+  "sldl:21b": {
+   "layer": "sldl",
+   "district": "21B",
+   "pop": 42849,
+   "bbox": [
+    -95.8156,
+    43.49986,
+    -94.60094,
+    44.10899
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:21",
+     "pop": 42849
+    },
+    {
+     "key": "cd:1",
+     "pop": 36913
+    },
+    {
+     "key": "cd:7",
+     "pop": 5936
+    }
+   ]
+  },
+  "sldl:56b": {
+   "layer": "sldl",
+   "district": "56B",
+   "pop": 42333,
+   "bbox": [
+    -93.1878,
+    44.71736,
+    -93.03407,
+    44.79121
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42333
+    },
+    {
+     "key": "sldu:56",
+     "pop": 42333
+    }
+   ]
+  },
+  "sldl:44b": {
+   "layer": "sldl",
+   "district": "44B",
+   "pop": 42858,
+   "bbox": [
+    -93.01611,
+    44.94852,
+    -92.93384,
+    45.04689
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42858
+    },
+    {
+     "key": "sldu:44",
+     "pop": 42858
+    }
+   ]
+  },
+  "sldl:32a": {
+   "layer": "sldl",
+   "district": "32A",
+   "pop": 42983,
+   "bbox": [
+    -93.2662,
+    45.16808,
+    -93.01922,
+    45.32636
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42983
+    },
+    {
+     "key": "sldu:32",
+     "pop": 42983
+    }
+   ]
+  },
+  "sldl:39b": {
+   "layer": "sldl",
+   "district": "39B",
+   "pop": 42253,
+   "bbox": [
+    -93.27208,
+    45.00604,
+    -93.18263,
+    45.07537
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:39",
+     "pop": 42253
+    },
+    {
+     "key": "cd:5",
+     "pop": 26611
+    },
+    {
+     "key": "cd:4",
+     "pop": 15642
+    }
+   ]
+  },
+  "sldl:15a": {
+   "layer": "sldl",
+   "district": "15A",
+   "pop": 42474,
+   "bbox": [
+    -96.45295,
+    44.19497,
+    -95.36018,
+    45.26935
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42474
+    },
+    {
+     "key": "sldu:15",
+     "pop": 42474
+    }
+   ]
+  },
+  "sldl:3a": {
+   "layer": "sldl",
+   "district": "3A",
+   "pop": 42417,
+   "bbox": [
+    -94.43028,
+    46.79484,
+    -89.48339,
+    48.71194
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42417
+    },
+    {
+     "key": "sldu:3",
+     "pop": 42417
+    }
+   ]
+  },
+  "sldl:3b": {
+   "layer": "sldl",
+   "district": "3B",
+   "pop": 42337,
+   "bbox": [
+    -92.42907,
+    46.64924,
+    -91.64536,
+    47.4906
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42337
+    },
+    {
+     "key": "sldu:3",
+     "pop": 42337
+    }
+   ]
+  },
+  "sldl:55a": {
+   "layer": "sldl",
+   "district": "55A",
+   "pop": 42831,
+   "bbox": [
+    -93.39902,
+    44.71604,
+    -93.28852,
+    44.80013
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42831
+    },
+    {
+     "key": "sldu:55",
+     "pop": 42831
+    }
+   ]
+  },
+  "sldl:31a": {
+   "layer": "sldl",
+   "district": "31A",
+   "pop": 42896,
+   "bbox": [
+    -93.51265,
+    45.21228,
+    -93.30604,
+    45.29935
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:31",
+     "pop": 42896
+    },
+    {
+     "key": "cd:6",
+     "pop": 41386
+    },
+    {
+     "key": "cd:3",
+     "pop": 1510
+    }
+   ]
+  },
+  "sldl:31b": {
+   "layer": "sldl",
+   "district": "31B",
+   "pop": 42967,
+   "bbox": [
+    -93.37767,
+    45.23328,
+    -93.01841,
+    45.47137
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:31",
+     "pop": 42967
+    },
+    {
+     "key": "cd:6",
+     "pop": 40855
+    },
+    {
+     "key": "cd:8",
+     "pop": 2112
+    }
+   ]
+  },
+  "sldl:16a": {
+   "layer": "sldl",
+   "district": "16A",
+   "pop": 42670,
+   "bbox": [
+    -96.03699,
+    44.45603,
+    -94.38325,
+    45.32663
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42670
+    },
+    {
+     "key": "sldu:16",
+     "pop": 42670
+    }
+   ]
+  },
+  "sldl:4a": {
+   "layer": "sldl",
+   "district": "4A",
+   "pop": 42472,
+   "bbox": [
+    -96.80016,
+    46.81195,
+    -96.64771,
+    46.89077
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42472
+    },
+    {
+     "key": "sldu:4",
+     "pop": 42472
+    }
+   ]
+  },
+  "sldl:16b": {
+   "layer": "sldl",
+   "district": "16B",
+   "pop": 42613,
+   "bbox": [
+    -95.25537,
+    44.89125,
+    -94.7569,
+    45.41299
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42613
+    },
+    {
+     "key": "sldu:16",
+     "pop": 42613
+    }
+   ]
+  },
+  "sldl:27a": {
+   "layer": "sldl",
+   "district": "27A",
+   "pop": 42685,
+   "bbox": [
+    -94.15428,
+    45.29485,
+    -93.63269,
+    45.56023
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42685
+    },
+    {
+     "key": "sldu:27",
+     "pop": 42685
+    }
+   ]
+  },
+  "sldl:33a": {
+   "layer": "sldl",
+   "district": "33A",
+   "pop": 42707,
+   "bbox": [
+    -93.02052,
+    45.0321,
+    -92.86348,
+    45.2864
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:33",
+     "pop": 42707
+    },
+    {
+     "key": "cd:8",
+     "pop": 31502
+    },
+    {
+     "key": "cd:4",
+     "pop": 11205
+    }
+   ]
+  },
+  "sldl:48a": {
+   "layer": "sldl",
+   "district": "48A",
+   "pop": 42724,
+   "bbox": [
+    -93.91483,
+    44.71687,
+    -93.59426,
+    44.89541
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42724
+    },
+    {
+     "key": "sldu:48",
+     "pop": 42724
+    }
+   ]
+  },
+  "sldl:49b": {
+   "layer": "sldl",
+   "district": "49B",
+   "pop": 42719,
+   "bbox": [
+    -93.52093,
+    44.79873,
+    -93.39836,
+    44.8906
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42719
+    },
+    {
+     "key": "sldu:49",
+     "pop": 42719
+    }
+   ]
+  },
+  "sldl:30b": {
+   "layer": "sldl",
+   "district": "30B",
+   "pop": 42801,
+   "bbox": [
+    -93.63528,
+    45.22231,
+    -93.3473,
+    45.38586
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42801
+    },
+    {
+     "key": "sldu:30",
+     "pop": 42801
+    }
+   ]
+  },
+  "sldl:53b": {
+   "layer": "sldl",
+   "district": "53B",
+   "pop": 42507,
+   "bbox": [
+    -93.06539,
+    44.78969,
+    -92.93458,
+    44.91953
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42507
+    },
+    {
+     "key": "sldu:53",
+     "pop": 42507
+    }
+   ]
+  },
+  "sldl:10b": {
+   "layer": "sldl",
+   "district": "10B",
+   "pop": 42869,
+   "bbox": [
+    -94.64408,
+    45.55923,
+    -93.38876,
+    45.98688
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:10",
+     "pop": 42869
+    },
+    {
+     "key": "cd:6",
+     "pop": 16255
+    },
+    {
+     "key": "cd:8",
+     "pop": 14661
+    },
+    {
+     "key": "cd:7",
+     "pop": 11953
+    }
+   ]
+  },
+  "sldl:14b": {
+   "layer": "sldl",
+   "district": "14B",
+   "pop": 42432,
+   "bbox": [
+    -94.26129,
+    45.52281,
+    -94.00688,
+    45.64774
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42432
+    },
+    {
+     "key": "sldu:14",
+     "pop": 42432
+    }
+   ]
+  },
+  "sldl:32b": {
+   "layer": "sldl",
+   "district": "32B",
+   "pop": 42976,
+   "bbox": [
+    -93.26689,
+    45.12422,
+    -93.14257,
+    45.19697
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42976
+    },
+    {
+     "key": "sldu:32",
+     "pop": 42976
+    }
+   ]
+  },
+  "sldl:35a": {
+   "layer": "sldl",
+   "district": "35A",
+   "pop": 42891,
+   "bbox": [
+    -93.42641,
+    45.14152,
+    -93.3042,
+    45.24109
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42891
+    },
+    {
+     "key": "sldu:35",
+     "pop": 42891
+    }
+   ]
+  },
+  "sldl:13b": {
+   "layer": "sldl",
+   "district": "13B",
+   "pop": 42977,
+   "bbox": [
+    -94.51337,
+    45.57352,
+    -94.11719,
+    45.77529
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:13",
+     "pop": 42977
+    },
+    {
+     "key": "cd:6",
+     "pop": 36384
+    },
+    {
+     "key": "cd:7",
+     "pop": 6593
+    }
+   ]
+  },
+  "sldl:1b": {
+   "layer": "sldl",
+   "district": "1B",
+   "pop": 42605,
+   "bbox": [
+    -97.14751,
+    47.06388,
+    -95.55329,
+    48.17411
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42605
+    },
+    {
+     "key": "sldu:1",
+     "pop": 42605
+    }
+   ]
+  },
+  "sldl:53a": {
+   "layer": "sldl",
+   "district": "53A",
+   "pop": 42491,
+   "bbox": [
+    -93.15303,
+    44.77556,
+    -93.00471,
+    44.91975
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42491
+    },
+    {
+     "key": "sldu:53",
+     "pop": 42491
+    }
+   ]
+  },
+  "sldl:65b": {
+   "layer": "sldl",
+   "district": "65B",
+   "pop": 42608,
+   "bbox": [
+    -93.12863,
+    44.90329,
+    -93.04945,
+    44.96674
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:65",
+     "pop": 42608
+    },
+    {
+     "key": "cd:4",
+     "pop": 31662
+    },
+    {
+     "key": "cd:2",
+     "pop": 10946
+    }
+   ]
+  },
+  "sldl:41a": {
+   "layer": "sldl",
+   "district": "41A",
+   "pop": 42360,
+   "bbox": [
+    -92.98401,
+    44.83065,
+    -92.75064,
+    45.10845
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:41",
+     "pop": 42360
+    },
+    {
+     "key": "cd:4",
+     "pop": 26384
+    },
+    {
+     "key": "cd:2",
+     "pop": 15976
+    }
+   ]
+  },
+  "sldl:41b": {
+   "layer": "sldl",
+   "district": "41B",
+   "pop": 42393,
+   "bbox": [
+    -93.02152,
+    44.70234,
+    -92.7656,
+    44.862
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42393
+    },
+    {
+     "key": "sldu:41",
+     "pop": 42393
+    }
+   ]
+  },
+  "sldl:14a": {
+   "layer": "sldl",
+   "district": "14A",
+   "pop": 42844,
+   "bbox": [
+    -94.31892,
+    45.41298,
+    -94.10035,
+    45.56769
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42844
+    },
+    {
+     "key": "sldu:14",
+     "pop": 42844
+    }
+   ]
+  },
+  "sldl:2b": {
+   "layer": "sldl",
+   "district": "2B",
+   "pop": 42590,
+   "bbox": [
+    -96.06772,
+    46.97615,
+    -93.69829,
+    48.01992
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42590
+    },
+    {
+     "key": "sldu:2",
+     "pop": 42590
+    }
+   ]
+  },
+  "sldl:62b": {
+   "layer": "sldl",
+   "district": "62B",
+   "pop": 42527,
+   "bbox": [
+    -93.28832,
+    44.91604,
+    -93.23835,
+    44.96603
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42527
+    },
+    {
+     "key": "sldu:62",
+     "pop": 42527
+    }
+   ]
+  },
+  "sldl:62a": {
+   "layer": "sldl",
+   "district": "62A",
+   "pop": 42714,
+   "bbox": [
+    -93.28827,
+    44.93046,
+    -93.26254,
+    44.96684
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42714
+    },
+    {
+     "key": "sldu:62",
+     "pop": 42714
+    }
+   ]
+  },
+  "sldl:54a": {
+   "layer": "sldl",
+   "district": "54A",
+   "pop": 42992,
+   "bbox": [
+    -93.59984,
+    44.7177,
+    -93.39857,
+    44.81307
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42992
+    },
+    {
+     "key": "sldu:54",
+     "pop": 42992
+    }
+   ]
+  },
+  "sldl:54b": {
+   "layer": "sldl",
+   "district": "54B",
+   "pop": 42898,
+   "bbox": [
+    -93.6547,
+    44.63049,
+    -93.37966,
+    44.78315
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42898
+    },
+    {
+     "key": "sldu:54",
+     "pop": 42898
+    }
+   ]
+  },
+  "sldl:63b": {
+   "layer": "sldl",
+   "district": "63B",
+   "pop": 42292,
+   "bbox": [
+    -93.31882,
+    44.89044,
+    -93.19404,
+    44.92513
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42292
+    },
+    {
+     "key": "sldu:63",
+     "pop": 42292
+    }
+   ]
+  },
+  "sldl:8b": {
+   "layer": "sldl",
+   "district": "8B",
+   "pop": 42602,
+   "bbox": [
+    -92.21186,
+    46.71301,
+    -91.79453,
+    46.92875
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42602
+    },
+    {
+     "key": "sldu:8",
+     "pop": 42602
+    }
+   ]
+  },
+  "sldl:51b": {
+   "layer": "sldl",
+   "district": "51B",
+   "pop": 42947,
+   "bbox": [
+    -93.33159,
+    44.7911,
+    -93.19728,
+    44.86207
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42947
+    },
+    {
+     "key": "sldu:51",
+     "pop": 42947
+    }
+   ]
+  },
+  "sldl:24a": {
+   "layer": "sldl",
+   "district": "24A",
+   "pop": 42300,
+   "bbox": [
+    -93.04597,
+    43.83385,
+    -92.43841,
+    44.19693
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42300
+    },
+    {
+     "key": "sldu:24",
+     "pop": 42300
+    }
+   ]
+  },
+  "sldl:23a": {
+   "layer": "sldl",
+   "district": "23A",
+   "pop": 42672,
+   "bbox": [
+    -94.12815,
+    43.49947,
+    -93.04545,
+    44.02296
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42672
+    },
+    {
+     "key": "sldu:23",
+     "pop": 42672
+    }
+   ]
+  },
+  "sldl:13a": {
+   "layer": "sldl",
+   "district": "13A",
+   "pop": 42773,
+   "bbox": [
+    -94.76323,
+    45.2823,
+    -94.04802,
+    45.77442
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:13",
+     "pop": 42773
+    },
+    {
+     "key": "cd:7",
+     "pop": 28656
+    },
+    {
+     "key": "cd:6",
+     "pop": 14117
+    }
+   ]
+  },
+  "sldl:42a": {
+   "layer": "sldl",
+   "district": "42A",
+   "pop": 42509,
+   "bbox": [
+    -93.52265,
+    44.97821,
+    -93.41847,
+    45.08459
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42509
+    },
+    {
+     "key": "sldu:42",
+     "pop": 42509
+    }
+   ]
+  },
+  "sldl:42b": {
+   "layer": "sldl",
+   "district": "42B",
+   "pop": 42547,
+   "bbox": [
+    -93.48184,
+    44.98793,
+    -93.40064,
+    45.06639
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42547
+    },
+    {
+     "key": "sldu:42",
+     "pop": 42547
+    }
+   ]
+  },
+  "sldl:38b": {
+   "layer": "sldl",
+   "district": "38B",
+   "pop": 42883,
+   "bbox": [
+    -93.35642,
+    45.04033,
+    -93.28068,
+    45.09954
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:38",
+     "pop": 42883
+    },
+    {
+     "key": "cd:5",
+     "pop": 33782
+    },
+    {
+     "key": "cd:3",
+     "pop": 9101
+    }
+   ]
+  },
+  "sldl:27b": {
+   "layer": "sldl",
+   "district": "27B",
+   "pop": 42907,
+   "bbox": [
+    -93.7605,
+    45.37792,
+    -93.26033,
+    45.64926
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:27",
+     "pop": 42907
+    },
+    {
+     "key": "cd:6",
+     "pop": 30645
+    },
+    {
+     "key": "cd:8",
+     "pop": 12262
+    }
+   ]
+  },
+  "sldl:39a": {
+   "layer": "sldl",
+   "district": "39A",
+   "pop": 42355,
+   "bbox": [
+    -93.29609,
+    45.03536,
+    -93.22113,
+    45.12476
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:39",
+     "pop": 42355
+    },
+    {
+     "key": "cd:5",
+     "pop": 42150
+    },
+    {
+     "key": "cd:4",
+     "pop": 205
+    }
+   ]
+  },
+  "sldl:60a": {
+   "layer": "sldl",
+   "district": "60A",
+   "pop": 42800,
+   "bbox": [
+    -93.28343,
+    44.98782,
+    -93.20759,
+    45.03567
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42800
+    },
+    {
+     "key": "sldu:60",
+     "pop": 42800
+    }
+   ]
+  },
+  "sldl:67a": {
+   "layer": "sldl",
+   "district": "67A",
+   "pop": 42235,
+   "bbox": [
+    -93.07609,
+    44.96298,
+    -93.00506,
+    44.99199
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42235
+    },
+    {
+     "key": "sldu:67",
+     "pop": 42235
+    }
+   ]
+  },
+  "sldl:15b": {
+   "layer": "sldl",
+   "district": "15B",
+   "pop": 42391,
+   "bbox": [
+    -95.59482,
+    44.10773,
+    -94.12815,
+    44.69854
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:15",
+     "pop": 42391
+    },
+    {
+     "key": "cd:1",
+     "pop": 23053
+    },
+    {
+     "key": "cd:7",
+     "pop": 19338
+    }
+   ]
+  },
+  "sldl:55b": {
+   "layer": "sldl",
+   "district": "55B",
+   "pop": 42359,
+   "bbox": [
+    -93.32865,
+    44.71745,
+    -93.24731,
+    44.79034
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42359
+    },
+    {
+     "key": "sldu:55",
+     "pop": 42359
+    }
+   ]
+  },
+  "sldl:7b": {
+   "layer": "sldl",
+   "district": "7B",
+   "pop": 42258,
+   "bbox": [
+    -93.08373,
+    46.85123,
+    -92.17453,
+    47.80809
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42258
+    },
+    {
+     "key": "sldu:7",
+     "pop": 42258
+    }
+   ]
+  },
+  "sldl:9b": {
+   "layer": "sldl",
+   "district": "9B",
+   "pop": 42328,
+   "bbox": [
+    -96.04803,
+    45.75894,
+    -95.14575,
+    46.71773
+   ],
+   "overlaps": [
+    {
+     "key": "cd:7",
+     "pop": 42328
+    },
+    {
+     "key": "sldu:9",
+     "pop": 42328
+    }
+   ]
+  },
+  "sldl:28b": {
+   "layer": "sldl",
+   "district": "28B",
+   "pop": 42233,
+   "bbox": [
+    -93.02169,
+    45.29604,
+    -92.64651,
+    45.64415
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42233
+    },
+    {
+     "key": "sldu:28",
+     "pop": 42233
+    }
+   ]
+  },
+  "sldl:2a": {
+   "layer": "sldl",
+   "district": "2A",
+   "pop": 42871,
+   "bbox": [
+    -95.60286,
+    47.40985,
+    -94.42317,
+    49.38448
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42871
+    },
+    {
+     "key": "sldu:2",
+     "pop": 42871
+    }
+   ]
+  },
+  "sldl:30a": {
+   "layer": "sldl",
+   "district": "30A",
+   "pop": 42966,
+   "bbox": [
+    -93.89058,
+    45.07586,
+    -93.55231,
+    45.30506
+   ],
+   "overlaps": [
+    {
+     "key": "cd:6",
+     "pop": 42966
+    },
+    {
+     "key": "sldu:30",
+     "pop": 42966
+    }
+   ]
+  },
+  "sldl:67b": {
+   "layer": "sldl",
+   "district": "67B",
+   "pop": 42814,
+   "bbox": [
+    -93.0789,
+    44.89075,
+    -93.00433,
+    44.9692
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42814
+    },
+    {
+     "key": "sldu:67",
+     "pop": 42814
+    }
+   ]
+  },
+  "sldl:28a": {
+   "layer": "sldl",
+   "district": "28A",
+   "pop": 42711,
+   "bbox": [
+    -93.5128,
+    45.41177,
+    -92.93971,
+    45.73094
+   ],
+   "overlaps": [
+    {
+     "key": "cd:8",
+     "pop": 42711
+    },
+    {
+     "key": "sldu:28",
+     "pop": 42711
+    }
+   ]
+  },
+  "sldl:63a": {
+   "layer": "sldl",
+   "district": "63A",
+   "pop": 42332,
+   "bbox": [
+    -93.25203,
+    44.91631,
+    -93.19979,
+    44.96725
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42332
+    },
+    {
+     "key": "sldu:63",
+     "pop": 42332
+    }
+   ]
+  },
+  "sldl:37a": {
+   "layer": "sldl",
+   "district": "37A",
+   "pop": 42851,
+   "bbox": [
+    -93.76753,
+    44.97702,
+    -93.47452,
+    45.15291
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42851
+    },
+    {
+     "key": "sldu:37",
+     "pop": 42851
+    }
+   ]
+  },
+  "sldl:25a": {
+   "layer": "sldl",
+   "district": "25A",
+   "pop": 42869,
+   "bbox": [
+    -92.57335,
+    44.02098,
+    -92.31891,
+    44.19487
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42869
+    },
+    {
+     "key": "sldu:25",
+     "pop": 42869
+    }
+   ]
+  },
+  "sldl:61a": {
+   "layer": "sldl",
+   "district": "61A",
+   "pop": 42219,
+   "bbox": [
+    -93.3289,
+    44.94847,
+    -93.25304,
+    44.98204
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42219
+    },
+    {
+     "key": "sldu:61",
+     "pop": 42219
+    }
+   ]
+  },
+  "sldl:49a": {
+   "layer": "sldl",
+   "district": "49A",
+   "pop": 42628,
+   "bbox": [
+    -93.52335,
+    44.85836,
+    -93.39951,
+    44.93175
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42628
+    },
+    {
+     "key": "sldu:49",
+     "pop": 42628
+    }
+   ]
+  },
+  "sldl:5b": {
+   "layer": "sldl",
+   "district": "5B",
+   "pop": 42849,
+   "bbox": [
+    -95.15591,
+    45.77342,
+    -94.32729,
+    46.6416
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:5",
+     "pop": 42849
+    },
+    {
+     "key": "cd:7",
+     "pop": 37733
+    },
+    {
+     "key": "cd:8",
+     "pop": 5116
+    }
+   ]
+  },
+  "sldl:22b": {
+   "layer": "sldl",
+   "district": "22B",
+   "pop": 42297,
+   "bbox": [
+    -94.05797,
+    44.02211,
+    -93.40227,
+    44.69621
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:22",
+     "pop": 42297
+    },
+    {
+     "key": "cd:2",
+     "pop": 37483
+    },
+    {
+     "key": "cd:1",
+     "pop": 4814
+    }
+   ]
+  },
+  "sldl:59a": {
+   "layer": "sldl",
+   "district": "59A",
+   "pop": 42430,
+   "bbox": [
+    -93.32323,
+    44.99899,
+    -93.27442,
+    45.05125
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42430
+    },
+    {
+     "key": "sldu:59",
+     "pop": 42430
+    }
+   ]
+  },
+  "sldl:26b": {
+   "layer": "sldl",
+   "district": "26B",
+   "pop": 42834,
+   "bbox": [
+    -92.56977,
+    43.50024,
+    -91.21729,
+    43.84828
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42834
+    },
+    {
+     "key": "sldu:26",
+     "pop": 42834
+    }
+   ]
+  },
+  "sldl:57b": {
+   "layer": "sldl",
+   "district": "57B",
+   "pop": 42406,
+   "bbox": [
+    -93.28821,
+    44.67359,
+    -93.15649,
+    44.71753
+   ],
+   "overlaps": [
+    {
+     "key": "cd:2",
+     "pop": 42406
+    },
+    {
+     "key": "sldu:57",
+     "pop": 42406
+    }
+   ]
+  },
+  "sldl:61b": {
+   "layer": "sldl",
+   "district": "61B",
+   "pop": 42825,
+   "bbox": [
+    -93.32916,
+    44.89434,
+    -93.28807,
+    44.95195
+   ],
+   "overlaps": [
+    {
+     "key": "cd:5",
+     "pop": 42825
+    },
+    {
+     "key": "sldu:61",
+     "pop": 42825
+    }
+   ]
+  },
+  "sldl:23b": {
+   "layer": "sldl",
+   "district": "23B",
+   "pop": 42316,
+   "bbox": [
+    -93.28948,
+    43.49936,
+    -92.55945,
+    43.93567
+   ],
+   "overlaps": [
+    {
+     "key": "cd:1",
+     "pop": 42316
+    },
+    {
+     "key": "sldu:23",
+     "pop": 42316
+    }
+   ]
+  },
+  "sldl:44a": {
+   "layer": "sldl",
+   "district": "44A",
+   "pop": 42173,
+   "bbox": [
+    -93.10629,
+    44.97758,
+    -92.9847,
+    45.04315
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42173
+    },
+    {
+     "key": "sldu:44",
+     "pop": 42173
+    }
+   ]
+  },
+  "sldl:38a": {
+   "layer": "sldl",
+   "district": "38A",
+   "pop": 42860,
+   "bbox": [
+    -93.41361,
+    45.06559,
+    -93.3359,
+    45.12362
+   ],
+   "overlaps": [
+    {
+     "key": "cd:3",
+     "pop": 42860
+    },
+    {
+     "key": "sldu:38",
+     "pop": 42860
+    }
+   ]
+  },
+  "sldl:17a": {
+   "layer": "sldl",
+   "district": "17A",
+   "pop": 42387,
+   "bbox": [
+    -94.62949,
+    44.54233,
+    -94.09105,
+    45.23896
+   ],
+   "overlaps": [
+    {
+     "key": "sldu:17",
+     "pop": 42387
+    },
+    {
+     "key": "cd:7",
+     "pop": 37233
+    },
+    {
+     "key": "cd:6",
+     "pop": 5154
+    }
+   ]
+  },
+  "sldl:40a": {
+   "layer": "sldl",
+   "district": "40A",
+   "pop": 42860,
+   "bbox": [
+    -93.22797,
+    45.03575,
+    -93.10686,
+    45.12453
+   ],
+   "overlaps": [
+    {
+     "key": "cd:4",
+     "pop": 42860
+    },
+    {
+     "key": "sldu:40",
+     "pop": 42860
+    }
+   ]
+  }
+ }
+}

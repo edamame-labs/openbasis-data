@@ -2,7 +2,9 @@
 
 Open data on U.S. elected officials, state by state, and on how their districts overlap. It covers members of Congress, state legislators, statewide executives, and selected city councils.
 
-**Currently published: California, Maryland, New Hampshire, Texas.** A state is added once its data has been checked against the legislature's and Congress's official rosters (seat counts, vacancies, district matching). More states follow as each is reviewed.
+**Coverage: all 50 states.** Federal officials, state legislators, governors and available statewide executives are included nationwide. City coverage remains limited to San Francisco, Oakland and San Jose.
+
+Each state has a quality record in [`data/coverage.json`](data/coverage.json). The national expansion passes automated checks; this does **not** mean every state has had a fresh manual roster review. California, Maryland, New Hampshire and Texas retain their historical review dates. Seat shortfalls remain unconfirmed until checked against the chamber's own roster.
 
 Every record links back to the public source it came from, and the methodology below explains how the derived numbers (district overlaps) are computed. The data powers OpenBasis, and you're free to use it for anything else too (see [License](#license)).
 
@@ -11,7 +13,8 @@ Every record links back to the public source it came from, and the methodology b
 | File | What it is |
 |---|---|
 | [`data/officials.json`](data/officials.json) | Every official, with contact info, cross-reference IDs, and the source of each record |
-| [`data/officials.csv`](data/officials.csv) | The same as a flat table |
+| [`data/officials.csv`](data/officials.csv) | A flat export of the main directory fields; includes `state`, `seat` and `voting` |
+| [`data/coverage.json`](data/coverage.json) | Per-state validation status, findings, unmatched officials, seat shortfalls, population differences and source versions |
 | [`data/states/index.json`](data/states/index.json) | One summary row per state: population, block count, and district count per layer |
 | `data/states/<st>/districts.json` | The state's district layers. Each district has its 2020 population and the districts in other layers it shares residents with |
 | `data/states/<st>/overlaps.csv` | The state's overlaps as a flat table: one row per pair of districts |
@@ -78,6 +81,22 @@ Overlap is measured in **people, not area**. For every populated 2020 Census blo
 
 Overlaps are computed from TIGERweb geometry at about 10 m precision. The files under `boundaries/` are for display only: they come from Census cartographic boundary files, which are clipped to the shoreline. The 2027 congressional layer has no cartographic file yet, so its display boundaries are clipped to the 119th Congress outline instead. All layers are simplified with [mapshaper](https://github.com/mbloch/mapshaper) using topology-preserving simplification, so neighboring districts still share edges.
 
+## Quality and review status
+
+`data/coverage.json` is the machine-readable quality report for this snapshot:
+
+- `collected`: collected data has unresolved automated errors. The publication gate rejects this status.
+- `auto-validated`: automated checks passed. Warnings, including apparent vacancies, still require official-source review.
+- `reviewed`: automated checks passed and a historical manual-review date exists. `reviewedAt` is that historical date, not a claim that the current snapshot was manually reviewed again.
+
+Checks compare each state's House and legislative member counts to independent chamber-size references, require two U.S. senators and one governor, match officials to analysis districts, compare display and analysis district keys, and verify symmetric population overlaps. Every statewide layer is compared independently with the state's **2020 resident population**, rather than only with another computed layer. Population differences up to 0.1% are warnings; larger differences fail. Unmatched geographic members over 10% fail unless an explicitly documented exception applies. Smaller mismatches remain visible as warnings.
+
+The report includes `inputSha256`, a fingerprint of the exact officials, CSV, geometry and index files checked; changing any input requires a new report before publication.
+
+Each layer's report lists unmatched officials and districts without matched officials. `seats[].unconfirmedShortfall` is a count requiring investigation, **not** a confirmed vacancy count. Non-voting Maine tribal representatives are excluded from voting-seat totals and kept in the directory. Citywide council members are reported separately from ward-based members.
+
+The report records official-data and geometry generation times separately, independent Census/NCSL reference URLs, geometry vintages and analysis endpoints. Congressional `cd120` reflects the Census January 1, 2026 vintage and may omit later changes. Display state-legislative boundaries use GENZ2024; mismatches with analysis boundaries fail validation.
+
 ## Known limitations
 
 - **2027 congressional maps.** `cd` is the 119th Congress map that current members represent. `cd120`, present only for states whose lines changed, is the map used in the November 3, 2026 election (California's comes from Proposition 50), effective January 3, 2027. Its seats have no officials attached until the winners are seated.
@@ -85,6 +104,10 @@ Overlaps are computed from TIGERweb geometry at about 10 m precision. The files 
 - **Hand-maintained seeds.** The Oakland and San Jose rosters are hand-maintained, and each file records the date it was last checked against the city site.
 - **SF in CI.** sf.gov blocks GitHub Actions, so the weekly refresh carries the SF supervisor roster forward. It is refreshed whenever the pipeline runs from an ordinary network.
 - **Vacancies.** Empty seats appear as districts with no official.
+- **Idaho House positions.** `district` is the shared geographic district; `seat` preserves the A/B position from the upstream district label. These are not separate geographic subdistricts.
+- **Maine tribal representatives.** Non-voting representatives are included with `voting: false` and office `Non-voting Tribal Representative`. They represent tribal communities, have no Census legislative-district polygon, and do not count against the 151 voting seats.
+- **Unconfirmed shortfalls.** The nationwide roster may contain fewer members than statutory seats. Consult `coverage.json` and the chamber's own current roster before interpreting a gap as a vacancy.
+- **Small population gaps.** Block-point assignment against generalized analysis geometry may leave a small number of residents unassigned. These differences are recorded per layer in `coverage.json`; published layers must remain within the 0.1% validation threshold.
 - **Population vintage.** Population is from the 2020 Census, not current estimates.
 
 ## Corrections
@@ -96,7 +119,7 @@ Spotted something wrong? Open an issue or a pull request.
 
 ## Updates
 
-The data is refreshed weekly. A commit is made only when the data actually changes, so the git history doubles as a changelog of who held which office when. `runs` in `officials.json` records each source's result for the latest refresh.
+The data is refreshed weekly. A national quality gate runs before publication; a failed check prevents that refresh from replacing the published snapshot. A commit is made only when the data actually changes, so the git history doubles as a changelog of who held which office when. `runs` in `officials.json` records each source's result for the latest refresh.
 
 ## Schema
 
@@ -111,6 +134,8 @@ The data is refreshed weekly. A commit is made only when the data actually chang
 | `jurisdiction` | State name, or city for local offices |
 | `office`, `body`, `district` | e.g. `Delegate`, `Maryland House of Delegates`, `44B`. Congressional at-large seats use district `0` |
 | `party`, `gender` | When the source provides them |
+| `seat` | Position within a shared district, e.g. Idaho House `A` / `B`; `district` remains the geographic district number |
+| `voting` | `false` for Maine non-voting tribal representatives; otherwise omitted |
 | `email`, `phone`, `address`, `website`, `contactForm`, `photo`, `socials` | Public office contact info |
 | `termEnd` | ISO date, when known |
 | `ids` | Cross-references: `bioguide`, `fec`, `opensecrets`, `wikidata`, `govtrack`, `openstates` |
