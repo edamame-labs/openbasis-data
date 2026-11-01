@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T12:08:05.071Z",
+  "generatedAt": "2026-11-01T17:17:24.226Z",
   "officials": [
     {
       "id": "us-house-ak-nicholas-j-begich-iii",
@@ -239111,6 +239111,8 @@
     {
       "source": "sf.gov",
       "count": 11,
+      "error": "no supervisor cards found (page title: \"\")",
+      "carriedForward": true,
       "ids": [
         "ca-san-francisco-supervisor-connie-chan",
         "ca-san-francisco-supervisor-stephen-sherrill",
