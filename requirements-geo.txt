@@ -1,0 +1,4 @@
+# Analytical geometry runtime; Python >=3.12 for these tested binary releases.
+shapely==2.2.0
+pyproj==3.8.0
+numpy==2.5.4

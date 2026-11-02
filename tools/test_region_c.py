@@ -1,0 +1,99 @@
+"""Regression checks for current/terminated and multi-member roster semantics."""
+import json
+import unittest
+from unittest.mock import patch
+from regions import region_c as r
+
+
+class RegionC(unittest.TestCase):
+    def source(self, key):
+        return {'url':r.SOURCES[key][1], 'id':key}
+
+    def test_vermont_excludes_resigned_and_preserves_multi_member_district(self):
+        people=[dict(PersonTypeID='S',PersonID=str(i),FirstName='Given'+str(i),
+                     LastName='Family',NameSuffix='',District='Chittenden-Central District',
+                     Party='Democrat',TerminationReason='')for i in range(30)]
+        people.append(dict(people[0],PersonID='former',TerminationReason='Resigned October 27, 2025'))
+        rows=r.parse('vt-upper',json.dumps({'data':people}).encode(),self.source('vt-upper'))
+        self.assertEqual(len(rows),30)
+        self.assertEqual(len({row['id']for row in rows}),30)
+        self.assertEqual(len({row['district']for row in rows}),1)
+        self.assertFalse(any('former' in row.get('website','')for row in rows))
+
+    def test_name_suffix_remains_after_family_name(self):
+        self.assertEqual(r.given_first('Fowler, Hyland Buddy, Jr.'),'Hyland Buddy Fowler, Jr.')
+
+    def test_wrong_south_dakota_current_session_stops_import(self):
+        raw=json.dumps([{'CurrentSession':True,'SpecialSession':False,'SessionId':174,'Year':'2027'}]).encode()
+        with self.assertRaisesRegex(AssertionError,'session changed'):
+            r.parse('sd-session',raw,self.source('sd-session'))
+
+    def test_texas_inactive_placeholder_is_not_an_official(self):
+        members=[dict(member_name='Person, Current',id=1,member_bill_code=100,
+                      active=1,link='https://house.texas.gov/members/100'),
+                 dict(member_name='District 2',id=2,member_bill_code=200,
+                      active=0,link='https://house.texas.gov/members/200')]
+        import html
+        raw=('<get-members :members="'+html.escape(json.dumps(members),quote=True)+'"></get-members>').encode()
+        with patch.dict(r.LIMITS,{'TX':(31,1)}):
+            rows=r.parse('tx-lower',raw,self.source('tx-lower'))
+        self.assertEqual([row['name']for row in rows],['Current Person'])
+
+    def test_future_tennessee_general_assembly_is_rejected(self):
+        with self.assertRaisesRegex(AssertionError,'session changed'):
+            r.parse('tn-upper',b'<a href="?ga=115">Future assembly</a>',self.source('tn-upper'))
+
+    def test_missing_structure_never_publishes_empty_roster(self):
+        with self.assertRaises(AssertionError):
+            r.parse('wa-roster',b'<p>2025-26 biennium: temporarily unavailable</p>',self.source('wa-roster'))
+
+    def test_person_id_is_independent_of_district_and_non_government_links_omitted(self):
+        source=self.source('vt-upper')
+        a=r.make(source,'VT','upper','A','Same named district','1',website='https://campaign.example/')
+        b=r.make(source,'VT','upper','B','Same named district','2')
+        self.assertNotEqual(a['id'],b['id'])
+        self.assertNotIn('website',a)
+
+    @staticmethod
+    def ri_page(chamber, identity, active='Yes', next_page=False):
+        headers=['LinkTitle','first_name','middle_name','last_name','suffix','legislator_name',
+                 'chamber','city','political_party','district','email','leadership_role','phone',
+                 'legislator_bioURL','file_Name','ActiveFlag','ID']
+        values=['title','Given','','Family','','Given Family',chamber,'','Democrat','1','','','',
+                'https://www.rilegislature.gov/senators/person/Pages/Biography.aspx','',active,identity]
+        text=''.join('<div name="'+key+'" DisplayName="'+key+'"></div>'for key in headers)
+        text+='<table><tr iid="1,'+identity+'"><td></td>'+''.join('<td>'+v+'</td>'for v in values)+'</tr></table>'
+        if next_page:
+            text+='''<a onclick='RefreshPageTo(event, "/Lists/legislationInformation/AllItems.aspx?Paged=TRUE&amp;p_ID=30&amp;PageFirstRow=31");' href="javascript:"></a>'''
+        return text.encode()
+
+    def test_unknown_active_status_requires_review(self):
+        with self.assertRaisesRegex(AssertionError,'active flag'):
+            r.parse('ri-roster',self.ri_page('Senate','1','Unresolved'),self.source('ri-roster'))
+
+    def test_conflicting_single_member_district_occupants_are_rejected(self):
+        source=self.source('or-upper')
+        rows=[r.make(source,'OR','upper','Person '+str(i),str(i),'id'+str(i))for i in range(30)]
+        rows[-1]['district']=rows[0]['district']
+        with self.assertRaisesRegex(AssertionError,'Conflicting occupants'):
+            r.checked(rows,'OR','upper')
+
+    def test_rhode_island_active_flag_excludes_historical_entries(self):
+        raw=self.ri_page('Senate','1','No')
+        self.assertEqual(r.parse('ri-roster',raw,self.source('ri-roster')),[])
+
+    def test_rhode_island_collector_follows_next_page_and_references_each_response(self):
+        calls=[]
+        def fetch(key,publisher,url,offline=False):
+            calls.append(url)
+            raw=self.ri_page('Senate','1',next_page=True)if len(calls)==1 else self.ri_page('House','2')
+            return raw,dict(id=key,name=publisher,url=url)
+        with patch.dict(r.SOURCES,{'ri-roster':r.SOURCES['ri-roster']},clear=True),patch.dict(r.LIMITS,{'RI':(1,1)}):
+            rows,sources=r.collect(fetch)
+        self.assertEqual(len(calls),2)
+        self.assertEqual(len(rows),2)
+        self.assertNotEqual(rows[0]['sources'][0]['url'],rows[1]['sources'][0]['url'])
+        self.assertEqual(len(sources),2)
+
+
+if __name__=='__main__': unittest.main()

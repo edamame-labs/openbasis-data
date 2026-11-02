@@ -1,166 +1,114 @@
 # OpenBasis Data
 
-Open data on U.S. elected officials, state by state, and on how their districts overlap. It covers members of Congress, state legislators, statewide executives, and selected city councils.
+Primary government data for U.S. federal, state, and county jurisdictions. Schema version 2 replaces the former aggregated directory and district-overlap dataset.
 
-**Coverage: all 50 states.** Federal officials, state legislators, governors and available statewide executives are included nationwide. City coverage remains limited to San Francisco, Oakland and San Jose.
+## Included snapshot
 
-Each state has a quality record in [`data/coverage.json`](data/coverage.json). The national expansion passes automated checks; this does **not** mean every state has had a fresh manual roster review. California, Maryland, New Hampshire and Texas retain their historical review dates. Seat shortfalls remain unconfirmed until checked against the chamber's own roster.
+Counts below describe source retrievals on November 2, 2026 (UTC). `data/coverage.json` is the authority for subsequent refreshes.
 
-Every record links back to the public source it came from, and the methodology below explains how the derived numbers (district overlaps) are computed. The data powers OpenBasis, and you're free to use it for anything else too (see [License](#license)).
+| Dataset | Coverage | Direct publisher |
+| --- | --- | --- |
+| U.S. House members | 433 records, 50 states | [House Clerk XML](https://clerk.house.gov/xml/lists/MemberData.xml) |
+| U.S. senators | 100 records, 50 states | [Senate XML](https://www.senate.gov/general/contact_information/senators_cfm.xml) |
+| State legislators | 7,322 people across all 50 states and 99 chambers | Direct official legislative websites; see [regional source notes](#state-source-notes) |
+| Congressional and state legislative boundaries | Original Census polygons for all 50 states; Nebraska has no lower chamber | [Census Legislative service](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer) |
+| State geography | 50 states | [Census TIGERweb](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer) |
+| County and county-equivalent geography | 3,143 areas within the 50 states | Same Census service |
 
-## Files
+Counts describe the checked-in snapshot, not a guarantee that every occupied office is present. State executive officers and county officeholders are **not collected**. All state legislative chambers have a directly collected official roster; Nebraska has one unicameral chamber. `collected` means source extraction completed, not that a statutory seat shortfall is a verified vacancy. DC and territories are outside this release. County equivalents include entities such as independent cities and statistical areas; their inclusion does not establish a county government or supervisor district.
 
-| File | What it is |
-|---|---|
-| [`data/officials.json`](data/officials.json) | Every official, with contact info, cross-reference IDs, and the source of each record |
-| [`data/officials.csv`](data/officials.csv) | A flat export of the main directory fields; includes `state`, `seat` and `voting` |
-| [`data/seat-reviews.json`](data/seat-reviews.json) | Dated official-source vacancy checks, historical evidence and unresolved issues |
-| `data/states/<st>/assignment-audit.json` | Exact Census point recovery audit for states rebuilt with that method |
-| [`data/coverage.json`](data/coverage.json) | Per-state validation status, findings, unmatched officials, seat shortfalls, population differences and source versions |
-| [`data/states/index.json`](data/states/index.json) | One summary row per state: population, block count, and district count per layer |
-| `data/states/<st>/districts.json` | The state's district layers. Each district has its 2020 population and the districts in other layers it shares residents with |
-| `data/states/<st>/overlaps.csv` | The state's overlaps as a flat table: one row per pair of districts |
-| `data/states/<st>/boundaries/*.geojson` | Simplified district boundaries, one file per layer, meant for maps rather than analysis |
-| [`seeds/<st>/*.yml`](seeds) | Hand-maintained rosters and temporary official-source corrections |
+The current geography vintage is **January 1, 2026**, as reported in Census layer metadata. Source publication dates differ from retrieval dates: the House XML reports **October 1, 2026**. Sources without a publication date have `publishedAt: null`. A recently fetched page may still contain older information.
 
-`<st>` is the lowercase postal code, for example `data/states/ca/districts.json`.
+## Files and evidence
 
-To use the data without cloning, read it straight from GitHub, e.g.
-`https://raw.githubusercontent.com/edamame-labs/openbasis-data/main/data/officials.csv`.
-To pin a version, put a commit SHA in place of `main`.
+- `data/officials.json`: 7,855 source-backed records, with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available.
+- `data/officials.csv`: the same records, with provenance encoded as JSON in `sources`.
+- `data/sources.json`: direct URLs, final URLs, publishers, retrieval timestamps, SHA-256 checksums of the acquired representation, and reported publication/session metadata. `representation` distinguishes HTTP response bodies from browser DOM captures; POST sources include their request method and body.
+- `data/geography/{states,counties}.geojson`: Census features, source identifiers and names, with collection-level query URL, checksum, metadata reference and vintage.
+- `data/coverage.json`: collected rosters, analytical boundary counts and explicitly uncollected offices by state.
+- `data/geography/regions/<state>/<layer>.geojson.gz`: original analytical polygons, losslessly compressed. Layers are `state`, `county`, `cd` (119th Congress), `sldu`, `sldl`; NH additionally has a clearly labeled derived `sldl_floterial` layer.
+- `data/geography/index.json`: per-state layer files, source IDs, plan labels and geometry linkage summary.
+- `data/district-links.json`: explicit person-to-boundary joins with roster and geometry references. Multiple people can share a boundary; U.S. senators link to their state.
+- `data/overlaps/<state>.{json,csv}`: positive-area cross-layer intersections, both input areas, both directional shares and geometry diagnostics. These are polygon areas, not residents or voters.
+- `data/geography-report.json`: input counts, plan/vintage metadata, repairs, coverage residuals and linkage diagnostics.
+- `data/manifest.json`: SHA-256 checksums for every other published data file. This detects accidental changes; it is not a digital signature or independent verification.
 
-## Coverage
+The top-level `geography/states.geojson` and `counties.geojson` are generalized display files. They are **not** used for analytical intersections. The per-state `.geojson.gz` files preserve the original Census coordinates without requested generalization or rounding; compression changes no coordinates. All geographic coordinates use EPSG:4326.
 
-| Level | Officials | District boundaries |
-|---|---|---|
-| Federal | U.S. senators and representatives from each published state | Congressional districts (119th Congress, current), plus 2027 maps where a state redrew mid-decade |
-| State | State legislators, governors and other statewide executives | Upper- and lower-chamber districts |
-| City | Mayors and councils of San Francisco, Oakland, San Jose | Council districts |
+Analytical overlaps use original polygons projected into documented equal-area coordinate systems, with separate Alaska and Hawaii definitions. They include water wherever it is part of the source polygon. They do not measure shared population, registered voters, or land-only area. Unassigned areas, repairs and coverage differences remain visible; missing coverage is never renormalized away. See [the method](docs/OVERLAP-METHOD.md), [source acquisition](docs/DISTRICT-SOURCES.md), [joins](docs/DISTRICT-LINKS.md) and [special districts](docs/GEOGRAPHY-EXCEPTIONS.md).
 
-DC and the territories aren't included.
+The 119th Congress and Census 2024 state legislative plans are retained separately from future 120th Congress/2026 election plans. A matching label alone is not an independent legal determination of a map's applicability. No address database or ZIP-code layer is included.
 
-## Sources
+## Build and verify
 
-| Data | Source | How it's collected |
-|---|---|---|
-| Members of Congress | [unitedstates/congress-legislators](https://github.com/unitedstates/congress-legislators) | JSON download |
-| State legislators | [Open States](https://open.pluralpolicy.com/data/) bulk CSV, one per state | CSV download |
-| State executives, mayors | [openstates/people](https://github.com/openstates/people) | YAML from GitHub |
-| SF Board of Supervisors | [sf.gov](https://www.sf.gov/departments--board-supervisors) | Scraped from the board page and profiles |
-| Oakland, San Jose councils | [oaklandca.gov](https://www.oaklandca.gov/Government/City-Council-Leadership/Council-Members), [sanjoseca.gov](https://www.sanjoseca.gov/your-government/departments-offices/mayor-and-city-council) | **By hand** in `seeds/ca/` (both sites return HTTP 403 to scripts) |
-| Congressional and legislative boundaries | U.S. Census [TIGERweb](https://tigerweb.geo.census.gov/) (analysis) and [cartographic boundary files](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) (display) | ArcGIS REST / shapefile |
-| 2027 congressional boundaries | U.S. Census TIGERweb "120th Congressional Districts" (January 1, 2026 vintage) | ArcGIS REST |
-| City council boundaries | [DataSF](https://data.sfgov.org/d/f2zs-jevy), [Oakland GIS](https://services.arcgis.com/9tC74aDHuml0x5Yz/arcgis/rest/services/CouncilDistrict_2022_Revised/FeatureServer/0), [San Jose GIS](https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/120) | GeoJSON / ArcGIS REST |
-| Population | 2020 Census blocks (P.L. 94-171 `POP100`) via TIGERweb | ArcGIS REST |
+Full acquisition and analytical rebuilding requires Python 3.12+, curl, and `requirements-geo.txt`. Offline integrity verification can use Python 3.9+. No private application repository or user account is required. Some official sites require a normal browser to render their public directory; those source snapshots must be captured before replay, as documented below.
 
-Each official carries a `sources` list with the URL and retrieval date of every record merged into it.
+```sh
+python3.12 -m venv .venv-geo
+.venv-geo/bin/python -m pip install -r requirements-geo.txt
+.venv-geo/bin/python -B tools/build.py --browser-snapshots
+python3 -B tools/build.py --verify --fresh
+.venv-geo/bin/python -B -m unittest discover -s tools -p 'test_*.py'
+```
 
-## Methodology
+The builder reads **only its explicit government source allowlist**, starts from those acquired responses, and replaces `data/` only after all fetches and checks succeed. It never reads a previous directory, third-party roster, manual correction seed, or legacy contact file. A failed source stops the build; the prior published snapshot remains intact with its original timestamps.
 
-### Merging officials
+For the checked-in nationwide release, acquire HTTP sources and the required live browser DOM snapshots, then run `--browser-snapshots` to use those fresh observations while fetching the HTTP sources live. Use `--offline` to replay all exact observations. A missing or invalid source stops the build. Online fetching never substitutes browser challenge pages or a prior directory for a required live observation. See [browser acquisition instructions](docs/region-d.md#reproducing-browser-evidence).
 
-When two sources describe the same person, records are matched on level + state + jurisdiction + body + canonical district + normalized name. Two people with the same name in different chambers or districts remain separate. Ambiguous conflicting Open States identities cause ingestion to fail rather than silently merge. Source-run IDs are reconciled with final record IDs after merging. Sources are applied in a fixed priority order: earlier ones win on conflicting fields, and later ones only fill gaps. For local offices, official city websites outrank Open States.
+`--fresh` requires every source and Census metadata response to have been retrieved within 24 hours. This is a retrieval-age check, not a claim that publishers updated the information within 24 hours. It must be run before publication.
 
-### When a source breaks
+Acquired source bytes and observation metadata are cached locally in ignored `.source-cache/`. To reproduce extraction from those exact checksum-verified HTTP responses and browser DOM observations:
 
-Websites go down, change their HTML, or serve bot challenges. Each source has a sanity check. Most check a minimum record count; the SF scraper must find exactly one supervisor for each of districts 1–11. When a source fails its check, its records from the previous run are **carried forward** rather than dropped, so nobody disappears from the dataset because a website was down. The failure is recorded in `runs` in `officials.json` (`error`, `carriedForward: true`), and carried-forward records keep their original `retrievedAt` dates.
+```sh
+.venv-geo/bin/python -B tools/build.py --offline
+```
 
-### Matching officials to districts
+For comparison against a pinned release, first check out its Git commit. Fresh downloads can differ from the release because official endpoints change. Preserve `.source-cache/` separately when an exact historical source snapshot is needed; URLs and checksums alone cannot restore an overwritten official page. Offline generation retains original source retrieval timestamps.
 
-District names differ between sources ("Coos 05" vs "Coos 5", "Third Middlesex" vs "3rd Middlesex", "Norfolk, Worcester and Middlesex" vs "Norfolk-Worcester-Middlesex"). Both sides are reduced to a canonical key: lowercase, ordinals as digits, leading zeros dropped, separators and "and" removed. Congressional at-large seats are district `0`. Multi-member districts (common in Arizona, Maryland, New Hampshire, Vermont and elsewhere) map to several officials.
+## Extraction rules
 
-### District overlaps
+- House identity uses the official Bioguide ID and `official-name`; Senate identity uses its XML Bioguide ID and first/last name fields. Only the 50 state postal codes are included. The House parser requires Congress 119 and stops for review when the congress changes.
+- California records come from chamber roster cards. Assembly `Family, Given` names are reordered without enriching names. Explicitly labeled vacant cards are excluded.
+- North Carolina records come from the official 2025–2026 session member tables. Explicit `Resigned` or `Deceased` entries are excluded; biography anchor text supplies the name. District duplicates or a changed session label stop the build.
+- State record IDs identify source-specific roster entries, not permanent cross-release person identities. Multi-member districts use distinct source-person identifiers; CA/NC use chamber/district row IDs. Party labels preserve publisher wording and can differ between chambers.
+- No missing member is automatically labeled a vacancy. No email addresses, telephone numbers, inferred contact routes, or third-party identifiers are added.
+- Adapters for the other 48 states are in `tools/regions/`. Their source-specific eligibility rules, session checks, pagination and multi-seat handling are documented below. Party and name fields are not enriched from other directories.
+- Geographic state codes, county codes, names, GEOIDs and geometry come directly from Census. Territories and DC are filtered out using Census state postal codes. Duplicate GEOIDs or a truncated server response stop the build.
 
-Overlap is measured in **people, not area**. For every populated 2020 Census block (about 5.8 million across the 50 states), the block's interior point is assigned to the district containing it in each layer. Two districts overlap by the total population of the blocks they share. Blocks never cross state lines, so each state is computed on its own.
+### State source notes
 
-- Legislative districts are drawn from whole Census blocks. If an interior point falls outside the generalized analysis polygons, the pipeline queries Census's exact server-side point intersection for that point. Only one unambiguous, known district is accepted; no nearest-district or proportional allocation is used. Rebuilt states publish `assignment-audit.json` with every recovered point, population and query URL. City council lines may occasionally split a block; in that case the whole block goes to the district containing its interior point.
-- Pairs that share fewer than 100 people, or under 0.1% of the smaller district, are dropped as boundary noise.
-- Sanity check: each state's congressional layer sums to its 2020 Census population, and every other statewide layer sums to the same total.
+- [AL, AK, AZ, AR, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY](docs/region-a.md)
+- [LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, ND](docs/region-b.md)
+- [OK House, OR, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY](docs/region-c.md)
+- [OH, OK Senate and PA, including browser evidence reproduction](docs/region-d.md)
 
-`share_of_district` in `overlaps.csv` answers "what fraction of this district's residents also live in the other one?" Each pair appears twice, once from each side.
+Each note lists direct government endpoints, parsed counts and exclusions. `data/coverage.json` has per-state, per-chamber record counts and collection status. The exact supporting references for each person are in `sources`; records relying on a separate current-membership index include both references. For New Hampshire, the TSV's `Former` label is not treated as resignation: House membership is joined to the chamber's actual current roster.
 
-### Boundaries
+These checks verify extraction, scope, provenance and file consistency. They do not constitute an independent factual check of every government assertion. Conflicts and unsupported fields must remain unpublished until resolved against a suitable primary source.
 
-Overlaps are computed from TIGERweb geometry at about 10 m precision. The files under `boundaries/` are for display only: they come from Census cartographic boundary files, which are clipped to the shoreline. The 2027 congressional layer has no cartographic file yet, so its display boundaries are clipped to the 119th Congress outline instead. All layers are simplified with [mapshaper](https://github.com/mbloch/mapshaper) using topology-preserving simplification, so neighboring districts still share edges.
+## Drawing shapes and inspecting an overlap
 
-## Quality and review status
+Lossless decompression produces ordinary GeoJSON that GIS software and map libraries can read:
 
-`data/coverage.json` is the machine-readable quality report for this snapshot:
+```sh
+gzip -dc data/geography/regions/ca/sldu.geojson.gz > /tmp/ca-state-senate.geojson
+```
 
-- `collected`: collected data has unresolved automated errors. The publication gate rejects this status.
-- `auto-validated`: automated checks passed. Warnings, including apparent vacancies, still require official-source review.
-- `reviewed`: automated checks passed and a historical manual-review date exists. `reviewedAt` is that historical date, not a claim that the current snapshot was manually reviewed again.
+To export the actual intersection polygon for two published boundaries:
 
-Checks compare each state's House and legislative member counts to independent chamber-size references, require two U.S. senators and one governor, match officials to analysis districts, compare display and analysis district keys, and verify symmetric population overlaps. Every statewide layer is compared independently with the state's **2020 resident population**, rather than only with another computed layer. Every statewide layer must equal the independent Census total exactly; any difference fails. Unmatched geographic members over 10% fail unless an explicitly documented exception applies. Smaller mismatches remain visible as warnings.
+```sh
+.venv-geo/bin/python -B tools/overlap_shape.py --state CA \
+  --a county:06013 --b sldu:06009 --output /tmp/contra-costa-senate-9.geojson
+```
 
-The report includes `inputSha256`, a fingerprint of the exact officials, CSV, geometry and index files checked; changing any input requires a new report before publication.
+The exported GeoJSON records its source IDs, projection and area measure. An overlap table row can also be reproduced from the cited original layer files. Boundary IDs combine the layer with its Census GEOID; derived NH floterials use an explicit `boundaryId` instead of inventing a Census GEOID.
 
-Each layer's report lists unmatched officials and districts without matched officials. `seats[].confirmedVacancies` counts only applicable, dated official evidence; `seats[].unconfirmedShortfall` is the remaining count requiring investigation, **not** a confirmed vacancy count. Non-voting Maine tribal representatives are excluded from voting-seat totals and kept in the directory. Citywide council members are reported separately from ward-based members.
+## Scope and compatibility
 
-[`data/seat-reviews.json`](data/seat-reviews.json) records the evidence behind seat checks: explicit vacancy confirmations, historical confirmations, confirmed departures, unresolved conflicts, and resolved data errors. A departure notice alone is not automatically counted as a currently vacant seat. Each confirmation expires after its `validUntil` date and stops applying if the chamber roster fingerprint changes. District subjects and observed empty districts are not automatically confirmed vacancies. Historical NH Clerk figures remain historical evidence.
+Secondary aggregators and city/town rosters are excluded. Prior contact enrichment, manual overrides, vacancy reviews and population-overlap products are removed rather than carried forward without current evidence. Analytical geometry is freshly acquired from government publishers; previous computed geometry and population products are not reused. Git history retains older releases; it is not a current source.
 
-Temporary statewide corrections may be maintained in `seeds/<st>/*.yml` with an explicit `level`, stable member `id`, official source, verification date and `expiresAt`. They only fill an unoccupied seat and yield to an automatically collected successor. The current NM District 41 correction expires on December 1, 2026 unless reverified.
-
-The report records official-data and geometry generation times separately, independent Census/NCSL reference URLs, geometry vintages and analysis endpoints. Congressional `cd120` reflects the Census January 1, 2026 vintage and may omit later changes. Display state-legislative boundaries use GENZ2024; mismatches with analysis boundaries fail validation.
-
-## Known limitations
-
-- **2027 congressional maps.** `cd` is the 119th Congress map that current members represent. `cd120`, present only for states whose lines changed, is the map used in the November 3, 2026 election (California's comes from Proposition 50), effective January 3, 2027. Its seats have no officials attached until the winners are seated.
-- **New Hampshire floterial districts.** These are House districts layered on top of base districts. Census publishes no separate boundaries for them, so members elected from floterial districts aren't linked to a district shape.
-- **Hand-maintained seeds.** The Oakland and San Jose rosters are hand-maintained, and each file records the date it was last checked against the city site.
-- **SF in CI.** sf.gov blocks GitHub Actions, so the weekly refresh carries the SF supervisor roster forward. It is refreshed whenever the pipeline runs from an ordinary network.
-- **Vacancies.** Empty seats appear as districts with no official.
-- **Idaho House positions.** `district` is the shared geographic district; `seat` preserves the A/B position from the upstream district label. These are not separate geographic subdistricts.
-- **Maine tribal representatives.** Non-voting representatives are included with `voting: false` and office `Non-voting Tribal Representative`. They represent tribal communities, have no Census legislative-district polygon, and do not count against the 151 voting seats.
-- **Unconfirmed shortfalls.** The nationwide roster may contain fewer members than statutory seats. Consult `coverage.json` and the chamber's own current roster before interpreting a gap as a vacancy.
-- **Boundary precision.** Generalized analysis geometry can miss block interior points. Exact Census point intersection resolves these cases, with a public audit trail; unresolved or ambiguous assignments block publication. Display GeoJSON remains simplified and should not be used for precision analysis.
-- **Population vintage.** Population is from the 2020 Census, not current estimates.
-
-## Corrections
-
-Spotted something wrong? Open an issue or a pull request.
-
-- **Hand-maintained rosters.** Edit `seeds/<st>/*.yml`, include the official source URL, and bump `verifiedAt`.
-- **Automated sources.** Most errors there come from upstream (Open States, congress-legislators), and fixing them there helps everyone. Link the upstream fix in your issue.
-
-## Updates
-
-The data is refreshed weekly. A national quality gate runs before publication; a failed check prevents that refresh from replacing the published snapshot. A commit is made only when the data actually changes, so the git history doubles as a changelog of who held which office when. `runs` in `officials.json` records each source's result for the latest refresh.
-
-## Schema
-
-**`officials.json`**: `{ generatedAt, officials: Official[], runs }`. Each `Official` has:
-
-| Field | Notes |
-|---|---|
-| `id` | Stable slug that includes the state, e.g. `us-house-ca-james-gallagher`, `md-house-of-delegates-aletheia-mccaskill` |
-| `name`, `givenName`, `familyName` | |
-| `level` | `federal`, `state`, or `local` |
-| `state` | Two-letter postal code |
-| `jurisdiction` | State name, or city for local offices |
-| `office`, `body`, `district` | e.g. `Delegate`, `Maryland House of Delegates`, `44B`. Congressional at-large seats use district `0` |
-| `party`, `gender` | When the source provides them |
-| `seat` | Position within a shared district, e.g. Idaho House `A` / `B`; `district` remains the geographic district number |
-| `voting` | `false` for Maine non-voting tribal representatives; otherwise omitted |
-| `email`, `phone`, `address`, `website`, `contactForm`, `photo`, `socials` | Public office contact info |
-| `termEnd` | ISO date, when known |
-| `ids` | Cross-references: `bioguide`, `fec`, `opensecrets`, `wikidata`, `govtrack`, `openstates` |
-| `sources` | `{ name, url, retrievedAt }` for every record merged into this one |
-
-**`states/<st>/districts.json`**: `{ generatedAt, state, blocks, layers, districts }`. `districts` is keyed by `<layer>:<key>`, where `key` is the canonical district name (e.g. `sldl:44b`, `cd:0`). Each entry has `district` (display name), `pop` (2020 population), `bbox`, and `overlaps: { key, pop }[]` sorted largest first. Each layer's `body` matches `Official.body`, which links districts to the officials who hold them.
-
-Layers:
-
-| Layer | Meaning |
-|---|---|
-| `cd` | U.S. House, current (119th Congress) |
-| `cd120` | U.S. House from Jan 2027, only where the lines changed |
-| `sldu` | State Senate (Nebraska: the unicameral Legislature) |
-| `sldl` | Lower chamber: House, Assembly, or House of Delegates |
-| `sf`, `oak`, `sj` | San Francisco, Oakland, San Jose councils (California only) |
+Schema 2 removes `data/states/`, contact/vacancy review files and enrichment fields. Consumers of the earlier map/overlap schema need to migrate: `intersectionAreaM2` and area shares must never be read as the former population fields. See [AGENTS.md](AGENTS.md) for repository source and communication requirements.
 
 ## License
 
-Everything in this repository is dedicated to the public domain under [CC0 1.0](LICENSE). Attribution is appreciated but not required.
-
-Upstream sources are public domain (U.S. Census, congress-legislators, Open States) or public records published by state and city governments.
+Repository contributions are provided under [CC0](LICENSE). Source links identify the original publishers; their marks and linked website materials are not relicensed by this repository. This project is not affiliated with the publishing agencies.

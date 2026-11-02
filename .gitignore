@@ -1,0 +1,7 @@
+/.audit-cache/
+/.source-cache/
+/.data-previous/
+/primary-data-*/
+__pycache__/
+/.venv-geo/
+/.geo-stage-*/

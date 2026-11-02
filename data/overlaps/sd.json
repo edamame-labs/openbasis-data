@@ -1,0 +1,5787 @@
+{
+  "schemaVersion": 1,
+  "state": "SD",
+  "method": {
+    "measure": "polygon-area-including-water",
+    "units": "square-metres",
+    "projection": "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +datum=WGS84 +units=m +type=crs",
+    "projectionWkt": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Albers Equal Area\",ID[\"EPSG\",9822]],PARAMETER[\"Latitude of false origin\",23,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",-96,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",29.5,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",45.5,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+    "alwaysXY": true,
+    "intersection": "GEOS planar intersection in equal-area projection",
+    "geometryPrecision": "Original Census coordinates; no generalization, snapping or coordinate rounding",
+    "numericalCoverageTolerance": 1e-06,
+    "population": null,
+    "software": {
+      "shapely": "2.2.0",
+      "geos": "3.14.1",
+      "pyproj": "3.8.0",
+      "proj": "9.8.1"
+    }
+  },
+  "layerCounts": {
+    "state": 1,
+    "county": 66,
+    "cd": 1,
+    "sldu": 35,
+    "sldl": 37
+  },
+  "districts": [
+    {
+      "key": "state:46",
+      "layer": "state",
+      "geoid": "46",
+      "boundaryId": "46",
+      "stateFips": "46",
+      "name": "South Dakota",
+      "districtKind": "district",
+      "sourceId": "census-state-46-page-0",
+      "areaM2": 199729251440.90045,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46079",
+      "layer": "county",
+      "geoid": "46079",
+      "boundaryId": "46079",
+      "stateFips": "46",
+      "name": "Lake County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1489662955.1500554,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46047",
+      "layer": "county",
+      "geoid": "46047",
+      "boundaryId": "46047",
+      "stateFips": "46",
+      "name": "Fall River County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 4530313838.629371,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46017",
+      "layer": "county",
+      "geoid": "46017",
+      "boundaryId": "46017",
+      "stateFips": "46",
+      "name": "Buffalo County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1263296313.7556896,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46095",
+      "layer": "county",
+      "geoid": "46095",
+      "boundaryId": "46095",
+      "stateFips": "46",
+      "name": "Mellette County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 3395130952.7955885,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46077",
+      "layer": "county",
+      "geoid": "46077",
+      "boundaryId": "46077",
+      "stateFips": "46",
+      "name": "Kingsbury County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2237138744.2733607,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46027",
+      "layer": "county",
+      "geoid": "46027",
+      "boundaryId": "46027",
+      "stateFips": "46",
+      "name": "Clay County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1081110375.0618045,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46059",
+      "layer": "county",
+      "geoid": "46059",
+      "boundaryId": "46059",
+      "stateFips": "46",
+      "name": "Hand County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 3730147668.079857,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46029",
+      "layer": "county",
+      "geoid": "46029",
+      "boundaryId": "46029",
+      "stateFips": "46",
+      "name": "Codington County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1857445910.8269007,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46067",
+      "layer": "county",
+      "geoid": "46067",
+      "boundaryId": "46067",
+      "stateFips": "46",
+      "name": "Hutchinson County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2109338920.6244116,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46102",
+      "layer": "county",
+      "geoid": "46102",
+      "boundaryId": "46102",
+      "stateFips": "46",
+      "name": "Oglala Lakota County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 5429529227.906949,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46033",
+      "layer": "county",
+      "geoid": "46033",
+      "boundaryId": "46033",
+      "stateFips": "46",
+      "name": "Custer County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 4037955031.6144156,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46075",
+      "layer": "county",
+      "geoid": "46075",
+      "boundaryId": "46075",
+      "stateFips": "46",
+      "name": "Jones County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2514575167.8246326,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46005",
+      "layer": "county",
+      "geoid": "46005",
+      "boundaryId": "46005",
+      "stateFips": "46",
+      "name": "Beadle County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 3275846149.3400717,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46021",
+      "layer": "county",
+      "geoid": "46021",
+      "boundaryId": "46021",
+      "stateFips": "46",
+      "name": "Campbell County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1996458169.2817996,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46063",
+      "layer": "county",
+      "geoid": "46063",
+      "boundaryId": "46063",
+      "stateFips": "46",
+      "name": "Harding County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 6936288134.3323555,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46011",
+      "layer": "county",
+      "geoid": "46011",
+      "boundaryId": "46011",
+      "stateFips": "46",
+      "name": "Brookings County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2084775551.03892,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46051",
+      "layer": "county",
+      "geoid": "46051",
+      "boundaryId": "46051",
+      "stateFips": "46",
+      "name": "Grant County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1780702964.1293359,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46091",
+      "layer": "county",
+      "geoid": "46091",
+      "boundaryId": "46091",
+      "stateFips": "46",
+      "name": "Marshall County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2295310649.5296745,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46009",
+      "layer": "county",
+      "geoid": "46009",
+      "boundaryId": "46009",
+      "stateFips": "46",
+      "name": "Bon Homme County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1506385832.5953252,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46045",
+      "layer": "county",
+      "geoid": "46045",
+      "boundaryId": "46045",
+      "stateFips": "46",
+      "name": "Edmunds County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2981245729.420868,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46127",
+      "layer": "county",
+      "geoid": "46127",
+      "boundaryId": "46127",
+      "stateFips": "46",
+      "name": "Union County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1209857390.2389078,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46135",
+      "layer": "county",
+      "geoid": "46135",
+      "boundaryId": "46135",
+      "stateFips": "46",
+      "name": "Yankton County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1378550224.4949262,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46123",
+      "layer": "county",
+      "geoid": "46123",
+      "boundaryId": "46123",
+      "stateFips": "46",
+      "name": "Tripp County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 4189149486.209313,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46111",
+      "layer": "county",
+      "geoid": "46111",
+      "boundaryId": "46111",
+      "stateFips": "46",
+      "name": "Sanborn County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1477461502.1987464,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46041",
+      "layer": "county",
+      "geoid": "46041",
+      "boundaryId": "46041",
+      "stateFips": "46",
+      "name": "Dewey County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 6333218145.482106,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46025",
+      "layer": "county",
+      "geoid": "46025",
+      "boundaryId": "46025",
+      "stateFips": "46",
+      "name": "Clark County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2505809276.161217,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46039",
+      "layer": "county",
+      "geoid": "46039",
+      "boundaryId": "46039",
+      "stateFips": "46",
+      "name": "Deuel County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1648821159.7479255,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46085",
+      "layer": "county",
+      "geoid": "46085",
+      "boundaryId": "46085",
+      "stateFips": "46",
+      "name": "Lyman County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 4420799560.537089,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46071",
+      "layer": "county",
+      "geoid": "46071",
+      "boundaryId": "46071",
+      "stateFips": "46",
+      "name": "Jackson County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 4846539897.078968,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46093",
+      "layer": "county",
+      "geoid": "46093",
+      "boundaryId": "46093",
+      "stateFips": "46",
+      "name": "Meade County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 9020420519.465658,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46105",
+      "layer": "county",
+      "geoid": "46105",
+      "boundaryId": "46105",
+      "stateFips": "46",
+      "name": "Perkins County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 7484997716.741331,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46107",
+      "layer": "county",
+      "geoid": "46107",
+      "boundaryId": "46107",
+      "stateFips": "46",
+      "name": "Potter County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2327508917.9043775,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46037",
+      "layer": "county",
+      "geoid": "46037",
+      "boundaryId": "46037",
+      "stateFips": "46",
+      "name": "Day County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2825917075.9496975,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46015",
+      "layer": "county",
+      "geoid": "46015",
+      "boundaryId": "46015",
+      "stateFips": "46",
+      "name": "Brule County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2192365342.966046,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46083",
+      "layer": "county",
+      "geoid": "46083",
+      "boundaryId": "46083",
+      "stateFips": "46",
+      "name": "Lincoln County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1496361668.1072671,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46137",
+      "layer": "county",
+      "geoid": "46137",
+      "boundaryId": "46137",
+      "stateFips": "46",
+      "name": "Ziebach County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 5103820966.874006,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46003",
+      "layer": "county",
+      "geoid": "46003",
+      "boundaryId": "46003",
+      "stateFips": "46",
+      "name": "Aurora County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1846104303.3087924,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46103",
+      "layer": "county",
+      "geoid": "46103",
+      "boundaryId": "46103",
+      "stateFips": "46",
+      "name": "Pennington County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 7211715844.20572,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46117",
+      "layer": "county",
+      "geoid": "46117",
+      "boundaryId": "46117",
+      "stateFips": "46",
+      "name": "Stanley County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 3929456129.454137,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46119",
+      "layer": "county",
+      "geoid": "46119",
+      "boundaryId": "46119",
+      "stateFips": "46",
+      "name": "Sully County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2771786863.585503,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46129",
+      "layer": "county",
+      "geoid": "46129",
+      "boundaryId": "46129",
+      "stateFips": "46",
+      "name": "Walworth County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1928589600.2558224,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46031",
+      "layer": "county",
+      "geoid": "46031",
+      "boundaryId": "46031",
+      "stateFips": "46",
+      "name": "Corson County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 6551766307.910051,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46053",
+      "layer": "county",
+      "geoid": "46053",
+      "boundaryId": "46053",
+      "stateFips": "46",
+      "name": "Gregory County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2728608547.196537,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46087",
+      "layer": "county",
+      "geoid": "46087",
+      "boundaryId": "46087",
+      "stateFips": "46",
+      "name": "McCook County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1494080651.0820947,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46061",
+      "layer": "county",
+      "geoid": "46061",
+      "boundaryId": "46061",
+      "stateFips": "46",
+      "name": "Hanson County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1127566059.438014,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46081",
+      "layer": "county",
+      "geoid": "46081",
+      "boundaryId": "46081",
+      "stateFips": "46",
+      "name": "Lawrence County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2072795259.014828,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46055",
+      "layer": "county",
+      "geoid": "46055",
+      "boundaryId": "46055",
+      "stateFips": "46",
+      "name": "Haakon County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 4731733219.601038,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46043",
+      "layer": "county",
+      "geoid": "46043",
+      "boundaryId": "46043",
+      "stateFips": "46",
+      "name": "Douglas County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1123191880.229869,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46125",
+      "layer": "county",
+      "geoid": "46125",
+      "boundaryId": "46125",
+      "stateFips": "46",
+      "name": "Turner County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1599824846.7237458,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46035",
+      "layer": "county",
+      "geoid": "46035",
+      "boundaryId": "46035",
+      "stateFips": "46",
+      "name": "Davison County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1131689511.2724235,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46057",
+      "layer": "county",
+      "geoid": "46057",
+      "boundaryId": "46057",
+      "stateFips": "46",
+      "name": "Hamlin County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1393598675.411717,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46007",
+      "layer": "county",
+      "geoid": "46007",
+      "boundaryId": "46007",
+      "stateFips": "46",
+      "name": "Bennett County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 3083253843.068989,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46097",
+      "layer": "county",
+      "geoid": "46097",
+      "boundaryId": "46097",
+      "stateFips": "46",
+      "name": "Miner County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1481272057.8949554,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46073",
+      "layer": "county",
+      "geoid": "46073",
+      "boundaryId": "46073",
+      "stateFips": "46",
+      "name": "Jerauld County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1379405294.3465931,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46109",
+      "layer": "county",
+      "geoid": "46109",
+      "boundaryId": "46109",
+      "stateFips": "46",
+      "name": "Roberts County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2941650641.88887,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46049",
+      "layer": "county",
+      "geoid": "46049",
+      "boundaryId": "46049",
+      "stateFips": "46",
+      "name": "Faulk County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2605248631.005689,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46019",
+      "layer": "county",
+      "geoid": "46019",
+      "boundaryId": "46019",
+      "stateFips": "46",
+      "name": "Butte County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 5870249763.905813,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46089",
+      "layer": "county",
+      "geoid": "46089",
+      "boundaryId": "46089",
+      "stateFips": "46",
+      "name": "McPherson County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2982463263.622239,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46121",
+      "layer": "county",
+      "geoid": "46121",
+      "boundaryId": "46121",
+      "stateFips": "46",
+      "name": "Todd County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 3602295584.038674,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46065",
+      "layer": "county",
+      "geoid": "46065",
+      "boundaryId": "46065",
+      "stateFips": "46",
+      "name": "Hughes County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2073869572.4841502,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46069",
+      "layer": "county",
+      "geoid": "46069",
+      "boundaryId": "46069",
+      "stateFips": "46",
+      "name": "Hyde County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2243561165.4099727,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46099",
+      "layer": "county",
+      "geoid": "46099",
+      "boundaryId": "46099",
+      "stateFips": "46",
+      "name": "Minnehaha County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2107890225.397783,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46013",
+      "layer": "county",
+      "geoid": "46013",
+      "boundaryId": "46013",
+      "stateFips": "46",
+      "name": "Brown County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 4483142929.682821,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46101",
+      "layer": "county",
+      "geoid": "46101",
+      "boundaryId": "46101",
+      "stateFips": "46",
+      "name": "Moody County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 1348876259.6096334,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46023",
+      "layer": "county",
+      "geoid": "46023",
+      "boundaryId": "46023",
+      "stateFips": "46",
+      "name": "Charles Mix County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 2979098051.93807,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:46115",
+      "layer": "county",
+      "geoid": "46115",
+      "boundaryId": "46115",
+      "stateFips": "46",
+      "name": "Spink County",
+      "districtKind": "district",
+      "sourceId": "census-county-46-page-0",
+      "areaM2": 3910209321.5475144,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd:4600",
+      "layer": "cd",
+      "geoid": "4600",
+      "boundaryId": "4600",
+      "stateFips": "46",
+      "name": "Congressional District (at Large)",
+      "districtKind": "district",
+      "sourceId": "census-cd-46-page-0",
+      "areaM2": 199729251440.90036,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46021",
+      "layer": "sldu",
+      "geoid": "46021",
+      "boundaryId": "46021",
+      "stateFips": "46",
+      "name": "State Senate District 21",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 12866152268.882566,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46022",
+      "layer": "sldu",
+      "geoid": "46022",
+      "boundaryId": "46022",
+      "stateFips": "46",
+      "name": "State Senate District 22",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 7647381176.278751,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46005",
+      "layer": "sldu",
+      "geoid": "46005",
+      "boundaryId": "46005",
+      "stateFips": "46",
+      "name": "State Senate District 5",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 371112610.21359235,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46007",
+      "layer": "sldu",
+      "geoid": "46007",
+      "boundaryId": "46007",
+      "stateFips": "46",
+      "name": "State Senate District 7",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 281512814.97682065,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46010",
+      "layer": "sldu",
+      "geoid": "46010",
+      "boundaryId": "46010",
+      "stateFips": "46",
+      "name": "State Senate District 10",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 32189759.32046687,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46014",
+      "layer": "sldu",
+      "geoid": "46014",
+      "boundaryId": "46014",
+      "stateFips": "46",
+      "name": "State Senate District 14",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 16942108.91616564,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46004",
+      "layer": "sldu",
+      "geoid": "46004",
+      "boundaryId": "46004",
+      "stateFips": "46",
+      "name": "State Senate District 4",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 8919357818.980433,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46008",
+      "layer": "sldu",
+      "geoid": "46008",
+      "boundaryId": "46008",
+      "stateFips": "46",
+      "name": "State Senate District 8",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 6731088561.429135,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46017",
+      "layer": "sldu",
+      "geoid": "46017",
+      "boundaryId": "46017",
+      "stateFips": "46",
+      "name": "State Senate District 17",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 1332063095.2478251,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46003",
+      "layer": "sldu",
+      "geoid": "46003",
+      "boundaryId": "46003",
+      "stateFips": "46",
+      "name": "State Senate District 3",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 95431352.03522463,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46030",
+      "layer": "sldu",
+      "geoid": "46030",
+      "boundaryId": "46030",
+      "stateFips": "46",
+      "name": "State Senate District 30",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 10574068992.384634,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46033",
+      "layer": "sldu",
+      "geoid": "46033",
+      "boundaryId": "46033",
+      "stateFips": "46",
+      "name": "State Senate District 33",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 411390514.8415639,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46015",
+      "layer": "sldu",
+      "geoid": "46015",
+      "boundaryId": "46015",
+      "stateFips": "46",
+      "name": "State Senate District 15",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 41960318.478277415,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46011",
+      "layer": "sldu",
+      "geoid": "46011",
+      "boundaryId": "46011",
+      "stateFips": "46",
+      "name": "State Senate District 11",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 15974278.494728863,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46001",
+      "layer": "sldu",
+      "geoid": "46001",
+      "boundaryId": "46001",
+      "stateFips": "46",
+      "name": "State Senate District 1",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 11773364491.692652,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46009",
+      "layer": "sldu",
+      "geoid": "46009",
+      "boundaryId": "46009",
+      "stateFips": "46",
+      "name": "State Senate District 9",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 228971075.3490733,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46035",
+      "layer": "sldu",
+      "geoid": "46035",
+      "boundaryId": "46035",
+      "stateFips": "46",
+      "name": "State Senate District 35",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 117083204.37484813,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46006",
+      "layer": "sldu",
+      "geoid": "46006",
+      "boundaryId": "46006",
+      "stateFips": "46",
+      "name": "State Senate District 6",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 267899643.38976014,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46028",
+      "layer": "sldu",
+      "geoid": "46028",
+      "boundaryId": "46028",
+      "stateFips": "46",
+      "name": "State Senate District 28",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 38280341035.24578,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46012",
+      "layer": "sldu",
+      "geoid": "46012",
+      "boundaryId": "46012",
+      "stateFips": "46",
+      "name": "State Senate District 12",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 25428964.20575423,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46013",
+      "layer": "sldu",
+      "geoid": "46013",
+      "boundaryId": "46013",
+      "stateFips": "46",
+      "name": "State Senate District 13",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 25686551.535036348,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46025",
+      "layer": "sldu",
+      "geoid": "46025",
+      "boundaryId": "46025",
+      "stateFips": "46",
+      "name": "State Senate District 25",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 2839243745.4690065,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46031",
+      "layer": "sldu",
+      "geoid": "46031",
+      "boundaryId": "46031",
+      "stateFips": "46",
+      "name": "State Senate District 31",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 2072795259.014831,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46016",
+      "layer": "sldu",
+      "geoid": "46016",
+      "boundaryId": "46016",
+      "stateFips": "46",
+      "name": "State Senate District 16",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 3290395071.600694,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46032",
+      "layer": "sldu",
+      "geoid": "46032",
+      "boundaryId": "46032",
+      "stateFips": "46",
+      "name": "State Senate District 32",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 22518362.0135377,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46018",
+      "layer": "sldu",
+      "geoid": "46018",
+      "boundaryId": "46018",
+      "stateFips": "46",
+      "name": "State Senate District 18",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 1564482919.1615915,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46034",
+      "layer": "sldu",
+      "geoid": "46034",
+      "boundaryId": "46034",
+      "stateFips": "46",
+      "name": "State Senate District 34",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 95100221.99530217,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46026",
+      "layer": "sldu",
+      "geoid": "46026",
+      "boundaryId": "46026",
+      "stateFips": "46",
+      "name": "State Senate District 26",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 17920638563.069485,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46020",
+      "layer": "sldu",
+      "geoid": "46020",
+      "boundaryId": "46020",
+      "stateFips": "46",
+      "name": "State Senate District 20",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 4268804239.7690973,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46023",
+      "layer": "sldu",
+      "geoid": "46023",
+      "boundaryId": "46023",
+      "stateFips": "46",
+      "name": "State Senate District 23",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 18663469284.585796,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46024",
+      "layer": "sldu",
+      "geoid": "46024",
+      "boundaryId": "46024",
+      "stateFips": "46",
+      "name": "State Senate District 24",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 15218231309.383005,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46019",
+      "layer": "sldu",
+      "geoid": "46019",
+      "boundaryId": "46019",
+      "stateFips": "46",
+      "name": "State Senate District 19",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 6518404462.023852,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46027",
+      "layer": "sldu",
+      "geoid": "46027",
+      "boundaryId": "46027",
+      "stateFips": "46",
+      "name": "State Senate District 27",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 17971377357.1997,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46029",
+      "layer": "sldu",
+      "geoid": "46029",
+      "boundaryId": "46029",
+      "stateFips": "46",
+      "name": "State Senate District 29",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 8968189549.160526,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:46002",
+      "layer": "sldu",
+      "geoid": "46002",
+      "boundaryId": "46002",
+      "stateFips": "46",
+      "name": "State Senate District 2",
+      "districtKind": "district",
+      "sourceId": "census-sldu-46-page-0",
+      "areaM2": 260200460.18168467,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46033",
+      "layer": "sldl",
+      "geoid": "46033",
+      "boundaryId": "46033",
+      "stateFips": "46",
+      "name": "State House District 33",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 411390514.8415639,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46016",
+      "layer": "sldl",
+      "geoid": "46016",
+      "boundaryId": "46016",
+      "stateFips": "46",
+      "name": "State House District 16",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 3290395071.600694,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46015",
+      "layer": "sldl",
+      "geoid": "46015",
+      "boundaryId": "46015",
+      "stateFips": "46",
+      "name": "State House District 15",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 41960318.478277415,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46032",
+      "layer": "sldl",
+      "geoid": "46032",
+      "boundaryId": "46032",
+      "stateFips": "46",
+      "name": "State House District 32",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 22518362.0135377,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46001",
+      "layer": "sldl",
+      "geoid": "46001",
+      "boundaryId": "46001",
+      "stateFips": "46",
+      "name": "State House District 1",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 11773364491.692652,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46013",
+      "layer": "sldl",
+      "geoid": "46013",
+      "boundaryId": "46013",
+      "stateFips": "46",
+      "name": "State House District 13",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 25686551.535036348,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46024",
+      "layer": "sldl",
+      "geoid": "46024",
+      "boundaryId": "46024",
+      "stateFips": "46",
+      "name": "State House District 24",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 15218231309.383005,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46021",
+      "layer": "sldl",
+      "geoid": "46021",
+      "boundaryId": "46021",
+      "stateFips": "46",
+      "name": "State House District 21",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 12866152268.882566,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:4628A",
+      "layer": "sldl",
+      "geoid": "4628A",
+      "boundaryId": "4628A",
+      "stateFips": "46",
+      "name": "State House District 28A",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 23038937927.86147,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46035",
+      "layer": "sldl",
+      "geoid": "46035",
+      "boundaryId": "46035",
+      "stateFips": "46",
+      "name": "State House District 35",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 117083204.37484813,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46020",
+      "layer": "sldl",
+      "geoid": "46020",
+      "boundaryId": "46020",
+      "stateFips": "46",
+      "name": "State House District 20",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 4268804239.7690973,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46034",
+      "layer": "sldl",
+      "geoid": "46034",
+      "boundaryId": "46034",
+      "stateFips": "46",
+      "name": "State House District 34",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 95100221.99530217,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46018",
+      "layer": "sldl",
+      "geoid": "46018",
+      "boundaryId": "46018",
+      "stateFips": "46",
+      "name": "State House District 18",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 1564482919.1615915,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:4626B",
+      "layer": "sldl",
+      "geoid": "4626B",
+      "boundaryId": "4626B",
+      "stateFips": "46",
+      "name": "State House District 26B",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 9482828737.117107,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46022",
+      "layer": "sldl",
+      "geoid": "46022",
+      "boundaryId": "46022",
+      "stateFips": "46",
+      "name": "State House District 22",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 7647381176.278751,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46025",
+      "layer": "sldl",
+      "geoid": "46025",
+      "boundaryId": "46025",
+      "stateFips": "46",
+      "name": "State House District 25",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 2839243745.4690065,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:4626A",
+      "layer": "sldl",
+      "geoid": "4626A",
+      "boundaryId": "4626A",
+      "stateFips": "46",
+      "name": "State House District 26A",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 8437809825.952396,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:4628B",
+      "layer": "sldl",
+      "geoid": "4628B",
+      "boundaryId": "4628B",
+      "stateFips": "46",
+      "name": "State House District 28B",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 15241403107.38418,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46004",
+      "layer": "sldl",
+      "geoid": "46004",
+      "boundaryId": "46004",
+      "stateFips": "46",
+      "name": "State House District 4",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 8919357818.980433,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46027",
+      "layer": "sldl",
+      "geoid": "46027",
+      "boundaryId": "46027",
+      "stateFips": "46",
+      "name": "State House District 27",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 17971377357.1997,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46009",
+      "layer": "sldl",
+      "geoid": "46009",
+      "boundaryId": "46009",
+      "stateFips": "46",
+      "name": "State House District 9",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 228971075.3490733,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46017",
+      "layer": "sldl",
+      "geoid": "46017",
+      "boundaryId": "46017",
+      "stateFips": "46",
+      "name": "State House District 17",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 1332063095.2478251,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46030",
+      "layer": "sldl",
+      "geoid": "46030",
+      "boundaryId": "46030",
+      "stateFips": "46",
+      "name": "State House District 30",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 10574068992.384634,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46007",
+      "layer": "sldl",
+      "geoid": "46007",
+      "boundaryId": "46007",
+      "stateFips": "46",
+      "name": "State House District 7",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 281512814.97682065,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46019",
+      "layer": "sldl",
+      "geoid": "46019",
+      "boundaryId": "46019",
+      "stateFips": "46",
+      "name": "State House District 19",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 6518404462.023852,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46029",
+      "layer": "sldl",
+      "geoid": "46029",
+      "boundaryId": "46029",
+      "stateFips": "46",
+      "name": "State House District 29",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 8968189549.160526,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46006",
+      "layer": "sldl",
+      "geoid": "46006",
+      "boundaryId": "46006",
+      "stateFips": "46",
+      "name": "State House District 6",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 267899643.38976014,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46003",
+      "layer": "sldl",
+      "geoid": "46003",
+      "boundaryId": "46003",
+      "stateFips": "46",
+      "name": "State House District 3",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 95431352.03522463,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46023",
+      "layer": "sldl",
+      "geoid": "46023",
+      "boundaryId": "46023",
+      "stateFips": "46",
+      "name": "State House District 23",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 18663469284.585796,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46010",
+      "layer": "sldl",
+      "geoid": "46010",
+      "boundaryId": "46010",
+      "stateFips": "46",
+      "name": "State House District 10",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 32189759.32046687,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46014",
+      "layer": "sldl",
+      "geoid": "46014",
+      "boundaryId": "46014",
+      "stateFips": "46",
+      "name": "State House District 14",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 16942108.91616564,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46012",
+      "layer": "sldl",
+      "geoid": "46012",
+      "boundaryId": "46012",
+      "stateFips": "46",
+      "name": "State House District 12",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 25428964.20575423,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46005",
+      "layer": "sldl",
+      "geoid": "46005",
+      "boundaryId": "46005",
+      "stateFips": "46",
+      "name": "State House District 5",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 371112610.21359235,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46008",
+      "layer": "sldl",
+      "geoid": "46008",
+      "boundaryId": "46008",
+      "stateFips": "46",
+      "name": "State House District 8",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 6731088561.429135,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46002",
+      "layer": "sldl",
+      "geoid": "46002",
+      "boundaryId": "46002",
+      "stateFips": "46",
+      "name": "State House District 2",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 260200460.18168467,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46031",
+      "layer": "sldl",
+      "geoid": "46031",
+      "boundaryId": "46031",
+      "stateFips": "46",
+      "name": "State House District 31",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 2072795259.014831,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldl:46011",
+      "layer": "sldl",
+      "geoid": "46011",
+      "boundaryId": "46011",
+      "stateFips": "46",
+      "name": "State House District 11",
+      "districtKind": "district",
+      "sourceId": "census-sldl-46-page-0",
+      "areaM2": 15974278.494728863,
+      "geometryRepaired": false
+    }
+  ],
+  "overlaps": [
+    {
+      "a": "state:46",
+      "b": "county:46003",
+      "intersectionAreaM2": 1846104303.3087893,
+      "shareOfA": 0.009243034207510903,
+      "shareOfB": 0.9999999999999983,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46005",
+      "intersectionAreaM2": 3275846149.3400664,
+      "shareOfA": 0.0164014340699083,
+      "shareOfB": 0.9999999999999984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46007",
+      "intersectionAreaM2": 3083253843.0689898,
+      "shareOfA": 0.015437167169183124,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46009",
+      "intersectionAreaM2": 1506385832.5953252,
+      "shareOfA": 0.007542139279689146,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46011",
+      "intersectionAreaM2": 2084775551.038915,
+      "shareOfA": 0.010438008133504654,
+      "shareOfB": 0.9999999999999976,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46013",
+      "intersectionAreaM2": 4483142929.682813,
+      "shareOfA": 0.022446100895788752,
+      "shareOfB": 0.9999999999999981,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46015",
+      "intersectionAreaM2": 2192365342.966045,
+      "shareOfA": 0.010976686324860943,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46017",
+      "intersectionAreaM2": 1263296313.7556896,
+      "shareOfA": 0.0063250440515945,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46019",
+      "intersectionAreaM2": 5870249763.905823,
+      "shareOfA": 0.029391036723746093,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46021",
+      "intersectionAreaM2": 1996458169.2818027,
+      "shareOfA": 0.009995822619264917,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46023",
+      "intersectionAreaM2": 2979098051.9380636,
+      "shareOfA": 0.014915682257085781,
+      "shareOfB": 0.9999999999999979,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46025",
+      "intersectionAreaM2": 2505809276.161222,
+      "shareOfA": 0.012546030479179394,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46027",
+      "intersectionAreaM2": 1081110375.061805,
+      "shareOfA": 0.005412879521964782,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46029",
+      "intersectionAreaM2": 1857445910.8268945,
+      "shareOfA": 0.0092998191172639,
+      "shareOfB": 0.9999999999999967,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46031",
+      "intersectionAreaM2": 6551766307.9100485,
+      "shareOfA": 0.032803238687592565,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46033",
+      "intersectionAreaM2": 4037955031.614414,
+      "shareOfA": 0.020217143971068444,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46035",
+      "intersectionAreaM2": 1131689511.2724288,
+      "shareOfA": 0.005666118022813968,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46037",
+      "intersectionAreaM2": 2825917075.949695,
+      "shareOfA": 0.014148739133415715,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46039",
+      "intersectionAreaM2": 1648821159.7479265,
+      "shareOfA": 0.00825528132636,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46041",
+      "intersectionAreaM2": 6333218145.482074,
+      "shareOfA": 0.031709016580158074,
+      "shareOfB": 0.9999999999999949,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46043",
+      "intersectionAreaM2": 1123191880.229867,
+      "shareOfA": 0.00562357227159697,
+      "shareOfB": 0.9999999999999983,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46045",
+      "intersectionAreaM2": 2981245729.42086,
+      "shareOfA": 0.014926435201220415,
+      "shareOfB": 0.9999999999999973,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46047",
+      "intersectionAreaM2": 4530313838.629373,
+      "shareOfA": 0.022682275159729846,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46049",
+      "intersectionAreaM2": 2605248631.0056944,
+      "shareOfA": 0.013043901242360502,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46051",
+      "intersectionAreaM2": 1780702964.1293402,
+      "shareOfA": 0.008915584228563773,
+      "shareOfB": 1.0000000000000024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46053",
+      "intersectionAreaM2": 2728608547.196539,
+      "shareOfA": 0.01366153694319497,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46055",
+      "intersectionAreaM2": 4731733219.601034,
+      "shareOfA": 0.023690737262894845,
+      "shareOfB": 0.9999999999999992,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46057",
+      "intersectionAreaM2": 1393598675.4117217,
+      "shareOfA": 0.006977439034883106,
+      "shareOfB": 1.0000000000000033,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46059",
+      "intersectionAreaM2": 3730147668.0798464,
+      "shareOfA": 0.01867602086909934,
+      "shareOfB": 0.9999999999999972,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46061",
+      "intersectionAreaM2": 1127566059.4380121,
+      "shareOfA": 0.005645472815341007,
+      "shareOfB": 0.9999999999999983,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46063",
+      "intersectionAreaM2": 6936288134.332349,
+      "shareOfA": 0.034728454066152575,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46065",
+      "intersectionAreaM2": 2073869572.4841487,
+      "shareOfA": 0.010383404321213326,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46067",
+      "intersectionAreaM2": 2109338920.6244137,
+      "shareOfA": 0.010560991469236862,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46069",
+      "intersectionAreaM2": 2243561165.409972,
+      "shareOfA": 0.01123301243670779,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46071",
+      "intersectionAreaM2": 4846539897.078964,
+      "shareOfA": 0.024265548797257907,
+      "shareOfB": 0.9999999999999992,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46073",
+      "intersectionAreaM2": 1379405294.3465917,
+      "shareOfA": 0.006906375928389014,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46075",
+      "intersectionAreaM2": 2514575167.824635,
+      "shareOfA": 0.012589919351741493,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46077",
+      "intersectionAreaM2": 2237138744.27336,
+      "shareOfA": 0.011200856800563964,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46079",
+      "intersectionAreaM2": 1489662955.150065,
+      "shareOfA": 0.0074584115466474555,
+      "shareOfB": 1.0000000000000064,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46081",
+      "intersectionAreaM2": 2072795259.0148282,
+      "shareOfA": 0.010378025472288744,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46083",
+      "intersectionAreaM2": 1496361668.107277,
+      "shareOfA": 0.007491950514569709,
+      "shareOfB": 1.0000000000000064,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46085",
+      "intersectionAreaM2": 4420799560.5371,
+      "shareOfA": 0.022133961493593274,
+      "shareOfB": 1.0000000000000024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46087",
+      "intersectionAreaM2": 1494080651.0820856,
+      "shareOfA": 0.007480529968962416,
+      "shareOfB": 0.9999999999999939,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46089",
+      "intersectionAreaM2": 2982463263.622247,
+      "shareOfA": 0.014932531124539627,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46091",
+      "intersectionAreaM2": 2295310649.5296736,
+      "shareOfA": 0.011492110609591166,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46093",
+      "intersectionAreaM2": 9020420519.465668,
+      "shareOfA": 0.04516324201082181,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46095",
+      "intersectionAreaM2": 3395130952.795588,
+      "shareOfA": 0.01699866658640235,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46097",
+      "intersectionAreaM2": 1481272057.8949566,
+      "shareOfA": 0.007416400187797542,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46099",
+      "intersectionAreaM2": 2107890225.3977928,
+      "shareOfA": 0.010553738174007597,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46101",
+      "intersectionAreaM2": 1348876259.609629,
+      "shareOfA": 0.006753523832280317,
+      "shareOfB": 0.9999999999999967,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46102",
+      "intersectionAreaM2": 5429529227.906944,
+      "shareOfA": 0.027184446888659834,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46103",
+      "intersectionAreaM2": 7211715844.205758,
+      "shareOfA": 0.03610745943410143,
+      "shareOfB": 1.0000000000000053,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46105",
+      "intersectionAreaM2": 7484997716.741345,
+      "shareOfA": 0.03747572107111283,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46107",
+      "intersectionAreaM2": 2327508917.904394,
+      "shareOfA": 0.011653320187769793,
+      "shareOfB": 1.000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46109",
+      "intersectionAreaM2": 2941650641.888875,
+      "shareOfA": 0.014728191392432593,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46111",
+      "intersectionAreaM2": 1477461502.198744,
+      "shareOfA": 0.0073973215817910495,
+      "shareOfB": 0.9999999999999983,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46115",
+      "intersectionAreaM2": 3910209321.547515,
+      "shareOfA": 0.019577549574427457,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46117",
+      "intersectionAreaM2": 3929456129.454143,
+      "shareOfA": 0.01967391406669775,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46119",
+      "intersectionAreaM2": 2771786863.5855026,
+      "shareOfA": 0.013877721182996922,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46121",
+      "intersectionAreaM2": 3602295584.0386715,
+      "shareOfA": 0.01803589388159593,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46123",
+      "intersectionAreaM2": 4189149486.2093062,
+      "shareOfA": 0.020974141023348644,
+      "shareOfB": 0.9999999999999984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46125",
+      "intersectionAreaM2": 1599824846.7237399,
+      "shareOfA": 0.00800996766964365,
+      "shareOfB": 0.9999999999999962,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46127",
+      "intersectionAreaM2": 1209857390.2389073,
+      "shareOfA": 0.006057487230892176,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46129",
+      "intersectionAreaM2": 1928589600.2558234,
+      "shareOfA": 0.009656019768473871,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46135",
+      "intersectionAreaM2": 1378550224.4949265,
+      "shareOfA": 0.006902094783561722,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "county:46137",
+      "intersectionAreaM2": 5103820966.874,
+      "shareOfA": 0.025553697968893712,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "cd:4600",
+      "intersectionAreaM2": 199729251440.90015,
+      "shareOfA": 0.9999999999999984,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46001",
+      "intersectionAreaM2": 11773364491.69265,
+      "shareOfA": 0.058946621021990706,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46002",
+      "intersectionAreaM2": 260200460.18168387,
+      "shareOfA": 0.0013027659108744856,
+      "shareOfB": 0.9999999999999969,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46003",
+      "intersectionAreaM2": 95431352.03522453,
+      "shareOfA": 0.00047780358333472504,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 8919357818.980364,
+      "shareOfA": 0.044657243516579175,
+      "shareOfB": 0.9999999999999923,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46005",
+      "intersectionAreaM2": 371112610.2135921,
+      "shareOfA": 0.0018580784113307696,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46006",
+      "intersectionAreaM2": 267899643.38976026,
+      "shareOfA": 0.001341314011127866,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46007",
+      "intersectionAreaM2": 281512814.9768207,
+      "shareOfA": 0.0014094721376358829,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46008",
+      "intersectionAreaM2": 6731088561.429116,
+      "shareOfA": 0.033701065381606526,
+      "shareOfB": 0.9999999999999971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46009",
+      "intersectionAreaM2": 228971075.34907365,
+      "shareOfA": 0.0011464073173919934,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46010",
+      "intersectionAreaM2": 32189759.320466906,
+      "shareOfA": 0.00016116697523392963,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46011",
+      "intersectionAreaM2": 15974278.494728865,
+      "shareOfA": 7.997966436806893e-05,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46012",
+      "intersectionAreaM2": 25428964.20575423,
+      "shareOfA": 0.0001273171757381698,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46013",
+      "intersectionAreaM2": 25686551.53503632,
+      "shareOfA": 0.00012860685828303386,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46014",
+      "intersectionAreaM2": 16942108.916165676,
+      "shareOfA": 8.482537632290089e-05,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46015",
+      "intersectionAreaM2": 41960318.47827743,
+      "shareOfA": 0.00021008599479327352,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46016",
+      "intersectionAreaM2": 3290395071.6007094,
+      "shareOfA": 0.016474277292198893,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46017",
+      "intersectionAreaM2": 1332063095.247824,
+      "shareOfA": 0.00666934405270116,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46018",
+      "intersectionAreaM2": 1564482919.1615925,
+      "shareOfA": 0.007833018488153301,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46019",
+      "intersectionAreaM2": 6518404462.023865,
+      "shareOfA": 0.032636203335256825,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46020",
+      "intersectionAreaM2": 4268804239.7690973,
+      "shareOfA": 0.0213729546822651,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46021",
+      "intersectionAreaM2": 12866152268.88256,
+      "shareOfA": 0.06441796670273725,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46022",
+      "intersectionAreaM2": 7647381176.278753,
+      "shareOfA": 0.03828873898594468,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 18663469284.585754,
+      "shareOfA": 0.0934438453553622,
+      "shareOfB": 0.9999999999999978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46024",
+      "intersectionAreaM2": 15218231309.383034,
+      "shareOfA": 0.0761943040370633,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46025",
+      "intersectionAreaM2": 2839243745.468992,
+      "shareOfA": 0.014215462807705559,
+      "shareOfB": 0.999999999999995,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 17920638563.069412,
+      "shareOfA": 0.08972465692323539,
+      "shareOfB": 0.999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46027",
+      "intersectionAreaM2": 17971377357.199657,
+      "shareOfA": 0.08997869479582643,
+      "shareOfB": 0.9999999999999977,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 38280341035.2455,
+      "shareOfA": 0.19166116509765516,
+      "shareOfB": 0.9999999999999927,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46029",
+      "intersectionAreaM2": 8968189549.160496,
+      "shareOfA": 0.04490173314355092,
+      "shareOfB": 0.9999999999999966,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46030",
+      "intersectionAreaM2": 10574068992.384583,
+      "shareOfA": 0.052942014833082335,
+      "shareOfB": 0.9999999999999951,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46031",
+      "intersectionAreaM2": 2072795259.0148282,
+      "shareOfA": 0.010378025472288744,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46032",
+      "intersectionAreaM2": 22518362.013537697,
+      "shareOfA": 0.00011274443703705985,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46033",
+      "intersectionAreaM2": 411390514.84156394,
+      "shareOfA": 0.0020597409336573502,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46034",
+      "intersectionAreaM2": 95100221.99530217,
+      "shareOfA": 0.0004761456887722937,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldu:46035",
+      "intersectionAreaM2": 117083204.37484817,
+      "shareOfA": 0.0005862095988953971,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46001",
+      "intersectionAreaM2": 11773364491.69265,
+      "shareOfA": 0.058946621021990706,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46002",
+      "intersectionAreaM2": 260200460.18168387,
+      "shareOfA": 0.0013027659108744856,
+      "shareOfB": 0.9999999999999969,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46003",
+      "intersectionAreaM2": 95431352.03522453,
+      "shareOfA": 0.00047780358333472504,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 8919357818.980364,
+      "shareOfA": 0.044657243516579175,
+      "shareOfB": 0.9999999999999923,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46005",
+      "intersectionAreaM2": 371112610.2135921,
+      "shareOfA": 0.0018580784113307696,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46006",
+      "intersectionAreaM2": 267899643.38976026,
+      "shareOfA": 0.001341314011127866,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46007",
+      "intersectionAreaM2": 281512814.9768207,
+      "shareOfA": 0.0014094721376358829,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46008",
+      "intersectionAreaM2": 6731088561.429116,
+      "shareOfA": 0.033701065381606526,
+      "shareOfB": 0.9999999999999971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46009",
+      "intersectionAreaM2": 228971075.34907365,
+      "shareOfA": 0.0011464073173919934,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46010",
+      "intersectionAreaM2": 32189759.320466906,
+      "shareOfA": 0.00016116697523392963,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46011",
+      "intersectionAreaM2": 15974278.494728865,
+      "shareOfA": 7.997966436806893e-05,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46012",
+      "intersectionAreaM2": 25428964.20575423,
+      "shareOfA": 0.0001273171757381698,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46013",
+      "intersectionAreaM2": 25686551.53503632,
+      "shareOfA": 0.00012860685828303386,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46014",
+      "intersectionAreaM2": 16942108.916165676,
+      "shareOfA": 8.482537632290089e-05,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46015",
+      "intersectionAreaM2": 41960318.47827743,
+      "shareOfA": 0.00021008599479327352,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46016",
+      "intersectionAreaM2": 3290395071.6007094,
+      "shareOfA": 0.016474277292198893,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46017",
+      "intersectionAreaM2": 1332063095.247824,
+      "shareOfA": 0.00666934405270116,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46018",
+      "intersectionAreaM2": 1564482919.1615925,
+      "shareOfA": 0.007833018488153301,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 6518404462.023865,
+      "shareOfA": 0.032636203335256825,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46020",
+      "intersectionAreaM2": 4268804239.7690973,
+      "shareOfA": 0.0213729546822651,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 12866152268.88256,
+      "shareOfA": 0.06441796670273725,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46022",
+      "intersectionAreaM2": 7647381176.278753,
+      "shareOfA": 0.03828873898594468,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 18663469284.585754,
+      "shareOfA": 0.0934438453553622,
+      "shareOfB": 0.9999999999999978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 15218231309.383034,
+      "shareOfA": 0.0761943040370633,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46025",
+      "intersectionAreaM2": 2839243745.468992,
+      "shareOfA": 0.014215462807705559,
+      "shareOfB": 0.999999999999995,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46027",
+      "intersectionAreaM2": 17971377357.199657,
+      "shareOfA": 0.08997869479582643,
+      "shareOfB": 0.9999999999999977,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46029",
+      "intersectionAreaM2": 8968189549.160496,
+      "shareOfA": 0.04490173314355092,
+      "shareOfB": 0.9999999999999966,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46030",
+      "intersectionAreaM2": 10574068992.384583,
+      "shareOfA": 0.052942014833082335,
+      "shareOfB": 0.9999999999999951,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46031",
+      "intersectionAreaM2": 2072795259.0148282,
+      "shareOfA": 0.010378025472288744,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46032",
+      "intersectionAreaM2": 22518362.013537697,
+      "shareOfA": 0.00011274443703705985,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46033",
+      "intersectionAreaM2": 411390514.84156394,
+      "shareOfA": 0.0020597409336573502,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46034",
+      "intersectionAreaM2": 95100221.99530217,
+      "shareOfA": 0.0004761456887722937,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:46035",
+      "intersectionAreaM2": 117083204.37484817,
+      "shareOfA": 0.0005862095988953971,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:4626A",
+      "intersectionAreaM2": 8437809825.952389,
+      "shareOfA": 0.04224623967235527,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 9482828737.117144,
+      "shareOfA": 0.047478417250880735,
+      "shareOfB": 1.0000000000000038,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:4628A",
+      "intersectionAreaM2": 23038937927.86146,
+      "shareOfA": 0.11535084501470054,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:46",
+      "b": "sldl:4628B",
+      "intersectionAreaM2": 15241403107.384235,
+      "shareOfA": 0.0763103200829556,
+      "shareOfB": 1.0000000000000036,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46003",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1846104303.3087893,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.009243034207510908,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46005",
+      "b": "cd:4600",
+      "intersectionAreaM2": 3275846149.3400664,
+      "shareOfA": 0.9999999999999984,
+      "shareOfB": 0.016401434069908308,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46007",
+      "b": "cd:4600",
+      "intersectionAreaM2": 3083253843.0689907,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.015437167169183136,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46009",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1506385832.5953238,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.007542139279689142,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46011",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2084775551.0389175,
+      "shareOfA": 0.9999999999999989,
+      "shareOfB": 0.010438008133504671,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46013",
+      "b": "cd:4600",
+      "intersectionAreaM2": 4483142929.682822,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.02244610089578881,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46015",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2192365342.966045,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.010976686324860948,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46017",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1263296313.7556896,
+      "shareOfA": 1.0,
+      "shareOfB": 0.006325044051594503,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46019",
+      "b": "cd:4600",
+      "intersectionAreaM2": 5870249763.905829,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.02939103672374614,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46021",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1996458169.2818005,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.00999582261926491,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46023",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2979098051.9380703,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.014915682257085821,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46025",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2505809276.161222,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.0125460304791794,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46027",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1081110375.061805,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.0054128795219647845,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46029",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1857445910.8268945,
+      "shareOfA": 0.9999999999999967,
+      "shareOfB": 0.009299819117263904,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46031",
+      "b": "cd:4600",
+      "intersectionAreaM2": 6551766307.9100485,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.03280323868759258,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46033",
+      "b": "cd:4600",
+      "intersectionAreaM2": 4037955031.614414,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.020217143971068455,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46035",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1131689511.2724288,
+      "shareOfA": 1.0000000000000047,
+      "shareOfB": 0.005666118022813971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46037",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2825917075.949695,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.01414873913341572,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46039",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1648821159.7479286,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.008255281326360013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46041",
+      "b": "cd:4600",
+      "intersectionAreaM2": 6333218145.482074,
+      "shareOfA": 0.9999999999999949,
+      "shareOfB": 0.03170901658015809,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46043",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1123191880.229867,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.005623572271596973,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46045",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2981245729.42086,
+      "shareOfA": 0.9999999999999973,
+      "shareOfB": 0.014926435201220422,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46047",
+      "b": "cd:4600",
+      "intersectionAreaM2": 4530313838.629369,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.022682275159729835,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46049",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2605248631.0056944,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.013043901242360507,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46051",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1780702964.129336,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.008915584228563755,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46053",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2728608547.1965384,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.013661536943194975,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46055",
+      "b": "cd:4600",
+      "intersectionAreaM2": 4731733219.601034,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.023690737262894855,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46057",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1393598675.4117217,
+      "shareOfA": 1.0000000000000033,
+      "shareOfB": 0.00697743903488311,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46059",
+      "b": "cd:4600",
+      "intersectionAreaM2": 3730147668.0798464,
+      "shareOfA": 0.9999999999999972,
+      "shareOfB": 0.01867602086909935,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46061",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1127566059.4380121,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.0056454728153410095,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46063",
+      "b": "cd:4600",
+      "intersectionAreaM2": 6936288134.332358,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.03472845406615264,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46065",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2073869572.4841487,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.01038340432121333,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46067",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2109338920.6244137,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.010560991469236867,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46069",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2243561165.409972,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.011233012436707795,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46071",
+      "b": "cd:4600",
+      "intersectionAreaM2": 4846539897.078964,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.02426554879725792,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46073",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1379405294.3465917,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.006906375928389018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46075",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2514575167.824635,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.012589919351741499,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46077",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2237138744.27336,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.01120085680056397,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46079",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1489662955.150065,
+      "shareOfA": 1.0000000000000064,
+      "shareOfB": 0.007458411546647459,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46081",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2072795259.0148287,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.01037802547228875,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1496361668.1072576,
+      "shareOfA": 0.9999999999999937,
+      "shareOfB": 0.007491950514569616,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46085",
+      "b": "cd:4600",
+      "intersectionAreaM2": 4420799560.5371,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.022133961493593285,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46087",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1494080651.0820856,
+      "shareOfA": 0.9999999999999939,
+      "shareOfB": 0.0074805299689624195,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46089",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2982463263.622248,
+      "shareOfA": 1.000000000000003,
+      "shareOfB": 0.01493253112453964,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46091",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2295310649.529675,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.011492110609591178,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46093",
+      "b": "cd:4600",
+      "intersectionAreaM2": 9020420519.465668,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.04516324201082183,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46095",
+      "b": "cd:4600",
+      "intersectionAreaM2": 3395130952.795588,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.01699866658640236,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46097",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1481272057.8949566,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.007416400187797545,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2107890225.3977892,
+      "shareOfA": 1.0000000000000029,
+      "shareOfB": 0.010553738174007583,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46101",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1348876259.6096323,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.006753523832280336,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46102",
+      "b": "cd:4600",
+      "intersectionAreaM2": 5429529227.906943,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.027184446888659845,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "cd:4600",
+      "intersectionAreaM2": 7211715844.2057495,
+      "shareOfA": 1.000000000000004,
+      "shareOfB": 0.03610745943410141,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46105",
+      "b": "cd:4600",
+      "intersectionAreaM2": 7484997716.741332,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.03747572107111278,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46107",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2327508917.904394,
+      "shareOfA": 1.000000000000007,
+      "shareOfB": 0.011653320187769798,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46109",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2941650641.8888884,
+      "shareOfA": 1.0000000000000062,
+      "shareOfB": 0.014728191392432666,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46111",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1477461502.198744,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.007397321581791053,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46115",
+      "b": "cd:4600",
+      "intersectionAreaM2": 3910209321.547515,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.019577549574427464,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46117",
+      "b": "cd:4600",
+      "intersectionAreaM2": 3929456129.454143,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.01967391406669776,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46119",
+      "b": "cd:4600",
+      "intersectionAreaM2": 2771786863.5855026,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.013877721182996927,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46121",
+      "b": "cd:4600",
+      "intersectionAreaM2": 3602295584.03867,
+      "shareOfA": 0.9999999999999989,
+      "shareOfB": 0.018035893881595932,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46123",
+      "b": "cd:4600",
+      "intersectionAreaM2": 4189149486.209311,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.020974141023348675,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46125",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1599824846.7237399,
+      "shareOfA": 0.9999999999999962,
+      "shareOfB": 0.008009967669643653,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46127",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1209857390.238908,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.006057487230892183,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46129",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1928589600.2558234,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.009656019768473877,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46135",
+      "b": "cd:4600",
+      "intersectionAreaM2": 1378550224.4949257,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.006902094783561721,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46137",
+      "b": "cd:4600",
+      "intersectionAreaM2": 5103820966.874,
+      "shareOfA": 0.9999999999999987,
+      "shareOfB": 0.025553697968893726,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46003",
+      "b": "sldu:46021",
+      "intersectionAreaM2": 1846104303.3087888,
+      "shareOfA": 0.9999999999999981,
+      "shareOfB": 0.14348534548076852,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46005",
+      "b": "sldu:46022",
+      "intersectionAreaM2": 3275846149.340071,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.4283618239798676,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46007",
+      "b": "sldu:46027",
+      "intersectionAreaM2": 3083253843.0689907,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.17156469322223522,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46009",
+      "b": "sldu:46019",
+      "intersectionAreaM2": 1506385832.5953238,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.23109732471673244,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46011",
+      "b": "sldu:46007",
+      "intersectionAreaM2": 281512814.97682136,
+      "shareOfA": 0.1350326728632889,
+      "shareOfB": 1.0000000000000024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46011",
+      "b": "sldu:46008",
+      "intersectionAreaM2": 1803262736.062097,
+      "shareOfA": 0.8649673271367103,
+      "shareOfB": 0.2679006106672337,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46013",
+      "b": "sldu:46001",
+      "intersectionAreaM2": 4275904272.632473,
+      "shareOfA": 0.9537738010362721,
+      "shareOfB": 0.3631845659454078,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46013",
+      "b": "sldu:46003",
+      "intersectionAreaM2": 95431352.03522453,
+      "shareOfA": 0.021286707457702274,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46013",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 111807305.01511647,
+      "shareOfA": 0.024939491506024043,
+      "shareOfB": 0.0059907031919011105,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46015",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 2192365342.9660444,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.12233745662858408,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46017",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 1263296313.75569,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.07049393409222969,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46019",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 5870249763.905818,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.15334894113145217,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46021",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 1996458169.2818005,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.10697143917024474,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46023",
+      "b": "sldu:46021",
+      "intersectionAreaM2": 2979098051.938071,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.23154537500253036,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46025",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 2044483570.7700427,
+      "shareOfA": 0.8158975187058514,
+      "shareOfB": 0.22921869626301714,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46025",
+      "b": "sldu:46022",
+      "intersectionAreaM2": 461325705.3911733,
+      "shareOfA": 0.1841024812941481,
+      "shareOfB": 0.060324664712954244,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46027",
+      "b": "sldu:46017",
+      "intersectionAreaM2": 895177680.395139,
+      "shareOfA": 0.8280169176472512,
+      "shareOfB": 0.6720234826628799,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46027",
+      "b": "sldu:46018",
+      "intersectionAreaM2": 185932694.6666648,
+      "shareOfA": 0.17198308235274817,
+      "shareOfB": 0.11884610077194475,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46029",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 1486333300.6133099,
+      "shareOfA": 0.8002027364294132,
+      "shareOfB": 0.16664129086181362,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46029",
+      "b": "sldu:46005",
+      "intersectionAreaM2": 371112610.2135924,
+      "shareOfA": 0.19979726357058758,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46031",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 6551766307.910049,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.17115224500945941,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46033",
+      "b": "sldu:46030",
+      "intersectionAreaM2": 4037955031.614414,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.3818733388748002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46035",
+      "b": "sldu:46020",
+      "intersectionAreaM2": 1131689511.2724288,
+      "shareOfA": 1.0000000000000047,
+      "shareOfB": 0.265106912312672,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46037",
+      "b": "sldu:46001",
+      "intersectionAreaM2": 2825917075.949694,
+      "shareOfA": 0.9999999999999988,
+      "shareOfB": 0.24002629647146967,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46039",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 1648821159.7479286,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.18485873010265716,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46041",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 6333218145.482091,
+      "shareOfA": 0.9999999999999976,
+      "shareOfB": 0.16544309622662243,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46043",
+      "b": "sldu:46021",
+      "intersectionAreaM2": 1123191880.229867,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.08729819582085646,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46045",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 2981245729.42086,
+      "shareOfA": 0.9999999999999973,
+      "shareOfB": 0.1597369537229114,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46047",
+      "b": "sldu:46030",
+      "intersectionAreaM2": 4530313838.629369,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.42843619063693145,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46049",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 2605248631.005691,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.13959080122136627,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46051",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 1780702964.129336,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.1996447502464799,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46053",
+      "b": "sldu:46021",
+      "intersectionAreaM2": 2728608547.1965384,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.21207650043096526,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46055",
+      "b": "sldu:46024",
+      "intersectionAreaM2": 4731733219.601037,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.31092530553689396,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46057",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 1393598675.4117186,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.15624428391538844,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46059",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 3730147668.07986,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.1998635736583336,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46061",
+      "b": "sldu:46019",
+      "intersectionAreaM2": 1127566059.4380133,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.1729819108352665,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46063",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 6936288134.332358,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.18119713531146245,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46065",
+      "b": "sldu:46024",
+      "intersectionAreaM2": 1761580836.6835063,
+      "shareOfA": 0.8494173693736323,
+      "shareOfB": 0.1157546367163824,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46065",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 312288735.80064535,
+      "shareOfA": 0.1505826306263684,
+      "shareOfB": 0.017426205807431667,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46067",
+      "b": "sldu:46019",
+      "intersectionAreaM2": 2109338920.6244137,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.3235974283144591,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46069",
+      "b": "sldu:46024",
+      "intersectionAreaM2": 2023674260.0588536,
+      "shareOfA": 0.9019920166469193,
+      "shareOfB": 0.13297696814551177,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46069",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 219886905.35112205,
+      "shareOfA": 0.09800798335308208,
+      "shareOfB": 0.01227003739723097,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46071",
+      "b": "sldu:46027",
+      "intersectionAreaM2": 4846539897.078954,
+      "shareOfA": 0.999999999999997,
+      "shareOfB": 0.2696810489674199,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46073",
+      "b": "sldu:46020",
+      "intersectionAreaM2": 1379405294.3465931,
+      "shareOfA": 1.0,
+      "shareOfB": 0.32313622665001995,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46075",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 2514575167.8246307,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.1403172749104276,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46077",
+      "b": "sldu:46008",
+      "intersectionAreaM2": 2237138744.273366,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.3323591308978974,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46079",
+      "b": "sldu:46008",
+      "intersectionAreaM2": 1489662955.1500475,
+      "shareOfA": 0.9999999999999947,
+      "shareOfB": 0.2213108535944986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46081",
+      "b": "sldu:46031",
+      "intersectionAreaM2": 2072795259.0148308,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldu:46006",
+      "intersectionAreaM2": 267899643.38976076,
+      "shareOfA": 0.1790340190474301,
+      "shareOfB": 1.0000000000000024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldu:46012",
+      "intersectionAreaM2": 12047033.918347163,
+      "shareOfA": 0.008050883803770071,
+      "shareOfB": 0.47375244311449705,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldu:46013",
+      "intersectionAreaM2": 17783743.02441523,
+      "shareOfA": 0.011884655563858239,
+      "shareOfB": 0.6923367272620569,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldu:46016",
+      "intersectionAreaM2": 1198631247.7747495,
+      "shareOfA": 0.8010304415849453,
+      "shareOfB": 0.36428186333006074,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46085",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 4420799560.537097,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.24668761355677346,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46087",
+      "b": "sldu:46019",
+      "intersectionAreaM2": 1494080651.0820851,
+      "shareOfA": 0.9999999999999937,
+      "shareOfB": 0.22920956497661069,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46089",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 2982463263.622258,
+      "shareOfA": 1.0000000000000064,
+      "shareOfB": 0.15980218994361792,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46091",
+      "b": "sldu:46001",
+      "intersectionAreaM2": 2295310649.529675,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.1949579197305289,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46093",
+      "b": "sldu:46029",
+      "intersectionAreaM2": 8968189549.160522,
+      "shareOfA": 0.994209696743913,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46093",
+      "b": "sldu:46033",
+      "intersectionAreaM2": 52230970.30513671,
+      "shareOfA": 0.00579030325608708,
+      "shareOfB": 0.12696201886242342,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46095",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 3395130952.7955904,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.1894536816222728,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46097",
+      "b": "sldu:46008",
+      "intersectionAreaM2": 1201024125.943627,
+      "shareOfA": 0.8108059012808286,
+      "shareOfB": 0.17842940484037062,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46097",
+      "b": "sldu:46020",
+      "intersectionAreaM2": 280247931.9513329,
+      "shareOfA": 0.18919409871917447,
+      "shareOfB": 0.06565021870538897,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46002",
+      "intersectionAreaM2": 260200460.18168393,
+      "shareOfA": 0.12344118163581366,
+      "shareOfB": 0.9999999999999971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46009",
+      "intersectionAreaM2": 228971075.34907305,
+      "shareOfA": 0.10862571142947616,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46010",
+      "intersectionAreaM2": 32189759.320466906,
+      "shareOfA": 0.015271079552727813,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46011",
+      "intersectionAreaM2": 15974278.494728869,
+      "shareOfA": 0.0075783256178411,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46012",
+      "intersectionAreaM2": 13381930.287407082,
+      "shareOfA": 0.006348494872346475,
+      "shareOfB": 0.5262475568855035,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46013",
+      "intersectionAreaM2": 7902808.510621097,
+      "shareOfA": 0.0037491556322055367,
+      "shareOfB": 0.30766327273794225,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46014",
+      "intersectionAreaM2": 16942108.916165683,
+      "shareOfA": 0.008037472118818955,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46015",
+      "intersectionAreaM2": 41960318.47827743,
+      "shareOfA": 0.0199063110463255,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldu:46025",
+      "intersectionAreaM2": 1490367485.8593585,
+      "shareOfA": 0.7070422680944446,
+      "shareOfB": 0.5249170622415755,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46101",
+      "b": "sldu:46025",
+      "intersectionAreaM2": 1348876259.6096323,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.4750829377584189,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46102",
+      "b": "sldu:46027",
+      "intersectionAreaM2": 5429529227.906948,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.30212092929715084,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldu:46027",
+      "intersectionAreaM2": 4612054389.144769,
+      "shareOfA": 0.6395224782532636,
+      "shareOfB": 0.25663332851319187,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldu:46030",
+      "intersectionAreaM2": 2005800122.140843,
+      "shareOfA": 0.2781307757365968,
+      "shareOfB": 0.1896904704882676,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldu:46032",
+      "intersectionAreaM2": 22518362.013537697,
+      "shareOfA": 0.0031224693956335174,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldu:46033",
+      "intersectionAreaM2": 359159544.5364273,
+      "shareOfA": 0.04980223185374052,
+      "shareOfB": 0.8730379811375769,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldu:46034",
+      "intersectionAreaM2": 95100221.99530217,
+      "shareOfA": 0.01318690642417793,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldu:46035",
+      "intersectionAreaM2": 117083204.37484817,
+      "shareOfA": 0.016235138336588666,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46105",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 7484997716.741332,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.19553111373406223,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46107",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 2327508917.9043894,
+      "shareOfA": 1.000000000000005,
+      "shareOfB": 0.12470933899876185,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46109",
+      "b": "sldu:46001",
+      "intersectionAreaM2": 2376232493.5808263,
+      "shareOfA": 0.8077888175242381,
+      "shareOfB": 0.20183121785259503,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46109",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 565418148.3080468,
+      "shareOfA": 0.19221118247576297,
+      "shareOfB": 0.06339224861063815,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46111",
+      "b": "sldu:46020",
+      "intersectionAreaM2": 1477461502.1987484,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.3461066423319204,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46115",
+      "b": "sldu:46022",
+      "intersectionAreaM2": 3910209321.5475135,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.5113135113071791,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46117",
+      "b": "sldu:46024",
+      "intersectionAreaM2": 3929456129.454144,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.25820714967260255,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46119",
+      "b": "sldu:46024",
+      "intersectionAreaM2": 2771786863.5855103,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.18213593992861232,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46121",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 3602295584.03867,
+      "shareOfA": 0.9999999999999989,
+      "shareOfB": 0.20101379598505006,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46123",
+      "b": "sldu:46021",
+      "intersectionAreaM2": 4189149486.2093167,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.32559458326488055,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46125",
+      "b": "sldu:46016",
+      "intersectionAreaM2": 1318791848.4397242,
+      "shareOfA": 0.8243351459007876,
+      "shareOfB": 0.40080045700960926,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46125",
+      "b": "sldu:46019",
+      "intersectionAreaM2": 281032998.28400874,
+      "shareOfA": 0.17566485409920432,
+      "shareOfB": 0.043113771156930145,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46127",
+      "b": "sldu:46016",
+      "intersectionAreaM2": 772971975.3862206,
+      "shareOfA": 0.6388951141039718,
+      "shareOfB": 0.23491767966033003,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46127",
+      "b": "sldu:46017",
+      "intersectionAreaM2": 436885414.8526838,
+      "shareOfA": 0.3611048858960253,
+      "shareOfB": 0.3279765173371183,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46129",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 1928589600.2558272,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.10333500009286344,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46135",
+      "b": "sldu:46018",
+      "intersectionAreaM2": 1378550224.4949255,
+      "shareOfA": 0.9999999999999994,
+      "shareOfB": 0.8811538992280544,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46137",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 5103820966.874011,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.13332746858693814,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46003",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 1846104303.3087888,
+      "shareOfA": 0.9999999999999981,
+      "shareOfB": 0.14348534548076852,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46005",
+      "b": "sldl:46022",
+      "intersectionAreaM2": 3275846149.340071,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.4283618239798676,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46007",
+      "b": "sldl:46027",
+      "intersectionAreaM2": 3083253843.0689907,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.17156469322223522,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46009",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 1506385832.5953238,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.23109732471673244,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46011",
+      "b": "sldl:46007",
+      "intersectionAreaM2": 281512814.97682136,
+      "shareOfA": 0.1350326728632889,
+      "shareOfB": 1.0000000000000024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46011",
+      "b": "sldl:46008",
+      "intersectionAreaM2": 1803262736.062097,
+      "shareOfA": 0.8649673271367103,
+      "shareOfB": 0.2679006106672337,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46013",
+      "b": "sldl:46001",
+      "intersectionAreaM2": 4275904272.632473,
+      "shareOfA": 0.9537738010362721,
+      "shareOfB": 0.3631845659454078,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46013",
+      "b": "sldl:46003",
+      "intersectionAreaM2": 95431352.03522453,
+      "shareOfA": 0.021286707457702274,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46013",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 111807305.01511647,
+      "shareOfA": 0.024939491506024043,
+      "shareOfB": 0.0059907031919011105,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46015",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 2192365342.9660444,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.23119318124820945,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46017",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 1263296313.75569,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.13321935350482214,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46019",
+      "b": "sldl:4628B",
+      "intersectionAreaM2": 5870249763.905818,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.38515153247680917,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46021",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 1996458169.2818005,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.10697143917024474,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46023",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 2979098051.938071,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.23154537500253036,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46025",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 2044483570.7700427,
+      "shareOfA": 0.8158975187058514,
+      "shareOfB": 0.22921869626301714,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46025",
+      "b": "sldl:46022",
+      "intersectionAreaM2": 461325705.3911733,
+      "shareOfA": 0.1841024812941481,
+      "shareOfB": 0.060324664712954244,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46027",
+      "b": "sldl:46017",
+      "intersectionAreaM2": 895177680.395139,
+      "shareOfA": 0.8280169176472512,
+      "shareOfB": 0.6720234826628799,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46027",
+      "b": "sldl:46018",
+      "intersectionAreaM2": 185932694.6666648,
+      "shareOfA": 0.17198308235274817,
+      "shareOfB": 0.11884610077194475,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46029",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 1486333300.6133099,
+      "shareOfA": 0.8002027364294132,
+      "shareOfB": 0.16664129086181362,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46029",
+      "b": "sldl:46005",
+      "intersectionAreaM2": 371112610.2135924,
+      "shareOfA": 0.19979726357058758,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46031",
+      "b": "sldl:4628A",
+      "intersectionAreaM2": 6551766307.910049,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.28437796605141513,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46033",
+      "b": "sldl:46030",
+      "intersectionAreaM2": 4037955031.614414,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.3818733388748002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46035",
+      "b": "sldl:46020",
+      "intersectionAreaM2": 1131689511.2724288,
+      "shareOfA": 1.0000000000000047,
+      "shareOfB": 0.265106912312672,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46037",
+      "b": "sldl:46001",
+      "intersectionAreaM2": 2825917075.949694,
+      "shareOfA": 0.9999999999999988,
+      "shareOfB": 0.24002629647146967,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46039",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 1648821159.7479286,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.18485873010265716,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46041",
+      "b": "sldl:4628A",
+      "intersectionAreaM2": 6333218145.482091,
+      "shareOfA": 0.9999999999999976,
+      "shareOfB": 0.27489193144720436,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46043",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 1123191880.229867,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.08729819582085646,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46045",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 2981245729.42086,
+      "shareOfA": 0.9999999999999973,
+      "shareOfB": 0.1597369537229114,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46047",
+      "b": "sldl:46030",
+      "intersectionAreaM2": 4530313838.629369,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.42843619063693145,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46049",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 2605248631.005691,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.13959080122136627,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46051",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 1780702964.129336,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.1996447502464799,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46053",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 2728608547.1965384,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.21207650043096526,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46055",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 4731733219.601037,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.31092530553689396,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46057",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 1393598675.4117186,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.15624428391538844,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46059",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 3730147668.07986,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.1998635736583336,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46061",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 1127566059.4380133,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.1729819108352665,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46063",
+      "b": "sldl:4628B",
+      "intersectionAreaM2": 6936288134.332341,
+      "shareOfA": 0.9999999999999979,
+      "shareOfB": 0.4550951172580585,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46065",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 1761580836.6835063,
+      "shareOfA": 0.8494173693736323,
+      "shareOfB": 0.1157546367163824,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46065",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 312288735.80064535,
+      "shareOfA": 0.1505826306263684,
+      "shareOfB": 0.03293202318189128,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46067",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 2109338920.6244137,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.3235974283144591,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46069",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 2023674260.0588536,
+      "shareOfA": 0.9019920166469193,
+      "shareOfB": 0.13297696814551177,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46069",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 219886905.35112205,
+      "shareOfA": 0.09800798335308208,
+      "shareOfB": 0.023187902201634646,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46071",
+      "b": "sldl:46027",
+      "intersectionAreaM2": 4846539897.078954,
+      "shareOfA": 0.999999999999997,
+      "shareOfB": 0.2696810489674199,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46073",
+      "b": "sldl:46020",
+      "intersectionAreaM2": 1379405294.3465931,
+      "shareOfA": 1.0,
+      "shareOfB": 0.32313622665001995,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46075",
+      "b": "sldl:4626A",
+      "intersectionAreaM2": 1440383289.118121,
+      "shareOfA": 0.5728137728983466,
+      "shareOfB": 0.17070582518794103,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46075",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 1074191878.7065113,
+      "shareOfA": 0.4271862271016532,
+      "shareOfB": 0.1132775787146693,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46077",
+      "b": "sldl:46008",
+      "intersectionAreaM2": 2237138744.273366,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.3323591308978974,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46079",
+      "b": "sldl:46008",
+      "intersectionAreaM2": 1489662955.1500475,
+      "shareOfA": 0.9999999999999947,
+      "shareOfB": 0.2213108535944986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46081",
+      "b": "sldl:46031",
+      "intersectionAreaM2": 2072795259.0148308,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldl:46006",
+      "intersectionAreaM2": 267899643.38976076,
+      "shareOfA": 0.1790340190474301,
+      "shareOfB": 1.0000000000000024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldl:46012",
+      "intersectionAreaM2": 12047033.918347163,
+      "shareOfA": 0.008050883803770071,
+      "shareOfB": 0.47375244311449705,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldl:46013",
+      "intersectionAreaM2": 17783743.02441523,
+      "shareOfA": 0.011884655563858239,
+      "shareOfB": 0.6923367272620569,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46083",
+      "b": "sldl:46016",
+      "intersectionAreaM2": 1198631247.7747495,
+      "shareOfA": 0.8010304415849453,
+      "shareOfB": 0.36428186333006074,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46085",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 4420799560.537097,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.4661899611487735,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46087",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 1494080651.0820851,
+      "shareOfA": 0.9999999999999937,
+      "shareOfB": 0.22920956497661069,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46089",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 2982463263.622258,
+      "shareOfA": 1.0000000000000064,
+      "shareOfB": 0.15980218994361792,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46091",
+      "b": "sldl:46001",
+      "intersectionAreaM2": 2295310649.529675,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.1949579197305289,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46093",
+      "b": "sldl:46029",
+      "intersectionAreaM2": 8968189549.160522,
+      "shareOfA": 0.994209696743913,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46093",
+      "b": "sldl:46033",
+      "intersectionAreaM2": 52230970.30513671,
+      "shareOfA": 0.00579030325608708,
+      "shareOfB": 0.12696201886242342,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46095",
+      "b": "sldl:4626A",
+      "intersectionAreaM2": 3395130952.7955904,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.4023711155889169,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46097",
+      "b": "sldl:46008",
+      "intersectionAreaM2": 1201024125.943627,
+      "shareOfA": 0.8108059012808286,
+      "shareOfB": 0.17842940484037062,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46097",
+      "b": "sldl:46020",
+      "intersectionAreaM2": 280247931.9513329,
+      "shareOfA": 0.18919409871917447,
+      "shareOfB": 0.06565021870538897,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46002",
+      "intersectionAreaM2": 260200460.18168393,
+      "shareOfA": 0.12344118163581366,
+      "shareOfB": 0.9999999999999971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46009",
+      "intersectionAreaM2": 228971075.34907305,
+      "shareOfA": 0.10862571142947616,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46010",
+      "intersectionAreaM2": 32189759.320466906,
+      "shareOfA": 0.015271079552727813,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46011",
+      "intersectionAreaM2": 15974278.494728869,
+      "shareOfA": 0.0075783256178411,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46012",
+      "intersectionAreaM2": 13381930.287407082,
+      "shareOfA": 0.006348494872346475,
+      "shareOfB": 0.5262475568855035,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46013",
+      "intersectionAreaM2": 7902808.510621097,
+      "shareOfA": 0.0037491556322055367,
+      "shareOfB": 0.30766327273794225,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46014",
+      "intersectionAreaM2": 16942108.916165683,
+      "shareOfA": 0.008037472118818955,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46015",
+      "intersectionAreaM2": 41960318.47827743,
+      "shareOfA": 0.0199063110463255,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46099",
+      "b": "sldl:46025",
+      "intersectionAreaM2": 1490367485.8593585,
+      "shareOfA": 0.7070422680944446,
+      "shareOfB": 0.5249170622415755,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46101",
+      "b": "sldl:46025",
+      "intersectionAreaM2": 1348876259.6096323,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.4750829377584189,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46102",
+      "b": "sldl:46027",
+      "intersectionAreaM2": 5429529227.906948,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.30212092929715084,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldl:46027",
+      "intersectionAreaM2": 4612054389.144769,
+      "shareOfA": 0.6395224782532636,
+      "shareOfB": 0.25663332851319187,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldl:46030",
+      "intersectionAreaM2": 2005800122.140843,
+      "shareOfA": 0.2781307757365968,
+      "shareOfB": 0.1896904704882676,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldl:46032",
+      "intersectionAreaM2": 22518362.013537697,
+      "shareOfA": 0.0031224693956335174,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldl:46033",
+      "intersectionAreaM2": 359159544.5364273,
+      "shareOfA": 0.04980223185374052,
+      "shareOfB": 0.8730379811375769,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldl:46034",
+      "intersectionAreaM2": 95100221.99530217,
+      "shareOfA": 0.01318690642417793,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46103",
+      "b": "sldl:46035",
+      "intersectionAreaM2": 117083204.37484817,
+      "shareOfA": 0.016235138336588666,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46105",
+      "b": "sldl:4628A",
+      "intersectionAreaM2": 5050132507.595336,
+      "shareOfA": 0.6747006076301065,
+      "shareOfB": 0.21919988340643537,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46105",
+      "b": "sldl:4628B",
+      "intersectionAreaM2": 2434865209.146007,
+      "shareOfA": 0.3252993923698951,
+      "shareOfB": 0.1597533502651314,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46107",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 2327508917.9043894,
+      "shareOfA": 1.000000000000005,
+      "shareOfB": 0.12470933899876185,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46109",
+      "b": "sldl:46001",
+      "intersectionAreaM2": 2376232493.5808263,
+      "shareOfA": 0.8077888175242381,
+      "shareOfB": 0.20183121785259503,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46109",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 565418148.3080468,
+      "shareOfA": 0.19221118247576297,
+      "shareOfB": 0.06339224861063815,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46111",
+      "b": "sldl:46020",
+      "intersectionAreaM2": 1477461502.1987484,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.3461066423319204,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46115",
+      "b": "sldl:46022",
+      "intersectionAreaM2": 3910209321.5475135,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.5113135113071791,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46117",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 3929456129.454144,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.25820714967260255,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46119",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 2771786863.5855103,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.18213593992861232,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46121",
+      "b": "sldl:4626A",
+      "intersectionAreaM2": 3602295584.03867,
+      "shareOfA": 0.9999999999999989,
+      "shareOfB": 0.4269230592231403,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46123",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 4189149486.2093167,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.32559458326488055,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46125",
+      "b": "sldl:46016",
+      "intersectionAreaM2": 1318791848.4397242,
+      "shareOfA": 0.8243351459007876,
+      "shareOfB": 0.40080045700960926,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46125",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 281032998.28400874,
+      "shareOfA": 0.17566485409920432,
+      "shareOfB": 0.043113771156930145,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46127",
+      "b": "sldl:46016",
+      "intersectionAreaM2": 772971975.3862206,
+      "shareOfA": 0.6388951141039718,
+      "shareOfB": 0.23491767966033003,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46127",
+      "b": "sldl:46017",
+      "intersectionAreaM2": 436885414.8526838,
+      "shareOfA": 0.3611048858960253,
+      "shareOfB": 0.3279765173371183,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46129",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 1928589600.2558272,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.10333500009286344,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46135",
+      "b": "sldl:46018",
+      "intersectionAreaM2": 1378550224.4949255,
+      "shareOfA": 0.9999999999999994,
+      "shareOfB": 0.8811538992280544,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:46137",
+      "b": "sldl:4628A",
+      "intersectionAreaM2": 5103820966.874011,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.22153021909494594,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46001",
+      "intersectionAreaM2": 11773364491.69265,
+      "shareOfA": 0.05894662102199073,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46002",
+      "intersectionAreaM2": 260200460.18168387,
+      "shareOfA": 0.0013027659108744863,
+      "shareOfB": 0.9999999999999969,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46003",
+      "intersectionAreaM2": 95431352.03522453,
+      "shareOfA": 0.00047780358333472526,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46004",
+      "intersectionAreaM2": 8919357818.980364,
+      "shareOfA": 0.044657243516579195,
+      "shareOfB": 0.9999999999999923,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46005",
+      "intersectionAreaM2": 371112610.2135921,
+      "shareOfA": 0.0018580784113307704,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46006",
+      "intersectionAreaM2": 267899643.38976026,
+      "shareOfA": 0.0013413140111278663,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46007",
+      "intersectionAreaM2": 281512814.9768207,
+      "shareOfA": 0.0014094721376358835,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46008",
+      "intersectionAreaM2": 6731088561.429116,
+      "shareOfA": 0.03370106538160655,
+      "shareOfB": 0.9999999999999971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46009",
+      "intersectionAreaM2": 228971075.34907365,
+      "shareOfA": 0.001146407317391994,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46010",
+      "intersectionAreaM2": 32189759.320466906,
+      "shareOfA": 0.00016116697523392969,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46011",
+      "intersectionAreaM2": 15974278.494728865,
+      "shareOfA": 7.997966436806897e-05,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46012",
+      "intersectionAreaM2": 25428964.20575423,
+      "shareOfA": 0.0001273171757381699,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46013",
+      "intersectionAreaM2": 25686551.53503632,
+      "shareOfA": 0.0001286068582830339,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46014",
+      "intersectionAreaM2": 16942108.916165676,
+      "shareOfA": 8.482537632290093e-05,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46015",
+      "intersectionAreaM2": 41960318.47827743,
+      "shareOfA": 0.00021008599479327363,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46016",
+      "intersectionAreaM2": 3290395071.6007094,
+      "shareOfA": 0.0164742772921989,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46017",
+      "intersectionAreaM2": 1332063095.247824,
+      "shareOfA": 0.006669344052701163,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46018",
+      "intersectionAreaM2": 1564482919.1615925,
+      "shareOfA": 0.007833018488153305,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46019",
+      "intersectionAreaM2": 6518404462.023865,
+      "shareOfA": 0.03263620333525684,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46020",
+      "intersectionAreaM2": 4268804239.7690973,
+      "shareOfA": 0.021372954682265112,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46021",
+      "intersectionAreaM2": 12866152268.88256,
+      "shareOfA": 0.06441796670273728,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46022",
+      "intersectionAreaM2": 7647381176.278753,
+      "shareOfA": 0.0382887389859447,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46023",
+      "intersectionAreaM2": 18663469284.585754,
+      "shareOfA": 0.09344384535536224,
+      "shareOfB": 0.9999999999999978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46024",
+      "intersectionAreaM2": 15218231309.383034,
+      "shareOfA": 0.07619430403706334,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46025",
+      "intersectionAreaM2": 2839243745.468992,
+      "shareOfA": 0.014215462807705566,
+      "shareOfB": 0.999999999999995,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46026",
+      "intersectionAreaM2": 17920638563.069412,
+      "shareOfA": 0.08972465692323543,
+      "shareOfB": 0.999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46027",
+      "intersectionAreaM2": 17971377357.199657,
+      "shareOfA": 0.08997869479582647,
+      "shareOfB": 0.9999999999999977,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46028",
+      "intersectionAreaM2": 38280341035.24571,
+      "shareOfA": 0.1916611650976563,
+      "shareOfB": 0.9999999999999982,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46029",
+      "intersectionAreaM2": 8968189549.160496,
+      "shareOfA": 0.04490173314355094,
+      "shareOfB": 0.9999999999999966,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46030",
+      "intersectionAreaM2": 10574068992.384583,
+      "shareOfA": 0.052942014833082356,
+      "shareOfB": 0.9999999999999951,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46031",
+      "intersectionAreaM2": 2072795259.0148282,
+      "shareOfA": 0.010378025472288749,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46032",
+      "intersectionAreaM2": 22518362.013537697,
+      "shareOfA": 0.0001127444370370599,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46033",
+      "intersectionAreaM2": 411390514.84156394,
+      "shareOfA": 0.002059740933657351,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46034",
+      "intersectionAreaM2": 95100221.99530217,
+      "shareOfA": 0.0004761456887722939,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldu:46035",
+      "intersectionAreaM2": 117083204.37484817,
+      "shareOfA": 0.0005862095988953974,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46001",
+      "intersectionAreaM2": 11773364491.69265,
+      "shareOfA": 0.05894662102199073,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46002",
+      "intersectionAreaM2": 260200460.18168387,
+      "shareOfA": 0.0013027659108744863,
+      "shareOfB": 0.9999999999999969,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46003",
+      "intersectionAreaM2": 95431352.03522453,
+      "shareOfA": 0.00047780358333472526,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 8919357818.980364,
+      "shareOfA": 0.044657243516579195,
+      "shareOfB": 0.9999999999999923,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46005",
+      "intersectionAreaM2": 371112610.2135921,
+      "shareOfA": 0.0018580784113307704,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46006",
+      "intersectionAreaM2": 267899643.38976026,
+      "shareOfA": 0.0013413140111278663,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46007",
+      "intersectionAreaM2": 281512814.9768207,
+      "shareOfA": 0.0014094721376358835,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46008",
+      "intersectionAreaM2": 6731088561.429116,
+      "shareOfA": 0.03370106538160655,
+      "shareOfB": 0.9999999999999971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46009",
+      "intersectionAreaM2": 228971075.34907365,
+      "shareOfA": 0.001146407317391994,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46010",
+      "intersectionAreaM2": 32189759.320466906,
+      "shareOfA": 0.00016116697523392969,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46011",
+      "intersectionAreaM2": 15974278.494728865,
+      "shareOfA": 7.997966436806897e-05,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46012",
+      "intersectionAreaM2": 25428964.20575423,
+      "shareOfA": 0.0001273171757381699,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46013",
+      "intersectionAreaM2": 25686551.53503632,
+      "shareOfA": 0.0001286068582830339,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46014",
+      "intersectionAreaM2": 16942108.916165676,
+      "shareOfA": 8.482537632290093e-05,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46015",
+      "intersectionAreaM2": 41960318.47827743,
+      "shareOfA": 0.00021008599479327363,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46016",
+      "intersectionAreaM2": 3290395071.6007094,
+      "shareOfA": 0.0164742772921989,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46017",
+      "intersectionAreaM2": 1332063095.247824,
+      "shareOfA": 0.006669344052701163,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46018",
+      "intersectionAreaM2": 1564482919.1615925,
+      "shareOfA": 0.007833018488153305,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 6518404462.023865,
+      "shareOfA": 0.03263620333525684,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46020",
+      "intersectionAreaM2": 4268804239.7690973,
+      "shareOfA": 0.021372954682265112,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 12866152268.88256,
+      "shareOfA": 0.06441796670273728,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46022",
+      "intersectionAreaM2": 7647381176.278753,
+      "shareOfA": 0.0382887389859447,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 18663469284.585754,
+      "shareOfA": 0.09344384535536224,
+      "shareOfB": 0.9999999999999978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 15218231309.383034,
+      "shareOfA": 0.07619430403706334,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46025",
+      "intersectionAreaM2": 2839243745.468992,
+      "shareOfA": 0.014215462807705566,
+      "shareOfB": 0.999999999999995,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46027",
+      "intersectionAreaM2": 17971377357.199657,
+      "shareOfA": 0.08997869479582647,
+      "shareOfB": 0.9999999999999977,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46029",
+      "intersectionAreaM2": 8968189549.160496,
+      "shareOfA": 0.04490173314355094,
+      "shareOfB": 0.9999999999999966,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46030",
+      "intersectionAreaM2": 10574068992.384583,
+      "shareOfA": 0.052942014833082356,
+      "shareOfB": 0.9999999999999951,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46031",
+      "intersectionAreaM2": 2072795259.0148282,
+      "shareOfA": 0.010378025472288749,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46032",
+      "intersectionAreaM2": 22518362.013537697,
+      "shareOfA": 0.0001127444370370599,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46033",
+      "intersectionAreaM2": 411390514.84156394,
+      "shareOfA": 0.002059740933657351,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46034",
+      "intersectionAreaM2": 95100221.99530217,
+      "shareOfA": 0.0004761456887722939,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:46035",
+      "intersectionAreaM2": 117083204.37484817,
+      "shareOfA": 0.0005862095988953974,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:4626A",
+      "intersectionAreaM2": 8437809825.952389,
+      "shareOfA": 0.04224623967235529,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 9482828737.117144,
+      "shareOfA": 0.047478417250880756,
+      "shareOfB": 1.0000000000000038,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:4628A",
+      "intersectionAreaM2": 23038937927.86146,
+      "shareOfA": 0.1153508450147006,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:4600",
+      "b": "sldl:4628B",
+      "intersectionAreaM2": 15241403107.384186,
+      "shareOfA": 0.0763103200829554,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46001",
+      "b": "sldl:46001",
+      "intersectionAreaM2": 11773364491.69269,
+      "shareOfA": 1.0000000000000033,
+      "shareOfB": 1.0000000000000033,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46002",
+      "b": "sldl:46002",
+      "intersectionAreaM2": 260200460.1816841,
+      "shareOfA": 0.9999999999999978,
+      "shareOfB": 0.9999999999999978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46003",
+      "b": "sldl:46003",
+      "intersectionAreaM2": 95431352.03522457,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46004",
+      "b": "sldl:46004",
+      "intersectionAreaM2": 8919357818.980345,
+      "shareOfA": 0.9999999999999901,
+      "shareOfB": 0.9999999999999901,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46005",
+      "b": "sldl:46005",
+      "intersectionAreaM2": 371112610.2135926,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46006",
+      "b": "sldl:46006",
+      "intersectionAreaM2": 267899643.38976055,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46007",
+      "b": "sldl:46007",
+      "intersectionAreaM2": 281512814.97682065,
+      "shareOfA": 1.0,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46008",
+      "b": "sldl:46008",
+      "intersectionAreaM2": 6731088561.429125,
+      "shareOfA": 0.9999999999999984,
+      "shareOfB": 0.9999999999999984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46009",
+      "b": "sldl:46009",
+      "intersectionAreaM2": 228971075.34907296,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46010",
+      "b": "sldl:46010",
+      "intersectionAreaM2": 32189759.320466887,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46011",
+      "b": "sldl:46011",
+      "intersectionAreaM2": 15974278.49472888,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46012",
+      "b": "sldl:46012",
+      "intersectionAreaM2": 25428964.20575425,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46013",
+      "b": "sldl:46013",
+      "intersectionAreaM2": 25686551.535036344,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46014",
+      "b": "sldl:46014",
+      "intersectionAreaM2": 16942108.916165672,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46015",
+      "b": "sldl:46015",
+      "intersectionAreaM2": 41960318.478277385,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46016",
+      "b": "sldl:46016",
+      "intersectionAreaM2": 3290395071.600681,
+      "shareOfA": 0.9999999999999959,
+      "shareOfB": 0.9999999999999959,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46017",
+      "b": "sldl:46017",
+      "intersectionAreaM2": 1332063095.247816,
+      "shareOfA": 0.9999999999999932,
+      "shareOfB": 0.9999999999999932,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46018",
+      "b": "sldl:46018",
+      "intersectionAreaM2": 1564482919.1615913,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46019",
+      "b": "sldl:46019",
+      "intersectionAreaM2": 6518404462.023856,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46020",
+      "b": "sldl:46020",
+      "intersectionAreaM2": 4268804239.769098,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46021",
+      "b": "sldl:46021",
+      "intersectionAreaM2": 12866152268.882643,
+      "shareOfA": 1.000000000000006,
+      "shareOfB": 1.000000000000006,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46022",
+      "b": "sldl:46022",
+      "intersectionAreaM2": 7647381176.278787,
+      "shareOfA": 1.0000000000000047,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46023",
+      "b": "sldl:46023",
+      "intersectionAreaM2": 18663469284.5857,
+      "shareOfA": 0.9999999999999949,
+      "shareOfB": 0.9999999999999949,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46024",
+      "b": "sldl:46024",
+      "intersectionAreaM2": 15218231309.383047,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46025",
+      "b": "sldl:46025",
+      "intersectionAreaM2": 2839243745.4690003,
+      "shareOfA": 0.9999999999999978,
+      "shareOfB": 0.9999999999999978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46026",
+      "b": "sldl:4626A",
+      "intersectionAreaM2": 8437809825.952378,
+      "shareOfA": 0.4708431452515793,
+      "shareOfB": 0.9999999999999979,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46026",
+      "b": "sldl:4626B",
+      "intersectionAreaM2": 9482828737.117128,
+      "shareOfA": 0.529156854748422,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46027",
+      "b": "sldl:46027",
+      "intersectionAreaM2": 17971377357.1997,
+      "shareOfA": 1.0,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46028",
+      "b": "sldl:4628A",
+      "intersectionAreaM2": 23038937927.861378,
+      "shareOfA": 0.6018477710699803,
+      "shareOfB": 0.999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46028",
+      "b": "sldl:4628B",
+      "intersectionAreaM2": 15241403107.384186,
+      "shareOfA": 0.39815222893001395,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46029",
+      "b": "sldl:46029",
+      "intersectionAreaM2": 8968189549.160534,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46030",
+      "b": "sldl:46030",
+      "intersectionAreaM2": 10574068992.384651,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46031",
+      "b": "sldl:46031",
+      "intersectionAreaM2": 2072795259.0148325,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46032",
+      "b": "sldl:46032",
+      "intersectionAreaM2": 22518362.01353768,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46033",
+      "b": "sldl:46033",
+      "intersectionAreaM2": 411390514.84156466,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46034",
+      "b": "sldl:46034",
+      "intersectionAreaM2": 95100221.9953022,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:46035",
+      "b": "sldl:46035",
+      "intersectionAreaM2": 117083204.37484816,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    }
+  ],
+  "geometryRepairs": [],
+  "coverageResiduals": [],
+  "sameLayerIntersections": [],
+  "inputFiles": {
+    "state": "geography/regions/sd/state.geojson.gz",
+    "county": "geography/regions/sd/county.geojson.gz",
+    "cd": "geography/regions/sd/cd.geojson.gz",
+    "sldu": "geography/regions/sd/sldu.geojson.gz",
+    "sldl": "geography/regions/sd/sldl.geojson.gz"
+  },
+  "sourceIds": [
+    "census-cd-46-count",
+    "census-cd-46-page-0",
+    "census-cd-metadata",
+    "census-county-46-count",
+    "census-county-46-page-0",
+    "census-county-metadata",
+    "census-sldl-46-count",
+    "census-sldl-46-page-0",
+    "census-sldl-metadata",
+    "census-sldu-46-count",
+    "census-sldu-46-page-0",
+    "census-sldu-metadata",
+    "census-state-46-count",
+    "census-state-46-page-0",
+    "census-state-metadata"
+  ]
+}

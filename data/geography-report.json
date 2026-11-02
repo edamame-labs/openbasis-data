@@ -1,0 +1,2236 @@
+{
+  "schemaVersion": 1,
+  "measure": "polygon-area-including-water",
+  "populationOverlap": "not-calculated",
+  "geometryVintage": "2026-01-01",
+  "congress": "119th",
+  "stateLegislativePlan": "Census 2024 SLD",
+  "states": 50,
+  "analyticalCounts": {
+    "state": 50,
+    "county": 3143,
+    "cd": 438,
+    "sldu": 1947,
+    "sldl": 4838,
+    "sldl_floterial": 39
+  },
+  "intersectionPairs": 47181,
+  "geometryRepairs": 23,
+  "coverageResiduals": 89,
+  "sameLayerIntersections": 0,
+  "linkage": {
+    "officials": 7855,
+    "matched": 7855,
+    "unmatched": 0,
+    "matchedByLayer": {
+      "cd": 433,
+      "state": 100,
+      "sldu": 1962,
+      "sldl": 5305,
+      "sldl_floterial": 55
+    },
+    "unmatchedByReason": {}
+  },
+  "stateReports": [
+    {
+      "state": "AK",
+      "layerCounts": {
+        "state": 1,
+        "county": 30,
+        "cd": 1,
+        "sldu": 20,
+        "sldl": 40
+      },
+      "files": {
+        "state": "geography/regions/ak/state.geojson.gz",
+        "county": "geography/regions/ak/county.geojson.gz",
+        "cd": "geography/regions/ak/cd.geojson.gz",
+        "sldu": "geography/regions/ak/sldu.geojson.gz",
+        "sldl": "geography/regions/ak/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ak.json",
+      "intersectionPairs": 339,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "AL",
+      "layerCounts": {
+        "state": 1,
+        "county": 67,
+        "cd": 7,
+        "sldu": 35,
+        "sldl": 105
+      },
+      "files": {
+        "state": "geography/regions/al/state.geojson.gz",
+        "county": "geography/regions/al/county.geojson.gz",
+        "cd": "geography/regions/al/cd.geojson.gz",
+        "sldu": "geography/regions/al/sldu.geojson.gz",
+        "sldl": "geography/regions/al/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/al.json",
+      "intersectionPairs": 986,
+      "repairedGeometries": 4,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "county:01095",
+          "reason": "Ring Self-intersection[895413.48213007 1321080.2242462]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "d426b912f35616eff8dc47ca38e72f7bbafa8485a4c0a049d6321ca56b5b92f4",
+          "projectedBeforeSha256": "f98c3084e4ef8da82d3f20d0b21cc6347ca9df59d4ce75d494a5c0838ff27020",
+          "projectedAfterSha256": "5798c5120031bcf85408ddf31a8e10edd013a5df05925e7b82826aa6f4151060",
+          "beforeAreaM2": 1614029321.7372968,
+          "afterAreaM2": 1614029321.7372966
+        },
+        {
+          "key": "cd:0104",
+          "reason": "Ring Self-intersection[895413.48213007 1321080.2242462]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "6390d9ead0741c169f87049a4e5dee7d079c6b6bce58a426fba7267ba6c33a9b",
+          "projectedBeforeSha256": "b241a27ee5720fdb8121cd688b6bd4d491c5a10e4c2eef45bdead79fa281e336",
+          "projectedAfterSha256": "a8e830239e2a7e3dc68853d6624508d57d6024a5738f1b6876efa2dbc7eaf903",
+          "beforeAreaM2": 22930484650.255516,
+          "afterAreaM2": 22930484650.25542
+        },
+        {
+          "key": "sldu:01009",
+          "reason": "Ring Self-intersection[895413.48213007 1321080.2242462]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "fae677447bf41c10e3f21d2b7495f72eec998b66679fa9cd2b01df842a0491e1",
+          "projectedBeforeSha256": "0df24e2daafcdf296149bc9160aa87d15e29b6883f233f1aad3f4217277fe739",
+          "projectedAfterSha256": "b4d0a44c4ed01e91cc964d17c130ec3d63c8fbb8f2c25af13130cdef35c4048d",
+          "beforeAreaM2": 2507076639.7865696,
+          "afterAreaM2": 2507076639.7865877
+        },
+        {
+          "key": "sldl:01027",
+          "reason": "Ring Self-intersection[895413.48213007 1321080.2242462]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "6704809b3ee6e583978702922c872e338d04ddba058c2315349afbe26efa110f",
+          "projectedBeforeSha256": "48892b1b5986855da435c5b79035018a370d9a4c5b931a6006f62e195b1f059e",
+          "projectedAfterSha256": "b3f7c5e38dd70eff1cfb1c355f6190a822892723fd8bb5e3d20b5c3fe75e4359",
+          "beforeAreaM2": 1198430024.8095388,
+          "afterAreaM2": 1198430024.8095424
+        }
+      ]
+    },
+    {
+      "state": "AR",
+      "layerCounts": {
+        "state": 1,
+        "county": 75,
+        "cd": 4,
+        "sldu": 35,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/ar/state.geojson.gz",
+        "county": "geography/regions/ar/county.geojson.gz",
+        "cd": "geography/regions/ar/cd.geojson.gz",
+        "sldu": "geography/regions/ar/sldu.geojson.gz",
+        "sldl": "geography/regions/ar/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ar.json",
+      "intersectionPairs": 1010,
+      "repairedGeometries": 1,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "sldl:05042",
+          "reason": "Ring Self-intersection[319830.905335873 1391839.25460646]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "42897df8461f671dba4636659159a2ec8fb1ff0fb988aad636d38e0f64851123",
+          "projectedBeforeSha256": "d844b5a8282355a7321e3db3553c35a0b935c4455d67005ffcb7a8865828acb4",
+          "projectedAfterSha256": "4ca99240ce91a0f0f37dbe50dd7ac6660f24bac0f76ef085f16a04c4a26d5519",
+          "beforeAreaM2": 1176309908.5636647,
+          "afterAreaM2": 1176309908.563663
+        }
+      ]
+    },
+    {
+      "state": "AZ",
+      "layerCounts": {
+        "state": 1,
+        "county": 15,
+        "cd": 9,
+        "sldu": 30,
+        "sldl": 30
+      },
+      "files": {
+        "state": "geography/regions/az/state.geojson.gz",
+        "county": "geography/regions/az/county.geojson.gz",
+        "cd": "geography/regions/az/cd.geojson.gz",
+        "sldu": "geography/regions/az/sldu.geojson.gz",
+        "sldl": "geography/regions/az/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/az.json",
+      "intersectionPairs": 400,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "CA",
+      "layerCounts": {
+        "state": 1,
+        "county": 58,
+        "cd": 52,
+        "sldu": 40,
+        "sldl": 80
+      },
+      "files": {
+        "state": "geography/regions/ca/state.geojson.gz",
+        "county": "geography/regions/ca/county.geojson.gz",
+        "cd": "geography/regions/ca/cd.geojson.gz",
+        "sldu": "geography/regions/ca/sldu.geojson.gz",
+        "sldl": "geography/regions/ca/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ca.json",
+      "intersectionPairs": 1256,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "CO",
+      "layerCounts": {
+        "state": 1,
+        "county": 64,
+        "cd": 8,
+        "sldu": 35,
+        "sldl": 65
+      },
+      "files": {
+        "state": "geography/regions/co/state.geojson.gz",
+        "county": "geography/regions/co/county.geojson.gz",
+        "cd": "geography/regions/co/cd.geojson.gz",
+        "sldu": "geography/regions/co/sldu.geojson.gz",
+        "sldl": "geography/regions/co/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/co.json",
+      "intersectionPairs": 820,
+      "repairedGeometries": 2,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "sldu:08013",
+          "reason": "Ring Self-intersection[-735951.859150136 1964060.11460597]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "e22ae41415a5d61d8d5795cbad01bec373dd0417ffb2f988c896f2c2c0261f90",
+          "projectedBeforeSha256": "3fa6fcd232036a02a94380ee7cebfc7b544105f0769e91055501b26d94591589",
+          "projectedAfterSha256": "ea5e6895973e8fdd5ebd756662b06a588674202764121658edeab838eae11363",
+          "beforeAreaM2": 499483577.0211998,
+          "afterAreaM2": 499483577.0212011
+        },
+        {
+          "key": "sldl:08058",
+          "reason": "Ring Self-intersection[-1116115.8216032 1663652.43507349]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "14ec3d035fc20eb460cd37a236aef85dcf95f562d8e674fafc8fa3e34dd6b7b8",
+          "projectedBeforeSha256": "dd18dfb9f51ad8430de4f46cf4f516f77bccac27ff1a8aad5d0a942cffd70cd2",
+          "projectedAfterSha256": "8648d798980304a8d786dedd0964e9ef6fc48952e76e268f1a70e26514c1ce2c",
+          "beforeAreaM2": 27483698587.41641,
+          "afterAreaM2": 27483698587.416504
+        }
+      ]
+    },
+    {
+      "state": "CT",
+      "layerCounts": {
+        "state": 1,
+        "county": 9,
+        "cd": 6,
+        "sldu": 37,
+        "sldl": 152
+      },
+      "files": {
+        "state": "geography/regions/ct/state.geojson.gz",
+        "county": "geography/regions/ct/county.geojson.gz",
+        "cd": "geography/regions/ct/cd.geojson.gz",
+        "sldu": "geography/regions/ct/sldu.geojson.gz",
+        "sldl": "geography/regions/ct/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ct.json",
+      "intersectionPairs": 980,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "DE",
+      "layerCounts": {
+        "state": 1,
+        "county": 3,
+        "cd": 1,
+        "sldu": 21,
+        "sldl": 41
+      },
+      "files": {
+        "state": "geography/regions/de/state.geojson.gz",
+        "county": "geography/regions/de/county.geojson.gz",
+        "cd": "geography/regions/de/cd.geojson.gz",
+        "sldu": "geography/regions/de/sldu.geojson.gz",
+        "sldl": "geography/regions/de/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/de.json",
+      "intersectionPairs": 296,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "FL",
+      "layerCounts": {
+        "state": 1,
+        "county": 67,
+        "cd": 28,
+        "sldu": 40,
+        "sldl": 120
+      },
+      "files": {
+        "state": "geography/regions/fl/state.geojson.gz",
+        "county": "geography/regions/fl/county.geojson.gz",
+        "cd": "geography/regions/fl/cd.geojson.gz",
+        "sldu": "geography/regions/fl/sldu.geojson.gz",
+        "sldl": "geography/regions/fl/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/fl.json",
+      "intersectionPairs": 1202,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "GA",
+      "layerCounts": {
+        "state": 1,
+        "county": 159,
+        "cd": 14,
+        "sldu": 56,
+        "sldl": 180
+      },
+      "files": {
+        "state": "geography/regions/ga/state.geojson.gz",
+        "county": "geography/regions/ga/county.geojson.gz",
+        "cd": "geography/regions/ga/cd.geojson.gz",
+        "sldu": "geography/regions/ga/sldu.geojson.gz",
+        "sldl": "geography/regions/ga/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ga.json",
+      "intersectionPairs": 1959,
+      "repairedGeometries": 7,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "county:13249",
+          "reason": "Ring Self-intersection[1086205.51323236 1102688.21483186]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "3358b6d475b9edb9a54407b56bb823a69324e5beda9db2799eab24ca8cec4a73",
+          "projectedBeforeSha256": "565429d4da71b69cb634d2c4e0f8936c283a15305e4266cb8707395e408b4e07",
+          "projectedAfterSha256": "fbda26b680e31d958dd60a6acd9e27916980cd55f11836759d4fc71c44949274",
+          "beforeAreaM2": 434660846.97658795,
+          "afterAreaM2": 434660846.9765879
+        },
+        {
+          "key": "county:13231",
+          "reason": "Ring Self-intersection[1083952.61559503 1170074.66133342]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "3f09457fa2b1c53451fddd6a84d661b49ff0855e22ef9878c52bf484e5942977",
+          "projectedBeforeSha256": "0e6a4063bd9dea126de466fb116e1fc3a2cabd6521415f624ac8325f236cdbf6",
+          "projectedAfterSha256": "d9ec7911532504b7ceeb2590cbd15ab36821f46b3803d4f0a4cb08ff0041fc13",
+          "beforeAreaM2": 568256458.6660615,
+          "afterAreaM2": 568256458.6660615
+        },
+        {
+          "key": "county:13273",
+          "reason": "Ring Self-intersection[1101257.64130261 1025215.44113418]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "dc49d6320a5213553c1fc92b88b7b15c3baf2982a24027b2c62975c6d19b2b3d",
+          "projectedBeforeSha256": "82690b24168e61a7227c0e6a14ec01c7d0c47df5894bca93f998c81db6106c3f",
+          "projectedAfterSha256": "03b4007fc363dfb95bbec8a5a8067e195f95fd8388c45347a857a8b4609051c2",
+          "beforeAreaM2": 874647115.3023624,
+          "afterAreaM2": 874647115.3023616
+        },
+        {
+          "key": "sldu:13016",
+          "reason": "Ring Self-intersection[1083952.61559503 1170074.66133342]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "7c7e543f2b824482b670d7c127e72ec3ea2fabb3bdb6cf67c69d8bcedc180560",
+          "projectedBeforeSha256": "bea42c7bce4ab5d57144b7823bd3e87a764be703e2626b466b1b87a8762acd38",
+          "projectedAfterSha256": "c6ca9618278af721656bd4a10314a018f247f523eb2b56a4886a289e3f4de464",
+          "beforeAreaM2": 1961503935.027786,
+          "afterAreaM2": 1961503935.0277882
+        },
+        {
+          "key": "sldu:13012",
+          "reason": "Ring Self-intersection[1101257.64130261 1025215.44113418]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "7bea753392b25df2e6958f2dd1ca242cec9634b24ab8915deae868c993318312",
+          "projectedBeforeSha256": "90df7b0131eb60981ec40d983983f73f119990a029c7af0d81b2d72d689e37ce",
+          "projectedAfterSha256": "3cf42aca6b79b22a5314ada7a5e5cb6799326b25f0240883a0ae6c134f150720",
+          "beforeAreaM2": 11899137511.626348,
+          "afterAreaM2": 11899137511.626404
+        },
+        {
+          "key": "sldl:13151",
+          "reason": "Ring Self-intersection[1101257.64130261 1025215.44113418]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "9327f7ad40e47903a1fe611404178ad8b2a17956f7c4f571ca29f34c5d84c80f",
+          "projectedBeforeSha256": "ccb7f3bd7bf2b7dc5bd1fbb70354fa49c0d41d6ac736ec1e253869f6a04a5b1e",
+          "projectedAfterSha256": "4702d899e2ab914196de26aa910eca6312e213312a0e9ff10c31532a419665f9",
+          "beforeAreaM2": 5739442114.634358,
+          "afterAreaM2": 5739442114.634353
+        },
+        {
+          "key": "sldl:13135",
+          "reason": "Ring Self-intersection[1083952.61559503 1170074.66133342]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "3b1dd7c0605b0e9fb8fc09e3d80f46cfd5eb1ad6622b372a7d238b43a8bdbedc",
+          "projectedBeforeSha256": "0b447fd816a1f015d50e78a9e03560a4f0266077eb9b9175725a8d872e72aa8e",
+          "projectedAfterSha256": "4e41240223f3a8fa846d6c045a45c3281bee27b698582fbce61174f089dd6d13",
+          "beforeAreaM2": 1035120985.5886711,
+          "afterAreaM2": 1035120985.5886703
+        }
+      ]
+    },
+    {
+      "state": "HI",
+      "layerCounts": {
+        "state": 1,
+        "county": 5,
+        "cd": 2,
+        "sldu": 25,
+        "sldl": 51
+      },
+      "files": {
+        "state": "geography/regions/hi/state.geojson.gz",
+        "county": "geography/regions/hi/county.geojson.gz",
+        "cd": "geography/regions/hi/cd.geojson.gz",
+        "sldu": "geography/regions/hi/sldu.geojson.gz",
+        "sldl": "geography/regions/hi/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/hi.json",
+      "intersectionPairs": 352,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "IA",
+      "layerCounts": {
+        "state": 1,
+        "county": 99,
+        "cd": 4,
+        "sldu": 50,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/ia/state.geojson.gz",
+        "county": "geography/regions/ia/county.geojson.gz",
+        "cd": "geography/regions/ia/cd.geojson.gz",
+        "sldu": "geography/regions/ia/sldu.geojson.gz",
+        "sldl": "geography/regions/ia/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ia.json",
+      "intersectionPairs": 940,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "ID",
+      "layerCounts": {
+        "state": 1,
+        "county": 44,
+        "cd": 2,
+        "sldu": 35,
+        "sldl": 35
+      },
+      "files": {
+        "state": "geography/regions/id/state.geojson.gz",
+        "county": "geography/regions/id/county.geojson.gz",
+        "cd": "geography/regions/id/cd.geojson.gz",
+        "sldu": "geography/regions/id/sldu.geojson.gz",
+        "sldl": "geography/regions/id/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/id.json",
+      "intersectionPairs": 414,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "IL",
+      "layerCounts": {
+        "state": 1,
+        "county": 102,
+        "cd": 18,
+        "sldu": 60,
+        "sldl": 119
+      },
+      "files": {
+        "state": "geography/regions/il/state.geojson.gz",
+        "county": "geography/regions/il/county.geojson.gz",
+        "cd": "geography/regions/il/cd.geojson.gz",
+        "sldu": "geography/regions/il/sldu.geojson.gz",
+        "sldl": "geography/regions/il/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/il.json",
+      "intersectionPairs": 1627,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "IN",
+      "layerCounts": {
+        "state": 1,
+        "county": 92,
+        "cd": 9,
+        "sldu": 50,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/in/state.geojson.gz",
+        "county": "geography/regions/in/county.geojson.gz",
+        "cd": "geography/regions/in/cd.geojson.gz",
+        "sldu": "geography/regions/in/sldu.geojson.gz",
+        "sldl": "geography/regions/in/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/in.json",
+      "intersectionPairs": 1156,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "KS",
+      "layerCounts": {
+        "state": 1,
+        "county": 105,
+        "cd": 4,
+        "sldu": 40,
+        "sldl": 125
+      },
+      "files": {
+        "state": "geography/regions/ks/state.geojson.gz",
+        "county": "geography/regions/ks/county.geojson.gz",
+        "cd": "geography/regions/ks/cd.geojson.gz",
+        "sldu": "geography/regions/ks/sldu.geojson.gz",
+        "sldl": "geography/regions/ks/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ks.json",
+      "intersectionPairs": 1227,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "KY",
+      "layerCounts": {
+        "state": 1,
+        "county": 120,
+        "cd": 6,
+        "sldu": 38,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/ky/state.geojson.gz",
+        "county": "geography/regions/ky/county.geojson.gz",
+        "cd": "geography/regions/ky/cd.geojson.gz",
+        "sldu": "geography/regions/ky/sldu.geojson.gz",
+        "sldl": "geography/regions/ky/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ky.json",
+      "intersectionPairs": 1141,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "LA",
+      "layerCounts": {
+        "state": 1,
+        "county": 64,
+        "cd": 6,
+        "sldu": 40,
+        "sldl": 105
+      },
+      "files": {
+        "state": "geography/regions/la/state.geojson.gz",
+        "county": "geography/regions/la/county.geojson.gz",
+        "cd": "geography/regions/la/cd.geojson.gz",
+        "sldu": "geography/regions/la/sldu.geojson.gz",
+        "sldl": "geography/regions/la/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/la.json",
+      "intersectionPairs": 1118,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "MA",
+      "layerCounts": {
+        "state": 1,
+        "county": 14,
+        "cd": 9,
+        "sldu": 40,
+        "sldl": 161
+      },
+      "files": {
+        "state": "geography/regions/ma/state.geojson.gz",
+        "county": "geography/regions/ma/county.geojson.gz",
+        "cd": "geography/regions/ma/cd.geojson.gz",
+        "sldu": "geography/regions/ma/sldu.geojson.gz",
+        "sldl": "geography/regions/ma/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ma.json",
+      "intersectionPairs": 1116,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "MD",
+      "layerCounts": {
+        "state": 1,
+        "county": 24,
+        "cd": 8,
+        "sldu": 47,
+        "sldl": 71
+      },
+      "files": {
+        "state": "geography/regions/md/state.geojson.gz",
+        "county": "geography/regions/md/county.geojson.gz",
+        "cd": "geography/regions/md/cd.geojson.gz",
+        "sldu": "geography/regions/md/sldu.geojson.gz",
+        "sldl": "geography/regions/md/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/md.json",
+      "intersectionPairs": 597,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "ME",
+      "layerCounts": {
+        "state": 1,
+        "county": 16,
+        "cd": 2,
+        "sldu": 35,
+        "sldl": 151
+      },
+      "files": {
+        "state": "geography/regions/me/state.geojson.gz",
+        "county": "geography/regions/me/county.geojson.gz",
+        "cd": "geography/regions/me/cd.geojson.gz",
+        "sldu": "geography/regions/me/sldu.geojson.gz",
+        "sldl": "geography/regions/me/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/me.json",
+      "intersectionPairs": 892,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "MI",
+      "layerCounts": {
+        "state": 1,
+        "county": 83,
+        "cd": 13,
+        "sldu": 38,
+        "sldl": 110
+      },
+      "files": {
+        "state": "geography/regions/mi/state.geojson.gz",
+        "county": "geography/regions/mi/county.geojson.gz",
+        "cd": "geography/regions/mi/cd.geojson.gz",
+        "sldu": "geography/regions/mi/sldu.geojson.gz",
+        "sldl": "geography/regions/mi/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/mi.json",
+      "intersectionPairs": 1237,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "MN",
+      "layerCounts": {
+        "state": 1,
+        "county": 87,
+        "cd": 8,
+        "sldu": 67,
+        "sldl": 134
+      },
+      "files": {
+        "state": "geography/regions/mn/state.geojson.gz",
+        "county": "geography/regions/mn/county.geojson.gz",
+        "cd": "geography/regions/mn/cd.geojson.gz",
+        "sldu": "geography/regions/mn/sldu.geojson.gz",
+        "sldl": "geography/regions/mn/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/mn.json",
+      "intersectionPairs": 1246,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "MO",
+      "layerCounts": {
+        "state": 1,
+        "county": 115,
+        "cd": 8,
+        "sldu": 34,
+        "sldl": 163
+      },
+      "files": {
+        "state": "geography/regions/mo/state.geojson.gz",
+        "county": "geography/regions/mo/county.geojson.gz",
+        "cd": "geography/regions/mo/cd.geojson.gz",
+        "sldu": "geography/regions/mo/sldu.geojson.gz",
+        "sldl": "geography/regions/mo/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/mo.json",
+      "intersectionPairs": 1355,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "MS",
+      "layerCounts": {
+        "state": 1,
+        "county": 82,
+        "cd": 4,
+        "sldu": 52,
+        "sldl": 122
+      },
+      "files": {
+        "state": "geography/regions/ms/state.geojson.gz",
+        "county": "geography/regions/ms/county.geojson.gz",
+        "cd": "geography/regions/ms/cd.geojson.gz",
+        "sldu": "geography/regions/ms/sldu.geojson.gz",
+        "sldl": "geography/regions/ms/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ms.json",
+      "intersectionPairs": 1290,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "MT",
+      "layerCounts": {
+        "state": 1,
+        "county": 56,
+        "cd": 2,
+        "sldu": 50,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/mt/state.geojson.gz",
+        "county": "geography/regions/mt/county.geojson.gz",
+        "cd": "geography/regions/mt/cd.geojson.gz",
+        "sldu": "geography/regions/mt/sldu.geojson.gz",
+        "sldl": "geography/regions/mt/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/mt.json",
+      "intersectionPairs": 805,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "NC",
+      "layerCounts": {
+        "state": 1,
+        "county": 100,
+        "cd": 14,
+        "sldu": 50,
+        "sldl": 120
+      },
+      "files": {
+        "state": "geography/regions/nc/state.geojson.gz",
+        "county": "geography/regions/nc/county.geojson.gz",
+        "cd": "geography/regions/nc/cd.geojson.gz",
+        "sldu": "geography/regions/nc/sldu.geojson.gz",
+        "sldl": "geography/regions/nc/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/nc.json",
+      "intersectionPairs": 1174,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "ND",
+      "layerCounts": {
+        "state": 1,
+        "county": 53,
+        "cd": 1,
+        "sldu": 47,
+        "sldl": 48
+      },
+      "files": {
+        "state": "geography/regions/nd/state.geojson.gz",
+        "county": "geography/regions/nd/county.geojson.gz",
+        "cd": "geography/regions/nd/cd.geojson.gz",
+        "sldu": "geography/regions/nd/sldu.geojson.gz",
+        "sldl": "geography/regions/nd/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/nd.json",
+      "intersectionPairs": 556,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "NE",
+      "layerCounts": {
+        "state": 1,
+        "county": 93,
+        "cd": 3,
+        "sldu": 49,
+        "sldl": 0
+      },
+      "files": {
+        "state": "geography/regions/ne/state.geojson.gz",
+        "county": "geography/regions/ne/county.geojson.gz",
+        "cd": "geography/regions/ne/cd.geojson.gz",
+        "sldu": "geography/regions/ne/sldu.geojson.gz",
+        "sldl": "geography/regions/ne/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ne.json",
+      "intersectionPairs": 430,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "NH",
+      "layerCounts": {
+        "state": 1,
+        "county": 10,
+        "cd": 3,
+        "sldu": 25,
+        "sldl": 165,
+        "sldl_floterial": 39
+      },
+      "files": {
+        "state": "geography/regions/nh/state.geojson.gz",
+        "county": "geography/regions/nh/county.geojson.gz",
+        "cd": "geography/regions/nh/cd.geojson.gz",
+        "sldu": "geography/regions/nh/sldu.geojson.gz",
+        "sldl": "geography/regions/nh/sldl.geojson.gz",
+        "sldl_floterial": "geography/regions/nh/sldl_floterial.geojson.gz"
+      },
+      "overlapFile": "overlaps/nh.json",
+      "intersectionPairs": 1138,
+      "repairedGeometries": 0,
+      "coverageResiduals": [
+        {
+          "key": "state:33",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 24216100242.44964,
+          "sumIntersectionAreaM2": 10771847576.380852,
+          "coveredRatio": 0.4448217288718656,
+          "residualAreaM2": 13444252666.068787,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33015",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 2059681814.9649663,
+          "sumIntersectionAreaM2": 1351997796.43774,
+          "coveredRatio": 0.6564109983467211,
+          "residualAreaM2": 707684018.5272262,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33019",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1430023469.9032996,
+          "sumIntersectionAreaM2": 1357375593.7948203,
+          "coveredRatio": 0.9491981232214379,
+          "residualAreaM2": 72647876.10847926,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33013",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 2473375668.358917,
+          "sumIntersectionAreaM2": 1399213935.6672034,
+          "coveredRatio": 0.5657102370524979,
+          "residualAreaM2": 1074161732.6917138,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33001",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1217320952.4467278,
+          "sumIntersectionAreaM2": 242094320.06717178,
+          "coveredRatio": 0.19887468426513122,
+          "residualAreaM2": 975226632.379556,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33009",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 4531714156.994898,
+          "sumIntersectionAreaM2": 1028980015.5364407,
+          "coveredRatio": 0.22706198579364617,
+          "residualAreaM2": 3502734141.458457,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33011",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 2311512186.071358,
+          "sumIntersectionAreaM2": 829962358.2758338,
+          "coveredRatio": 0.3590560167828647,
+          "residualAreaM2": 1481549827.7955244,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33017",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 990897555.9901502,
+          "sumIntersectionAreaM2": 719941168.8408182,
+          "coveredRatio": 0.726554591328485,
+          "residualAreaM2": 270956387.14933205,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33003",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 2573135875.9325395,
+          "sumIntersectionAreaM2": 1376072992.6170104,
+          "coveredRatio": 0.5347844260724486,
+          "residualAreaM2": 1197062883.315529,
+          "status": "under-covered"
+        },
+        {
+          "key": "county:33007",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 4740466600.875798,
+          "sumIntersectionAreaM2": 578237434.2329129,
+          "coveredRatio": 0.12197901238795436,
+          "residualAreaM2": 4162229166.642885,
+          "status": "under-covered"
+        },
+        {
+          "key": "cd:33ZZ",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 131522094.14852138,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 131522094.14852138,
+          "status": "under-covered"
+        },
+        {
+          "key": "cd:3301",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 6029590470.660192,
+          "sumIntersectionAreaM2": 3767251681.301343,
+          "coveredRatio": 0.6247939556811823,
+          "residualAreaM2": 2262338789.3588486,
+          "status": "under-covered"
+        },
+        {
+          "key": "cd:3302",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 18054987677.640884,
+          "sumIntersectionAreaM2": 7004595895.07951,
+          "coveredRatio": 0.387959051545293,
+          "residualAreaM2": 11050391782.561375,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33016",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 357756965.88086945,
+          "sumIntersectionAreaM2": 281059317.03299147,
+          "coveredRatio": 0.7856152188147253,
+          "residualAreaM2": 76697648.84787798,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33003",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 3551191178.436822,
+          "sumIntersectionAreaM2": 1424000222.9207563,
+          "coveredRatio": 0.4009922731187845,
+          "residualAreaM2": 2127190955.5160656,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33005",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1664664042.8950403,
+          "sumIntersectionAreaM2": 946965344.9473877,
+          "coveredRatio": 0.5688627377933311,
+          "residualAreaM2": 717698697.9476526,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33002",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1334843386.722379,
+          "sumIntersectionAreaM2": 211165622.68695584,
+          "coveredRatio": 0.15819505478126486,
+          "residualAreaM2": 1123677764.035423,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33006",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 829353793.5167172,
+          "sumIntersectionAreaM2": 322840578.9932101,
+          "coveredRatio": 0.38926762199310133,
+          "residualAreaM2": 506513214.5235071,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33015",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 364731585.1553151,
+          "sumIntersectionAreaM2": 174023080.65932047,
+          "coveredRatio": 0.4771264341836903,
+          "residualAreaM2": 190708504.49599463,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33013",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 39374318.04028447,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 39374318.04028447,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33023",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 475612092.9548616,
+          "sumIntersectionAreaM2": 370374593.4398665,
+          "coveredRatio": 0.7787324984501965,
+          "residualAreaM2": 105237499.5149951,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33011",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 308267413.0854676,
+          "sumIntersectionAreaM2": 155099534.5930926,
+          "coveredRatio": 0.5031330851376464,
+          "residualAreaM2": 153167878.492375,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33ZZZ",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 131522094.14852138,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 131522094.14852138,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33007",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1883737655.1602921,
+          "sumIntersectionAreaM2": 1127534675.2069855,
+          "coveredRatio": 0.5985624761060694,
+          "residualAreaM2": 756202979.9533067,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33009",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1031822037.4858333,
+          "sumIntersectionAreaM2": 543298565.4514093,
+          "coveredRatio": 0.5265428976252785,
+          "residualAreaM2": 488523472.03442395,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33001",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 6187966703.021451,
+          "sumIntersectionAreaM2": 578237434.2329125,
+          "coveredRatio": 0.0934454663355851,
+          "residualAreaM2": 5609729268.788538,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33010",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1172969238.0785947,
+          "sumIntersectionAreaM2": 992491175.6064383,
+          "coveredRatio": 0.8461357240981084,
+          "residualAreaM2": 180478062.4721564,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33008",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1728261933.8372908,
+          "sumIntersectionAreaM2": 1422069712.465411,
+          "coveredRatio": 0.8228322828982088,
+          "residualAreaM2": 306192221.3718798,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33012",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 447372593.25725985,
+          "sumIntersectionAreaM2": 318969860.68159986,
+          "coveredRatio": 0.7129848039175201,
+          "residualAreaM2": 128402732.57565999,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33017",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1086834834.201655,
+          "sumIntersectionAreaM2": 589457203.6228694,
+          "coveredRatio": 0.5423613460603339,
+          "residualAreaM2": 497377630.57878554,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33004",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 246644835.65550503,
+          "sumIntersectionAreaM2": 201151065.27966857,
+          "coveredRatio": 0.8155494711457136,
+          "residualAreaM2": 45493770.37583646,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33022",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 193504701.4767199,
+          "sumIntersectionAreaM2": 27446026.03214274,
+          "coveredRatio": 0.1418364816084053,
+          "residualAreaM2": 166058675.44457716,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldu:33019",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 202433186.49033293,
+          "sumIntersectionAreaM2": 108427909.57952026,
+          "coveredRatio": 0.5356231923202877,
+          "residualAreaM2": 94005276.91081268,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33408",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 197243422.32146078,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 197243422.32146078,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33302",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 2299868713.323478,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 2299868713.323478,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33303",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 394808541.2748743,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 394808541.2748743,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33401",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 489448604.1816161,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 489448604.1816161,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33403",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 739243482.3977865,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 739243482.3977865,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33405",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 564872453.6108083,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 564872453.6108083,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33502",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 85626753.70246607,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 85626753.70246607,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33503",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 4574894.583449666,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 4574894.583449666,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33301",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 506889820.8366592,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 506889820.8366592,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33504",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 9782805.928505182,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 9782805.928505182,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33505",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 16138822.3598523,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 16138822.3598523,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33507",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 8780184.563595688,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 8780184.563595688,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33508",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 5453277.689690409,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 5453277.689690409,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33542",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 234832933.16336867,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 234832933.16336867,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33506",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 5845188.002059556,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 5845188.002059556,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33606",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 188953833.44048235,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 188953833.44048235,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33608",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 352782064.6904683,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 352782064.6904683,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33609",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 190708504.49599478,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 190708504.49599478,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33704",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 76697648.84787755,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 76697648.84787755,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33101",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 185796346.52885374,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 185796346.52885374,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33613",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 118118330.14696224,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 118118330.14696224,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33612",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 59076702.10390501,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 59076702.10390501,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33001",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 141458205.143217,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 141458205.143217,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33006",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 297065653.3790854,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 297065653.3790854,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33005",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 63550237.36163031,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 63550237.36163031,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33002",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 141331805.50485557,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 141331805.50485557,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33007",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 331820730.99076724,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 331820730.99076724,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33705",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 67881542.43909928,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 67881542.43909928,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33801",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 95668631.52027743,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 95668631.52027743,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33901",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 72647876.10847774,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 72647876.10847774,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33407",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 136065544.02037078,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 136065544.02037078,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33412",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 272364559.75506824,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 272364559.75506824,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33701",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 203791108.42795226,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 203791108.42795226,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33ZZZ",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 131522094.14852138,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 131522094.14852138,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33404",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 354014580.04400367,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 354014580.04400367,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33402",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 406055938.7975655,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 406055938.7975655,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33725",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 67065380.004560225,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 67065380.004560225,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33812",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 45493770.375836834,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 45493770.375836834,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33509",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 17123634.55157926,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 17123634.55157926,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33533",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 140089687.93745556,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 140089687.93745556,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33527",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 159554664.8114638,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 159554664.8114638,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33530",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 262420414.6016513,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 262420414.6016513,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33532",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 210359554.54753816,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 210359554.54753816,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33306",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 960662091.2078692,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 960662091.2078692,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33406",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 343425556.3297785,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 343425556.3297785,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33510",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 7339753.096557356,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 7339753.096557356,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33511",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 7145793.833240971,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 7145793.833240971,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33713",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 94005276.9108128,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 94005276.9108128,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33607",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 164522297.81390458,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 164522297.81390458,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33501",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 69628284.76750487,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 69628284.76750487,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33102",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 1011266536.7866793,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 1011266536.7866793,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33512",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 86601771.7550862,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 86601771.7550862,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33531",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 150251407.90045577,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 150251407.90045577,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33802",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 129793985.25322,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 129793985.25322,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33718",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 29365010.672512546,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 29365010.672512546,
+          "status": "under-covered"
+        },
+        {
+          "key": "sldl:33709",
+          "againstLayer": "sldl_floterial",
+          "areaM2": 37355957.07589515,
+          "sumIntersectionAreaM2": 0.0,
+          "coveredRatio": 0.0,
+          "residualAreaM2": 37355957.07589515,
+          "status": "under-covered"
+        }
+      ],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "NJ",
+      "layerCounts": {
+        "state": 1,
+        "county": 21,
+        "cd": 12,
+        "sldu": 40,
+        "sldl": 40
+      },
+      "files": {
+        "state": "geography/regions/nj/state.geojson.gz",
+        "county": "geography/regions/nj/county.geojson.gz",
+        "cd": "geography/regions/nj/cd.geojson.gz",
+        "sldu": "geography/regions/nj/sldu.geojson.gz",
+        "sldl": "geography/regions/nj/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/nj.json",
+      "intersectionPairs": 516,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "NM",
+      "layerCounts": {
+        "state": 1,
+        "county": 33,
+        "cd": 3,
+        "sldu": 42,
+        "sldl": 70
+      },
+      "files": {
+        "state": "geography/regions/nm/state.geojson.gz",
+        "county": "geography/regions/nm/county.geojson.gz",
+        "cd": "geography/regions/nm/cd.geojson.gz",
+        "sldu": "geography/regions/nm/sldu.geojson.gz",
+        "sldl": "geography/regions/nm/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/nm.json",
+      "intersectionPairs": 773,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "NV",
+      "layerCounts": {
+        "state": 1,
+        "county": 17,
+        "cd": 4,
+        "sldu": 21,
+        "sldl": 42
+      },
+      "files": {
+        "state": "geography/regions/nv/state.geojson.gz",
+        "county": "geography/regions/nv/county.geojson.gz",
+        "cd": "geography/regions/nv/cd.geojson.gz",
+        "sldu": "geography/regions/nv/sldu.geojson.gz",
+        "sldl": "geography/regions/nv/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/nv.json",
+      "intersectionPairs": 346,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "NY",
+      "layerCounts": {
+        "state": 1,
+        "county": 62,
+        "cd": 26,
+        "sldu": 63,
+        "sldl": 150
+      },
+      "files": {
+        "state": "geography/regions/ny/state.geojson.gz",
+        "county": "geography/regions/ny/county.geojson.gz",
+        "cd": "geography/regions/ny/cd.geojson.gz",
+        "sldu": "geography/regions/ny/sldu.geojson.gz",
+        "sldl": "geography/regions/ny/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ny.json",
+      "intersectionPairs": 1555,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "OH",
+      "layerCounts": {
+        "state": 1,
+        "county": 88,
+        "cd": 15,
+        "sldu": 33,
+        "sldl": 99
+      },
+      "files": {
+        "state": "geography/regions/oh/state.geojson.gz",
+        "county": "geography/regions/oh/county.geojson.gz",
+        "cd": "geography/regions/oh/cd.geojson.gz",
+        "sldu": "geography/regions/oh/sldu.geojson.gz",
+        "sldl": "geography/regions/oh/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/oh.json",
+      "intersectionPairs": 927,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "OK",
+      "layerCounts": {
+        "state": 1,
+        "county": 77,
+        "cd": 5,
+        "sldu": 48,
+        "sldl": 101
+      },
+      "files": {
+        "state": "geography/regions/ok/state.geojson.gz",
+        "county": "geography/regions/ok/county.geojson.gz",
+        "cd": "geography/regions/ok/cd.geojson.gz",
+        "sldu": "geography/regions/ok/sldu.geojson.gz",
+        "sldl": "geography/regions/ok/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ok.json",
+      "intersectionPairs": 1126,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "OR",
+      "layerCounts": {
+        "state": 1,
+        "county": 36,
+        "cd": 6,
+        "sldu": 30,
+        "sldl": 60
+      },
+      "files": {
+        "state": "geography/regions/or/state.geojson.gz",
+        "county": "geography/regions/or/county.geojson.gz",
+        "cd": "geography/regions/or/cd.geojson.gz",
+        "sldu": "geography/regions/or/sldu.geojson.gz",
+        "sldl": "geography/regions/or/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/or.json",
+      "intersectionPairs": 599,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "PA",
+      "layerCounts": {
+        "state": 1,
+        "county": 67,
+        "cd": 17,
+        "sldu": 50,
+        "sldl": 203
+      },
+      "files": {
+        "state": "geography/regions/pa/state.geojson.gz",
+        "county": "geography/regions/pa/county.geojson.gz",
+        "cd": "geography/regions/pa/cd.geojson.gz",
+        "sldu": "geography/regions/pa/sldu.geojson.gz",
+        "sldl": "geography/regions/pa/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/pa.json",
+      "intersectionPairs": 1485,
+      "repairedGeometries": 1,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "sldu:42013",
+          "reason": "Ring Self-intersection[1651779.61999289 2065623.32025141]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "197a6da0543cb3fd1ae153acd328b5442488d61e5bdc9b49fcdedecfee1435b0",
+          "projectedBeforeSha256": "d7282c24e7c38fe032fb8705fe77625db31d03486c6eec0af696fc3637fe16fe",
+          "projectedAfterSha256": "accbbe3ca744ebae80a753528cca782563af6ba899fcf3d0b042f65c4fcef6c5",
+          "beforeAreaM2": 1573199585.9471405,
+          "afterAreaM2": 1573199585.9471283
+        }
+      ]
+    },
+    {
+      "state": "RI",
+      "layerCounts": {
+        "state": 1,
+        "county": 5,
+        "cd": 2,
+        "sldu": 38,
+        "sldl": 75
+      },
+      "files": {
+        "state": "geography/regions/ri/state.geojson.gz",
+        "county": "geography/regions/ri/county.geojson.gz",
+        "cd": "geography/regions/ri/cd.geojson.gz",
+        "sldu": "geography/regions/ri/sldu.geojson.gz",
+        "sldl": "geography/regions/ri/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ri.json",
+      "intersectionPairs": 554,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "SC",
+      "layerCounts": {
+        "state": 1,
+        "county": 46,
+        "cd": 7,
+        "sldu": 46,
+        "sldl": 124
+      },
+      "files": {
+        "state": "geography/regions/sc/state.geojson.gz",
+        "county": "geography/regions/sc/county.geojson.gz",
+        "cd": "geography/regions/sc/cd.geojson.gz",
+        "sldu": "geography/regions/sc/sldu.geojson.gz",
+        "sldl": "geography/regions/sc/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/sc.json",
+      "intersectionPairs": 1158,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "SD",
+      "layerCounts": {
+        "state": 1,
+        "county": 66,
+        "cd": 1,
+        "sldu": 35,
+        "sldl": 37
+      },
+      "files": {
+        "state": "geography/regions/sd/state.geojson.gz",
+        "county": "geography/regions/sd/county.geojson.gz",
+        "cd": "geography/regions/sd/cd.geojson.gz",
+        "sldu": "geography/regions/sd/sldu.geojson.gz",
+        "sldl": "geography/regions/sd/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/sd.json",
+      "intersectionPairs": 506,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "TN",
+      "layerCounts": {
+        "state": 1,
+        "county": 95,
+        "cd": 9,
+        "sldu": 33,
+        "sldl": 99
+      },
+      "files": {
+        "state": "geography/regions/tn/state.geojson.gz",
+        "county": "geography/regions/tn/county.geojson.gz",
+        "cd": "geography/regions/tn/cd.geojson.gz",
+        "sldu": "geography/regions/tn/sldu.geojson.gz",
+        "sldl": "geography/regions/tn/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/tn.json",
+      "intersectionPairs": 1028,
+      "repairedGeometries": 4,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "county:47145",
+          "reason": "Ring Self-intersection[1025790.76538281 1463764.93691188]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "3ac26e9c8a39fdca4ad8ec97727826521727b96ad1f880d5648acd6b37b162b0",
+          "projectedBeforeSha256": "4ac0425abd546195ae06a51571c1d39cc2ea5862b4b107ea76001cc1c8cd5888",
+          "projectedAfterSha256": "1d4656183718be3005f2d965868226c9825febc98d10e760346ac1f4d45e0b4f",
+          "beforeAreaM2": 1022985530.7619379,
+          "afterAreaM2": 1022985530.7619369
+        },
+        {
+          "key": "cd:4703",
+          "reason": "Ring Self-intersection[1025790.76538281 1463764.93691188]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "8426b1d00908721c54dadaddfcaf88db76078a938a9654c29d2fe7b28a54ad85",
+          "projectedBeforeSha256": "b1dfd2884a2f788fd955f75276676ff6a297885057eaf56418b02586ca6cbb9d",
+          "projectedAfterSha256": "f08566a408e74579e7375a4deb54ade28c0f14fb9e55af850a94f89de9aca375",
+          "beforeAreaM2": 10532471106.403444,
+          "afterAreaM2": 10532471106.403362
+        },
+        {
+          "key": "sldu:47012",
+          "reason": "Ring Self-intersection[1025790.76538281 1463764.93691188]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "889cccb5d4b39772df617933d8ce70c4ad26494d9cebd4da351ce943be250b3e",
+          "projectedBeforeSha256": "e9578231b208e00006d92cdcc056a067bc32fe24f52b5bcd327fefda36a0d01e",
+          "projectedAfterSha256": "3a5a77afe0060ad6b5f78d902f86a29e5986a40c425053ca1ad2621e4593287d",
+          "beforeAreaM2": 9385249735.94025,
+          "afterAreaM2": 9385249735.94025
+        },
+        {
+          "key": "sldl:47032",
+          "reason": "Ring Self-intersection[1025790.76538281 1463764.93691188]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "0853478f3716bac085fa3c3ec21792daebc749b40252aa9a2bfb7c26984b4ccd",
+          "projectedBeforeSha256": "04adc55c417853974403627c3bbf53ef79d24a5c7b490ea3507c4c5738afe05d",
+          "projectedAfterSha256": "355c9286aa9a3bda86ca289f8ea9162c793b093058e07de45f9577f2bceccdfd",
+          "beforeAreaM2": 1102398845.3178685,
+          "afterAreaM2": 1102398845.3178656
+        }
+      ]
+    },
+    {
+      "state": "TX",
+      "layerCounts": {
+        "state": 1,
+        "county": 254,
+        "cd": 38,
+        "sldu": 31,
+        "sldl": 150
+      },
+      "files": {
+        "state": "geography/regions/tx/state.geojson.gz",
+        "county": "geography/regions/tx/county.geojson.gz",
+        "cd": "geography/regions/tx/cd.geojson.gz",
+        "sldu": "geography/regions/tx/sldu.geojson.gz",
+        "sldl": "geography/regions/tx/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/tx.json",
+      "intersectionPairs": 2304,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "UT",
+      "layerCounts": {
+        "state": 1,
+        "county": 29,
+        "cd": 4,
+        "sldu": 29,
+        "sldl": 75
+      },
+      "files": {
+        "state": "geography/regions/ut/state.geojson.gz",
+        "county": "geography/regions/ut/county.geojson.gz",
+        "cd": "geography/regions/ut/cd.geojson.gz",
+        "sldu": "geography/regions/ut/sldu.geojson.gz",
+        "sldl": "geography/regions/ut/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/ut.json",
+      "intersectionPairs": 672,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "VA",
+      "layerCounts": {
+        "state": 1,
+        "county": 133,
+        "cd": 11,
+        "sldu": 40,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/va/state.geojson.gz",
+        "county": "geography/regions/va/county.geojson.gz",
+        "cd": "geography/regions/va/cd.geojson.gz",
+        "sldu": "geography/regions/va/sldu.geojson.gz",
+        "sldl": "geography/regions/va/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/va.json",
+      "intersectionPairs": 1204,
+      "repairedGeometries": 1,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "county:51191",
+          "reason": "Ring Self-intersection[1224907.64761032 1600797.14651186]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "42882d880ed63a178636ab78d21b9af689104696fab7b4ddc3a578048dd5b6c4",
+          "projectedBeforeSha256": "33ae65a235d6779ae07c1f771683953c526f8b010ccab20b52bb1fc95f4b27f6",
+          "projectedAfterSha256": "1c430820b38de2dcc7a1057ad074f2328796b3f20a600f7bc8e712fdb74f7fdb",
+          "beforeAreaM2": 1466468047.9104195,
+          "afterAreaM2": 1466468047.910421
+        }
+      ]
+    },
+    {
+      "state": "VT",
+      "layerCounts": {
+        "state": 1,
+        "county": 14,
+        "cd": 1,
+        "sldu": 16,
+        "sldl": 109
+      },
+      "files": {
+        "state": "geography/regions/vt/state.geojson.gz",
+        "county": "geography/regions/vt/county.geojson.gz",
+        "cd": "geography/regions/vt/cd.geojson.gz",
+        "sldu": "geography/regions/vt/sldu.geojson.gz",
+        "sldl": "geography/regions/vt/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/vt.json",
+      "intersectionPairs": 588,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "WA",
+      "layerCounts": {
+        "state": 1,
+        "county": 39,
+        "cd": 10,
+        "sldu": 49,
+        "sldl": 49
+      },
+      "files": {
+        "state": "geography/regions/wa/state.geojson.gz",
+        "county": "geography/regions/wa/county.geojson.gz",
+        "cd": "geography/regions/wa/cd.geojson.gz",
+        "sldu": "geography/regions/wa/sldu.geojson.gz",
+        "sldl": "geography/regions/wa/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/wa.json",
+      "intersectionPairs": 628,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "WI",
+      "layerCounts": {
+        "state": 1,
+        "county": 72,
+        "cd": 8,
+        "sldu": 34,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/wi/state.geojson.gz",
+        "county": "geography/regions/wi/county.geojson.gz",
+        "cd": "geography/regions/wi/cd.geojson.gz",
+        "sldu": "geography/regions/wi/sldu.geojson.gz",
+        "sldl": "geography/regions/wi/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/wi.json",
+      "intersectionPairs": 1014,
+      "repairedGeometries": 2,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "sldu:55ZZZ",
+          "reason": "Ring Self-intersection[596900.134641155 2364891.82538676]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "66222e891699f2a5cd4c51c024217b8daf8910f8099b40e07318f20612a5e274",
+          "projectedBeforeSha256": "32e10f0cf71ca91847ee7042b65834139e9185085244565da58aa900309b05ad",
+          "projectedAfterSha256": "609650149094847cc2beca032e1eaf9f58d7f73c8b92aa916e0de92f2ab69935",
+          "beforeAreaM2": 24839747261.379993,
+          "afterAreaM2": 24839747261.37986
+        },
+        {
+          "key": "sldl:55ZZZ",
+          "reason": "Ring Self-intersection[596900.134641155 2364891.82538676]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "66222e891699f2a5cd4c51c024217b8daf8910f8099b40e07318f20612a5e274",
+          "projectedBeforeSha256": "32e10f0cf71ca91847ee7042b65834139e9185085244565da58aa900309b05ad",
+          "projectedAfterSha256": "609650149094847cc2beca032e1eaf9f58d7f73c8b92aa916e0de92f2ab69935",
+          "beforeAreaM2": 24839747261.379993,
+          "afterAreaM2": 24839747261.37986
+        }
+      ]
+    },
+    {
+      "state": "WV",
+      "layerCounts": {
+        "state": 1,
+        "county": 55,
+        "cd": 2,
+        "sldu": 17,
+        "sldl": 100
+      },
+      "files": {
+        "state": "geography/regions/wv/state.geojson.gz",
+        "county": "geography/regions/wv/county.geojson.gz",
+        "cd": "geography/regions/wv/cd.geojson.gz",
+        "sldu": "geography/regions/wv/sldu.geojson.gz",
+        "sldl": "geography/regions/wv/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/wv.json",
+      "intersectionPairs": 714,
+      "repairedGeometries": 0,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": []
+    },
+    {
+      "state": "WY",
+      "layerCounts": {
+        "state": 1,
+        "county": 23,
+        "cd": 1,
+        "sldu": 31,
+        "sldl": 62
+      },
+      "files": {
+        "state": "geography/regions/wy/state.geojson.gz",
+        "county": "geography/regions/wy/county.geojson.gz",
+        "cd": "geography/regions/wy/cd.geojson.gz",
+        "sldu": "geography/regions/wy/sldu.geojson.gz",
+        "sldl": "geography/regions/wy/sldl.geojson.gz"
+      },
+      "overlapFile": "overlaps/wy.json",
+      "intersectionPairs": 425,
+      "repairedGeometries": 1,
+      "coverageResiduals": [],
+      "sameLayerIntersections": [],
+      "geometryRepairs": [
+        {
+          "key": "sldl:56034",
+          "reason": "Ring Self-intersection[-999277.403174285 2293231.59618674]",
+          "method": "GEOS make_valid linework; polygonal components retained",
+          "originalGeometrySha256": "650e476a3274ecbc067a06856a32967d489d156f8d01f5624e75ec682ecc23b9",
+          "projectedBeforeSha256": "8d227fc56c1d70e25be913ba9e6c6fdd1a0970e5eedf14ad68241aed4a24a681",
+          "projectedAfterSha256": "dda45db7e9e2e493482933d8e9af84e8710c189c540020ca44c9c3aa06acd452",
+          "beforeAreaM2": 13272051241.348059,
+          "afterAreaM2": 13272051241.348099
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Derived planar polygon areas include water and do not measure people, voters or land-only area.",
+    "Some layer pairs are not disjoint partitions. Residuals are preserved without renormalization.",
+    "Geometry repairs are explicit derived transformations; original published coordinates remain unchanged.",
+    "An exact district label join is not an independent legal determination of a plan applicability.",
+    "120th Congress and 2026 legislative election plans are not substituted for current-cycle layers."
+  ]
+}

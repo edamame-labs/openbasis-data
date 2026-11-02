@@ -1,0 +1,5250 @@
+{
+  "schemaVersion": 1,
+  "state": "NE",
+  "method": {
+    "measure": "polygon-area-including-water",
+    "units": "square-metres",
+    "projection": "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +datum=WGS84 +units=m +type=crs",
+    "projectionWkt": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Albers Equal Area\",ID[\"EPSG\",9822]],PARAMETER[\"Latitude of false origin\",23,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",-96,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",29.5,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",45.5,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+    "alwaysXY": true,
+    "intersection": "GEOS planar intersection in equal-area projection",
+    "geometryPrecision": "Original Census coordinates; no generalization, snapping or coordinate rounding",
+    "numericalCoverageTolerance": 1e-06,
+    "population": null,
+    "software": {
+      "shapely": "2.2.0",
+      "geos": "3.14.1",
+      "pyproj": "3.8.0",
+      "proj": "9.8.1"
+    }
+  },
+  "layerCounts": {
+    "state": 1,
+    "county": 93,
+    "cd": 3,
+    "sldu": 49,
+    "sldl": 0
+  },
+  "districts": [
+    {
+      "key": "state:31",
+      "layer": "state",
+      "geoid": "31",
+      "boundaryId": "31",
+      "stateFips": "31",
+      "name": "Nebraska",
+      "districtKind": "district",
+      "sourceId": "census-state-31-page-0",
+      "areaM2": 200328920359.2758,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31183",
+      "layer": "county",
+      "geoid": "31183",
+      "boundaryId": "31183",
+      "stateFips": "31",
+      "name": "Wheeler County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1490777577.385803,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31059",
+      "layer": "county",
+      "geoid": "31059",
+      "boundaryId": "31059",
+      "stateFips": "31",
+      "name": "Fillmore County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1493192769.46055,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31025",
+      "layer": "county",
+      "geoid": "31025",
+      "boundaryId": "31025",
+      "stateFips": "31",
+      "name": "Cass County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1465651957.2321408,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31051",
+      "layer": "county",
+      "geoid": "31051",
+      "boundaryId": "31051",
+      "stateFips": "31",
+      "name": "Dixon County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1250231939.4449112,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31091",
+      "layer": "county",
+      "geoid": "31091",
+      "boundaryId": "31091",
+      "stateFips": "31",
+      "name": "Hooker County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1868679388.8917544,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31181",
+      "layer": "county",
+      "geoid": "31181",
+      "boundaryId": "31181",
+      "stateFips": "31",
+      "name": "Webster County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1489355207.2530434,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31043",
+      "layer": "county",
+      "geoid": "31043",
+      "boundaryId": "31043",
+      "stateFips": "31",
+      "name": "Dakota County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 692615978.534605,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31097",
+      "layer": "county",
+      "geoid": "31097",
+      "boundaryId": "31097",
+      "stateFips": "31",
+      "name": "Johnson County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 975734742.1286157,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31093",
+      "layer": "county",
+      "geoid": "31093",
+      "boundaryId": "31093",
+      "stateFips": "31",
+      "name": "Howard County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1490777892.7178557,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31177",
+      "layer": "county",
+      "geoid": "31177",
+      "boundaryId": "31177",
+      "stateFips": "31",
+      "name": "Washington County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1018377941.0337615,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31163",
+      "layer": "county",
+      "geoid": "31163",
+      "boundaryId": "31163",
+      "stateFips": "31",
+      "name": "Sherman County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1480551422.6646187,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31139",
+      "layer": "county",
+      "geoid": "31139",
+      "boundaryId": "31139",
+      "stateFips": "31",
+      "name": "Pierce County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1488189206.8023329,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31141",
+      "layer": "county",
+      "geoid": "31141",
+      "boundaryId": "31141",
+      "stateFips": "31",
+      "name": "Platte County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1773078345.0264761,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31033",
+      "layer": "county",
+      "geoid": "31033",
+      "boundaryId": "31033",
+      "stateFips": "31",
+      "name": "Cheyenne County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 3097938266.894416,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31069",
+      "layer": "county",
+      "geoid": "31069",
+      "boundaryId": "31069",
+      "stateFips": "31",
+      "name": "Garden County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 4482928899.214305,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31107",
+      "layer": "county",
+      "geoid": "31107",
+      "boundaryId": "31107",
+      "stateFips": "31",
+      "name": "Knox County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2951866240.807318,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31049",
+      "layer": "county",
+      "geoid": "31049",
+      "boundaryId": "31049",
+      "stateFips": "31",
+      "name": "Deuel County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1141438285.837575,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31045",
+      "layer": "county",
+      "geoid": "31045",
+      "boundaryId": "31045",
+      "stateFips": "31",
+      "name": "Dawes County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 3628512578.255129,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31083",
+      "layer": "county",
+      "geoid": "31083",
+      "boundaryId": "31083",
+      "stateFips": "31",
+      "name": "Harlan County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1486811061.920725,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31089",
+      "layer": "county",
+      "geoid": "31089",
+      "boundaryId": "31089",
+      "stateFips": "31",
+      "name": "Holt County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 6261283859.119083,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31055",
+      "layer": "county",
+      "geoid": "31055",
+      "boundaryId": "31055",
+      "stateFips": "31",
+      "name": "Douglas County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 878892834.6959189,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31057",
+      "layer": "county",
+      "geoid": "31057",
+      "boundaryId": "31057",
+      "stateFips": "31",
+      "name": "Dundy County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2385002784.4393663,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31103",
+      "layer": "county",
+      "geoid": "31103",
+      "boundaryId": "31103",
+      "stateFips": "31",
+      "name": "Keya Paha County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2004450443.2656345,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31007",
+      "layer": "county",
+      "geoid": "31007",
+      "boundaryId": "31007",
+      "stateFips": "31",
+      "name": "Banner County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1932623808.2029727,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31003",
+      "layer": "county",
+      "geoid": "31003",
+      "boundaryId": "31003",
+      "stateFips": "31",
+      "name": "Antelope County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2223742384.9439406,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31117",
+      "layer": "county",
+      "geoid": "31117",
+      "boundaryId": "31117",
+      "stateFips": "31",
+      "name": "McPherson County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2228141250.844523,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31145",
+      "layer": "county",
+      "geoid": "31145",
+      "boundaryId": "31145",
+      "stateFips": "31",
+      "name": "Red Willow County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1859627347.6428828,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31131",
+      "layer": "county",
+      "geoid": "31131",
+      "boundaryId": "31131",
+      "stateFips": "31",
+      "name": "Otoe County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1603251071.4427562,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31063",
+      "layer": "county",
+      "geoid": "31063",
+      "boundaryId": "31063",
+      "stateFips": "31",
+      "name": "Frontier County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2538393568.489279,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31061",
+      "layer": "county",
+      "geoid": "31061",
+      "boundaryId": "31061",
+      "stateFips": "31",
+      "name": "Franklin County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1491843824.0021844,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31153",
+      "layer": "county",
+      "geoid": "31153",
+      "boundaryId": "31153",
+      "stateFips": "31",
+      "name": "Sarpy County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 641093915.6404899,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31105",
+      "layer": "county",
+      "geoid": "31105",
+      "boundaryId": "31105",
+      "stateFips": "31",
+      "name": "Kimball County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2466965746.250667,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31119",
+      "layer": "county",
+      "geoid": "31119",
+      "boundaryId": "31119",
+      "stateFips": "31",
+      "name": "Madison County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1490410517.8666048,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31143",
+      "layer": "county",
+      "geoid": "31143",
+      "boundaryId": "31143",
+      "stateFips": "31",
+      "name": "Polk County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1141256941.0707695,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31021",
+      "layer": "county",
+      "geoid": "31021",
+      "boundaryId": "31021",
+      "stateFips": "31",
+      "name": "Burt County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1287387643.7500718,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31147",
+      "layer": "county",
+      "geoid": "31147",
+      "boundaryId": "31147",
+      "stateFips": "31",
+      "name": "Richardson County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1436338937.4395397,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31019",
+      "layer": "county",
+      "geoid": "31019",
+      "boundaryId": "31019",
+      "stateFips": "31",
+      "name": "Buffalo County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2526272568.0360813,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31185",
+      "layer": "county",
+      "geoid": "31185",
+      "boundaryId": "31185",
+      "stateFips": "31",
+      "name": "York County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1491389156.0668519,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31071",
+      "layer": "county",
+      "geoid": "31071",
+      "boundaryId": "31071",
+      "stateFips": "31",
+      "name": "Garfield County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1479880038.4928634,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31001",
+      "layer": "county",
+      "geoid": "31001",
+      "boundaryId": "31001",
+      "stateFips": "31",
+      "name": "Adams County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1461350547.7679098,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31101",
+      "layer": "county",
+      "geoid": "31101",
+      "boundaryId": "31101",
+      "stateFips": "31",
+      "name": "Keith County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2874532045.152332,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31137",
+      "layer": "county",
+      "geoid": "31137",
+      "boundaryId": "31137",
+      "stateFips": "31",
+      "name": "Phelps County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1399695086.8625023,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31157",
+      "layer": "county",
+      "geoid": "31157",
+      "boundaryId": "31157",
+      "stateFips": "31",
+      "name": "Scotts Bluff County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1930978290.4113963,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31169",
+      "layer": "county",
+      "geoid": "31169",
+      "boundaryId": "31169",
+      "stateFips": "31",
+      "name": "Thayer County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1489178649.144006,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31075",
+      "layer": "county",
+      "geoid": "31075",
+      "boundaryId": "31075",
+      "stateFips": "31",
+      "name": "Grant County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2028882747.2367294,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31171",
+      "layer": "county",
+      "geoid": "31171",
+      "boundaryId": "31171",
+      "stateFips": "31",
+      "name": "Thomas County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1847593460.881203,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31159",
+      "layer": "county",
+      "geoid": "31159",
+      "boundaryId": "31159",
+      "stateFips": "31",
+      "name": "Seward County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1491538224.9403014,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31113",
+      "layer": "county",
+      "geoid": "31113",
+      "boundaryId": "31113",
+      "stateFips": "31",
+      "name": "Logan County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1479305484.5413442,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31121",
+      "layer": "county",
+      "geoid": "31121",
+      "boundaryId": "31121",
+      "stateFips": "31",
+      "name": "Merrick County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1286652378.982859,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31161",
+      "layer": "county",
+      "geoid": "31161",
+      "boundaryId": "31161",
+      "stateFips": "31",
+      "name": "Sheridan County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 6396586019.817963,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31077",
+      "layer": "county",
+      "geoid": "31077",
+      "boundaryId": "31077",
+      "stateFips": "31",
+      "name": "Greeley County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1477993122.4040658,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31095",
+      "layer": "county",
+      "geoid": "31095",
+      "boundaryId": "31095",
+      "stateFips": "31",
+      "name": "Jefferson County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1490968565.3726616,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31151",
+      "layer": "county",
+      "geoid": "31151",
+      "boundaryId": "31151",
+      "stateFips": "31",
+      "name": "Saline County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1492633356.488661,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31037",
+      "layer": "county",
+      "geoid": "31037",
+      "boundaryId": "31037",
+      "stateFips": "31",
+      "name": "Colfax County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1078771870.5568688,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31155",
+      "layer": "county",
+      "geoid": "31155",
+      "boundaryId": "31155",
+      "stateFips": "31",
+      "name": "Saunders County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1967924976.2651253,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31167",
+      "layer": "county",
+      "geoid": "31167",
+      "boundaryId": "31167",
+      "stateFips": "31",
+      "name": "Stanton County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1116290273.1527889,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31111",
+      "layer": "county",
+      "geoid": "31111",
+      "boundaryId": "31111",
+      "stateFips": "31",
+      "name": "Lincoln County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 6669529941.437306,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31179",
+      "layer": "county",
+      "geoid": "31179",
+      "boundaryId": "31179",
+      "stateFips": "31",
+      "name": "Wayne County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1148231606.0652869,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31127",
+      "layer": "county",
+      "geoid": "31127",
+      "boundaryId": "31127",
+      "stateFips": "31",
+      "name": "Nemaha County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1060870514.2254217,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31011",
+      "layer": "county",
+      "geoid": "31011",
+      "boundaryId": "31011",
+      "stateFips": "31",
+      "name": "Boone County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1779884633.9966815,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31149",
+      "layer": "county",
+      "geoid": "31149",
+      "boundaryId": "31149",
+      "stateFips": "31",
+      "name": "Rock County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2620274353.9029107,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31133",
+      "layer": "county",
+      "geoid": "31133",
+      "boundaryId": "31133",
+      "stateFips": "31",
+      "name": "Pawnee County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1121330547.5106974,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31023",
+      "layer": "county",
+      "geoid": "31023",
+      "boundaryId": "31023",
+      "stateFips": "31",
+      "name": "Butler County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1530194007.6199605,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31065",
+      "layer": "county",
+      "geoid": "31065",
+      "boundaryId": "31065",
+      "stateFips": "31",
+      "name": "Furnas County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1866458216.5837843,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31009",
+      "layer": "county",
+      "geoid": "31009",
+      "boundaryId": "31009",
+      "stateFips": "31",
+      "name": "Blaine County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1850124751.3465037,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31067",
+      "layer": "county",
+      "geoid": "31067",
+      "boundaryId": "31067",
+      "stateFips": "31",
+      "name": "Gage County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2227285958.812703,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31041",
+      "layer": "county",
+      "geoid": "31041",
+      "boundaryId": "31041",
+      "stateFips": "31",
+      "name": "Custer County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 6671690411.985505,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31047",
+      "layer": "county",
+      "geoid": "31047",
+      "boundaryId": "31047",
+      "stateFips": "31",
+      "name": "Dawson County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2640319241.2279387,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31005",
+      "layer": "county",
+      "geoid": "31005",
+      "boundaryId": "31005",
+      "stateFips": "31",
+      "name": "Arthur County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1859879568.4878604,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31035",
+      "layer": "county",
+      "geoid": "31035",
+      "boundaryId": "31035",
+      "stateFips": "31",
+      "name": "Clay County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1485457833.8408673,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31017",
+      "layer": "county",
+      "geoid": "31017",
+      "boundaryId": "31017",
+      "stateFips": "31",
+      "name": "Brown County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 3173111487.555534,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31039",
+      "layer": "county",
+      "geoid": "31039",
+      "boundaryId": "31039",
+      "stateFips": "31",
+      "name": "Cuming County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1488335591.8488724,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31109",
+      "layer": "county",
+      "geoid": "31109",
+      "boundaryId": "31109",
+      "stateFips": "31",
+      "name": "Lancaster County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2192120120.364063,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31129",
+      "layer": "county",
+      "geoid": "31129",
+      "boundaryId": "31129",
+      "stateFips": "31",
+      "name": "Nuckolls County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1491363700.2273788,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31135",
+      "layer": "county",
+      "geoid": "31135",
+      "boundaryId": "31135",
+      "stateFips": "31",
+      "name": "Perkins County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2290609181.897232,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31165",
+      "layer": "county",
+      "geoid": "31165",
+      "boundaryId": "31165",
+      "stateFips": "31",
+      "name": "Sioux County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 5354451388.30175,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31053",
+      "layer": "county",
+      "geoid": "31053",
+      "boundaryId": "31053",
+      "stateFips": "31",
+      "name": "Dodge County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1406369066.9297802,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31029",
+      "layer": "county",
+      "geoid": "31029",
+      "boundaryId": "31029",
+      "stateFips": "31",
+      "name": "Chase County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2324511763.9619155,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31079",
+      "layer": "county",
+      "geoid": "31079",
+      "boundaryId": "31079",
+      "stateFips": "31",
+      "name": "Hall County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1430047173.0223413,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31081",
+      "layer": "county",
+      "geoid": "31081",
+      "boundaryId": "31081",
+      "stateFips": "31",
+      "name": "Hamilton County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1410868536.290433,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31115",
+      "layer": "county",
+      "geoid": "31115",
+      "boundaryId": "31115",
+      "stateFips": "31",
+      "name": "Loup County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1479078906.3617787,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31013",
+      "layer": "county",
+      "geoid": "31013",
+      "boundaryId": "31013",
+      "stateFips": "31",
+      "name": "Box Butte County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 2791769744.181115,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31173",
+      "layer": "county",
+      "geoid": "31173",
+      "boundaryId": "31173",
+      "stateFips": "31",
+      "name": "Thurston County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1025835947.4503418,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31125",
+      "layer": "county",
+      "geoid": "31125",
+      "boundaryId": "31125",
+      "stateFips": "31",
+      "name": "Nance County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1160912230.1707861,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31085",
+      "layer": "county",
+      "geoid": "31085",
+      "boundaryId": "31085",
+      "stateFips": "31",
+      "name": "Hayes County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1847392472.4818096,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31123",
+      "layer": "county",
+      "geoid": "31123",
+      "boundaryId": "31123",
+      "stateFips": "31",
+      "name": "Morrill County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 3703834645.7441425,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31015",
+      "layer": "county",
+      "geoid": "31015",
+      "boundaryId": "31015",
+      "stateFips": "31",
+      "name": "Boyd County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1410317852.8562615,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31175",
+      "layer": "county",
+      "geoid": "31175",
+      "boundaryId": "31175",
+      "stateFips": "31",
+      "name": "Valley County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1477479676.599697,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31073",
+      "layer": "county",
+      "geoid": "31073",
+      "boundaryId": "31073",
+      "stateFips": "31",
+      "name": "Gosper County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1198448034.8767526,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31099",
+      "layer": "county",
+      "geoid": "31099",
+      "boundaryId": "31099",
+      "stateFips": "31",
+      "name": "Kearney County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1337338167.4521194,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31087",
+      "layer": "county",
+      "geoid": "31087",
+      "boundaryId": "31087",
+      "stateFips": "31",
+      "name": "Hitchcock County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1860846122.4934006,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31027",
+      "layer": "county",
+      "geoid": "31027",
+      "boundaryId": "31027",
+      "stateFips": "31",
+      "name": "Cedar County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 1931733985.8716345,
+      "geometryRepaired": false
+    },
+    {
+      "key": "county:31031",
+      "layer": "county",
+      "geoid": "31031",
+      "boundaryId": "31031",
+      "stateFips": "31",
+      "name": "Cherry County",
+      "districtKind": "district",
+      "sourceId": "census-county-31-page-0",
+      "areaM2": 15564779532.106375,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd:3103",
+      "layer": "cd",
+      "geoid": "3103",
+      "boundaryId": "3103",
+      "stateFips": "31",
+      "name": "Congressional District 3",
+      "districtKind": "district",
+      "sourceId": "census-cd-31-page-0",
+      "areaM2": 181415903532.4339,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd:3101",
+      "layer": "cd",
+      "geoid": "3101",
+      "boundaryId": "3101",
+      "stateFips": "31",
+      "name": "Congressional District 1",
+      "districtKind": "district",
+      "sourceId": "census-cd-31-page-0",
+      "areaM2": 15678149817.10608,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd:3102",
+      "layer": "cd",
+      "geoid": "3102",
+      "boundaryId": "3102",
+      "stateFips": "31",
+      "name": "Congressional District 2",
+      "districtKind": "district",
+      "sourceId": "census-cd-31-page-0",
+      "areaM2": 3234867009.735406,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31039",
+      "layer": "sldu",
+      "geoid": "31039",
+      "boundaryId": "31039",
+      "stateFips": "31",
+      "name": "State Senate District 39",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 176381104.83932564,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31009",
+      "layer": "sldu",
+      "geoid": "31009",
+      "boundaryId": "31009",
+      "stateFips": "31",
+      "name": "State Senate District 9",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 18011469.99420037,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31021",
+      "layer": "sldu",
+      "geoid": "31021",
+      "boundaryId": "31021",
+      "stateFips": "31",
+      "name": "State Senate District 21",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 811253621.1122812,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31007",
+      "layer": "sldu",
+      "geoid": "31007",
+      "boundaryId": "31007",
+      "stateFips": "31",
+      "name": "State Senate District 7",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 22447241.71970187,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31047",
+      "layer": "sldu",
+      "geoid": "31047",
+      "boundaryId": "31047",
+      "stateFips": "31",
+      "name": "State Senate District 47",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 27335655591.050194,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31005",
+      "layer": "sldu",
+      "geoid": "31005",
+      "boundaryId": "31005",
+      "stateFips": "31",
+      "name": "State Senate District 5",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 30724920.008917935,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31010",
+      "layer": "sldu",
+      "geoid": "31010",
+      "boundaryId": "31010",
+      "stateFips": "31",
+      "name": "State Senate District 10",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 26509242.56607381,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31014",
+      "layer": "sldu",
+      "geoid": "31014",
+      "boundaryId": "31014",
+      "stateFips": "31",
+      "name": "State Senate District 14",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 30726965.74460387,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31024",
+      "layer": "sldu",
+      "geoid": "31024",
+      "boundaryId": "31024",
+      "stateFips": "31",
+      "name": "State Senate District 24",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 4496248915.891418,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31026",
+      "layer": "sldu",
+      "geoid": "31026",
+      "boundaryId": "31026",
+      "stateFips": "31",
+      "name": "State Senate District 26",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 23917850.374994323,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31043",
+      "layer": "sldu",
+      "geoid": "31043",
+      "boundaryId": "31043",
+      "stateFips": "31",
+      "name": "State Senate District 43",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 46278806375.94638,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31013",
+      "layer": "sldu",
+      "geoid": "31013",
+      "boundaryId": "31013",
+      "stateFips": "31",
+      "name": "State Senate District 13",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 135383588.25479624,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31045",
+      "layer": "sldu",
+      "geoid": "31045",
+      "boundaryId": "31045",
+      "stateFips": "31",
+      "name": "State Senate District 45",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 92363644.15498272,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31049",
+      "layer": "sldu",
+      "geoid": "31049",
+      "boundaryId": "31049",
+      "stateFips": "31",
+      "name": "State Senate District 49",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 75657877.510484,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31042",
+      "layer": "sldu",
+      "geoid": "31042",
+      "boundaryId": "31042",
+      "stateFips": "31",
+      "name": "State Senate District 42",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 15758285257.755188,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31038",
+      "layer": "sldu",
+      "geoid": "31038",
+      "boundaryId": "31038",
+      "stateFips": "31",
+      "name": "State Senate District 38",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 11406632905.232893,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31001",
+      "layer": "sldu",
+      "geoid": "31001",
+      "boundaryId": "31001",
+      "stateFips": "31",
+      "name": "State Senate District 1",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 6197525812.747027,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31041",
+      "layer": "sldu",
+      "geoid": "31041",
+      "boundaryId": "31041",
+      "stateFips": "31",
+      "name": "State Senate District 41",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 12533516162.184904,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31028",
+      "layer": "sldu",
+      "geoid": "31028",
+      "boundaryId": "31028",
+      "stateFips": "31",
+      "name": "State Senate District 28",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 17362465.64853375,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31008",
+      "layer": "sldu",
+      "geoid": "31008",
+      "boundaryId": "31008",
+      "stateFips": "31",
+      "name": "State Senate District 8",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 23652425.64875688,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31030",
+      "layer": "sldu",
+      "geoid": "31030",
+      "boundaryId": "31030",
+      "stateFips": "31",
+      "name": "State Senate District 30",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 2445244742.33068,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31048",
+      "layer": "sldu",
+      "geoid": "31048",
+      "boundaryId": "31048",
+      "stateFips": "31",
+      "name": "State Senate District 48",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 6330567844.865041,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31044",
+      "layer": "sldu",
+      "geoid": "31044",
+      "boundaryId": "31044",
+      "stateFips": "31",
+      "name": "State Senate District 44",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 15420487438.708576,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31003",
+      "layer": "sldu",
+      "geoid": "31003",
+      "boundaryId": "31003",
+      "stateFips": "31",
+      "name": "State Senate District 3",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 45798931.408933856,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31029",
+      "layer": "sldu",
+      "geoid": "31029",
+      "boundaryId": "31029",
+      "stateFips": "31",
+      "name": "State Senate District 29",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 26797523.53149382,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31025",
+      "layer": "sldu",
+      "geoid": "31025",
+      "boundaryId": "31025",
+      "stateFips": "31",
+      "name": "State Senate District 25",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 192392734.18020156,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31022",
+      "layer": "sldu",
+      "geoid": "31022",
+      "boundaryId": "31022",
+      "stateFips": "31",
+      "name": "State Senate District 22",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 2195642787.187716,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31016",
+      "layer": "sldu",
+      "geoid": "31016",
+      "boundaryId": "31016",
+      "stateFips": "31",
+      "name": "State Senate District 16",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 4487827007.62425,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31019",
+      "layer": "sldu",
+      "geoid": "31019",
+      "boundaryId": "31019",
+      "stateFips": "31",
+      "name": "State Senate District 19",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 2235035961.6772523,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31018",
+      "layer": "sldu",
+      "geoid": "31018",
+      "boundaryId": "31018",
+      "stateFips": "31",
+      "name": "State Senate District 18",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 89850266.18954991,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31034",
+      "layer": "sldu",
+      "geoid": "31034",
+      "boundaryId": "31034",
+      "stateFips": "31",
+      "name": "State Senate District 34",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 4017295078.299143,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31006",
+      "layer": "sldu",
+      "geoid": "31006",
+      "boundaryId": "31006",
+      "stateFips": "31",
+      "name": "State Senate District 6",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 32505434.193161096,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31036",
+      "layer": "sldu",
+      "geoid": "31036",
+      "boundaryId": "31036",
+      "stateFips": "31",
+      "name": "State Senate District 36",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 402181073.72266084,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31020",
+      "layer": "sldu",
+      "geoid": "31020",
+      "boundaryId": "31020",
+      "stateFips": "31",
+      "name": "State Senate District 20",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 34124749.97451489,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31011",
+      "layer": "sldu",
+      "geoid": "31011",
+      "boundaryId": "31011",
+      "stateFips": "31",
+      "name": "State Senate District 11",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 23044568.764344823,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31035",
+      "layer": "sldu",
+      "geoid": "31035",
+      "boundaryId": "31035",
+      "stateFips": "31",
+      "name": "State Senate District 35",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 63700572.70091475,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31037",
+      "layer": "sldu",
+      "geoid": "31037",
+      "boundaryId": "31037",
+      "stateFips": "31",
+      "name": "State Senate District 37",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 397705399.08626145,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31040",
+      "layer": "sldu",
+      "geoid": "31040",
+      "boundaryId": "31040",
+      "stateFips": "31",
+      "name": "State Senate District 40",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 15130431192.460377,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31046",
+      "layer": "sldu",
+      "geoid": "31046",
+      "boundaryId": "31046",
+      "stateFips": "31",
+      "name": "State Senate District 46",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 49004416.56212517,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31012",
+      "layer": "sldu",
+      "geoid": "31012",
+      "boundaryId": "31012",
+      "stateFips": "31",
+      "name": "State Senate District 12",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 34143211.878450036,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31017",
+      "layer": "sldu",
+      "geoid": "31017",
+      "boundaryId": "31017",
+      "stateFips": "31",
+      "name": "State Senate District 17",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 3098674512.7684207,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31015",
+      "layer": "sldu",
+      "geoid": "31015",
+      "boundaryId": "31015",
+      "stateFips": "31",
+      "name": "State Senate District 15",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 1567770128.9636102,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31004",
+      "layer": "sldu",
+      "geoid": "31004",
+      "boundaryId": "31004",
+      "stateFips": "31",
+      "name": "State Senate District 4",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 36103171.9447467,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31027",
+      "layer": "sldu",
+      "geoid": "31027",
+      "boundaryId": "31027",
+      "stateFips": "31",
+      "name": "State Senate District 27",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 113861960.28252846,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31031",
+      "layer": "sldu",
+      "geoid": "31031",
+      "boundaryId": "31031",
+      "stateFips": "31",
+      "name": "State Senate District 31",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 28975799.78437601,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31032",
+      "layer": "sldu",
+      "geoid": "31032",
+      "boundaryId": "31032",
+      "stateFips": "31",
+      "name": "State Senate District 32",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 6568023326.085968,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31023",
+      "layer": "sldu",
+      "geoid": "31023",
+      "boundaryId": "31023",
+      "stateFips": "31",
+      "name": "State Senate District 23",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 4204826260.6284304,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31002",
+      "layer": "sldu",
+      "geoid": "31002",
+      "boundaryId": "31002",
+      "stateFips": "31",
+      "name": "State Senate District 2",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 1603172736.7660005,
+      "geometryRepaired": false
+    },
+    {
+      "key": "sldu:31033",
+      "layer": "sldu",
+      "geoid": "31033",
+      "boundaryId": "31033",
+      "stateFips": "31",
+      "name": "State Senate District 33",
+      "districtKind": "district",
+      "sourceId": "census-sldu-31-page-0",
+      "areaM2": 3962668088.3204575,
+      "geometryRepaired": false
+    }
+  ],
+  "overlaps": [
+    {
+      "a": "state:31",
+      "b": "county:31001",
+      "intersectionAreaM2": 1461350547.7679114,
+      "shareOfA": 0.007294755770395419,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31003",
+      "intersectionAreaM2": 2223742384.943939,
+      "shareOfA": 0.01110045609468575,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31005",
+      "intersectionAreaM2": 1859879568.487862,
+      "shareOfA": 0.009284129146966396,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31007",
+      "intersectionAreaM2": 1932623808.2029738,
+      "shareOfA": 0.009647253151152361,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31009",
+      "intersectionAreaM2": 1850124751.3465035,
+      "shareOfA": 0.009235435143505168,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31011",
+      "intersectionAreaM2": 1779884633.9966834,
+      "shareOfA": 0.008884811193534042,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31013",
+      "intersectionAreaM2": 2791769744.1811147,
+      "shareOfA": 0.013935929665942754,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31015",
+      "intersectionAreaM2": 1410317852.856264,
+      "shareOfA": 0.007040011249134466,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31017",
+      "intersectionAreaM2": 3173111487.555537,
+      "shareOfA": 0.01583950775487027,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31019",
+      "intersectionAreaM2": 2526272568.036087,
+      "shareOfA": 0.012610623386305858,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31021",
+      "intersectionAreaM2": 1287387643.7500684,
+      "shareOfA": 0.006426369400090759,
+      "shareOfB": 0.9999999999999974,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31023",
+      "intersectionAreaM2": 1530194007.6199615,
+      "shareOfA": 0.0076384078987480515,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31025",
+      "intersectionAreaM2": 1465651957.2321408,
+      "shareOfA": 0.007316227505262831,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31027",
+      "intersectionAreaM2": 1931733985.8716364,
+      "shareOfA": 0.009642811344498877,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31029",
+      "intersectionAreaM2": 2324511763.9619155,
+      "shareOfA": 0.011603475722791636,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31031",
+      "intersectionAreaM2": 15564779532.106325,
+      "shareOfA": 0.07769611848450035,
+      "shareOfB": 0.9999999999999968,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31033",
+      "intersectionAreaM2": 3097938266.894417,
+      "shareOfA": 0.015464258786691823,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31035",
+      "intersectionAreaM2": 1485457833.8408628,
+      "shareOfA": 0.007415094291811681,
+      "shareOfB": 0.999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31037",
+      "intersectionAreaM2": 1078771870.556867,
+      "shareOfA": 0.005385003166902541,
+      "shareOfB": 0.9999999999999982,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31039",
+      "intersectionAreaM2": 1488335591.8488698,
+      "shareOfA": 0.007429459456875447,
+      "shareOfB": 0.9999999999999982,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31041",
+      "intersectionAreaM2": 6671690411.985522,
+      "shareOfA": 0.03330368076671265,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31043",
+      "intersectionAreaM2": 692615978.5346043,
+      "shareOfA": 0.0034573938565257895,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31045",
+      "intersectionAreaM2": 3628512578.2551255,
+      "shareOfA": 0.018112774589648085,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31047",
+      "intersectionAreaM2": 2640319241.227941,
+      "shareOfA": 0.013179920485233558,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31049",
+      "intersectionAreaM2": 1141438285.8375773,
+      "shareOfA": 0.005697820782892896,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31051",
+      "intersectionAreaM2": 1250231939.4449086,
+      "shareOfA": 0.006240895908602242,
+      "shareOfB": 0.9999999999999979,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31053",
+      "intersectionAreaM2": 1406369066.929784,
+      "shareOfA": 0.007020299737090183,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31055",
+      "intersectionAreaM2": 878892834.6959198,
+      "shareOfA": 0.00438724889606397,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31057",
+      "intersectionAreaM2": 2385002784.439368,
+      "shareOfA": 0.011905434223685894,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31059",
+      "intersectionAreaM2": 1493192769.4605508,
+      "shareOfA": 0.007453705469897281,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31061",
+      "intersectionAreaM2": 1491843824.002184,
+      "shareOfA": 0.007446971816783454,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31063",
+      "intersectionAreaM2": 2538393568.4892793,
+      "shareOfA": 0.012671128881126347,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31065",
+      "intersectionAreaM2": 1866458216.5837843,
+      "shareOfA": 0.009316968379984393,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31067",
+      "intersectionAreaM2": 2227285958.8127065,
+      "shareOfA": 0.011118144873032941,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31069",
+      "intersectionAreaM2": 4482928899.214313,
+      "shareOfA": 0.022377841857154204,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31071",
+      "intersectionAreaM2": 1479880038.4928634,
+      "shareOfA": 0.007387251106025046,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31073",
+      "intersectionAreaM2": 1198448034.8767502,
+      "shareOfA": 0.005982401506120126,
+      "shareOfB": 0.999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31075",
+      "intersectionAreaM2": 2028882747.2367315,
+      "shareOfA": 0.010127757607828532,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31077",
+      "intersectionAreaM2": 1477993122.4040685,
+      "shareOfA": 0.0073778320162330635,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31079",
+      "intersectionAreaM2": 1430047173.022341,
+      "shareOfA": 0.007138495881960789,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31081",
+      "intersectionAreaM2": 1410868536.2904358,
+      "shareOfA": 0.00704276014546548,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31083",
+      "intersectionAreaM2": 1486811061.9207284,
+      "shareOfA": 0.007421849322874789,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31085",
+      "intersectionAreaM2": 1847392472.4818084,
+      "shareOfA": 0.009221796179845827,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31087",
+      "intersectionAreaM2": 1860846122.493401,
+      "shareOfA": 0.009288953982061626,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31089",
+      "intersectionAreaM2": 6261283859.119087,
+      "shareOfA": 0.0312550172380998,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31091",
+      "intersectionAreaM2": 1868679388.8917558,
+      "shareOfA": 0.009328056006793284,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31093",
+      "intersectionAreaM2": 1490777892.7178557,
+      "shareOfA": 0.007441650911132805,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31095",
+      "intersectionAreaM2": 1490968565.3726609,
+      "shareOfA": 0.007442602709078219,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31097",
+      "intersectionAreaM2": 975734742.1286138,
+      "shareOfA": 0.0048706634088513156,
+      "shareOfB": 0.999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31099",
+      "intersectionAreaM2": 1337338167.4521215,
+      "shareOfA": 0.0066757119493965214,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31101",
+      "intersectionAreaM2": 2874532045.152331,
+      "shareOfA": 0.014349061733059113,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31103",
+      "intersectionAreaM2": 2004450443.2656343,
+      "shareOfA": 0.01000579666515845,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31105",
+      "intersectionAreaM2": 2466965746.2506633,
+      "shareOfA": 0.012314576157183567,
+      "shareOfB": 0.9999999999999984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31107",
+      "intersectionAreaM2": 2951866240.8073215,
+      "shareOfA": 0.014735097835666252,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31109",
+      "intersectionAreaM2": 2192120120.364064,
+      "shareOfA": 0.010942604375008118,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31111",
+      "intersectionAreaM2": 6669529941.437306,
+      "shareOfA": 0.033292896150370975,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31113",
+      "intersectionAreaM2": 1479305484.5413465,
+      "shareOfA": 0.0073843830530725,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31115",
+      "intersectionAreaM2": 1479078906.3617806,
+      "shareOfA": 0.00738325202226996,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31117",
+      "intersectionAreaM2": 2228141250.8445234,
+      "shareOfA": 0.011122414311665581,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31119",
+      "intersectionAreaM2": 1490410517.8666015,
+      "shareOfA": 0.00743981705284317,
+      "shareOfB": 0.9999999999999978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31121",
+      "intersectionAreaM2": 1286652378.9828594,
+      "shareOfA": 0.006422699112416415,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31123",
+      "intersectionAreaM2": 3703834645.7441435,
+      "shareOfA": 0.018488766570006854,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31125",
+      "intersectionAreaM2": 1160912230.1707857,
+      "shareOfA": 0.005795030633064719,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31127",
+      "intersectionAreaM2": 1060870514.2254201,
+      "shareOfA": 0.0052956433465663555,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31129",
+      "intersectionAreaM2": 1491363700.2273803,
+      "shareOfA": 0.00744457513948922,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31131",
+      "intersectionAreaM2": 1603251071.44276,
+      "shareOfA": 0.008003093455340558,
+      "shareOfB": 1.0000000000000024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31133",
+      "intersectionAreaM2": 1121330547.510696,
+      "shareOfA": 0.0055974471658893216,
+      "shareOfB": 0.9999999999999988,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31135",
+      "intersectionAreaM2": 2290609181.89723,
+      "shareOfA": 0.011434241135973699,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31137",
+      "intersectionAreaM2": 1399695086.862502,
+      "shareOfA": 0.006986984626843931,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31139",
+      "intersectionAreaM2": 1488189206.8023329,
+      "shareOfA": 0.0074287287333919165,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31141",
+      "intersectionAreaM2": 1773078345.0264785,
+      "shareOfA": 0.008850835624964122,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31143",
+      "intersectionAreaM2": 1141256941.0707705,
+      "shareOfA": 0.005696915547810105,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31145",
+      "intersectionAreaM2": 1859627347.6428792,
+      "shareOfA": 0.009282870113350428,
+      "shareOfB": 0.9999999999999981,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31147",
+      "intersectionAreaM2": 1436338937.4395404,
+      "shareOfA": 0.007169903051758917,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31149",
+      "intersectionAreaM2": 2620274353.9029064,
+      "shareOfA": 0.013079860607263441,
+      "shareOfB": 0.9999999999999983,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31151",
+      "intersectionAreaM2": 1492633356.4886591,
+      "shareOfA": 0.0074509129975428735,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31153",
+      "intersectionAreaM2": 641093915.6404886,
+      "shareOfA": 0.003200206512822671,
+      "shareOfB": 0.999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31155",
+      "intersectionAreaM2": 1967924976.2651153,
+      "shareOfA": 0.009823469186255188,
+      "shareOfB": 0.9999999999999949,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31157",
+      "intersectionAreaM2": 1930978290.4113982,
+      "shareOfA": 0.009639039071085317,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31159",
+      "intersectionAreaM2": 1491538224.9403033,
+      "shareOfA": 0.007445446330291876,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31161",
+      "intersectionAreaM2": 6396586019.817974,
+      "shareOfA": 0.031930417277476204,
+      "shareOfB": 1.0000000000000018,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31163",
+      "intersectionAreaM2": 1480551422.6646194,
+      "shareOfA": 0.007390602515150359,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31165",
+      "intersectionAreaM2": 5354451388.30175,
+      "shareOfA": 0.02672829953208413,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31167",
+      "intersectionAreaM2": 1116290273.152791,
+      "shareOfA": 0.0055722871722704995,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31169",
+      "intersectionAreaM2": 1489178649.1440063,
+      "shareOfA": 0.007433667822265849,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31171",
+      "intersectionAreaM2": 1847593460.8812032,
+      "shareOfA": 0.009222799471827007,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31173",
+      "intersectionAreaM2": 1025835947.4503447,
+      "shareOfA": 0.0051207581292335635,
+      "shareOfB": 1.0000000000000029,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31175",
+      "intersectionAreaM2": 1477479676.5996974,
+      "shareOfA": 0.007375269002348446,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31177",
+      "intersectionAreaM2": 1018377941.0337616,
+      "shareOfA": 0.005083529323711088,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31179",
+      "intersectionAreaM2": 1148231606.0652902,
+      "shareOfA": 0.0057317316142173474,
+      "shareOfB": 1.0000000000000029,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31181",
+      "intersectionAreaM2": 1489355207.253043,
+      "shareOfA": 0.007434549163355892,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31183",
+      "intersectionAreaM2": 1490777577.3858016,
+      "shareOfA": 0.007441649337061255,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "county:31185",
+      "intersectionAreaM2": 1491389156.0668516,
+      "shareOfA": 0.007444702209706668,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "cd:3101",
+      "intersectionAreaM2": 15678149817.10612,
+      "shareOfA": 0.07826203919528175,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "cd:3102",
+      "intersectionAreaM2": 3234867009.7354264,
+      "shareOfA": 0.01614777838334036,
+      "shareOfB": 1.0000000000000064,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "cd:3103",
+      "intersectionAreaM2": 181415903532.43384,
+      "shareOfA": 0.9055901824213759,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31001",
+      "intersectionAreaM2": 6197525812.747019,
+      "shareOfA": 0.03093675042840641,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31002",
+      "intersectionAreaM2": 1603172736.7659972,
+      "shareOfA": 0.008002702425045869,
+      "shareOfB": 0.9999999999999979,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31003",
+      "intersectionAreaM2": 45798931.40893385,
+      "shareOfA": 0.0002286186703686951,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31004",
+      "intersectionAreaM2": 36103171.944746755,
+      "shareOfA": 0.00018021947045887465,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31005",
+      "intersectionAreaM2": 30724920.00891796,
+      "shareOfA": 0.00015337236357993136,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31006",
+      "intersectionAreaM2": 32505434.193161096,
+      "shareOfA": 0.00016226031735640012,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31007",
+      "intersectionAreaM2": 22447241.719701882,
+      "shareOfA": 0.00011205192779676712,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31008",
+      "intersectionAreaM2": 23652425.648756906,
+      "shareOfA": 0.00011806795347540409,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31009",
+      "intersectionAreaM2": 18011469.994200367,
+      "shareOfA": 8.99094846710004e-05,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31010",
+      "intersectionAreaM2": 26509242.566073842,
+      "shareOfA": 0.00013232858500176304,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31011",
+      "intersectionAreaM2": 23044568.76434484,
+      "shareOfA": 0.00011503365925906271,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31012",
+      "intersectionAreaM2": 34143211.87844998,
+      "shareOfA": 0.00017043576043447215,
+      "shareOfB": 0.9999999999999982,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31013",
+      "intersectionAreaM2": 135383588.25479603,
+      "shareOfA": 0.0006758065086758074,
+      "shareOfB": 0.9999999999999984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31014",
+      "intersectionAreaM2": 30726965.744603857,
+      "shareOfA": 0.00015338257546387816,
+      "shareOfB": 0.9999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31015",
+      "intersectionAreaM2": 1567770128.9636147,
+      "shareOfA": 0.007825980024012157,
+      "shareOfB": 1.0000000000000029,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31016",
+      "intersectionAreaM2": 4487827007.624247,
+      "shareOfA": 0.022402292188145604,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31017",
+      "intersectionAreaM2": 3098674512.7684093,
+      "shareOfA": 0.015467933971845678,
+      "shareOfB": 0.9999999999999963,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31018",
+      "intersectionAreaM2": 89850266.18955012,
+      "shareOfA": 0.00044851370450362335,
+      "shareOfB": 1.0000000000000022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31019",
+      "intersectionAreaM2": 2235035961.6772523,
+      "shareOfA": 0.011156831263648168,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31020",
+      "intersectionAreaM2": 34124749.974515006,
+      "shareOfA": 0.00017034360247793816,
+      "shareOfB": 1.0000000000000036,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31021",
+      "intersectionAreaM2": 811253621.1122829,
+      "shareOfA": 0.0040496081127844984,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31022",
+      "intersectionAreaM2": 2195642787.1877146,
+      "shareOfA": 0.01096018878976627,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31023",
+      "intersectionAreaM2": 4204826260.6284466,
+      "shareOfA": 0.020989611749952963,
+      "shareOfB": 1.0000000000000038,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31024",
+      "intersectionAreaM2": 4496248915.891417,
+      "shareOfA": 0.022444332589761435,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31025",
+      "intersectionAreaM2": 192392734.18020162,
+      "shareOfA": 0.000960384221285468,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31026",
+      "intersectionAreaM2": 23917850.37499429,
+      "shareOfA": 0.00011939289810028084,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31027",
+      "intersectionAreaM2": 113861960.28252847,
+      "shareOfA": 0.0005683750507831075,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31028",
+      "intersectionAreaM2": 17362465.648533747,
+      "shareOfA": 8.666979094878258e-05,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31029",
+      "intersectionAreaM2": 26797523.53149381,
+      "shareOfA": 0.00013376762318408316,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31030",
+      "intersectionAreaM2": 2445244742.330691,
+      "shareOfA": 0.012206149456330704,
+      "shareOfB": 1.0000000000000044,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31031",
+      "intersectionAreaM2": 28975799.784375995,
+      "shareOfA": 0.00014464112187301736,
+      "shareOfB": 0.9999999999999994,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 6568023326.085948,
+      "shareOfA": 0.03278619639294547,
+      "shareOfB": 0.999999999999997,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31033",
+      "intersectionAreaM2": 3962668088.3204556,
+      "shareOfA": 0.01978080888777162,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31034",
+      "intersectionAreaM2": 4017295078.2991447,
+      "shareOfA": 0.020053495376975074,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31035",
+      "intersectionAreaM2": 63700572.70091477,
+      "shareOfA": 0.0003179799131681651,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31036",
+      "intersectionAreaM2": 402181073.7226612,
+      "shareOfA": 0.002007603660027608,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31037",
+      "intersectionAreaM2": 397705399.08626086,
+      "shareOfA": 0.0019852620299305977,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 11406632905.23293,
+      "shareOfA": 0.05693952168651405,
+      "shareOfB": 1.000000000000003,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31039",
+      "intersectionAreaM2": 176381104.83932564,
+      "shareOfA": 0.0008804575221740254,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 15130431192.4604,
+      "shareOfA": 0.07552794257227084,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 12533516162.184904,
+      "shareOfA": 0.06256468681459934,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 15758285257.75524,
+      "shareOfA": 0.07866205852601744,
+      "shareOfB": 1.0000000000000033,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 46278806375.94647,
+      "shareOfA": 0.23101410566656425,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 15420487438.708616,
+      "shareOfA": 0.07697584258455074,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31045",
+      "intersectionAreaM2": 92363644.15498249,
+      "shareOfA": 0.0004610599607352489,
+      "shareOfB": 0.9999999999999976,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31046",
+      "intersectionAreaM2": 49004416.562125176,
+      "shareOfA": 0.00024461978067988994,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 27335655591.050312,
+      "shareOfA": 0.13645386568262707,
+      "shareOfB": 1.0000000000000042,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31048",
+      "intersectionAreaM2": 6330567844.865036,
+      "shareOfA": 0.03160086837942125,
+      "shareOfB": 0.9999999999999992,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:31",
+      "b": "sldu:31049",
+      "intersectionAreaM2": 75657877.5104841,
+      "shareOfA": 0.0003776682736311713,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31001",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1461350547.7679114,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.008055250500718357,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31003",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2223742384.943939,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.012257703661280027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31005",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1859879568.487862,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.010252020535538931,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31007",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1932623808.2029722,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.010653001035587015,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31009",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1850124751.3465035,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.010198250072468065,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31011",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1779884633.9966824,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.00981107278545991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31013",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2791769744.1811147,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.015388781743062544,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31015",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1410317852.8562646,
+      "shareOfA": 1.0000000000000022,
+      "shareOfB": 0.007773948288960924,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31017",
+      "b": "cd:3103",
+      "intersectionAreaM2": 3173111487.555537,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.017490812138133423,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31019",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2526272568.036087,
+      "shareOfA": 1.0000000000000022,
+      "shareOfB": 0.013925309296736682,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31021",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1287387643.7500696,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.0070963328940999255,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31023",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1530194007.6199598,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.09760042004129846,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31025",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1465651957.232143,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.09348373209401295,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31027",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1931733985.8716328,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.010648096160578742,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31029",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2324511763.961922,
+      "shareOfA": 1.0000000000000029,
+      "shareOfB": 0.012813164219344978,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31031",
+      "b": "cd:3103",
+      "intersectionAreaM2": 15564779532.106356,
+      "shareOfA": 0.9999999999999988,
+      "shareOfB": 0.08579611395162857,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31033",
+      "b": "cd:3103",
+      "intersectionAreaM2": 3097938266.8944163,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.017076442619268828,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31035",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1485457833.8408628,
+      "shareOfA": 0.999999999999997,
+      "shareOfB": 0.008188134584216812,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31037",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1078771870.556867,
+      "shareOfA": 0.9999999999999982,
+      "shareOfB": 0.06880734545474511,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31039",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1488335591.8488698,
+      "shareOfA": 0.9999999999999982,
+      "shareOfB": 0.0949305631857772,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31041",
+      "b": "cd:3103",
+      "intersectionAreaM2": 6671690411.985522,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.03677566454802428,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31043",
+      "b": "cd:3103",
+      "intersectionAreaM2": 692615978.5346051,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.003817834958503392,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31045",
+      "b": "cd:3103",
+      "intersectionAreaM2": 3628512578.255129,
+      "shareOfA": 1.0,
+      "shareOfB": 0.020001072164031176,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31047",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2640319241.227941,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.014553956901335827,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31049",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1141438285.837578,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.006291831441522487,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31051",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1250231939.4449103,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.006891523373094968,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31053",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1406369066.9297855,
+      "shareOfA": 1.0000000000000038,
+      "shareOfB": 0.08970248934573438,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "cd:3102",
+      "intersectionAreaM2": 878892834.6959182,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.2716936529541617,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31057",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2385002784.439363,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.013146602574525488,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31059",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1493192769.4605496,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.008230771064641495,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31061",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1491843824.0021853,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.008223335413013946,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31063",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2538393568.4892793,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.0139921226257623,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31065",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1866458216.5837803,
+      "shareOfA": 0.9999999999999978,
+      "shareOfB": 0.010288283332613621,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31067",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2227285958.8127055,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.012277236534637697,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31069",
+      "b": "cd:3103",
+      "intersectionAreaM2": 4482928899.214313,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.024710782306981403,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31071",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1479880038.4928634,
+      "shareOfA": 1.0,
+      "shareOfB": 0.008157388683557655,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31073",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1198448034.8767502,
+      "shareOfA": 0.999999999999998,
+      "shareOfB": 0.006606080346547398,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31075",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2028882747.2367315,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.011183599164854938,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31077",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1477993122.4040685,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.008146987632425676,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31079",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1430047173.022341,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.007882700166728625,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31081",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1410868536.2904358,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.007776983763930034,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31083",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1486811061.9207277,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.008195593842493047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31085",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1847392472.4818084,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.010183189216107108,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31087",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1860846122.4933999,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.010257348370567269,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31089",
+      "b": "cd:3103",
+      "intersectionAreaM2": 6261283859.119087,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.03451342322918058,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31091",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1868679388.8917558,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.010300526869507168,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31093",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1490777892.7178557,
+      "shareOfA": 1.0,
+      "shareOfB": 0.008217459790956703,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31095",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1490968565.3726645,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.008218510815983154,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31097",
+      "b": "cd:3103",
+      "intersectionAreaM2": 975734742.1286134,
+      "shareOfA": 0.9999999999999976,
+      "shareOfB": 0.0053784410469513745,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31099",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1337338167.4521215,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.007371669966150622,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31101",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2874532045.152331,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.01584498375931202,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31103",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2004450443.265631,
+      "shareOfA": 0.9999999999999982,
+      "shareOfB": 0.011048923519030245,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31105",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2466965746.250668,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.01359839847673343,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31107",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2951866240.8073196,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.01627126499568203,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "cd:3101",
+      "intersectionAreaM2": 2192120120.3640647,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.13982007736475968,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31111",
+      "b": "cd:3103",
+      "intersectionAreaM2": 6669529941.437306,
+      "shareOfA": 1.0,
+      "shareOfB": 0.03676375561112212,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31113",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1479305484.5413465,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.008154221629620654,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31115",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1479078906.3617806,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.00815297268630778,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31117",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2228141250.8445234,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.012281951071870453,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31119",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1490410517.8666024,
+      "shareOfA": 0.9999999999999984,
+      "shareOfB": 0.09506290826743145,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31121",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1286652378.98286,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.007092279970663266,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31123",
+      "b": "cd:3103",
+      "intersectionAreaM2": 3703834645.7441435,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.02041626215577051,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31125",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1160912230.1707873,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.006399175637670802,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31127",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1060870514.2254242,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.005847726101012746,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31129",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1491363700.2273798,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.008220688876710033,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31131",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1603251071.4427586,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.008837433985803379,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31133",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1121330547.5106957,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.006180993648719568,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31135",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2290609181.8972216,
+      "shareOfA": 0.9999999999999954,
+      "shareOfB": 0.01262628654542242,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31137",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1399695086.862502,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.007715393521782735,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31139",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1488189206.8023293,
+      "shareOfA": 0.9999999999999976,
+      "shareOfB": 0.008203190447061703,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31141",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1773078345.0264757,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.11309232056782041,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31143",
+      "b": "cd:3101",
+      "intersectionAreaM2": 392345124.70211345,
+      "shareOfA": 0.3437833414918824,
+      "shareOfB": 0.025024963358497472,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31143",
+      "b": "cd:3103",
+      "intersectionAreaM2": 748911816.3686568,
+      "shareOfA": 0.6562166585081182,
+      "shareOfB": 0.0041281486451090815,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31145",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1859627347.642883,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.010250630244830852,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31147",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1436338937.439539,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.007917381604765138,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31149",
+      "b": "cd:3103",
+      "intersectionAreaM2": 2620274353.9029064,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.014443465555567726,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31151",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1492633356.4886599,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.008227687470750346,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31153",
+      "b": "cd:3101",
+      "intersectionAreaM2": 253044716.86611724,
+      "shareOfA": 0.3947077186238945,
+      "shareOfB": 0.016139960379127506,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31153",
+      "b": "cd:3102",
+      "intersectionAreaM2": 388049198.77437335,
+      "shareOfA": 0.6052922813761066,
+      "shareOfB": 0.11995831593896455,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31155",
+      "b": "cd:3102",
+      "intersectionAreaM2": 1967924976.2651217,
+      "shareOfA": 0.9999999999999982,
+      "shareOfB": 0.608348031106876,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31157",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1930978290.4114,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.010643930619159725,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31159",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1491538224.9402995,
+      "shareOfA": 0.9999999999999987,
+      "shareOfB": 0.09513483684872787,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31161",
+      "b": "cd:3103",
+      "intersectionAreaM2": 6396586019.817971,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.03525923524490992,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31163",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1480551422.6646194,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.008161089484637842,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31165",
+      "b": "cd:3103",
+      "intersectionAreaM2": 5354451388.301754,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.029514784999786277,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31167",
+      "b": "cd:3101",
+      "intersectionAreaM2": 1116290273.1527894,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.07120038309206804,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31169",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1489178649.1440086,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.008208644447082724,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31171",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1847593460.8812032,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.010184297103538593,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31173",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1025835947.4503413,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.005654608705608548,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31175",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1477479676.5996974,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.008144157418566948,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31177",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1018377941.0337595,
+      "shareOfA": 0.999999999999998,
+      "shareOfB": 0.005613498713202351,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31179",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1148231606.0652885,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.006329277553442305,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31181",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1489355207.2530456,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.008209617669967813,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31183",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1490777577.3858016,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.008217458052784647,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31185",
+      "b": "cd:3103",
+      "intersectionAreaM2": 1491389156.066848,
+      "shareOfA": 0.9999999999999974,
+      "shareOfB": 0.00822082919428403,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31001",
+      "b": "sldu:31033",
+      "intersectionAreaM2": 1461350547.7679124,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.3687794473816991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31003",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 2223742384.9439435,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.14697151433807473,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31005",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 1859879568.4878614,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.06803859385383805,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31007",
+      "b": "sldu:31048",
+      "intersectionAreaM2": 1932623808.2029722,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.3052844319124698,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31009",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 1850124751.3465044,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.03997779753256807,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31011",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 1779884633.9966803,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.1420100003035702,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31013",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 2791769744.1811166,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.10212924050356977,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31015",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 1410317852.8562636,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.030474378301798267,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31017",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 3173111487.555537,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.06856511081506148,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31019",
+      "b": "sldu:31037",
+      "intersectionAreaM2": 397705399.08626103,
+      "shareOfA": 0.1574277471553421,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31019",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 2128567168.9498246,
+      "shareOfA": 0.8425722528446595,
+      "shareOfB": 0.1698300095045924,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31021",
+      "b": "sldu:31016",
+      "intersectionAreaM2": 1287387643.7500696,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.2868621365224107,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31023",
+      "b": "sldu:31023",
+      "intersectionAreaM2": 1158129413.80646,
+      "shareOfA": 0.7568513587422787,
+      "shareOfB": 0.2754286008557634,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31023",
+      "b": "sldu:31024",
+      "intersectionAreaM2": 372064593.81349975,
+      "shareOfA": 0.2431486412577207,
+      "shareOfB": 0.08274999911559275,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31025",
+      "b": "sldu:31002",
+      "intersectionAreaM2": 1465651957.232143,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.9142196119107718,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31027",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 1931733985.8716328,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.1276721040728986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31029",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 2324511763.9619045,
+      "shareOfA": 0.9999999999999953,
+      "shareOfB": 0.1507417825280221,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31031",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 15564779532.106356,
+      "shareOfA": 0.9999999999999988,
+      "shareOfB": 0.3363262960082786,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31033",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 3097938266.8944163,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.1133295763321182,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31035",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 1485457833.8408587,
+      "shareOfA": 0.9999999999999942,
+      "shareOfB": 0.13022754796986513,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31037",
+      "b": "sldu:31023",
+      "intersectionAreaM2": 1078771870.556867,
+      "shareOfA": 0.9999999999999982,
+      "shareOfB": 0.25655563480894916,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31039",
+      "b": "sldu:31016",
+      "intersectionAreaM2": 1488335591.848867,
+      "shareOfA": 0.9999999999999963,
+      "shareOfB": 0.3316383606855552,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31041",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 6671690411.985534,
+      "shareOfA": 1.0000000000000042,
+      "shareOfB": 0.14416297511625484,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31043",
+      "b": "sldu:31017",
+      "intersectionAreaM2": 692615978.5346051,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.22352008114456898,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31045",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 3628512578.255129,
+      "shareOfA": 1.0,
+      "shareOfB": 0.07840549189576905,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31047",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 2640319241.2279396,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.17122151629268206,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31049",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 1141438285.837578,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.04175638963681155,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31051",
+      "b": "sldu:31017",
+      "intersectionAreaM2": 231990980.71818134,
+      "shareOfA": 0.18555835393325715,
+      "shareOfB": 0.07486781195063813,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31051",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 1018240958.7267283,
+      "shareOfA": 0.8144416460667416,
+      "shareOfB": 0.06729755059684793,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31053",
+      "b": "sldu:31015",
+      "intersectionAreaM2": 1406369066.9297855,
+      "shareOfA": 1.0000000000000038,
+      "shareOfB": 0.8970505566778973,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31004",
+      "intersectionAreaM2": 36103171.944746755,
+      "shareOfA": 0.041078013745825794,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31005",
+      "intersectionAreaM2": 30724920.008917935,
+      "shareOfA": 0.03495866480644162,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31006",
+      "intersectionAreaM2": 32505434.193161096,
+      "shareOfA": 0.03698452520028496,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31007",
+      "intersectionAreaM2": 22447241.719701894,
+      "shareOfA": 0.025540362639852713,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31008",
+      "intersectionAreaM2": 23652425.648756906,
+      "shareOfA": 0.026911615062762708,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31009",
+      "intersectionAreaM2": 18011469.994200367,
+      "shareOfA": 0.020493363107724063,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31010",
+      "intersectionAreaM2": 26509242.566073842,
+      "shareOfA": 0.03016208748048966,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31011",
+      "intersectionAreaM2": 23044568.76434484,
+      "shareOfA": 0.026219998451025996,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31012",
+      "intersectionAreaM2": 34143211.87845001,
+      "shareOfA": 0.03884798069865133,
+      "shareOfB": 0.9999999999999993,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31013",
+      "intersectionAreaM2": 135383588.25479603,
+      "shareOfA": 0.15403878938395976,
+      "shareOfB": 0.9999999999999984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31015",
+      "intersectionAreaM2": 161401062.03382733,
+      "shareOfA": 0.18364134472625346,
+      "shareOfB": 0.1029494433221043,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31018",
+      "intersectionAreaM2": 89850266.18954991,
+      "shareOfA": 0.10223119661754494,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31020",
+      "intersectionAreaM2": 34124749.974515006,
+      "shareOfA": 0.038826974833992764,
+      "shareOfB": 1.0000000000000036,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31031",
+      "intersectionAreaM2": 28975799.784375984,
+      "shareOfA": 0.032968524307518204,
+      "shareOfB": 0.9999999999999991,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31036",
+      "intersectionAreaM2": 5634576.9011746,
+      "shareOfA": 0.006410994240411645,
+      "shareOfB": 0.014010049873853923,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31055",
+      "b": "sldu:31039",
+      "intersectionAreaM2": 176381104.8393258,
+      "shareOfA": 0.20068556469725968,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31057",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 2385002784.439363,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.15466455220167155,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31059",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 1493192769.4605496,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.22734279330740084,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31061",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 1491843824.002185,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.13078739680644835,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31063",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 2538393568.4892797,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.16461175942580084,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31065",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 1866458216.583781,
+      "shareOfA": 0.9999999999999982,
+      "shareOfB": 0.16362919996553293,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31067",
+      "b": "sldu:31030",
+      "intersectionAreaM2": 2227285958.8127017,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.9108642256765549,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31069",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 4482928899.214303,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.16399566069606292,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31071",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 1479880038.492864,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.03197748936027093,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31073",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 1198448034.8767526,
+      "shareOfA": 1.0,
+      "shareOfB": 0.0777179087003698,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31075",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 2028882747.236727,
+      "shareOfA": 0.9999999999999988,
+      "shareOfB": 0.07422111170807227,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31077",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 1477993122.4040685,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.11792326297574403,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31079",
+      "b": "sldu:31034",
+      "intersectionAreaM2": 158861932.85506284,
+      "shareOfA": 0.11108859613303189,
+      "shareOfB": 0.03954450189960215,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31079",
+      "b": "sldu:31035",
+      "intersectionAreaM2": 63700572.700914755,
+      "shareOfA": 0.044544385599732644,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31079",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 1207484667.4663665,
+      "shareOfA": 0.8443670182672375,
+      "shareOfB": 0.09634045640835331,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31081",
+      "b": "sldu:31034",
+      "intersectionAreaM2": 1410868536.2904358,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.3511986321123751,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31083",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 1486811061.9207277,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.1303461831614341,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31085",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 1847392472.4818094,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.1198011722926784,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31087",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 1860846122.4933999,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.12067362525923114,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31089",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 6261283859.119085,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.4138205831330925,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31091",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 1868679388.891754,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.11858392955363677,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31093",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 1490777892.7178538,
+      "shareOfA": 0.9999999999999987,
+      "shareOfB": 0.11894330955711427,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31095",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 1490968565.3726645,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.2270041519875609,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31097",
+      "b": "sldu:31001",
+      "intersectionAreaM2": 975734742.1286134,
+      "shareOfA": 0.9999999999999976,
+      "shareOfB": 0.15743939946514285,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31099",
+      "b": "sldu:31033",
+      "intersectionAreaM2": 1337338167.4521194,
+      "shareOfA": 1.0,
+      "shareOfB": 0.3374842751513258,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31101",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 2874532045.1523347,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.10515687233392962,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31103",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 2004450443.2656307,
+      "shareOfA": 0.9999999999999981,
+      "shareOfB": 0.043312492266599445,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31105",
+      "b": "sldu:31048",
+      "intersectionAreaM2": 2466965746.250668,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.3896910682746597,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31107",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 2951866240.8073196,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.19509465416149277,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31002",
+      "intersectionAreaM2": 137520779.5338564,
+      "shareOfA": 0.06273414410840644,
+      "shareOfB": 0.08578038808922744,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31021",
+      "intersectionAreaM2": 811253621.1122829,
+      "shareOfA": 0.37007717486647196,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31025",
+      "intersectionAreaM2": 192392734.18020153,
+      "shareOfA": 0.0877655984236162,
+      "shareOfB": 0.9999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31026",
+      "intersectionAreaM2": 23917850.37499429,
+      "shareOfA": 0.010910830183439977,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31027",
+      "intersectionAreaM2": 113861960.28252847,
+      "shareOfA": 0.05194147858266933,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31028",
+      "intersectionAreaM2": 17362465.648533747,
+      "shareOfA": 0.00792039883546629,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31029",
+      "intersectionAreaM2": 26797523.53149381,
+      "shareOfA": 0.01222447770199898,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31030",
+      "intersectionAreaM2": 217958783.51798442,
+      "shareOfA": 0.09942830298997771,
+      "shareOfB": 0.08913577432344767,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 602049985.6200649,
+      "shareOfA": 0.27464278988510793,
+      "shareOfB": 0.0916638013797737,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31109",
+      "b": "sldu:31046",
+      "intersectionAreaM2": 49004416.562125176,
+      "shareOfA": 0.02235480442284642,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31111",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 6669529941.437312,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.42323957412530083,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31113",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 1479305484.541346,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.09387477510050338,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31115",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 1479078906.3617792,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.0319601783664528,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31117",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 2228141250.844522,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.1413949052450347,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31119",
+      "b": "sldu:31019",
+      "intersectionAreaM2": 1490410517.8666027,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.6668396139577747,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31121",
+      "b": "sldu:31034",
+      "intersectionAreaM2": 1286652378.982858,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.320278285240527,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31123",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 3703834645.7441406,
+      "shareOfA": 0.9999999999999994,
+      "shareOfB": 0.13549463386408744,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31125",
+      "b": "sldu:31034",
+      "intersectionAreaM2": 1160912230.1707873,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.28897858074749605,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31127",
+      "b": "sldu:31001",
+      "intersectionAreaM2": 1060870514.2254242,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.171176457553986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31129",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 1491363700.2273798,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.13074530517618427,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31131",
+      "b": "sldu:31001",
+      "intersectionAreaM2": 1603251071.4427586,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.2586921168033222,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31133",
+      "b": "sldu:31001",
+      "intersectionAreaM2": 1121330547.5106933,
+      "shareOfA": 0.9999999999999963,
+      "shareOfB": 0.1809319688841551,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31135",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 1665035731.159069,
+      "shareOfA": 0.7268964711736542,
+      "shareOfB": 0.10566097160474033,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31135",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 625573450.7381611,
+      "shareOfA": 0.2731035288263449,
+      "shareOfB": 0.04056768329954628,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31137",
+      "b": "sldu:31033",
+      "intersectionAreaM2": 1163979373.1004264,
+      "shareOfA": 0.8315949552338243,
+      "shareOfB": 0.2937362774669753,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31137",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 235715713.76207802,
+      "shareOfA": 0.1684050447661772,
+      "shareOfB": 0.020664793521490584,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31139",
+      "b": "sldu:31019",
+      "intersectionAreaM2": 744625443.8106519,
+      "shareOfA": 0.5003567022305088,
+      "shareOfB": 0.3331603860422263,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31139",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 743563762.9916798,
+      "shareOfA": 0.49964329776949046,
+      "shareOfB": 0.04914359369759429,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31141",
+      "b": "sldu:31022",
+      "intersectionAreaM2": 1773078345.0264795,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.8075440847541155,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31143",
+      "b": "sldu:31024",
+      "intersectionAreaM2": 1141256941.070772,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.253824234916609,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31145",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 1859627347.6428807,
+      "shareOfA": 0.9999999999999989,
+      "shareOfB": 0.1630303493671441,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31147",
+      "b": "sldu:31001",
+      "intersectionAreaM2": 1436338937.439539,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.23176005729339394,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31149",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 2620274353.9029098,
+      "shareOfA": 0.9999999999999997,
+      "shareOfB": 0.056619315818499785,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31151",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 1492633356.4886618,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.22725762111112285,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31153",
+      "b": "sldu:31003",
+      "intersectionAreaM2": 45798931.40893379,
+      "shareOfA": 0.07143872417378662,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31153",
+      "b": "sldu:31014",
+      "intersectionAreaM2": 30726965.74460389,
+      "shareOfA": 0.047928961724595175,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31153",
+      "b": "sldu:31036",
+      "intersectionAreaM2": 396546496.82148635,
+      "shareOfA": 0.6185466546275259,
+      "shareOfB": 0.9859899501261463,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31153",
+      "b": "sldu:31045",
+      "intersectionAreaM2": 92363644.15498263,
+      "shareOfA": 0.14407194001007792,
+      "shareOfB": 0.999999999999999,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31153",
+      "b": "sldu:31049",
+      "intersectionAreaM2": 75657877.51048404,
+      "shareOfA": 0.11801371946401557,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31155",
+      "b": "sldu:31023",
+      "intersectionAreaM2": 1967924976.2651217,
+      "shareOfA": 0.9999999999999982,
+      "shareOfB": 0.4680157643352918,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31157",
+      "b": "sldu:31048",
+      "intersectionAreaM2": 1930978290.4113972,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.30502449981286994,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31159",
+      "b": "sldu:31024",
+      "intersectionAreaM2": 1491538224.9403043,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.3317294600102438,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31161",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 6396586019.817971,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.13821847451844882,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31163",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 1480551422.664623,
+      "shareOfA": 1.0000000000000029,
+      "shareOfB": 0.11812737969985,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31165",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 5354451388.301754,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.19587792107151158,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31167",
+      "b": "sldu:31016",
+      "intersectionAreaM2": 693725830.9915522,
+      "shareOfA": 0.621456486431823,
+      "shareOfB": 0.15457945010202037,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31167",
+      "b": "sldu:31022",
+      "intersectionAreaM2": 422564442.16123664,
+      "shareOfA": 0.3785435135681769,
+      "shareOfB": 0.19245591524588448,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31169",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 1489178649.1440046,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.22673163221413822,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31171",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 1847593460.8812015,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.11724584437078507,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31173",
+      "b": "sldu:31017",
+      "intersectionAreaM2": 1025835947.4503413,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.3310563736924528,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31175",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 1477479676.5996983,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.11788229715276777,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31177",
+      "b": "sldu:31016",
+      "intersectionAreaM2": 1018377941.0337595,
+      "shareOfA": 0.999999999999998,
+      "shareOfB": 0.22692005269001328,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31179",
+      "b": "sldu:31017",
+      "intersectionAreaM2": 1148231606.0652852,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.37055573321233765,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31181",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 1489355207.2530456,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.13056922403190435,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31183",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 1490777577.3858016,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.11894328439800901,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:31185",
+      "b": "sldu:31024",
+      "intersectionAreaM2": 1491389156.0668478,
+      "shareOfA": 0.9999999999999973,
+      "shareOfB": 0.3316963059575556,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31002",
+      "intersectionAreaM2": 1603172736.7660007,
+      "shareOfA": 0.10225522497666241,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31003",
+      "intersectionAreaM2": 43517803.55988606,
+      "shareOfA": 0.002775697647206098,
+      "shareOfB": 0.9501925529947447,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31014",
+      "intersectionAreaM2": 30700738.699338675,
+      "shareOfA": 0.0019581863330481626,
+      "shareOfB": 0.9991464485792971,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31015",
+      "intersectionAreaM2": 1406369066.9297874,
+      "shareOfA": 0.0897024893457345,
+      "shareOfB": 0.8970505566778986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31016",
+      "intersectionAreaM2": 2182061422.840422,
+      "shareOfA": 0.13917850309477356,
+      "shareOfB": 0.4862178107875762,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31019",
+      "intersectionAreaM2": 1490410517.8666012,
+      "shareOfA": 0.09506290826743138,
+      "shareOfB": 0.666839613957774,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31021",
+      "intersectionAreaM2": 811253621.1122838,
+      "shareOfA": 0.05174421922076182,
+      "shareOfB": 1.0000000000000033,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31022",
+      "intersectionAreaM2": 2195642787.1877103,
+      "shareOfA": 0.14004476375089192,
+      "shareOfB": 0.9999999999999974,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31023",
+      "intersectionAreaM2": 2236901284.363332,
+      "shareOfA": 0.14267635597681932,
+      "shareOfB": 0.5319842356647138,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31024",
+      "intersectionAreaM2": 2255947943.4559183,
+      "shareOfA": 0.14389120972645025,
+      "shareOfB": 0.5017400027570889,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31025",
+      "intersectionAreaM2": 192392734.1802016,
+      "shareOfA": 0.012271392761554438,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31026",
+      "intersectionAreaM2": 23917850.37499429,
+      "shareOfA": 0.001525553120362331,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31027",
+      "intersectionAreaM2": 113861960.28252847,
+      "shareOfA": 0.007262461553868826,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31028",
+      "intersectionAreaM2": 17362465.648533747,
+      "shareOfA": 0.001107430777934648,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31029",
+      "intersectionAreaM2": 26797523.53149381,
+      "shareOfA": 0.0017092274180372756,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31030",
+      "intersectionAreaM2": 217958783.51798442,
+      "shareOfA": 0.013902073016305435,
+      "shareOfB": 0.08913577432344767,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 602049985.6200656,
+      "shareOfA": 0.03840057612940924,
+      "shareOfB": 0.09166380137977381,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31036",
+      "intersectionAreaM2": 39123731.519736364,
+      "shareOfA": 0.0024954303904564895,
+      "shareOfB": 0.09727889768058955,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31045",
+      "intersectionAreaM2": 92363644.15498249,
+      "shareOfA": 0.005891233674410139,
+      "shareOfB": 0.9999999999999976,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31046",
+      "intersectionAreaM2": 49004416.562125176,
+      "shareOfA": 0.003125650483876455,
+      "shareOfB": 1.0000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3101",
+      "b": "sldu:31049",
+      "intersectionAreaM2": 47338798.93217377,
+      "shareOfA": 0.0030194123340066227,
+      "shareOfB": 0.6256955718274543,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31003",
+      "intersectionAreaM2": 2281127.8490477395,
+      "shareOfA": 0.0007051689736185857,
+      "shareOfB": 0.04980744700525408,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31004",
+      "intersectionAreaM2": 36103171.944746755,
+      "shareOfA": 0.011160635610704687,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31005",
+      "intersectionAreaM2": 30724920.008917935,
+      "shareOfA": 0.009498047343662224,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31006",
+      "intersectionAreaM2": 32505434.193161096,
+      "shareOfA": 0.010048460754440677,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31007",
+      "intersectionAreaM2": 22447241.719701894,
+      "shareOfA": 0.006939154423395585,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31008",
+      "intersectionAreaM2": 23652425.648756906,
+      "shareOfA": 0.007311715003298248,
+      "shareOfB": 1.000000000000001,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31009",
+      "intersectionAreaM2": 18011469.994200367,
+      "shareOfA": 0.005567916684053606,
+      "shareOfB": 0.9999999999999998,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31010",
+      "intersectionAreaM2": 26509242.566073842,
+      "shareOfA": 0.00819484772829723,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31011",
+      "intersectionAreaM2": 23044568.76434484,
+      "shareOfA": 0.00712380715961172,
+      "shareOfB": 1.0000000000000009,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31012",
+      "intersectionAreaM2": 34143211.878450036,
+      "shareOfA": 0.010554749785909362,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31013",
+      "intersectionAreaM2": 135383588.25479603,
+      "shareOfA": 0.04185136138436481,
+      "shareOfB": 0.9999999999999984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31014",
+      "intersectionAreaM2": 26227.045265209443,
+      "shareOfA": 8.107611591536392e-06,
+      "shareOfB": 0.0008535514207033383,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31015",
+      "intersectionAreaM2": 161401062.03382733,
+      "shareOfA": 0.049894187782090316,
+      "shareOfB": 0.1029494433221043,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31018",
+      "intersectionAreaM2": 89850266.18954991,
+      "shareOfA": 0.027775567254895946,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31020",
+      "intersectionAreaM2": 34124749.974515006,
+      "shareOfA": 0.010549042625806809,
+      "shareOfB": 1.0000000000000036,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31023",
+      "intersectionAreaM2": 1967924976.265122,
+      "shareOfA": 0.6083480311068761,
+      "shareOfB": 0.46801576433529185,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31031",
+      "intersectionAreaM2": 28975799.78437601,
+      "shareOfA": 0.008957338801617712,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31036",
+      "intersectionAreaM2": 363057342.2029253,
+      "shareOfA": 0.11223254035182775,
+      "shareOfB": 0.9027211023194126,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31039",
+      "intersectionAreaM2": 176381104.83932564,
+      "shareOfA": 0.05452499416776723,
+      "shareOfB": 1.0,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3102",
+      "b": "sldu:31049",
+      "intersectionAreaM2": 28319078.578310274,
+      "shareOfA": 0.008754325446172396,
+      "shareOfB": 0.37430442817254644,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31001",
+      "intersectionAreaM2": 6197525812.747019,
+      "shareOfA": 0.03416197638725214,
+      "shareOfB": 0.9999999999999987,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31016",
+      "intersectionAreaM2": 2305765584.7838273,
+      "shareOfA": 0.012709831607302267,
+      "shareOfB": 0.5137821892124236,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31017",
+      "intersectionAreaM2": 3098674512.768411,
+      "shareOfA": 0.01708050095075829,
+      "shareOfB": 0.9999999999999969,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31019",
+      "intersectionAreaM2": 744625443.8106519,
+      "shareOfA": 0.004104521319860617,
+      "shareOfB": 0.3331603860422263,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31024",
+      "intersectionAreaM2": 2240300972.4355097,
+      "shareOfA": 0.012348977839393139,
+      "shareOfB": 0.4982599972429132,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31030",
+      "intersectionAreaM2": 2227285958.8127065,
+      "shareOfA": 0.012277236534637703,
+      "shareOfB": 0.9108642256765568,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31032",
+      "intersectionAreaM2": 5965973340.465891,
+      "shareOfA": 0.032885613798457766,
+      "shareOfB": 0.9083361986202244,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31033",
+      "intersectionAreaM2": 3962668088.3204556,
+      "shareOfA": 0.02184300279722721,
+      "shareOfB": 0.9999999999999996,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31034",
+      "intersectionAreaM2": 4017295078.2991443,
+      "shareOfA": 0.02214411746752359,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31035",
+      "intersectionAreaM2": 63700572.70091477,
+      "shareOfA": 0.00035113003579383687,
+      "shareOfB": 1.0000000000000004,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31037",
+      "intersectionAreaM2": 397705399.08626086,
+      "shareOfA": 0.0021922300710265916,
+      "shareOfB": 0.9999999999999986,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31038",
+      "intersectionAreaM2": 11406632905.23293,
+      "shareOfA": 0.06287559515527054,
+      "shareOfB": 1.000000000000003,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31040",
+      "intersectionAreaM2": 15130431192.460434,
+      "shareOfA": 0.08340190081381363,
+      "shareOfB": 1.0000000000000038,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31041",
+      "intersectionAreaM2": 12533516162.184923,
+      "shareOfA": 0.06908719642621715,
+      "shareOfB": 1.0000000000000016,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31042",
+      "intersectionAreaM2": 15758285257.75524,
+      "shareOfA": 0.08686275541955417,
+      "shareOfB": 1.0000000000000033,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31043",
+      "intersectionAreaM2": 46278806375.94647,
+      "shareOfA": 0.2550978468526198,
+      "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31044",
+      "intersectionAreaM2": 15420487438.708616,
+      "shareOfA": 0.0850007476657178,
+      "shareOfB": 1.0000000000000027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31047",
+      "intersectionAreaM2": 27335655591.050232,
+      "shareOfA": 0.15067948872609788,
+      "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:3103",
+      "b": "sldu:31048",
+      "intersectionAreaM2": 6330567844.865045,
+      "shareOfA": 0.03489533013148019,
+      "shareOfB": 1.0000000000000007,
+      "geometryRepaired": false
+    }
+  ],
+  "geometryRepairs": [],
+  "coverageResiduals": [],
+  "sameLayerIntersections": [],
+  "inputFiles": {
+    "state": "geography/regions/ne/state.geojson.gz",
+    "county": "geography/regions/ne/county.geojson.gz",
+    "cd": "geography/regions/ne/cd.geojson.gz",
+    "sldu": "geography/regions/ne/sldu.geojson.gz",
+    "sldl": "geography/regions/ne/sldl.geojson.gz"
+  },
+  "sourceIds": [
+    "census-cd-31-count",
+    "census-cd-31-page-0",
+    "census-cd-metadata",
+    "census-county-31-count",
+    "census-county-31-page-0",
+    "census-county-metadata",
+    "census-sldl-31-count",
+    "census-sldl-metadata",
+    "census-sldu-31-count",
+    "census-sldu-31-page-0",
+    "census-sldu-metadata",
+    "census-state-31-count",
+    "census-state-31-page-0",
+    "census-state-metadata"
+  ]
+}
