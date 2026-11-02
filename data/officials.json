@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T17:17:24.226Z",
+  "generatedAt": "2026-11-02T22:11:22.607Z",
   "officials": [
     {
       "id": "us-house-ak-nicholas-j-begich-iii",
@@ -228388,6 +228388,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "jd.williams@wyoleg.gov",
+      "phone": "307-340-6006",
       "address": "251A Greasewood Road, Lusk, WY 82225",
       "website": "https://www.jdforstatehouse.com/",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-WilliamsJD.jpg",
@@ -228398,7 +228399,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228503,6 +228504,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "tomi.strock@wyoleg.gov",
+      "phone": "307-359-1120",
       "address": "125 Cherokee Trail, Douglas, WY 82633",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2094",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-StrockTomi.jpg",
@@ -228513,7 +228515,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228531,6 +228533,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "bob.nicholas@wyoleg.gov",
+      "phone": "307-851-7774",
       "address": "6225 Mountainview Drive, Cheyenne, WY 82009",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/1980",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-NicholasBob.jpg",
@@ -228541,7 +228544,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228559,6 +228562,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "steve.johnson@wyoleg.gov",
+      "phone": "307-640-0707",
       "address": "11234 Coonrod Road, Cheyenne, WY 82009",
       "website": "https://wyoleg.gov/Legislators/2025/H/2118",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-JohnsonSteve.jpg",
@@ -228572,7 +228576,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228590,6 +228594,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "landon.brown@wyoleg.gov",
+      "phone": "307-630-0582",
       "address": "5312 Opal Drive, Cheyenne, WY 82009",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2034",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-BrownLandon.jpg",
@@ -228603,7 +228608,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228648,6 +228653,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "jacob.wasserburger@wyoleg.gov",
+      "phone": "307-340-0160",
       "address": "1740 Dell Range Blvd. Suite H107, Cheyenne, WY 82009",
       "website": "https://wyoleg.gov/Legislators/2025/H/2139",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-WasserburgerJacob.jpg",
@@ -228658,7 +228664,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228676,6 +228682,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "clarence.styvar@wyoleg.gov",
+      "phone": "307-631-2566",
       "address": "580 Willson Court, Cheyenne, WY 82007",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2051",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-StyvarClarence.jpg",
@@ -228689,7 +228696,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228766,6 +228773,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "pam.thayer@wyoleg.gov",
+      "phone": "307-321-5624",
       "address": "219 W. Maple St., Rawlins, WY 82301",
       "website": "https://www.wyoleg.gov/Legislators/2025/H/2119",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-ThayerPamela.jpg",
@@ -228776,7 +228784,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228826,6 +228834,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "jt.larson@wyoleg.gov",
+      "phone": "307-389-0162",
       "address": "606 Walnut St., Rock Springs, WY",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2096",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-LarsonJT.jpg",
@@ -228836,7 +228845,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -228939,6 +228948,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "mckay.erickson@wyoleg.gov",
+      "phone": "307-884-6119",
       "address": "2886 Highway 241, Afton, WY 83110",
       "website": "https://wyoleg.gov/Legislators/2025/R/2122",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-EricksonMcKay.jpg",
@@ -228952,7 +228962,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229031,6 +229041,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "nina.webber@wyoleg.gov",
+      "phone": "307-921-8593",
       "address": "1108 14th St. Suite 108, Cody, WY 82414",
       "website": "https://wyoleg.gov/Legislators/2025/H/2123",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-WebberNina.jpg",
@@ -229041,7 +229052,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229113,6 +229124,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "martha.lawley@wyoleg.gov",
+      "phone": "307-431-1272",
       "address": "818 Sagebrush Drive, Worland, WY 82401",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2102",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-LawleyMartha.jpg",
@@ -229127,7 +229139,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229145,6 +229157,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "john.winter@wyoleg.gov",
+      "phone": "307-690-0185",
       "address": "P. O. Box 311, Thermopolis, WY 82443",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2056",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-WinterJohn.jpg",
@@ -229155,7 +229168,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229173,6 +229186,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "ken.pendergraft@wyoleg.gov",
+      "phone": "307-461-2436",
       "address": "459 W. Burkitt St., Sheridan, WY 82801",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2103",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-PendergraftKen.jpg",
@@ -229183,7 +229197,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229201,6 +229215,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "tom.kelly@wyoleg.gov",
+      "phone": "307-461-9304",
       "address": "412 Airport Road, Sheridan, WY 82801",
       "website": "https://wyoleg.gov/Legislators/2025/H/2125",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-KellyTom.jpg",
@@ -229211,7 +229226,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229229,6 +229244,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "john.bear@wyoleg.gov",
+      "phone": "307-670-1130",
       "address": "409 Mills Ave., Gillette, WY 82718",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2075",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-BearJohn.jpg",
@@ -229242,7 +229258,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229373,6 +229389,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "art.washut@wyoleg.gov",
+      "phone": "307-251-4725",
       "address": "4031 Crystie Lane, Casper, WY 82609",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2058",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-WashutArt.jpg",
@@ -229383,7 +229400,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229401,6 +229418,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "steve.harshman@wyoleg.gov",
+      "phone": "307-262-8075",
       "address": "4286 Moonbeam Road, Casper, WY 82604",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/717",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-HarshmanSteve.jpg",
@@ -229414,7 +229432,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229432,6 +229450,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "jayme.lien@wyoleg.gov",
+      "phone": "307-267-5675",
       "address": "1624 Begonia St., Casper, WY 82604",
       "website": "https://wyoleg.gov/Legislators/2025/H/2126",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-LienJayme.jpg",
@@ -229445,7 +229464,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229463,6 +229482,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "cody.wylie@wyoleg.gov",
+      "phone": "307-371-3283",
       "address": "517 Archers Trail, Rock Springs, WY 82901",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2107",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/67th-WylieCody.jpg",
@@ -229473,7 +229493,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229491,6 +229511,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "marilyn.connolly@wyoleg.gov",
+      "phone": "307-217-0345",
       "address": "859 N. DeSmet Ave., Buffalo, WY 82834",
       "website": "https://wyoleg.gov/Legislators/2025/H/2127",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-ConnollyMarilyn.jpg",
@@ -229501,7 +229522,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229607,6 +229628,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "lee.filer@wyoleg.gov",
+      "phone": "307-421-9554",
       "address": "1215 Medley Loop, Cheyenne, WY 82007",
       "website": "https://legisweb.state.wy.us/LegislatorSummary/LegDetail.aspx?LegID=1990",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-FilerLee.jpg",
@@ -229620,7 +229642,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229727,6 +229749,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "darin.mccann@wyoleg.gov",
+      "phone": "307-899-2270",
       "address": "532 Quadrant Drive, Rock Springs, WY 82901",
       "website": "https://wyoleg.gov/Legislators/2025/H/2130",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-McCannDarin.jpg",
@@ -229737,7 +229760,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229755,6 +229778,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "robert.wharff@wyoleg.gov",
+      "phone": "307-799-8944",
       "address": "137 Shady Lane, Evanston, WY 82930",
       "website": "https://wyoleg.gov/Legislators/2021/R/2082",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-WharffRobert.jpg",
@@ -229768,7 +229792,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229845,6 +229869,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "reuben.tarver@wyoleg.gov",
+      "phone": "307-689-6275",
       "address": "8185 N. Highway 14-16, Gillette, WY 82716",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2112",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-TarverReuben.jpg",
@@ -229858,7 +229883,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229876,6 +229901,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "chris.knapp@wyoleg.gov",
+      "phone": "307-660-4566",
       "address": "1134 E. 12th St., Gillette, WY 82716",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2086",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-KnappChristopher.jpg",
@@ -229886,7 +229912,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229904,6 +229930,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "lloyd.larsen@wyoleg.gov",
+      "phone": "307-321-1221",
       "address": "1076 S. 2nd St., Lander, WY 82520",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/1988",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-LarsenLloyd.jpg",
@@ -229917,7 +229944,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229935,6 +229962,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "joel.guggenmos@wyoleg.gov",
+      "phone": "307-488-8564",
       "address": "1106 E. Adams Ave., Riverton, WY 82501",
       "website": "https://wyoleg.gov/Legislators/2025/H/2132",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-GuggenmosJoel.jpg",
@@ -229945,7 +229973,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -229963,6 +229991,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "elissa.campbell@wyoleg.gov",
+      "phone": "307-277-4782",
       "address": "718 Divine Ave., Casper, WY 82601",
       "website": "https://wyoleg.gov/Legislators/2025/H/2133",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-CampbellElissa.jpg",
@@ -229973,7 +230002,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230045,6 +230074,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "jr.riggins@wyoleg.gov",
+      "phone": "307-262-8446",
       "address": "1872 Jim Bridger Ave., Casper, WY 82604",
       "website": "https://wyoleg.gov/Legislators/2025/H/2135",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-RigginsJR.jpg",
@@ -230055,7 +230085,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230303,6 +230333,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "taft.love@wyoleg.gov",
+      "phone": "307-631-8107",
       "address": "1463 Earhart Drive, Cheyenne, WY 82009",
       "website": "https://wyoleg.gov/Legislators/2026/R/2145",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-LoveTaft.jpg",
@@ -230313,7 +230344,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230331,6 +230362,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "stephan.pappas@wyoleg.gov",
+      "phone": "307-630-7180",
       "address": "1500 E. 22nd St., Cheyenne, WY 82001",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/2008",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-PappasStephan.jpg",
@@ -230345,7 +230377,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230480,6 +230512,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "john.kolb@wyoleg.gov",
+      "phone": "307-389-5000",
       "address": "503 Cheyenne Drive, Rock Springs, WY 82901",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/2066",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-KolbJohn.jpg",
@@ -230493,7 +230526,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230511,6 +230544,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "stacy.jones@wyoleg.gov",
+      "phone": "307-371-8182",
       "address": "927 Whitewater Drive, Rock Springs, WY 82901",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/2088",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-JonesStacy.jpg",
@@ -230525,7 +230559,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230570,6 +230604,7 @@
       "party": "Republican",
       "gender": "Female",
       "email": "wendy.schuler@wyoleg.gov",
+      "phone": "307-679-6774",
       "address": "200 Liberty Ave., Evanston, WY 82930",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/2062",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-SchulerWendy.jpg",
@@ -230580,7 +230615,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230776,6 +230811,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "barry.crago@wyoleg.gov",
+      "phone": "307-267-9789",
       "address": "443 Lobban Ave., Buffalo, WY 82834",
       "website": "https://www.wyoleg.gov/Legislators/2023/H/2078",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-CragoBarry.jpg",
@@ -230786,7 +230822,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230833,6 +230869,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "troy.mckeown@wyoleg.gov",
+      "phone": "307-670-3581",
       "address": "1330 Columbine Drive, Gillette, WY 82718",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/2069",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-McKeownTroy.jpg",
@@ -230846,7 +230883,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230893,6 +230930,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "tim.salazar@wyoleg.gov",
+      "phone": "307-220-1213",
       "address": "331 Peterson Road, Riverton, WY 82501",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/2028",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-SalazarTim.jpg",
@@ -230903,7 +230941,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230921,6 +230959,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "bill.landen@wyoleg.gov",
+      "phone": "307-259-4194",
       "address": "2010 Kingsbury Drive, Casper, WY 82609",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/434",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-LandenBill.jpg",
@@ -230931,7 +230970,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
@@ -230949,6 +230988,7 @@
       "party": "Republican",
       "gender": "Male",
       "email": "jim.anderson@wyoleg.gov",
+      "phone": "307-267-5775",
       "address": "5941 S. Cedar St., Casper, WY 82601",
       "website": "https://www.wyoleg.gov/Legislators/2023/S/1985",
       "photo": "https://wyoleg.gov/LegislatorSummary/Photos/68th-AndersonJim.jpg",
@@ -230959,7 +230999,7 @@
         {
           "name": "Open States",
           "url": "https://data.openstates.org/people/current/wy.csv",
-          "retrievedAt": "2026-11-01"
+          "retrievedAt": "2026-11-02"
         }
       ]
     },
