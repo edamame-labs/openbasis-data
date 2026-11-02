@@ -9,7 +9,9 @@ import importlib
 from functools import partial
 import sys
 from html.parser import HTMLParser
+import html
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -120,6 +122,21 @@ def record(source, id, name, state, level, body, district=None, **extra):
         row['district'] = str(int(text)) if text.isdecimal() else text
     row.update({k:v for k,v in extra.items() if v})
     return row
+
+
+# Trailing academic/professional credentials some rosters append ("Jane Doe, Ph.D.").
+# Only after the name: leading initials such as "J.D. Ford" are given names.
+CREDENTIALS = re.compile(r'(?:,?\s+(?:Ph\.?\s?D|M\.?\s?D|Esq|D\.?D\.?S|Ed\.?\s?D|J\.?D|D\.?V\.?M|Pharm\.?\s?D|CPA|MBA|DNP|RN)\.?)+$')
+NOT_A_PERSON = re.compile(r'[*\d<>]|&\w+;|\b(?:vacant|constituent|services|office|district)\b', re.I)
+
+
+def person_name(name):
+    """Normalize a roster's display name; fail closed on text that isn't a person."""
+    text = ' '.join(html.unescape(name).split())  # some rosters double-encode entities
+    text = CREDENTIALS.sub('', text)
+    text = re.sub(r'\b(l{2,3})$', lambda m: 'I'*len(m[1]), text)  # "Bucy lll" typed with lowercase L
+    assert text and not NOT_A_PERSON.search(text), 'Not a person name: '+name
+    return text
 
 
 def parse_federal(key, raw, source):
@@ -329,6 +346,7 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
                     raw, source = acquire(key, publisher, url, offline)
                     rows.extend(module.parse(key, raw, source))
                     sources.append(source)
+        for row in rows: row['name']=person_name(row['name'])
         exception_data,exception_sources=geography_exceptions.collect(acquire,offline)
         rows=geography_exceptions.apply_roster(rows,exception_data)
         sources.extend(exception_sources)

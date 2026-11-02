@@ -215,8 +215,9 @@ def parse(key, raw, source):
     elif key=='mi-lower':
         assert 'current term expiring on December 31, 2026' in tree.text()
         source['effectivePeriod']='Current term ending 2026-12-31'
-        for a in tree.find(lambda n:n.tag=='a' and has_class(n,'page-search-target')):
-            m=match(r'(.+), Rep\. (.+?)\s+\(([^)]+)\) District-(\d+)',a.text())
+        # Members without a party profile link are listed as a plain <div>.
+        for a in tree.find(lambda n:n.tag in {'a','div'} and has_class(n,'page-search-target')):
+            m=match(r'(.+), Rep\. (.+?)(?:\s+\(([^)]+)\))? District-(\d+)',' '.join(a.text().split()))
             rows.append(make(source,state,chamber,m[2]+' '+m[1],m[4],m[3]))
         rows=deduplicate(rows)
     elif key=='mn-lower':

@@ -13,6 +13,15 @@ class RosterTests(unittest.TestCase):
     def test_html_nested_text(self):
         self.assertEqual(build.HTML(b'<div><b>Jane</b> Doe &amp; Co.</div>').root.text(),'Jane Doe & Co.')
 
+    def test_person_name_normalization(self):
+        cases={'Rafael Anch&iacute;a':'Rafael Anchía','John H. Bucy lll':'John H. Bucy III','Rosalyn D. Henderson-Myers, Ph.D.':'Rosalyn D. Henderson-Myers',
+               'John V. Azzariti Jr. M.D.':'John V. Azzariti Jr.','Luanne M. Peterpaul Esq.':'Luanne M. Peterpaul','Stephanie  T. Bolden':'Stephanie T. Bolden',
+               'J.D. Mesnard':'J.D. Mesnard','MD Rahman':'MD Rahman','C. E. (Cliff) Hayes, Jr.':'C. E. (Cliff) Hayes, Jr.'}
+        for raw,expected in cases.items():
+            with self.subTest(raw=raw): self.assertEqual(build.person_name(raw),expected)
+        for raw in ['Constituent Services *','Vacant','District 22 Office']:
+            with self.subTest(raw=raw), self.assertRaises(AssertionError): build.person_name(raw)
+
     def test_empty_roster_is_rejected(self):
         for key in ['ca-upper','ca-lower','nc-upper','nc-lower']:
             with self.subTest(key=key), self.assertRaises((AssertionError,ValueError)):

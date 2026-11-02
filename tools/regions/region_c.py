@@ -205,10 +205,12 @@ def parse(key, raw, source):
             if chamber=='upper':
                 assert '89th Legislature' in tree.text(), 'Texas legislative session changed'
                 source['effectivePeriod']='89th Legislature (2025-2026)'
+                assert '* Indicates a currently vacant seat' in tree.text(), 'Texas vacancy marker changed'
                 for n in tree.find(lambda n:has_class(n,'mempicdiv')):
                     links=n.find(lambda n:n.tag=='a'and n.text())
                     assert len(links)==1
                     a=links[0];district=re.search(r'District (\d+)',n.text()).group(1)
+                    if a.text().strip().endswith('*'):continue  # vacant seat (e.g. "Constituent Services *")
                     rows.append(make(source,st,chamber,a.text(),district,a.attrs['href'],website=a.attrs['href']))
             else:
                 source['effectivePeriod']='Current Texas House members directory; active=1 entries'
