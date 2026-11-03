@@ -27,6 +27,27 @@ Counts below were obtained from official responses retrieved on 2026-11-02 (UTC)
 
 Names published as `Family, Given` are reordered to `Given Family`, preserving punctuation within the components. IDs contain a hash of the name as well as the chamber and district, so Arizona's and Idaho's two-member House districts retain distinct people. District cardinality checks reject conflicting occupants outside those chambers. Bounds on roster size detect selector failure and do not assert that absent districts are vacant.
 
+## Contact fields, identifiers and joined party
+
+Contact values are normalized by `build.contact`; values that do not parse are omitted. `ids` holds the publisher's own member key under the record's source id.
+
+| State | Fields (all from the record's own roster unless noted) |
+| --- | --- |
+| Alabama | `email`, `phone`, `photo`, `ids` (`id`) from the GraphQL fields above. |
+| Alaska | Capitol `phone` from the Blocks view card, joined to the list-view card by member `code` (also `ids`); `photo`. Emails are Cloudflare-obfuscated and are not decoded. |
+| Arizona | `phone`, `photo`, `ids` (`legislator`). `email` is the column's local part plus `@azleg.gov`, the domain the column header states for all members; parsing fails if that header changes. |
+| Arkansas | `email` (mailto), `ids` (`member` query value). House `party` comes from the [Arkansas House member list](https://www.arkansashouse.org/representatives/members/) (source `ar-house-members`, with `fieldEvidence`); the card's displayed party is used, not its CSS class. Joined by House district; the family name must match or party stays empty. arkleg's list and the Senate's list publish no party, so Senate party is not collected (it appears only on per-member pages). |
+| Colorado | Capitol `phone`, `email`, `ids` (profile slug). |
+| Connecticut | `email` only where the name links to a `mailto:`; Senate caucus contact forms are not addresses. |
+| Delaware | `ids` (`PersonId`). Photos load per member by a separate POST and are not collected. |
+| Florida Senate | `photo` (directory thumbnail). |
+| Idaho | `email`, Statehouse `phone`, `photo` from the same directory row. |
+| Iowa | `email`, `ids` (`personID`). |
+| Kansas | Capitol `phone` (`Contact & Info` card), `photo` (the `fallback` placeholder is skipped), `ids` (profile path). Emails are Cloudflare-obfuscated and are not decoded. |
+| Kentucky | `photo` (directory thumbnail). |
+
+Browser-DOM sources (Florida House, Georgia, Hawaii, Illinois, Indiana) are unchanged; their contact fields need fresh DOM evidence to develop against.
+
 ## API discovery and reproduction
 
 ### Alabama
@@ -34,8 +55,10 @@ Names published as `Family, Given` are reordered to `Given Family`, preserving p
 The official directory's Next.js runtime names `https://alison.legislature.state.al.us/graphql` as `NEXT_PUBLIC_FE_GRAPHQL_URL`. Its lazy-loaded `MemberGallery` query requests active elected `legislativeMembers`. The adapter issues a GET request with this URL-encoded GraphQL query:
 
 ```graphql
-{legislativeMembers(where:{active:{eq:true},elected:{eq:true}}){data{id body fullName district honorificFullNameAffiliation}}}
+{legislativeMembers(where:{active:{eq:true},elected:{eq:true}}){data{id body fullName district honorificFullNameAffiliation phone email imageUrl}}}
 ```
+
+`phone`, `email` and `imageUrl` are fields the directory's own `MemberGallery` query requests.
 
 It retains the government's `fullName`, extracts the district number from its explicit `House District N` or `Senate District N` label, and reads a party suffix only when supplied. No login, token or third-party service is required. The exact encoded query URL is retained in each record's source.
 

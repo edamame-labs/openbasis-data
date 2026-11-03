@@ -16,7 +16,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import tempfile
-from urllib.parse import urlencode, urljoin, urlparse
+from urllib.parse import unquote, urlencode, urljoin, urlparse
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -124,6 +124,47 @@ def record(source, id, name, state, level, body, district=None, **extra):
     return row
 
 
+# Contact fields copied from the same official roster as the record (or, with
+# fieldEvidence, from another allowlisted official page about that member).
+FIELDS = {'id','name','state','level','jurisdiction','body','office','district','party','website','email','phone','photo','ids','sources','fieldEvidence'}
+EVIDENCED = {'district','party','website','email','phone','photo'}
+EMAIL = re.compile(r'[a-z0-9._%+\'-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}')
+PHONE = re.compile(r'\d{3}-\d{3}-\d{4}')
+
+
+def contact(base_url, email=None, phone=None, photo=None):
+    """Normalize contact details from an official page. Unparseable values are omitted, not guessed."""
+    out = {}
+    if email:
+        text = unquote(email.strip()).removeprefix('mailto:').split('?')[0].strip().lower()
+        if EMAIL.fullmatch(text): out['email'] = text
+    if phone:
+        digits = re.sub(r'\D', '', phone.strip().removeprefix('tel:').split('x')[0].split('ext')[0])
+        if len(digits) == 11 and digits[0] == '1': digits = digits[1:]
+        if len(digits) == 10: out['phone'] = digits[:3]+'-'+digits[3:6]+'-'+digits[6:]
+    if photo:
+        url = urljoin(base_url, photo.strip())
+        if urlparse(url).scheme == 'https': out['photo'] = url
+    return out
+
+
+CSV_COLUMNS = ['id','name','level','state','jurisdiction','body','office','district','party','website','email','phone','photo','ids','sources','fieldEvidence']
+JSON_COLUMNS = {'ids','sources','fieldEvidence'}
+
+
+def drop_shared_contacts(rows):
+    """A mailbox or number published for several members of one body is an office line, not theirs."""
+    for key, limit in [('email', 1), ('phone', 3)]:
+        seen = collections.Counter((r['body'], r[key]) for r in rows if r.get(key))
+        for r in rows:
+            if r.get(key) and seen[(r['body'], r[key])] > limit:
+                del r[key]
+                r.get('fieldEvidence', {}).pop(key, None)
+        for r in rows:
+            if r.get('fieldEvidence') == {}: del r['fieldEvidence']
+    return rows
+
+
 # Trailing academic/professional credentials some rosters append ("Jane Doe, Ph.D.").
 # Only after the name: leading initials such as "J.D. Ford" are given names.
 CREDENTIALS = re.compile(r'(?:,?\s+(?:Ph\.?\s?D|M\.?\s?D|Esq|D\.?D\.?S|Ed\.?\s?D|J\.?D|D\.?V\.?M|Pharm\.?\s?D|CPA|MBA|DNP|RN)\.?)+$')
@@ -137,6 +178,20 @@ def person_name(name):
     text = re.sub(r'\b(l{2,3})$', lambda m: 'I'*len(m[1]), text)  # "Bucy lll" typed with lowercase L
     assert text and not NOT_A_PERSON.search(text), 'Not a person name: '+name
     return text
+
+
+# Unambiguous party abbreviations used by rosters. State-specific codes
+# (e.g. "U" is Unenrolled in Maine but Unaffiliated in North Carolina) stay as published.
+PARTY_CODES = {'R':'Republican','D':'Democratic','I':'Independent','DEMOCRAT':'Democratic','DFL':'Democratic-Farmer-Labor','WF':'Working Families','C':'Conservative','IP':'Independence'}
+
+
+def party_name(party):
+    """Spell out party abbreviations; fusion lists ("D, WF") and "/" pairs keep their order."""
+    if not party: return party
+    def one(token):
+        token = token.strip()
+        return PARTY_CODES.get(token.upper(), token)
+    return '/'.join(', '.join(one(t) for t in part.split(',')) for part in party.split('/'))
 
 
 def parse_federal(key, raw, source):
@@ -153,12 +208,14 @@ def parse_federal(key, raw, source):
             bio = info.findtext('bioguideID')
             if not bio: continue  # An absent person is not an inferred vacancy record.
             code = m.findtext('statedistrict')
-            rows.append(record(source, 'us-house-'+bio, info.findtext('official-name'), st, 'federal', 'U.S. House', code[2:], party=info.findtext('party')))
+            rows.append(record(source, 'us-house-'+bio, info.findtext('official-name'), st, 'federal', 'U.S. House', code[2:], party=info.findtext('party'), ids={'bioguide':bio}, **contact(source['url'], phone=info.findtext('phone'))))
     else:
         for m in root.findall('member'):
             st = m.findtext('state')
             if st not in STATE_CODES: continue
-            rows.append(record(source, 'us-senate-'+m.findtext('bioguide_id'), m.findtext('first_name')+' '+m.findtext('last_name'), st, 'federal', 'U.S. Senate', party=m.findtext('party')))
+            # <email> holds a contact-form URL, not an address.
+            website = m.findtext('website')
+            rows.append(record(source, 'us-senate-'+m.findtext('bioguide_id'), m.findtext('first_name')+' '+m.findtext('last_name'), st, 'federal', 'U.S. Senate', party=m.findtext('party'), ids={'bioguide':m.findtext('bioguide_id')}, website=website if website and urlparse(website).hostname.endswith('.senate.gov') else None, **contact(source['url'], phone=m.findtext('phone'))))
     assert rows, 'Empty federal roster'
     return rows
 
@@ -183,7 +240,12 @@ def parse_state(key, raw, source):
             district = str(int(n.attrs['data-district']))
             links = n.find(lambda n: n.tag == 'a' and 'href' in n.attrs)
             link = next((n.attrs['href'] for n in links if (n.text() == 'Homepage' if chamber == 'upper' else 'View Details' in n.text())), None)
-            rows.append(record(source, key+'-'+district, name, st.upper(), 'state', body, district, party=n.attrs.get('data-party'), website=urljoin(source['url'], link) if link else None))
+            imgs = n.find(lambda n: n.tag == 'img')
+            photo = (imgs[0].attrs.get('data-src') or imgs[0].attrs.get('src')) if imgs else None
+            capitol = n.find(lambda n: has_class(n, '--capitol'))
+            phone = re.search(r'\(\d{3}\)\s*\d{3}-\d{4}', capitol[0].text()) if capitol else None
+            details = contact(source['url'], phone=phone and phone[0], photo=photo if photo and not photo.startswith('data:') else None)
+            rows.append(record(source, key+'-'+district, name, st.upper(), 'state', body, district, party=n.attrs.get('data-party'), website=urljoin(source['url'], link) if link else None, **details))
     else:
         assert '2025-2026 Session' in tree.text(), 'Session label changed'
         source['effectivePeriod'] = '2025-2026 session'
@@ -279,11 +341,14 @@ def validate(folder, fresh=False):
         for src in r['sources']:
             assert source_allowed(src), 'Source is outside the government allowlist'
             assert len(src['sha256']) == 64
-        assert set(r) <= {'id','name','state','level','jurisdiction','body','office','district','party','website','sources','fieldEvidence'}
-        if r.get('fieldEvidence'):
-            assert set(r['fieldEvidence'])=={'district'}
-            proof=r['fieldEvidence']['district']
-            assert proof['value']==r['district'] and set(proof['sourceIds'])<={src['id'] for src in r['sources']}
+        assert set(r) <= FIELDS, sorted(set(r)-FIELDS)
+        assert not r.get('email') or EMAIL.fullmatch(r['email']), r['email']
+        assert not r.get('phone') or PHONE.fullmatch(r['phone']), r['phone']
+        assert not r.get('photo') or urlparse(r['photo']).scheme == 'https', r['photo']
+        assert not r.get('ids') or all(isinstance(k,str) and isinstance(v,str) and v for k,v in r['ids'].items())
+        for field, proof in r.get('fieldEvidence', {}).items():
+            assert field in EVIDENCED, 'Unsupported field evidence: '+field
+            assert proof['value']==r.get(field) and proof['sourceIds'] and set(proof['sourceIds'])<={src['id'] for src in r['sources']}
     for name in ['states','counties']:
         geo = json.loads((folder/'geography'/(name+'.geojson')).read_text())
         assert geo['features'] and geo['source']['name'] == 'U.S. Census Bureau'
@@ -306,7 +371,7 @@ def validate(folder, fresh=False):
     assert [r['id'] for r in exported] == [r['id'] for r in rows]
     for item, r in zip(exported, rows):
         for key, value in item.items():
-            assert (json.loads(value) if key in {'sources','fieldEvidence'} and value else value) == r.get(key, '')
+            assert (json.loads(value) if key in JSON_COLUMNS and value else value) == r.get(key, '')
     if (folder/'geography-report.json').exists():
         from verify_geography import verify as verify_geography
         verify_geography(folder,rows,sources)
@@ -346,7 +411,10 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
                     raw, source = acquire(key, publisher, url, offline)
                     rows.extend(module.parse(key, raw, source))
                     sources.append(source)
-        for row in rows: row['name']=person_name(row['name'])
+        for row in rows:
+            row['name']=person_name(row['name'])
+            if row.get('party'): row['party']=party_name(row['party'])
+        drop_shared_contacts(rows)
         exception_data,exception_sources=geography_exceptions.collect(acquire,offline)
         rows=geography_exceptions.apply_roster(rows,exception_data)
         sources.extend(exception_sources)
@@ -376,12 +444,11 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
         now = dt.datetime.now(dt.timezone.utc).isoformat()
         rows.sort(key=lambda r:r['id'])
         (stage/'officials.json').write_text(json.dumps(dict(schemaVersion=2,generatedAt=now,officials=rows),ensure_ascii=False,indent=2)+'\n')
-        columns = ['id','name','level','state','jurisdiction','body','office','district','party','website','sources','fieldEvidence']
         with (stage/'officials.csv').open('w',newline='') as f:
-            writer = csv.DictWriter(f,fieldnames=columns,lineterminator="\n")
+            writer = csv.DictWriter(f,fieldnames=CSV_COLUMNS,lineterminator="\n")
             writer.writeheader()
-            writer.writerows({**r,'sources':json.dumps(r['sources'],ensure_ascii=False), **({'fieldEvidence':json.dumps(r['fieldEvidence'],ensure_ascii=False)} if r.get('fieldEvidence') else {})} for r in rows)
-        coverage = dict(schemaVersion=2,generatedAt=now,policy='government-primary-only; federal/state/county',counts=dict(collections.Counter(r['level'] for r in rows)),rosters=[dict(source=s['id'],records=sum(any(ref['id']==s['id'] for ref in r['sources']) for r in rows)) for s in sources if any(any(ref['id']==s['id'] for ref in r['sources']) for r in rows)],states=legislative_coverage(rows),geography=dict(states=50,counties=len(geo['features']),vintage='2026-01-01'),limitations=['Official publication is evidence of what the publisher reports; retrieval does not establish an independent factual check.','Roster omission is not classified as a vacancy.','No city/town records, secondary-source records, contact enrichment, population estimates or population-weighted overlaps.','County and county-equivalent geography does not establish county governing structures or officeholder districts.'])
+            writer.writerows({**r, **{k:json.dumps(r[k],ensure_ascii=False) for k in JSON_COLUMNS if r.get(k)}} for r in rows)
+        coverage = dict(schemaVersion=2,generatedAt=now,policy='government-primary-only; federal/state/county',counts=dict(collections.Counter(r['level'] for r in rows)),rosters=[dict(source=s['id'],records=sum(any(ref['id']==s['id'] for ref in r['sources']) for r in rows)) for s in sources if any(any(ref['id']==s['id'] for ref in r['sources']) for r in rows)],states=legislative_coverage(rows),geography=dict(states=50,counties=len(geo['features']),vintage='2026-01-01'),limitations=['Official publication is evidence of what the publisher reports; retrieval does not establish an independent factual check.','Roster omission is not classified as a vacancy.','Contact details (email, phone, photo) appear only where an official roster publishes them; mailboxes or numbers shared across members are omitted.','No city/town records, secondary-source records, population estimates or population-weighted overlaps.','County and county-equivalent geography does not establish county governing structures or officeholder districts.'])
         coverage['geography'].update(analyticalDistricts=analytical_report['analyticalCounts'],areaIntersectionPairs=analytical_report['intersectionPairs'],officialGeometryLinks=analytical_report['linkage'])
         (stage/'coverage.json').write_text(json.dumps(coverage,indent=2)+'\n')
         (stage/'sources.json').write_text(json.dumps(sources,indent=2)+'\n')

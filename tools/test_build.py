@@ -22,6 +22,22 @@ class RosterTests(unittest.TestCase):
         for raw in ['Constituent Services *','Vacant','District 22 Office']:
             with self.subTest(raw=raw), self.assertRaises(AssertionError): build.person_name(raw)
 
+    def test_party_names(self):
+        for raw,expected in {'R':'Republican','d':'Democratic','Democrat':'Democratic','DFL':'Democratic-Farmer-Labor','D, WF':'Democratic, Working Families',
+                             'Progressive/Democrat':'Progressive/Democratic','U':'U','Not Affiliated':'Not Affiliated','Republican':'Republican'}.items():
+            with self.subTest(raw=raw): self.assertEqual(build.party_name(raw),expected)
+
+    def test_contact_normalization(self):
+        self.assertEqual(build.contact('https://x.gov/a/',email='mailto:Jane.Doe@House.X.GOV?subject=hi',phone='+1 (202) 555-0100 ext. 4',photo='/img/j.jpg'),
+                         {'email':'jane.doe@house.x.gov','phone':'202-555-0100','photo':'https://x.gov/img/j.jpg'})
+        self.assertEqual(build.contact('https://x.gov/',email='not an email',phone='555-01',photo='http://x.gov/p.jpg'),{})
+
+    def test_shared_contacts_dropped(self):
+        rows=[dict(body='B',email='office@x.gov',phone='202-555-0100'),dict(body='B',email='office@x.gov',phone='202-555-0100'),dict(body='B',email='me@x.gov')]
+        build.drop_shared_contacts(rows)
+        self.assertEqual([r.get('email') for r in rows],[None,None,'me@x.gov'])
+        self.assertEqual([r.get('phone') for r in rows],['202-555-0100']*2+[None])
+
     def test_empty_roster_is_rejected(self):
         for key in ['ca-upper','ca-lower','nc-upper','nc-lower']:
             with self.subTest(key=key), self.assertRaises((AssertionError,ValueError)):

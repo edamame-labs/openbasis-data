@@ -5,8 +5,8 @@ import datetime as dt
 import hashlib
 import json
 import re
-from urllib.parse import urljoin, urlencode
-from build import HTML, Node, has_class
+from urllib.parse import parse_qs, urljoin, urlencode, urlparse
+from build import HTML, Node, contact, has_class, party_name
 
 SOURCES = {
  'az-roster': ('Arizona Legislature', 'https://www.azleg.gov/MemberRoster/'),
@@ -24,7 +24,7 @@ SOURCES = {
  'ks-lower': ('Kansas Legislature', 'https://www.kslegislature.gov/b2025_26/house/representatives/?per_page=all'),
  'ks-upper': ('Kansas Legislature', 'https://www.kslegislature.gov/b2025_26/senate/senators/?per_page=all'),
 }
-AL_QUERY = '{legislativeMembers(where:{active:{eq:true},elected:{eq:true}}){data{id body fullName district honorificFullNameAffiliation}}}'
+AL_QUERY = '{legislativeMembers(where:{active:{eq:true},elected:{eq:true}}){data{id body fullName district honorificFullNameAffiliation phone email imageUrl}}}'
 SOURCES['al-roster'] = ('Alabama Legislature', 'https://alison.legislature.state.al.us/graphql?'+urlencode({'query':AL_QUERY}))
 SOURCES['de-lower'] = ('Delaware General Assembly', 'https://legis.delaware.gov/json/House/GetRepresentatives')
 SOURCES['de-upper'] = ('Delaware General Assembly', 'https://legis.delaware.gov/json/Senate/GetSenators')
@@ -37,6 +37,9 @@ SOURCES['ga-lower'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/mem
 SOURCES['ga-upper'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/members/senate')
 SOURCES['in-roster'] = ('Indiana General Assembly', 'https://iga.in.gov/legislative/2026/legislators')
 SOURCE_HOSTS = {'www.kslegislature.gov'}
+# Party for the Arkansas House: arkleg's list omits it; the House's own member list publishes it.
+AUX = {'ar-house-members': ('Arkansas House of Representatives', 'https://www.arkansashouse.org/representatives/members/')}
+SOURCES.update(AUX)
 SOURCES['ak-upper'] = ('Alaska Legislature', 'https://w3.akleg.gov/senate.php')
 SOURCES['ak-lower'] = ('Alaska Legislature', 'https://w3.akleg.gov/house.php')
 NAMES = dict(IN='Indiana', HI='Hawaii', GA='Georgia', IL='Illinois', DE='Delaware', AK='Alaska', AL='Alabama', AZ='Arizona', AR='Arkansas', CO='Colorado', CT='Connecticut', ID='Idaho', IA='Iowa', KY='Kentucky', FL='Florida', KS='Kansas')
@@ -66,7 +69,12 @@ def normal_name(name):
  return name
 
 
-def row(source, st, chamber, name, district, party=None, website=None):
+def query(url, key):
+ values=parse_qs(urlparse(url).query).get(key)
+ return values[0] if values and len(values)==1 else None
+
+
+def row(source, st, chamber, name, district, party=None, website=None, pid=None, **details):
  assert name and 'vacant' not in name.lower(), 'Vacant seat is not a person'
  body=NAMES[st]+' '+('Senate' if chamber=='upper' else 'House of Representatives')
  # Person component prevents collisions in Arizona and Idaho multi-member districts.
@@ -75,6 +83,8 @@ def row(source, st, chamber, name, district, party=None, website=None):
  result=dict(id=st.lower()+'-'+chamber+'-'+district+'-'+person,name=name,state=st,level='state',jurisdiction=st,body=body,office=body,district=district,sources=[source])
  if party:result['party']=party
  if website:result['website']=urljoin(source['url'],website)
+ if pid:result['ids']={source['id']:str(pid)}
+ result.update(details)
  return result
 
 
@@ -162,15 +172,26 @@ def parse(key,raw,source):
   for m in data['Data']:
    if m['PersonId'] is None:continue
    assert m['ChamberId']==(2 if chamber=='lower' else 1)
-   rows.append(row(source,st,chamber,m['PersonFullName'],m['DistrictNumber'],m['PartyCode'],m['LegislatorDetailLink']))
+   rows.append(row(source,st,chamber,m['PersonFullName'],m['DistrictNumber'],m['PartyCode'],m['LegislatorDetailLink'],m['PersonId']))
   return finish(rows,35 if chamber=='lower' else 18,41 if chamber=='lower' else 21)
  if st=='AK':
   source['effectivePeriod']='34th Alaska Legislature (2025-2026), current member directory'
-  anchors=tree.find(lambda n:n.tag=='a' and '/basis/Member/Detail/34?' in n.attrs.get('href','') and 'Phone:' in n.text())
-  for a in anchors:
+  member=lambda n:n.tag=='a' and '/basis/Member/Detail/34?' in n.attrs.get('href','')
+  # Blocks view lists the capitol phone; the list view (parsed below) a home-district one.
+  phones={}
+  for li in tree.find(lambda n:n.tag=='li'):
+   kids=[c for c in li.children if isinstance(c,Node)]
+   a=[c for c in kids if member(c)];dl=[c for c in kids if c.tag=='dl']
+   if len(a)!=1 or len(dl)!=1:continue
+   terms=[c for c in dl[0].children if isinstance(c,Node) and c.tag in {'dt','dd'}]
+   pairs=dict((terms[i].text(),terms[i+1].text()) for i in range(len(terms)-1) if terms[i].tag=='dt' and terms[i+1].tag=='dd')
+   code=query(a[0].attrs['href'],'code');assert code and code not in phones,'Alaska block card changed'
+   phones[code]=pairs.get('Phone:')
+  for a in tree.find(lambda n:member(n) and 'Phone:' in n.text()):
    names=a.find(lambda n:n.tag=='strong' and has_class(n,'name'));assert len(names)==1
    match=re.search(r'Party: (.+?) District: ([A-T]|\d+) Phone:',a.text());assert match,'Alaska membership card changed'
-   rows.append(row(source,st,chamber,names[0].text(),match.group(2),match.group(1)))
+   code=query(a.attrs['href'],'code');imgs=a.find(lambda n:n.tag=='img')
+   rows.append(row(source,st,chamber,names[0].text(),match.group(2),match.group(1),pid=code,**contact(source['url'],phone=phones.get(code),photo=imgs[0].attrs.get('src') if imgs else None)))
   return finish(rows,35 if chamber=='lower' else 18,40 if chamber=='lower' else 20)
  if st=='AL':
   data=json.loads(raw);assert not data.get('errors'), 'Government GraphQL error'
@@ -180,10 +201,12 @@ def parse(key,raw,source):
    ch={'House':'lower','Senate':'upper'}[m['body']]
    district=re.fullmatch(r'(House|Senate) District (\d+)',m['district']);assert district
    party=re.search(r'\(([RDI])\)$',m['honorificFullNameAffiliation'])
-   rows.append(row(source,st,ch,m['fullName'],district.group(2),party.group(1) if party else None))
+   rows.append(row(source,st,ch,m['fullName'],district.group(2),party.group(1) if party else None,pid=m['id'],**contact(source['url'],email=m.get('email'),phone=m.get('phone'),photo=m.get('imageUrl'))))
   return finish(rows,125,140)
  if st=='AZ':
   assert b'HouseRoster' in raw and b'SenateRoster' in raw
+  # The email column publishes the local part; its header states the shared domain.
+  assert raw.count(b'<th title="Same suffix for all members">Email @azleg.gov</th>')==2,'Email column changed'
   # Isolate tables: upstream contains an unmatched closing table before these rosters.
   for ch,table in [('lower','HouseRoster'),('upper','SenateRoster')]:
    match=re.search(rb'<table id="'+table.encode()+rb'".*?</table>',raw,re.S)
@@ -197,7 +220,8 @@ def parse(key,raw,source):
     assert a,'Missing person link'
     name=a[0].text().split(' -- ',1)[0]
     if 'vacant' in name.lower():continue
-    rows.append(row(source,st,ch,name,c[1].text(),c[2].text(),a[0].attrs['href']))
+    imgs=a[0].find(lambda n:n.tag=='img');local=re.fullmatch(r'Email: ([A-Za-z0-9.-]+)',c[3].text())
+    rows.append(row(source,st,ch,name,c[1].text(),c[2].text(),a[0].attrs['href'],query(a[0].attrs['href'],'legislator'),**contact(source['url'],email=local and local.group(1)+'@azleg.gov',phone=c[5].text(),photo=imgs[0].attrs.get('src') if imgs else None)))
   return finish(rows,80,90)
  if st=='AR':
   assert '95th General Assembly' in tree.text() and '2026' in tree.text(),'Session changed'
@@ -210,7 +234,8 @@ def parse(key,raw,source):
    a=c['1'].find(lambda n:n.tag=='a' and '/Legislators/Detail?' in n.attrs.get('href',''))
    assert len(a)==1
    ch={'House':'lower','Senate':'upper'}[c['2'].text().replace('Chamber:','').strip()]
-   rows.append(row(source,st,ch,a[0].text(),c['4'].text().replace('District:','').strip(),website=a[0].attrs['href']))
+   mail=c['1'].find(lambda n:n.tag=='a' and n.attrs.get('href','').startswith('mailto:'))
+   rows.append(row(source,st,ch,a[0].text(),c['4'].text().replace('District:','').strip(),website=a[0].attrs['href'],pid=query(a[0].attrs['href'],'member'),**contact(source['url'],email=mail[0].attrs['href'] if len(mail)==1 else None)))
   return finish(rows,125,135)
  if st=='CO':
   assert '2026 Regular Session' in tree.text(),'Session changed'
@@ -223,7 +248,8 @@ def parse(key,raw,source):
    ch={'Senator':'upper','Representative':'lower'}[c['Title'].text()]
    a=c['Name'].find(lambda n:n.tag=='a' and '/legislators/' in n.attrs.get('href',''))
    assert len(a)==1
-   rows.append(row(source,st,ch,normal_name(a[0].text()),c['District'].text(),c['Party'].text(),a[0].attrs['href']))
+   mail=c.get('Email') and c['Email'].find(lambda n:n.tag=='a' and n.attrs.get('href','').startswith('mailto:'))
+   rows.append(row(source,st,ch,normal_name(a[0].text()),c['District'].text(),c['Party'].text(),a[0].attrs['href'],a[0].attrs['href'].rstrip('/').rsplit('/',1)[1],**contact(source['url'],email=mail[0].attrs['href'] if mail else None,phone=c['Capitol Phone #'].text() if 'Capitol Phone #' in c else None)))
   return finish(rows,90,100)
  if st=='CT':
   assert ('House of Representatives Members' if chamber=='lower' else 'Senate Members') in tree.text()
@@ -232,11 +258,19 @@ def parse(key,raw,source):
    if not c or not re.fullmatch(r'S?\d+',c[0].text()):continue
    assert len(c)==5 and c[3].text() in {'R','D','I'},'Roster structure changed'
    if c[1].text().lower()=='vacant':continue
-   rows.append(row(source,st,chamber,normal_name(c[1].text()),c[0].text().removeprefix('S'),c[3].text()))
+   # Senate name links are mostly caucus contact forms; only mailto links are addresses.
+   mail=c[1].find(lambda n:n.tag=='a' and n.attrs.get('href','').startswith('mailto:'))
+   rows.append(row(source,st,chamber,normal_name(c[1].text()),c[0].text().removeprefix('S'),c[3].text(),**contact(source['url'],email=mail[0].attrs['href'] if mail else None)))
   return finish(rows,130 if chamber=='lower' else 30,151 if chamber=='lower' else 36)
  if st=='ID':
   assert 'yr=2026' in raw.decode(),'Roster year changed'
   source['effectivePeriod']='2026 membership directory'
+  # Portraits sit in a sibling column of the same directory row.
+  photos={}
+  for div in tree.find(lambda n:has_class(n,'hcode-inner-row')):
+   ps=div.find(lambda n:n.tag=='p' and n.find(lambda a:a.tag=='a' and 'yr=2026&district=' in a.attrs.get('href','')))
+   imgs=div.find(lambda n:n.tag=='img' and '/directory/' in n.attrs.get('src',''))
+   if len(ps)==1 and imgs and len({i.attrs['src'] for i in imgs})==1:photos[id(ps[0])]=imgs[0].attrs['src']
   for p in tree.find(lambda n:n.tag=='p'):
    links=p.find(lambda n:n.tag=='a' and re.search(r'yr=2026&district=\d+',n.attrs.get('href','')))
    if not links:continue
@@ -245,7 +279,9 @@ def parse(key,raw,source):
    assert names
    party=re.search(r'^'+re.escape(names[0].text())+r'\s+\(([RDI])\)',p.text())
    assert party,'Missing party'
-   rows.append(row(source,st,chamber,names[0].text(),links[0].text().replace('District ',''),party.group(1)))
+   mail=p.find(lambda n:n.tag=='a' and n.attrs.get('href','').startswith('mailto:'))
+   office=re.search(r'Statehouse (\(\d{3}\) \d{3}-\d{4})',p.text())
+   rows.append(row(source,st,chamber,names[0].text(),links[0].text().replace('District ',''),party.group(1),**contact(source['url'],email=mail[0].attrs['href'] if mail else None,phone=office and office.group(1),photo=photos.get(id(p)))))
   return finish(rows,60 if chamber=='lower' else 30,70 if chamber=='lower' else 35)
  if st=='IA':
   tables=tree.find(lambda n:n.attrs.get('id')=='sortableTable');assert len(tables)==1
@@ -257,7 +293,8 @@ def parse(key,raw,source):
    a=c[1].find(lambda n:n.tag=='a' and 'ga=91&personID=' in n.attrs.get('href',''))
    assert len(a)==1,'Assembly or person link changed'
    assert not re.search(r'\(\d\d/\d\d/\d{4}',a[0].text()),'Former member in current table'
-   rows.append(row(source,st,chamber,a[0].text(),c[2].text(),c[3].text(),a[0].attrs['href']))
+   mail=c[5].find(lambda n:n.tag=='a' and n.attrs.get('href','').startswith('mailto:'))
+   rows.append(row(source,st,chamber,a[0].text(),c[2].text(),c[3].text(),a[0].attrs['href'],query(urljoin(source['url'],a[0].attrs['href']),'personID'),**contact(source['url'],email=mail[0].attrs['href'] if mail else None)))
   return finish(rows,85 if chamber=='lower' else 40,100 if chamber=='lower' else 50)
  if st=='KY':
   assert ('House Members - County' if chamber=='lower' else 'Senate Members - County') in tree.text()
@@ -273,7 +310,8 @@ def parse(key,raw,source):
    assert label,'Missing displayed county/district label'
    district=label.group(1)
    name=normal_name(a[0].text());identity=(district,name)
-   r=row(source,st,chamber,name,district,c[2].text(),a[0].attrs['href'])
+   imgs=a[0].find(lambda n:n.tag=='img')
+   r=row(source,st,chamber,name,district,c[2].text(),a[0].attrs['href'],**contact(source['url'],photo=imgs[0].attrs.get('src') if imgs else None))
    if identity in seen:assert seen[identity]==r,'Conflicting county repeated person'
    seen[identity]=r
   return finish(list(seen.values()),90 if chamber=='lower' else 32,100 if chamber=='lower' else 38)
@@ -303,7 +341,8 @@ def parse(key,raw,source):
    if not a:continue
    assert len(a)==1
    if a[0].text()=='Vacant':continue
-   rows.append(row(source,st,'upper',normal_name(a[0].text()),c[1].text(),c[2].text(),a[0].attrs['href']))
+   imgs=a[0].find(lambda n:n.tag=='img')
+   rows.append(row(source,st,'upper',normal_name(a[0].text()),c[1].text(),c[2].text(),a[0].attrs['href'],**contact(source['url'],photo=imgs[0].attrs.get('src') if imgs else None)))
   return finish(rows,30,40)
  if st=='KS':
   assert '/b2025_26/' in source['url']
@@ -315,13 +354,56 @@ def parse(key,raw,source):
   match=re.fullmatch(r'(House|Senate) — District (\d+), .+',badges[0].text());assert match
   assert match.group(1)==('House' if chamber=='lower' else 'Senate')
   if 'vacant' in titles[0].text().lower():return []
-  return [row(source,st,chamber,titles[0].text(),match.group(2),parties[0].text(),source['url'])]
+  # Emails are Cloudflare-obfuscated and not decoded; the fallback image is a placeholder.
+  photos=tree.find(lambda n:n.tag=='img' and has_class(n,'leg-hero-photo'))
+  photo=photos[0].attrs.get('src') if len(photos)==1 and 'fallback' not in photos[0].attrs.get('src','') else None
+  cards=[c for c in tree.find(lambda n:has_class(n,'leg-card')) if c.find(lambda n:has_class(n,'leg-card-heading') and n.text()=='Contact & Info')]
+  phones=[r for c in cards[:1] for r in c.find(lambda n:has_class(n,'detail-row')) if r.text().startswith('Phone ')]
+  r=row(source,st,chamber,titles[0].text(),match.group(2),parties[0].text(),source['url'],**contact(source['url'],phone=phones[0].text().removeprefix('Phone ') if len(phones)==1 else None,photo=photo))
+  r['ids']={key:source['url'].rstrip('/').rsplit('/',1)[1]}
+  return [r]
  raise ValueError('Unsupported government roster '+key)
+
+
+def family(name):
+ return re.sub(r',?\s+(?:Jr|Sr|II|III|IV)\.?$','',name).split()[-1].lower()
+
+
+def house_parties(raw):
+ """District -> (published name, party) from the Arkansas House member cards."""
+ tree=HTML(raw).root;assert 'Members of the 95th General Assembly' in tree.text(),'Assembly changed'
+ result={}
+ for card in tree.find(lambda n:n.tag=='a' and 'rep-card' in n.attrs.get('class','').split()):
+  field=lambda cls:[x.text() for x in card.find(lambda n:has_class(n,cls))]
+  name,party,meta=field('rep-card__name'),field('rep-card__party'),field('rep-card__meta')
+  district=re.fullmatch(r'District (\d+)',meta[0]) if len(meta)==1 else None
+  assert len(name)==1 and district and district.group(1) not in result,'House member card changed'
+  # The card's CSS class is not used: some say party-independent beside a Republican label.
+  result[district.group(1)]=(name[0],party[0] if len(party)==1 and party[0] in {'Republican','Democrat','Independent'} else None)
+ assert 95<=len(result)<=100
+ return result
+
+
+def arkansas_house_party(fetch,offline,rows):
+ # Joined by single-member House district; the family name must agree, else party stays empty.
+ key,(publisher,url)=next(iter(AUX.items()))
+ raw,source=fetch(key,publisher,url,offline)
+ source['effectivePeriod']='95th General Assembly current House member list'
+ cards=house_parties(raw)
+ for r in rows:
+  if r['state']!='AR' or 'House' not in r['body'] or r.get('party'):continue
+  name,party=cards.get(r['district'],(None,None))
+  if not party or family(name)!=family(r['name']):continue
+  # Normalized here so the evidence value matches the published field.
+  r['party']=party_name(party);r['sources'].append(source)
+  r.setdefault('fieldEvidence',{})['party']={'value':r['party'],'sourceIds':[key]}
+ return [source]
 
 
 def collect(fetch,offline=False):
  rows=[]; sources=[]; profiles=[]
  for key,(publisher,url) in SOURCES.items():
+  if key in AUX:continue
   if key.startswith('de-'):
    raw,source=fetch(key,publisher,url,offline,method='POST',data='page=1&pageSize=100&sort=DistrictNumber-asc')
   else:raw,source=fetch(key,publisher,url,offline)
@@ -344,6 +426,7 @@ def collect(fetch,offline=False):
    assert (110<=len(chamber_profiles)<=125 if key.endswith('lower') else 35<=len(chamber_profiles)<=40)
    profiles.extend(chamber_profiles)
   else:rows.extend(parse(key,raw,source))
+ if any(r['state']=='AR' for r in rows):sources.extend(arkansas_house_party(fetch,offline,rows))
  def profile(item):
   key,publisher,url=item;raw,source=fetch(key,publisher,url,offline)
   return parse('-'.join(key.split('-')[:2]),raw,source),source

@@ -10,7 +10,7 @@ from regions import region_a as a
 class RegionATest(unittest.TestCase):
  def parse(self,key,html):
   with patch.object(a,'finish',lambda rows,*args:rows):
-   return a.parse(key,html.encode(),{'url':a.SOURCES[key][1]})
+   return a.parse(key,html.encode(),{'id':key,'url':a.SOURCES[key][1]})
 
  def test_kentucky_displayed_district_is_not_profile_internal_id(self):
   html='Senate Members - County<table><tr><td>Adair - 16</td><td><a href="https://legislature.ky.gov/Legislators/Pages/Legislator-Profile.aspx?DistrictNumber=116">Wise, Max</a></td><td>Republican</td></tr></table>'
@@ -21,7 +21,8 @@ class RegionATest(unittest.TestCase):
  def test_arizona_excludes_inactive_and_keeps_multi_member_district(self):
   def member(name,cls=''):
    return '<tr class="'+cls+'"><td><a href="/member/'+name+'">'+name+'</a></td><td>1</td><td>R</td><td>x</td><td>x</td><td>x</td></tr>'
-  rows=self.parse('az-roster','<table id="HouseRoster">'+member('Alice')+member('Betty')+member('Former','inactive')+'</table><table id="SenateRoster">'+member('Carol')+'</table>')
+  head='<th title="Same suffix for all members">Email @azleg.gov</th>'
+  rows=self.parse('az-roster',head+head+'<table id="HouseRoster">'+member('Alice')+member('Betty')+member('Former','inactive')+'</table><table id="SenateRoster">'+member('Carol')+'</table>')
   self.assertEqual([r['name'] for r in rows],['Alice','Betty','Carol'])
   self.assertEqual(len({r['id'] for r in rows}),3)
 
@@ -95,5 +96,53 @@ class RegionATest(unittest.TestCase):
  def test_html_challenge_fails_closed(self):
   for key in ['az-roster','ar-roster','co-roster','ct-lower','id-upper','ia-upper','ky-lower','fl-upper']:
    with self.subTest(key=key),self.assertRaises(AssertionError):a.parse(key,b'<html>Request Rejected</html>',{'url':a.SOURCES[key][1]})
+
+ def test_alaska_capitol_phone_joined_by_member_code(self):
+  block='<li><a href="http://www.akleg.gov/basis/Member/Detail/34?code=abc"><img src="//akleg.gov/images/legislators/rounded/ABC.png"><strong class="name">Ann Person</strong></a><dl><dt>City:</dt><dd>Juneau</dd><dt>Phone:</dt><dd>907-465-1111</dd></dl></li>'
+  card='<a href="http://www.akleg.gov/basis/Member/Detail/34?code=abc"><img src="//akleg.gov/images/legislators/rounded/ABC.png"><strong class="name">Ann Person</strong> City: Kenai Party: Democrat District: B Phone: 907-283-0000</a>'
+  r=self.parse('ak-upper','<ul>'+block+'</ul>'+card)[0]
+  self.assertEqual((r['phone'],r['photo'],r['ids']),('907-465-1111','https://akleg.gov/images/legislators/rounded/ABC.png',{'ak-upper':'abc'}))
+
+ def test_alabama_api_contact_fields(self):
+  data={'data':{'legislativeMembers':{'data':[{'id':'7','body':'House','fullName':'Ann Smith','district':'House District 3','honorificFullNameAffiliation':'Representative Ann Smith (R)','phone':'(334) 261-0000','email':'Ann@ALHouse.gov','imageUrl':'https://alison.legislature.state.al.us/files/a.png'}]}}}
+  r=self.parse('al-roster',json.dumps(data))[0]
+  self.assertEqual((r['email'],r['phone'],r['ids']),('ann@alhouse.gov','334-261-0000',{'al-roster':'7'}))
+
+ def test_arizona_email_local_part_uses_stated_domain(self):
+  head='<th title="Same suffix for all members">Email @azleg.gov</th>'
+  tr='<tr><td><a href="https://www.azleg.gov/House/House-member/?legislature=57&amp;session=130&amp;legislator=2349">Ann Luna<span><img src="https://www.azleg.gov/x.jpg"></span></a></td><td>1</td><td>D</td><td><a href="/emailazleg/?legislatorId=2349">Email: ALUNA-NAJERA</a></td><td>Room 1</td><td>(602) 926-0000</td></tr>'
+  r=self.parse('az-roster',head+head+'<table id="HouseRoster">'+tr+'</table><table id="SenateRoster"></table>')[0]
+  self.assertEqual((r['name'],r['email'],r['phone'],r['ids']),('Ann Luna','aluna-najera@azleg.gov','602-926-0000',{'az-roster':'2349'}))
+  with self.assertRaises(AssertionError):self.parse('az-roster','<table id="HouseRoster">'+tr+'</table><table id="SenateRoster"></table>')
+
+ def test_arkansas_house_party_requires_matching_family_name(self):
+  def card(d,name,party,cls='party-republican'):
+   return '<a href="https://www.arkansashouse.org/district/'+d+'/" class="rep-card '+cls+'"><span class="rep-card__name">'+name+'</span><span class="rep-card__party">'+party+' </span><span class="rep-card__meta">District '+d+'</span></a>'
+  html='Members of the 95th General Assembly'+card('1','Brandon C. Achor','Republican','party-independent')+card('2','Someone Else','Democrat')+''.join(card(str(d),'X Y','Republican') for d in range(3,98))
+  src={'id':'ar-roster','url':a.SOURCES['ar-roster'][1]}
+  rows=[a.row(src,'AR','lower','Brandon Achor','1'),a.row(src,'AR','lower','Fred Allen','2'),a.row(src,'AR','upper','Sen Person','1')]
+  fetch=lambda key,publisher,url,offline:(html.encode(),{'id':key,'url':url})
+  a.arkansas_house_party(fetch,True,rows)
+  self.assertEqual(rows[0]['party'],'Republican')
+  self.assertEqual(rows[0]['fieldEvidence']['party'],{'value':'Republican','sourceIds':['ar-house-members']})
+  self.assertEqual([s['id'] for s in rows[0]['sources']],['ar-roster','ar-house-members'])
+  self.assertNotIn('party',rows[1]);self.assertNotIn('party',rows[2])
+
+ def test_kansas_profile_contact_skips_fallback_photo_and_obfuscated_email(self):
+  html='<img class="leg-hero-photo" src="/static/li_pics/fallback.1.jpg"><h2 class="leg-hero-title">Ann Smith</h2><span class="leg-chamber-badge">House — District 1, County County</span><p class="leg-hero-party">Republican</p><div class="leg-card"><h3 class="leg-card-heading">Contact &amp; Info</h3><div class="detail-row"><span class="label">Phone</span><span class="value">785 296-0000</span></div><div class="detail-row"><span class="label">Email</span><span class="value"><a href="/cdn-cgi/l/email-protection#00">[email protected]</a></span></div></div>'
+  with patch.object(a,'finish',lambda rows,*args:rows):
+   r=a.parse('ks-lower',html.encode(),{'id':'ks-lower-rep_smith_ann_1','url':'https://www.kslegislature.gov/b2025_26/legislators/rep_smith_ann_1/'})[0]
+  self.assertEqual((r['phone'],r['ids']),('785-296-0000',{'ks-lower':'rep_smith_ann_1'}))
+  self.assertNotIn('photo',r);self.assertNotIn('email',r)
+
+ def test_idaho_statehouse_phone_and_row_portrait(self):
+  html='yr=2026<div class="hcode-inner-row"><div><p><img src="/wp-content/uploads/sessioninfo/2026/directory/Adams1.jpg"></p></div><div><p><strong>Ben Adams</strong>(R)<br><a href="mailto:BAdams@senate.idaho.gov">x</a><br><a href="/legislators/membership/?yr=2026&amp;district=12">District 12</a><br>Home (208) 546-0000<br>Statehouse <a href="tel:+12083320000">(208) 332-0000</a> (Session Only)</p></div></div>'
+  r=self.parse('id-upper',html)[0]
+  self.assertEqual((r['email'],r['phone'],r['photo']),('badams@senate.idaho.gov','208-332-0000','https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/directory/Adams1.jpg'))
+
+ def test_connecticut_contact_form_link_is_not_email(self):
+  def tr(d,href):return '<tr><td>'+d+'</td><td><a href="'+href+'">Person, Ann</a></td><td>x</td><td>D</td><td>x</td></tr>'
+  rows=self.parse('ct-upper','Senate Members<table>'+tr('S01','https://www.senatedems.ct.gov/senator/a/email-contact')+tr('S02','mailto:Ann.Other@cga.ct.gov')+'</table>')
+  self.assertEqual([r.get('email') for r in rows],[None,'ann.other@cga.ct.gov'])
 
 if __name__=='__main__':unittest.main()

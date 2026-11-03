@@ -15,7 +15,7 @@ November 2, 2026 (America/Los_Angeles).
 | Michigan | 110 | 38 | [House](https://www.house.mi.gov/AllRepresentatives), [Senate](https://senate.michigan.gov/senators/all-senators/) |
 | Minnesota | 134 | 67 | [House](https://www.house.mn.gov/members/list), [Senate API](https://www.mnsenate.gov/api/members), [Senate biennium](https://www.mnsenate.gov/api/bienniumYears) |
 | Mississippi | 120 | 51 | [House](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=H), [Senate](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=S) |
-| Missouri | 155 | 33 | [House](https://house.mo.gov/listmembers.aspx?year=2026&code=R), [Senate](https://www.senate.mo.gov/Senators) |
+| Missouri | 155 | 33 | [House](https://house.mo.gov/listmembers.aspx?year=2026&code=R), [Senate](https://www.senate.mo.gov/Senators); party/phone from the [House member grid](https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R) and [Senator Directory](https://www.senate.mo.gov/Senators/SenatorDirectory/) |
 | Montana | 100 | 50 | [Legislature current-member feed](https://www.legmt.gov/wp-json/legmt/v1/people/legislators) |
 | Nebraska | — | — | [Unicameral legislature: 49](https://nebraskalegislature.gov/senators/senator_list.php) |
 | Nevada | 42 | 21 | [Assembly](https://www.leg.state.nv.us/App/Legislator/A/Assembly/Current), [Senate](https://www.leg.state.nv.us/App/Legislator/A/Senate/Current) |
@@ -25,7 +25,7 @@ November 2, 2026 (America/Los_Angeles).
 | New York | 150 | 62 | [Assembly](https://nyassembly.gov/mem/), [Senate](https://www.nysenate.gov/senators-committees) |
 | North Dakota | 94 | 47 | [September 2026 special-session membership](https://ndlegis.gov/assembly/69-2025/special-2/members), all nine pages |
 
-Total: **2,670** named legislators, from **37** source responses. Nebraska is
+Total: **2,670** named legislators, from **39** source responses. Nebraska is
 represented as a unicameral legislature; it has no synthetic lower chamber.
 
 ## Collection and validation
@@ -52,6 +52,38 @@ Massachusetts districts and Minnesota subdistrict letters are preserved. Person
 identifiers remain distinct in multimember districts; no synthetic seat numbers
 are assigned. Only fields stated by a source are emitted. For example, no party
 is inferred when a directory does not supply it.
+
+## Contact fields, identifiers and party
+
+`email`, `phone` and `photo` are copied from the record's own roster, normalized
+by `build.contact`; generic placeholder portraits are skipped and shared office
+mailboxes/numbers are dropped centrally. `ids` holds the publisher's person
+identifier keyed by source id where one is published (MD, MA, ME House, MI Senate,
+MN, MO Senate, MT, NH House index value, NJ, NM `SponCode`, NY slugs, ND biography
+slug keyed `nd-roster`). Louisiana, Missouri House, Nebraska and Nevada profile
+links carry district numbers, not person IDs, so no `ids` are emitted.
+
+| State | Fields from roster |
+| --- | --- |
+| Louisiana | email, district-office phone, portrait (from the enclosing card) |
+| Maine | House email, portrait; Senate party letter from each `Name (P-County)` listing line |
+| Maryland, New Mexico, North Dakota, NY Senate, Mississippi | portrait |
+| Massachusetts | email, phone, portrait |
+| Michigan | House email, phone; Senate email, phone, portrait from `senatorInfo` |
+| Minnesota | House email, phone, portrait; Senate email, phone; portrait is `/img/member_thumbnails/` + `mem_bio_pic`, the path the Senate's own `memberList` script renders |
+| Montana | `emailAddress`, `phoneNumber`, `photo.url` |
+| Nevada | Carson City phone (detail row after each member row), portrait; Cloudflare-obfuscated emails are not decoded |
+| New Hampshire | `WorkEmail`, `Phone` from the download |
+| New York Assembly | email, Albany office phone (LOB/Capitol ZIP 12248/12247, fax excluded), portrait |
+
+Missouri party and capitol phone come from a second official page per chamber and
+carry `fieldEvidence` naming it: the House grid is joined by district **and**
+identical published name; the Senator Directory by Senate member `id`, name and
+district. Non-matching rows keep no value. Party remains absent where no official
+list publishes it: Mississippi (only per-member files such as
+`https://billstatus.ls.state.ms.us/members/house/<name>.xml`, 171 members; the
+roster PDFs are image-only), the New York Assembly (no party on any Assembly page),
+Michigan HD4 (Karen Whitsett, listed without party) and nonpartisan Nebraska.
 
 ## Publisher structure and eligibility details
 

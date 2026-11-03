@@ -10,7 +10,8 @@ import io
 import json
 import re
 from urllib.parse import urljoin, urlparse
-from build import HTML, Node, has_class
+import xml.etree.ElementTree as ET
+from build import HTML, Node, contact, has_class
 
 NAMES = dict(OK='Oklahoma', OR='Oregon', RI='Rhode Island', SC='South Carolina',
              SD='South Dakota', TN='Tennessee', TX='Texas', UT='Utah', VT='Vermont',
@@ -40,7 +41,12 @@ SOURCES = {
     'wi-lower': ('Wisconsin Legislature', 'https://docs.legis.wisconsin.gov/2025/legislators/assembly'),
     'wy-upper': ('Wyoming Legislature', 'https://api.wyoleg.gov/v1/Legislator/2026/S'),
     'wy-lower': ('Wyoming Legislature', 'https://api.wyoleg.gov/v1/Legislator/2026/H'),
+    # Field-level joins only (party/contacts); never add or remove members.
+    'or-legislators': ('Oregon Legislative Assembly', "https://api.oregonlegislature.gov/odata/odataservice.svc/Legislators?$filter=SessionKey%20eq%20'2025I1'&$format=json"),
+    'wa-sponsors': ('Washington State Legislature', 'https://wslwebservices.leg.wa.gov/SponsorService.asmx/GetSponsors?biennium=2025-26'),
 }
+JOINS = {'or-legislators', 'wa-sponsors'}
+WY_SITE = 'https://wyoleg.gov/'  # siteURL in the application's published config
 SOURCE_HOSTS = {'www.rilegislature.gov'}
 COVERAGE = {s: {'upper':'collected', 'lower':'collected', 'blockers':[]} for s in NAMES}
 COVERAGE['OK']['upper'] = 'not-collected'
@@ -68,7 +74,7 @@ def given_first(text):
     return text
 
 
-def make(source, st, chamber, name, district, person, party=None, website=None):
+def make(source, st, chamber, name, district, person, party=None, website=None, ids=None, base=None, **details):
     assert chamber in {'upper','lower'} and st in NAMES
     name, district = clean(name), clean(district)
     assert name and district and person and not re.search(r'\bvacant\b',name,re.I)
@@ -86,7 +92,21 @@ def make(source, st, chamber, name, district, person, party=None, website=None):
         # Keep only profiles hosted by government. Never propagate campaign sites.
         host=urlparse(website).hostname or ''
         if host.endswith('.gov'): row['website']=website
+    row.update(contact(base or source['url'], **details))
+    # Publisher's own person identifier, keyed by the roster source key.
+    if ids is not None and clean(ids): row['ids']={source['id'].split('-page-')[0]:clean(ids)}
     return row
+
+
+def evidence(row, source, **fields):
+    """Attach fields from another official response about the same member."""
+    fields={k:v for k,v in fields.items() if v}
+    if not fields: return
+    if 'ids' in fields: row.setdefault('ids',{}).update(fields.pop('ids'))
+    row.update(fields)
+    for k,v in fields.items():
+        row.setdefault('fieldEvidence',{})[k]={'value':v,'sourceIds':[source['id']]}
+    if all(s['id']!=source['id'] for s in row['sources']): row['sources'].append(source)
 
 
 def checked(rows, st, chamber=None):
@@ -119,33 +139,37 @@ def parse(key, raw, source):
             ch={'S':'upper','H':'lower'}[m['Body']]
             name=' '.join(clean(m[f]) for f in ['FirstName','Initial','LastName'] if clean(m[f]))
             district=m['District'].lstrip('0') or '0'
-            rows.append(make(source,st,ch,name,district,'|'.join(m[f] for f in ['Body','District','FirstName','Initial','LastName']),m['Politics']))
+            rows.append(make(source,st,ch,name,district,'|'.join(m[f] for f in ['Body','District','FirstName','Initial','LastName']),m['Politics'],phone=m.get('Phone')))
     elif st=='UT':
         source['effectivePeriod']='Current legislator directory; 2026GS legislation links'
         for m in json.loads(raw)['legislators']:
             assert 'sess=2026GS' in m['legislation'], 'Utah legislative session changed'
             ch={'S':'upper','H':'lower'}[m['house']]
-            rows.append(make(source,st,ch,m['formatName'],m['district'],m['id'],m['party']))
+            rows.append(make(source,st,ch,m['formatName'],m['district'],m['id'],m['party'],ids=m['id'],
+                             email=m.get('email'),phone=m.get('workPhone') or m.get('cell'),photo=m.get('image')))
     elif st=='VT':
         source['effectivePeriod']='2025-2026 session'
         for m in json.loads(raw)['data']:
             if m['TerminationReason'].strip(): continue
             assert m['PersonTypeID']==('S' if chamber=='upper' else 'H'), 'Unexpected Vermont chamber'
             name=' '.join(clean(m[f]) for f in ['FirstName','LastName','NameSuffix'] if clean(m[f]))
-            rows.append(make(source,st,chamber,name,m['District'],m['PersonID'],m['Party'], '/people/single/2026/'+m['PersonID']))
+            rows.append(make(source,st,chamber,name,m['District'],m['PersonID'],m['Party'], '/people/single/2026/'+m['PersonID'],
+                             ids=m['PersonID'],email=m.get('Email'),phone=m.get('HomePhone')))
     elif st=='WY':
         source['effectivePeriod']='2026 legislative roster'
         for m in json.loads(raw):
             assert m['chamber']==('S' if chamber=='upper' else 'H')
             if m['legStatus']!='C': continue
             assert re.fullmatch('[SH][0-9]+',m['district'])
-            rows.append(make(source,st,chamber,m['name'],str(int(m['district'][1:])),m['legID'],m['party']))
+            rows.append(make(source,st,chamber,m['name'],str(int(m['district'][1:])),m['legID'],m['party'],ids=str(m['legID']),
+                             base=WY_SITE,email=m['eMail'],phone=m['phone'],photo=m['legPhoto']))
     elif st=='OR':
         source['effectivePeriod']='Current chamber directory contact CSV'
         for m in csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))):
             if not clean(m['Last Name']):continue
             name=clean(m['First Name'])+' '+clean(m['Last Name'])
-            rows.append(make(source,st,chamber,name,m['District Number'],m['Website Address'],website=m['Website Address']))
+            rows.append(make(source,st,chamber,name,m['District Number'],m['Website Address'],website=m['Website Address'],
+                             email=m['Email'],phone=m['Phone']))
     else:
         tree=HTML(raw).root
         if st=='OK':
@@ -160,7 +184,9 @@ def parse(key, raw, source):
                 if 'vacant' in (a['firstName']+' '+a['lastName']).lower():continue
                 district=a['district']['data']['attributes']['number']
                 name=' '.join(a[x] for x in ['firstName','lastName','suffix'] if a.get(x))
-                rows.append(make(source,st,chamber,name,district,m['id'],a['party']['data']['attributes']['name']))
+                portrait=(a.get('portrait') or {}).get('data') or {}
+                rows.append(make(source,st,chamber,name,district,m['id'],a['party']['data']['attributes']['name'],ids=m['id'],
+                                 photo=(portrait.get('attributes') or {}).get('url')))
         elif st=='RI':
             source['effectivePeriod']='Live roster list; ActiveFlag=Yes entries'
             # Anonymous SharePoint list view exposes current and inactive entries.
@@ -174,7 +200,8 @@ def parse(key, raw, source):
                 assert m['ActiveFlag'] in {'Yes','No'}, 'Unknown Rhode Island active flag'
                 if m['ActiveFlag']!='Yes':continue
                 ch={'Senate':'upper','House':'lower'}[m['chamber']]
-                rows.append(make(source,st,ch,m['legislator_name'],m['district'],m['ID'],m['political_party'],m['legislator_bioURL']))
+                rows.append(make(source,st,ch,m['legislator_name'],m['district'],m['ID'],m['political_party'],m['legislator_bioURL'],
+                                 ids=m['ID'],email=m['email'],phone=m['phone']))
             assert tree.find(lambda n:n.tag=='tr'and'iid'in n.attrs), 'Rhode Island list rows missing'
             return rows  # The complete paginated list is checked in collect().
         elif st=='SC':
@@ -187,7 +214,10 @@ def parse(key, raw, source):
                 if name.lower()=='vacant':continue
                 district=re.search(r'District (\d+)',n.text()).group(1)
                 party=re.search(r'\(([RD])\)',n.text())
-                rows.append(make(source,st,chamber,name,district,a.attrs['href'],party.group(1) if party else None,a.attrs['href']))
+                code=re.fullmatch(r'/member\.php\?code=(\d+)',a.attrs['href'])
+                pics=n.find(lambda n:n.tag=='img'and has_class(n,'memberpic'))
+                rows.append(make(source,st,chamber,name,district,a.attrs['href'],party.group(1) if party else None,a.attrs['href'],
+                                 ids=code.group(1) if code else None,photo=pics[0].attrs.get('src') if len(pics)==1 else None))
         elif st=='TN':
             assert 'ga=114' in raw.decode() and 'ga=115' not in raw.decode(), 'Tennessee session changed'
             source['effectivePeriod']='114th General Assembly (2025-2026)'
@@ -200,7 +230,7 @@ def parse(key, raw, source):
                 cells=[n.text() for n in tr.children if isinstance(n,Node)and n.tag=='td']
                 assert len(cells)==7
                 district=re.search(r'District (\d+)',tr.text()).group(1)
-                rows.append(make(source,st,chamber,given_first(a.text()),district,a.attrs['href'],cells[2],a.attrs['href']))
+                rows.append(make(source,st,chamber,given_first(a.text()),district,a.attrs['href'],cells[2],a.attrs['href'],phone=cells[6]))
         elif st=='TX':
             if chamber=='upper':
                 assert '89th Legislature' in tree.text(), 'Texas legislative session changed'
@@ -211,14 +241,17 @@ def parse(key, raw, source):
                     assert len(links)==1
                     a=links[0];district=re.search(r'District (\d+)',n.text()).group(1)
                     if a.text().strip().endswith('*'):continue  # vacant seat (e.g. "Constituent Services *")
-                    rows.append(make(source,st,chamber,a.text(),district,a.attrs['href'],website=a.attrs['href']))
+                    pics=n.find(lambda n:n.tag=='img')
+                    rows.append(make(source,st,chamber,a.text(),district,a.attrs['href'],website=a.attrs['href'],
+                                     photo=pics[0].attrs.get('src') if len(pics)==1 else None))
             else:
                 source['effectivePeriod']='Current Texas House members directory; active=1 entries'
                 entries=tree.find(lambda n:n.tag=='get-members')
                 assert len(entries)==1
                 for m in json.loads(entries[0].attrs[':members']):
                     if m['active']!=1:continue
-                    rows.append(make(source,st,chamber,given_first(m['member_name']),m['id'],m['member_bill_code'],website=m['link']))
+                    rows.append(make(source,st,chamber,given_first(m['member_name']),m['id'],m['member_bill_code'],website=m['link'],
+                                     ids=str(m['member_bill_code']),photo=m.get('image')))
         elif st=='VA':
             source['effectivePeriod']='Current Senate directory' if chamber=='upper' else '2026 Virginia House of Delegates'
             if chamber=='lower':assert 'Members of the 2026 Virginia House of Delegates' in tree.text()
@@ -229,7 +262,14 @@ def parse(key, raw, source):
                 assert a is not None
                 match=re.search(r'District\s*:?\s*(\d+)',n.text());assert match
                 party=re.search(r'Party:\s*(Democrat|Republican|Independent)',n.text())
-                rows.append(make(source,st,chamber,given_first(a.text()) if chamber=='lower' else a.text(),match.group(1),a.attrs['href'].strip(),party.group(1) if party else None,a.attrs['href']))
+                person=re.search(r'(?:id=|/members/)([SH]\d+)\s*$',a.attrs['href'])
+                pics=n.find(lambda n:n.tag=='img')
+                # Label-anchored capitol line; district office numbers are not substituted.
+                phone=re.search(r'Capitol (?:Office|Phone):\s*(\(\d{3}\) \d{3}-\d{4})',n.text())
+                mails=[m.attrs['href'] for m in n.find(lambda m:m.tag=='a'and m.attrs.get('href','').lower().startswith('mailto:'))]
+                rows.append(make(source,st,chamber,given_first(a.text()) if chamber=='lower' else a.text(),match.group(1),a.attrs['href'].strip(),party.group(1) if party else None,a.attrs['href'],
+                                 ids=person.group(1) if person else None,photo=pics[0].attrs.get('src') if len(pics)==1 else None,
+                                 phone=phone.group(1) if phone else None,email=mails[0] if len(mails)==1 else None))
         elif st=='WA':
             assert '2025-26 biennium' in tree.text(), 'Washington biennium changed'
             source['effectivePeriod']='2025-26 biennium; live legislator directory'
@@ -238,7 +278,9 @@ def parse(key, raw, source):
                 links=n.find(lambda n:n.tag=='a'and has_class(n,'title'))
                 assert len(links)==1
                 a=links[0];name=re.sub(r'^(Senator|Representative)\s+','',a.text())
-                rows.append(make(source,st,ch,name,n.attrs['data-district'],n.attrs['data-id'],n.attrs['data-party'],a.attrs['href']))
+                pics=n.find(lambda n:n.tag=='img')
+                rows.append(make(source,st,ch,name,n.attrs['data-district'],n.attrs['data-id'],n.attrs['data-party'],a.attrs['href'],
+                                 ids=n.attrs['data-id'],photo=pics[0].attrs.get('src') if len(pics)==1 else None))
         elif st=='WV':
             source['effectivePeriod']='Live chamber roster'
             for tr in tree.find(lambda n:n.tag=='tr'):
@@ -248,7 +290,12 @@ def parse(key, raw, source):
                 cells=[n.text() for n in tr.children if isinstance(n,Node)and n.tag=='td']
                 assert len(cells)==6
                 a=links[0];district=re.match(r'\d+',cells[2]).group()
-                rows.append(make(source,st,chamber,a.text(),str(int(district)),a.attrs['href'],cells[1],a.attrs['href']))
+                pics=tr.find(lambda n:n.tag=='img')
+                mails=[m.attrs['href'] for m in tr.find(lambda m:m.tag=='a'and m.attrs.get('href','').lower().startswith('mailto:'))]
+                phones=re.findall(r'\(\d{3}\) \d{3}-\d{4}',' '.join(cells[4:]))
+                rows.append(make(source,st,chamber,a.text(),str(int(district)),a.attrs['href'],cells[1],a.attrs['href'],
+                                 photo=pics[0].attrs.get('src') if len(pics)==1 else None,
+                                 email=mails[0] if len(mails)==1 else None,phone=phones[0] if len(phones)==1 else None))
         elif st=='WI':
             assert '2025 Wisconsin State' in tree.text(), 'Wisconsin session changed'
             source['effectivePeriod']='2025-2026 biennium; 2025 legislators directory'
@@ -259,15 +306,56 @@ def parse(key, raw, source):
                 if 'vacant' in name.lower():continue
                 details=n.find(lambda a:a.tag=='a'and a.text()=='Details');assert len(details)==1
                 party=re.search(r'\(([RD]) -',n.text())
-                rows.append(make(source,st,chamber,given_first(name),n.attrs['id'][8:],details[0].attrs['href'],party.group(1) if party else None,details[0].attrs['href']))
+                person=re.fullmatch(r'/2025/legislators/(?:senate|assembly)/(\d+)',details[0].attrs['href'])
+                pics=n.find(lambda a:a.tag=='img'and has_class(a,'picture'))
+                tel=n.find(lambda a:has_class(a,'telephone'))
+                phones=re.findall(r'\(\d{3}\) \d{3}-\d{4}',tel[0].text()) if len(tel)==1 else []
+                box=n.find(lambda a:has_class(a,'email'))
+                mails=[m.attrs['href'] for m in box[0].find(lambda m:m.tag=='a'and m.attrs.get('href','').lower().startswith('mailto:'))] if len(box)==1 else []
+                rows.append(make(source,st,chamber,given_first(name),n.attrs['id'][8:],details[0].attrs['href'],party.group(1) if party else None,details[0].attrs['href'],
+                                 ids=person.group(1) if person else None,photo=pics[0].attrs.get('src') if len(pics)==1 else None,
+                                 phone=phones[0] if phones else None,email=mails[0] if len(mails)==1 else None))
         else:raise ValueError('Unsupported source '+key)
     return checked(rows,st,chamber if chamber in {'upper','lower'} else None)
 
 
+def join_oregon(rows, raw, source):
+    """Party and LegislatorCode from the Legislature's OData API, 2025-2026 interim."""
+    source['effectivePeriod']='2025-2026 Interim (SessionKey 2025I1)'
+    found=collections.defaultdict(list)
+    for m in json.loads(raw)['value']:
+        assert m['SessionKey']=='2025I1'
+        ch={'S':'upper','H':'lower'}[m['Chamber']]
+        found[(ch,clean(m['DistrictNumber']),clean(m['FirstName'])+' '+clean(m['LastName']))].append(m)
+    for r in rows:
+        if r['state']!='OR':continue
+        match=found.get(('upper' if '-upper-' in r['id'] else 'lower',r['district'],r['name']),[])
+        if len(match)!=1:continue  # exact chamber/district/name only; ambiguity leaves fields empty
+        evidence(r,source,party=clean(match[0]['Party']),ids={source['id']:clean(match[0]['LegislatorCode'])})
+
+
+def join_washington(rows, raw, source):
+    """Email and phone from the official sponsor web service, joined by member Id."""
+    source['effectivePeriod']='2025-26 biennium sponsors'
+    ns={'w':'http://WSLWebServices.leg.wa.gov/'}
+    found=collections.defaultdict(list)
+    for m in ET.fromstring(raw).findall('w:Member',ns):
+        found[m.findtext('w:Id',namespaces=ns)].append({k:clean(m.findtext('w:'+k,'',ns)) for k in ['Agency','District','Email','Phone']})
+    for r in rows:
+        if r['state']!='WA':continue
+        agency='Senate' if '-upper-' in r['id'] else 'House'
+        # The biennium list keeps prior-chamber entries; require the current chamber and district.
+        match=[m for m in found.get(r.get('ids',{}).get('wa-roster'),[]) if m['Agency']==agency and m['District']==r['district']]
+        if len(match)!=1:continue
+        evidence(r,source,**contact(source['url'],email=match[0]['Email'],phone=match[0]['Phone']))
+
+
 def collect(fetch, offline=False):
-    rows,sources=[],[]
+    rows,sources,joins=[],[],{}
     for key,(publisher,url) in SOURCES.items():
         raw,source=fetch(key,publisher,url,offline)
+        if key in JOINS:
+            joins[key]=raw,source;sources.append(source);continue
         batch=parse(key,raw,source)
         rows.extend(batch);sources.append(source)
         if key=='ri-roster':
@@ -291,5 +379,11 @@ def collect(fetch, offline=False):
                 raw,source=fetch('ri-roster-page-'+str(pages),publisher,url,offline)
                 rows.extend(parse('ri-roster',raw,source));sources.append(source)
             checked([r for r in rows if r['state']=='RI'],'RI')
+    if 'or-legislators' in joins: join_oregon(rows,*joins['or-legislators'])
+    if 'wa-sponsors' in joins: join_washington(rows,*joins['wa-sponsors'])
+    # One image shown for several people is a placeholder, not a portrait.
+    shared=collections.Counter(r['photo'] for r in rows if r.get('photo'))
+    for r in rows:
+        if r.get('photo') and shared[r['photo']]>1: del r['photo']
     assert len({r['id']for r in rows})==len(rows), 'Duplicate regional official IDs'
     return rows,sources

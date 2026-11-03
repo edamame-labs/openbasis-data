@@ -96,4 +96,59 @@ class RegionC(unittest.TestCase):
         self.assertEqual(len(sources),2)
 
 
+    def test_wisconsin_card_contacts_and_publisher_id(self):
+        card='''<p>2025 Wisconsin State Senate</p><div id="district28">
+        <img class="picture" src="https://docs.legis.wisconsin.gov/2025/legislators/senate/2805.jpg" />
+        <strong><a href="https://legis.wisconsin.gov/senate/28/bradley">Bradley, Julian</a></strong> <small>(R - New Berlin)</small>
+        <a href="/2025/legislators/senate/2805">Details</a>
+        <span class='info telephone'>(608) 266-5400<br/>(888) 534-0064</span>
+        <span class='info email'><a href="mailto:Sen.Bradley@legis.wisconsin.gov">x</a></span>
+        <span class='info staff'><a href="mailto:Staff.Person@legis.wisconsin.gov">y</a></span></div>'''
+        with patch.dict(r.LIMITS,{'WI':(1,99)}):
+            row,=r.parse('wi-upper',card.encode(),self.source('wi-upper'))
+        self.assertEqual((row['email'],row['phone'],row['ids']),('sen.bradley@legis.wisconsin.gov','608-266-5400',{'wi-upper':'2805'}))
+        self.assertEqual(row['photo'],'https://docs.legis.wisconsin.gov/2025/legislators/senate/2805.jpg')
+
+    def test_virginia_capitol_phone_is_label_anchored(self):
+        card='''<p>Members of the 2026 Virginia House of Delegates</p><div class="delegate-card">
+        <img src="/delegate_photos/thumbs/H0386.jpg"><a href="/members/H0386">Anderson, Jessica L.</a>
+        <p>District: 71</p><p>District Phone: (757) 707-1673</p><p>Email: <a href="mailto:DelJAnderson@house.virginia.gov">e</a></p></div>'''
+        with patch.dict(r.LIMITS,{'VA':(40,1)}):
+            row,=r.parse('va-lower',card.encode(),self.source('va-lower'))
+        self.assertNotIn('phone',row)  # district office number is not a capitol line
+        self.assertEqual((row['email'],row['ids'],row['photo']),('deljanderson@house.virginia.gov',{'va-lower':'H0386'},'https://house.vga.virginia.gov/delegate_photos/thumbs/H0386.jpg'))
+
+    def test_oregon_party_joins_only_exact_chamber_district_name(self):
+        source=self.source('or-upper')
+        rows=[r.make(source,'OR','upper','Dick Anderson','5','a'),r.make(source,'OR','upper','Sara Gelser Blouin','8','b')]
+        api=dict(value=[dict(SessionKey='2025I1',Chamber='S',DistrictNumber='5',FirstName='Dick',LastName='Anderson',Party='Republican',LegislatorCode='Sen Anderson'),
+                        dict(SessionKey='2025I1',Chamber='S',DistrictNumber='8',FirstName='Sara',LastName='Gelser',Party='Democrat',LegislatorCode='Sen Gelser')])
+        r.join_oregon(rows,json.dumps(api).encode(),self.source('or-legislators'))
+        self.assertEqual(rows[0]['party'],'Republican')
+        self.assertEqual(rows[0]['fieldEvidence']['party'],{'value':'Republican','sourceIds':['or-legislators']})
+        self.assertEqual([s['id']for s in rows[0]['sources']],['or-upper','or-legislators'])
+        self.assertNotIn('party',rows[1])
+        self.assertEqual(rows[1]['sources'],[source])
+
+    def test_washington_contacts_require_current_chamber(self):
+        source=self.source('wa-roster')
+        row=r.make(source,'WA','upper','Emily Alvarado','34','34024',ids='34024')
+        xml='''<ArrayOfMember xmlns="http://WSLWebServices.leg.wa.gov/">
+        <Member><Id>34024</Id><Agency>House</Agency><District>34</District><Phone>(360) 786-7978</Phone><Email>Emily.Alvarado@leg.wa.gov</Email></Member>
+        <Member><Id>34024</Id><Agency>Senate</Agency><District>34</District><Phone>(360) 786-7667</Phone><Email>Emily.Alvarado@leg.wa.gov</Email></Member></ArrayOfMember>'''
+        r.join_washington([row],xml.encode(),self.source('wa-sponsors'))
+        self.assertEqual(row['phone'],'360-786-7667')
+        self.assertEqual(row['fieldEvidence']['email'],{'value':'emily.alvarado@leg.wa.gov','sourceIds':['wa-sponsors']})
+
+    def test_photo_shown_for_several_people_is_dropped(self):
+        def fetch(key,publisher,url,offline=False):
+            people=[dict(legID=i,name='Person '+str(i),chamber='S',district='S'+str(i),legStatus='C',party='R',eMail='',phone='',
+                         legPhoto='LegislatorSummary/Photos/'+('blank.jpg' if i<3 else str(i)+'.jpg'))for i in range(1,32)]
+            return json.dumps(people).encode(),dict(id=key,name=publisher,url=url)
+        with patch.dict(r.SOURCES,{'wy-upper':r.SOURCES['wy-upper']},clear=True):
+            rows,_=r.collect(fetch)
+        self.assertEqual(sum('photo' in row for row in rows),29)
+        self.assertEqual(rows[4]['photo'],'https://wyoleg.gov/LegislatorSummary/Photos/5.jpg')
+
+
 if __name__=='__main__': unittest.main()
