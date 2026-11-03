@@ -83,7 +83,7 @@ class RegionBTests(unittest.TestCase):
 
     def test_mississippi_presiding_lieutenant_governor_is_not_district_53(self):
         def card(d,name,extra=''):
-            return '<div class="active-member" data-chamber="S" data-fiscal_year="26" data-district="'+str(d)+'" '+extra+'><div class="flex-grow-1">'+name+'</div>'+('President of the Senate' if d==53 else '')+'</div>'
+            return '<div class="active-member" data-chamber="S" data-fiscal_year="26" data-district="'+str(d)+'" data-mem_name="'+name.split()[-1]+'" '+extra+'><div class="flex-grow-1">'+name+'</div>'+('President of the Senate' if d==53 else '')+'</div>'
         html='2026 Regular Session'+card(1,'Example Senator')+card(53,'Presiding Officer','data-customurl="https://ltgovhosemann.ms.gov/"')
         with patch.dict(roster.MAXIMUM,MS=(1,1)):
             rows=roster.parse('ms-upper',html.encode(),self.proof('ms-upper'))
@@ -160,6 +160,21 @@ class RegionBTests(unittest.TestCase):
         with patch.dict(roster.MAXIMUM,NV=(1,1)):
             row=roster.parse('nv-upper',html,self.proof('nv-upper'))[0]
         self.assertEqual((row['name'],row['phone'],row['photo']),('Jane Doe','775-684-1421','https://www.leg.state.nv.us/a.jpg'))
+
+    def test_mississippi_party_from_member_xml_joined_by_publisher_key_and_district(self):
+        index=b'''<?xml version="1.0" encoding="ISO-8859-1"?><LEGISLATURE><PROTEMP><PROTEMP_LINK>senate/Kirby.xml</PROTEMP_LINK></PROTEMP>
+          <CHAIR><CHAIR_LINK>http://ltgovhosemann.ms.gov/</CHAIR_LINK></CHAIR><MEMBER><M1_LINK>senate/kirby.xml</M1_LINK><M2_LINK></M2_LINK><M3_LINK>senate/parker.xml</M3_LINK></MEMBER></LEGISLATURE>'''
+        self.assertEqual(roster.ms_member_links('ms-upper-index',index),[('ms-upper-member-kirby','senate/Kirby.xml'),('ms-upper-member-parker','senate/parker.xml')])
+        member=lambda key,d,name,party:roster.ms_member(('<?xml version="1.0" encoding="ISO-8859-1"?><MEMBINFO><U_MEM_NAM>'+key+'</U_MEM_NAM><DISTRICT>'+d+'</DISTRICT><DISP_NAME>'+name+'</DISP_NAME><PARTY>'+party+'</PARTY></MEMBINFO>').encode())
+        card=lambda d,key,name:'<div class="active-member" data-chamber="S" data-fiscal_year="26" data-district="'+d+'" data-mem_name="'+key+'   "><div class="flex-grow-1">'+name+'</div></div>'
+        with patch.dict(roster.MAXIMUM,MS=(2,2)):
+            rows=roster.parse('ms-upper',('2026 Regular Session'+card('30','Kirby','Dean Kirby')+card('2','Gillespie Isom','Theresa Gillespie-Isom')).encode(),self.proof('ms-upper'))
+        proofs=[dict(self.proof('ms-upper-index'),id=k) for k in ['ms-upper-member-kirby','ms-upper-member-parker']]
+        # District 2's file still describes a predecessor: no key or name match, so no party.
+        roster.ms_party(rows,'upper',list(zip(proofs,[member('Kirby','30','Dean Kirby','R'),member('Parker','2','David Parker','R')])))
+        self.assertEqual((rows[0]['party'],rows[0]['fieldEvidence']['party']['sourceIds'],rows[0]['ids']),('Republican',['ms-upper-member-kirby'],{'ms-upper':'Kirby'}))
+        self.assertNotIn('party',rows[1])
+        self.assertEqual(len(rows[1]['sources']),1)
 
 
 if __name__=='__main__':

@@ -36,7 +36,7 @@ SOURCES['hi-upper'] = ('Hawaii State Legislature', 'https://www.capitol.hawaii.g
 SOURCES['ga-lower'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/members/house')
 SOURCES['ga-upper'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/members/senate')
 SOURCES['in-roster'] = ('Indiana General Assembly', 'https://iga.in.gov/legislative/2026/legislators')
-SOURCE_HOSTS = {'www.kslegislature.gov'}
+SOURCE_HOSTS = {'www.kslegislature.gov','www.arkleg.state.ar.us'}
 # Party for the Arkansas House: arkleg's list omits it; the House's own member list publishes it.
 AUX = {'ar-house-members': ('Arkansas House of Representatives', 'https://www.arkansashouse.org/representatives/members/')}
 SOURCES.update(AUX)
@@ -400,6 +400,32 @@ def arkansas_house_party(fetch,offline,rows):
  return [source]
 
 
+def senate_party(raw,name):
+ """Party from an arkleg member page title, only if it names the same senator."""
+ tree=HTML(raw).root;assert '95th General Assembly - Fiscal Session, 2026' in tree.text(),'Session changed'
+ titles=tree.find(lambda n:n.tag=='title');assert len(titles)==1,'Member page changed'
+ match=re.fullmatch(r'Senator (.+) \(([RDI])\) - Arkansas State Legislature',titles[0].text())
+ return party_name(match.group(2)) if match and match.group(1)==name else None
+
+
+def arkansas_senate_party(fetch,offline,rows):
+ # Neither Senate list publishes party; each roster row's own arkleg member link does, in its title.
+ senators=[r for r in rows if r['state']=='AR' and 'Senate' in r['body'] and not r.get('party')]
+ def page(r):
+  member=query(r['website'],'member');assert member and r['website'].startswith('https://www.arkleg.state.ar.us/Legislators/Detail?')
+  key='ar-member-'+re.sub(r'[^a-z0-9]+','-',member.lower()).strip('-')
+  raw,source=fetch(key,'Arkansas General Assembly',r['website'],offline)
+  source['effectivePeriod']='95th General Assembly, 2026 fiscal session member page'
+  return r,key,source,senate_party(raw,r['name'])
+ with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(page,senators))
+ assert len({key for _,key,_,_ in results})==len(results),'Ambiguous Arkansas member page id'
+ for r,key,source,party in results:
+  if not party:continue
+  r['party']=party;r['sources'].append(source)
+  r.setdefault('fieldEvidence',{})['party']={'value':party,'sourceIds':[key]}
+ return [source for _,_,source,_ in results]
+
+
 def collect(fetch,offline=False):
  rows=[]; sources=[]; profiles=[]
  for key,(publisher,url) in SOURCES.items():
@@ -426,7 +452,8 @@ def collect(fetch,offline=False):
    assert (110<=len(chamber_profiles)<=125 if key.endswith('lower') else 35<=len(chamber_profiles)<=40)
    profiles.extend(chamber_profiles)
   else:rows.extend(parse(key,raw,source))
- if any(r['state']=='AR' for r in rows):sources.extend(arkansas_house_party(fetch,offline,rows))
+ if any(r['state']=='AR' for r in rows):
+  sources.extend(arkansas_house_party(fetch,offline,rows));sources.extend(arkansas_senate_party(fetch,offline,rows))
  def profile(item):
   key,publisher,url=item;raw,source=fetch(key,publisher,url,offline)
   return parse('-'.join(key.split('-')[:2]),raw,source),source

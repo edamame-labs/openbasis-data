@@ -145,4 +145,19 @@ class RegionATest(unittest.TestCase):
   rows=self.parse('ct-upper','Senate Members<table>'+tr('S01','https://www.senatedems.ct.gov/senator/a/email-contact')+tr('S02','mailto:Ann.Other@cga.ct.gov')+'</table>')
   self.assertEqual([r.get('email') for r in rows],[None,'ann.other@cga.ct.gov'])
 
+ def test_arkansas_senate_party_from_own_member_page_title(self):
+  src={'id':'ar-roster','url':a.SOURCES['ar-roster'][1]}
+  link='/Legislators/Detail?member=J.+Scott&ddBienniumSession=2025%2F2026F'
+  rows=[a.row(src,'AR','upper','Jamie Scott','12',website=link),a.row(src,'AR','upper','Ann Other','13',website=link.replace('J.+Scott','Other'))]
+  pages={'J. Scott':'Jamie Scott (D)','Other':'Someone Else (R)'}
+  def fetch(key,publisher,url,offline):
+   title='Senator '+pages[a.query(url,'member')]+' - Arkansas State Legislature'
+   return ('<title>'+title+'</title>95th General Assembly - Fiscal Session, 2026').encode(),{'id':key,'url':url}
+  evidence=a.arkansas_senate_party(fetch,True,rows)
+  self.assertEqual(rows[0]['party'],'Democratic')
+  self.assertEqual(rows[0]['fieldEvidence']['party'],{'value':'Democratic','sourceIds':['ar-member-j-scott']})
+  self.assertEqual([s['id'] for s in rows[0]['sources']],['ar-roster','ar-member-j-scott'])
+  self.assertNotIn('party',rows[1])
+  self.assertEqual(len(evidence),2)
+
 if __name__=='__main__':unittest.main()

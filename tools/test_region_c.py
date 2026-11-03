@@ -151,4 +151,49 @@ class RegionC(unittest.TestCase):
         self.assertEqual(rows[4]['photo'],'https://wyoleg.gov/LegislatorSummary/Photos/5.jpg')
 
 
+    @staticmethod
+    def tx_page(name, party='Republican'):
+        return ('<img id="memhead" src="x.jpg" alt="'+name+'"><div class="meminfo">'
+                '<p class="meminfo"><span>Hometown:</span> Mineola</p>'
+                '<p class="meminfo"><span>Party:</span> '+party+'</p></div>').encode()
+
+    def test_texas_senate_party_requires_same_named_member_page(self):
+        row=r.make(self.source('tx-upper'),'TX','upper','Bryan  Hughes','1','member.php?d=1')
+        page={'id':'tx-upper-member-d1','url':r.TX_PAGES['tx-upper-member-d1'][1]}
+        r.join_texas_senate(row,self.tx_page('Someone Else'),page)
+        self.assertNotIn('party',row)
+        r.join_texas_senate(row,self.tx_page('Bryan Hughes','Democrat'),page)
+        self.assertEqual(row['fieldEvidence']['party'],{'value':'Democratic','sourceIds':['tx-upper-member-d1']})
+        self.assertEqual(row['sources'][-1],page)
+
+    def test_texas_senate_pages_fetched_only_for_roster_districts(self):
+        calls=[]
+        roster=('<p>89th Legislature</p><p>* Indicates a currently vacant seat</p>'+''.join(
+            '<div class="mempicdiv"><a href="member.php?d='+str(d)+'">'+('Constituent Services *' if d==22 else 'Person '+str(d))+'</a> District '+str(d)+'</div>'
+            for d in range(1,32))).encode()
+        def fetch(key,publisher,url,offline=False):
+            calls.append(key)
+            raw=roster if key=='tx-upper' else self.tx_page('Person '+url.rsplit('=',1)[1])
+            return raw,dict(id=key,name=publisher,url=url)
+        with patch.dict(r.SOURCES,{'tx-upper':r.SOURCES['tx-upper'],**r.TX_PAGES},clear=True):
+            rows,sources=r.collect(fetch)
+        self.assertEqual(len(rows),30)
+        self.assertNotIn('tx-upper-member-d22',calls)
+        self.assertTrue(all(row['party']=='Republican' for row in rows))
+        self.assertEqual(len(sources),31)
+
+    def test_virginia_delegate_party_initial_only_in_search_index_position(self):
+        def card(search):
+            return ('<div class="delegate-card" data-search="'+search+'"><a href="/members/H0386">Anderson, Jessica L.</a>'
+                    '<p>Capitol Office: 804</p><p>District: 71</p></div>')
+        html=b'<p>Members of the 2026 Virginia House of Delegates</p>'
+        with patch.dict(r.LIMITS,{'VA':(40,1)}):
+            ok,=r.parse('va-lower',html+card('anderson, jessica l. 804 d (757) 707-1673').encode(),self.source('va-lower'))
+            odd,=r.parse('va-lower',html+card('anderson, jessica l. 804 x (757) 707-1673').encode(),self.source('va-lower'))
+            moved,=r.parse('va-lower',html+card('anderson, jessica l. d 804 (757) 707-1673').encode(),self.source('va-lower'))
+        self.assertEqual(ok['party'],'Democratic')
+        self.assertNotIn('party',odd)
+        self.assertNotIn('party',moved)
+
+
 if __name__=='__main__': unittest.main()

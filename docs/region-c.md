@@ -1,7 +1,7 @@
 # Official legislative roster adapters: region C
 
 `tools/regions/region_c.py` collects only responses issued by state legislatures.
-The November 2, 2026 validation collected **1,812 people** from 28 roster HTTP responses plus 2 field-join responses.
+The November 2, 2026 validation collected **1,812 people** from 28 roster HTTP responses plus 32 field-join responses (Oregon OData, Washington sponsors, 30 Texas Senate member pages).
 Counts describe included people, not statutory seats. Omitted rows never establish
 vacancies. Ohio and Pennsylvania are implemented separately in `region_d.py`.
 
@@ -66,11 +66,18 @@ JavaScript does. A photo URL shown for more than one person is dropped as a
 placeholder. Fields from a second response carry `fieldEvidence` and reference
 that response.
 
-Party is not published in any official list found for the Texas House and
-Senate or the Virginia House of Delegates. Texas Senate party is only on 30
-per-member pages (`https://senate.texas.gov/member.php?d=N`); the Virginia LIS
-member API requires a request header the shared fetcher does not send; the House
-directory shows party only as an unlabeled letter. These rows have no party.
+Texas Senate party comes from each district's official member page
+(`https://senate.texas.gov/member.php?d=N`, labeled `Party:`), fetched only for
+districts with a roster row (the vacant seat's page is never requested), each a
+separate source `tx-upper-member-dN`. It is used only when the page's portrait
+name (`#memhead` alt, whitespace/entities normalized) equals the roster name
+exactly; Borris L. Miles (13) and Lois W. Kolkhorst (18) carry a middle initial
+on the page, so they have no party. The Virginia House directory shows party
+only as an unlabeled initial in each card's search index (`name room party
+phones ...`); that initial is interpreted as party (D/R/I via
+`build.party_name`) only when it directly follows the card's own name and
+Capitol Office room, otherwise left empty. No official list found publishes
+Texas House party; those rows have no party.
 
 Tests cover terminated members, inactive Texas placeholders, Rhode Island active
 flags and pagination, future-session rejection, named multi-member districts,

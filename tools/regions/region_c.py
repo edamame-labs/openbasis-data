@@ -10,8 +10,9 @@ import io
 import json
 import re
 from urllib.parse import urljoin, urlparse
+import html
 import xml.etree.ElementTree as ET
-from build import HTML, Node, contact, has_class
+from build import HTML, Node, contact, has_class, party_name
 
 NAMES = dict(OK='Oklahoma', OR='Oregon', RI='Rhode Island', SC='South Carolina',
              SD='South Dakota', TN='Tennessee', TX='Texas', UT='Utah', VT='Vermont',
@@ -46,6 +47,10 @@ SOURCES = {
     'wa-sponsors': ('Washington State Legislature', 'https://wslwebservices.leg.wa.gov/SponsorService.asmx/GetSponsors?biennium=2025-26'),
 }
 JOINS = {'or-legislators', 'wa-sponsors'}
+# Texas Senate party appears only on each district's member page ("Party:").
+# Fetched only for districts with a roster row; vacant seats are never requested.
+TX_PAGES = {'tx-upper-member-d'+str(d): ('Texas Senate', 'https://senate.texas.gov/member.php?d='+str(d)) for d in range(1,32)}
+SOURCES.update(TX_PAGES)
 WY_SITE = 'https://wyoleg.gov/'  # siteURL in the application's published config
 SOURCE_HOSTS = {'www.rilegislature.gov'}
 COVERAGE = {s: {'upper':'collected', 'lower':'collected', 'blockers':[]} for s in NAMES}
@@ -262,12 +267,13 @@ def parse(key, raw, source):
                 assert a is not None
                 match=re.search(r'District\s*:?\s*(\d+)',n.text());assert match
                 party=re.search(r'Party:\s*(Democrat|Republican|Independent)',n.text())
+                party=party.group(1) if party else delegate_party(n,a) if chamber=='lower' else None
                 person=re.search(r'(?:id=|/members/)([SH]\d+)\s*$',a.attrs['href'])
                 pics=n.find(lambda n:n.tag=='img')
                 # Label-anchored capitol line; district office numbers are not substituted.
                 phone=re.search(r'Capitol (?:Office|Phone):\s*(\(\d{3}\) \d{3}-\d{4})',n.text())
                 mails=[m.attrs['href'] for m in n.find(lambda m:m.tag=='a'and m.attrs.get('href','').lower().startswith('mailto:'))]
-                rows.append(make(source,st,chamber,given_first(a.text()) if chamber=='lower' else a.text(),match.group(1),a.attrs['href'].strip(),party.group(1) if party else None,a.attrs['href'],
+                rows.append(make(source,st,chamber,given_first(a.text()) if chamber=='lower' else a.text(),match.group(1),a.attrs['href'].strip(),party,a.attrs['href'],
                                  ids=person.group(1) if person else None,photo=pics[0].attrs.get('src') if len(pics)==1 else None,
                                  phone=phone.group(1) if phone else None,email=mails[0] if len(mails)==1 else None))
         elif st=='WA':
@@ -319,6 +325,28 @@ def parse(key, raw, source):
     return checked(rows,st,chamber if chamber in {'upper','lower'} else None)
 
 
+def delegate_party(card, link):
+    """House directory party initial: an unlabeled letter that the page's search index
+    places between the Capitol Office room and the phones ("name room party phones").
+    Anchored on this card's own name and room; any other shape leaves party empty."""
+    room=re.search(r'Capitol Office:\s*(\S+)',card.text())
+    if not room: return None
+    found=re.match(re.escape(clean(html.unescape(link.text())).lower())+' '+re.escape(room.group(1).lower())+r' (\S+) ',card.attrs.get('data-search',''))
+    if not found or found.group(1).upper() not in {'D','R','I'}: return None
+    return party_name(found.group(1).upper())
+
+
+def join_texas_senate(row, raw, source):
+    """Party from the district member page, only if the page names the same person."""
+    tree=HTML(raw).root
+    heads=tree.find(lambda n:n.tag=='img'and n.attrs.get('id')=='memhead')
+    parties=[n for n in tree.find(lambda n:n.tag=='p'and has_class(n,'meminfo')) if n.text().startswith('Party:')]
+    if len(heads)!=1 or len(parties)!=1: return
+    if ' '.join(html.unescape(heads[0].attrs.get('alt','')).split())!=row['name']: return
+    party=clean(parties[0].text()[len('Party:'):])
+    if party: evidence(row,source,party=party_name(party))
+
+
 def join_oregon(rows, raw, source):
     """Party and LegislatorCode from the Legislature's OData API, 2025-2026 interim."""
     source['effectivePeriod']='2025-2026 Interim (SessionKey 2025I1)'
@@ -353,6 +381,7 @@ def join_washington(rows, raw, source):
 def collect(fetch, offline=False):
     rows,sources,joins=[],[],{}
     for key,(publisher,url) in SOURCES.items():
+        if key in TX_PAGES: continue
         raw,source=fetch(key,publisher,url,offline)
         if key in JOINS:
             joins[key]=raw,source;sources.append(source);continue
@@ -381,6 +410,11 @@ def collect(fetch, offline=False):
             checked([r for r in rows if r['state']=='RI'],'RI')
     if 'or-legislators' in joins: join_oregon(rows,*joins['or-legislators'])
     if 'wa-sponsors' in joins: join_washington(rows,*joins['wa-sponsors'])
+    for r in rows:
+        key='tx-upper-member-d'+r['district']
+        if r['state']=='TX' and '-upper-' in r['id'] and key in TX_PAGES:
+            raw,source=fetch(key,*TX_PAGES[key],offline)
+            sources.append(source);join_texas_senate(r,raw,source)
     # One image shown for several people is a placeholder, not a portrait.
     shared=collections.Counter(r['photo'] for r in rows if r.get('photo'))
     for r in rows:

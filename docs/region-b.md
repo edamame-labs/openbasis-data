@@ -25,7 +25,7 @@ November 2, 2026 (America/Los_Angeles).
 | New York | 150 | 62 | [Assembly](https://nyassembly.gov/mem/), [Senate](https://www.nysenate.gov/senators-committees) |
 | North Dakota | 94 | 47 | [September 2026 special-session membership](https://ndlegis.gov/assembly/69-2025/special-2/members), all nine pages |
 
-Total: **2,670** named legislators, from **39** source responses. Nebraska is
+Total: **2,670** named legislators, from **41** list responses plus Mississippi per-member files. Nebraska is
 represented as a unicameral legislature; it has no synthetic lower chamber.
 
 ## Collection and validation
@@ -67,7 +67,8 @@ links carry district numbers, not person IDs, so no `ids` are emitted.
 | --- | --- |
 | Louisiana | email, district-office phone, portrait (from the enclosing card) |
 | Maine | House email, portrait; Senate party letter from each `Name (P-County)` listing line |
-| Maryland, New Mexico, North Dakota, NY Senate, Mississippi | portrait |
+| Maryland, New Mexico, North Dakota, NY Senate | portrait |
+| Mississippi | portrait; `data-mem_name` member key as `ids` |
 | Massachusetts | email, phone, portrait |
 | Michigan | House email, phone; Senate email, phone, portrait from `senatorInfo` |
 | Minnesota | House email, phone, portrait; Senate email, phone; portrait is `/img/member_thumbnails/` + `mem_bio_pic`, the path the Senate's own `memberList` script renders |
@@ -79,11 +80,22 @@ links carry district numbers, not person IDs, so no `ids` are emitted.
 Missouri party and capitol phone come from a second official page per chamber and
 carry `fieldEvidence` naming it: the House grid is joined by district **and**
 identical published name; the Senator Directory by Senate member `id`, name and
-district. Non-matching rows keep no value. Party remains absent where no official
-list publishes it: Mississippi (only per-member files such as
-`https://billstatus.ls.state.ms.us/members/house/<name>.xml`, 171 members; the
-roster PDFs are image-only), the New York Assembly (no party on any Assembly page),
-Michigan HD4 (Karen Whitsett, listed without party) and nonpartisan Nebraska.
+district. Non-matching rows keep no value.
+
+Mississippi party comes from the publisher's per-member XML files (`<PARTY>`),
+discovered from the official chamber lists
+[`hr_membs.xml`](https://billstatus.ls.state.ms.us/members/hr_membs.xml) and
+[`ss_membs.xml`](https://billstatus.ls.state.ms.us/members/ss_membs.xml) (the
+roster PDFs are image-only). Each file is its own source (`ms-<chamber>-member-<file>`,
+about 172 extra fetches; officer slots repeating a link, even in other letter case,
+are fetched once). A file is joined to a gallery card only when its `DISTRICT`
+matches and either `U_MEM_NAM` equals the card's `data-mem_name` (kept as `ids`)
+or `DISP_NAME` equals the card name; party is spelled out by `build.party_name`
+with `fieldEvidence`. Some files still describe a predecessor or use variant keys,
+so nine members stay empty (House 22, 26, 69, 76; Senate 2, 24, 26, 42, 45).
+Party remains absent where no official list publishes it: the New York Assembly
+(no party on any Assembly page), Michigan HD4 (Karen Whitsett, listed without party)
+and nonpartisan Nebraska.
 
 ## Publisher structure and eligibility details
 

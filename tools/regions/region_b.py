@@ -9,8 +9,9 @@ import hashlib
 import io
 import json
 import re
+import xml.etree.ElementTree as ET
 from urllib.parse import urljoin, urlparse, parse_qs
-from build import HTML, Node, contact, has_class, record
+from build import HTML, Node, contact, has_class, party_name, record
 
 SOURCES = {
  'la-lower': ('Louisiana House of Representatives','https://house.louisiana.gov/H_Reps/H_Reps_FullInfo'),
@@ -28,6 +29,8 @@ SOURCES = {
  'mn-period': ('Minnesota Senate','https://www.mnsenate.gov/api/bienniumYears'),
  'ms-lower': ('Mississippi Legislature','https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=H'),
  'ms-upper': ('Mississippi Legislature','https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=S'),
+ 'ms-lower-index': ('Mississippi Legislature','https://billstatus.ls.state.ms.us/members/hr_membs.xml'),
+ 'ms-upper-index': ('Mississippi Legislature','https://billstatus.ls.state.ms.us/members/ss_membs.xml'),
  'mo-lower': ('Missouri House of Representatives','https://house.mo.gov/listmembers.aspx?year=2026&code=R'),
  'mo-lower-grid': ('Missouri House of Representatives','https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R'),
  'mo-upper': ('Missouri Senate','https://www.senate.mo.gov/Senators'),
@@ -181,7 +184,7 @@ def parse(key, raw, source):
         assert matched=={pid for pid,_,_ in eligible}, 'Current NH House members missing from downloadable file'
         source['effectivePeriod']='House members joined to official current House roster; Senate from current membership download'
         return check(rows)
-    if key in JOINS: return []  # Field supplements joined in collect(); never membership.
+    if key in JOINS or key in MS_INDEX: return []  # Field supplements joined in collect(); never membership.
     tree=HTML(raw).root
     if key=='nh-index':
         assert tree.find(lambda n:n.attrs.get('id')=='pageBody_ddlReps'), 'NH House index missing'
@@ -305,7 +308,8 @@ def parse(key, raw, source):
                 assert n.attrs.get('data-customurl')=='https://ltgovhosemann.ms.gov/' and 'President of the Senate' in n.text()
                 continue  # Presiding lieutenant governor is not a district senator.
             if 'vacant' in name.lower():continue
-            rows.append(enrich(make(source,state,chamber,name,n.attrs['data-district'].strip()),source,photo=img(n)))
+            # data-mem_name is the publisher's member key (U_MEM_NAM in its member XML).
+            rows.append(enrich(make(source,state,chamber,name,n.attrs['data-district'].strip()),source,n.attrs['data-mem_name'].strip(),photo=img(n)))
         rows=deduplicate(rows)
     elif key=='mo-lower':
         for a in tree.find(lambda n:n.tag=='a' and 'memberdetails.aspx?' in n.attrs.get('href','').lower()):
@@ -458,6 +462,44 @@ def join(rows, roster, table, key, source):
     return rows
 
 
+MS_INDEX = {'ms-lower-index':('lower','house/'),'ms-upper-index':('upper','senate/')}
+
+
+def ms_member_links(key, raw):
+    """Member XML links from an official chamber list; empty slots and external (presiding officer) links are skipped."""
+    chamber,prefix=MS_INDEX[key]
+    root=ET.fromstring(raw)
+    assert root.tag=='LEGISLATURE', 'Mississippi member list changed'
+    links=[e.text.strip() for e in root.iter() if e.tag.endswith('_LINK') and e.text and e.text.strip()]
+    links=[x for x in links if re.fullmatch(re.escape(prefix)+r'[A-Za-z0-9_().\-]+\.xml',x)]
+    # Officer slots repeat a member's link, sometimes with different letter case.
+    links=list({x.lower():x for x in reversed(links)}.values())[::-1]
+    out=[('ms-'+chamber+'-member-'+re.sub(r'[^a-z0-9]+','-',x[len(prefix):-4].lower()).strip('-'),x) for x in links]
+    assert out and len({k for k,_ in out})==len(out), 'Mississippi member links missing or ambiguous'
+    return out
+
+
+def ms_member(raw):
+    m=ET.fromstring(raw)
+    assert m.tag=='MEMBINFO', 'Mississippi member file changed'
+    return {k:(m.findtext(k) or '').strip() for k in ['U_MEM_NAM','DISTRICT','DISP_NAME','PARTY']}
+
+
+def ms_party(rows, chamber, members):
+    """Join member-file party by district plus the publisher key (data-mem_name = U_MEM_NAM) or
+    the identical display name. Anything else (stale file for a predecessor, ambiguity) stays empty."""
+    for row in rows:
+        if row['sources'][0]['id']!='ms-'+chamber or row.get('party'):continue
+        key=row['ids']['ms-'+chamber]
+        found=[(s,m) for s,m in members if m['DISTRICT']==row['district'] and (m['U_MEM_NAM']==key or m['DISP_NAME']==row['name'])]
+        if len(found)!=1 or not found[0][1]['PARTY']:continue
+        source,m=found[0]
+        row['party']=party_name(m['PARTY'])
+        row['sources'].append(source)
+        row.setdefault('fieldEvidence',{})['party']={'value':row['party'],'sourceIds':[source['id']]}
+    return rows
+
+
 def deduplicate(rows):
     by_id={}
     for row in rows:
@@ -496,6 +538,13 @@ def collect(fetch, offline=False):
         if key in JOINS:
             roster,parser,field=JOINS[key]
             join(rows,roster,parser(raw),field,source)
+        if key in MS_INDEX:
+            members=[]
+            for child_key,link in ms_member_links(key,raw):
+                child,proof=fetch(child_key,publisher,urljoin(url,link),offline)
+                sources.append(proof)
+                members.append((proof,ms_member(child)))
+            ms_party(rows,MS_INDEX[key][0],members)
         if key=='nd-roster':
             tree=HTML(raw).root
             last=tree.find(lambda n:n.tag=='a' and n.attrs.get('title')=='Go to last page')
