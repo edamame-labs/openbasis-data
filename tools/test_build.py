@@ -38,6 +38,19 @@ class RosterTests(unittest.TestCase):
         self.assertEqual([r.get('email') for r in rows],[None,None,'me@x.gov'])
         self.assertEqual([r.get('phone') for r in rows],['202-555-0100']*2+[None])
 
+    def test_unchanged_geography_keeps_published_bytes(self):
+        from geo_io import write_json
+        with tempfile.TemporaryDirectory() as d:
+            stage,published=Path(d)/'stage',Path(d)/'data'
+            layer=lambda t,coords:dict(source=dict(retrievedAt=t,metadata=dict(retrievedAt=t)),features=[coords])
+            write_json(published/'geography/a.geojson.gz',layer('2026-11-01',[1,2]))
+            write_json(published/'geography/b.geojson',layer('2026-11-01',[1,2]))
+            write_json(stage/'geography/a.geojson.gz',layer('2026-11-02',[1,2]))
+            write_json(stage/'geography/b.geojson',layer('2026-11-02',[1,3]))
+            self.assertEqual(build.keep_unchanged_geography(stage,published),1)
+            self.assertEqual((stage/'geography/a.geojson.gz').read_bytes(),(published/'geography/a.geojson.gz').read_bytes())
+            self.assertNotEqual((stage/'geography/b.geojson').read_bytes(),(published/'geography/b.geojson').read_bytes())
+
     def test_empty_roster_is_rejected(self):
         for key in ['ca-upper','ca-lower','nc-upper','nc-lower']:
             with self.subTest(key=key), self.assertRaises((AssertionError,ValueError)):

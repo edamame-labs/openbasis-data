@@ -165,6 +165,25 @@ def drop_shared_contacts(rows):
     return rows
 
 
+def without_retrieval_times(value):
+    if isinstance(value, dict): return {k:without_retrieval_times(v) for k,v in value.items() if k != 'retrievedAt'}
+    if isinstance(value, list): return [without_retrieval_times(v) for v in value]
+    return value
+
+
+def keep_unchanged_geography(stage, published):
+    """A refetch of identical geometry keeps the published bytes, so refreshes do not rewrite every layer."""
+    from geo_io import read_json
+    kept = 0
+    for path in (stage/'geography').rglob('*'):
+        old = published/path.relative_to(stage)
+        if path.is_file() and old.is_file() and path.read_bytes() != old.read_bytes() \
+                and without_retrieval_times(read_json(path)) == without_retrieval_times(read_json(old)):
+            shutil.copyfile(old, path)
+            kept += 1
+    return kept
+
+
 # Trailing academic/professional credentials some rosters append ("Jane Doe, Ph.D.").
 # Only after the name: leading initials such as "J.D. Ford" are given names.
 CREDENTIALS = re.compile(r'(?:,?\s+(?:Ph\.?\s?D|M\.?\s?D|Esq|D\.?D\.?S|Ed\.?\s?D|J\.?D|D\.?V\.?M|Pharm\.?\s?D|CPA|MBA|DNP|RN)\.?)+$')
@@ -463,6 +482,7 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
         coverage['geography'].update(analyticalDistricts=analytical_report['analyticalCounts'],areaIntersectionPairs=analytical_report['intersectionPairs'],officialGeometryLinks=analytical_report['linkage'])
         (stage/'coverage.json').write_text(json.dumps(coverage,indent=2)+'\n')
         (stage/'sources.json').write_text(json.dumps(sources,indent=2)+'\n')
+        print('Unchanged geography files kept', keep_unchanged_geography(stage, ROOT/'data'))
         (stage/'manifest.json').write_text(json.dumps({str(p.relative_to(stage)):digest(p.read_bytes()) for p in stage.rglob('*') if p.is_file()},indent=2)+'\n')
         validate(stage, fresh=not offline or require_fresh)
         # Only replace the published tree after every fetch and check succeeds.
