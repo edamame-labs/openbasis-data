@@ -1,0 +1,6837 @@
+{
+  "schemaVersion": 1,
+  "congress": "119",
+  "committees": [
+    {
+      "id": "house-AG00",
+      "chamber": "house",
+      "code": "AG00",
+      "name": "Committee on Agriculture",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-T000467",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-L000491",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001189",
+          "rank": 3,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-house-C001087",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000616",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000603",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000388",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001298",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001295",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000301",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001307",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000871",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000446",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001211",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001212",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001039",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000475",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000612",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000304",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000594",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000193",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000135",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000189",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000829",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001327",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001233",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001102",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000490",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000129",
+          "rank": 29,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001119",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-C001059",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000312",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000370",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001081",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001313",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000629",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001226",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000230",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000487",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001315",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001225",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000136",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000309",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000488",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000605",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001237",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000481",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000138",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000622",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001231",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001232",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000597",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001112",
+          "rank": 24,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-AP00",
+      "chamber": "house",
+      "code": "AP00",
+      "name": "Committee on Appropriations",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-C001053",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-R000395",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000055",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001148",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001051",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C000059",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000600",
+          "rank": 7,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-house-W000809",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000459",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000295",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001052",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000369",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000129",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000189",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001194",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000609",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001118",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000610",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001091",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000595",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001115",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000591",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-Z000018",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001116",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B000740",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000472",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000071",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001133",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000246",
+          "rank": 29,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000379",
+          "rank": 30,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000598",
+          "rank": 31,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001220",
+          "rank": 32,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001228",
+          "rank": 33,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001235",
+          "rank": 34,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001229",
+          "rank": 35,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000216",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-H000874",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000009",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C000537",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B000490",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001143",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000797",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001063",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000597",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-Q000023",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001188",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000607",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000371",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000462",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000822",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000474",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001055",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000297",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001090",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-U000040",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000590",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001206",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000593",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000631",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000299",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001214",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000600",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-I000058",
+          "rank": 28,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-AS00",
+      "chamber": "house",
+      "code": "AS00",
+      "name": "Committee on Armed Services",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-R000575",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-W000795",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000463",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000804",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001189",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000546",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001196",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000616",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000388",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001298",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001301",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000304",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000246",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000593",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000194",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000475",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000603",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000399",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001216",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001218",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000589",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001077",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000135",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001239",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001101",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001233",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001228",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001137",
+          "rank": 29,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001098",
+          "rank": 30,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000510",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-C001069",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000559",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000188",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001196",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001112",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000389",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000375",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001085",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001121",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000592",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000305",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001159",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000579",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000136",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000530",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000487",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000230",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001123",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001225",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000604",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000301",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000830",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000491",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000138",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001324",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001136",
+          "rank": 27,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-ED00",
+      "chamber": "house",
+      "code": "ED00",
+      "name": "Committee on Education and Workforce",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-W000798",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-W000795",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000450",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000467",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000576",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001196",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000372",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001108",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000086",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001136",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001211",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000595",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000619",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000177",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001230",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001322",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001102",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001233",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000484",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000185",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-C001069",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000808",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001278",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000472",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000370",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000623",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000188",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001208",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001081",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000173",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001215",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000401",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001131",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000602",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001231",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000606",
+          "rank": 16,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-IF00",
+      "chamber": "house",
+      "code": "IF00",
+      "name": "Committee on Energy and Commerce",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-G000558",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-L000566",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000568",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001257",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001067",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001103",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000609",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000628",
+          "rank": 8,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-house-C001120",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000302",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000814",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000372",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001306",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000469",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000048",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001086",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001215",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001039",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000019",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000307",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B000668",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001093",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000478",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000597",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000600",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000398",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000619",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000300",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000601",
+          "rank": 29,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000482",
+          "rank": 30,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000034",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-D000197",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001145",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001163",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001066",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000469",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001067",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000599",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000608",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000624",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000131",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000385",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001300",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001200",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001216",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000482",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000468",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000172",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000148",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001125",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001226",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001225",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000601",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001227",
+          "rank": 24,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-SO00",
+      "chamber": "house",
+      "code": "SO00",
+      "name": "Committee on Ethics",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-G000591",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-G000597",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001091",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001224",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000405",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000623",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-R000305",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-I000058",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000587",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001230",
+          "rank": 5,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-BA00",
+      "chamber": "house",
+      "code": "BA00",
+      "name": "Committee on Financial Services",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-H001072",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-L000491",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000250",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001058",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000812",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001282",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000816",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000294",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000583",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000626",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000612",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001213",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000480",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001188",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000190",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001204",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000397",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000032",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000597",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000471",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000474",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000599",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000594",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000175",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000193",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001136",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000168",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000634",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001099",
+          "rank": 29,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001236",
+          "rank": 30,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000187",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-V000081",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000344",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001137",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000562",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000553",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001061",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001047",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000454",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001281",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000130",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000583",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000581",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001117",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000617",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000481",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000486",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000587",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000788",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000620",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000110",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001326",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000607",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001328",
+          "rank": 24,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-FA00",
+      "chamber": "house",
+      "code": "FA00",
+      "name": "Committee on Foreign Affairs",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-M001199",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-S000522",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000795",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001157",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000605",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-I000056",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001309",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001282",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000304",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000397",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000168",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001058",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000626",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001307",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000398",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000599",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001216",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001224",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-Z000018",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000596",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001325",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001322",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001230",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000484",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001222",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000607",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001137",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-S000344",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000375",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001287",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001091",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000468",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000582",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000305",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001211",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001217",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000309",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000400",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001059",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000380",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000687",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000298",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000606",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000176",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000310",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001238",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001190",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000631",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000797",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000607",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001324",
+          "rank": 25,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-HM00",
+      "chamber": "house",
+      "code": "HM00",
+      "name": "Committee on Homeland Security",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-G000597",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-M001157",
+          "rank": 2,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-house-G000591",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000593",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000048",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000603",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001220",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001317",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001132",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000598",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000175",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001325",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000300",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001230",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000405",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000480",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000139",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000295",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000193",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-C001110",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000488",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001223",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000599",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000617",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000402",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001229",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000310",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000621",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000831",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001246",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001125",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000553",
+          "rank": 15,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-HA00",
+      "chamber": "house",
+      "code": "HA00",
+      "name": "Committee on House Administration",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-S001213",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-L000583",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000568",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001210",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B000740",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001126",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000597",
+          "rank": 7,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-house-M001211",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001206",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-S001185",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000474",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000310",
+          "rank": 4,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-II00",
+      "chamber": "house",
+      "code": "II00",
+      "name": "Committee on Natural Resources",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-W000821",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-W000804",
+          "rank": 2,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-house-M001177",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000565",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000806",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000469",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001212",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000165",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B000825",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B000668",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000399",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001095",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001129",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001096",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000369",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000798",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000235",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001228",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001240",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001137",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001323",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001100",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000403",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000634",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001068",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-N000191",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000273",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001218",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001094",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001223",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000592",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001241",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000635",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000621",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000381",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000301",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000605",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000620",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000606",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000624",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001200",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001285",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000590",
+          "rank": 20,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-GO00",
+      "chamber": "house",
+      "code": "GO00",
+      "name": "Committee on Oversight and Government Reform",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-C001108",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-J000289",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000463",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000565",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000450",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000576",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001115",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000609",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001077",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000250",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001302",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000194",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000246",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000032",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000605",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000480",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001309",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B000825",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000596",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000600",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001316",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001132",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000311",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001239",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000603",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001218",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000598",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-L000562",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000391",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000389",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000687",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001313",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001218",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000476",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001131",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001130",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000621",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001230",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000381",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001324",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001231",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001241",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000831",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001245",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000617",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000481",
+          "rank": 21,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-RU00",
+      "chamber": "house",
+      "code": "RU00",
+      "name": "Committee on Rules",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-F000450",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-F000470",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000190",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000614",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001093",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000600",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001189",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000568",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000311",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000312",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-S001205",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000191",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000273",
+          "rank": 4,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-SY00",
+      "chamber": "house",
+      "code": "SY00",
+      "name": "Committee on Science, Space, and Technology",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-B001291",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-W000814",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001307",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000806",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000019",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000459",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-I000056",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000478",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000472",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001218",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001129",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000480",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000603",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001224",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001101",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001325",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001100",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001099",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000403",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001323",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000139",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000607",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000397",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-B001278",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001215",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000305",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001226",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000477",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001223",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000380",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001230",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000620",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001238",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000602",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000830",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000483",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001232",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000622",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001245",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000454",
+          "rank": 18,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-SM00",
+      "chamber": "house",
+      "code": "SM00",
+      "name": "Committee on Small Business",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-W000816",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-S001212",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001204",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000134",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000071",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000379",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000475",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000829",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001327",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000311",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001228",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000622",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000485",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000081",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-M001220",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001221",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001229",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001123",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001234",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000606",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000491",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001231",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000176",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000604",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001246",
+          "rank": 12,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-PW00",
+      "chamber": "house",
+      "code": "PW00",
+      "name": "Committee on Transportation and Infrastructure",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-G000546",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-C001087",
+          "rank": 2,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-house-W000806",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001184",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000605",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001291",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000603",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001295",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000821",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001199",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001212",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001309",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000301",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000133",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000026",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000871",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000086",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001316",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001129",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000235",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000480",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000829",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001321",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001323",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001327",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001100",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001240",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000490",
+          "rank": 29,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000405",
+          "rank": 30,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000403",
+          "rank": 32,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000177",
+          "rank": 33,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000622",
+          "rank": 34,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000485",
+          "rank": 35,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000607",
+          "rank": 36,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000560",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-N000002",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000559",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000288",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001072",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000468",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001068",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001285",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000808",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000623",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001112",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001211",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000629",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000586",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000614",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001196",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001159",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000579",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001094",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000401",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001223",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001221",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000477",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000530",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000598",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000621",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001237",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000483",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000602",
+          "rank": 29,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000481",
+          "rank": 30,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000476",
+          "rank": 31,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-VR00",
+      "chamber": "house",
+      "code": "VR00",
+      "name": "Committee on Veterans' Affairs",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-B001295",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-B001301",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000194",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001215",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001210",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000135",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000603",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001133",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001224",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000399",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001098",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001321",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000472",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-B001285",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000614",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001220",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000617",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001315",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000402",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000635",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001136",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001234",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000604",
+          "rank": 11,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-WM00",
+      "chamber": "house",
+      "code": "WM00",
+      "name": "Committee on Ways and Means",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-S001195",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-B001260",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001172",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000376",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001183",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000585",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000375",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000298",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001199",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001082",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001205",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001210",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000392",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000466",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001214",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000478",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000470",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001213",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000134",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000446",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M000317",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001126",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-Y000067",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001222",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001314",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001224",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000015",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-D000399",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000460",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000557",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000096",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001156",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001185",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000617",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001080",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001160",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001296",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001292",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000296",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001190",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000613",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000585",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001066",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001201",
+          "rank": 19,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-BU00",
+      "chamber": "house",
+      "code": "BU00",
+      "name": "Committee on the Budget",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-A000375",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-N000190",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001177",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000576",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001199",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001103",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001118",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001301",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000614",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001188",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001213",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000298",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001317",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000019",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001126",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000246",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001116",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001093",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001240",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000603",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001236",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001296",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-D000399",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S000185",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000608",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000613",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000822",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-E000299",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000173",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001318",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000009",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000298",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001080",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000469",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001220",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-A000380",
+          "rank": 16,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-JU00",
+      "chamber": "house",
+      "code": "JU00",
+      "name": "Committee on the Judiciary",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-house-J000289",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-I000056",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001302",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001177",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000165",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001184",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000614",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000471",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001118",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000589",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-V000133",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000026",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001212",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001096",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000597",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001095",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000478",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000576",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000405",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001102",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-house-O000177",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001228",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000603",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001322",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000606",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-N000002",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000397",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001068",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000288",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000582",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000298",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001110",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001205",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000191",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001208",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-R000305",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001318",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000586",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000400",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001217",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000599",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000401",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001130",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000602",
+          "rank": 19,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-IG00",
+      "chamber": "house",
+      "code": "IG00",
+      "name": "Permanent Select Committee on Intelligence",
+      "type": "select",
+      "members": [
+        {
+          "officialId": "us-house-C001087",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-S001196",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000388",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000585",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000466",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001189",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001072",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001120",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-P000605",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000304",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-W000812",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001118",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001214",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000478",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-house-F000246",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001047",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-C001072",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001091",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000391",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001121",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001287",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000583",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000585",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001085",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-Q000023",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001068",
+          "rank": 12,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-ZS00",
+      "chamber": "house",
+      "code": "ZS00",
+      "name": "Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party",
+      "type": "select",
+      "members": [
+        {
+          "officialId": "us-house-M001194",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-W000804",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001282",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000189",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-L000585",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-D000628",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-J000301",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001091",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-G000593",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001257",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000397",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001224",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000193",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-house-K000389",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-house-K000391",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001066",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001072",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001196",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001215",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000486",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-house-B001313",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001211",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-house-T000487",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-house-S001201",
+          "rank": 11,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "house-QJ00",
+      "chamber": "house",
+      "code": "QJ00",
+      "name": "Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",
+      "type": "select",
+      "members": [
+        {
+          "officialId": "us-house-L000583",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-house-G000568",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001077",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-house-N000026",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-house-H001096",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-house-C001130",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-house-M001217",
+          "rank": 3,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "house-committees"
+      ]
+    },
+    {
+      "id": "senate-SSAF",
+      "chamber": "senate",
+      "code": "SSAF",
+      "name": "Committee on Agriculture, Nutrition, and Forestry",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-B001236",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-M000355",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001061",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-E000295",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000367",
+          "rank": 5,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-B001267",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001079",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001198",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001203",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000278",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000563",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-J000312",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001288",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000386",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000570",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000250",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000463",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000790",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000800",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000934",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000479",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001150",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001208",
+          "rank": 23,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSAF"
+      ]
+    },
+    {
+      "id": "senate-SSAP",
+      "chamber": "senate",
+      "code": "SSAP",
+      "name": "Committee on Appropriations",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-M001111",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-C001035",
+          "rank": 2,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-M000355",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001153",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000934",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000563",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000122",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001061",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001236",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001047",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000393",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001181",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001176",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001079",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001088",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000601",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001319",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001194",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001230",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001169",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000463",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000605",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001104",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-V000128",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000608",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001046",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000595",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000555",
+          "rank": 28,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-O000174",
+          "rank": 29,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSAP"
+      ]
+    },
+    {
+      "id": "senate-SSAS",
+      "chamber": "senate",
+      "code": "SSAS",
+      "name": "Committee on Armed Services",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-R000122",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-W000437",
+          "rank": 2,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-S001181",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000463",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000555",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001095",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001277",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001042",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000605",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-E000295",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000384",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000383",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000817",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001198",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000595",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001096",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000622",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000608",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001217",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000377",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001208",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000278",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001305",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001227",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001299",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001232",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001244",
+          "rank": 27,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSAS"
+      ]
+    },
+    {
+      "id": "senate-SSBK",
+      "chamber": "senate",
+      "code": "SSBK",
+      "name": "Committee on Banking, Housing, and Urban Affairs",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-S001184",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-W000817",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-R000122",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C000880",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000605",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000805",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000476",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-V000128",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000393",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001113",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001203",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000601",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000571",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000790",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001319",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000394",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000574",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000618",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001303",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001299",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-A000382",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001096",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001242",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001243",
+          "rank": 24,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSBK"
+      ]
+    },
+    {
+      "id": "senate-SSCM",
+      "chamber": "senate",
+      "code": "SSCM",
+      "name": "Committee on Commerce, Science, and Transportation",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-C001098",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-C000127",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-T000250",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000367",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000437",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001194",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000463",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000934",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000133",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001198",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000595",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001243",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-Y000064",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001230",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001305",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000622",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001227",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001114",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000608",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001242",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000570",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001232",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000273",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000479",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000394",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001047",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001303",
+          "rank": 27,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000571",
+          "rank": 28,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSCM"
+      ]
+    },
+    {
+      "id": "senate-SSEG",
+      "chamber": "senate",
+      "code": "SSEG",
+      "name": "Committee on Energy and Natural Resources",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-L000577",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-H001046",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-W000779",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001261",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000584",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C000127",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000618",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001095",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001042",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000383",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001243",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-J000312",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001113",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001075",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000273",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000145",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001079",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000574",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001153",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001061",
+          "rank": 20,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSEG"
+      ]
+    },
+    {
+      "id": "senate-SSEV",
+      "chamber": "senate",
+      "code": "SSEV",
+      "name": "Committee on Environment and Public Works",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-C001047",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-W000802",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-C001096",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S000033",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000571",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001176",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001114",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000133",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000377",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000145",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001198",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000618",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001150",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000437",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001303",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-A000382",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001236",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001104",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000608",
+          "rank": 19,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSEV"
+      ]
+    },
+    {
+      "id": "senate-SSFI",
+      "chamber": "senate",
+      "code": "SSFI",
+      "name": "Committee on Finance",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-C000880",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-W000779",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-G000386",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001056",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000250",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C000127",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001184",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001075",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001267",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000575",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000618",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-Y000064",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000805",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001261",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-J000293",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000802",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001076",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000476",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001243",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001113",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000817",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001198",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S000033",
+          "rank": 23,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001203",
+          "rank": 24,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000570",
+          "rank": 25,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000790",
+          "rank": 26,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000800",
+          "rank": 27,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSFI"
+      ]
+    },
+    {
+      "id": "senate-SSFR",
+      "chamber": "senate",
+      "code": "SSFR",
+      "name": "Committee on Foreign Relations",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-R000584",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-S001181",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-R000618",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001088",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001243",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000618",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001169",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000384",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000601",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001176",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001261",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000577",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001288",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000603",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001194",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001098",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-V000128",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001217",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000622",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000608",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001114",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001056",
+          "rank": 22,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSFR"
+      ]
+    },
+    {
+      "id": "senate-SSHR",
+      "chamber": "senate",
+      "code": "SSHR",
+      "name": "Committee on Health, Education, Labor, and Pensions",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-C001075",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-S000033",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-P000603",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001111",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001035",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001230",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001153",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001169",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000384",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001198",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001184",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001076",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001089",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000278",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001299",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001104",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000273",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000133",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000394",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001244",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-A000383",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001303",
+          "rank": 22,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-A000382",
+          "rank": 23,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSHR"
+      ]
+    },
+    {
+      "id": "senate-SSGA",
+      "chamber": "senate",
+      "code": "SSGA",
+      "name": "Committee on Homeland Security and Governmental Affairs",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-P000603",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-P000595",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-H001076",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-J000293",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000575",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001277",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001217",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001089",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001242",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000479",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000394",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-E000295",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000574",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001244",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001208",
+          "rank": 15,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSGA"
+      ]
+    },
+    {
+      "id": "senate-SLIA",
+      "chamber": "senate",
+      "code": "SLIA",
+      "name": "Committee on Indian Affairs",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-S001194",
+          "rank": 1,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-senate-M001153",
+          "rank": 2,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-H001061",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C000127",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000618",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001113",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001203",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000570",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000605",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000934",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-A000383",
+          "rank": 11,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SLIA"
+      ]
+    },
+    {
+      "id": "senate-SSRA",
+      "chamber": "senate",
+      "code": "SSRA",
+      "name": "Committee on Rules and Administration",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-P000145",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-M000355",
+          "rank": 2,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-C001098",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S000148",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001047",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000805",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000437",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000367",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000463",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001176",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-O000174",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001079",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001267",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000601",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001319",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000800",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001236",
+          "rank": 17,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSRA"
+      ]
+    },
+    {
+      "id": "senate-SSSB",
+      "chamber": "senate",
+      "code": "SSSB",
+      "name": "Committee on Small Business and Entrepreneurship",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-E000295",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-M000133",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-R000584",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C000127",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000603",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001181",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001184",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001288",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001088",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-Y000064",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001089",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001042",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001305",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000608",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001114",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-J000312",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H000273",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001150",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001104",
+          "rank": 19,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSSB"
+      ]
+    },
+    {
+      "id": "senate-SSVA",
+      "chamber": "senate",
+      "code": "SSVA",
+      "name": "Committee on Veterans' Affairs",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-M000934",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-B001277",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-M001111",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001236",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S000033",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001042",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001076",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001075",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000383",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-D000622",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000476",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000574",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001208",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001198",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001243",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001096",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000278",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001299",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001232",
+          "rank": 19,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSVA"
+      ]
+    },
+    {
+      "id": "senate-SSBU",
+      "chamber": "senate",
+      "code": "SSBU",
+      "name": "Committee on the Budget",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-J000293",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-M001176",
+          "rank": 2,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-M001111",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000386",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C000880",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000779",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S000033",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001198",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001056",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000802",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000577",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000805",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000384",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000393",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000618",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-V000128",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000570",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001242",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001217",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000145",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000608",
+          "rank": 21,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSBU"
+      ]
+    },
+    {
+      "id": "senate-SSJU",
+      "chamber": "senate",
+      "code": "SSJU",
+      "name": "Committee on the Judiciary",
+      "type": "standing",
+      "members": [
+        {
+          "officialId": "us-senate-D000563",
+          "rank": 1,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-G000386",
+          "rank": 2,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-C001056",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000577",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000802",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001098",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000367",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001088",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001089",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000476",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001277",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001042",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000393",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001288",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001243",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-P000145",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001227",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000800",
+          "rank": 18,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001319",
+          "rank": 19,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001150",
+          "rank": 20,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001244",
+          "rank": 21,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000608",
+          "rank": 22,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SSJU"
+      ]
+    },
+    {
+      "id": "senate-SLET",
+      "chamber": "senate",
+      "code": "SLET",
+      "name": "Select Committee on Ethics",
+      "type": "select",
+      "members": [
+        {
+          "officialId": "us-senate-L000575",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-C001088",
+          "rank": 2,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-senate-R000584",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001194",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-F000463",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-S001181",
+          "rank": 6,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SLET"
+      ]
+    },
+    {
+      "id": "senate-SLIN",
+      "chamber": "senate",
+      "code": "SLIN",
+      "name": "Select Committee on Intelligence",
+      "type": "select",
+      "members": [
+        {
+          "officialId": "us-senate-C001095",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-W000805",
+          "rank": 2,
+          "role": "Vice Chair"
+        },
+        {
+          "officialId": "us-senate-R000584",
+          "rank": 3,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000779",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001035",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001046",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000383",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-C001056",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M000934",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001267",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-L000575",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000555",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-O000174",
+          "rank": 13,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000605",
+          "rank": 14,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000377",
+          "rank": 15,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-Y000064",
+          "rank": 16,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-B001305",
+          "rank": 17,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-R000122",
+          "rank": 18,
+          "role": "Ex Officio"
+        },
+        {
+          "officialId": "us-senate-T000250",
+          "rank": 19,
+          "role": "Ex Officio"
+        },
+        {
+          "officialId": "us-senate-S000148",
+          "rank": 20,
+          "role": "Ex Officio"
+        },
+        {
+          "officialId": "us-senate-W000437",
+          "rank": 21,
+          "role": "Ex Officio"
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SLIN"
+      ]
+    },
+    {
+      "id": "senate-SPAG",
+      "chamber": "senate",
+      "code": "SPAG",
+      "name": "Special Committee on Aging",
+      "type": "special",
+      "members": [
+        {
+          "officialId": "us-senate-S001217",
+          "rank": 1,
+          "role": "Chair"
+        },
+        {
+          "officialId": "us-senate-M001243",
+          "rank": 2,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-G000555",
+          "rank": 3,
+          "role": "Ranking Member"
+        },
+        {
+          "officialId": "us-senate-J000312",
+          "rank": 4,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000817",
+          "rank": 5,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-T000278",
+          "rank": 6,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-J000293",
+          "rank": 7,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-M001244",
+          "rank": 8,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-H001104",
+          "rank": 9,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000377",
+          "rank": 10,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-W000790",
+          "rank": 11,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-K000394",
+          "rank": 12,
+          "role": null
+        },
+        {
+          "officialId": "us-senate-A000382",
+          "rank": 13,
+          "role": null
+        }
+      ],
+      "sourceIds": [
+        "senate-committee-SPAG"
+      ]
+    }
+  ]
+}
