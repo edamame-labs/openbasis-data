@@ -284,6 +284,8 @@ def source_allowed(source):
     import geography_exceptions
     if url in {url for _,url in geography_exceptions.SOURCES.values()}: return True
     if url in {url for _,url in SOURCES.values()}: return True
+    import committees
+    if url == committees.HOUSE[1] or committees.allowed(url): return True
     for module in region_modules():
         if url in {url for _,url in module.SOURCES.values()}: return True
         if urlparse(url).hostname in getattr(module, 'SOURCE_HOSTS', set()): return True
@@ -375,6 +377,9 @@ def validate(folder, fresh=False):
     if (folder/'geography-report.json').exists():
         from verify_geography import verify as verify_geography
         verify_geography(folder,rows,sources)
+    if (folder/'committees.json').exists():
+        import committees
+        committees.verify(folder,rows,source_index)
     manifest = json.loads((folder/'manifest.json').read_text())
     actual = {str(p.relative_to(folder)):digest(p.read_bytes()) for p in folder.rglob('*') if p.is_file() and p.name != 'manifest.json'}
     assert manifest == actual, 'Published files differ from validated manifest'
@@ -441,6 +446,10 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
             geo['source'] = source
             (stage/'geography'/(key+'.geojson')).write_text(json.dumps(geo,ensure_ascii=False,separators=(',',':'))+'\n')
             sources.append(source)
+        import committees
+        committee_data,committee_sources=committees.collect(acquire,offline,rows)
+        (stage/'committees.json').write_text(json.dumps(committee_data,ensure_ascii=False,indent=2)+'\n')
+        sources.extend(committee_sources)
         analytical_report,analytical_sources=write_geography(stage,rows,district_sources.iter_collect(acquire,offline),exception_data)
         sources.extend(analytical_sources)
         now = dt.datetime.now(dt.timezone.utc).isoformat()
