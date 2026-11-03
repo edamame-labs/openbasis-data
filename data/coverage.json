@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-03T00:26:40.952125+00:00",
+  "generatedAt": "2026-11-03T06:13:51.251195+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
     "state": 7321,
@@ -130,6 +130,142 @@
     {
       "source": "ak-lower",
       "records": 40
+    },
+    {
+      "source": "ar-house-members",
+      "records": 99
+    },
+    {
+      "source": "ar-member-j-boyd",
+      "records": 1
+    },
+    {
+      "source": "ar-member-j-bryant",
+      "records": 1
+    },
+    {
+      "source": "ar-member-caldwell",
+      "records": 1
+    },
+    {
+      "source": "ar-member-a-clark",
+      "records": 1
+    },
+    {
+      "source": "ar-member-crowell",
+      "records": 1
+    },
+    {
+      "source": "ar-member-b-davis",
+      "records": 1
+    },
+    {
+      "source": "ar-member-dees",
+      "records": 1
+    },
+    {
+      "source": "ar-member-j-dotson",
+      "records": 1
+    },
+    {
+      "source": "ar-member-j-english",
+      "records": 1
+    },
+    {
+      "source": "ar-member-flippo",
+      "records": 1
+    },
+    {
+      "source": "ar-member-s-flowers",
+      "records": 1
+    },
+    {
+      "source": "ar-member-k-hammer",
+      "records": 1
+    },
+    {
+      "source": "ar-member-hester",
+      "records": 1
+    },
+    {
+      "source": "ar-member-hickey",
+      "records": 1
+    },
+    {
+      "source": "ar-member-hill",
+      "records": 1
+    },
+    {
+      "source": "ar-member-irvin",
+      "records": 1
+    },
+    {
+      "source": "ar-member-b-johnson",
+      "records": 1
+    },
+    {
+      "source": "ar-member-m-johnson",
+      "records": 1
+    },
+    {
+      "source": "ar-member-b-king",
+      "records": 1
+    },
+    {
+      "source": "ar-member-g-leding",
+      "records": 1
+    },
+    {
+      "source": "ar-member-f-love",
+      "records": 1
+    },
+    {
+      "source": "ar-member-m-mckee",
+      "records": 1
+    },
+    {
+      "source": "ar-member-r-murdock",
+      "records": 1
+    },
+    {
+      "source": "ar-member-j-payton",
+      "records": 1
+    },
+    {
+      "source": "ar-member-c-penzo",
+      "records": 1
+    },
+    {
+      "source": "ar-member-j-petty",
+      "records": 1
+    },
+    {
+      "source": "ar-member-rice",
+      "records": 1
+    },
+    {
+      "source": "ar-member-j-scott",
+      "records": 1
+    },
+    {
+      "source": "ar-member-simon",
+      "records": 1
+    },
+    {
+      "source": "ar-member-stone",
+      "records": 1
+    },
+    {
+      "source": "ar-member-d-sullivan",
+      "records": 1
+    },
+    {
+      "source": "ar-member-c-tucker",
+      "records": 1
+    },
+    {
+      "source": "ar-member-d-wallace",
+      "records": 1
     },
     {
       "source": "ks-lower-rep_alcala_john_1",
@@ -848,11 +984,667 @@
       "records": 51
     },
     {
+      "source": "ms-lower-member-white",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-barton",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-aguirre",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-clark",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hall",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-lott",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-remak",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-anderson-110th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-cockerham",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-haney",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mangold",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-roberson",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-anderson-122nd",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-crawford",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-harness",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mansell",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-rosebud",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-anthony",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-creekmore-iv",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-harris",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-massengill",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-rushing",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-arnold",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-crudup",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hawkins",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mattox",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-sanders",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-bailey-23rd",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-currie",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hines",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mccarty",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-sanford",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-bailey-49th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-denton",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hobgood-wilkes",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mccray",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-scoggin",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-banks",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-deweese",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-holloway-27th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mcgee",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-scott",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-barnett",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-elliott",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mcknight",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-shanks",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-bell-21st",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-estrada",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hood",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mclean",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-smith",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-bell-65th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-eubanks",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-horan",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mcmillan",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-steverson",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-bennett",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-eure",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-horne",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mickens",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-summers",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-blackmon",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-evans",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hulum",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-mims",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-taylor",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-blackwell",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-faulkner",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hurst",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-morgan",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-thompson",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-bounds",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-felsher",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-jackson-11th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-nelson",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-tubb",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-boyd-19th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-fondren",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-jackson-45th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-newman",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-tullos",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-boyd-37th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-ford-54th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-james-jones",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-oliver",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-turner",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-ford-73rd",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-johnson",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-osborne",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-varner",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-burch",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-foster",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-karriem",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-owen",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-waldo",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-burnett",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-gibbs-36th",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-keen",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-gibbs-72nd",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-kinkade",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-pigott",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-watson",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-byrd",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-grady",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-ladner",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-porter",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-yancey",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-calvert",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-guice",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-lamar",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-powell",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-yates",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-carpenter",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-hale",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-read",
+      "records": 1
+    },
+    {
+      "source": "ms-lower-member-zuber",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-debar",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-mccaughn",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-sparks",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-barrett",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-delano",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-mclendon",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-suber",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-berry",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-england",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-mcmahan",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-tate",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-blackmon",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-fillingane",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-michel",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-taylor",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-blackwell",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-frazier",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-norwood",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-thomas",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-blount",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-harkins",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-thompson",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-boyd",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-hickman",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-parks",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-turner-ford",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-brumfield",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-hill",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-whaley",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-bryan",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-hopson",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-rhodes",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-wiggins",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-butler",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-jackson",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-williams",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-carter",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-johnson",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-seymour",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-younger",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-chassaniol",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-kirby",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-simmons-12th",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-chism",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-ladner",
+      "records": 1
+    },
+    {
+      "source": "ms-upper-member-simmons-13th",
+      "records": 1
+    },
+    {
       "source": "mo-lower",
       "records": 155
     },
     {
+      "source": "mo-lower-grid",
+      "records": 155
+    },
+    {
       "source": "mo-upper",
+      "records": 33
+    },
+    {
+      "source": "mo-upper-directory",
       "records": 33
     },
     {
@@ -1042,6 +1834,126 @@
     {
       "source": "wy-lower",
       "records": 62
+    },
+    {
+      "source": "or-legislators",
+      "records": 87
+    },
+    {
+      "source": "wa-sponsors",
+      "records": 147
+    },
+    {
+      "source": "tx-upper-member-d1",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d2",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d3",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d4",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d5",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d6",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d7",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d8",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d9",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d10",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d11",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d12",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d14",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d15",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d16",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d17",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d19",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d20",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d21",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d23",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d24",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d25",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d26",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d27",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d28",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d29",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d30",
+      "records": 1
+    },
+    {
+      "source": "tx-upper-member-d31",
+      "records": 1
     },
     {
       "source": "ok-upper",
@@ -1998,7 +2910,8 @@
   "limitations": [
     "Official publication is evidence of what the publisher reports; retrieval does not establish an independent factual check.",
     "Roster omission is not classified as a vacancy.",
-    "No city/town records, secondary-source records, contact enrichment, population estimates or population-weighted overlaps.",
+    "Contact details (email, phone, photo) appear only where an official roster publishes them; mailboxes or numbers shared across members are omitted.",
+    "No city/town records, secondary-source records, population estimates or population-weighted overlaps.",
     "County and county-equivalent geography does not establish county governing structures or officeholder districts."
   ]
 }

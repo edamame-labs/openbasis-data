@@ -413,7 +413,9 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
                     sources.append(source)
         for row in rows:
             row['name']=person_name(row['name'])
-            if row.get('party'): row['party']=party_name(row['party'])
+            if row.get('party'):
+                row['party']=party_name(row['party'])
+                if 'party' in row.get('fieldEvidence',{}): row['fieldEvidence']['party']['value']=row['party']
         drop_shared_contacts(rows)
         exception_data,exception_sources=geography_exceptions.collect(acquire,offline)
         rows=geography_exceptions.apply_roster(rows,exception_data)

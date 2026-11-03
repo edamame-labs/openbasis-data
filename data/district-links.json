@@ -20049,6 +20049,7 @@
       "layer": "sldl",
       "district": "71",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05071",
@@ -20071,6 +20072,7 @@
       "layer": "sldl",
       "district": "77",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05077",
@@ -20093,6 +20095,7 @@
       "layer": "sldl",
       "district": "98",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05098",
@@ -20115,6 +20118,7 @@
       "layer": "sldl",
       "district": "96",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05096",
@@ -20137,6 +20141,7 @@
       "layer": "sldl",
       "district": "65",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05065",
@@ -20159,6 +20164,7 @@
       "layer": "sldl",
       "district": "63",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05063",
@@ -20181,6 +20187,7 @@
       "layer": "sldl",
       "district": "95",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05095",
@@ -20203,6 +20210,7 @@
       "layer": "sldl",
       "district": "43",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05043",
@@ -20225,6 +20233,7 @@
       "layer": "sldl",
       "district": "54",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05054",
@@ -20247,6 +20256,7 @@
       "layer": "sldu",
       "district": "27",
       "sourceIds": [
+        "ar-member-j-boyd",
         "ar-roster"
       ],
       "districtKey": "sldu:05027",
@@ -20269,6 +20279,7 @@
       "layer": "sldl",
       "district": "6",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05006",
@@ -20291,6 +20302,7 @@
       "layer": "sldl",
       "district": "78",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05078",
@@ -20313,6 +20325,7 @@
       "layer": "sldl",
       "district": "41",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05041",
@@ -20335,6 +20348,7 @@
       "layer": "sldl",
       "district": "67",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05067",
@@ -20357,6 +20371,7 @@
       "layer": "sldl",
       "district": "55",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05055",
@@ -20379,6 +20394,7 @@
       "layer": "sldu",
       "district": "32",
       "sourceIds": [
+        "ar-member-j-bryant",
         "ar-roster"
       ],
       "districtKey": "sldu:05032",
@@ -20401,6 +20417,7 @@
       "layer": "sldl",
       "district": "14",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05014",
@@ -20423,6 +20440,7 @@
       "layer": "sldl",
       "district": "11",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05011",
@@ -20445,6 +20463,7 @@
       "layer": "sldu",
       "district": "10",
       "sourceIds": [
+        "ar-member-caldwell",
         "ar-roster"
       ],
       "districtKey": "sldu:05010",
@@ -20467,6 +20486,7 @@
       "layer": "sldl",
       "district": "34",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05034",
@@ -20489,6 +20509,7 @@
       "layer": "sldl",
       "district": "15",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05015",
@@ -20511,6 +20532,7 @@
       "layer": "sldl",
       "district": "30",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05030",
@@ -20533,6 +20555,7 @@
       "layer": "sldl",
       "district": "83",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05083",
@@ -20555,6 +20578,7 @@
       "layer": "sldu",
       "district": "7",
       "sourceIds": [
+        "ar-member-a-clark",
         "ar-roster"
       ],
       "districtKey": "sldu:05007",
@@ -20577,6 +20601,7 @@
       "layer": "sldl",
       "district": "21",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05021",
@@ -20599,6 +20624,7 @@
       "layer": "sldl",
       "district": "73",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05073",
@@ -20621,6 +20647,7 @@
       "layer": "sldl",
       "district": "57",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05057",
@@ -20643,6 +20670,7 @@
       "layer": "sldl",
       "district": "91",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05091",
@@ -20665,6 +20693,7 @@
       "layer": "sldl",
       "district": "51",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05051",
@@ -20687,6 +20716,7 @@
       "layer": "sldu",
       "district": "3",
       "sourceIds": [
+        "ar-member-crowell",
         "ar-roster"
       ],
       "districtKey": "sldu:05003",
@@ -20709,6 +20739,7 @@
       "layer": "sldl",
       "district": "100",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05100",
@@ -20731,6 +20762,7 @@
       "layer": "sldu",
       "district": "25",
       "sourceIds": [
+        "ar-member-b-davis",
         "ar-roster"
       ],
       "districtKey": "sldu:05025",
@@ -20753,6 +20785,7 @@
       "layer": "sldu",
       "district": "35",
       "sourceIds": [
+        "ar-member-dees",
         "ar-roster"
       ],
       "districtKey": "sldu:05035",
@@ -20775,6 +20808,7 @@
       "layer": "sldu",
       "district": "34",
       "sourceIds": [
+        "ar-member-j-dotson",
         "ar-roster"
       ],
       "districtKey": "sldu:05034",
@@ -20797,6 +20831,7 @@
       "layer": "sldl",
       "district": "53",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05053",
@@ -20819,6 +20854,7 @@
       "layer": "sldl",
       "district": "12",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05012",
@@ -20841,6 +20877,7 @@
       "layer": "sldl",
       "district": "26",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05026",
@@ -20863,6 +20900,7 @@
       "layer": "sldl",
       "district": "58",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05058",
@@ -20885,6 +20923,7 @@
       "layer": "sldu",
       "district": "13",
       "sourceIds": [
+        "ar-member-j-english",
         "ar-roster"
       ],
       "districtKey": "sldu:05013",
@@ -20907,6 +20946,7 @@
       "layer": "sldl",
       "district": "80",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05080",
@@ -20929,6 +20969,7 @@
       "layer": "sldl",
       "district": "46",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05046",
@@ -20951,6 +20992,7 @@
       "layer": "sldl",
       "district": "68",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05068",
@@ -20973,6 +21015,7 @@
       "layer": "sldl",
       "district": "64",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05064",
@@ -20995,6 +21038,7 @@
       "layer": "sldu",
       "district": "23",
       "sourceIds": [
+        "ar-member-flippo",
         "ar-roster"
       ],
       "districtKey": "sldu:05023",
@@ -21017,6 +21061,7 @@
       "layer": "sldu",
       "district": "8",
       "sourceIds": [
+        "ar-member-s-flowers",
         "ar-roster"
       ],
       "districtKey": "sldu:05008",
@@ -21039,6 +21084,7 @@
       "layer": "sldl",
       "district": "82",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05082",
@@ -21061,6 +21107,7 @@
       "layer": "sldl",
       "district": "20",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05020",
@@ -21083,6 +21130,7 @@
       "layer": "sldl",
       "district": "31",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05031",
@@ -21105,6 +21153,7 @@
       "layer": "sldl",
       "district": "89",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05089",
@@ -21127,6 +21176,7 @@
       "layer": "sldl",
       "district": "9",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05009",
@@ -21149,6 +21199,7 @@
       "layer": "sldl",
       "district": "50",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05050",
@@ -21171,6 +21222,7 @@
       "layer": "sldl",
       "district": "24",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05024",
@@ -21193,6 +21245,7 @@
       "layer": "sldu",
       "district": "16",
       "sourceIds": [
+        "ar-member-k-hammer",
         "ar-roster"
       ],
       "districtKey": "sldu:05016",
@@ -21215,6 +21268,7 @@
       "layer": "sldl",
       "district": "81",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05081",
@@ -21237,6 +21291,7 @@
       "layer": "sldl",
       "district": "88",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05088",
@@ -21259,6 +21314,7 @@
       "layer": "sldu",
       "district": "33",
       "sourceIds": [
+        "ar-member-hester",
         "ar-roster"
       ],
       "districtKey": "sldu:05033",
@@ -21281,6 +21337,7 @@
       "layer": "sldu",
       "district": "4",
       "sourceIds": [
+        "ar-member-hickey",
         "ar-roster"
       ],
       "districtKey": "sldu:05004",
@@ -21303,6 +21360,7 @@
       "layer": "sldu",
       "district": "11",
       "sourceIds": [
+        "ar-member-hill",
         "ar-roster"
       ],
       "districtKey": "sldu:05011",
@@ -21325,6 +21383,7 @@
       "layer": "sldl",
       "district": "93",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05093",
@@ -21347,6 +21406,7 @@
       "layer": "sldl",
       "district": "70",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05070",
@@ -21369,6 +21429,7 @@
       "layer": "sldl",
       "district": "37",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05037",
@@ -21391,6 +21452,7 @@
       "layer": "sldl",
       "district": "75",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05075",
@@ -21413,6 +21475,7 @@
       "layer": "sldu",
       "district": "24",
       "sourceIds": [
+        "ar-member-irvin",
         "ar-roster"
       ],
       "districtKey": "sldu:05024",
@@ -21435,6 +21498,7 @@
       "layer": "sldl",
       "district": "99",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05099",
@@ -21457,6 +21521,7 @@
       "layer": "sldu",
       "district": "21",
       "sourceIds": [
+        "ar-member-b-johnson",
         "ar-roster"
       ],
       "districtKey": "sldu:05021",
@@ -21479,6 +21544,7 @@
       "layer": "sldl",
       "district": "47",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05047",
@@ -21501,6 +21567,7 @@
       "layer": "sldu",
       "district": "17",
       "sourceIds": [
+        "ar-member-m-johnson",
         "ar-roster"
       ],
       "districtKey": "sldu:05017",
@@ -21523,6 +21590,7 @@
       "layer": "sldu",
       "district": "28",
       "sourceIds": [
+        "ar-member-b-king",
         "ar-roster"
       ],
       "districtKey": "sldu:05028",
@@ -21545,6 +21613,7 @@
       "layer": "sldl",
       "district": "32",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05032",
@@ -21567,6 +21636,7 @@
       "layer": "sldu",
       "district": "30",
       "sourceIds": [
+        "ar-member-g-leding",
         "ar-roster"
       ],
       "districtKey": "sldu:05030",
@@ -21589,6 +21659,7 @@
       "layer": "sldl",
       "district": "39",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05039",
@@ -21611,6 +21682,7 @@
       "layer": "sldu",
       "district": "15",
       "sourceIds": [
+        "ar-member-f-love",
         "ar-roster"
       ],
       "districtKey": "sldu:05015",
@@ -21633,6 +21705,7 @@
       "layer": "sldl",
       "district": "18",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05018",
@@ -21655,6 +21728,7 @@
       "layer": "sldl",
       "district": "60",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05060",
@@ -21677,6 +21751,7 @@
       "layer": "sldl",
       "district": "86",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05086",
@@ -21699,6 +21774,7 @@
       "layer": "sldl",
       "district": "56",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05056",
@@ -21721,6 +21797,7 @@
       "layer": "sldl",
       "district": "92",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05092",
@@ -21743,6 +21820,7 @@
       "layer": "sldl",
       "district": "10",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05010",
@@ -21765,6 +21843,7 @@
       "layer": "sldl",
       "district": "29",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05029",
@@ -21787,6 +21866,7 @@
       "layer": "sldl",
       "district": "74",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05074",
@@ -21809,6 +21889,7 @@
       "layer": "sldl",
       "district": "62",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05062",
@@ -21831,6 +21912,7 @@
       "layer": "sldl",
       "district": "85",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05085",
@@ -21853,6 +21935,7 @@
       "layer": "sldl",
       "district": "35",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05035",
@@ -21875,6 +21958,7 @@
       "layer": "sldu",
       "district": "6",
       "sourceIds": [
+        "ar-member-m-mckee",
         "ar-roster"
       ],
       "districtKey": "sldu:05006",
@@ -21897,6 +21981,7 @@
       "layer": "sldl",
       "district": "7",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05007",
@@ -21919,6 +22004,7 @@
       "layer": "sldl",
       "district": "5",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05005",
@@ -21941,6 +22027,7 @@
       "layer": "sldl",
       "district": "42",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05042",
@@ -21963,6 +22050,7 @@
       "layer": "sldl",
       "district": "33",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05033",
@@ -21985,6 +22073,7 @@
       "layer": "sldl",
       "district": "61",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05061",
@@ -22007,6 +22096,7 @@
       "layer": "sldl",
       "district": "23",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05023",
@@ -22029,6 +22119,7 @@
       "layer": "sldu",
       "district": "9",
       "sourceIds": [
+        "ar-member-r-murdock",
         "ar-roster"
       ],
       "districtKey": "sldu:05009",
@@ -22051,6 +22142,7 @@
       "layer": "sldl",
       "district": "4",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05004",
@@ -22073,6 +22165,7 @@
       "layer": "sldl",
       "district": "3",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05003",
@@ -22095,6 +22188,7 @@
       "layer": "sldu",
       "district": "22",
       "sourceIds": [
+        "ar-member-j-payton",
         "ar-roster"
       ],
       "districtKey": "sldu:05022",
@@ -22117,6 +22211,7 @@
       "layer": "sldl",
       "district": "40",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05040",
@@ -22139,6 +22234,7 @@
       "layer": "sldu",
       "district": "31",
       "sourceIds": [
+        "ar-member-c-penzo",
         "ar-roster"
       ],
       "districtKey": "sldu:05031",
@@ -22161,6 +22257,7 @@
       "layer": "sldl",
       "district": "66",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05066",
@@ -22183,6 +22280,7 @@
       "layer": "sldu",
       "district": "29",
       "sourceIds": [
+        "ar-member-j-petty",
         "ar-roster"
       ],
       "districtKey": "sldu:05029",
@@ -22205,6 +22303,7 @@
       "layer": "sldl",
       "district": "45",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05045",
@@ -22227,6 +22326,7 @@
       "layer": "sldl",
       "district": "25",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05025",
@@ -22249,6 +22349,7 @@
       "layer": "sldl",
       "district": "69",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05069",
@@ -22271,6 +22372,7 @@
       "layer": "sldu",
       "district": "5",
       "sourceIds": [
+        "ar-member-rice",
         "ar-roster"
       ],
       "districtKey": "sldu:05005",
@@ -22293,6 +22395,7 @@
       "layer": "sldl",
       "district": "49",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05049",
@@ -22315,6 +22418,7 @@
       "layer": "sldl",
       "district": "13",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05013",
@@ -22337,6 +22441,7 @@
       "layer": "sldl",
       "district": "52",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05052",
@@ -22359,6 +22464,7 @@
       "layer": "sldl",
       "district": "48",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05048",
@@ -22381,6 +22487,7 @@
       "layer": "sldl",
       "district": "36",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05036",
@@ -22403,6 +22510,7 @@
       "layer": "sldl",
       "district": "28",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05028",
@@ -22425,6 +22533,7 @@
       "layer": "sldu",
       "district": "12",
       "sourceIds": [
+        "ar-member-j-scott",
         "ar-roster"
       ],
       "districtKey": "sldu:05012",
@@ -22447,6 +22556,7 @@
       "layer": "sldl",
       "district": "79",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05079",
@@ -22469,6 +22579,7 @@
       "layer": "sldl",
       "district": "97",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05097",
@@ -22491,6 +22602,7 @@
       "layer": "sldu",
       "district": "26",
       "sourceIds": [
+        "ar-member-simon",
         "ar-roster"
       ],
       "districtKey": "sldu:05026",
@@ -22513,6 +22625,7 @@
       "layer": "sldl",
       "district": "76",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05076",
@@ -22535,6 +22648,7 @@
       "layer": "sldl",
       "district": "72",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05072",
@@ -22557,6 +22671,7 @@
       "layer": "sldl",
       "district": "2",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05002",
@@ -22579,6 +22694,7 @@
       "layer": "sldu",
       "district": "2",
       "sourceIds": [
+        "ar-member-stone",
         "ar-roster"
       ],
       "districtKey": "sldu:05002",
@@ -22601,6 +22717,7 @@
       "layer": "sldu",
       "district": "20",
       "sourceIds": [
+        "ar-member-d-sullivan",
         "ar-roster"
       ],
       "districtKey": "sldu:05020",
@@ -22623,6 +22740,7 @@
       "layer": "sldl",
       "district": "44",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05044",
@@ -22645,6 +22763,7 @@
       "layer": "sldl",
       "district": "17",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05017",
@@ -22667,6 +22786,7 @@
       "layer": "sldl",
       "district": "38",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05038",
@@ -22689,6 +22809,7 @@
       "layer": "sldu",
       "district": "14",
       "sourceIds": [
+        "ar-member-c-tucker",
         "ar-roster"
       ],
       "districtKey": "sldu:05014",
@@ -22711,6 +22832,7 @@
       "layer": "sldl",
       "district": "16",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05016",
@@ -22733,6 +22855,7 @@
       "layer": "sldl",
       "district": "19",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05019",
@@ -22755,6 +22878,7 @@
       "layer": "sldl",
       "district": "87",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05087",
@@ -22777,6 +22901,7 @@
       "layer": "sldl",
       "district": "27",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05027",
@@ -22799,6 +22924,7 @@
       "layer": "sldu",
       "district": "19",
       "sourceIds": [
+        "ar-member-d-wallace",
         "ar-roster"
       ],
       "districtKey": "sldu:05019",
@@ -22821,6 +22947,7 @@
       "layer": "sldl",
       "district": "94",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05094",
@@ -22843,6 +22970,7 @@
       "layer": "sldl",
       "district": "84",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05084",
@@ -22865,6 +22993,7 @@
       "layer": "sldl",
       "district": "22",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05022",
@@ -22887,6 +23016,7 @@
       "layer": "sldl",
       "district": "90",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05090",
@@ -22909,6 +23039,7 @@
       "layer": "sldl",
       "district": "1",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05001",
@@ -22931,6 +23062,7 @@
       "layer": "sldl",
       "district": "59",
       "sourceIds": [
+        "ar-house-members",
         "ar-roster"
       ],
       "districtKey": "sldl:05059",
@@ -88051,7 +88183,8 @@
       "layer": "sldl",
       "district": "48",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-white"
       ],
       "districtKey": "sldl:28048",
       "GEOID": "28048",
@@ -88073,7 +88206,8 @@
       "layer": "sldl",
       "district": "109",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-barton"
       ],
       "districtKey": "sldl:28109",
       "GEOID": "28109",
@@ -88095,7 +88229,8 @@
       "layer": "sldl",
       "district": "17",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-aguirre"
       ],
       "districtKey": "sldl:28017",
       "GEOID": "28017",
@@ -88117,7 +88252,8 @@
       "layer": "sldl",
       "district": "110",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-anderson-110th"
       ],
       "districtKey": "sldl:28110",
       "GEOID": "28110",
@@ -88139,7 +88275,8 @@
       "layer": "sldl",
       "district": "122",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-anderson-122nd"
       ],
       "districtKey": "sldl:28122",
       "GEOID": "28122",
@@ -88161,7 +88298,8 @@
       "layer": "sldl",
       "district": "31",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-anthony"
       ],
       "districtKey": "sldl:28031",
       "GEOID": "28031",
@@ -88183,7 +88321,8 @@
       "layer": "sldl",
       "district": "3",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-arnold"
       ],
       "districtKey": "sldl:28003",
       "GEOID": "28003",
@@ -88205,7 +88344,8 @@
       "layer": "sldl",
       "district": "23",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-bailey-23rd"
       ],
       "districtKey": "sldl:28023",
       "GEOID": "28023",
@@ -88227,7 +88367,8 @@
       "layer": "sldl",
       "district": "49",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-bailey-49th"
       ],
       "districtKey": "sldl:28049",
       "GEOID": "28049",
@@ -88249,7 +88390,8 @@
       "layer": "sldl",
       "district": "67",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-banks"
       ],
       "districtKey": "sldl:28067",
       "GEOID": "28067",
@@ -88271,7 +88413,8 @@
       "layer": "sldl",
       "district": "86",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-barnett"
       ],
       "districtKey": "sldl:28086",
       "GEOID": "28086",
@@ -88293,7 +88436,8 @@
       "layer": "sldl",
       "district": "21",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-bell-21st"
       ],
       "districtKey": "sldl:28021",
       "GEOID": "28021",
@@ -88315,7 +88459,8 @@
       "layer": "sldl",
       "district": "65",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-bell-65th"
       ],
       "districtKey": "sldl:28065",
       "GEOID": "28065",
@@ -88337,7 +88482,8 @@
       "layer": "sldl",
       "district": "120",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-bennett"
       ],
       "districtKey": "sldl:28120",
       "GEOID": "28120",
@@ -88359,7 +88505,8 @@
       "layer": "sldl",
       "district": "57",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-blackmon"
       ],
       "districtKey": "sldl:28057",
       "GEOID": "28057",
@@ -88381,7 +88528,8 @@
       "layer": "sldl",
       "district": "88",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-blackwell"
       ],
       "districtKey": "sldl:28088",
       "GEOID": "28088",
@@ -88403,7 +88551,8 @@
       "layer": "sldl",
       "district": "44",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-bounds"
       ],
       "districtKey": "sldl:28044",
       "GEOID": "28044",
@@ -88425,7 +88574,8 @@
       "layer": "sldl",
       "district": "19",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-boyd-19th"
       ],
       "districtKey": "sldl:28019",
       "GEOID": "28019",
@@ -88447,7 +88597,8 @@
       "layer": "sldl",
       "district": "37",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-boyd-37th"
       ],
       "districtKey": "sldl:28037",
       "GEOID": "28037",
@@ -88469,7 +88620,8 @@
       "layer": "sldl",
       "district": "105",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-burch"
       ],
       "districtKey": "sldl:28105",
       "GEOID": "28105",
@@ -88491,7 +88643,8 @@
       "layer": "sldl",
       "district": "9",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-burnett"
       ],
       "districtKey": "sldl:28009",
       "GEOID": "28009",
@@ -88535,7 +88688,8 @@
       "layer": "sldl",
       "district": "104",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-byrd"
       ],
       "districtKey": "sldl:28104",
       "GEOID": "28104",
@@ -88557,7 +88711,8 @@
       "layer": "sldl",
       "district": "83",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-calvert"
       ],
       "districtKey": "sldl:28083",
       "GEOID": "28083",
@@ -88579,7 +88734,8 @@
       "layer": "sldl",
       "district": "1",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-carpenter"
       ],
       "districtKey": "sldl:28001",
       "GEOID": "28001",
@@ -88601,7 +88757,8 @@
       "layer": "sldl",
       "district": "47",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-clark"
       ],
       "districtKey": "sldl:28047",
       "GEOID": "28047",
@@ -88623,7 +88780,8 @@
       "layer": "sldl",
       "district": "96",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-cockerham"
       ],
       "districtKey": "sldl:28096",
       "GEOID": "28096",
@@ -88645,7 +88803,8 @@
       "layer": "sldl",
       "district": "121",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-crawford"
       ],
       "districtKey": "sldl:28121",
       "GEOID": "28121",
@@ -88667,7 +88826,8 @@
       "layer": "sldl",
       "district": "14",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-creekmore-iv"
       ],
       "districtKey": "sldl:28014",
       "GEOID": "28014",
@@ -88711,7 +88871,8 @@
       "layer": "sldl",
       "district": "71",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-crudup"
       ],
       "districtKey": "sldl:28071",
       "GEOID": "28071",
@@ -88733,7 +88894,8 @@
       "layer": "sldl",
       "district": "92",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-currie"
       ],
       "districtKey": "sldl:28092",
       "GEOID": "28092",
@@ -88755,7 +88917,8 @@
       "layer": "sldl",
       "district": "55",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-denton"
       ],
       "districtKey": "sldl:28055",
       "GEOID": "28055",
@@ -88777,7 +88940,8 @@
       "layer": "sldl",
       "district": "12",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-deweese"
       ],
       "districtKey": "sldl:28012",
       "GEOID": "28012",
@@ -88799,7 +88963,8 @@
       "layer": "sldl",
       "district": "82",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-elliott"
       ],
       "districtKey": "sldl:28082",
       "GEOID": "28082",
@@ -88821,7 +88986,8 @@
       "layer": "sldl",
       "district": "33",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-estrada"
       ],
       "districtKey": "sldl:28033",
       "GEOID": "28033",
@@ -88843,7 +89009,8 @@
       "layer": "sldl",
       "district": "25",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-eubanks"
       ],
       "districtKey": "sldl:28025",
       "GEOID": "28025",
@@ -88865,7 +89032,8 @@
       "layer": "sldl",
       "district": "116",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-eure"
       ],
       "districtKey": "sldl:28116",
       "GEOID": "28116",
@@ -88887,7 +89055,8 @@
       "layer": "sldl",
       "district": "91",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-evans"
       ],
       "districtKey": "sldl:28091",
       "GEOID": "28091",
@@ -88909,7 +89078,8 @@
       "layer": "sldl",
       "district": "5",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-faulkner"
       ],
       "districtKey": "sldl:28005",
       "GEOID": "28005",
@@ -88931,7 +89101,8 @@
       "layer": "sldl",
       "district": "117",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-felsher"
       ],
       "districtKey": "sldl:28117",
       "GEOID": "28117",
@@ -88953,7 +89124,8 @@
       "layer": "sldl",
       "district": "111",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-fondren"
       ],
       "districtKey": "sldl:28111",
       "GEOID": "28111",
@@ -88975,7 +89147,8 @@
       "layer": "sldl",
       "district": "54",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-ford-54th"
       ],
       "districtKey": "sldl:28054",
       "GEOID": "28054",
@@ -88997,7 +89170,8 @@
       "layer": "sldl",
       "district": "73",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-ford-73rd"
       ],
       "districtKey": "sldl:28073",
       "GEOID": "28073",
@@ -89019,7 +89193,8 @@
       "layer": "sldl",
       "district": "63",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-foster"
       ],
       "districtKey": "sldl:28063",
       "GEOID": "28063",
@@ -89041,7 +89216,8 @@
       "layer": "sldl",
       "district": "36",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-gibbs-36th"
       ],
       "districtKey": "sldl:28036",
       "GEOID": "28036",
@@ -89063,7 +89239,8 @@
       "layer": "sldl",
       "district": "72",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-gibbs-72nd"
       ],
       "districtKey": "sldl:28072",
       "GEOID": "28072",
@@ -89085,7 +89262,8 @@
       "layer": "sldl",
       "district": "115",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-grady"
       ],
       "districtKey": "sldl:28115",
       "GEOID": "28115",
@@ -89107,7 +89285,8 @@
       "layer": "sldl",
       "district": "114",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-guice"
       ],
       "districtKey": "sldl:28114",
       "GEOID": "28114",
@@ -89129,7 +89308,8 @@
       "layer": "sldl",
       "district": "24",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hale"
       ],
       "districtKey": "sldl:28024",
       "GEOID": "28024",
@@ -89151,7 +89331,8 @@
       "layer": "sldl",
       "district": "20",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hall"
       ],
       "districtKey": "sldl:28020",
       "GEOID": "28020",
@@ -89173,7 +89354,8 @@
       "layer": "sldl",
       "district": "118",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-haney"
       ],
       "districtKey": "sldl:28118",
       "GEOID": "28118",
@@ -89195,7 +89377,8 @@
       "layer": "sldl",
       "district": "85",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-harness"
       ],
       "districtKey": "sldl:28085",
       "GEOID": "28085",
@@ -89217,7 +89400,8 @@
       "layer": "sldl",
       "district": "28",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-harris"
       ],
       "districtKey": "sldl:28028",
       "GEOID": "28028",
@@ -89239,7 +89423,8 @@
       "layer": "sldl",
       "district": "10",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hawkins"
       ],
       "districtKey": "sldl:28010",
       "GEOID": "28010",
@@ -89261,7 +89446,8 @@
       "layer": "sldl",
       "district": "50",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hines"
       ],
       "districtKey": "sldl:28050",
       "GEOID": "28050",
@@ -89283,7 +89469,8 @@
       "layer": "sldl",
       "district": "108",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hobgood-wilkes"
       ],
       "districtKey": "sldl:28108",
       "GEOID": "28108",
@@ -89305,7 +89492,8 @@
       "layer": "sldl",
       "district": "27",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-holloway-27th"
       ],
       "districtKey": "sldl:28027",
       "GEOID": "28027",
@@ -89349,7 +89537,8 @@
       "layer": "sldl",
       "district": "35",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hood"
       ],
       "districtKey": "sldl:28035",
       "GEOID": "28035",
@@ -89371,7 +89560,8 @@
       "layer": "sldl",
       "district": "34",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-horan"
       ],
       "districtKey": "sldl:28034",
       "GEOID": "28034",
@@ -89393,7 +89583,8 @@
       "layer": "sldl",
       "district": "81",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-horne"
       ],
       "districtKey": "sldl:28081",
       "GEOID": "28081",
@@ -89415,7 +89606,8 @@
       "layer": "sldl",
       "district": "119",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hulum"
       ],
       "districtKey": "sldl:28119",
       "GEOID": "28119",
@@ -89437,7 +89629,8 @@
       "layer": "sldl",
       "district": "75",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-hurst"
       ],
       "districtKey": "sldl:28075",
       "GEOID": "28075",
@@ -89459,7 +89652,8 @@
       "layer": "sldl",
       "district": "11",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-jackson-11th"
       ],
       "districtKey": "sldl:28011",
       "GEOID": "28011",
@@ -89481,7 +89675,8 @@
       "layer": "sldl",
       "district": "45",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-jackson-45th"
       ],
       "districtKey": "sldl:28045",
       "GEOID": "28045",
@@ -89503,7 +89698,8 @@
       "layer": "sldl",
       "district": "51",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-james-jones"
       ],
       "districtKey": "sldl:28051",
       "GEOID": "28051",
@@ -89525,7 +89721,8 @@
       "layer": "sldl",
       "district": "94",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-johnson"
       ],
       "districtKey": "sldl:28094",
       "GEOID": "28094",
@@ -89547,7 +89744,8 @@
       "layer": "sldl",
       "district": "41",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-karriem"
       ],
       "districtKey": "sldl:28041",
       "GEOID": "28041",
@@ -89569,7 +89767,8 @@
       "layer": "sldl",
       "district": "6",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-keen"
       ],
       "districtKey": "sldl:28006",
       "GEOID": "28006",
@@ -89591,7 +89790,8 @@
       "layer": "sldl",
       "district": "52",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-kinkade"
       ],
       "districtKey": "sldl:28052",
       "GEOID": "28052",
@@ -89613,7 +89813,8 @@
       "layer": "sldl",
       "district": "93",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-ladner"
       ],
       "districtKey": "sldl:28093",
       "GEOID": "28093",
@@ -89635,7 +89836,8 @@
       "layer": "sldl",
       "district": "8",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-lamar"
       ],
       "districtKey": "sldl:28008",
       "GEOID": "28008",
@@ -89657,7 +89859,8 @@
       "layer": "sldl",
       "district": "107",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-lott"
       ],
       "districtKey": "sldl:28107",
       "GEOID": "28107",
@@ -89679,7 +89882,8 @@
       "layer": "sldl",
       "district": "53",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mangold"
       ],
       "districtKey": "sldl:28053",
       "GEOID": "28053",
@@ -89701,7 +89905,8 @@
       "layer": "sldl",
       "district": "56",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mansell"
       ],
       "districtKey": "sldl:28056",
       "GEOID": "28056",
@@ -89723,7 +89928,8 @@
       "layer": "sldl",
       "district": "13",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-massengill"
       ],
       "districtKey": "sldl:28013",
       "GEOID": "28013",
@@ -89745,7 +89951,8 @@
       "layer": "sldl",
       "district": "2",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mattox"
       ],
       "districtKey": "sldl:28002",
       "GEOID": "28002",
@@ -89767,7 +89974,8 @@
       "layer": "sldl",
       "district": "101",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mccarty"
       ],
       "districtKey": "sldl:28101",
       "GEOID": "28101",
@@ -89789,7 +89997,8 @@
       "layer": "sldl",
       "district": "40",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mccray"
       ],
       "districtKey": "sldl:28040",
       "GEOID": "28040",
@@ -89811,7 +90020,8 @@
       "layer": "sldl",
       "district": "102",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mcgee"
       ],
       "districtKey": "sldl:28102",
       "GEOID": "28102",
@@ -89833,7 +90043,8 @@
       "layer": "sldl",
       "district": "95",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mcknight"
       ],
       "districtKey": "sldl:28095",
       "GEOID": "28095",
@@ -89855,7 +90066,8 @@
       "layer": "sldl",
       "district": "39",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mclean"
       ],
       "districtKey": "sldl:28039",
       "GEOID": "28039",
@@ -89877,7 +90089,8 @@
       "layer": "sldl",
       "district": "58",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mcmillan"
       ],
       "districtKey": "sldl:28058",
       "GEOID": "28058",
@@ -89899,7 +90112,8 @@
       "layer": "sldl",
       "district": "42",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mickens"
       ],
       "districtKey": "sldl:28042",
       "GEOID": "28042",
@@ -89921,7 +90135,8 @@
       "layer": "sldl",
       "district": "97",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-mims"
       ],
       "districtKey": "sldl:28097",
       "GEOID": "28097",
@@ -89943,7 +90158,8 @@
       "layer": "sldl",
       "district": "100",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-morgan"
       ],
       "districtKey": "sldl:28100",
       "GEOID": "28100",
@@ -89965,7 +90181,8 @@
       "layer": "sldl",
       "district": "66",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-nelson"
       ],
       "districtKey": "sldl:28066",
       "GEOID": "28066",
@@ -89987,7 +90204,8 @@
       "layer": "sldl",
       "district": "61",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-newman"
       ],
       "districtKey": "sldl:28061",
       "GEOID": "28061",
@@ -90009,7 +90227,8 @@
       "layer": "sldl",
       "district": "46",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-oliver"
       ],
       "districtKey": "sldl:28046",
       "GEOID": "28046",
@@ -90031,7 +90250,8 @@
       "layer": "sldl",
       "district": "32",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-osborne"
       ],
       "districtKey": "sldl:28032",
       "GEOID": "28032",
@@ -90053,7 +90273,8 @@
       "layer": "sldl",
       "district": "106",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-owen"
       ],
       "districtKey": "sldl:28106",
       "GEOID": "28106",
@@ -90075,7 +90296,8 @@
       "layer": "sldl",
       "district": "99",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-pigott"
       ],
       "districtKey": "sldl:28099",
       "GEOID": "28099",
@@ -90097,7 +90319,8 @@
       "layer": "sldl",
       "district": "98",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-porter"
       ],
       "districtKey": "sldl:28098",
       "GEOID": "28098",
@@ -90119,7 +90342,8 @@
       "layer": "sldl",
       "district": "59",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-powell"
       ],
       "districtKey": "sldl:28059",
       "GEOID": "28059",
@@ -90141,7 +90365,8 @@
       "layer": "sldl",
       "district": "112",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-read"
       ],
       "districtKey": "sldl:28112",
       "GEOID": "28112",
@@ -90163,7 +90388,8 @@
       "layer": "sldl",
       "district": "7",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-remak"
       ],
       "districtKey": "sldl:28007",
       "GEOID": "28007",
@@ -90185,7 +90411,8 @@
       "layer": "sldl",
       "district": "43",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-roberson"
       ],
       "districtKey": "sldl:28043",
       "GEOID": "28043",
@@ -90207,7 +90434,8 @@
       "layer": "sldl",
       "district": "30",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-rosebud"
       ],
       "districtKey": "sldl:28030",
       "GEOID": "28030",
@@ -90229,7 +90457,8 @@
       "layer": "sldl",
       "district": "78",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-rushing"
       ],
       "districtKey": "sldl:28078",
       "GEOID": "28078",
@@ -90251,7 +90480,8 @@
       "layer": "sldl",
       "district": "29",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-sanders"
       ],
       "districtKey": "sldl:28029",
       "GEOID": "28029",
@@ -90273,7 +90503,8 @@
       "layer": "sldl",
       "district": "90",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-sanford"
       ],
       "districtKey": "sldl:28090",
       "GEOID": "28090",
@@ -90295,7 +90526,8 @@
       "layer": "sldl",
       "district": "89",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-scoggin"
       ],
       "districtKey": "sldl:28089",
       "GEOID": "28089",
@@ -90317,7 +90549,8 @@
       "layer": "sldl",
       "district": "80",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-scott"
       ],
       "districtKey": "sldl:28080",
       "GEOID": "28080",
@@ -90339,7 +90572,8 @@
       "layer": "sldl",
       "district": "60",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-shanks"
       ],
       "districtKey": "sldl:28060",
       "GEOID": "28060",
@@ -90361,7 +90595,8 @@
       "layer": "sldl",
       "district": "84",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-smith"
       ],
       "districtKey": "sldl:28084",
       "GEOID": "28084",
@@ -90383,7 +90618,8 @@
       "layer": "sldl",
       "district": "4",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-steverson"
       ],
       "districtKey": "sldl:28004",
       "GEOID": "28004",
@@ -90405,7 +90641,8 @@
       "layer": "sldl",
       "district": "68",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-summers"
       ],
       "districtKey": "sldl:28068",
       "GEOID": "28068",
@@ -90427,7 +90664,8 @@
       "layer": "sldl",
       "district": "38",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-taylor"
       ],
       "districtKey": "sldl:28038",
       "GEOID": "28038",
@@ -90449,7 +90687,8 @@
       "layer": "sldl",
       "district": "16",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-thompson"
       ],
       "districtKey": "sldl:28016",
       "GEOID": "28016",
@@ -90471,7 +90710,8 @@
       "layer": "sldl",
       "district": "87",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-tubb"
       ],
       "districtKey": "sldl:28087",
       "GEOID": "28087",
@@ -90493,7 +90733,8 @@
       "layer": "sldl",
       "district": "79",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-tullos"
       ],
       "districtKey": "sldl:28079",
       "GEOID": "28079",
@@ -90515,7 +90756,8 @@
       "layer": "sldl",
       "district": "18",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-turner"
       ],
       "districtKey": "sldl:28018",
       "GEOID": "28018",
@@ -90537,7 +90779,8 @@
       "layer": "sldl",
       "district": "62",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-varner"
       ],
       "districtKey": "sldl:28062",
       "GEOID": "28062",
@@ -90559,7 +90802,8 @@
       "layer": "sldl",
       "district": "15",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-waldo"
       ],
       "districtKey": "sldl:28015",
       "GEOID": "28015",
@@ -90581,7 +90825,8 @@
       "layer": "sldl",
       "district": "103",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-watson"
       ],
       "districtKey": "sldl:28103",
       "GEOID": "28103",
@@ -90625,7 +90870,8 @@
       "layer": "sldl",
       "district": "74",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-yancey"
       ],
       "districtKey": "sldl:28074",
       "GEOID": "28074",
@@ -90647,7 +90893,8 @@
       "layer": "sldl",
       "district": "64",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-yates"
       ],
       "districtKey": "sldl:28064",
       "GEOID": "28064",
@@ -90669,7 +90916,8 @@
       "layer": "sldl",
       "district": "113",
       "sourceIds": [
-        "ms-lower"
+        "ms-lower",
+        "ms-lower-member-zuber"
       ],
       "districtKey": "sldl:28113",
       "GEOID": "28113",
@@ -90691,7 +90939,8 @@
       "layer": "sldu",
       "district": "30",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-kirby"
       ],
       "districtKey": "sldu:28030",
       "GEOID": "28030",
@@ -90713,7 +90962,8 @@
       "layer": "sldu",
       "district": "39",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-barrett"
       ],
       "districtKey": "sldu:28039",
       "GEOID": "28039",
@@ -90735,7 +90985,8 @@
       "layer": "sldu",
       "district": "35",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-berry"
       ],
       "districtKey": "sldu:28035",
       "GEOID": "28035",
@@ -90757,7 +91008,8 @@
       "layer": "sldu",
       "district": "21",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-blackmon"
       ],
       "districtKey": "sldu:28021",
       "GEOID": "28021",
@@ -90779,7 +91031,8 @@
       "layer": "sldu",
       "district": "19",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-blackwell"
       ],
       "districtKey": "sldu:28019",
       "GEOID": "28019",
@@ -90801,7 +91054,8 @@
       "layer": "sldu",
       "district": "29",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-blount"
       ],
       "districtKey": "sldu:28029",
       "GEOID": "28029",
@@ -90823,7 +91077,8 @@
       "layer": "sldu",
       "district": "9",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-boyd"
       ],
       "districtKey": "sldu:28009",
       "GEOID": "28009",
@@ -90845,7 +91100,8 @@
       "layer": "sldu",
       "district": "38",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-brumfield"
       ],
       "districtKey": "sldu:28038",
       "GEOID": "28038",
@@ -90867,7 +91123,8 @@
       "layer": "sldu",
       "district": "7",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-bryan"
       ],
       "districtKey": "sldu:28007",
       "GEOID": "28007",
@@ -90889,7 +91146,8 @@
       "layer": "sldu",
       "district": "37",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-butler"
       ],
       "districtKey": "sldu:28037",
       "GEOID": "28037",
@@ -90911,7 +91169,8 @@
       "layer": "sldu",
       "district": "49",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-carter"
       ],
       "districtKey": "sldu:28049",
       "GEOID": "28049",
@@ -90933,7 +91192,8 @@
       "layer": "sldu",
       "district": "14",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-chassaniol"
       ],
       "districtKey": "sldu:28014",
       "GEOID": "28014",
@@ -90955,7 +91215,8 @@
       "layer": "sldu",
       "district": "3",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-chism"
       ],
       "districtKey": "sldu:28003",
       "GEOID": "28003",
@@ -90977,7 +91238,8 @@
       "layer": "sldu",
       "district": "43",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-debar"
       ],
       "districtKey": "sldu:28043",
       "GEOID": "28043",
@@ -90999,7 +91261,8 @@
       "layer": "sldu",
       "district": "50",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-delano"
       ],
       "districtKey": "sldu:28050",
       "GEOID": "28050",
@@ -91043,7 +91306,8 @@
       "layer": "sldu",
       "district": "51",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-england"
       ],
       "districtKey": "sldu:28051",
       "GEOID": "28051",
@@ -91065,7 +91329,8 @@
       "layer": "sldu",
       "district": "41",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-fillingane"
       ],
       "districtKey": "sldu:28041",
       "GEOID": "28041",
@@ -91087,7 +91352,8 @@
       "layer": "sldu",
       "district": "27",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-frazier"
       ],
       "districtKey": "sldu:28027",
       "GEOID": "28027",
@@ -91131,7 +91397,8 @@
       "layer": "sldu",
       "district": "20",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-harkins"
       ],
       "districtKey": "sldu:28020",
       "GEOID": "28020",
@@ -91175,7 +91442,8 @@
       "layer": "sldu",
       "district": "32",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-hickman"
       ],
       "districtKey": "sldu:28032",
       "GEOID": "28032",
@@ -91197,7 +91465,8 @@
       "layer": "sldu",
       "district": "40",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-hill"
       ],
       "districtKey": "sldu:28040",
       "GEOID": "28040",
@@ -91219,7 +91488,8 @@
       "layer": "sldu",
       "district": "23",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-hopson"
       ],
       "districtKey": "sldu:28023",
       "GEOID": "28023",
@@ -91241,7 +91511,8 @@
       "layer": "sldu",
       "district": "11",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-jackson"
       ],
       "districtKey": "sldu:28011",
       "GEOID": "28011",
@@ -91263,7 +91534,8 @@
       "layer": "sldu",
       "district": "44",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-johnson"
       ],
       "districtKey": "sldu:28044",
       "GEOID": "28044",
@@ -91285,7 +91557,8 @@
       "layer": "sldu",
       "district": "46",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-ladner"
       ],
       "districtKey": "sldu:28046",
       "GEOID": "28046",
@@ -91307,7 +91580,8 @@
       "layer": "sldu",
       "district": "31",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-mccaughn"
       ],
       "districtKey": "sldu:28031",
       "GEOID": "28031",
@@ -91329,7 +91603,8 @@
       "layer": "sldu",
       "district": "1",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-mclendon"
       ],
       "districtKey": "sldu:28001",
       "GEOID": "28001",
@@ -91351,7 +91626,8 @@
       "layer": "sldu",
       "district": "6",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-mcmahan"
       ],
       "districtKey": "sldu:28006",
       "GEOID": "28006",
@@ -91373,7 +91649,8 @@
       "layer": "sldu",
       "district": "25",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-michel"
       ],
       "districtKey": "sldu:28025",
       "GEOID": "28025",
@@ -91417,7 +91694,8 @@
       "layer": "sldu",
       "district": "28",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-norwood"
       ],
       "districtKey": "sldu:28028",
       "GEOID": "28028",
@@ -91439,7 +91717,8 @@
       "layer": "sldu",
       "district": "4",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-parks"
       ],
       "districtKey": "sldu:28004",
       "GEOID": "28004",
@@ -91483,7 +91762,8 @@
       "layer": "sldu",
       "district": "36",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-rhodes"
       ],
       "districtKey": "sldu:28036",
       "GEOID": "28036",
@@ -91505,7 +91785,8 @@
       "layer": "sldu",
       "district": "47",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-seymour"
       ],
       "districtKey": "sldu:28047",
       "GEOID": "28047",
@@ -91527,7 +91808,8 @@
       "layer": "sldu",
       "district": "12",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-simmons-12th"
       ],
       "districtKey": "sldu:28012",
       "GEOID": "28012",
@@ -91549,7 +91831,8 @@
       "layer": "sldu",
       "district": "13",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-simmons-13th"
       ],
       "districtKey": "sldu:28013",
       "GEOID": "28013",
@@ -91571,7 +91854,8 @@
       "layer": "sldu",
       "district": "5",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-sparks"
       ],
       "districtKey": "sldu:28005",
       "GEOID": "28005",
@@ -91593,7 +91877,8 @@
       "layer": "sldu",
       "district": "8",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-suber"
       ],
       "districtKey": "sldu:28008",
       "GEOID": "28008",
@@ -91615,7 +91900,8 @@
       "layer": "sldu",
       "district": "33",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-tate"
       ],
       "districtKey": "sldu:28033",
       "GEOID": "28033",
@@ -91637,7 +91923,8 @@
       "layer": "sldu",
       "district": "18",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-taylor"
       ],
       "districtKey": "sldu:28018",
       "GEOID": "28018",
@@ -91659,7 +91946,8 @@
       "layer": "sldu",
       "district": "22",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-thomas"
       ],
       "districtKey": "sldu:28022",
       "GEOID": "28022",
@@ -91681,7 +91969,8 @@
       "layer": "sldu",
       "district": "48",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-thompson"
       ],
       "districtKey": "sldu:28048",
       "GEOID": "28048",
@@ -91703,7 +91992,8 @@
       "layer": "sldu",
       "district": "16",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-turner-ford"
       ],
       "districtKey": "sldu:28016",
       "GEOID": "28016",
@@ -91725,7 +92015,8 @@
       "layer": "sldu",
       "district": "10",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-whaley"
       ],
       "districtKey": "sldu:28010",
       "GEOID": "28010",
@@ -91747,7 +92038,8 @@
       "layer": "sldu",
       "district": "52",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-wiggins"
       ],
       "districtKey": "sldu:28052",
       "GEOID": "28052",
@@ -91769,7 +92061,8 @@
       "layer": "sldu",
       "district": "15",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-williams"
       ],
       "districtKey": "sldu:28015",
       "GEOID": "28015",
@@ -91791,7 +92084,8 @@
       "layer": "sldu",
       "district": "17",
       "sourceIds": [
-        "ms-upper"
+        "ms-upper",
+        "ms-upper-member-younger"
       ],
       "districtKey": "sldu:28017",
       "GEOID": "28017",
@@ -91813,7 +92107,8 @@
       "layer": "sldl",
       "district": "1",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29001",
       "GEOID": "29001",
@@ -91835,7 +92130,8 @@
       "layer": "sldl",
       "district": "2",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29002",
       "GEOID": "29002",
@@ -91857,7 +92153,8 @@
       "layer": "sldl",
       "district": "3",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29003",
       "GEOID": "29003",
@@ -91879,7 +92176,8 @@
       "layer": "sldl",
       "district": "4",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29004",
       "GEOID": "29004",
@@ -91901,7 +92199,8 @@
       "layer": "sldl",
       "district": "5",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29005",
       "GEOID": "29005",
@@ -91923,7 +92222,8 @@
       "layer": "sldl",
       "district": "6",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29006",
       "GEOID": "29006",
@@ -91945,7 +92245,8 @@
       "layer": "sldl",
       "district": "7",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29007",
       "GEOID": "29007",
@@ -91967,7 +92268,8 @@
       "layer": "sldl",
       "district": "8",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29008",
       "GEOID": "29008",
@@ -91989,7 +92291,8 @@
       "layer": "sldl",
       "district": "9",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29009",
       "GEOID": "29009",
@@ -92011,7 +92314,8 @@
       "layer": "sldl",
       "district": "10",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29010",
       "GEOID": "29010",
@@ -92033,7 +92337,8 @@
       "layer": "sldl",
       "district": "11",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29011",
       "GEOID": "29011",
@@ -92055,7 +92360,8 @@
       "layer": "sldl",
       "district": "12",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29012",
       "GEOID": "29012",
@@ -92077,7 +92383,8 @@
       "layer": "sldl",
       "district": "13",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29013",
       "GEOID": "29013",
@@ -92099,7 +92406,8 @@
       "layer": "sldl",
       "district": "14",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29014",
       "GEOID": "29014",
@@ -92121,7 +92429,8 @@
       "layer": "sldl",
       "district": "15",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29015",
       "GEOID": "29015",
@@ -92143,7 +92452,8 @@
       "layer": "sldl",
       "district": "16",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29016",
       "GEOID": "29016",
@@ -92165,7 +92475,8 @@
       "layer": "sldl",
       "district": "17",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29017",
       "GEOID": "29017",
@@ -92187,7 +92498,8 @@
       "layer": "sldl",
       "district": "18",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29018",
       "GEOID": "29018",
@@ -92209,7 +92521,8 @@
       "layer": "sldl",
       "district": "19",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29019",
       "GEOID": "29019",
@@ -92231,7 +92544,8 @@
       "layer": "sldl",
       "district": "20",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29020",
       "GEOID": "29020",
@@ -92253,7 +92567,8 @@
       "layer": "sldl",
       "district": "21",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29021",
       "GEOID": "29021",
@@ -92275,7 +92590,8 @@
       "layer": "sldl",
       "district": "22",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29022",
       "GEOID": "29022",
@@ -92297,7 +92613,8 @@
       "layer": "sldl",
       "district": "23",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29023",
       "GEOID": "29023",
@@ -92319,7 +92636,8 @@
       "layer": "sldl",
       "district": "24",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29024",
       "GEOID": "29024",
@@ -92341,7 +92659,8 @@
       "layer": "sldl",
       "district": "25",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29025",
       "GEOID": "29025",
@@ -92363,7 +92682,8 @@
       "layer": "sldl",
       "district": "26",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29026",
       "GEOID": "29026",
@@ -92385,7 +92705,8 @@
       "layer": "sldl",
       "district": "27",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29027",
       "GEOID": "29027",
@@ -92407,7 +92728,8 @@
       "layer": "sldl",
       "district": "28",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29028",
       "GEOID": "29028",
@@ -92429,7 +92751,8 @@
       "layer": "sldl",
       "district": "30",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29030",
       "GEOID": "29030",
@@ -92451,7 +92774,8 @@
       "layer": "sldl",
       "district": "31",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29031",
       "GEOID": "29031",
@@ -92473,7 +92797,8 @@
       "layer": "sldl",
       "district": "32",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29032",
       "GEOID": "29032",
@@ -92495,7 +92820,8 @@
       "layer": "sldl",
       "district": "33",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29033",
       "GEOID": "29033",
@@ -92517,7 +92843,8 @@
       "layer": "sldl",
       "district": "34",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29034",
       "GEOID": "29034",
@@ -92539,7 +92866,8 @@
       "layer": "sldl",
       "district": "35",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29035",
       "GEOID": "29035",
@@ -92561,7 +92889,8 @@
       "layer": "sldl",
       "district": "36",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29036",
       "GEOID": "29036",
@@ -92583,7 +92912,8 @@
       "layer": "sldl",
       "district": "37",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29037",
       "GEOID": "29037",
@@ -92605,7 +92935,8 @@
       "layer": "sldl",
       "district": "38",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29038",
       "GEOID": "29038",
@@ -92627,7 +92958,8 @@
       "layer": "sldl",
       "district": "39",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29039",
       "GEOID": "29039",
@@ -92649,7 +92981,8 @@
       "layer": "sldl",
       "district": "40",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29040",
       "GEOID": "29040",
@@ -92671,7 +93004,8 @@
       "layer": "sldl",
       "district": "41",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29041",
       "GEOID": "29041",
@@ -92693,7 +93027,8 @@
       "layer": "sldl",
       "district": "42",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29042",
       "GEOID": "29042",
@@ -92715,7 +93050,8 @@
       "layer": "sldl",
       "district": "43",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29043",
       "GEOID": "29043",
@@ -92737,7 +93073,8 @@
       "layer": "sldl",
       "district": "44",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29044",
       "GEOID": "29044",
@@ -92759,7 +93096,8 @@
       "layer": "sldl",
       "district": "45",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29045",
       "GEOID": "29045",
@@ -92781,7 +93119,8 @@
       "layer": "sldl",
       "district": "46",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29046",
       "GEOID": "29046",
@@ -92803,7 +93142,8 @@
       "layer": "sldl",
       "district": "47",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29047",
       "GEOID": "29047",
@@ -92825,7 +93165,8 @@
       "layer": "sldl",
       "district": "48",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29048",
       "GEOID": "29048",
@@ -92847,7 +93188,8 @@
       "layer": "sldl",
       "district": "49",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29049",
       "GEOID": "29049",
@@ -92869,7 +93211,8 @@
       "layer": "sldl",
       "district": "50",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29050",
       "GEOID": "29050",
@@ -92891,7 +93234,8 @@
       "layer": "sldl",
       "district": "51",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29051",
       "GEOID": "29051",
@@ -92913,7 +93257,8 @@
       "layer": "sldl",
       "district": "52",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29052",
       "GEOID": "29052",
@@ -92935,7 +93280,8 @@
       "layer": "sldl",
       "district": "53",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29053",
       "GEOID": "29053",
@@ -92957,7 +93303,8 @@
       "layer": "sldl",
       "district": "54",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29054",
       "GEOID": "29054",
@@ -92979,7 +93326,8 @@
       "layer": "sldl",
       "district": "55",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29055",
       "GEOID": "29055",
@@ -93001,7 +93349,8 @@
       "layer": "sldl",
       "district": "56",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29056",
       "GEOID": "29056",
@@ -93023,7 +93372,8 @@
       "layer": "sldl",
       "district": "57",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29057",
       "GEOID": "29057",
@@ -93045,7 +93395,8 @@
       "layer": "sldl",
       "district": "58",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29058",
       "GEOID": "29058",
@@ -93067,7 +93418,8 @@
       "layer": "sldl",
       "district": "59",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29059",
       "GEOID": "29059",
@@ -93089,7 +93441,8 @@
       "layer": "sldl",
       "district": "60",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29060",
       "GEOID": "29060",
@@ -93111,7 +93464,8 @@
       "layer": "sldl",
       "district": "61",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29061",
       "GEOID": "29061",
@@ -93133,7 +93487,8 @@
       "layer": "sldl",
       "district": "62",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29062",
       "GEOID": "29062",
@@ -93155,7 +93510,8 @@
       "layer": "sldl",
       "district": "63",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29063",
       "GEOID": "29063",
@@ -93177,7 +93533,8 @@
       "layer": "sldl",
       "district": "64",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29064",
       "GEOID": "29064",
@@ -93199,7 +93556,8 @@
       "layer": "sldl",
       "district": "65",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29065",
       "GEOID": "29065",
@@ -93221,7 +93579,8 @@
       "layer": "sldl",
       "district": "66",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29066",
       "GEOID": "29066",
@@ -93243,7 +93602,8 @@
       "layer": "sldl",
       "district": "67",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29067",
       "GEOID": "29067",
@@ -93265,7 +93625,8 @@
       "layer": "sldl",
       "district": "68",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29068",
       "GEOID": "29068",
@@ -93287,7 +93648,8 @@
       "layer": "sldl",
       "district": "69",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29069",
       "GEOID": "29069",
@@ -93309,7 +93671,8 @@
       "layer": "sldl",
       "district": "70",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29070",
       "GEOID": "29070",
@@ -93331,7 +93694,8 @@
       "layer": "sldl",
       "district": "71",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29071",
       "GEOID": "29071",
@@ -93353,7 +93717,8 @@
       "layer": "sldl",
       "district": "72",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29072",
       "GEOID": "29072",
@@ -93375,7 +93740,8 @@
       "layer": "sldl",
       "district": "73",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29073",
       "GEOID": "29073",
@@ -93397,7 +93763,8 @@
       "layer": "sldl",
       "district": "74",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29074",
       "GEOID": "29074",
@@ -93419,7 +93786,8 @@
       "layer": "sldl",
       "district": "75",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29075",
       "GEOID": "29075",
@@ -93441,7 +93809,8 @@
       "layer": "sldl",
       "district": "76",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29076",
       "GEOID": "29076",
@@ -93463,7 +93832,8 @@
       "layer": "sldl",
       "district": "77",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29077",
       "GEOID": "29077",
@@ -93485,7 +93855,8 @@
       "layer": "sldl",
       "district": "78",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29078",
       "GEOID": "29078",
@@ -93507,7 +93878,8 @@
       "layer": "sldl",
       "district": "79",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29079",
       "GEOID": "29079",
@@ -93529,7 +93901,8 @@
       "layer": "sldl",
       "district": "80",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29080",
       "GEOID": "29080",
@@ -93551,7 +93924,8 @@
       "layer": "sldl",
       "district": "81",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29081",
       "GEOID": "29081",
@@ -93573,7 +93947,8 @@
       "layer": "sldl",
       "district": "82",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29082",
       "GEOID": "29082",
@@ -93595,7 +93970,8 @@
       "layer": "sldl",
       "district": "83",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29083",
       "GEOID": "29083",
@@ -93617,7 +93993,8 @@
       "layer": "sldl",
       "district": "84",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29084",
       "GEOID": "29084",
@@ -93639,7 +94016,8 @@
       "layer": "sldl",
       "district": "85",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29085",
       "GEOID": "29085",
@@ -93661,7 +94039,8 @@
       "layer": "sldl",
       "district": "86",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29086",
       "GEOID": "29086",
@@ -93683,7 +94062,8 @@
       "layer": "sldl",
       "district": "87",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29087",
       "GEOID": "29087",
@@ -93705,7 +94085,8 @@
       "layer": "sldl",
       "district": "88",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29088",
       "GEOID": "29088",
@@ -93727,7 +94108,8 @@
       "layer": "sldl",
       "district": "89",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29089",
       "GEOID": "29089",
@@ -93749,7 +94131,8 @@
       "layer": "sldl",
       "district": "90",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29090",
       "GEOID": "29090",
@@ -93771,7 +94154,8 @@
       "layer": "sldl",
       "district": "91",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29091",
       "GEOID": "29091",
@@ -93793,7 +94177,8 @@
       "layer": "sldl",
       "district": "92",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29092",
       "GEOID": "29092",
@@ -93815,7 +94200,8 @@
       "layer": "sldl",
       "district": "93",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29093",
       "GEOID": "29093",
@@ -93837,7 +94223,8 @@
       "layer": "sldl",
       "district": "94",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29094",
       "GEOID": "29094",
@@ -93859,7 +94246,8 @@
       "layer": "sldl",
       "district": "96",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29096",
       "GEOID": "29096",
@@ -93881,7 +94269,8 @@
       "layer": "sldl",
       "district": "97",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29097",
       "GEOID": "29097",
@@ -93903,7 +94292,8 @@
       "layer": "sldl",
       "district": "98",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29098",
       "GEOID": "29098",
@@ -93925,7 +94315,8 @@
       "layer": "sldl",
       "district": "100",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29100",
       "GEOID": "29100",
@@ -93947,7 +94338,8 @@
       "layer": "sldl",
       "district": "101",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29101",
       "GEOID": "29101",
@@ -93969,7 +94361,8 @@
       "layer": "sldl",
       "district": "102",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29102",
       "GEOID": "29102",
@@ -93991,7 +94384,8 @@
       "layer": "sldl",
       "district": "103",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29103",
       "GEOID": "29103",
@@ -94013,7 +94407,8 @@
       "layer": "sldl",
       "district": "104",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29104",
       "GEOID": "29104",
@@ -94035,7 +94430,8 @@
       "layer": "sldl",
       "district": "105",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29105",
       "GEOID": "29105",
@@ -94057,7 +94453,8 @@
       "layer": "sldl",
       "district": "106",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29106",
       "GEOID": "29106",
@@ -94079,7 +94476,8 @@
       "layer": "sldl",
       "district": "107",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29107",
       "GEOID": "29107",
@@ -94101,7 +94499,8 @@
       "layer": "sldl",
       "district": "108",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29108",
       "GEOID": "29108",
@@ -94123,7 +94522,8 @@
       "layer": "sldl",
       "district": "109",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29109",
       "GEOID": "29109",
@@ -94145,7 +94545,8 @@
       "layer": "sldl",
       "district": "111",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29111",
       "GEOID": "29111",
@@ -94167,7 +94568,8 @@
       "layer": "sldl",
       "district": "112",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29112",
       "GEOID": "29112",
@@ -94189,7 +94591,8 @@
       "layer": "sldl",
       "district": "113",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29113",
       "GEOID": "29113",
@@ -94211,7 +94614,8 @@
       "layer": "sldl",
       "district": "115",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29115",
       "GEOID": "29115",
@@ -94233,7 +94637,8 @@
       "layer": "sldl",
       "district": "116",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29116",
       "GEOID": "29116",
@@ -94255,7 +94660,8 @@
       "layer": "sldl",
       "district": "117",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29117",
       "GEOID": "29117",
@@ -94277,7 +94683,8 @@
       "layer": "sldl",
       "district": "118",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29118",
       "GEOID": "29118",
@@ -94299,7 +94706,8 @@
       "layer": "sldl",
       "district": "119",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29119",
       "GEOID": "29119",
@@ -94321,7 +94729,8 @@
       "layer": "sldl",
       "district": "120",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29120",
       "GEOID": "29120",
@@ -94343,7 +94752,8 @@
       "layer": "sldl",
       "district": "121",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29121",
       "GEOID": "29121",
@@ -94365,7 +94775,8 @@
       "layer": "sldl",
       "district": "122",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29122",
       "GEOID": "29122",
@@ -94387,7 +94798,8 @@
       "layer": "sldl",
       "district": "123",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29123",
       "GEOID": "29123",
@@ -94409,7 +94821,8 @@
       "layer": "sldl",
       "district": "124",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29124",
       "GEOID": "29124",
@@ -94431,7 +94844,8 @@
       "layer": "sldl",
       "district": "125",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29125",
       "GEOID": "29125",
@@ -94453,7 +94867,8 @@
       "layer": "sldl",
       "district": "126",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29126",
       "GEOID": "29126",
@@ -94475,7 +94890,8 @@
       "layer": "sldl",
       "district": "127",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29127",
       "GEOID": "29127",
@@ -94497,7 +94913,8 @@
       "layer": "sldl",
       "district": "128",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29128",
       "GEOID": "29128",
@@ -94519,7 +94936,8 @@
       "layer": "sldl",
       "district": "129",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29129",
       "GEOID": "29129",
@@ -94541,7 +94959,8 @@
       "layer": "sldl",
       "district": "130",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29130",
       "GEOID": "29130",
@@ -94563,7 +94982,8 @@
       "layer": "sldl",
       "district": "131",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29131",
       "GEOID": "29131",
@@ -94585,7 +95005,8 @@
       "layer": "sldl",
       "district": "132",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29132",
       "GEOID": "29132",
@@ -94607,7 +95028,8 @@
       "layer": "sldl",
       "district": "133",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29133",
       "GEOID": "29133",
@@ -94629,7 +95051,8 @@
       "layer": "sldl",
       "district": "134",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29134",
       "GEOID": "29134",
@@ -94651,7 +95074,8 @@
       "layer": "sldl",
       "district": "135",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29135",
       "GEOID": "29135",
@@ -94673,7 +95097,8 @@
       "layer": "sldl",
       "district": "136",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29136",
       "GEOID": "29136",
@@ -94695,7 +95120,8 @@
       "layer": "sldl",
       "district": "137",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29137",
       "GEOID": "29137",
@@ -94717,7 +95143,8 @@
       "layer": "sldl",
       "district": "138",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29138",
       "GEOID": "29138",
@@ -94739,7 +95166,8 @@
       "layer": "sldl",
       "district": "139",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29139",
       "GEOID": "29139",
@@ -94761,7 +95189,8 @@
       "layer": "sldl",
       "district": "140",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29140",
       "GEOID": "29140",
@@ -94783,7 +95212,8 @@
       "layer": "sldl",
       "district": "141",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29141",
       "GEOID": "29141",
@@ -94805,7 +95235,8 @@
       "layer": "sldl",
       "district": "142",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29142",
       "GEOID": "29142",
@@ -94827,7 +95258,8 @@
       "layer": "sldl",
       "district": "143",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29143",
       "GEOID": "29143",
@@ -94849,7 +95281,8 @@
       "layer": "sldl",
       "district": "144",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29144",
       "GEOID": "29144",
@@ -94871,7 +95304,8 @@
       "layer": "sldl",
       "district": "145",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29145",
       "GEOID": "29145",
@@ -94893,7 +95327,8 @@
       "layer": "sldl",
       "district": "146",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29146",
       "GEOID": "29146",
@@ -94915,7 +95350,8 @@
       "layer": "sldl",
       "district": "147",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29147",
       "GEOID": "29147",
@@ -94937,7 +95373,8 @@
       "layer": "sldl",
       "district": "148",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29148",
       "GEOID": "29148",
@@ -94959,7 +95396,8 @@
       "layer": "sldl",
       "district": "150",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29150",
       "GEOID": "29150",
@@ -94981,7 +95419,8 @@
       "layer": "sldl",
       "district": "151",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29151",
       "GEOID": "29151",
@@ -95003,7 +95442,8 @@
       "layer": "sldl",
       "district": "152",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29152",
       "GEOID": "29152",
@@ -95025,7 +95465,8 @@
       "layer": "sldl",
       "district": "153",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29153",
       "GEOID": "29153",
@@ -95047,7 +95488,8 @@
       "layer": "sldl",
       "district": "154",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29154",
       "GEOID": "29154",
@@ -95069,7 +95511,8 @@
       "layer": "sldl",
       "district": "155",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29155",
       "GEOID": "29155",
@@ -95091,7 +95534,8 @@
       "layer": "sldl",
       "district": "156",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29156",
       "GEOID": "29156",
@@ -95113,7 +95557,8 @@
       "layer": "sldl",
       "district": "157",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29157",
       "GEOID": "29157",
@@ -95135,7 +95580,8 @@
       "layer": "sldl",
       "district": "158",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29158",
       "GEOID": "29158",
@@ -95157,7 +95603,8 @@
       "layer": "sldl",
       "district": "161",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29161",
       "GEOID": "29161",
@@ -95179,7 +95626,8 @@
       "layer": "sldl",
       "district": "162",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29162",
       "GEOID": "29162",
@@ -95201,7 +95649,8 @@
       "layer": "sldl",
       "district": "163",
       "sourceIds": [
-        "mo-lower"
+        "mo-lower",
+        "mo-lower-grid"
       ],
       "districtKey": "sldl:29163",
       "GEOID": "29163",
@@ -95223,7 +95672,8 @@
       "layer": "sldu",
       "district": "25",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29025",
       "GEOID": "29025",
@@ -95245,7 +95695,8 @@
       "layer": "sldu",
       "district": "1",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29001",
       "GEOID": "29001",
@@ -95267,7 +95718,8 @@
       "layer": "sldu",
       "district": "6",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29006",
       "GEOID": "29006",
@@ -95289,7 +95741,8 @@
       "layer": "sldu",
       "district": "12",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29012",
       "GEOID": "29012",
@@ -95311,7 +95764,8 @@
       "layer": "sldu",
       "district": "31",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29031",
       "GEOID": "29031",
@@ -95333,7 +95787,8 @@
       "layer": "sldu",
       "district": "16",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29016",
       "GEOID": "29016",
@@ -95355,7 +95810,8 @@
       "layer": "sldu",
       "district": "26",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29026",
       "GEOID": "29026",
@@ -95377,7 +95833,8 @@
       "layer": "sldu",
       "district": "27",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29027",
       "GEOID": "29027",
@@ -95399,7 +95856,8 @@
       "layer": "sldu",
       "district": "32",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29032",
       "GEOID": "29032",
@@ -95421,7 +95879,8 @@
       "layer": "sldu",
       "district": "8",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29008",
       "GEOID": "29008",
@@ -95443,7 +95902,8 @@
       "layer": "sldu",
       "district": "22",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29022",
       "GEOID": "29022",
@@ -95465,7 +95925,8 @@
       "layer": "sldu",
       "district": "28",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29028",
       "GEOID": "29028",
@@ -95487,7 +95948,8 @@
       "layer": "sldu",
       "district": "15",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29015",
       "GEOID": "29015",
@@ -95509,7 +95971,8 @@
       "layer": "sldu",
       "district": "21",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29021",
       "GEOID": "29021",
@@ -95531,7 +95994,8 @@
       "layer": "sldu",
       "district": "3",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29003",
       "GEOID": "29003",
@@ -95553,7 +96017,8 @@
       "layer": "sldu",
       "district": "30",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29030",
       "GEOID": "29030",
@@ -95575,7 +96040,8 @@
       "layer": "sldu",
       "district": "33",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29033",
       "GEOID": "29033",
@@ -95597,7 +96063,8 @@
       "layer": "sldu",
       "district": "7",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29007",
       "GEOID": "29007",
@@ -95619,7 +96086,8 @@
       "layer": "sldu",
       "district": "34",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29034",
       "GEOID": "29034",
@@ -95641,7 +96109,8 @@
       "layer": "sldu",
       "district": "4",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29004",
       "GEOID": "29004",
@@ -95663,7 +96132,8 @@
       "layer": "sldu",
       "district": "24",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29024",
       "GEOID": "29024",
@@ -95685,7 +96155,8 @@
       "layer": "sldu",
       "district": "29",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29029",
       "GEOID": "29029",
@@ -95707,7 +96178,8 @@
       "layer": "sldu",
       "district": "13",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29013",
       "GEOID": "29013",
@@ -95729,7 +96201,8 @@
       "layer": "sldu",
       "district": "11",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29011",
       "GEOID": "29011",
@@ -95751,7 +96224,8 @@
       "layer": "sldu",
       "district": "17",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29017",
       "GEOID": "29017",
@@ -95773,7 +96247,8 @@
       "layer": "sldu",
       "district": "18",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29018",
       "GEOID": "29018",
@@ -95795,7 +96270,8 @@
       "layer": "sldu",
       "district": "5",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29005",
       "GEOID": "29005",
@@ -95817,7 +96293,8 @@
       "layer": "sldu",
       "district": "23",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29023",
       "GEOID": "29023",
@@ -95839,7 +96316,8 @@
       "layer": "sldu",
       "district": "2",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29002",
       "GEOID": "29002",
@@ -95861,7 +96339,8 @@
       "layer": "sldu",
       "district": "20",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29020",
       "GEOID": "29020",
@@ -95883,7 +96362,8 @@
       "layer": "sldu",
       "district": "9",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29009",
       "GEOID": "29009",
@@ -95905,7 +96385,8 @@
       "layer": "sldu",
       "district": "19",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29019",
       "GEOID": "29019",
@@ -95927,7 +96408,8 @@
       "layer": "sldu",
       "district": "14",
       "sourceIds": [
-        "mo-upper"
+        "mo-upper",
+        "mo-upper-directory"
       ],
       "districtKey": "sldu:29014",
       "GEOID": "29014",
@@ -126060,6 +126542,7 @@
       "layer": "sldu",
       "district": "5",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41005",
@@ -126082,6 +126565,7 @@
       "layer": "sldu",
       "district": "26",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41026",
@@ -126104,6 +126588,7 @@
       "layer": "sldu",
       "district": "27",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41027",
@@ -126126,6 +126611,7 @@
       "layer": "sldu",
       "district": "18",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41018",
@@ -126148,6 +126634,7 @@
       "layer": "sldu",
       "district": "22",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41022",
@@ -126170,6 +126657,7 @@
       "layer": "sldu",
       "district": "8",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41008",
@@ -126192,6 +126680,7 @@
       "layer": "sldu",
       "district": "9",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41009",
@@ -126214,6 +126703,7 @@
       "layer": "sldu",
       "district": "3",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41003",
@@ -126236,6 +126726,7 @@
       "layer": "sldu",
       "district": "25",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41025",
@@ -126258,6 +126749,7 @@
       "layer": "sldu",
       "district": "6",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41006",
@@ -126280,6 +126772,7 @@
       "layer": "sldu",
       "district": "24",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41024",
@@ -126302,6 +126795,7 @@
       "layer": "sldu",
       "district": "14",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41014",
@@ -126324,6 +126818,7 @@
       "layer": "sldu",
       "district": "28",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41028",
@@ -126346,6 +126841,7 @@
       "layer": "sldu",
       "district": "7",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41007",
@@ -126368,6 +126864,7 @@
       "layer": "sldu",
       "district": "30",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41030",
@@ -126390,6 +126887,7 @@
       "layer": "sldu",
       "district": "20",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41020",
@@ -126412,6 +126910,7 @@
       "layer": "sldu",
       "district": "29",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41029",
@@ -126434,6 +126933,7 @@
       "layer": "sldu",
       "district": "13",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41013",
@@ -126456,6 +126956,7 @@
       "layer": "sldu",
       "district": "10",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41010",
@@ -126478,6 +126979,7 @@
       "layer": "sldu",
       "district": "23",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41023",
@@ -126500,6 +127002,7 @@
       "layer": "sldu",
       "district": "4",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41004",
@@ -126522,6 +127025,7 @@
       "layer": "sldu",
       "district": "17",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41017",
@@ -126544,6 +127048,7 @@
       "layer": "sldu",
       "district": "2",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41002",
@@ -126566,6 +127071,7 @@
       "layer": "sldu",
       "district": "1",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41001",
@@ -126588,6 +127094,7 @@
       "layer": "sldu",
       "district": "15",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41015",
@@ -126610,6 +127117,7 @@
       "layer": "sldu",
       "district": "12",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41012",
@@ -126632,6 +127140,7 @@
       "layer": "sldu",
       "district": "21",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41021",
@@ -126654,6 +127163,7 @@
       "layer": "sldu",
       "district": "11",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41011",
@@ -126676,6 +127186,7 @@
       "layer": "sldu",
       "district": "19",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41019",
@@ -126698,6 +127209,7 @@
       "layer": "sldu",
       "district": "16",
       "sourceIds": [
+        "or-legislators",
         "or-upper"
       ],
       "districtKey": "sldu:41016",
@@ -126720,6 +127232,7 @@
       "layer": "sldl",
       "district": "19",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41019",
@@ -126742,6 +127255,7 @@
       "layer": "sldl",
       "district": "1",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41001",
@@ -126764,6 +127278,7 @@
       "layer": "sldl",
       "district": "15",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41015",
@@ -126786,6 +127301,7 @@
       "layer": "sldl",
       "district": "25",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41025",
@@ -126808,6 +127324,7 @@
       "layer": "sldl",
       "district": "59",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41059",
@@ -126830,6 +127347,7 @@
       "layer": "sldl",
       "district": "11",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41011",
@@ -126852,6 +127370,7 @@
       "layer": "sldl",
       "district": "35",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41035",
@@ -126874,6 +127393,7 @@
       "layer": "sldl",
       "district": "46",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41046",
@@ -126896,6 +127416,7 @@
       "layer": "sldl",
       "district": "17",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41017",
@@ -126918,6 +127439,7 @@
       "layer": "sldl",
       "district": "39",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41039",
@@ -126940,6 +127462,7 @@
       "layer": "sldl",
       "district": "51",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41051",
@@ -126962,6 +127485,7 @@
       "layer": "sldl",
       "district": "31",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41031",
@@ -126984,6 +127508,7 @@
       "layer": "sldl",
       "district": "24",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41024",
@@ -127006,6 +127531,7 @@
       "layer": "sldl",
       "district": "20",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41020",
@@ -127028,6 +127554,7 @@
       "layer": "sldl",
       "district": "14",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41014",
@@ -127072,6 +127599,7 @@
       "layer": "sldl",
       "district": "8",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41008",
@@ -127094,6 +127622,7 @@
       "layer": "sldl",
       "district": "41",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41041",
@@ -127116,6 +127645,7 @@
       "layer": "sldl",
       "district": "10",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41010",
@@ -127138,6 +127668,7 @@
       "layer": "sldl",
       "district": "28",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41028",
@@ -127160,6 +127691,7 @@
       "layer": "sldl",
       "district": "12",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41012",
@@ -127182,6 +127714,7 @@
       "layer": "sldl",
       "district": "40",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41040",
@@ -127204,6 +127737,7 @@
       "layer": "sldl",
       "district": "52",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41052",
@@ -127226,6 +127760,7 @@
       "layer": "sldl",
       "district": "27",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41027",
@@ -127248,6 +127783,7 @@
       "layer": "sldl",
       "district": "49",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41049",
@@ -127270,6 +127806,7 @@
       "layer": "sldl",
       "district": "33",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41033",
@@ -127292,6 +127829,7 @@
       "layer": "sldl",
       "district": "32",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41032",
@@ -127314,6 +127852,7 @@
       "layer": "sldl",
       "district": "54",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41054",
@@ -127336,6 +127875,7 @@
       "layer": "sldl",
       "district": "58",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41058",
@@ -127358,6 +127898,7 @@
       "layer": "sldl",
       "district": "53",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41053",
@@ -127380,6 +127921,7 @@
       "layer": "sldl",
       "district": "18",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41018",
@@ -127402,6 +127944,7 @@
       "layer": "sldl",
       "district": "7",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41007",
@@ -127424,6 +127967,7 @@
       "layer": "sldl",
       "district": "21",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41021",
@@ -127446,6 +127990,7 @@
       "layer": "sldl",
       "district": "5",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41005",
@@ -127468,6 +128013,7 @@
       "layer": "sldl",
       "district": "56",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41056",
@@ -127490,6 +128036,7 @@
       "layer": "sldl",
       "district": "29",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41029",
@@ -127534,6 +128081,7 @@
       "layer": "sldl",
       "district": "13",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41013",
@@ -127556,6 +128104,7 @@
       "layer": "sldl",
       "district": "44",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41044",
@@ -127578,6 +128127,7 @@
       "layer": "sldl",
       "district": "48",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41048",
@@ -127600,6 +128150,7 @@
       "layer": "sldl",
       "district": "38",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41038",
@@ -127622,6 +128173,7 @@
       "layer": "sldl",
       "district": "42",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41042",
@@ -127644,6 +128196,7 @@
       "layer": "sldl",
       "district": "2",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41002",
@@ -127666,6 +128219,7 @@
       "layer": "sldl",
       "district": "60",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41060",
@@ -127688,6 +128242,7 @@
       "layer": "sldl",
       "district": "36",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41036",
@@ -127710,6 +128265,7 @@
       "layer": "sldl",
       "district": "55",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41055",
@@ -127732,6 +128288,7 @@
       "layer": "sldl",
       "district": "26",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41026",
@@ -127754,6 +128311,7 @@
       "layer": "sldl",
       "district": "50",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41050",
@@ -127776,6 +128334,7 @@
       "layer": "sldl",
       "district": "43",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41043",
@@ -127798,6 +128357,7 @@
       "layer": "sldl",
       "district": "23",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41023",
@@ -127820,6 +128380,7 @@
       "layer": "sldl",
       "district": "4",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41004",
@@ -127864,6 +128425,7 @@
       "layer": "sldl",
       "district": "30",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41030",
@@ -127886,6 +128448,7 @@
       "layer": "sldl",
       "district": "45",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41045",
@@ -127908,6 +128471,7 @@
       "layer": "sldl",
       "district": "47",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41047",
@@ -127930,6 +128494,7 @@
       "layer": "sldl",
       "district": "6",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41006",
@@ -127952,6 +128517,7 @@
       "layer": "sldl",
       "district": "37",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41037",
@@ -127974,6 +128540,7 @@
       "layer": "sldl",
       "district": "34",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41034",
@@ -127996,6 +128563,7 @@
       "layer": "sldl",
       "district": "9",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41009",
@@ -128018,6 +128586,7 @@
       "layer": "sldl",
       "district": "3",
       "sourceIds": [
+        "or-legislators",
         "or-lower"
       ],
       "districtKey": "sldl:41003",
@@ -139414,7 +139983,8 @@
       "layer": "sldu",
       "district": "1",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d1"
       ],
       "districtKey": "sldu:48001",
       "GEOID": "48001",
@@ -139436,7 +140006,8 @@
       "layer": "sldu",
       "district": "2",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d2"
       ],
       "districtKey": "sldu:48002",
       "GEOID": "48002",
@@ -139458,7 +140029,8 @@
       "layer": "sldu",
       "district": "3",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d3"
       ],
       "districtKey": "sldu:48003",
       "GEOID": "48003",
@@ -139480,7 +140052,8 @@
       "layer": "sldu",
       "district": "4",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d4"
       ],
       "districtKey": "sldu:48004",
       "GEOID": "48004",
@@ -139502,7 +140075,8 @@
       "layer": "sldu",
       "district": "5",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d5"
       ],
       "districtKey": "sldu:48005",
       "GEOID": "48005",
@@ -139524,7 +140098,8 @@
       "layer": "sldu",
       "district": "6",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d6"
       ],
       "districtKey": "sldu:48006",
       "GEOID": "48006",
@@ -139546,7 +140121,8 @@
       "layer": "sldu",
       "district": "7",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d7"
       ],
       "districtKey": "sldu:48007",
       "GEOID": "48007",
@@ -139568,7 +140144,8 @@
       "layer": "sldu",
       "district": "8",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d8"
       ],
       "districtKey": "sldu:48008",
       "GEOID": "48008",
@@ -139590,7 +140167,8 @@
       "layer": "sldu",
       "district": "9",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d9"
       ],
       "districtKey": "sldu:48009",
       "GEOID": "48009",
@@ -139612,7 +140190,8 @@
       "layer": "sldu",
       "district": "10",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d10"
       ],
       "districtKey": "sldu:48010",
       "GEOID": "48010",
@@ -139634,7 +140213,8 @@
       "layer": "sldu",
       "district": "11",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d11"
       ],
       "districtKey": "sldu:48011",
       "GEOID": "48011",
@@ -139656,7 +140236,8 @@
       "layer": "sldu",
       "district": "12",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d12"
       ],
       "districtKey": "sldu:48012",
       "GEOID": "48012",
@@ -139700,7 +140281,8 @@
       "layer": "sldu",
       "district": "14",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d14"
       ],
       "districtKey": "sldu:48014",
       "GEOID": "48014",
@@ -139722,7 +140304,8 @@
       "layer": "sldu",
       "district": "15",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d15"
       ],
       "districtKey": "sldu:48015",
       "GEOID": "48015",
@@ -139744,7 +140327,8 @@
       "layer": "sldu",
       "district": "16",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d16"
       ],
       "districtKey": "sldu:48016",
       "GEOID": "48016",
@@ -139766,7 +140350,8 @@
       "layer": "sldu",
       "district": "17",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d17"
       ],
       "districtKey": "sldu:48017",
       "GEOID": "48017",
@@ -139810,7 +140395,8 @@
       "layer": "sldu",
       "district": "19",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d19"
       ],
       "districtKey": "sldu:48019",
       "GEOID": "48019",
@@ -139832,7 +140418,8 @@
       "layer": "sldu",
       "district": "20",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d20"
       ],
       "districtKey": "sldu:48020",
       "GEOID": "48020",
@@ -139854,7 +140441,8 @@
       "layer": "sldu",
       "district": "21",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d21"
       ],
       "districtKey": "sldu:48021",
       "GEOID": "48021",
@@ -139876,7 +140464,8 @@
       "layer": "sldu",
       "district": "23",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d23"
       ],
       "districtKey": "sldu:48023",
       "GEOID": "48023",
@@ -139898,7 +140487,8 @@
       "layer": "sldu",
       "district": "24",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d24"
       ],
       "districtKey": "sldu:48024",
       "GEOID": "48024",
@@ -139920,7 +140510,8 @@
       "layer": "sldu",
       "district": "25",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d25"
       ],
       "districtKey": "sldu:48025",
       "GEOID": "48025",
@@ -139942,7 +140533,8 @@
       "layer": "sldu",
       "district": "26",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d26"
       ],
       "districtKey": "sldu:48026",
       "GEOID": "48026",
@@ -139964,7 +140556,8 @@
       "layer": "sldu",
       "district": "27",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d27"
       ],
       "districtKey": "sldu:48027",
       "GEOID": "48027",
@@ -139986,7 +140579,8 @@
       "layer": "sldu",
       "district": "28",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d28"
       ],
       "districtKey": "sldu:48028",
       "GEOID": "48028",
@@ -140008,7 +140602,8 @@
       "layer": "sldu",
       "district": "29",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d29"
       ],
       "districtKey": "sldu:48029",
       "GEOID": "48029",
@@ -140030,7 +140625,8 @@
       "layer": "sldu",
       "district": "30",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d30"
       ],
       "districtKey": "sldu:48030",
       "GEOID": "48030",
@@ -140052,7 +140648,8 @@
       "layer": "sldu",
       "district": "31",
       "sourceIds": [
-        "tx-upper"
+        "tx-upper",
+        "tx-upper-member-d31"
       ],
       "districtKey": "sldu:48031",
       "GEOID": "48031",
@@ -152614,7 +153211,8 @@
       "layer": "sldl",
       "district": "20",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53020",
       "GEOID": "53020",
@@ -152636,7 +153234,8 @@
       "layer": "sldl",
       "district": "7",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53007",
       "GEOID": "53007",
@@ -152658,7 +153257,8 @@
       "layer": "sldu",
       "district": "34",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53034",
       "GEOID": "53034",
@@ -152680,7 +153280,8 @@
       "layer": "sldl",
       "district": "2",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53002",
       "GEOID": "53002",
@@ -152702,7 +153303,8 @@
       "layer": "sldl",
       "district": "8",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53008",
       "GEOID": "53008",
@@ -152724,7 +153326,8 @@
       "layer": "sldu",
       "district": "22",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53022",
       "GEOID": "53022",
@@ -152746,7 +153349,8 @@
       "layer": "sldl",
       "district": "44",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53044",
       "GEOID": "53044",
@@ -152768,7 +153372,8 @@
       "layer": "sldl",
       "district": "11",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53011",
       "GEOID": "53011",
@@ -152790,7 +153395,8 @@
       "layer": "sldl",
       "district": "24",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53024",
       "GEOID": "53024",
@@ -152812,7 +153418,8 @@
       "layer": "sldl",
       "district": "36",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53036",
       "GEOID": "53036",
@@ -152834,7 +153441,8 @@
       "layer": "sldu",
       "district": "8",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53008",
       "GEOID": "53008",
@@ -152856,7 +153464,8 @@
       "layer": "sldu",
       "district": "20",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53020",
       "GEOID": "53020",
@@ -152878,7 +153487,8 @@
       "layer": "sldl",
       "district": "28",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53028",
       "GEOID": "53028",
@@ -152900,7 +153510,8 @@
       "layer": "sldl",
       "district": "12",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53012",
       "GEOID": "53012",
@@ -152922,7 +153533,8 @@
       "layer": "sldl",
       "district": "5",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53005",
       "GEOID": "53005",
@@ -152944,7 +153556,8 @@
       "layer": "sldu",
       "district": "24",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53024",
       "GEOID": "53024",
@@ -152966,7 +153579,8 @@
       "layer": "sldl",
       "district": "4",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53004",
       "GEOID": "53004",
@@ -152988,7 +153602,8 @@
       "layer": "sldu",
       "district": "4",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53004",
       "GEOID": "53004",
@@ -153010,7 +153625,8 @@
       "layer": "sldu",
       "district": "49",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53049",
       "GEOID": "53049",
@@ -153032,7 +153648,8 @@
       "layer": "sldl",
       "district": "8",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53008",
       "GEOID": "53008",
@@ -153054,7 +153671,8 @@
       "layer": "sldu",
       "district": "29",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53029",
       "GEOID": "53029",
@@ -153076,7 +153694,8 @@
       "layer": "sldl",
       "district": "15",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53015",
       "GEOID": "53015",
@@ -153098,7 +153717,8 @@
       "layer": "sldu",
       "district": "18",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53018",
       "GEOID": "53018",
@@ -153120,7 +153740,8 @@
       "layer": "sldl",
       "district": "38",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53038",
       "GEOID": "53038",
@@ -153142,7 +153763,8 @@
       "layer": "sldl",
       "district": "35",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53035",
       "GEOID": "53035",
@@ -153164,7 +153786,8 @@
       "layer": "sldl",
       "district": "32",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53032",
       "GEOID": "53032",
@@ -153186,7 +153809,8 @@
       "layer": "sldl",
       "district": "13",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53013",
       "GEOID": "53013",
@@ -153208,7 +153832,8 @@
       "layer": "sldu",
       "district": "45",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53045",
       "GEOID": "53045",
@@ -153230,7 +153855,8 @@
       "layer": "sldl",
       "district": "22",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53022",
       "GEOID": "53022",
@@ -153252,7 +153878,8 @@
       "layer": "sldl",
       "district": "44",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53044",
       "GEOID": "53044",
@@ -153274,7 +153901,8 @@
       "layer": "sldu",
       "district": "16",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53016",
       "GEOID": "53016",
@@ -153296,7 +153924,8 @@
       "layer": "sldl",
       "district": "1",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53001",
       "GEOID": "53001",
@@ -153318,7 +153947,8 @@
       "layer": "sldl",
       "district": "15",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53015",
       "GEOID": "53015",
@@ -153340,7 +153970,8 @@
       "layer": "sldl",
       "district": "9",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53009",
       "GEOID": "53009",
@@ -153362,7 +153993,8 @@
       "layer": "sldl",
       "district": "7",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53007",
       "GEOID": "53007",
@@ -153384,7 +154016,8 @@
       "layer": "sldl",
       "district": "47",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53047",
       "GEOID": "53047",
@@ -153406,7 +154039,8 @@
       "layer": "sldl",
       "district": "39",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53039",
       "GEOID": "53039",
@@ -153428,7 +154062,8 @@
       "layer": "sldl",
       "district": "46",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53046",
       "GEOID": "53046",
@@ -153450,7 +154085,8 @@
       "layer": "sldl",
       "district": "27",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53027",
       "GEOID": "53027",
@@ -153472,7 +154108,8 @@
       "layer": "sldl",
       "district": "34",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53034",
       "GEOID": "53034",
@@ -153494,7 +154131,8 @@
       "layer": "sldu",
       "district": "31",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53031",
       "GEOID": "53031",
@@ -153516,7 +154154,8 @@
       "layer": "sldl",
       "district": "38",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53038",
       "GEOID": "53038",
@@ -153538,7 +154177,8 @@
       "layer": "sldu",
       "district": "36",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53036",
       "GEOID": "53036",
@@ -153560,7 +154200,8 @@
       "layer": "sldu",
       "district": "25",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53025",
       "GEOID": "53025",
@@ -153582,7 +154223,8 @@
       "layer": "sldu",
       "district": "12",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53012",
       "GEOID": "53012",
@@ -153604,7 +154246,8 @@
       "layer": "sldl",
       "district": "45",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53045",
       "GEOID": "53045",
@@ -153626,7 +154269,8 @@
       "layer": "sldl",
       "district": "6",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53006",
       "GEOID": "53006",
@@ -153648,7 +154292,8 @@
       "layer": "sldl",
       "district": "33",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53033",
       "GEOID": "53033",
@@ -153670,7 +154315,8 @@
       "layer": "sldl",
       "district": "35",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53035",
       "GEOID": "53035",
@@ -153692,7 +154338,8 @@
       "layer": "sldl",
       "district": "11",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53011",
       "GEOID": "53011",
@@ -153714,7 +154361,8 @@
       "layer": "sldl",
       "district": "5",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53005",
       "GEOID": "53005",
@@ -153736,7 +154384,8 @@
       "layer": "sldu",
       "district": "23",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53023",
       "GEOID": "53023",
@@ -153758,7 +154407,8 @@
       "layer": "sldu",
       "district": "17",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53017",
       "GEOID": "53017",
@@ -153780,7 +154430,8 @@
       "layer": "sldu",
       "district": "11",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53011",
       "GEOID": "53011",
@@ -153802,7 +154453,8 @@
       "layer": "sldl",
       "district": "3",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53003",
       "GEOID": "53003",
@@ -153824,7 +154476,8 @@
       "layer": "sldu",
       "district": "6",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53006",
       "GEOID": "53006",
@@ -153846,7 +154499,8 @@
       "layer": "sldu",
       "district": "5",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53005",
       "GEOID": "53005",
@@ -153868,7 +154522,8 @@
       "layer": "sldl",
       "district": "25",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53025",
       "GEOID": "53025",
@@ -153890,7 +154545,8 @@
       "layer": "sldl",
       "district": "27",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53027",
       "GEOID": "53027",
@@ -153912,7 +154568,8 @@
       "layer": "sldu",
       "district": "47",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53047",
       "GEOID": "53047",
@@ -153934,7 +154591,8 @@
       "layer": "sldl",
       "district": "25",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53025",
       "GEOID": "53025",
@@ -153956,7 +154614,8 @@
       "layer": "sldu",
       "district": "14",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53014",
       "GEOID": "53014",
@@ -153978,7 +154637,8 @@
       "layer": "sldl",
       "district": "16",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53016",
       "GEOID": "53016",
@@ -154000,7 +154660,8 @@
       "layer": "sldl",
       "district": "1",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53001",
       "GEOID": "53001",
@@ -154022,7 +154683,8 @@
       "layer": "sldu",
       "district": "26",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53026",
       "GEOID": "53026",
@@ -154044,7 +154706,8 @@
       "layer": "sldl",
       "district": "28",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53028",
       "GEOID": "53028",
@@ -154066,7 +154729,8 @@
       "layer": "sldl",
       "district": "40",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53040",
       "GEOID": "53040",
@@ -154088,7 +154752,8 @@
       "layer": "sldl",
       "district": "18",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53018",
       "GEOID": "53018",
@@ -154110,7 +154775,8 @@
       "layer": "sldu",
       "district": "21",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53021",
       "GEOID": "53021",
@@ -154132,7 +154798,8 @@
       "layer": "sldu",
       "district": "40",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53040",
       "GEOID": "53040",
@@ -154154,7 +154821,8 @@
       "layer": "sldu",
       "district": "44",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53044",
       "GEOID": "53044",
@@ -154176,7 +154844,8 @@
       "layer": "sldl",
       "district": "39",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53039",
       "GEOID": "53039",
@@ -154198,7 +154867,8 @@
       "layer": "sldu",
       "district": "35",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53035",
       "GEOID": "53035",
@@ -154220,7 +154890,8 @@
       "layer": "sldl",
       "district": "43",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53043",
       "GEOID": "53043",
@@ -154242,7 +154913,8 @@
       "layer": "sldl",
       "district": "14",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53014",
       "GEOID": "53014",
@@ -154264,7 +154936,8 @@
       "layer": "sldl",
       "district": "2",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53002",
       "GEOID": "53002",
@@ -154286,7 +154959,8 @@
       "layer": "sldl",
       "district": "18",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53018",
       "GEOID": "53018",
@@ -154308,7 +154982,8 @@
       "layer": "sldu",
       "district": "2",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53002",
       "GEOID": "53002",
@@ -154330,7 +155005,8 @@
       "layer": "sldl",
       "district": "19",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53019",
       "GEOID": "53019",
@@ -154352,7 +155028,8 @@
       "layer": "sldl",
       "district": "29",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53029",
       "GEOID": "53029",
@@ -154374,7 +155051,8 @@
       "layer": "sldl",
       "district": "14",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53014",
       "GEOID": "53014",
@@ -154396,7 +155074,8 @@
       "layer": "sldl",
       "district": "29",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53029",
       "GEOID": "53029",
@@ -154418,7 +155097,8 @@
       "layer": "sldu",
       "district": "10",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53010",
       "GEOID": "53010",
@@ -154440,7 +155120,8 @@
       "layer": "sldl",
       "district": "23",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53023",
       "GEOID": "53023",
@@ -154462,7 +155143,8 @@
       "layer": "sldu",
       "district": "28",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53028",
       "GEOID": "53028",
@@ -154484,7 +155166,8 @@
       "layer": "sldl",
       "district": "33",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53033",
       "GEOID": "53033",
@@ -154506,7 +155189,8 @@
       "layer": "sldl",
       "district": "20",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53020",
       "GEOID": "53020",
@@ -154528,7 +155212,8 @@
       "layer": "sldl",
       "district": "3",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53003",
       "GEOID": "53003",
@@ -154550,7 +155235,8 @@
       "layer": "sldl",
       "district": "21",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53021",
       "GEOID": "53021",
@@ -154572,7 +155258,8 @@
       "layer": "sldu",
       "district": "33",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53033",
       "GEOID": "53033",
@@ -154594,7 +155281,8 @@
       "layer": "sldl",
       "district": "22",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53022",
       "GEOID": "53022",
@@ -154616,7 +155304,8 @@
       "layer": "sldl",
       "district": "10",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53010",
       "GEOID": "53010",
@@ -154638,7 +155327,8 @@
       "layer": "sldu",
       "district": "43",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53043",
       "GEOID": "53043",
@@ -154660,7 +155350,8 @@
       "layer": "sldl",
       "district": "31",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53031",
       "GEOID": "53031",
@@ -154682,7 +155373,8 @@
       "layer": "sldl",
       "district": "21",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53021",
       "GEOID": "53021",
@@ -154704,7 +155396,8 @@
       "layer": "sldl",
       "district": "46",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53046",
       "GEOID": "53046",
@@ -154726,7 +155419,8 @@
       "layer": "sldl",
       "district": "40",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53040",
       "GEOID": "53040",
@@ -154748,7 +155442,8 @@
       "layer": "sldl",
       "district": "36",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53036",
       "GEOID": "53036",
@@ -154770,7 +155465,8 @@
       "layer": "sldl",
       "district": "30",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53030",
       "GEOID": "53030",
@@ -154792,7 +155488,8 @@
       "layer": "sldu",
       "district": "3",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53003",
       "GEOID": "53003",
@@ -154814,7 +155511,8 @@
       "layer": "sldl",
       "district": "26",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53026",
       "GEOID": "53026",
@@ -154836,7 +155534,8 @@
       "layer": "sldu",
       "district": "38",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53038",
       "GEOID": "53038",
@@ -154858,7 +155557,8 @@
       "layer": "sldl",
       "district": "16",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53016",
       "GEOID": "53016",
@@ -154880,7 +155580,8 @@
       "layer": "sldl",
       "district": "42",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53042",
       "GEOID": "53042",
@@ -154902,7 +155603,8 @@
       "layer": "sldl",
       "district": "32",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53032",
       "GEOID": "53032",
@@ -154924,7 +155626,8 @@
       "layer": "sldl",
       "district": "48",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53048",
       "GEOID": "53048",
@@ -154946,7 +155649,8 @@
       "layer": "sldu",
       "district": "37",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53037",
       "GEOID": "53037",
@@ -154968,7 +155672,8 @@
       "layer": "sldu",
       "district": "32",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53032",
       "GEOID": "53032",
@@ -154990,7 +155695,8 @@
       "layer": "sldl",
       "district": "37",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53037",
       "GEOID": "53037",
@@ -155012,7 +155718,8 @@
       "layer": "sldl",
       "district": "9",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53009",
       "GEOID": "53009",
@@ -155034,7 +155741,8 @@
       "layer": "sldl",
       "district": "4",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53004",
       "GEOID": "53004",
@@ -155056,7 +155764,8 @@
       "layer": "sldu",
       "district": "9",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53009",
       "GEOID": "53009",
@@ -155078,7 +155787,8 @@
       "layer": "sldl",
       "district": "43",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53043",
       "GEOID": "53043",
@@ -155100,7 +155810,8 @@
       "layer": "sldl",
       "district": "10",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53010",
       "GEOID": "53010",
@@ -155122,7 +155833,8 @@
       "layer": "sldu",
       "district": "42",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53042",
       "GEOID": "53042",
@@ -155144,7 +155856,8 @@
       "layer": "sldu",
       "district": "7",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53007",
       "GEOID": "53007",
@@ -155166,7 +155879,8 @@
       "layer": "sldl",
       "district": "23",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53023",
       "GEOID": "53023",
@@ -155188,7 +155902,8 @@
       "layer": "sldu",
       "district": "48",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53048",
       "GEOID": "53048",
@@ -155210,7 +155925,8 @@
       "layer": "sldl",
       "district": "45",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53045",
       "GEOID": "53045",
@@ -155232,7 +155948,8 @@
       "layer": "sldu",
       "district": "1",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53001",
       "GEOID": "53001",
@@ -155254,7 +155971,8 @@
       "layer": "sldl",
       "district": "47",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53047",
       "GEOID": "53047",
@@ -155276,7 +155994,8 @@
       "layer": "sldl",
       "district": "12",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53012",
       "GEOID": "53012",
@@ -155298,7 +156017,8 @@
       "layer": "sldl",
       "district": "31",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53031",
       "GEOID": "53031",
@@ -155320,7 +156040,8 @@
       "layer": "sldl",
       "district": "49",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53049",
       "GEOID": "53049",
@@ -155342,7 +156063,8 @@
       "layer": "sldl",
       "district": "37",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53037",
       "GEOID": "53037",
@@ -155364,7 +156086,8 @@
       "layer": "sldl",
       "district": "17",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53017",
       "GEOID": "53017",
@@ -155386,7 +156109,8 @@
       "layer": "sldl",
       "district": "30",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53030",
       "GEOID": "53030",
@@ -155408,7 +156132,8 @@
       "layer": "sldl",
       "district": "41",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53041",
       "GEOID": "53041",
@@ -155430,7 +156155,8 @@
       "layer": "sldl",
       "district": "24",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53024",
       "GEOID": "53024",
@@ -155452,7 +156178,8 @@
       "layer": "sldl",
       "district": "34",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53034",
       "GEOID": "53034",
@@ -155474,7 +156201,8 @@
       "layer": "sldl",
       "district": "42",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53042",
       "GEOID": "53042",
@@ -155496,7 +156224,8 @@
       "layer": "sldu",
       "district": "15",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53015",
       "GEOID": "53015",
@@ -155518,7 +156247,8 @@
       "layer": "sldu",
       "district": "27",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53027",
       "GEOID": "53027",
@@ -155540,7 +156270,8 @@
       "layer": "sldu",
       "district": "46",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53046",
       "GEOID": "53046",
@@ -155562,7 +156293,8 @@
       "layer": "sldl",
       "district": "26",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53026",
       "GEOID": "53026",
@@ -155584,7 +156316,8 @@
       "layer": "sldl",
       "district": "6",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53006",
       "GEOID": "53006",
@@ -155606,7 +156339,8 @@
       "layer": "sldu",
       "district": "39",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53039",
       "GEOID": "53039",
@@ -155628,7 +156362,8 @@
       "layer": "sldl",
       "district": "48",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53048",
       "GEOID": "53048",
@@ -155650,7 +156385,8 @@
       "layer": "sldl",
       "district": "19",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53019",
       "GEOID": "53019",
@@ -155672,7 +156408,8 @@
       "layer": "sldu",
       "district": "13",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53013",
       "GEOID": "53013",
@@ -155694,7 +156431,8 @@
       "layer": "sldl",
       "district": "17",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53017",
       "GEOID": "53017",
@@ -155716,7 +156454,8 @@
       "layer": "sldu",
       "district": "41",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53041",
       "GEOID": "53041",
@@ -155738,7 +156477,8 @@
       "layer": "sldu",
       "district": "30",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53030",
       "GEOID": "53030",
@@ -155760,7 +156500,8 @@
       "layer": "sldu",
       "district": "19",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldu:53019",
       "GEOID": "53019",
@@ -155782,7 +156523,8 @@
       "layer": "sldl",
       "district": "49",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53049",
       "GEOID": "53049",
@@ -155804,7 +156546,8 @@
       "layer": "sldl",
       "district": "13",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53013",
       "GEOID": "53013",
@@ -155826,7 +156569,8 @@
       "layer": "sldl",
       "district": "41",
       "sourceIds": [
-        "wa-roster"
+        "wa-roster",
+        "wa-sponsors"
       ],
       "districtKey": "sldl:53041",
       "GEOID": "53041",
