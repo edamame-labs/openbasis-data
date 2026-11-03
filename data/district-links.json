@@ -68466,28 +68466,6 @@
       "geometryDistrictLabel": "130"
     },
     {
-      "officialId": "me-lower-c341bc8c2cff5ad9",
-      "state": "ME",
-      "layer": "sldl",
-      "district": "46",
-      "sourceIds": [
-        "me-lower"
-      ],
-      "districtKey": "sldl:23046",
-      "GEOID": "23046",
-      "boundaryId": "23046",
-      "geometrySourceIds": [
-        "census-sldl-23-page-0",
-        "census-sldl-metadata"
-      ],
-      "stateCrosswalkSourceIds": [
-        "census-state-23-page-0",
-        "census-state-metadata"
-      ],
-      "matchingRule": "state-chamber-canonical-basename",
-      "geometryDistrictLabel": "46"
-    },
-    {
       "officialId": "me-lower-bbb1c8ba6cf05371",
       "state": "ME",
       "layer": "sldl",
@@ -82786,6 +82764,28 @@
       ],
       "matchingRule": "state-chamber-canonical-basename",
       "geometryDistrictLabel": "16"
+    },
+    {
+      "officialId": "mi-lower-73aaf9a3292f7ac5",
+      "state": "MI",
+      "layer": "sldl",
+      "district": "4",
+      "sourceIds": [
+        "mi-lower"
+      ],
+      "districtKey": "sldl:26004",
+      "GEOID": "26004",
+      "boundaryId": "26004",
+      "geometrySourceIds": [
+        "census-sldl-26-page-0",
+        "census-sldl-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-26-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "state-chamber-canonical-basename",
+      "geometryDistrictLabel": "4"
     },
     {
       "officialId": "mi-upper-12647",
@@ -139871,28 +139871,6 @@
       "geometryDistrictLabel": "21"
     },
     {
-      "officialId": "tx-upper-bb1e9ed78f296988efa5",
-      "state": "TX",
-      "layer": "sldu",
-      "district": "22",
-      "sourceIds": [
-        "tx-upper"
-      ],
-      "districtKey": "sldu:48022",
-      "GEOID": "48022",
-      "boundaryId": "48022",
-      "geometrySourceIds": [
-        "census-sldu-48-page-0",
-        "census-sldu-metadata"
-      ],
-      "stateCrosswalkSourceIds": [
-        "census-state-48-page-0",
-        "census-state-metadata"
-      ],
-      "matchingRule": "state-chamber-canonical-basename",
-      "geometryDistrictLabel": "22"
-    },
-    {
       "officialId": "tx-upper-2bda5518a5b25cdc6f64",
       "state": "TX",
       "layer": "sldu",
@@ -173225,13 +173203,13 @@
   ],
   "unmatched": [],
   "summary": {
-    "officials": 7855,
-    "matched": 7855,
+    "officials": 7854,
+    "matched": 7854,
     "unmatched": 0,
     "matchedByLayer": {
       "cd": 433,
       "state": 100,
-      "sldu": 1962,
+      "sldu": 1961,
       "sldl": 5305,
       "sldl_floterial": 55
     },

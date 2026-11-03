@@ -4,13 +4,13 @@ Primary government data for U.S. federal, state, and county jurisdictions. Schem
 
 ## Included snapshot
 
-Counts below describe source retrievals on November 2, 2026 (UTC). `data/coverage.json` is the authority for subsequent refreshes.
+Counts below describe source observations from November 2–3, 2026 (UTC). `data/coverage.json` is the authority for subsequent refreshes.
 
 | Dataset | Coverage | Direct publisher |
 | --- | --- | --- |
 | U.S. House members | 433 records, 50 states | [House Clerk XML](https://clerk.house.gov/xml/lists/MemberData.xml) |
 | U.S. senators | 100 records, 50 states | [Senate XML](https://www.senate.gov/general/contact_information/senators_cfm.xml) |
-| State legislators | 7,322 people across all 50 states and 99 chambers | Direct official legislative websites; see [regional source notes](#state-source-notes) |
+| State legislators | 7,321 people across all 50 states and 99 chambers | Direct official legislative websites; see [regional source notes](#state-source-notes) |
 | Congressional and state legislative boundaries | Original Census polygons for all 50 states; Nebraska has no lower chamber | [Census Legislative service](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer) |
 | State geography | 50 states | [Census TIGERweb](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer) |
 | County and county-equivalent geography | 3,143 areas within the 50 states | Same Census service |
@@ -21,7 +21,7 @@ The current geography vintage is **January 1, 2026**, as reported in Census laye
 
 ## Files and evidence
 
-- `data/officials.json`: 7,855 source-backed records, with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available.
+- `data/officials.json`: 7,854 source-backed records, with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available.
 - `data/officials.csv`: the same records, with provenance encoded as JSON in `sources`.
 - `data/sources.json`: direct URLs, final URLs, publishers, retrieval timestamps, SHA-256 checksums of the acquired representation, and reported publication/session metadata. `representation` distinguishes HTTP response bodies from browser DOM captures; POST sources include their request method and body.
 - `data/geography/{states,counties}.geojson`: Census features, source identifiers and names, with collection-level query URL, checksum, metadata reference and vintage.
@@ -71,6 +71,7 @@ For comparison against a pinned release, first check out its Git commit. Fresh d
 - California records come from chamber roster cards. Assembly `Family, Given` names are reordered without enriching names. Explicitly labeled vacant cards are excluded.
 - North Carolina records come from the official 2025–2026 session member tables. Explicit `Resigned` or `Deceased` entries are excluded; biography anchor text supplies the name. District duplicates or a changed session label stop the build.
 - State record IDs identify source-specific roster entries, not permanent cross-release person identities. Multi-member districts use distinct source-person identifiers; CA/NC use chamber/district row IDs. Party labels preserve publisher wording and can differ between chambers.
+- Display names decode HTML entities, collapse repeated whitespace, remove the enumerated trailing academic/professional credentials in `person_name`, and normalize trailing lowercase `ll`/`lll` to Roman `II`/`III`. These are documented text transformations; source checksums refer to the original acquired representation. Leading initials remain part of the name. Explicit vacancy placeholders are excluded rather than published as people.
 - No missing member is automatically labeled a vacancy. No email addresses, telephone numbers, inferred contact routes, or third-party identifiers are added.
 - Adapters for the other 48 states are in `tools/regions/`. Their source-specific eligibility rules, session checks, pagination and multi-seat handling are documented below. Party and name fields are not enriched from other directories.
 - Geographic state codes, county codes, names, GEOIDs and geometry come directly from Census. Territories and DC are filtered out using Census state postal codes. Duplicate GEOIDs or a truncated server response stop the build.

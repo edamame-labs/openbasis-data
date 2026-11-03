@@ -19,13 +19,13 @@
   "coverageResiduals": 89,
   "sameLayerIntersections": 0,
   "linkage": {
-    "officials": 7855,
-    "matched": 7855,
+    "officials": 7854,
+    "matched": 7854,
     "unmatched": 0,
     "matchedByLayer": {
       "cd": 433,
       "state": 100,
-      "sldu": 1962,
+      "sldu": 1961,
       "sldl": 5305,
       "sldl_floterial": 55
     },

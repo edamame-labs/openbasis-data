@@ -4,15 +4,15 @@
 It does not read an existing officials dataset or a secondary directory. The
 counts are observed named members in the fetched official responses, not inferred
 statutory membership or a vacancy census. Source snapshots were fetched on
-November 1, 2026 (America/Los_Angeles).
+November 2, 2026 (America/Los_Angeles).
 
 | State | House / Assembly | Senate | Official primary roster |
 | --- | ---: | ---: | --- |
 | Louisiana | 103 | 38 | [House](https://house.louisiana.gov/H_Reps/H_Reps_FullInfo), [Senate](https://senate.la.gov/Senators_FullInfo.aspx) |
-| Maine | 151 | 35 | [House](https://legislature.maine.gov/house/MemberProfiles/List?sort=alpha), [Senate](https://legislature.maine.gov/senate/senators/9536) |
+| Maine | 150 | 35 | [House](https://legislature.maine.gov/house/MemberProfiles/List?sort=alpha), [Senate](https://legislature.maine.gov/senate/senators/9536) |
 | Maryland | 141 | 47 | [House of Delegates](https://mgaleg.maryland.gov/mgawebsite/Members/Index/house), [Senate](https://mgaleg.maryland.gov/mgawebsite/Members/Index/senate) |
 | Massachusetts | 157 | 40 | [House](https://malegislature.gov/Legislators/Members/House), [Senate](https://malegislature.gov/Legislators/Members/Senate) |
-| Michigan | 109 | 38 | [House](https://www.house.mi.gov/AllRepresentatives), [Senate](https://senate.michigan.gov/senators/all-senators/) |
+| Michigan | 110 | 38 | [House](https://www.house.mi.gov/AllRepresentatives), [Senate](https://senate.michigan.gov/senators/all-senators/) |
 | Minnesota | 134 | 67 | [House](https://www.house.mn.gov/members/list), [Senate API](https://www.mnsenate.gov/api/members), [Senate biennium](https://www.mnsenate.gov/api/bienniumYears) |
 | Mississippi | 120 | 51 | [House](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=H), [Senate](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=S) |
 | Missouri | 155 | 33 | [House](https://house.mo.gov/listmembers.aspx?year=2026&code=R), [Senate](https://www.senate.mo.gov/Senators) |
@@ -61,7 +61,9 @@ is inferred when a directory does not supply it.
   links are taken from the member cards. Vacant labels are excluded.
 - **Maine:** the House moved its alphabetical directory to
   `/house/MemberProfiles/List?sort=alpha`. Explicitly resigned and deceased entries
-  remain in that table and are excluded. Tribal representatives without numbered
+  remain in that table and are excluded. The November 2 refresh explicitly labels
+  Lydia Crafts (district 46) `Resigned`; this is an exclusion based on that
+  published status, rather than an inferred vacancy. Tribal representatives without numbered
   districts are outside this adapter's district-member scope. Senate profile paths
   use both `/district` and `/District`; matching is case-insensitive.
 - **Maryland:** leadership profiles appear again in the ordinary member directory.
@@ -72,7 +74,10 @@ is inferred when a directory does not supply it.
   Named districts are kept verbatim, without converting county-style names to
   invented district numbers. Vacant labels are not person records.
 - **Michigan:** the House states its current term expires December 31, 2026. The
-  Senate publishes its roster directly in the `senatorInfo` attribute of its
+  House entries can be either linked cards or plain `div.page-search-target`
+  cards without a party profile link. Both are included; an absent party remains
+  absent rather than excluding the person. The Senate publishes its roster directly
+  in the `senatorInfo` attribute of its
   `senator-list` component; this is first-party page data, not a separate aggregator.
   Linked caucus websites are not used as data inputs.
 - **Minnesota:** House data comes only from the current alphabetical `Alpha` tab;

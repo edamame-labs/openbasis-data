@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-02T04:25:17.589397+00:00",
+  "generatedAt": "2026-11-03T00:26:40.952125+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
-    "state": 7322,
+    "state": 7321,
     "federal": 533
   },
   "rosters": [
@@ -801,7 +801,7 @@
     },
     {
       "source": "me-lower",
-      "records": 151
+      "records": 150
     },
     {
       "source": "me-upper",
@@ -825,7 +825,7 @@
     },
     {
       "source": "mi-lower",
-      "records": 109
+      "records": 110
     },
     {
       "source": "mi-upper",
@@ -989,7 +989,7 @@
     },
     {
       "source": "tx-upper",
-      "records": 31
+      "records": 30
     },
     {
       "source": "tx-lower",
@@ -1442,7 +1442,7 @@
         },
         "lower": {
           "status": "collected",
-          "records": 151
+          "records": 150
         }
       },
       "blockers": [],
@@ -1460,7 +1460,7 @@
         },
         "lower": {
           "status": "collected",
-          "records": 109
+          "records": 110
         }
       },
       "blockers": [],
@@ -1830,7 +1830,7 @@
       "legislativeChambers": {
         "upper": {
           "status": "collected",
-          "records": 31
+          "records": 30
         },
         "lower": {
           "status": "collected",
@@ -1982,13 +1982,13 @@
     },
     "areaIntersectionPairs": 47181,
     "officialGeometryLinks": {
-      "officials": 7855,
-      "matched": 7855,
+      "officials": 7854,
+      "matched": 7854,
       "unmatched": 0,
       "matchedByLayer": {
         "cd": 433,
         "state": 100,
-        "sldu": 1962,
+        "sldu": 1961,
         "sldl": 5305,
         "sldl_floterial": 55
       },

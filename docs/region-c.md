@@ -1,7 +1,7 @@
 # Official legislative roster adapters: region C
 
 `tools/regions/region_c.py` collects only responses issued by state legislatures.
-The November 1, 2026 validation collected **1,813 people** from 28 HTTP responses.
+The November 2, 2026 validation collected **1,812 people** from 28 HTTP responses.
 Counts describe included people, not statutory seats. Omitted rows never establish
 vacancies. Ohio and Pennsylvania are implemented separately in `region_d.py`.
 
@@ -13,7 +13,7 @@ vacancies. Ohio and Pennsylvania are implemented separately in `region_d.py`.
 | South Carolina | 46 | 124 | [Senate](https://www.scstatehouse.gov/member.php?chamber=S), [House](https://www.scstatehouse.gov/member.php?chamber=H): the pages explicitly identify “Current Session By Last Name”; one `memberOutline` per person. |
 | South Dakota | 35 | 70 | [Official sessions API](https://sdlegislature.gov/api/Sessions) explicitly identifies 2026, SessionId 71, as `CurrentSession=true`; [official address-list CSV](https://sdlegislature.gov/api/SessionMembers/71.csv) provides `Body`, names, party and district. Future visible 2027 session excluded. |
 | Tennessee | 33 | 97 | [Senate](https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=S&ga=114), [House](https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=H&ga=114): explicitly select 114th General Assembly, 2025–2026. Exclude vacant placeholders. Default directory now selects 115, while the [official homepage](https://www.capitol.tn.gov/) says the 115th convenes January 12, 2027; therefore the default future session is not used. |
-| Texas | 31 | 148 | [Senate](https://senate.texas.gov/members.php) explicitly identifies 89th Legislature; [House](https://house.texas.gov/members) embeds structured `get-members` data; only `active=1`. |
+| Texas | 30 | 148 | [Senate](https://senate.texas.gov/members.php) explicitly identifies 89th Legislature and defines `*` as a currently vacant seat; starred placeholders are excluded; [House](https://house.texas.gov/members) embeds structured `get-members` data; only `active=1`. |
 | Utah | 29 | 74 | [Government legislator JSON](https://le.utah.gov/data/legislators.json), directly requested by the [Senate roster](https://senate.utah.gov/senate-roster/) page's published JavaScript. Require each record's legislation link to identify `sess=2026GS`; split explicit `house=S/H`. |
 | Vermont | 30 | 150 | [Senate JSON](https://legislature.vermont.gov/people/loadAll/2026/Senate), [House JSON](https://legislature.vermont.gov/people/loadAll/2026/House), exact AJAX URLs from [Senate directory](https://legislature.vermont.gov/people/all/2026/Senate) and [House directory](https://legislature.vermont.gov/people/all/2026/House), labeled 2025–2026 session. Exclude nonempty `TerminationReason`: 2 former senators and 8 former representatives. |
 | Virginia | 40 | 99 | [Senate directory](https://apps.senate.virginia.gov/Senator/index.php), [House directory](https://house.vga.virginia.gov/members), the latter explicitly headed “Members of the 2026 Virginia House of Delegates.” Parse directory member cards; do not extract unrelated staff. |
