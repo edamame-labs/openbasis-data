@@ -1,0 +1,11 @@
+# Selected Midwest media outcome statements
+
+`tools/temporal/media_midwest.py` preserves candidate-specific outcomes explicitly stated in [Wisconsin Public Radio's November 4, 2026 legislative report](https://www.wpr.org/news/wisconsin-assembly-senate-election-results-2026). The observed report supports two Senate and eleven Assembly outcomes with exact candidate names and district numbers in the same paragraph. Active and passive loss statements are interpreted in their published direction, never by sorting votes.
+
+The calling organization is Wisconsin Public Radio. AP widgets embedded in the article are separate publications and do not make the original prose an AP call. Original HTTP evidence, exact source ID/URL, checksum, observation timestamp, publisher publication/update times, paragraph index and paragraph text checksum are retained. `sourceProof` preserves the exact outcome verb, candidate name, district and winning side of the clause without reproducing the article. The parser validates all selected statements against the actual source before publishing them.
+
+Media outcome statements remain separate from official certification, government rosters, terms and service. Publication/update time is not a call timestamp. Unknown party labels, publisher candidate IDs and publisher race IDs remain unknown. Two other named Senate outcomes without an explicit district in their paragraph are excluded; no geographic assignment is guessed. References to a candidate merely facing a challenger, leading the vote, conceding, or claiming victory are not winning calls.
+
+This is selected outcome coverage, not a complete Wisconsin election dataset or an exhaustive list of uncalled races. Michigan, Iowa, Illinois, Indiana and Ohio remain pending in this adapter until actual candidate-specific source observations are acquired. Every assigned state/chamber keeps an audit record; absent outcomes never establish no election or a vacancy.
+
+Run `.venv-geo/bin/python -m unittest discover -s tools -p 'test_temporal_media_midwest.py'`. The collector returns `designations`, `raceStatuses`, `stateAudits`, `sourceObservations`, and acquisition/parser coverage diagnostics. Offline replay preserves the original source observation epoch.

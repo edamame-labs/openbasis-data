@@ -16,6 +16,8 @@
 - Derived data must reference its inputs and document transformations, matching rules, assumptions, exclusions, and validation checks so another person can reproduce it. Label inferred values and unresolved conflicts; do not present them as source facts.
 - Document repeatable collection and verification workflows with source endpoints, commands, dependencies, output schemas, and known limitations. Where useful, provide a reusable SKILL.md with supporting scripts and references. Keep public-data verification instructions accessible without the private application repository, and exclude credentials and private conversations.
 
+- Election race calls may also use directly published reporting from established news organizations, including attributed AP calls carried by a reporting partner. Keep media calls separate from official declarations, certification, vote-derived leaders and serving memberships. Record the calling organization, publishing outlet, direct URL, exact winner/call marker, actual observation time and publisher call time when provided. Do not substitute polling, candidate victory claims, concessions or calculated vote leads for a media race call. The government-only requirement remains in effect for other data classes.
+
 ## Legislative roster collection
 
 - Track coverage separately for each chamber; Nebraska is unicameral. A collected chamber is not a census of legally occupied seats, and missing rows do not establish vacancies.

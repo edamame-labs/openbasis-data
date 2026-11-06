@@ -2,6 +2,10 @@
 
 Primary government data for U.S. federal, state, and county jurisdictions. Schema version 2 replaces the former aggregated directory and district-overlap dataset.
 
+## Election outcome snapshot
+
+The separate [media outcome table](docs/MEDIA-RESULTS.md) contains the November 5, 2026 observation of AP state legislative publications for all 50 states, federal and governor calls carried by NPR, and independent newsroom assertions. It preserves multiple winners, pending results, direct references and original observation times. Media calls do not establish official certification or serving membership. The existing `data/` distribution remains unchanged.
+
 ## Included snapshot
 
 Counts below describe source observations from November 2–3, 2026 (UTC). `data/coverage.json` is the authority for subsequent refreshes.

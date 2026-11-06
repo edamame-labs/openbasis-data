@@ -37,7 +37,7 @@ def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browser_snapshots=False):
+def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browser_snapshots=False, user_agent=None):
     cache = ROOT / '.source-cache'
     cache.mkdir(exist_ok=True)
     assert method in {'GET','POST'} and ((method=='GET' and data is None) or (method=='POST' and isinstance(data,str) and data)), 'Unsupported source request'
@@ -55,6 +55,7 @@ def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browse
             assert dt.timedelta(0)<=age<=dt.timedelta(hours=24), 'Browser observation older than 24 hours; capture it again'
     else:
         command = ['curl', '--fail', '--silent', '--show-error', '--location', '--max-time', '120', '--proto', '=https', '--proto-redir', '=https', '--write-out', '\n%{url_effective}']
+        if user_agent: command.extend(['--user-agent',user_agent])
         if method=='POST': command.extend(['--request','POST','--data-raw',data])
         result = subprocess.run(command+[url], check=True, capture_output=True)
         raw, final = result.stdout.rsplit(b'\n', 1)
@@ -63,6 +64,7 @@ def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browse
         file = digest(raw) + '.raw'
         (cache / file).write_bytes(raw)
         item = dict(url=url, retrievedAt=dt.datetime.now(dt.timezone.utc).isoformat(), sha256=digest(raw), file=file, finalUrl=final_url, requestMethod=method, requestBody=data)
+        if user_agent:item['acquisition']=dict(method='http-get' if method=='GET' else 'http-post',requestHeaders={'User-Agent':user_agent})
         path.write_text(json.dumps(item, indent=2) + '\n')
     return raw, dict(id=key, name=publisher, url=url, retrievedAt=item['retrievedAt'], sha256=item['sha256'], finalUrl=item.get('finalUrl',url), publishedAt=None, representation=item.get('representation','http-response-body'), requestMethod=item.get('requestMethod','GET'), requestBody=item.get('requestBody'), **({'acquisition':item['acquisition']} if 'acquisition' in item else {}))
 

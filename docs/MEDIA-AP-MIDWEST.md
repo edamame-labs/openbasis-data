@@ -1,0 +1,11 @@
+# Direct AP Midwest and Plains legislative calls
+
+`tools/temporal/media_ap_midwest.py` collects Associated Press metadata and progress JSON for Wisconsin, Michigan, Iowa, Illinois, Indiana, Ohio, North Dakota, South Dakota, Nebraska, Kansas, Missouri and Oklahoma. Each exact publication URL is cataloged beneath `https://interactives.apelections.org/election-results/data-live/2026-11-03/results/races/{state}/`. Metadata and progress are separate observations; an atomic simultaneous snapshot is not claimed.
+
+The first acquired publications contain 1,368 state legislative races and 1,352 explicitly marked winning candidates. Candidate counts are not called-race counts: North Dakota and South Dakota include multiwinner contests. The publications also contain three North Dakota, two Kansas and one Oklahoma `Special General` contests. Exact publisher race IDs and types must remain distinct from regular/general contests, including when district numbers overlap.
+
+The shared `tools/temporal/media_ap.py` parser interprets AP's explicit candidate winner fields and metadata identities. Votes, candidate ordering, reporting percentages, uncontested labels and chamber-control stories never substitute for positive candidate call flags. All selected race statuses, including uncalled races, remain in the packet. Certification, service dates and official membership are separate from these media calls.
+
+Acquisition uses ordinary unauthenticated HTTPS requests with a standard `Mozilla/5.0` user-agent. Original response bodies, including gzip compression, are retained unchanged with actual HTTP completion timestamps, request URLs, final URLs and SHA-256 checksums. Cache receipts record the user-agent and observed HTTP status. Decompression is only an extraction step. Offline replay preserves the acquisition epoch. No credentials, paywall bypass or CAPTCHA solving is used.
+
+Run `.venv-geo/bin/python -m unittest discover -s tools -p 'test_temporal_media_ap_midwest.py'`. `collect(fetch, offline=True)` returns `designations`, `raceStatuses`, `stateAudits`, `sourceObservations` and acquisition/parser diagnostics. Every state and chamber retains explicit coverage; missing offices never establish that no election occurred. Nebraska's source uses office `Z` for its unicameral legislature; an absent `Y` feed is not itself an election-universe determination.

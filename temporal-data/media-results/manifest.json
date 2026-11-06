@@ -1,0 +1,521 @@
+{
+  "coverage": {
+    "byBody": [
+      {
+        "body": "governor",
+        "called": 34,
+        "observedRaces": 36,
+        "uncalled": 2
+      },
+      {
+        "body": "state-lower",
+        "called": 4072,
+        "observedRaces": 4573,
+        "uncalled": 501
+      },
+      {
+        "body": "state-upper",
+        "called": 1066,
+        "observedRaces": 1183,
+        "uncalled": 117
+      },
+      {
+        "body": "us-house",
+        "called": 381,
+        "observedRaces": 435,
+        "uncalled": 54
+      },
+      {
+        "body": "us-senate",
+        "called": 33,
+        "observedRaces": 35,
+        "uncalled": 2
+      }
+    ],
+    "byState": [
+      {
+        "explicitLegislativeWinnerDesignations": 18,
+        "legislativeRacesWithoutWinnerMarkers": 32,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 50,
+        "state": "AK"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 138,
+        "legislativeRacesWithoutWinnerMarkers": 2,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 140,
+        "state": "AL"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 117,
+        "legislativeRacesWithoutWinnerMarkers": 2,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 119,
+        "state": "AR"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 56,
+        "legislativeRacesWithoutWinnerMarkers": 20,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 60,
+        "state": "AZ"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 64,
+        "legislativeRacesWithoutWinnerMarkers": 36,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 100,
+        "state": "CA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 74,
+        "legislativeRacesWithoutWinnerMarkers": 12,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 86,
+        "state": "CO"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 160,
+        "legislativeRacesWithoutWinnerMarkers": 27,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 187,
+        "state": "CT"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 51,
+        "legislativeRacesWithoutWinnerMarkers": 1,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 52,
+        "state": "DE"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 134,
+        "legislativeRacesWithoutWinnerMarkers": 7,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 141,
+        "state": "FL"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 228,
+        "legislativeRacesWithoutWinnerMarkers": 8,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 236,
+        "state": "GA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 58,
+        "legislativeRacesWithoutWinnerMarkers": 7,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 65,
+        "state": "HI"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 114,
+        "legislativeRacesWithoutWinnerMarkers": 11,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 125,
+        "state": "IA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 105,
+        "legislativeRacesWithoutWinnerMarkers": 0,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 105,
+        "state": "ID"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 149,
+        "legislativeRacesWithoutWinnerMarkers": 8,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 157,
+        "state": "IL"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 119,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 125,
+        "state": "IN"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 114,
+        "legislativeRacesWithoutWinnerMarkers": 13,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 127,
+        "state": "KS"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 118,
+        "legislativeRacesWithoutWinnerMarkers": 1,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 119,
+        "state": "KY"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 1,
+        "legislativeRacesWithoutWinnerMarkers": 0,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 1,
+        "state": "LA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 194,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 200,
+        "state": "MA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 140,
+        "legislativeRacesWithoutWinnerMarkers": 21,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 118,
+        "state": "MD"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 157,
+        "legislativeRacesWithoutWinnerMarkers": 29,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 186,
+        "state": "ME"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 142,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 148,
+        "state": "MI"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 195,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 201,
+        "state": "MN"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 177,
+        "legislativeRacesWithoutWinnerMarkers": 3,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 180,
+        "state": "MO"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 0,
+        "legislativeRacesWithoutWinnerMarkers": 2,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 2,
+        "state": "MS"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 121,
+        "legislativeRacesWithoutWinnerMarkers": 4,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 125,
+        "state": "MT"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 164,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 170,
+        "state": "NC"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 67,
+        "legislativeRacesWithoutWinnerMarkers": 3,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 51,
+        "state": "ND"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 21,
+        "legislativeRacesWithoutWinnerMarkers": 4,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 25,
+        "state": "NE"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 213,
+        "legislativeRacesWithoutWinnerMarkers": 90,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 227,
+        "state": "NH"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 0,
+        "legislativeRacesWithoutWinnerMarkers": 0,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 0,
+        "state": "NJ"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 70,
+        "legislativeRacesWithoutWinnerMarkers": 1,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 71,
+        "state": "NM"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 44,
+        "legislativeRacesWithoutWinnerMarkers": 9,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 53,
+        "state": "NV"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 192,
+        "legislativeRacesWithoutWinnerMarkers": 21,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 213,
+        "state": "NY"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 110,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 116,
+        "state": "OH"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 122,
+        "legislativeRacesWithoutWinnerMarkers": 4,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 126,
+        "state": "OK"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 55,
+        "legislativeRacesWithoutWinnerMarkers": 20,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 75,
+        "state": "OR"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 224,
+        "legislativeRacesWithoutWinnerMarkers": 4,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 228,
+        "state": "PA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 107,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 113,
+        "state": "RI"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 119,
+        "legislativeRacesWithoutWinnerMarkers": 6,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 125,
+        "state": "SC"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 101,
+        "legislativeRacesWithoutWinnerMarkers": 1,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 72,
+        "state": "SD"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 115,
+        "legislativeRacesWithoutWinnerMarkers": 1,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 116,
+        "state": "TN"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 154,
+        "legislativeRacesWithoutWinnerMarkers": 14,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 168,
+        "state": "TX"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 35,
+        "legislativeRacesWithoutWinnerMarkers": 55,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 90,
+        "state": "UT"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 1,
+        "legislativeRacesWithoutWinnerMarkers": 0,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 1,
+        "state": "VA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 167,
+        "legislativeRacesWithoutWinnerMarkers": 7,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 125,
+        "state": "VT"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 44,
+        "legislativeRacesWithoutWinnerMarkers": 78,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 122,
+        "state": "WA"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 116,
+        "legislativeRacesWithoutWinnerMarkers": 0,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 116,
+        "state": "WI"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 108,
+        "legislativeRacesWithoutWinnerMarkers": 11,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 119,
+        "state": "WV"
+      },
+      {
+        "explicitLegislativeWinnerDesignations": 78,
+        "legislativeRacesWithoutWinnerMarkers": 1,
+        "missingRowsEstablishNoElection": false,
+        "observedLegislativeRaces": 79,
+        "state": "WY"
+      }
+    ],
+    "calledMediaRaces": 5586,
+    "explicitUncontestedWins": 1655,
+    "mediaWinnerDesignations": 5819,
+    "nprObservedRaces": 506,
+    "observedMediaRaces": 6262,
+    "partialPublisherCalledRaces": 20,
+    "positivePublisherOutcomeTypes": {
+      "explicit-AP-race-call": 3716,
+      "explicit-media-winner-flag": 448,
+      "explicit-publisher-uncontested-win": 1655
+    },
+    "scope": "Explicit publisher media calls only; government certification and serving membership remain separate",
+    "standaloneNamedAssertions": 161,
+    "stateLegislativeSourceStatesChecked": [
+      "AK",
+      "AL",
+      "AR",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "IA",
+      "ID",
+      "IL",
+      "IN",
+      "KS",
+      "KY",
+      "LA",
+      "MA",
+      "MD",
+      "ME",
+      "MI",
+      "MN",
+      "MO",
+      "MS",
+      "MT",
+      "NC",
+      "ND",
+      "NE",
+      "NH",
+      "NJ",
+      "NM",
+      "NV",
+      "NY",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "VT",
+      "WA",
+      "WI",
+      "WV",
+      "WY"
+    ],
+    "stateLegislativeSourceStatesCheckedCount": 50,
+    "stateLegislativeStates": [
+      "AK",
+      "AL",
+      "AR",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "IA",
+      "ID",
+      "IL",
+      "IN",
+      "KS",
+      "KY",
+      "LA",
+      "MA",
+      "MD",
+      "ME",
+      "MI",
+      "MN",
+      "MO",
+      "MS",
+      "MT",
+      "NC",
+      "ND",
+      "NE",
+      "NH",
+      "NM",
+      "NV",
+      "NY",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "VT",
+      "WA",
+      "WI",
+      "WV",
+      "WY"
+    ],
+    "uncalledMediaRaces": 676
+  },
+  "datasetId": "media-results:aa368449507993be4ab7623e59d1253bb6c7a916c8cb4a13a48fbed652e1c6e5",
+  "files": [
+    {
+      "bytes": 1344345,
+      "path": "results.json.gz",
+      "sha256": "6e0549b3c982e0c31e9598d3a99105b93b79dcfbcf2b65183a8f2693b82a493f"
+    },
+    {
+      "bytes": 3842603,
+      "path": "results.csv",
+      "sha256": "4273807843b48ce0e0e1a46de25bebf2f45fe27bd5a3d2c18144a683a6a056f0"
+    }
+  ],
+  "schemaVersion": 1,
+  "sourceObservationCount": 127
+}

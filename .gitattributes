@@ -1,0 +1,2 @@
+# Preserve CSV record terminators used by the standard library CSV writer.
+*.csv whitespace=cr-at-eol

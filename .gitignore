@@ -5,3 +5,6 @@
 __pycache__/
 /.venv-geo/
 /.geo-stage-*/
+/.temporal-evidence/
+/temporal-data/media-results/history/
+/temporal-data/media-results/results.json
