@@ -29,7 +29,7 @@ missing geometry, or an unexpected layer description. Query analytical geometry
 without server generalization or coordinate rounding. Independently simplified
 polygons can introduce artificial gaps and intersections.
 
-`tools/district_sources.py` fetches all five analytical layers separately by
+`tools/district_sources.py` fetches all six analytical layers separately by
 state, orders paginated features by `OBJECTID`, checks an independent feature
 count, and rejects duplicate identifiers. All 50 states are required; Nebraska
 has no lower-chamber layer. Census pseudo-districts such as `ZZZ` remain in the
@@ -175,7 +175,7 @@ the 24-hour source-age gate concerns observation, not publication currency.
 
 | Path | Contents |
 | --- | --- |
-| `geography/regions/<state>/<layer>.geojson.gz` | State-scoped analytical polygons; layers `state`, `county`, `cd`, `sldu`, `sldl`, plus NH `sldl_floterial` |
+| `geography/regions/<state>/<layer>.geojson.gz` | State-scoped analytical polygons; layers `state`, `county`, `cd`, `sldu`, `sldl`, `cd120`, plus NH `sldl_floterial` |
 | `geography/index.json` | Layer metadata, source IDs, per-state paths and counts |
 | `overlaps/<state>.json` | Areas, pairwise shares, projections, input references, repairs and diagnostics |
 | `overlaps/<state>.csv` | Flat positive-area intersection rows |

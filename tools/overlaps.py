@@ -12,7 +12,7 @@ from shapely.geometry import shape
 from shapely.ops import unary_union
 from shapely import STRtree, make_valid
 
-BASE_LAYERS = ['state','county','cd','sldu','sldl']
+BASE_LAYERS = ['state','county','cd','sldu','sldl','cd120']
 LAYER_ORDER = BASE_LAYERS + ['sldl_floterial']
 PROJECTIONS = {
     'conus': '+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +datum=WGS84 +units=m +type=crs',

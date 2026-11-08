@@ -536,7 +536,107 @@
     "census-sldl-55-count",
     "census-sldl-55-page-0",
     "census-sldl-56-count",
-    "census-sldl-56-page-0"
+    "census-sldl-56-page-0",
+    "census-cd120-metadata",
+    "census-cd120-29-withheld",
+    "census-cd120-01-count",
+    "census-cd120-01-page-0",
+    "census-cd120-02-count",
+    "census-cd120-02-page-0",
+    "census-cd120-04-count",
+    "census-cd120-04-page-0",
+    "census-cd120-05-count",
+    "census-cd120-05-page-0",
+    "census-cd120-06-count",
+    "census-cd120-06-page-0",
+    "census-cd120-08-count",
+    "census-cd120-08-page-0",
+    "census-cd120-09-count",
+    "census-cd120-09-page-0",
+    "census-cd120-10-count",
+    "census-cd120-10-page-0",
+    "census-cd120-12-count",
+    "census-cd120-12-page-0",
+    "census-cd120-13-count",
+    "census-cd120-13-page-0",
+    "census-cd120-15-count",
+    "census-cd120-15-page-0",
+    "census-cd120-16-count",
+    "census-cd120-16-page-0",
+    "census-cd120-17-count",
+    "census-cd120-17-page-0",
+    "census-cd120-18-count",
+    "census-cd120-18-page-0",
+    "census-cd120-19-count",
+    "census-cd120-19-page-0",
+    "census-cd120-20-count",
+    "census-cd120-20-page-0",
+    "census-cd120-21-count",
+    "census-cd120-21-page-0",
+    "census-cd120-22-count",
+    "census-cd120-22-page-0",
+    "census-cd120-23-count",
+    "census-cd120-23-page-0",
+    "census-cd120-24-count",
+    "census-cd120-24-page-0",
+    "census-cd120-25-count",
+    "census-cd120-25-page-0",
+    "census-cd120-26-count",
+    "census-cd120-26-page-0",
+    "census-cd120-27-count",
+    "census-cd120-27-page-0",
+    "census-cd120-28-count",
+    "census-cd120-28-page-0",
+    "census-cd120-30-count",
+    "census-cd120-30-page-0",
+    "census-cd120-31-count",
+    "census-cd120-31-page-0",
+    "census-cd120-32-count",
+    "census-cd120-32-page-0",
+    "census-cd120-33-count",
+    "census-cd120-33-page-0",
+    "census-cd120-34-count",
+    "census-cd120-34-page-0",
+    "census-cd120-35-count",
+    "census-cd120-35-page-0",
+    "census-cd120-36-count",
+    "census-cd120-36-page-0",
+    "census-cd120-37-count",
+    "census-cd120-37-page-0",
+    "census-cd120-38-count",
+    "census-cd120-38-page-0",
+    "census-cd120-39-count",
+    "census-cd120-39-page-0",
+    "census-cd120-40-count",
+    "census-cd120-40-page-0",
+    "census-cd120-41-count",
+    "census-cd120-41-page-0",
+    "census-cd120-42-count",
+    "census-cd120-42-page-0",
+    "census-cd120-44-count",
+    "census-cd120-44-page-0",
+    "census-cd120-45-count",
+    "census-cd120-45-page-0",
+    "census-cd120-46-count",
+    "census-cd120-46-page-0",
+    "census-cd120-47-count",
+    "census-cd120-47-page-0",
+    "census-cd120-48-count",
+    "census-cd120-48-page-0",
+    "census-cd120-49-count",
+    "census-cd120-49-page-0",
+    "census-cd120-50-count",
+    "census-cd120-50-page-0",
+    "census-cd120-51-count",
+    "census-cd120-51-page-0",
+    "census-cd120-53-count",
+    "census-cd120-53-page-0",
+    "census-cd120-54-count",
+    "census-cd120-54-page-0",
+    "census-cd120-55-count",
+    "census-cd120-55-page-0",
+    "census-cd120-56-count",
+    "census-cd120-56-page-0"
   ],
   "layers": {
     "state": {
@@ -599,6 +699,25 @@
       "excludedJurisdictions": "District of Columbia and territories",
       "missingChamber": "Nebraska has no lower chamber"
     },
+    "cd120": {
+      "id": 0,
+      "name": "120th Congressional Districts",
+      "districtField": "CD120",
+      "vintage": "2026-01-01",
+      "mapCycle": "120th Congress",
+      "applicability": "120th Congress plans, first used in the 2026 elections; not joined to current officeholders",
+      "generalization": "none requested",
+      "coordinateReferenceSystem": "EPSG:4326",
+      "excludedJurisdictions": "District of Columbia and territories",
+      "missingChamber": null,
+      "withheldStates": [
+        {
+          "state": "29",
+          "reason": "Census reports that Missouri 120th Congress geometry still reflects a plan the U.S. Supreme Court did not allow for the 2026 elections; the 2022 plan (published as cd) applies.",
+          "sourceId": "census-cd120-29-withheld"
+        }
+      ]
+    },
     "sldl_floterial": {
       "key": "sldl_floterial",
       "name": "New Hampshire House floterial districts",
@@ -629,17 +748,19 @@
         "county": 30,
         "cd": 1,
         "sldu": 20,
-        "sldl": 40
+        "sldl": 40,
+        "cd120": 1
       },
       "files": {
         "state": "geography/regions/ak/state.geojson.gz",
         "county": "geography/regions/ak/county.geojson.gz",
         "cd": "geography/regions/ak/cd.geojson.gz",
         "sldu": "geography/regions/ak/sldu.geojson.gz",
-        "sldl": "geography/regions/ak/sldl.geojson.gz"
+        "sldl": "geography/regions/ak/sldl.geojson.gz",
+        "cd120": "geography/regions/ak/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ak.json",
-      "intersectionPairs": 339,
+      "intersectionPairs": 431,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -651,18 +772,20 @@
         "county": 67,
         "cd": 7,
         "sldu": 35,
-        "sldl": 105
+        "sldl": 105,
+        "cd120": 7
       },
       "files": {
         "state": "geography/regions/al/state.geojson.gz",
         "county": "geography/regions/al/county.geojson.gz",
         "cd": "geography/regions/al/cd.geojson.gz",
         "sldu": "geography/regions/al/sldu.geojson.gz",
-        "sldl": "geography/regions/al/sldl.geojson.gz"
+        "sldl": "geography/regions/al/sldl.geojson.gz",
+        "cd120": "geography/regions/al/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/al.json",
-      "intersectionPairs": 986,
-      "repairedGeometries": 4,
+      "intersectionPairs": 1271,
+      "repairedGeometries": 5,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
     },
@@ -673,17 +796,19 @@
         "county": 75,
         "cd": 4,
         "sldu": 35,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 4
       },
       "files": {
         "state": "geography/regions/ar/state.geojson.gz",
         "county": "geography/regions/ar/county.geojson.gz",
         "cd": "geography/regions/ar/cd.geojson.gz",
         "sldu": "geography/regions/ar/sldu.geojson.gz",
-        "sldl": "geography/regions/ar/sldl.geojson.gz"
+        "sldl": "geography/regions/ar/sldl.geojson.gz",
+        "cd120": "geography/regions/ar/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ar.json",
-      "intersectionPairs": 1010,
+      "intersectionPairs": 1273,
       "repairedGeometries": 1,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -695,17 +820,19 @@
         "county": 15,
         "cd": 9,
         "sldu": 30,
-        "sldl": 30
+        "sldl": 30,
+        "cd120": 9
       },
       "files": {
         "state": "geography/regions/az/state.geojson.gz",
         "county": "geography/regions/az/county.geojson.gz",
         "cd": "geography/regions/az/cd.geojson.gz",
         "sldu": "geography/regions/az/sldu.geojson.gz",
-        "sldl": "geography/regions/az/sldl.geojson.gz"
+        "sldl": "geography/regions/az/sldl.geojson.gz",
+        "cd120": "geography/regions/az/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/az.json",
-      "intersectionPairs": 400,
+      "intersectionPairs": 586,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -717,17 +844,19 @@
         "county": 58,
         "cd": 52,
         "sldu": 40,
-        "sldl": 80
+        "sldl": 80,
+        "cd120": 52
       },
       "files": {
         "state": "geography/regions/ca/state.geojson.gz",
         "county": "geography/regions/ca/county.geojson.gz",
         "cd": "geography/regions/ca/cd.geojson.gz",
         "sldu": "geography/regions/ca/sldu.geojson.gz",
-        "sldl": "geography/regions/ca/sldl.geojson.gz"
+        "sldl": "geography/regions/ca/sldl.geojson.gz",
+        "cd120": "geography/regions/ca/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ca.json",
-      "intersectionPairs": 1256,
+      "intersectionPairs": 2133,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -739,17 +868,19 @@
         "county": 64,
         "cd": 8,
         "sldu": 35,
-        "sldl": 65
+        "sldl": 65,
+        "cd120": 8
       },
       "files": {
         "state": "geography/regions/co/state.geojson.gz",
         "county": "geography/regions/co/county.geojson.gz",
         "cd": "geography/regions/co/cd.geojson.gz",
         "sldu": "geography/regions/co/sldu.geojson.gz",
-        "sldl": "geography/regions/co/sldl.geojson.gz"
+        "sldl": "geography/regions/co/sldl.geojson.gz",
+        "cd120": "geography/regions/co/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/co.json",
-      "intersectionPairs": 820,
+      "intersectionPairs": 1076,
       "repairedGeometries": 2,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -761,17 +892,19 @@
         "county": 9,
         "cd": 6,
         "sldu": 37,
-        "sldl": 152
+        "sldl": 152,
+        "cd120": 6
       },
       "files": {
         "state": "geography/regions/ct/state.geojson.gz",
         "county": "geography/regions/ct/county.geojson.gz",
         "cd": "geography/regions/ct/cd.geojson.gz",
         "sldu": "geography/regions/ct/sldu.geojson.gz",
-        "sldl": "geography/regions/ct/sldl.geojson.gz"
+        "sldl": "geography/regions/ct/sldl.geojson.gz",
+        "cd120": "geography/regions/ct/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ct.json",
-      "intersectionPairs": 980,
+      "intersectionPairs": 1254,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -783,17 +916,19 @@
         "county": 3,
         "cd": 1,
         "sldu": 21,
-        "sldl": 41
+        "sldl": 41,
+        "cd120": 1
       },
       "files": {
         "state": "geography/regions/de/state.geojson.gz",
         "county": "geography/regions/de/county.geojson.gz",
         "cd": "geography/regions/de/cd.geojson.gz",
         "sldu": "geography/regions/de/sldu.geojson.gz",
-        "sldl": "geography/regions/de/sldl.geojson.gz"
+        "sldl": "geography/regions/de/sldl.geojson.gz",
+        "cd120": "geography/regions/de/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/de.json",
-      "intersectionPairs": 296,
+      "intersectionPairs": 363,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -805,17 +940,19 @@
         "county": 67,
         "cd": 28,
         "sldu": 40,
-        "sldl": 120
+        "sldl": 120,
+        "cd120": 28
       },
       "files": {
         "state": "geography/regions/fl/state.geojson.gz",
         "county": "geography/regions/fl/county.geojson.gz",
         "cd": "geography/regions/fl/cd.geojson.gz",
         "sldu": "geography/regions/fl/sldu.geojson.gz",
-        "sldl": "geography/regions/fl/sldl.geojson.gz"
+        "sldl": "geography/regions/fl/sldl.geojson.gz",
+        "cd120": "geography/regions/fl/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/fl.json",
-      "intersectionPairs": 1202,
+      "intersectionPairs": 1764,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -827,17 +964,19 @@
         "county": 159,
         "cd": 14,
         "sldu": 56,
-        "sldl": 180
+        "sldl": 180,
+        "cd120": 14
       },
       "files": {
         "state": "geography/regions/ga/state.geojson.gz",
         "county": "geography/regions/ga/county.geojson.gz",
         "cd": "geography/regions/ga/cd.geojson.gz",
         "sldu": "geography/regions/ga/sldu.geojson.gz",
-        "sldl": "geography/regions/ga/sldl.geojson.gz"
+        "sldl": "geography/regions/ga/sldl.geojson.gz",
+        "cd120": "geography/regions/ga/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ga.json",
-      "intersectionPairs": 1959,
+      "intersectionPairs": 2559,
       "repairedGeometries": 7,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -849,17 +988,19 @@
         "county": 5,
         "cd": 2,
         "sldu": 25,
-        "sldl": 51
+        "sldl": 51,
+        "cd120": 2
       },
       "files": {
         "state": "geography/regions/hi/state.geojson.gz",
         "county": "geography/regions/hi/county.geojson.gz",
         "cd": "geography/regions/hi/cd.geojson.gz",
         "sldu": "geography/regions/hi/sldu.geojson.gz",
-        "sldl": "geography/regions/hi/sldl.geojson.gz"
+        "sldl": "geography/regions/hi/sldl.geojson.gz",
+        "cd120": "geography/regions/hi/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/hi.json",
-      "intersectionPairs": 352,
+      "intersectionPairs": 447,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -871,17 +1012,19 @@
         "county": 99,
         "cd": 4,
         "sldu": 50,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 4
       },
       "files": {
         "state": "geography/regions/ia/state.geojson.gz",
         "county": "geography/regions/ia/county.geojson.gz",
         "cd": "geography/regions/ia/cd.geojson.gz",
         "sldu": "geography/regions/ia/sldu.geojson.gz",
-        "sldl": "geography/regions/ia/sldl.geojson.gz"
+        "sldl": "geography/regions/ia/sldl.geojson.gz",
+        "cd120": "geography/regions/ia/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ia.json",
-      "intersectionPairs": 940,
+      "intersectionPairs": 1199,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -893,17 +1036,19 @@
         "county": 44,
         "cd": 2,
         "sldu": 35,
-        "sldl": 35
+        "sldl": 35,
+        "cd120": 2
       },
       "files": {
         "state": "geography/regions/id/state.geojson.gz",
         "county": "geography/regions/id/county.geojson.gz",
         "cd": "geography/regions/id/cd.geojson.gz",
         "sldu": "geography/regions/id/sldu.geojson.gz",
-        "sldl": "geography/regions/id/sldl.geojson.gz"
+        "sldl": "geography/regions/id/sldl.geojson.gz",
+        "cd120": "geography/regions/id/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/id.json",
-      "intersectionPairs": 414,
+      "intersectionPairs": 543,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -915,17 +1060,19 @@
         "county": 102,
         "cd": 18,
         "sldu": 60,
-        "sldl": 119
+        "sldl": 119,
+        "cd120": 18
       },
       "files": {
         "state": "geography/regions/il/state.geojson.gz",
         "county": "geography/regions/il/county.geojson.gz",
         "cd": "geography/regions/il/cd.geojson.gz",
         "sldu": "geography/regions/il/sldu.geojson.gz",
-        "sldl": "geography/regions/il/sldl.geojson.gz"
+        "sldl": "geography/regions/il/sldl.geojson.gz",
+        "cd120": "geography/regions/il/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/il.json",
-      "intersectionPairs": 1627,
+      "intersectionPairs": 2314,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -937,17 +1084,19 @@
         "county": 92,
         "cd": 9,
         "sldu": 50,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 9
       },
       "files": {
         "state": "geography/regions/in/state.geojson.gz",
         "county": "geography/regions/in/county.geojson.gz",
         "cd": "geography/regions/in/cd.geojson.gz",
         "sldu": "geography/regions/in/sldu.geojson.gz",
-        "sldl": "geography/regions/in/sldl.geojson.gz"
+        "sldl": "geography/regions/in/sldl.geojson.gz",
+        "cd120": "geography/regions/in/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/in.json",
-      "intersectionPairs": 1156,
+      "intersectionPairs": 1481,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -959,17 +1108,19 @@
         "county": 105,
         "cd": 4,
         "sldu": 40,
-        "sldl": 125
+        "sldl": 125,
+        "cd120": 4
       },
       "files": {
         "state": "geography/regions/ks/state.geojson.gz",
         "county": "geography/regions/ks/county.geojson.gz",
         "cd": "geography/regions/ks/cd.geojson.gz",
         "sldu": "geography/regions/ks/sldu.geojson.gz",
-        "sldl": "geography/regions/ks/sldl.geojson.gz"
+        "sldl": "geography/regions/ks/sldl.geojson.gz",
+        "cd120": "geography/regions/ks/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ks.json",
-      "intersectionPairs": 1227,
+      "intersectionPairs": 1548,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -981,17 +1132,19 @@
         "county": 120,
         "cd": 6,
         "sldu": 38,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 6
       },
       "files": {
         "state": "geography/regions/ky/state.geojson.gz",
         "county": "geography/regions/ky/county.geojson.gz",
         "cd": "geography/regions/ky/cd.geojson.gz",
         "sldu": "geography/regions/ky/sldu.geojson.gz",
-        "sldl": "geography/regions/ky/sldl.geojson.gz"
+        "sldl": "geography/regions/ky/sldl.geojson.gz",
+        "cd120": "geography/regions/ky/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ky.json",
-      "intersectionPairs": 1141,
+      "intersectionPairs": 1462,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1003,17 +1156,19 @@
         "county": 64,
         "cd": 6,
         "sldu": 40,
-        "sldl": 105
+        "sldl": 105,
+        "cd120": 6
       },
       "files": {
         "state": "geography/regions/la/state.geojson.gz",
         "county": "geography/regions/la/county.geojson.gz",
         "cd": "geography/regions/la/cd.geojson.gz",
         "sldu": "geography/regions/la/sldu.geojson.gz",
-        "sldl": "geography/regions/la/sldl.geojson.gz"
+        "sldl": "geography/regions/la/sldl.geojson.gz",
+        "cd120": "geography/regions/la/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/la.json",
-      "intersectionPairs": 1118,
+      "intersectionPairs": 1447,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1025,17 +1180,19 @@
         "county": 14,
         "cd": 9,
         "sldu": 40,
-        "sldl": 161
+        "sldl": 161,
+        "cd120": 9
       },
       "files": {
         "state": "geography/regions/ma/state.geojson.gz",
         "county": "geography/regions/ma/county.geojson.gz",
         "cd": "geography/regions/ma/cd.geojson.gz",
         "sldu": "geography/regions/ma/sldu.geojson.gz",
-        "sldl": "geography/regions/ma/sldl.geojson.gz"
+        "sldl": "geography/regions/ma/sldl.geojson.gz",
+        "cd120": "geography/regions/ma/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ma.json",
-      "intersectionPairs": 1116,
+      "intersectionPairs": 1463,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1047,17 +1204,19 @@
         "county": 24,
         "cd": 8,
         "sldu": 47,
-        "sldl": 71
+        "sldl": 71,
+        "cd120": 8
       },
       "files": {
         "state": "geography/regions/md/state.geojson.gz",
         "county": "geography/regions/md/county.geojson.gz",
         "cd": "geography/regions/md/cd.geojson.gz",
         "sldu": "geography/regions/md/sldu.geojson.gz",
-        "sldl": "geography/regions/md/sldl.geojson.gz"
+        "sldl": "geography/regions/md/sldl.geojson.gz",
+        "cd120": "geography/regions/md/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/md.json",
-      "intersectionPairs": 597,
+      "intersectionPairs": 829,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1069,17 +1228,19 @@
         "county": 16,
         "cd": 2,
         "sldu": 35,
-        "sldl": 151
+        "sldl": 151,
+        "cd120": 2
       },
       "files": {
         "state": "geography/regions/me/state.geojson.gz",
         "county": "geography/regions/me/county.geojson.gz",
         "cd": "geography/regions/me/cd.geojson.gz",
         "sldu": "geography/regions/me/sldu.geojson.gz",
-        "sldl": "geography/regions/me/sldl.geojson.gz"
+        "sldl": "geography/regions/me/sldl.geojson.gz",
+        "cd120": "geography/regions/me/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/me.json",
-      "intersectionPairs": 892,
+      "intersectionPairs": 1121,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1091,17 +1252,19 @@
         "county": 83,
         "cd": 13,
         "sldu": 38,
-        "sldl": 110
+        "sldl": 110,
+        "cd120": 13
       },
       "files": {
         "state": "geography/regions/mi/state.geojson.gz",
         "county": "geography/regions/mi/county.geojson.gz",
         "cd": "geography/regions/mi/cd.geojson.gz",
         "sldu": "geography/regions/mi/sldu.geojson.gz",
-        "sldl": "geography/regions/mi/sldl.geojson.gz"
+        "sldl": "geography/regions/mi/sldl.geojson.gz",
+        "cd120": "geography/regions/mi/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/mi.json",
-      "intersectionPairs": 1237,
+      "intersectionPairs": 1628,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1113,17 +1276,19 @@
         "county": 87,
         "cd": 8,
         "sldu": 67,
-        "sldl": 134
+        "sldl": 134,
+        "cd120": 8
       },
       "files": {
         "state": "geography/regions/mn/state.geojson.gz",
         "county": "geography/regions/mn/county.geojson.gz",
         "cd": "geography/regions/mn/cd.geojson.gz",
         "sldu": "geography/regions/mn/sldu.geojson.gz",
-        "sldl": "geography/regions/mn/sldl.geojson.gz"
+        "sldl": "geography/regions/mn/sldl.geojson.gz",
+        "cd120": "geography/regions/mn/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/mn.json",
-      "intersectionPairs": 1246,
+      "intersectionPairs": 1626,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1135,14 +1300,16 @@
         "county": 115,
         "cd": 8,
         "sldu": 34,
-        "sldl": 163
+        "sldl": 163,
+        "cd120": 0
       },
       "files": {
         "state": "geography/regions/mo/state.geojson.gz",
         "county": "geography/regions/mo/county.geojson.gz",
         "cd": "geography/regions/mo/cd.geojson.gz",
         "sldu": "geography/regions/mo/sldu.geojson.gz",
-        "sldl": "geography/regions/mo/sldl.geojson.gz"
+        "sldl": "geography/regions/mo/sldl.geojson.gz",
+        "cd120": "geography/regions/mo/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/mo.json",
       "intersectionPairs": 1355,
@@ -1157,17 +1324,19 @@
         "county": 82,
         "cd": 4,
         "sldu": 52,
-        "sldl": 122
+        "sldl": 122,
+        "cd120": 4
       },
       "files": {
         "state": "geography/regions/ms/state.geojson.gz",
         "county": "geography/regions/ms/county.geojson.gz",
         "cd": "geography/regions/ms/cd.geojson.gz",
         "sldu": "geography/regions/ms/sldu.geojson.gz",
-        "sldl": "geography/regions/ms/sldl.geojson.gz"
+        "sldl": "geography/regions/ms/sldl.geojson.gz",
+        "cd120": "geography/regions/ms/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ms.json",
-      "intersectionPairs": 1290,
+      "intersectionPairs": 1611,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1179,17 +1348,19 @@
         "county": 56,
         "cd": 2,
         "sldu": 50,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 2
       },
       "files": {
         "state": "geography/regions/mt/state.geojson.gz",
         "county": "geography/regions/mt/county.geojson.gz",
         "cd": "geography/regions/mt/cd.geojson.gz",
         "sldu": "geography/regions/mt/sldu.geojson.gz",
-        "sldl": "geography/regions/mt/sldl.geojson.gz"
+        "sldl": "geography/regions/mt/sldl.geojson.gz",
+        "cd120": "geography/regions/mt/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/mt.json",
-      "intersectionPairs": 805,
+      "intersectionPairs": 1026,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1201,17 +1372,19 @@
         "county": 100,
         "cd": 14,
         "sldu": 50,
-        "sldl": 120
+        "sldl": 120,
+        "cd120": 14
       },
       "files": {
         "state": "geography/regions/nc/state.geojson.gz",
         "county": "geography/regions/nc/county.geojson.gz",
         "cd": "geography/regions/nc/cd.geojson.gz",
         "sldu": "geography/regions/nc/sldu.geojson.gz",
-        "sldl": "geography/regions/nc/sldl.geojson.gz"
+        "sldl": "geography/regions/nc/sldl.geojson.gz",
+        "cd120": "geography/regions/nc/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/nc.json",
-      "intersectionPairs": 1174,
+      "intersectionPairs": 1595,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1223,17 +1396,19 @@
         "county": 53,
         "cd": 1,
         "sldu": 47,
-        "sldl": 48
+        "sldl": 48,
+        "cd120": 1
       },
       "files": {
         "state": "geography/regions/nd/state.geojson.gz",
         "county": "geography/regions/nd/county.geojson.gz",
         "cd": "geography/regions/nd/cd.geojson.gz",
         "sldu": "geography/regions/nd/sldu.geojson.gz",
-        "sldl": "geography/regions/nd/sldl.geojson.gz"
+        "sldl": "geography/regions/nd/sldl.geojson.gz",
+        "cd120": "geography/regions/nd/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/nd.json",
-      "intersectionPairs": 556,
+      "intersectionPairs": 706,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1245,17 +1420,19 @@
         "county": 93,
         "cd": 3,
         "sldu": 49,
-        "sldl": 0
+        "sldl": 0,
+        "cd120": 3
       },
       "files": {
         "state": "geography/regions/ne/state.geojson.gz",
         "county": "geography/regions/ne/county.geojson.gz",
         "cd": "geography/regions/ne/cd.geojson.gz",
         "sldu": "geography/regions/ne/sldu.geojson.gz",
-        "sldl": "geography/regions/ne/sldl.geojson.gz"
+        "sldl": "geography/regions/ne/sldl.geojson.gz",
+        "cd120": "geography/regions/ne/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ne.json",
-      "intersectionPairs": 430,
+      "intersectionPairs": 591,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1268,6 +1445,7 @@
         "cd": 3,
         "sldu": 25,
         "sldl": 165,
+        "cd120": 3,
         "sldl_floterial": 39
       },
       "files": {
@@ -1276,12 +1454,13 @@
         "cd": "geography/regions/nh/cd.geojson.gz",
         "sldu": "geography/regions/nh/sldu.geojson.gz",
         "sldl": "geography/regions/nh/sldl.geojson.gz",
+        "cd120": "geography/regions/nh/cd120.geojson.gz",
         "sldl_floterial": "geography/regions/nh/sldl_floterial.geojson.gz"
       },
       "overlapFile": "overlaps/nh.json",
-      "intersectionPairs": 1138,
+      "intersectionPairs": 1407,
       "repairedGeometries": 0,
-      "coverageResiduals": 89,
+      "coverageResiduals": 92,
       "sameLayerIntersections": 0
     },
     {
@@ -1291,17 +1470,19 @@
         "county": 21,
         "cd": 12,
         "sldu": 40,
-        "sldl": 40
+        "sldl": 40,
+        "cd120": 12
       },
       "files": {
         "state": "geography/regions/nj/state.geojson.gz",
         "county": "geography/regions/nj/county.geojson.gz",
         "cd": "geography/regions/nj/cd.geojson.gz",
         "sldu": "geography/regions/nj/sldu.geojson.gz",
-        "sldl": "geography/regions/nj/sldl.geojson.gz"
+        "sldl": "geography/regions/nj/sldl.geojson.gz",
+        "cd120": "geography/regions/nj/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/nj.json",
-      "intersectionPairs": 516,
+      "intersectionPairs": 749,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1313,17 +1494,19 @@
         "county": 33,
         "cd": 3,
         "sldu": 42,
-        "sldl": 70
+        "sldl": 70,
+        "cd120": 3
       },
       "files": {
         "state": "geography/regions/nm/state.geojson.gz",
         "county": "geography/regions/nm/county.geojson.gz",
         "cd": "geography/regions/nm/cd.geojson.gz",
         "sldu": "geography/regions/nm/sldu.geojson.gz",
-        "sldl": "geography/regions/nm/sldl.geojson.gz"
+        "sldl": "geography/regions/nm/sldl.geojson.gz",
+        "cd120": "geography/regions/nm/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/nm.json",
-      "intersectionPairs": 773,
+      "intersectionPairs": 980,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1335,17 +1518,19 @@
         "county": 17,
         "cd": 4,
         "sldu": 21,
-        "sldl": 42
+        "sldl": 42,
+        "cd120": 4
       },
       "files": {
         "state": "geography/regions/nv/state.geojson.gz",
         "county": "geography/regions/nv/county.geojson.gz",
         "cd": "geography/regions/nv/cd.geojson.gz",
         "sldu": "geography/regions/nv/sldu.geojson.gz",
-        "sldl": "geography/regions/nv/sldl.geojson.gz"
+        "sldl": "geography/regions/nv/sldl.geojson.gz",
+        "cd120": "geography/regions/nv/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/nv.json",
-      "intersectionPairs": 346,
+      "intersectionPairs": 476,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1357,17 +1542,19 @@
         "county": 62,
         "cd": 26,
         "sldu": 63,
-        "sldl": 150
+        "sldl": 150,
+        "cd120": 26
       },
       "files": {
         "state": "geography/regions/ny/state.geojson.gz",
         "county": "geography/regions/ny/county.geojson.gz",
         "cd": "geography/regions/ny/cd.geojson.gz",
         "sldu": "geography/regions/ny/sldu.geojson.gz",
-        "sldl": "geography/regions/ny/sldl.geojson.gz"
+        "sldl": "geography/regions/ny/sldl.geojson.gz",
+        "cd120": "geography/regions/ny/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ny.json",
-      "intersectionPairs": 1555,
+      "intersectionPairs": 2109,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1379,17 +1566,19 @@
         "county": 88,
         "cd": 15,
         "sldu": 33,
-        "sldl": 99
+        "sldl": 99,
+        "cd120": 15
       },
       "files": {
         "state": "geography/regions/oh/state.geojson.gz",
         "county": "geography/regions/oh/county.geojson.gz",
         "cd": "geography/regions/oh/cd.geojson.gz",
         "sldu": "geography/regions/oh/sldu.geojson.gz",
-        "sldl": "geography/regions/oh/sldl.geojson.gz"
+        "sldl": "geography/regions/oh/sldl.geojson.gz",
+        "cd120": "geography/regions/oh/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/oh.json",
-      "intersectionPairs": 927,
+      "intersectionPairs": 1327,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1401,17 +1590,19 @@
         "county": 77,
         "cd": 5,
         "sldu": 48,
-        "sldl": 101
+        "sldl": 101,
+        "cd120": 5
       },
       "files": {
         "state": "geography/regions/ok/state.geojson.gz",
         "county": "geography/regions/ok/county.geojson.gz",
         "cd": "geography/regions/ok/cd.geojson.gz",
         "sldu": "geography/regions/ok/sldu.geojson.gz",
-        "sldl": "geography/regions/ok/sldl.geojson.gz"
+        "sldl": "geography/regions/ok/sldl.geojson.gz",
+        "cd120": "geography/regions/ok/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ok.json",
-      "intersectionPairs": 1126,
+      "intersectionPairs": 1429,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1423,17 +1614,19 @@
         "county": 36,
         "cd": 6,
         "sldu": 30,
-        "sldl": 60
+        "sldl": 60,
+        "cd120": 6
       },
       "files": {
         "state": "geography/regions/or/state.geojson.gz",
         "county": "geography/regions/or/county.geojson.gz",
         "cd": "geography/regions/or/cd.geojson.gz",
         "sldu": "geography/regions/or/sldu.geojson.gz",
-        "sldl": "geography/regions/or/sldl.geojson.gz"
+        "sldl": "geography/regions/or/sldl.geojson.gz",
+        "cd120": "geography/regions/or/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/or.json",
-      "intersectionPairs": 599,
+      "intersectionPairs": 822,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1445,17 +1638,19 @@
         "county": 67,
         "cd": 17,
         "sldu": 50,
-        "sldl": 203
+        "sldl": 203,
+        "cd120": 17
       },
       "files": {
         "state": "geography/regions/pa/state.geojson.gz",
         "county": "geography/regions/pa/county.geojson.gz",
         "cd": "geography/regions/pa/cd.geojson.gz",
         "sldu": "geography/regions/pa/sldu.geojson.gz",
-        "sldl": "geography/regions/pa/sldl.geojson.gz"
+        "sldl": "geography/regions/pa/sldl.geojson.gz",
+        "cd120": "geography/regions/pa/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/pa.json",
-      "intersectionPairs": 1485,
+      "intersectionPairs": 1954,
       "repairedGeometries": 1,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1467,17 +1662,19 @@
         "county": 5,
         "cd": 2,
         "sldu": 38,
-        "sldl": 75
+        "sldl": 75,
+        "cd120": 2
       },
       "files": {
         "state": "geography/regions/ri/state.geojson.gz",
         "county": "geography/regions/ri/county.geojson.gz",
         "cd": "geography/regions/ri/cd.geojson.gz",
         "sldu": "geography/regions/ri/sldu.geojson.gz",
-        "sldl": "geography/regions/ri/sldl.geojson.gz"
+        "sldl": "geography/regions/ri/sldl.geojson.gz",
+        "cd120": "geography/regions/ri/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ri.json",
-      "intersectionPairs": 554,
+      "intersectionPairs": 694,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1489,17 +1686,19 @@
         "county": 46,
         "cd": 7,
         "sldu": 46,
-        "sldl": 124
+        "sldl": 124,
+        "cd120": 7
       },
       "files": {
         "state": "geography/regions/sc/state.geojson.gz",
         "county": "geography/regions/sc/county.geojson.gz",
         "cd": "geography/regions/sc/cd.geojson.gz",
         "sldu": "geography/regions/sc/sldu.geojson.gz",
-        "sldl": "geography/regions/sc/sldl.geojson.gz"
+        "sldl": "geography/regions/sc/sldl.geojson.gz",
+        "cd120": "geography/regions/sc/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/sc.json",
-      "intersectionPairs": 1158,
+      "intersectionPairs": 1488,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1511,17 +1710,19 @@
         "county": 66,
         "cd": 1,
         "sldu": 35,
-        "sldl": 37
+        "sldl": 37,
+        "cd120": 1
       },
       "files": {
         "state": "geography/regions/sd/state.geojson.gz",
         "county": "geography/regions/sd/county.geojson.gz",
         "cd": "geography/regions/sd/cd.geojson.gz",
         "sldu": "geography/regions/sd/sldu.geojson.gz",
-        "sldl": "geography/regions/sd/sldl.geojson.gz"
+        "sldl": "geography/regions/sd/sldl.geojson.gz",
+        "cd120": "geography/regions/sd/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/sd.json",
-      "intersectionPairs": 506,
+      "intersectionPairs": 646,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1533,18 +1734,20 @@
         "county": 95,
         "cd": 9,
         "sldu": 33,
-        "sldl": 99
+        "sldl": 99,
+        "cd120": 9
       },
       "files": {
         "state": "geography/regions/tn/state.geojson.gz",
         "county": "geography/regions/tn/county.geojson.gz",
         "cd": "geography/regions/tn/cd.geojson.gz",
         "sldu": "geography/regions/tn/sldu.geojson.gz",
-        "sldl": "geography/regions/tn/sldl.geojson.gz"
+        "sldl": "geography/regions/tn/sldl.geojson.gz",
+        "cd120": "geography/regions/tn/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/tn.json",
-      "intersectionPairs": 1028,
-      "repairedGeometries": 4,
+      "intersectionPairs": 1403,
+      "repairedGeometries": 5,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
     },
@@ -1555,17 +1758,19 @@
         "county": 254,
         "cd": 38,
         "sldu": 31,
-        "sldl": 150
+        "sldl": 150,
+        "cd120": 38
       },
       "files": {
         "state": "geography/regions/tx/state.geojson.gz",
         "county": "geography/regions/tx/county.geojson.gz",
         "cd": "geography/regions/tx/cd.geojson.gz",
         "sldu": "geography/regions/tx/sldu.geojson.gz",
-        "sldl": "geography/regions/tx/sldl.geojson.gz"
+        "sldl": "geography/regions/tx/sldl.geojson.gz",
+        "cd120": "geography/regions/tx/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/tx.json",
-      "intersectionPairs": 2304,
+      "intersectionPairs": 3377,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1577,17 +1782,19 @@
         "county": 29,
         "cd": 4,
         "sldu": 29,
-        "sldl": 75
+        "sldl": 75,
+        "cd120": 4
       },
       "files": {
         "state": "geography/regions/ut/state.geojson.gz",
         "county": "geography/regions/ut/county.geojson.gz",
         "cd": "geography/regions/ut/cd.geojson.gz",
         "sldu": "geography/regions/ut/sldu.geojson.gz",
-        "sldl": "geography/regions/ut/sldl.geojson.gz"
+        "sldl": "geography/regions/ut/sldl.geojson.gz",
+        "cd120": "geography/regions/ut/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/ut.json",
-      "intersectionPairs": 672,
+      "intersectionPairs": 877,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1599,17 +1806,19 @@
         "county": 133,
         "cd": 11,
         "sldu": 40,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 11
       },
       "files": {
         "state": "geography/regions/va/state.geojson.gz",
         "county": "geography/regions/va/county.geojson.gz",
         "cd": "geography/regions/va/cd.geojson.gz",
         "sldu": "geography/regions/va/sldu.geojson.gz",
-        "sldl": "geography/regions/va/sldl.geojson.gz"
+        "sldl": "geography/regions/va/sldl.geojson.gz",
+        "cd120": "geography/regions/va/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/va.json",
-      "intersectionPairs": 1204,
+      "intersectionPairs": 1573,
       "repairedGeometries": 1,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1621,17 +1830,19 @@
         "county": 14,
         "cd": 1,
         "sldu": 16,
-        "sldl": 109
+        "sldl": 109,
+        "cd120": 1
       },
       "files": {
         "state": "geography/regions/vt/state.geojson.gz",
         "county": "geography/regions/vt/county.geojson.gz",
         "cd": "geography/regions/vt/cd.geojson.gz",
         "sldu": "geography/regions/vt/sldu.geojson.gz",
-        "sldl": "geography/regions/vt/sldl.geojson.gz"
+        "sldl": "geography/regions/vt/sldl.geojson.gz",
+        "cd120": "geography/regions/vt/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/vt.json",
-      "intersectionPairs": 588,
+      "intersectionPairs": 729,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1643,17 +1854,19 @@
         "county": 39,
         "cd": 10,
         "sldu": 49,
-        "sldl": 49
+        "sldl": 49,
+        "cd120": 10
       },
       "files": {
         "state": "geography/regions/wa/state.geojson.gz",
         "county": "geography/regions/wa/county.geojson.gz",
         "cd": "geography/regions/wa/cd.geojson.gz",
         "sldu": "geography/regions/wa/sldu.geojson.gz",
-        "sldl": "geography/regions/wa/sldl.geojson.gz"
+        "sldl": "geography/regions/wa/sldl.geojson.gz",
+        "cd120": "geography/regions/wa/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/wa.json",
-      "intersectionPairs": 628,
+      "intersectionPairs": 884,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1665,17 +1878,19 @@
         "county": 72,
         "cd": 8,
         "sldu": 34,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 8
       },
       "files": {
         "state": "geography/regions/wi/state.geojson.gz",
         "county": "geography/regions/wi/county.geojson.gz",
         "cd": "geography/regions/wi/cd.geojson.gz",
         "sldu": "geography/regions/wi/sldu.geojson.gz",
-        "sldl": "geography/regions/wi/sldl.geojson.gz"
+        "sldl": "geography/regions/wi/sldl.geojson.gz",
+        "cd120": "geography/regions/wi/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/wi.json",
-      "intersectionPairs": 1014,
+      "intersectionPairs": 1333,
       "repairedGeometries": 2,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1687,17 +1902,19 @@
         "county": 55,
         "cd": 2,
         "sldu": 17,
-        "sldl": 100
+        "sldl": 100,
+        "cd120": 2
       },
       "files": {
         "state": "geography/regions/wv/state.geojson.gz",
         "county": "geography/regions/wv/county.geojson.gz",
         "cd": "geography/regions/wv/cd.geojson.gz",
         "sldu": "geography/regions/wv/sldu.geojson.gz",
-        "sldl": "geography/regions/wv/sldl.geojson.gz"
+        "sldl": "geography/regions/wv/sldl.geojson.gz",
+        "cd120": "geography/regions/wv/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/wv.json",
-      "intersectionPairs": 714,
+      "intersectionPairs": 897,
       "repairedGeometries": 0,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0
@@ -1709,17 +1926,19 @@
         "county": 23,
         "cd": 1,
         "sldu": 31,
-        "sldl": 62
+        "sldl": 62,
+        "cd120": 1
       },
       "files": {
         "state": "geography/regions/wy/state.geojson.gz",
         "county": "geography/regions/wy/county.geojson.gz",
         "cd": "geography/regions/wy/cd.geojson.gz",
         "sldu": "geography/regions/wy/sldu.geojson.gz",
-        "sldl": "geography/regions/wy/sldl.geojson.gz"
+        "sldl": "geography/regions/wy/sldl.geojson.gz",
+        "cd120": "geography/regions/wy/cd120.geojson.gz"
       },
       "overlapFile": "overlaps/wy.json",
-      "intersectionPairs": 425,
+      "intersectionPairs": 543,
       "repairedGeometries": 1,
       "coverageResiduals": 0,
       "sameLayerIntersections": 0

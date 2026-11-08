@@ -11,12 +11,13 @@ It also acquires original [state and county polygons](https://tigerweb.geo.censu
 | `cd` | [4](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/4) | 119th Congress | January 1, 2026 |
 | `sldu` | [5](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/5) | 2024 upper-chamber districts | January 1, 2026 |
 | `sldl` | [6](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/6) | 2024 lower-chamber districts | January 1, 2026 |
+| `cd120` | [0](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/0) | 120th Congress (future plan; Missouri withheld) | January 1, 2026 |
 
 ## Acquisition and verification
 
 The public builder supplies its `fetch` function to
 `district_sources.collect(fetch, offline=False)`. The return value is a pair:
-`({'state': FeatureCollection, 'county': FeatureCollection, 'cd': FeatureCollection, 'sldu': FeatureCollection, 'sldl': FeatureCollection}, sources)`.
+`({'state': FeatureCollection, 'county': FeatureCollection, 'cd': FeatureCollection, 'sldu': FeatureCollection, 'sldl': FeatureCollection, 'cd120': FeatureCollection}, sources)`.
 `district_sources.iter_collect(fetch, offline=False)` yields one
 `(layerKey, FeatureCollection, layerSources)` tuple at a time and is preferred
 for national builds. Write each layer as per-state files and release the
@@ -37,7 +38,7 @@ It remains Census's geographic representation, not a survey or legal boundary
 adjudication.
 
 Every feature preserves Census properties, including `GEOID`, `STATE`, the
-layer-specific district code (`CD119`, `SLDU`, or `SLDL`), and `OBJECTID`.
+layer-specific district code (`CD119`, `CD120`, `SLDU`, or `SLDL`), and `OBJECTID`.
 `sourceId` links to the exact response in the collection's `sources` array.
 Layer metadata and count responses are also referenced. `districtKind` is a
 classification described below; it is not an additional Census source field.
@@ -65,9 +66,22 @@ are preserved verbatim. A district can have multiple representatives. Neither a
 missing roster row nor a missing geometry join establishes a vacancy.
 
 The layer cycle and geographic vintage are separate from a person's term.
-119th-Congress geometry must not be joined to the 120th Congress. The service's
-120th-Congress and 2026 state-legislative layers are deliberately excluded from
-this collection. For state legislative districts, Census's 2024 plan label is
+119th-Congress geometry must not be joined to the 120th Congress. The
+120th-Congress plans are collected as the separate `cd120` layer: they are
+area-intersected with every other layer but never joined to the current roster
+or substituted for `cd`. The service's 2026 state-legislative layers are not
+collected.
+
+`cd120` omits a state when the Census Bureau reports that its 120th-Congress
+geometry does not reflect the plan in effect. Missouri is withheld: the
+[Census 120th Congress notes](https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.120th_Congress.html)
+state that the U.S. Supreme Court did not allow the 2025 plan for the 2026
+elections, that the 2022 plan applies, and that Missouri geometry products have
+not yet been regenerated. Each build fetches that page as the
+`census-cd120-29-withheld` source and fails if the quoted statement is gone, so
+the exclusion is reviewed rather than silently kept. A withheld state's
+`cd120.geojson.gz` is an empty collection whose `withheld` property records the
+reason and source. `layer.withheldStates` lists every exclusion. For state legislative districts, Census's 2024 plan label is
 preserved; matching a current roster requires verifying the relevant chamber's
 plan and resolving named-district identifiers. A new retrieval does not prove
 that a court order, mid-cycle redistricting, or forthcoming election map already

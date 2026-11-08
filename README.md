@@ -30,7 +30,7 @@ The current geography vintage is **January 1, 2026**, as reported in Census laye
 - `data/sources.json`: direct URLs, final URLs, publishers, retrieval timestamps, SHA-256 checksums of the acquired representation, and reported publication/session metadata. `representation` distinguishes HTTP response bodies from browser DOM captures; POST sources include their request method and body.
 - `data/geography/{states,counties}.geojson`: Census features, source identifiers and names, with collection-level query URL, checksum, metadata reference and vintage.
 - `data/coverage.json`: collected rosters, analytical boundary counts and explicitly uncollected offices by state.
-- `data/geography/regions/<state>/<layer>.geojson.gz`: original analytical polygons, losslessly compressed. Layers are `state`, `county`, `cd` (119th Congress), `sldu`, `sldl`; NH additionally has a clearly labeled derived `sldl_floterial` layer.
+- `data/geography/regions/<state>/<layer>.geojson.gz`: original analytical polygons, losslessly compressed. Layers are `state`, `county`, `cd` (119th Congress), `sldu`, `sldl`, and `cd120` (120th Congress plans, not joined to current officeholders; Missouri withheld per Census, see [source acquisition](docs/DISTRICT-SOURCES.md#non-seat-areas-and-joins)); NH additionally has a clearly labeled derived `sldl_floterial` layer.
 - `data/geography/index.json`: per-state layer files, source IDs, plan labels and geometry linkage summary.
 - `data/district-links.json`: explicit person-to-boundary joins with roster and geometry references. Multiple people can share a boundary; U.S. senators link to their state.
 - `data/overlaps/<state>.{json,csv}`: positive-area cross-layer intersections, both input areas, both directional shares and geometry diagnostics. These are polygon areas, not residents or voters.
@@ -41,7 +41,7 @@ The top-level `geography/states.geojson` and `counties.geojson` are generalized 
 
 Analytical overlaps use original polygons projected into documented equal-area coordinate systems, with separate Alaska and Hawaii definitions. They include water wherever it is part of the source polygon. They do not measure shared population, registered voters, or land-only area. Unassigned areas, repairs and coverage differences remain visible; missing coverage is never renormalized away. See [the method](docs/OVERLAP-METHOD.md), [source acquisition](docs/DISTRICT-SOURCES.md), [joins](docs/DISTRICT-LINKS.md) and [special districts](docs/GEOGRAPHY-EXCEPTIONS.md).
 
-The 119th Congress and Census 2024 state legislative plans are retained separately from future 120th Congress/2026 election plans. A matching label alone is not an independent legal determination of a map's applicability. No address database or ZIP-code layer is included.
+The 119th Congress and Census 2024 state legislative plans are retained separately from the 120th Congress plans in `cd120`; 2026 state legislative plans are not collected. A matching label alone is not an independent legal determination of a map's applicability. No address database or ZIP-code layer is included.
 
 ## Build and verify
 

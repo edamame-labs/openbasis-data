@@ -15,7 +15,7 @@ from geo_io import write_json,read_json
 def source_ids(fc,features,fips):
     used={f['properties']['sourceId'] for f in features}
     for source in fc['sources']:
-        if source['id'].endswith('-metadata') or '-'+fips+'-count' in source['id']:
+        if source['id'].endswith('-metadata') or '-'+fips+'-count' in source['id'] or source.get('withholdsState')==fips:
             used.add(source['id'])
     return sorted(used)
 
@@ -42,17 +42,19 @@ def write(stage,officials,layer_packets,exception_data):
         for feature in fc['features']:
             by_fips.setdefault(feature['properties']['STATE'],[]).append(feature)
         slim[layer]=dict(type='FeatureCollection',features=[dict(type='Feature',properties=f['properties'],geometry=None) for f in fc['features']],sources=layer_sources,layer=fc['layer'])
+        withheld={w['state']:w for w in fc['layer'].get('withheldStates',[])}
         for fips,p in state_properties.items():
             st=p['STUSAB']
             features=by_fips.get(fips,[])
-            if not features: assert layer=='sldl' and st=='NE','Missing analytical layer: '+st+' '+layer
+            if not features: assert layer=='sldl' and st=='NE' or fips in withheld,'Missing analytical layer: '+st+' '+layer
             local=dict(type='FeatureCollection',layer=fc['layer'],features=features,sourceIds=source_ids(fc,features,fips))
+            if fips in withheld: local['withheld']=withheld[fips]
             path=Path('geography/regions')/st.lower()/(layer+'.geojson.gz')
             write_json(stage/path,local,compact=True)
             assert (stage/path).stat().st_size<95_000_000,'Geometry artifact exceeds reviewable file size; split before publishing'
         print('Saved original analytical layer',layer,counts[layer],'features',flush=True)
         del fc,by_fips,features,local
-    assert set(slim)==set(BASE_LAYERS),'All five analytical layers are required'
+    assert set(slim)==set(BASE_LAYERS),'All six analytical layers are required'
     geography_index['sourceIds']=[s['id'] for s in evidence]
     reports=[]
     total_intersections=0
@@ -92,7 +94,7 @@ def write(stage,officials,layer_packets,exception_data):
     write_json(stage/'district-links.json',linkage)
     write_json(stage/'geography/index.json',geography_index)
     summary=dict(schemaVersion=1,measure='polygon-area-including-water',populationOverlap='not-calculated',
-                 geometryVintage='2026-01-01',congress='119th',stateLegislativePlan='Census 2024 SLD',
+                 geometryVintage='2026-01-01',congress='119th',futureCongress=dict(layer='cd120',congress='120th',joinedToOfficials=False),stateLegislativePlan='Census 2024 SLD',
                  states=50,analyticalCounts=counts,intersectionPairs=total_intersections,
                  geometryRepairs=sum(s['repairedGeometries'] for s in reports),
                  coverageResiduals=sum(len(s['coverageResiduals']) for s in reports),
@@ -102,6 +104,7 @@ def write(stage,officials,layer_packets,exception_data):
                               'Some layer pairs are not disjoint partitions. Residuals are preserved without renormalization.',
                               'Geometry repairs are explicit derived transformations; original published coordinates remain unchanged.',
                               'An exact district label join is not an independent legal determination of a plan applicability.',
-                              '120th Congress and 2026 legislative election plans are not substituted for current-cycle layers.'])
+                              '120th Congress plans are published as the separate cd120 layer and never substituted for cd or joined to current officeholders; 2026 legislative election plans are not collected.',
+                              'cd120 omits states whose Census 120th Congress geometry the Census Bureau reports as not reflecting the plan in effect; see withheldStates.'])
     write_json(stage/'geography-report.json',summary)
     return summary,evidence

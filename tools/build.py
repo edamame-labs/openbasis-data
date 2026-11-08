@@ -304,6 +304,8 @@ def source_allowed(source):
     if url.startswith('https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/') or url.startswith(CENSUS): return True
     import geography_exceptions
     if url in {url for _,url in geography_exceptions.SOURCES.values()}: return True
+    import district_sources
+    if url in {rule['url'] for rules in district_sources.WITHHELD.values() for rule in rules.values()}: return True
     if url in {url for _,url in SOURCES.values()}: return True
     import committees
     if url == committees.HOUSE[1] or committees.allowed(url): return True

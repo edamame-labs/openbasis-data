@@ -23,7 +23,8 @@
     "county": 115,
     "cd": 8,
     "sldu": 34,
-    "sldl": 163
+    "sldl": 163,
+    "cd120": 0
   },
   "districts": [
     {
@@ -14729,12 +14730,15 @@
     "county": "geography/regions/mo/county.geojson.gz",
     "cd": "geography/regions/mo/cd.geojson.gz",
     "sldu": "geography/regions/mo/sldu.geojson.gz",
-    "sldl": "geography/regions/mo/sldl.geojson.gz"
+    "sldl": "geography/regions/mo/sldl.geojson.gz",
+    "cd120": "geography/regions/mo/cd120.geojson.gz"
   },
   "sourceIds": [
     "census-cd-29-count",
     "census-cd-29-page-0",
     "census-cd-metadata",
+    "census-cd120-29-withheld",
+    "census-cd120-metadata",
     "census-county-29-count",
     "census-county-29-page-0",
     "census-county-29-page-1",
