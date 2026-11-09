@@ -29,6 +29,8 @@ RULES = {
  'AZ': ('Office of the Arizona Governor', 'https://azgovernor.gov/', TITLE+r'Office of the Arizona Governor '+N+r'\s*</title>'),
  'AR': ('Office of the Governor of Arkansas', 'https://governor.arkansas.gov/', TITLE+r'Home Page - Arkansas Governor - '+N+r'\s*</title>'),
  'CA': ('Office of the Governor of California', 'https://www.gov.ca.gov/', r'<meta name="description" content="The official website of California Governor '+N+r'\. '),
+ # governor.colorado.gov accepted no connections (Nov 2026); the state portal serves the same office's site.
+ 'CO': ('Office of the Governor of Colorado', 'https://www.colorado.gov/governor/', TITLE+r"Colorado Governor's Office Home Page \| Colorado Governor "+N+r'\s*</title>'),
  'CT': ('Office of the Governor of Connecticut', 'https://portal.ct.gov/governor', TITLE+r'Connecticut Governor '+N+r' \| CT\.gov\s*</title>'),
  'DE': ('Office of the Governor of Delaware', 'https://governor.delaware.gov/', TITLE+r'Governor '+N+r' - State of Delaware\s*</title>'),
  'FL': ('Executive Office of the Governor of Florida', 'https://www.flgov.com/eog/', TITLE+r'Governor '+N+r' \| Executive Office of the Governor\s*</title>'),
@@ -81,9 +83,7 @@ RULES = {
 BROWSER = {'gov-ks', 'gov-ma', 'gov-mi', 'gov-mn', 'gov-nh', 'gov-ny', 'gov-ri'}
 # Official governor sites with no collected observation: they refused retrieval with USER_AGENT
 # (bot challenge, 403 or timeout) and have no imported browser capture. No other publisher substitutes for them.
-BLOCKED = {
- 'CO': 'https://governor.colorado.gov/',
-}
+BLOCKED = {}
 assert set(RULES) | set(BLOCKED) == set(NAMES) and not set(RULES) & set(BLOCKED)
 assert all(k.removeprefix('gov-').upper() in RULES for k in BROWSER)
 

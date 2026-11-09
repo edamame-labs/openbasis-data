@@ -24,9 +24,13 @@ Governors link to their state's Census feature with `matchingRule: "statewide-go
 
 Seven official governor sites refuse automated retrieval but load in a normal browser: Kansas, Massachusetts, Michigan, Minnesota, New Hampshire, New York and Rhode Island. Each page was captured in a normal browser and imported with `tools/import_snapshot.py`, and these states are listed in `BROWSER`. Their sources are recorded with `representation: "browser-dom"` and the observation time. Like every browser-only source, they need captures from the last 24 hours before a `--browser-snapshots --fresh` publication. `import_snapshot.py --final-url` records a redirect, such as `governor.kansas.gov` → `www.governor.ks.gov` and `mass.gov/orgs/office-of-the-governor` → a page named after the current governor.
 
+## Colorado
+
+`governor.colorado.gov` accepted no HTTPS connection from any network tried in November 2026. The source is therefore the governor's site as served on the state portal, `https://www.colorado.gov/governor/`. It is published by the State of Colorado and carries the same Governor's Office site. If the subdomain recovers, either URL is acceptable; record which one was used.
+
 ## Not collected
 
-Colorado's governor site (`governor.colorado.gov`, 96.43.154.16 on every resolver tried) accepted no HTTPS connection from either a residential or a hosting-provider network, in a normal browser or over HTTP. It is recorded as `not-collected`, with its URL in `stateExecutive.blockers`, and is not filled from another publisher.
+None as of November 2026. A state that can't be read on a run is moved to `BLOCKED`, recorded as `not-collected` with its URL in `stateExecutive.blockers`, and never filled from another publisher.
 
 ## Network egress
 

@@ -95,7 +95,7 @@ The current browser states and the element each rule reads:
 
 If a browser state becomes readable over HTTP with `USER_AGENT`, remove it from `BROWSER` and delete its cache mapping, so it is collected over HTTP and labeled `http-response-body`.
 
-CO accepted no HTTPS connection from any network tried. Re-check it on each scheduled run.
+Colorado is read from `https://www.colorado.gov/governor/` because `governor.colorado.gov` stopped accepting connections. On each run, re-check the subdomain. If it responds again, either URL is fine.
 
 ### 4. Test
 

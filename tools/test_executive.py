@@ -56,6 +56,7 @@ class GovernorTests(unittest.TestCase):
         }
         cases.update({
             'gov-ct': (b'<title>Connecticut Governor Ned Lamont | CT.gov</title>', 'Ned Lamont'),
+            'gov-co': (b"<title>Colorado Governor's Office Home Page | Colorado Governor Jared Polis</title>", 'Jared Polis'),
             'gov-tn': (b'<a href="/governor/about-bill-lee.html" aria-label="Governor Bill Lee" title="Governor Bill Lee">Governor Bill Lee</a>', 'Bill Lee'),
         })
         for key, (page, name) in cases.items():
