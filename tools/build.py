@@ -335,6 +335,11 @@ def executive_coverage(st, declared, governors):
                 blockers=declared['blockers'])
 
 
+def state_executive(st, declared, governors, legacy):
+    """Coverage value for a state's executive offices; releases without executive rows keep their published value."""
+    return 'not-collected' if legacy else executive_coverage(st, declared, governors)
+
+
 def legislative_coverage(rows):
     declared = {'CA':{'upper':'collected','lower':'collected','blockers':[]},
                 'NC':{'upper':'collected','lower':'collected','blockers':[]}}
@@ -349,6 +354,9 @@ def legislative_coverage(rows):
     executive = next(m for m in region_modules() if m.__name__.endswith('.executive'))
     observed = collections.Counter((r['state'],legislative_chamber(r)) for r in rows if r['level']=='state' and not is_executive(r))
     governors = collections.Counter(r['state'] for r in rows if is_executive(r) and r['office']=='Governor')
+    # A release built before tools/regions/executive.py existed has no executive rows; describe it as it was published.
+    # A new build cannot reach this state: every governor source must parse to exactly one row or the build stops.
+    legacy = not any(is_executive(r) for r in rows)
     result = []
     for st in sorted(STATE_CODES):
         expected = ['unicameral'] if st == 'NE' else ['upper','lower']
@@ -364,7 +372,7 @@ def legislative_coverage(rows):
         result.append(dict(state=st, federal='collected',
             stateLegislature='collected' if collected==len(expected) else 'partial' if collected else 'not-collected',
             legislativeChambers=chambers, blockers=item.get('blockers', []),
-            stateExecutive=executive_coverage(st, executive.EXECUTIVE[st], governors[st]), countyOfficials='not-collected'))
+            stateExecutive=state_executive(st, executive.EXECUTIVE[st], governors[st], legacy), countyOfficials='not-collected'))
     return result
 
 

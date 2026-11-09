@@ -71,6 +71,11 @@ class GovernorTests(unittest.TestCase):
         self.assertEqual(target_layer(row), 'states')
         self.assertTrue(build.is_executive(row))
 
+    def test_release_without_executive_rows_keeps_published_coverage(self):
+        self.assertEqual(build.state_executive('TX', region.EXECUTIVE['TX'], 0, legacy=True), 'not-collected')
+        with self.assertRaises(AssertionError):
+            build.state_executive('TX', region.EXECUTIVE['TX'], 0, legacy=False)
+
     def test_executive_coverage_must_match_rows(self):
         with self.assertRaises(AssertionError):
             build.executive_coverage('TX', region.EXECUTIVE['TX'], 0)
