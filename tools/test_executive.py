@@ -54,6 +54,10 @@ class GovernorTests(unittest.TestCase):
             'gov-ny': (b'<meta property="og:site_name" content="Governor Kathy Hochul">', 'Kathy Hochul'),
             'gov-ri': (b"<title>Welcome to the Office of Governor Dan McKee | Governor's Office, State of Rhode Island</title>", 'Dan McKee'),
         }
+        cases.update({
+            'gov-ct': (b'<title>Connecticut Governor Ned Lamont | CT.gov</title>', 'Ned Lamont'),
+            'gov-tn': (b'<a href="/governor/about-bill-lee.html" aria-label="Governor Bill Lee" title="Governor Bill Lee">Governor Bill Lee</a>', 'Bill Lee'),
+        })
         for key, (page, name) in cases.items():
             self.assertEqual(region.parse(key, page, source(key))[0]['name'], name)
 

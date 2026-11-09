@@ -26,7 +26,11 @@ Seven official governor sites refuse automated retrieval but load in a normal br
 
 ## Not collected
 
-Colorado and Connecticut were unreachable, and Tennessee returned 403, from both an automated client and a normal browser. Each is recorded as `not-collected`, with its URL in `stateExecutive.blockers`, and none is filled from another publisher.
+Colorado's governor site (`governor.colorado.gov`, 96.43.154.16 on every resolver tried) accepted no HTTPS connection from either a residential or a hosting-provider network, in a normal browser or over HTTP. It is recorded as `not-collected`, with its URL in `stateExecutive.blockers`, and is not filled from another publisher.
+
+## Network egress
+
+Reachability depends on the network a request leaves from. From a hosting-provider address (a VPN exit), Connecticut and Tennessee refused or dropped connections. From a residential connection, both returned their pages over HTTP to `USER_AGENT`. A state that fails from one network is recorded as blocked for that run. Its status is never changed by retrying through proxies or other networks chosen to get around the block.
 
 ## Refreshing
 

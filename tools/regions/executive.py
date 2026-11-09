@@ -29,6 +29,7 @@ RULES = {
  'AZ': ('Office of the Arizona Governor', 'https://azgovernor.gov/', TITLE+r'Office of the Arizona Governor '+N+r'\s*</title>'),
  'AR': ('Office of the Governor of Arkansas', 'https://governor.arkansas.gov/', TITLE+r'Home Page - Arkansas Governor - '+N+r'\s*</title>'),
  'CA': ('Office of the Governor of California', 'https://www.gov.ca.gov/', r'<meta name="description" content="The official website of California Governor '+N+r'\. '),
+ 'CT': ('Office of the Governor of Connecticut', 'https://portal.ct.gov/governor', TITLE+r'Connecticut Governor '+N+r' \| CT\.gov\s*</title>'),
  'DE': ('Office of the Governor of Delaware', 'https://governor.delaware.gov/', TITLE+r'Governor '+N+r' - State of Delaware\s*</title>'),
  'FL': ('Executive Office of the Governor of Florida', 'https://www.flgov.com/eog/', TITLE+r'Governor '+N+r' \| Executive Office of the Governor\s*</title>'),
  'GA': ('Office of the Governor of Georgia', 'https://gov.georgia.gov/', TITLE+r'Governor '+N+r' Office of the Governor\s*</title>'),
@@ -65,6 +66,8 @@ RULES = {
  'RI': ('Office of the Governor of Rhode Island', 'https://governor.ri.gov/', TITLE+r'Welcome to the Office of Governor '+N+r" \| Governor's Office, State of Rhode Island\s*</title>"),
  'SC': ('Office of the Governor of South Carolina', 'https://governor.sc.gov/', TITLE+r'Home \| S\.C\. Governor '+N+r'\s*</title>'),
  'SD': ('Office of the Governor of South Dakota', 'https://governor.sd.gov/governor/about.aspx', TITLE+r'South Dakota Governor '+N+r'\s*</title>'),
+ # The title is only "Governor"; the footer link to the governor's biography carries the name.
+ 'TN': ('Office of the Governor of Tennessee', 'https://www.tn.gov/governor.html', r'<a href="/governor/about-[a-z-]+\.html" aria-label="Governor '+N+r'" title="Governor [^"]+">'),
  'TX': ('Office of the Texas Governor', 'https://gov.texas.gov/', TITLE+r'Office of the Texas Governor \| '+N+r'\s*</title>'),
  'UT': ('Office of the Governor of Utah', 'https://governor.utah.gov/', TITLE+r'Governor '+N+r'\s*</title>'),
  'VT': ('Office of the Governor of Vermont', 'https://governor.vermont.gov/', TITLE+r'Home \| Office of Governor '+N+r'\s*</title>'),
@@ -79,7 +82,7 @@ BROWSER = {'gov-ks', 'gov-ma', 'gov-mi', 'gov-mn', 'gov-nh', 'gov-ny', 'gov-ri'}
 # Official governor sites with no collected observation: they refused retrieval with USER_AGENT
 # (bot challenge, 403 or timeout) and have no imported browser capture. No other publisher substitutes for them.
 BLOCKED = {
- 'CO': 'https://governor.colorado.gov/', 'CT': 'https://portal.ct.gov/governor', 'TN': 'https://www.tn.gov/governor.html',
+ 'CO': 'https://governor.colorado.gov/',
 }
 assert set(RULES) | set(BLOCKED) == set(NAMES) and not set(RULES) & set(BLOCKED)
 assert all(k.removeprefix('gov-').upper() in RULES for k in BROWSER)

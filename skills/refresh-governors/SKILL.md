@@ -14,6 +14,10 @@ This skill refreshes `office: "Governor"` records. The adapter is `tools/regions
 - **Fail closed.** If a rule finds zero names or two different names, the build stops. Investigate the page; never loosen a pattern until it "passes".
 - **No private context in the public repo.** Commit messages and PRs describe the code and data changes and the validation results, and nothing else.
 
+## Where to run
+
+Run from a stable network and record which kind (residential, office, or cloud) in the PR. Several state sites refuse hosting-provider addresses, so a run from a cloud VM or VPN may see more failures than one from a residential or office connection. In tests, CT and TN failed from a VPN exit and succeeded from a home connection. Treat such failures as blocked for that run. Never switch to proxies, residential-proxy services or other networks chosen to get past a block.
+
 ## Schedule
 
 | When | Why |
@@ -91,7 +95,7 @@ The current browser states and the element each rule reads:
 
 If a browser state becomes readable over HTTP with `USER_AGENT`, remove it from `BROWSER` and delete its cache mapping, so it is collected over HTTP and labeled `http-response-body`.
 
-CO and CT could not be reached even from a normal browser, and TN returned 403 to one. Re-check them on each scheduled run.
+CO accepted no HTTPS connection from any network tried. Re-check it on each scheduled run.
 
 ### 4. Test
 
