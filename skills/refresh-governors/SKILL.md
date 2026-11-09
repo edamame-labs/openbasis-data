@@ -60,29 +60,38 @@ For each URL in `BLOCKED`, run `curl -sS -o /dev/null -w '%{http_code}\n' -A "<U
 
 States in `BROWSER` are read from a DOM snapshot that a person captured in a normal browser and imported. A snapshot counts for 24 hours. An automated agent must not produce these itself (see the rules above). It should open an issue or PR comment listing the states that need a capture and the instructions below, then continue without them.
 
-For the person doing the capture:
+For the person doing the capture, repeat this for each `BROWSER` state:
 
-1. Open the source URL in your everyday browser and wait for the page to load. Confirm that it shows the governor and is not a challenge or error page.
-2. Open DevTools → Console and run `copy(document.documentElement.outerHTML)`, then on macOS `pbpaste > gov-xx.html`. Note the UTC time.
-3. Import the file. If the address bar changed after a redirect, add `--final-url`:
+1. Open the source URL in your everyday browser and wait for the page to load. Close any newsletter popup. Confirm that the page shows the governor and is not a challenge or error page. If it is a challenge, skip the state; don't solve it.
+2. Open DevTools → Console and run `copy(document.documentElement.outerHTML)`.
+3. On macOS, save the clipboard **as UTF-8**. Without the locale, `pbpaste` mangles characters such as curly quotes:
+
+```sh
+LC_ALL=en_US.UTF-8 pbpaste > gov-xx.html && date -u +%Y-%m-%dT%H:%M:%SZ
+```
+
+4. Import the file using the printed time. If the address bar changed after a redirect, add `--final-url`:
 
 ```sh
 python3 -B tools/import_snapshot.py --input gov-xx.html --url <source URL> \
   [--final-url <address bar URL>] --observed-at <UTC ISO time>
 ```
 
-These states had a marker identified but were still uncollected as of November 2026. To promote one, add its rule to `RULES`, add its key to `BROWSER`, and remove it from `BLOCKED`:
+The current browser states and the element each rule reads:
 
 | State | Source URL | Marker |
 | --- | --- | --- |
+| KS | `https://governor.kansas.gov/` (redirects to `www.governor.ks.gov`) | menu link `aria-label="Governor <name>"` to `/about-the-office/governor-…` |
 | MA | `https://www.mass.gov/orgs/office-of-the-governor` (redirects to a page named after the governor) | `<title>Governor <name> and Lt. Governor … \| Mass.gov</title>` |
-| MI | `https://www.michigan.gov/whitmer` (the path is the governor's surname; check the menu after a change) | `<title>Governor <name></title>` |
+| MI | `https://www.michigan.gov/whitmer` (the path is the governor's surname; after a change, follow the state's menu to the new path) | `<title>Governor <name></title>` |
 | MN | `https://mn.gov/governor/` | `<meta property="og:site_name" content="Office of Governor <name> and Lt. Governor …">` |
 | NH | `https://www.governor.nh.gov/` | `<meta property="og:site_name" content="Governor <name>">` |
 | NY | `https://www.governor.ny.gov/` | `<meta property="og:site_name" content="Governor <name>">` |
 | RI | `https://governor.ri.gov/` | `<title>Welcome to the Office of Governor <name> \| Governor's Office, State of Rhode Island</title>` |
 
-CO and CT could not be reached even from a normal browser, and TN returned 403 to one. Re-check them on the next scheduled run.
+If a browser state becomes readable over HTTP with `USER_AGENT`, remove it from `BROWSER` and delete its cache mapping, so it is collected over HTTP and labeled `http-response-body`.
+
+CO and CT could not be reached even from a normal browser, and TN returned 403 to one. Re-check them on each scheduled run.
 
 ### 4. Test
 

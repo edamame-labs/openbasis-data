@@ -47,6 +47,16 @@ class GovernorTests(unittest.TestCase):
         page = b'<a class="megamenu_level1" href="/about-the-office/governor-laura-kelly" aria-label="Governor Laura Kelly" data-navid="53">Governor Laura Kelly</a>'
         self.assertEqual(region.parse('gov-ks', page, source('gov-ks'))[0]['name'], 'Laura Kelly')
 
+    def test_browser_markers(self):
+        cases = {
+            'gov-ma': (b'<title>Governor Maura Healey and Lt. Governor Kim Driscoll | Mass.gov</title>', 'Maura Healey'),
+            'gov-mn': (b'<meta property="og:site_name" content="Office of Governor Tim Walz and Lt. Governor Peggy Flanagan">', 'Tim Walz'),
+            'gov-ny': (b'<meta property="og:site_name" content="Governor Kathy Hochul">', 'Kathy Hochul'),
+            'gov-ri': (b"<title>Welcome to the Office of Governor Dan McKee | Governor's Office, State of Rhode Island</title>", 'Dan McKee'),
+        }
+        for key, (page, name) in cases.items():
+            self.assertEqual(region.parse(key, page, source(key))[0]['name'], name)
+
     def test_browser_sources_are_registered(self):
         for key in region.BROWSER:
             self.assertIn(key, region.SOURCES)

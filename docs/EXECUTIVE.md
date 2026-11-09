@@ -22,11 +22,11 @@ Governors link to their state's Census feature with `matchingRule: "statewide-go
 
 ## Browser captures
 
-Kansas refuses automated retrieval, but its page was captured in a normal browser and imported with `tools/import_snapshot.py`. It is listed in `BROWSER` and is read from that observation. Like every browser-only source, it needs a capture from the last 24 hours before a `--browser-snapshots --fresh` publication. `import_snapshot.py --final-url` records a redirect, such as `governor.kansas.gov` → `www.governor.ks.gov`.
+Seven official governor sites refuse automated retrieval but load in a normal browser: Kansas, Massachusetts, Michigan, Minnesota, New Hampshire, New York and Rhode Island. Each page was captured in a normal browser and imported with `tools/import_snapshot.py`, and these states are listed in `BROWSER`. Their sources are recorded with `representation: "browser-dom"` and the observation time. Like every browser-only source, they need captures from the last 24 hours before a `--browser-snapshots --fresh` publication. `import_snapshot.py --final-url` records a redirect, such as `governor.kansas.gov` → `www.governor.ks.gov` and `mass.gov/orgs/office-of-the-governor` → a page named after the current governor.
 
 ## Not collected
 
-These official governor sites refused retrieval with the agent above (a 403, a bot challenge, or a timeout), and have no imported capture: Colorado, Connecticut, Massachusetts, Michigan, Minnesota, New Hampshire, New York, Rhode Island and Tennessee. Each is recorded as `not-collected`, with its URL in `stateExecutive.blockers`. None of them is filled from another publisher. Colorado and Connecticut were unreachable even from a normal browser, and Tennessee returned 403 to one. The others load in a normal browser, and their identifying markers are listed in [the refresh runbook](../skills/refresh-governors/SKILL.md).
+Colorado and Connecticut were unreachable, and Tennessee returned 403, from both an automated client and a normal browser. Each is recorded as `not-collected`, with its URL in `stateExecutive.blockers`, and none is filled from another publisher.
 
 ## Refreshing
 

@@ -42,14 +42,19 @@ RULES = {
  'KY': ('Office of the Governor of Kentucky', 'https://governor.ky.gov/', TITLE+r'Welcome - Kentucky Governor '+N+r'\s*</title>'),
  'LA': ('Office of the Governor of Louisiana', 'https://gov.louisiana.gov/', TITLE+r'Home \| Office of Governor '+N+r'\s*</title>'),
  'ME': ('Office of the Governor of Maine', 'https://www.maine.gov/governor/mills/', TITLE+r'Home \| Office of Governor '+N+r'\s*</title>'),
+ 'MA': ('Office of the Governor of Massachusetts', 'https://www.mass.gov/orgs/office-of-the-governor', TITLE+r'Governor '+N+r' and Lt\. Governor [^|<]+ \| Mass\.gov\s*</title>'),
  'MD': ('Office of the Governor of Maryland', 'https://governor.maryland.gov/', TITLE+r'The Office of Governor '+N+r'\s*</title>'),
+ 'MI': ('Office of the Governor of Michigan', 'https://www.michigan.gov/whitmer', TITLE+r'Governor '+N+r'\s*</title>'),
+ 'MN': ('Office of the Governor of Minnesota', 'https://mn.gov/governor/', r'<meta property="og:site_name" content="Office of Governor '+N+r' and Lt\. Governor [^"]+">'),
  'MS': ('Office of the Governor of Mississippi', 'https://governorreeves.ms.gov/', TITLE+r'Official Website of Mississippi Governor '+N+r'\s*</title>'),
  'MO': ('Office of the Governor of Missouri', 'https://governor.mo.gov/', TITLE+N+r', Governor of Missouri Homepage'),
  'MT': ('Office of the Governor of Montana', 'https://governor.mt.gov/', TITLE+r'Montana Governor '+N+r' Official Website\s*</title>'),
  'NE': ('Office of the Governor of Nebraska', 'https://governor.nebraska.gov/', TITLE+r'Latest News \| Office of Governor '+N+r'\s*</title>'),
  'NV': ('Office of the Governor of Nevada', 'https://www.gov.nv.gov/', TITLE+r"Nevada Governor's Office \| "+N+r'\s*</title>'),
+ 'NH': ('Office of the Governor of New Hampshire', 'https://www.governor.nh.gov/', r'<meta property="og:site_name" content="Governor '+N+r'">'),
  'NJ': ('Office of the Governor of New Jersey', 'https://www.nj.gov/governor/', TITLE+r'Office of New Jersey Governor '+N+r'\s*</title>'),
  'NM': ('Office of the Governor of New Mexico', 'https://www.governor.state.nm.us/', TITLE+r'Home - Office of the Governor - '+N+r'\s*</title>'),
+ 'NY': ('Office of the Governor of New York', 'https://www.governor.ny.gov/', r'<meta property="og:site_name" content="Governor '+N+r'">'),
  'NC': ('Office of the Governor of North Carolina', 'https://governor.nc.gov/', r'<meta name="description" content="The official website for North Carolina Governor '+N+r'\." />'),
  # The homepage names the governor only in news items; its "Governor" menu links to this biography page.
  'ND': ('Office of the Governor of North Dakota', 'https://www.governor.nd.gov/governor-kelly-armstrong', TITLE+r'Governor '+N+r' \| North Dakota Office of the Governor\s*</title>'),
@@ -57,6 +62,7 @@ RULES = {
  'OK': ('Office of the Governor of Oklahoma', 'https://oklahoma.gov/governor.html', TITLE+r'Governor '+N+r'\s*</title>'),
  'OR': ('Office of the Governor of Oregon', 'https://www.oregon.gov/gov/Pages/index.aspx', TITLE+r'Governor of Oregon : Governor '+N+r' : State of Oregon\s*</title>'),
  'PA': ('Office of the Governor of Pennsylvania', 'https://www.pa.gov/governor', r'<meta name="copapwp-page-title" content="Governor '+N+r'"/>'),
+ 'RI': ('Office of the Governor of Rhode Island', 'https://governor.ri.gov/', TITLE+r'Welcome to the Office of Governor '+N+r" \| Governor's Office, State of Rhode Island\s*</title>"),
  'SC': ('Office of the Governor of South Carolina', 'https://governor.sc.gov/', TITLE+r'Home \| S\.C\. Governor '+N+r'\s*</title>'),
  'SD': ('Office of the Governor of South Dakota', 'https://governor.sd.gov/governor/about.aspx', TITLE+r'South Dakota Governor '+N+r'\s*</title>'),
  'TX': ('Office of the Texas Governor', 'https://gov.texas.gov/', TITLE+r'Office of the Texas Governor \| '+N+r'\s*</title>'),
@@ -69,13 +75,11 @@ RULES = {
  'WY': ('Office of the Governor of Wyoming', 'https://governor.wyo.gov/', TITLE+r'Wyoming Governor '+N+r'\s*</title>'),
 }
 # Sources read from an imported browser DOM observation (tools/import_snapshot.py), not over HTTP.
-BROWSER = {'gov-ks'}
+BROWSER = {'gov-ks', 'gov-ma', 'gov-mi', 'gov-mn', 'gov-nh', 'gov-ny', 'gov-ri'}
 # Official governor sites with no collected observation: they refused retrieval with USER_AGENT
 # (bot challenge, 403 or timeout) and have no imported browser capture. No other publisher substitutes for them.
 BLOCKED = {
- 'CO': 'https://governor.colorado.gov/', 'CT': 'https://portal.ct.gov/governor',
- 'MA': 'https://www.mass.gov/orgs/office-of-the-governor', 'MI': 'https://www.michigan.gov/whitmer', 'MN': 'https://mn.gov/governor/', 'NH': 'https://www.governor.nh.gov/',
- 'NY': 'https://www.governor.ny.gov/', 'RI': 'https://governor.ri.gov/', 'TN': 'https://www.tn.gov/governor.html',
+ 'CO': 'https://governor.colorado.gov/', 'CT': 'https://portal.ct.gov/governor', 'TN': 'https://www.tn.gov/governor.html',
 }
 assert set(RULES) | set(BLOCKED) == set(NAMES) and not set(RULES) & set(BLOCKED)
 assert all(k.removeprefix('gov-').upper() in RULES for k in BROWSER)
