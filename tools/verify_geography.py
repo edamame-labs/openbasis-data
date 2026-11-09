@@ -5,7 +5,7 @@ import math
 from geo_io import read_json
 from pathlib import Path
 
-LAYERS={'state','county','cd','sldu','sldl'}
+LAYERS={'state','county','cd','sldu','sldl','cd120'}
 
 
 def read(path):return read_json(path)
@@ -36,6 +36,9 @@ def verify(folder,officials,sources):
             assert state['files'][layer]==path
             fc=read(folder/path)
             assert fc['type']=='FeatureCollection' and fc['layer']['generalization']=='none requested'
+            if fc.get('withheld'):
+                assert layer=='cd120' and not fc['features'] and fc['withheld']['sourceId'] in fc['sourceIds']
+                assert source_index[fc['withheld']['sourceId']]['withholdsState']==fips_by_state[st]
             assert len(fc['features'])==state['layerCounts'][layer]
             assert set(fc['sourceIds'])<=source_index.keys()
             for feature in fc['features']:
@@ -88,6 +91,7 @@ def verify(folder,officials,sources):
             assert close(residual['residualAreaM2'],residual['areaM2']-residual['sumIntersectionAreaM2'])
     assert counts==report['analyticalCounts'] and total_pairs==report['intersectionPairs']
     links=read(folder/'district-links.json')
+    assert not any(row.get('layer')=='cd120' for row in links['matches']),'120th Congress geometry cannot join current officeholders'
     people={r['id']:r for r in officials}
     seen=set()
     for row in links['matches']+links['unmatched']:

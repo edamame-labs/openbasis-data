@@ -76,6 +76,55 @@ class CensusDistrictTests(unittest.TestCase):
             self.assertEqual(len(calls),3)
             iterator.close()
 
+    def cd120_fetch(self, calls, notes):
+        def fetch(key, publisher, url, offline):
+            calls.append(key)
+            if key.endswith('-withheld'):
+                self.assertEqual(url, districts.CENSUS_CD120_NOTES)
+                return notes, dict(id=key, url=url)
+            if key.endswith('-metadata'):
+                payload=dict(name='120th Congressional Districts',description='120th Congressional Districts; January 1, 2026 vintage',fields=[dict(name=n) for n in ['GEOID','STATE','OBJECTID','CD120']],advancedQueryCapabilities=dict(supportsPagination=True))
+            elif key.endswith('-count'): payload={'count':1}
+            else:
+                one=feature('01','06');one['properties']['CD120']=one['properties'].pop('SLDU')
+                payload=dict(type='FeatureCollection',features=[one])
+            return json.dumps(payload).encode(),dict(id=key)
+        return fetch
+
+    def test_cd120_withholds_states_census_reports_as_not_in_effect(self):
+        calls=[]
+        notes=b'<p>*IMPORTANT NOTE: ...  The Missouri plan now remains unchanged from the plans used in the 2022 and 2024 elections.</p>'
+        with patch.dict(districts.LAYERS,{'cd120':districts.LAYERS['cd120']},clear=True), patch.dict(districts.AREA_LAYERS,{},clear=True), patch.object(districts,'STATE_FIPS',{'06','29'}):
+            collections,sources=districts.collect(self.cd120_fetch(calls,notes))
+        fc=collections['cd120']
+        self.assertEqual({f['properties']['STATE'] for f in fc['features']},{'06'})
+        self.assertFalse(any(k.startswith('census-cd120-29-') and not k.endswith('-withheld') for k in calls),'Missouri geometry must not be requested')
+        self.assertEqual([w['state'] for w in fc['layer']['withheldStates']],['29'])
+        evidence=next(s for s in sources if s['id']=='census-cd120-29-withheld')
+        self.assertEqual(evidence['withholdsState'],'29')
+        self.assertIn('not joined to current officeholders',fc['layer']['applicability'])
+
+    def test_cd120_exclusion_fails_when_census_statement_is_gone(self):
+        with patch.dict(districts.LAYERS,{'cd120':districts.LAYERS['cd120']},clear=True), patch.dict(districts.AREA_LAYERS,{},clear=True), patch.object(districts,'STATE_FIPS',{'06','29'}):
+            with self.assertRaisesRegex(AssertionError,'applicability statement changed'):
+                districts.collect(self.cd120_fetch([],b'<p>Missouri products have been regenerated.</p>'))
+
+    def test_only_withheld_layers_carry_withheld_metadata(self):
+        calls=[]
+        def fetch(key, publisher, url, offline):
+            calls.append(key)
+            if key.endswith('-metadata'):
+                payload=dict(name='119th Congressional Districts',description='January 1, 2026 vintage',fields=[dict(name=n) for n in ['GEOID','STATE','OBJECTID','CD119']],advancedQueryCapabilities=dict(supportsPagination=True))
+            elif key.endswith('-count'): payload={'count':1}
+            else:
+                one=feature('01','29');one['properties']['CD119']=one['properties'].pop('SLDU')
+                payload=dict(type='FeatureCollection',features=[one])
+            return json.dumps(payload).encode(),dict(id=key)
+        with patch.dict(districts.LAYERS,{'cd':districts.LAYERS['cd']},clear=True), patch.dict(districts.AREA_LAYERS,{},clear=True), patch.object(districts,'STATE_FIPS',{'29'}):
+            collections,_=districts.collect(fetch)
+        self.assertNotIn('withheldStates',collections['cd']['layer'])
+        self.assertEqual(len(collections['cd']['features']),1)
+
     def test_geometry_and_source_identifiers_required(self):
         page = dict(type='FeatureCollection',features=[feature()])
         page['features'][0]['geometry']=None

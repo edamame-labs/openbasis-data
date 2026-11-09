@@ -23,7 +23,8 @@
     "county": 64,
     "cd": 6,
     "sldu": 40,
-    "sldl": 105
+    "sldl": 105,
+    "cd120": 6
   },
   "districts": [
     {
@@ -2617,6 +2618,78 @@
       "sourceId": "census-sldl-22-page-1",
       "areaM2": 16089507.645080704,
       "geometryRepaired": false
+    },
+    {
+      "key": "cd120:2201",
+      "layer": "cd120",
+      "geoid": "2201",
+      "boundaryId": "2201",
+      "stateFips": "22",
+      "name": "Congressional District 1",
+      "districtKind": "district",
+      "sourceId": "census-cd120-22-page-0",
+      "areaM2": 23677072901.319183,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd120:2202",
+      "layer": "cd120",
+      "geoid": "2202",
+      "boundaryId": "2202",
+      "stateFips": "22",
+      "name": "Congressional District 2",
+      "districtKind": "district",
+      "sourceId": "census-cd120-22-page-0",
+      "areaM2": 3033842538.498102,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd120:2203",
+      "layer": "cd120",
+      "geoid": "2203",
+      "boundaryId": "2203",
+      "stateFips": "22",
+      "name": "Congressional District 3",
+      "districtKind": "district",
+      "sourceId": "census-cd120-22-page-0",
+      "areaM2": 24744954344.67035,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd120:2204",
+      "layer": "cd120",
+      "geoid": "2204",
+      "boundaryId": "2204",
+      "stateFips": "22",
+      "name": "Congressional District 4",
+      "districtKind": "district",
+      "sourceId": "census-cd120-22-page-0",
+      "areaM2": 34367884522.17747,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd120:2205",
+      "layer": "cd120",
+      "geoid": "2205",
+      "boundaryId": "2205",
+      "stateFips": "22",
+      "name": "Congressional District 5",
+      "districtKind": "district",
+      "sourceId": "census-cd120-22-page-0",
+      "areaM2": 39674416711.5858,
+      "geometryRepaired": false
+    },
+    {
+      "key": "cd120:2206",
+      "layer": "cd120",
+      "geoid": "2206",
+      "boundaryId": "2206",
+      "stateFips": "22",
+      "name": "Congressional District 6",
+      "districtKind": "district",
+      "sourceId": "census-cd120-22-page-0",
+      "areaM2": 10153475448.408735,
+      "geometryRepaired": false
     }
   ],
   "overlaps": [
@@ -4338,6 +4411,54 @@
       "intersectionAreaM2": 6659831096.530728,
       "shareOfA": 0.049095099617294816,
       "shareOfB": 1.0000000000000013,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:22",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 23677072901.31906,
+      "shareOfA": 0.17454320325657338,
+      "shareOfB": 0.9999999999999949,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:22",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 3033842538.498152,
+      "shareOfA": 0.02236495182713319,
+      "shareOfB": 1.0000000000000164,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:22",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 24744954344.670296,
+      "shareOfA": 0.1824154368133824,
+      "shareOfB": 0.9999999999999979,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:22",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 34367884522.17763,
+      "shareOfA": 0.25335397997269765,
+      "shareOfB": 1.0000000000000047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:22",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 39674416711.585754,
+      "shareOfA": 0.2924727988564209,
+      "shareOfB": 0.9999999999999989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "state:22",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 10153475448.408741,
+      "shareOfA": 0.07484962927379014,
+      "shareOfB": 1.0000000000000007,
       "geometryRepaired": false
     },
     {
@@ -7597,6 +7718,638 @@
       "geometryRepaired": false
     },
     {
+      "a": "county:22001",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1703008673.0372465,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.06882246171547478,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22003",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1984246675.8877459,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.05773549066155989,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22005",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 145789268.52692407,
+      "shareOfA": 0.18595892948816647,
+      "shareOfB": 0.048054329345351185,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22005",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 638197114.5319288,
+      "shareOfA": 0.8140410705118323,
+      "shareOfB": 0.06285504089458825,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22007",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 958114848.2823777,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.09436324075935346,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22009",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2241981497.6506295,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.0565095011717191,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22011",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 3019797200.641481,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.08786683389525524,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22013",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2129343529.4404407,
+      "shareOfA": 1.0,
+      "shareOfB": 0.06195736394733238,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22015",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2245297993.534727,
+      "shareOfA": 0.9999999999999974,
+      "shareOfB": 0.06533128310780505,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22017",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2426912210.4700623,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.07061569963388305,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22019",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 772471216.901514,
+      "shareOfA": 0.2725850297459073,
+      "shareOfB": 0.03121732237375865,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22019",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2061401272.8004315,
+      "shareOfA": 0.7274149702540916,
+      "shareOfB": 0.05998045272382759,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22021",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1401202800.9012194,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.03531754004317945,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22023",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 5016090141.748055,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.20271163453685812,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22025",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1915132321.2136376,
+      "shareOfA": 0.9999999999999979,
+      "shareOfB": 0.04827121555776715,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22027",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1987381821.6221516,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.05782671378390199,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22029",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1935683483.6431258,
+      "shareOfA": 1.0000000000000038,
+      "shareOfB": 0.048789210884047196,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22031",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2316982011.449206,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.06741706810479027,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22033",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 146129316.34172997,
+      "shareOfA": 0.11995622755365365,
+      "shareOfB": 0.04816641420489509,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22033",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1072059345.6547437,
+      "shareOfA": 0.8800437724463457,
+      "shareOfB": 0.10558545702917498,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22035",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1146504181.7131248,
+      "shareOfA": 0.9999999999999967,
+      "shareOfB": 0.02889782073036301,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22037",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1180173586.291749,
+      "shareOfA": 0.9999999999999994,
+      "shareOfB": 0.02974646344194677,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22039",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1760349674.0986438,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.051220774818499425,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22041",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1644975794.113953,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.04146187721100343,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22043",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1721854049.3163612,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.043399605892971885,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22045",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 2694532861.0875216,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.10889221388553012,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22047",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 330378947.8734731,
+      "shareOfA": 0.19535922337299474,
+      "shareOfB": 0.10889785599651673,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22047",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1360756705.5616784,
+      "shareOfA": 0.8046407766270055,
+      "shareOfB": 0.13401881084717035,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22049",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1503328994.7021623,
+      "shareOfA": 1.0000000000000042,
+      "shareOfB": 0.03789164704375243,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22051",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 1381579799.5063355,
+      "shareOfA": 0.8308452634581692,
+      "shareOfB": 0.05835095432887567,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22051",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 281280735.74649924,
+      "shareOfA": 0.16915473654182953,
+      "shareOfB": 0.09271434894104515,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22053",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1706097086.9906995,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.06894727156197661,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22055",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 697406741.0812461,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.02818379583033888,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22057",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 3103310663.682938,
+      "shareOfA": 0.815970340679118,
+      "shareOfB": 0.13106817200829057,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22057",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 699904366.2899754,
+      "shareOfA": 0.1840296593208827,
+      "shareOfB": 0.06893249211526535,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22059",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1716019000.6081047,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.043252532559779,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22061",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1223430138.9000149,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.030836751748457247,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22063",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1790828206.4678414,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.17637588386038813,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22065",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1684315576.245675,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.04245344269305459,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22067",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2087799000.6638575,
+      "shareOfA": 0.9999999999999983,
+      "shareOfB": 0.05262330674805294,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22069",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 3365826040.2076545,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.09793521152096805,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22071",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 535022555.58235514,
+      "shareOfA": 0.5904639042286424,
+      "shareOfB": 0.022596651106841253,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22071",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 371082884.14183396,
+      "shareOfA": 0.40953609577135824,
+      "shareOfB": 0.12231448383789154,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22073",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1636125724.5079494,
+      "shareOfA": 0.9999999999999973,
+      "shareOfB": 0.041238809795284645,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22075",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 6649119200.238102,
+      "shareOfA": 0.9999999999999991,
+      "shareOfB": 0.28082521973683844,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22077",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1529017063.8328688,
+      "shareOfA": 0.9999999999999984,
+      "shareOfB": 0.15059051175156957,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22079",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 3526322112.170173,
+      "shareOfA": 0.9999999999999932,
+      "shareOfB": 0.08888151117141464,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22081",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1041712927.7137301,
+      "shareOfA": 1.0000000000000024,
+      "shareOfB": 0.03031065025377156,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22083",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1461802646.1113973,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.03684496880541457,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22085",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2619861422.866712,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.07622992975247357,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22087",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 5541843151.703646,
+      "shareOfA": 0.9928149902928175,
+      "shareOfB": 0.23405947072937713,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22087",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 40106361.43690866,
+      "shareOfA": 0.007185009707180903,
+      "shareOfB": 0.013219658214945867,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22089",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 736031948.4111242,
+      "shareOfA": 0.7159958393259026,
+      "shareOfB": 0.24260716865533022,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22089",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 291951606.77836645,
+      "shareOfA": 0.28400416067409806,
+      "shareOfB": 0.02875385952936159,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22091",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1060875340.9202914,
+      "shareOfA": 0.9999999999999967,
+      "shareOfB": 0.02673953214315291,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22093",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 654832195.3802478,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.21584251228292858,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22095",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 275384770.4158986,
+      "shareOfA": 0.25932604065790976,
+      "shareOfB": 0.09077095034478201,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22095",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 786540093.4244179,
+      "shareOfA": 0.7406739593420923,
+      "shareOfB": 0.07746511009170612,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22097",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1231388960.0586894,
+      "shareOfA": 0.5062782038861959,
+      "shareOfB": 0.049763234270177995,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22097",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1200848791.0562909,
+      "shareOfA": 0.4937217961138068,
+      "shareOfB": 0.030267585275062573,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22099",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1564180651.3484356,
+      "shareOfA": 0.7394487141286974,
+      "shareOfB": 0.06321210496334313,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22099",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 551152868.6936259,
+      "shareOfA": 0.2605512858713013,
+      "shareOfB": 0.054282188546583156,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22101",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 2900070693.7118225,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.1171984661324077,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22103",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 2837646331.8410835,
+      "shareOfA": 1.0000000000000058,
+      "shareOfB": 0.11984785212546194,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22105",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 727496571.6625044,
+      "shareOfA": 0.33282620462741375,
+      "shareOfB": 0.030725781632491046,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22105",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1458318612.2017167,
+      "shareOfA": 0.6671737953725819,
+      "shareOfB": 0.0367571531751305,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22107",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1661978100.3112512,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.041890423050023495,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22109",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 2901054627.1020474,
+      "shareOfA": 0.5379312133718755,
+      "shareOfB": 0.12252589833181673,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22109",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 2491929745.2261157,
+      "shareOfA": 0.46206878662812584,
+      "shareOfB": 0.1007045602314007,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22111",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2344809665.9224577,
+      "shareOfA": 0.9999999999999959,
+      "shareOfB": 0.06822676747558788,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22113",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 3967777573.4789023,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.16034693449872925,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22115",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 3471326686.8688617,
+      "shareOfA": 0.9999999999999967,
+      "shareOfB": 0.1010049566661232,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22117",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1750492573.9652994,
+      "shareOfA": 1.0000000000000038,
+      "shareOfB": 0.0441214444736655,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22119",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1592635388.6532996,
+      "shareOfA": 0.999999999999999,
+      "shareOfB": 0.04634080365422486,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22121",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 52826110.223489,
+      "shareOfA": 0.10009128116331421,
+      "shareOfB": 0.017412278176322384,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22121",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 474953228.89092505,
+      "shareOfA": 0.8999087188366853,
+      "shareOfB": 0.04677740457484046,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22123",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 933968681.9238237,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.023540829565645117,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22125",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1103336286.2581236,
+      "shareOfA": 0.9999999999999987,
+      "shareOfB": 0.027809767041538515,
+      "geometryRepaired": false
+    },
+    {
+      "a": "county:22127",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2477947416.1957,
+      "shareOfA": 0.9999999999999958,
+      "shareOfB": 0.06245705977756908,
+      "geometryRepaired": false
+    },
+    {
       "a": "cd:2201",
       "b": "sldu:22001",
       "intersectionAreaM2": 6628991657.364265,
@@ -9546,6 +10299,182 @@
       "intersectionAreaM2": 44553509.3851466,
       "shareOfA": 0.0034184839863177375,
       "shareOfB": 1.000000000000002,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2201",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 20367227248.18246,
+      "shareOfA": 0.9258428077747866,
+      "shareOfB": 0.8602088329528135,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2201",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 152652272.26790324,
+      "shareOfA": 0.006939187482298503,
+      "shareOfB": 0.050316478304597,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2201",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 72307617.23870462,
+      "shareOfA": 0.003286922002294689,
+      "shareOfB": 0.001822525023224581,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2201",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1406393050.1659873,
+      "shareOfA": 0.06393108274062298,
+      "shareOfB": 0.1385134634256095,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2202",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 14368452.484954089,
+      "shareOfA": 0.0023256988628752636,
+      "shareOfB": 0.000606850878266863,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2202",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 2682234839.665012,
+      "shareOfA": 0.43415047814686536,
+      "shareOfB": 0.8841048293141961,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2202",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 3481519213.009756,
+      "shareOfA": 0.563523822990256,
+      "shareOfB": 0.34288941069487533,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2203",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 3188979382.5528545,
+      "shareOfA": 0.11587929174679377,
+      "shareOfB": 0.1346863861020244,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2203",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 23197492775.959354,
+      "shareOfA": 0.8429371001538553,
+      "shareOfB": 0.9374635512696231,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2203",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 166394708.73735178,
+      "shareOfA": 0.0060463548633741555,
+      "shareOfB": 0.0048415755304920755,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2203",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 966971530.8056087,
+      "shareOfA": 0.03513725323597628,
+      "shareOfB": 0.09523552164172058,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2204",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 143616442.01597363,
+      "shareOfA": 0.0036836971878555546,
+      "shareOfB": 0.00580386773059075,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2204",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 29141641416.209373,
+      "shareOfA": 0.7474700043219678,
+      "shareOfB": 0.8479323595668038,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2204",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 9701780080.031254,
+      "shareOfA": 0.24884629849017698,
+      "shareOfB": 0.24453491403688668,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2205",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 106497818.09874864,
+      "shareOfA": 0.003812350655336554,
+      "shareOfB": 0.004497930066888253,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2205",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 26063484362.608482,
+      "shareOfA": 0.9330063607313661,
+      "shareOfB": 0.6569342796411516,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2205",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1764966024.981069,
+      "shareOfA": 0.06318128861329596,
+      "shareOfB": 0.173828757842486,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2206",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 198955426.5652191,
+      "shareOfA": 0.015265373010794942,
+      "shareOfB": 0.06557869238121751,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2206",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1403845126.6949787,
+      "shareOfA": 0.107713671742251,
+      "shareOfB": 0.05673258099978445,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2206",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 5059848397.230839,
+      "shareOfA": 0.38823003973948744,
+      "shareOfB": 0.14722606490270698,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2206",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 3836844651.7070975,
+      "shareOfA": 0.2943918937218959,
+      "shareOfB": 0.09670828129873059,
+      "geometryRepaired": false
+    },
+    {
+      "a": "cd:2206",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 2533625629.4463243,
+      "shareOfA": 0.19439902178556429,
+      "shareOfB": 0.24953284639530962,
       "geometryRepaired": false
     },
     {
@@ -11563,6 +12492,1782 @@
       "shareOfA": 0.3055672310247117,
       "shareOfB": 0.535411065567601,
       "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22001",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 6487096443.199714,
+      "shareOfA": 0.9785947514344903,
+      "shareOfB": 0.27398219662694373,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22001",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 141895214.16456333,
+      "shareOfA": 0.02140524856550829,
+      "shareOfB": 0.04677079062738974,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22002",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 1194795359.5085428,
+      "shareOfA": 0.5991533426819197,
+      "shareOfB": 0.39382246914502816,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22002",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 799344161.0362678,
+      "shareOfA": 0.4008466573180813,
+      "shareOfB": 0.07872616279005648,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22003",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 58525946.44988032,
+      "shareOfA": 0.2963410922614637,
+      "shareOfB": 0.0024718404464016117,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22003",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 138969264.2320133,
+      "shareOfA": 0.7036589077385351,
+      "shareOfB": 0.04580635364840317,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22004",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 23210433.891090844,
+      "shareOfA": 0.3659180352972293,
+      "shareOfB": 0.0009802915245405042,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22004",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 40220257.2806012,
+      "shareOfA": 0.6340819647027716,
+      "shareOfB": 0.013257199993151973,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22005",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 1518141.9493587066,
+      "shareOfA": 0.02273226848985145,
+      "shareOfB": 6.411864995668964e-05,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22005",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 65265423.88950444,
+      "shareOfA": 0.9772677315101499,
+      "shareOfB": 0.021512462516203614,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22006",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 808951811.3000389,
+      "shareOfA": 0.4452067009689951,
+      "shareOfB": 0.020389759405430835,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22006",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1008073425.605322,
+      "shareOfA": 0.5547932990310094,
+      "shareOfB": 0.09928358331366315,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22007",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 4297117649.993372,
+      "shareOfA": 0.9748295564735447,
+      "shareOfB": 0.18148855088223154,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22007",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 110953095.7667719,
+      "shareOfA": 0.02517044352645449,
+      "shareOfB": 0.036571804356629205,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22008",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 3378848666.120298,
+      "shareOfA": 0.9555065727481777,
+      "shareOfB": 0.14270550587915126,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22008",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 157337020.60106072,
+      "shareOfA": 0.04449342725181895,
+      "shareOfB": 0.05186064161357237,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22009",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 51276145.95753435,
+      "shareOfA": 0.9561365957519233,
+      "shareOfB": 0.0021656454820763536,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22009",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 2352327.406367973,
+      "shareOfA": 0.04386340424807498,
+      "shareOfB": 0.0007753623915934965,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22010",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 64593014.33599475,
+      "shareOfA": 0.9083139012800453,
+      "shareOfB": 0.0027280827577464573,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22010",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 6520082.408387068,
+      "shareOfA": 0.0916860987199545,
+      "shareOfB": 0.0021491169451446947,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22011",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 581367892.0188413,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.0245540440932819,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22012",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 905288378.5709119,
+      "shareOfA": 0.2373241665765673,
+      "shareOfB": 0.038234809781764585,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22012",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2909276280.51888,
+      "shareOfA": 0.7626758334234333,
+      "shareOfB": 0.0733287725858187,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22013",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 949509203.7418058,
+      "shareOfA": 0.9999999999999984,
+      "shareOfB": 0.09351568421733014,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22014",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 61743648.6135366,
+      "shareOfA": 0.34891423246094266,
+      "shareOfB": 0.020351632568281763,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22014",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 115215738.16197497,
+      "shareOfA": 0.651085767539059,
+      "shareOfB": 0.011347418797376588,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22015",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 84385667.72819349,
+      "shareOfA": 0.24993910954924534,
+      "shareOfB": 0.027814781636613366,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22015",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 253239235.71480688,
+      "shareOfA": 0.7500608904507542,
+      "shareOfB": 0.02494113833253961,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22016",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 133290752.51532596,
+      "shareOfA": 0.9999999999999981,
+      "shareOfB": 0.013127598839687494,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22017",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 53807841.95538277,
+      "shareOfA": 0.007859670855809908,
+      "shareOfB": 0.017735871678435967,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22017",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 844099826.5818042,
+      "shareOfA": 0.12329702447238779,
+      "shareOfB": 0.034111997735959014,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22017",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2632658945.132994,
+      "shareOfA": 0.38455050476669606,
+      "shareOfB": 0.0663565885359116,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22017",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 3315501490.5186744,
+      "shareOfA": 0.4842927999051094,
+      "shareOfB": 0.32653858349933607,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22018",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 200015385.59236526,
+      "shareOfA": 0.19125200283521332,
+      "shareOfB": 0.06592807077304101,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22018",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 845805743.7408634,
+      "shareOfA": 0.8087479971647836,
+      "shareOfB": 0.08330209178507632,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22019",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 626443122.8594655,
+      "shareOfA": 0.22995337655172848,
+      "shareOfB": 0.02645779423285734,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22019",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 775581949.3508372,
+      "shareOfA": 0.2846989320143063,
+      "shareOfB": 0.25564344210652,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22019",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1322192907.3354132,
+      "shareOfA": 0.4853476914339644,
+      "shareOfB": 0.13022072235794185,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22020",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 5354177225.915541,
+      "shareOfA": 0.7561894580373357,
+      "shareOfB": 0.22613340965881087,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22020",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1500819474.0615454,
+      "shareOfA": 0.21196606253697844,
+      "shareOfB": 0.060651535386033024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22020",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 225473900.35647947,
+      "shareOfA": 0.031844479425683477,
+      "shareOfB": 0.022206573650780433,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22021",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 24324407.84589263,
+      "shareOfA": 0.004224219190207837,
+      "shareOfB": 0.0010273401592870621,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22021",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 4571724714.006128,
+      "shareOfA": 0.7939337060784031,
+      "shareOfB": 0.1847538148717903,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22021",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1162271351.2614577,
+      "shareOfA": 0.2018420747313889,
+      "shareOfB": 0.1144702971083276,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22022",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 3473212627.4986334,
+      "shareOfA": 0.9999999999999979,
+      "shareOfB": 0.14036043789455224,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22023",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 265975333.7032793,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.01074866940542834,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22024",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 735571094.7022333,
+      "shareOfA": 0.8530342586580855,
+      "shareOfB": 0.029726104338546215,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22024",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 126728499.05542399,
+      "shareOfA": 0.146965741341912,
+      "shareOfB": 0.0031942120277830446,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22025",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 7715325831.578839,
+      "shareOfA": 0.9848573290717644,
+      "shareOfB": 0.3117939004498746,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22025",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 118626969.33154055,
+      "shareOfA": 0.015142670928238853,
+      "shareOfB": 0.0034516808637142333,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22026",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 5481734247.504309,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.22152937407560758,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22027",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 111309627.37263438,
+      "shareOfA": 0.14039961786572003,
+      "shareOfB": 0.00449827572208104,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22027",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 681496144.2149513,
+      "shareOfA": 0.8596003821342796,
+      "shareOfB": 0.019829446987788393,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22028",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 45181567.660834245,
+      "shareOfA": 0.007962601034196867,
+      "shareOfB": 0.0018258901201232405,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22028",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 3744596349.9863973,
+      "shareOfA": 0.6599312133850151,
+      "shareOfB": 0.10895626548005954,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22028",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1884444295.2696226,
+      "shareOfA": 0.33210618558079547,
+      "shareOfB": 0.04749771897010205,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22029",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 769598406.0413684,
+      "shareOfA": 0.23956658596004865,
+      "shareOfB": 0.022392952511951947,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22029",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2442862976.9067187,
+      "shareOfA": 0.7604334140399531,
+      "shareOfB": 0.061572750890458564,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22030",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 7752402046.764292,
+      "shareOfA": 0.8820809001957829,
+      "shareOfB": 0.2255711154337037,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22030",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1036363297.8243843,
+      "shareOfA": 0.11791909980421553,
+      "shareOfB": 0.026121702188043598,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22031",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 9994979986.388454,
+      "shareOfA": 0.8907190684048544,
+      "shareOfB": 0.29082325331775166,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22031",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1226268486.8118014,
+      "shareOfA": 0.10928093159513282,
+      "shareOfB": 0.03090829276019839,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22032",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 10928270549.306839,
+      "shareOfA": 1.000000000000006,
+      "shareOfB": 0.27544880190048376,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22033",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 4825467990.720369,
+      "shareOfA": 0.5625076259621967,
+      "shareOfB": 0.1404063141450127,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22033",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 3753025469.64144,
+      "shareOfA": 0.4374923740377995,
+      "shareOfB": 0.09459560544832091,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22034",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 7213915701.80103,
+      "shareOfA": 0.9999999999999925,
+      "shareOfB": 0.18182789564980317,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22035",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 4412115492.368384,
+      "shareOfA": 1.0000000000000018,
+      "shareOfB": 0.11120807457466539,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22036",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 3028145661.92904,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.08810974850590494,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22037",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 620450096.8925939,
+      "shareOfA": 0.6575751171331372,
+      "shareOfB": 0.026204679078300472,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22037",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 299534905.6481435,
+      "shareOfA": 0.3174577643770407,
+      "shareOfB": 0.007549825062977491,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22037",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 23557538.420363963,
+      "shareOfA": 0.024967118489822453,
+      "shareOfB": 0.0023201453078862695,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22038",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2105226851.6574986,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.06125564261306231,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22039",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1347344115.1437068,
+      "shareOfA": 0.9999999999999989,
+      "shareOfB": 0.03920358014105496,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldu:22ZZZ",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 1202835335.3185556,
+      "shareOfA": 0.9999999999999987,
+      "shareOfB": 0.05080169074664372,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22001",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1768637663.4004078,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.051461929879888665,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22002",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 65655944.0225487,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.0019103865406723292,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22003",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 56037216.148003325,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.0016305110694794938,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22004",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 203198910.9725037,
+      "shareOfA": 0.9999999999999972,
+      "shareOfB": 0.005912464901393049,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22005",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1654974439.22702,
+      "shareOfA": 0.9999999999999943,
+      "shareOfB": 0.0481546787716617,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22006",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 55715000.18360632,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.0016211355734640472,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22007",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 3647464613.1315546,
+      "shareOfA": 1.0000000000000056,
+      "shareOfB": 0.10613002993471592,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22008",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 190061833.226149,
+      "shareOfA": 0.999999999999998,
+      "shareOfB": 0.005530216243117984,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22009",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 522669026.74963224,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.015208065146179011,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22010",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2720810768.7419076,
+      "shareOfA": 1.0000000000000038,
+      "shareOfB": 0.07916724600800432,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22011",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2337009623.9714985,
+      "shareOfA": 0.8922727989127626,
+      "shareOfB": 0.06799981018509985,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22011",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 282155307.22346973,
+      "shareOfA": 0.10772720108723272,
+      "shareOfB": 0.0071117695132005354,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22012",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2344809665.922462,
+      "shareOfA": 0.7135573256365441,
+      "shareOfB": 0.06822676747558801,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22012",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 941274831.676546,
+      "shareOfA": 0.28644267436345283,
+      "shareOfB": 0.023724982235256733,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22013",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2773291787.735035,
+      "shareOfA": 0.4105801742140004,
+      "shareOfB": 0.08069428265057862,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22013",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 3981276410.897869,
+      "shareOfA": 0.5894198257860032,
+      "shareOfB": 0.10034870682132169,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22014",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 370607296.26088446,
+      "shareOfA": 1.000000000000002,
+      "shareOfB": 0.009341216002116019,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22015",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 598288765.7724639,
+      "shareOfA": 0.9999999999999992,
+      "shareOfB": 0.015079963748975557,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22016",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 412172079.9296702,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.010388863002724548,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22017",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 213582409.7234153,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.005383378696555469,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22018",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1103336286.2581255,
+      "shareOfA": 0.32518689431087444,
+      "shareOfB": 0.027809767041538563,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22018",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 2289593458.331622,
+      "shareOfA": 0.6748131056891282,
+      "shareOfB": 0.2254984975307593,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22019",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 5634197757.776604,
+      "shareOfA": 1.000000000000004,
+      "shareOfB": 0.14201085295681976,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22020",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 5527380634.721048,
+      "shareOfA": 0.9999999999999979,
+      "shareOfB": 0.139318510336333,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22021",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 5444156419.944946,
+      "shareOfA": 0.9999999999999888,
+      "shareOfB": 0.13722083073133456,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22022",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 86756039.56080818,
+      "shareOfA": 0.030615470495113713,
+      "shareOfB": 0.002524334586402164,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22022",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2746975997.1444483,
+      "shareOfA": 0.9693845295048873,
+      "shareOfB": 0.06923796806172758,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22023",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 3406823.255808319,
+      "shareOfA": 0.2416521937566129,
+      "shareOfB": 0.00014388701128755258,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22023",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 10691220.725698411,
+      "shareOfA": 0.7583478062433858,
+      "shareOfB": 0.0035239866901566616,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22024",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 5555340535.282748,
+      "shareOfA": 1.0000000000000069,
+      "shareOfB": 0.16164336596562723,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22025",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 2285493940.0028963,
+      "shareOfA": 0.6878623219338139,
+      "shareOfB": 0.06650086183012154,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22025",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1037109824.043367,
+      "shareOfA": 0.31213767806618453,
+      "shareOfB": 0.026140518500439813,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22026",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 119945893.62116992,
+      "shareOfA": 0.9999999999999978,
+      "shareOfB": 0.003023255376206781,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22027",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 882489613.1238027,
+      "shareOfA": 0.9999999999999977,
+      "shareOfB": 0.02224329142729643,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22028",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 2756156005.7211413,
+      "shareOfA": 0.9999999999999923,
+      "shareOfB": 0.06946935164181717,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22029",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 92690608.08988042,
+      "shareOfA": 0.5290023209341201,
+      "shareOfB": 0.030552214531136056,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22029",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 82527163.97245343,
+      "shareOfA": 0.47099767906587786,
+      "shareOfB": 0.00812797198277435,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22030",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1010977997.4345225,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.02941635807645193,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22031",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 203738260.26396823,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.008233527426485232,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22032",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 38581937.74704226,
+      "shareOfA": 0.009794940384569899,
+      "shareOfB": 0.0015591840344353744,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22032",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 3900384123.528911,
+      "shareOfA": 0.990205059615425,
+      "shareOfB": 0.11348921173812743,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22033",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 744701208.3574445,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.021668520443173963,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22034",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 92099183.848501,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.0037219379177532257,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22035",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 45482504.30389709,
+      "shareOfA": 0.0775944774482751,
+      "shareOfB": 0.0018380516557183813,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22035",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 540673956.8207494,
+      "shareOfA": 0.9224055225517256,
+      "shareOfB": 0.015731953372685903,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22036",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 76799082.70518118,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.0031036259608909897,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22037",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1892588672.6045358,
+      "shareOfA": 0.9298091792676723,
+      "shareOfB": 0.0764838215598554,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22037",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 142870553.65860105,
+      "shareOfA": 0.07019082073232916,
+      "shareOfB": 0.004157094789072839,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22038",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 1553347464.011231,
+      "shareOfA": 0.5109486779578628,
+      "shareOfB": 0.045197645581265315,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22038",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1486776781.3818455,
+      "shareOfA": 0.4890513220421416,
+      "shareOfB": 0.03747444586747192,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22039",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 195691689.10961094,
+      "shareOfA": 1.0,
+      "shareOfB": 0.007908347147617982,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22040",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 315591706.79836553,
+      "shareOfA": 0.6134646233035734,
+      "shareOfB": 0.012753780120282934,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22040",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 198849867.8418647,
+      "shareOfA": 0.38653537669642807,
+      "shareOfB": 0.0050120426290677185,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22041",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1121840931.1362808,
+      "shareOfA": 0.8442237434459051,
+      "shareOfB": 0.04533614875623752,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22041",
+      "b": "cd120:2204",
+      "intersectionAreaM2": 207002210.08741271,
+      "shareOfA": 0.15577625655409605,
+      "shareOfB": 0.006023129237234109,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22042",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 987592164.6675355,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.0399108501438899,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22043",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 70486817.62234457,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.0028485329429401938,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22044",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 84599908.78955361,
+      "shareOfA": 1.0000000000000004,
+      "shareOfB": 0.00341887512141541,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22045",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 41403947.155540474,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.0016732278661269057,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22046",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1602297344.7784874,
+      "shareOfA": 0.7666047861431687,
+      "shareOfB": 0.06475248741461491,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22046",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 487824415.14390326,
+      "shareOfA": 0.23339521385683148,
+      "shareOfB": 0.01229569217589651,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22047",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 8918219711.735228,
+      "shareOfA": 0.9999999999999977,
+      "shareOfB": 0.36040558359955366,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22048",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 394760393.8493757,
+      "shareOfA": 1.0000000000000042,
+      "shareOfB": 0.015953167193230266,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22049",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 2205461379.0470366,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.08912772067902627,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22050",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 2736559667.7029133,
+      "shareOfA": 0.8323597751956386,
+      "shareOfB": 0.11059061292195606,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22050",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 551152868.6936246,
+      "shareOfA": 0.1676402248043584,
+      "shareOfB": 0.054282188546583024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22051",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 30122211.06091534,
+      "shareOfA": 0.01933944874983361,
+      "shareOfB": 0.0012722100905993774,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22051",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1154621297.173472,
+      "shareOfA": 0.7413047919024247,
+      "shareOfB": 0.046660878055819005,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22051",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 372809214.72905326,
+      "shareOfA": 0.2393557593477385,
+      "shareOfB": 0.03671739953706988,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22052",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 178344651.70806992,
+      "shareOfA": 1.0000000000000007,
+      "shareOfB": 0.0075323775219754184,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22053",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 2692587764.33306,
+      "shareOfA": 0.6421002328798142,
+      "shareOfB": 0.11372131071924184,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22053",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1500819474.0615454,
+      "shareOfA": 0.3578997671201913,
+      "shareOfB": 0.060651535386033024,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22054",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 2817704527.9943004,
+      "shareOfA": 0.9432947591524335,
+      "shareOfB": 0.11900561102877333,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22054",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 169383548.82916406,
+      "shareOfA": 0.05670524084756483,
+      "shareOfB": 0.016682322194979064,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22055",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 306774919.06304,
+      "shareOfA": 0.45124926925695774,
+      "shareOfB": 0.012956623495717152,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22055",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 373059797.49658024,
+      "shareOfA": 0.548750730743041,
+      "shareOfB": 0.036742079043983564,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22056",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 614667027.7098693,
+      "shareOfA": 0.6766412824124045,
+      "shareOfB": 0.20260347065149895,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22056",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 293741967.8489305,
+      "shareOfA": 0.32335871758759754,
+      "shareOfB": 0.028930189405733588,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22057",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 183693256.02696666,
+      "shareOfA": 0.22879183076821807,
+      "shareOfB": 0.06054805208114184,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22057",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 619190550.6639314,
+      "shareOfA": 0.7712081692317819,
+      "shareOfB": 0.060983113989897086,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22058",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 822122672.6739316,
+      "shareOfA": 0.737880007264283,
+      "shareOfB": 0.2709839624969204,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22058",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 292045843.3182352,
+      "shareOfA": 0.26211999273572173,
+      "shareOfB": 0.02876314073955879,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22059",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 107182398.69186588,
+      "shareOfA": 0.9999999999999988,
+      "shareOfB": 0.010556227691343227,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22060",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 330378947.8734731,
+      "shareOfA": 0.1599315655956462,
+      "shareOfB": 0.10889785599651673,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22060",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 1735373029.4989483,
+      "shareOfA": 0.8400684344043542,
+      "shareOfB": 0.17091418975863265,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22061",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 21091445.307831053,
+      "shareOfA": 0.5727130731364697,
+      "shareOfB": 0.006952056687250595,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22061",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 15735800.82490253,
+      "shareOfA": 0.4272869268635287,
+      "shareOfB": 0.0015497945412739106,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22062",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 26654545.742427304,
+      "shareOfA": 0.02047113877954724,
+      "shareOfB": 0.008785738021730879,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22062",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1180173586.291749,
+      "shareOfA": 0.9063931346794083,
+      "shareOfB": 0.02974646344194677,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22062",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 95226728.19949077,
+      "shareOfA": 0.0731357265410473,
+      "shareOfB": 0.009378732305342287,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22063",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 36321770.63288238,
+      "shareOfA": 0.13488434205848998,
+      "shareOfB": 0.011972200327464391,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22063",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 232959081.97439858,
+      "shareOfA": 0.865115657941508,
+      "shareOfB": 0.02294377754278297,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22064",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 372083590.9182961,
+      "shareOfA": 0.9999999999999976,
+      "shareOfB": 0.0366459339768837,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22065",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 186401184.84509784,
+      "shareOfA": 0.9999999999999996,
+      "shareOfB": 0.0183583626899212,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22066",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 108469006.4969795,
+      "shareOfA": 1.0000000000000027,
+      "shareOfB": 0.010682943692347126,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22067",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 15364060.232423563,
+      "shareOfA": 0.2134590880560383,
+      "shareOfB": 0.005064224671340231,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22067",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 56612543.679563895,
+      "shareOfA": 0.786540911943959,
+      "shareOfB": 0.005575681348442742,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22068",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 44218706.82470553,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.004355031639105952,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22069",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 41616372.05624485,
+      "shareOfA": 1.0,
+      "shareOfB": 0.0040987317365077216,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22070",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 53193801.6859658,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.005238974768418079,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22071",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 150845732.72609288,
+      "shareOfA": 1.0000000000000022,
+      "shareOfB": 0.01485656152837141,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22072",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1694832784.1408672,
+      "shareOfA": 1.0000000000000013,
+      "shareOfB": 0.04271853059520693,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22073",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 716927207.1464294,
+      "shareOfA": 0.8198639243101962,
+      "shareOfB": 0.030279385046218504,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22073",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 157519375.86382285,
+      "shareOfA": 0.18013607568980064,
+      "shareOfB": 0.003970300987886325,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22074",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 1113837127.9062881,
+      "shareOfA": 0.9999999999999986,
+      "shareOfB": 0.0470428558694107,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22075",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 1750492573.9653003,
+      "shareOfA": 1.0000000000000016,
+      "shareOfB": 0.04412144447366552,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22076",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 361987078.43837833,
+      "shareOfA": 0.999999999999996,
+      "shareOfB": 0.015288506309333955,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22077",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 189018486.1421359,
+      "shareOfA": 0.999999999999998,
+      "shareOfB": 0.007983186390054346,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22078",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 24692518.389097195,
+      "shareOfA": 1.000000000000001,
+      "shareOfB": 0.0010428872898271744,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22079",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 19625041.428822607,
+      "shareOfA": 1.0000000000000009,
+      "shareOfB": 0.0008288626516721662,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22080",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 16089507.645080702,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.0006795395576192303,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22081",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 191555226.32343128,
+      "shareOfA": 0.16594840465408675,
+      "shareOfB": 0.0631394753988321,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22081",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 962750696.1873705,
+      "shareOfA": 0.8340515953459141,
+      "shareOfB": 0.09481981820700162,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22082",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 33256925.0092627,
+      "shareOfA": 0.9223947381515835,
+      "shareOfB": 0.0014046045787783916,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22082",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 2798056.262537824,
+      "shareOfA": 0.07760526184841623,
+      "shareOfB": 0.0009222813072965205,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22083",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 148567937.76490265,
+      "shareOfA": 0.9999999999999994,
+      "shareOfB": 0.04897022039860082,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22084",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 1005678332.5011504,
+      "shareOfA": 0.9726365444298879,
+      "shareOfB": 0.042474774508343825,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22084",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 28293029.42277665,
+      "shareOfA": 0.027363455570115058,
+      "shareOfB": 0.009325806815532047,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22085",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 22114260.23726496,
+      "shareOfA": 1.0000000000000002,
+      "shareOfB": 0.007289191827408611,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22086",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 10569364.51607709,
+      "shareOfA": 0.01661556650755172,
+      "shareOfB": 0.0004463965862726305,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22086",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 625542832.5175517,
+      "shareOfA": 0.9833844334924495,
+      "shareOfB": 0.01576690684742643,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22087",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 49400456.10342524,
+      "shareOfA": 0.9999999999999999,
+      "shareOfB": 0.016283131202940032,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22088",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 115664156.03621566,
+      "shareOfA": 0.9999999999999967,
+      "shareOfB": 0.01139158277615599,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22089",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 642982867.8021562,
+      "shareOfA": 0.9999999999999987,
+      "shareOfB": 0.02715634954041688,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22090",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 120482890.59419757,
+      "shareOfA": 0.9999999999999987,
+      "shareOfB": 0.005088588910307608,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22091",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 451483.29040359205,
+      "shareOfA": 0.032763349345300105,
+      "shareOfB": 1.906837438416796e-05,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22091",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 13328649.065580864,
+      "shareOfA": 0.9672366506547,
+      "shareOfB": 0.004393322625168011,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22092",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 8022111.950055869,
+      "shareOfA": 0.25417968821791825,
+      "shareOfB": 0.0003388135004478916,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22092",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 23538678.789360713,
+      "shareOfA": 0.7458203117820816,
+      "shareOfB": 0.007758701544548021,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22093",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 17440121.06407345,
+      "shareOfA": 0.9999999999999993,
+      "shareOfB": 0.0057485254566663,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22094",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 273233967.55737776,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.011540023071946294,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22095",
+      "b": "cd120:2205",
+      "intersectionAreaM2": 41298960.59977191,
+      "shareOfA": 0.04944700338291366,
+      "shareOfB": 0.0010409468877638649,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22095",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 793917691.0536381,
+      "shareOfA": 0.9505529966170883,
+      "shareOfB": 0.07819171820404232,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22096",
+      "b": "cd120:2203",
+      "intersectionAreaM2": 1065718269.5698217,
+      "shareOfA": 0.9999999999999998,
+      "shareOfB": 0.043068104096112815,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22097",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 25422831.484852932,
+      "shareOfA": 0.9999999999999981,
+      "shareOfB": 0.008379746530101215,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22098",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 8099586.96973912,
+      "shareOfA": 0.48056700151594756,
+      "shareOfB": 0.0003420856540627472,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22098",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 8754643.43765255,
+      "shareOfA": 0.5194329984840527,
+      "shareOfB": 0.0028856617726727898,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22099",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 58584263.77866014,
+      "shareOfA": 0.999999999999998,
+      "shareOfB": 0.019310251944605592,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22100",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 502877273.7174893,
+      "shareOfA": 0.7325485202508654,
+      "shareOfB": 0.021238996721147537,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22100",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 183599129.98240176,
+      "shareOfA": 0.26745147974913774,
+      "shareOfB": 0.06051702672522093,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22101",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 6832996.559774535,
+      "shareOfA": 0.1533660682193658,
+      "shareOfB": 0.002252258142295413,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22101",
+      "b": "cd120:2206",
+      "intersectionAreaM2": 37720512.82537201,
+      "shareOfA": 0.846633931780635,
+      "shareOfB": 0.003715034622089288,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22102",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 49118445.47652948,
+      "shareOfA": 0.9999999999999994,
+      "shareOfB": 0.016190176270929824,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22103",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 5541843151.703646,
+      "shareOfA": 0.9928149902928175,
+      "shareOfB": 0.23405947072937713,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22103",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 40106361.43690866,
+      "shareOfA": 0.007185009707180903,
+      "shareOfB": 0.013219658214945867,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22104",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 409337880.9579182,
+      "shareOfA": 0.9999999999999954,
+      "shareOfB": 0.01728836510593806,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22105",
+      "b": "cd120:2201",
+      "intersectionAreaM2": 6649119200.238113,
+      "shareOfA": 0.998391566371978,
+      "shareOfB": 0.2808252197368389,
+      "geometryRepaired": false
+    },
+    {
+      "a": "sldl:22105",
+      "b": "cd120:2202",
+      "intersectionAreaM2": 10711896.292616721,
+      "shareOfA": 0.0016084336280235137,
+      "shareOfB": 0.0035308016670896917,
+      "geometryRepaired": false
     }
   ],
   "geometryRepairs": [],
@@ -11573,12 +14278,16 @@
     "county": "geography/regions/la/county.geojson.gz",
     "cd": "geography/regions/la/cd.geojson.gz",
     "sldu": "geography/regions/la/sldu.geojson.gz",
-    "sldl": "geography/regions/la/sldl.geojson.gz"
+    "sldl": "geography/regions/la/sldl.geojson.gz",
+    "cd120": "geography/regions/la/cd120.geojson.gz"
   },
   "sourceIds": [
     "census-cd-22-count",
     "census-cd-22-page-0",
     "census-cd-metadata",
+    "census-cd120-22-count",
+    "census-cd120-22-page-0",
+    "census-cd120-metadata",
     "census-county-22-count",
     "census-county-22-page-0",
     "census-county-metadata",

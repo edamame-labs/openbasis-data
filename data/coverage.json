@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-03T06:13:51.251195+00:00",
+  "generatedAt": "2026-11-08T08:19:17.434016+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
     "state": 7321,
@@ -2890,9 +2890,10 @@
       "cd": 438,
       "sldu": 1947,
       "sldl": 4838,
+      "cd120": 430,
       "sldl_floterial": 39
     },
-    "areaIntersectionPairs": 47181,
+    "areaIntersectionPairs": 62399,
     "officialGeometryLinks": {
       "officials": 7854,
       "matched": 7854,

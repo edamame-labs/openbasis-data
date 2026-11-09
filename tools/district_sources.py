@@ -3,7 +3,9 @@
 The Census layer cycle and the officeholder's session are different facts. This
 collector preserves the former and does not infer the latter from retrieval time.
 """
+import html
 import json
+import re
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urlencode
 
@@ -15,6 +17,23 @@ LAYERS = {
     'cd': (4, '119th Congressional Districts', 'CD119', '119th Congress'),
     'sldu': (5, '2024 State Legislative Districts - Upper', 'SLDU', '2024 state legislative districts'),
     'sldl': (6, '2024 State Legislative Districts - Lower', 'SLDL', '2024 state legislative districts'),
+    # Future plan for the January 2027 House; a separate layer, never joined to current members.
+    'cd120': (0, '120th Congressional Districts', 'CD120', '120th Congress'),
+}
+APPLICABILITY = {
+    'cd': '119th Congress; do not join to 120th Congress',
+    'cd120': '120th Congress plans, first used in the 2026 elections; not joined to current officeholders',
+}
+# Census states that its 120th Congress service geometry for these states still
+# reflects a plan that is not in effect. The statement is fetched on every build;
+# once it disappears from the page the build fails so the exclusion is reviewed.
+CENSUS_CD120_NOTES = 'https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.120th_Congress.html'
+WITHHELD = {
+    'cd120': {
+        '29': dict(url=CENSUS_CD120_NOTES,
+                   statement='The Missouri plan now remains unchanged from the plans used in the 2022 and 2024 elections.',
+                   reason='Census reports that Missouri 120th Congress geometry still reflects a plan the U.S. Supreme Court did not allow for the 2026 elections; the 2022 plan (published as cd) applies.'),
+    },
 }
 AREA_BASE = 'https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/'
 AREA_LAYERS = {
@@ -57,6 +76,23 @@ def check_page(page, district_field, offset, count, page_size=PAGE_SIZE):
     return features
 
 
+def page_text(raw):
+    text = re.sub(r'<(script|style)\b.*?</\1>', ' ', raw.decode('utf-8', 'replace'), flags=re.S | re.I)
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', text)))
+
+
+def withheld_states(key, fetch, offline):
+    """Fetch the publisher statement behind each excluded state and confirm it still stands."""
+    withheld, sources = {}, []
+    for state, rule in sorted(WITHHELD.get(key, {}).items()):
+        raw, source = fetch('census-'+key+'-'+state+'-withheld', PUBLISHER, rule['url'], offline)
+        assert rule['statement'] in page_text(raw), 'Census applicability statement changed; review the '+key+' exclusion for state '+state
+        source.update(withholdsState=state, withholdsLayer=key, statement=rule['statement'])
+        withheld[state] = dict(state=state, reason=rule['reason'], sourceId=source['id'])
+        sources.append(source)
+    return withheld, sources
+
+
 def district_kind(properties, district_field):
     """Preserve Census pseudo-districts, but prevent treating them as seats."""
     code = str(properties[district_field]).upper()
@@ -74,9 +110,11 @@ def iter_collect(fetch, offline=False):
         metadata = decode_source(raw, metadata_source)
         check_metadata(metadata, name, district_field)
         metadata_source.update(vintage='2026-01-01', description=metadata['description'])
+        withheld, withheld_sources = withheld_states(key, fetch, offline)
         fields = ','.join(f['name'] for f in metadata['fields'] if f.get('type') != 'esriFieldTypeGeometry' and f['name']!='STGEOMETRY')
         def acquire_state(state):
             state_prefix = prefix+'-'+state
+            if state in withheld: return [], []
             state_where = "STATE='"+state+"'"
             count_url = base+'/query?'+urlencode(dict(where=state_where, returnCountOnly='true', f='json'))
             raw, count_source = fetch(state_prefix+'-count', PUBLISHER, count_url, offline)
@@ -100,7 +138,7 @@ def iter_collect(fetch, offline=False):
                 state_sources.append(source)
             assert len(state_features)==count
             return state_features, state_sources
-        layer_sources = [metadata_source]
+        layer_sources = [metadata_source, *withheld_sources]
         features, seen_geoids, seen_objects = [], set(), set()
         # Small state queries avoid the Census gateway rejecting large IN clauses;
         # bounded parallelism also bounds response memory and publisher load.
@@ -115,14 +153,15 @@ def iter_collect(fetch, offline=False):
                     features.append(feature)
                 layer_sources.extend(state_sources)
         states = {f['properties']['STATE'] for f in features}
-        expected_states = STATE_FIPS-({'31'} if key == 'sldl' else set())
+        expected_states = STATE_FIPS-({'31'} if key == 'sldl' else set())-set(withheld)
         assert states == expected_states, 'Unexpected state coverage (Nebraska has no lower chamber)'
         collection = dict(type='FeatureCollection', features=features, sources=layer_sources,
             layer=dict(id=layer_id, name=name, districtField=district_field, vintage='2026-01-01', mapCycle=cycle,
-                applicability=('119th Congress; do not join to 120th Congress' if key=='cd' else 'Census 2024 state legislative district layer; current officeholder applicability requires matching the chamber plan') if key in LAYERS else 'Census January 1, 2026 state/county boundaries',
+                applicability=APPLICABILITY.get(key, 'Census 2024 state legislative district layer; current officeholder applicability requires matching the chamber plan') if key in LAYERS else 'Census January 1, 2026 state/county boundaries',
                 generalization='none requested', coordinateReferenceSystem='EPSG:4326',
                 excludedJurisdictions='District of Columbia and territories',
-                missingChamber='Nebraska has no lower chamber' if key=='sldl' else None))
+                missingChamber='Nebraska has no lower chamber' if key=='sldl' else None,
+                **({'withheldStates': [withheld[s] for s in sorted(withheld)]} if withheld else {})))
         yield key, collection, layer_sources
         # Do not retain the previous national layer while acquiring the next.
         del collection, features, layer_sources
