@@ -43,6 +43,14 @@ class GovernorTests(unittest.TestCase):
             self.assertEqual(item['governor'] == 'collected', st in region.RULES)
             self.assertEqual(bool(item['blockers']), st in region.BLOCKED)
 
+    def test_kansas_menu_link_rule(self):
+        page = b'<a class="megamenu_level1" href="/about-the-office/governor-laura-kelly" aria-label="Governor Laura Kelly" data-navid="53">Governor Laura Kelly</a>'
+        self.assertEqual(region.parse('gov-ks', page, source('gov-ks'))[0]['name'], 'Laura Kelly')
+
+    def test_browser_sources_are_registered(self):
+        for key in region.BROWSER:
+            self.assertIn(key, region.SOURCES)
+
     def test_governor_links_to_state_not_legislative_district(self):
         row = dict(level='state', state='NE', body='Nebraska Executive', office='Governor')
         self.assertEqual(target_layer(row), 'states')

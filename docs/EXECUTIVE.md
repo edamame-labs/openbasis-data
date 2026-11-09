@@ -12,7 +12,7 @@ There is one source per state: the governor's official homepage, or a governor b
 - A name must have two to five words and must not contain `Office`, `Governor`, `Home`, `Welcome` or `State`.
 - The North Dakota source URL contains the governor's name. When the office changes hands that page disappears, the fetch fails, and the rule needs review.
 - Records carry `office: "Governor"`, `body: "<State> Executive"`, `level: "state"`, and `website` set to the source page. Party, contact details and term dates are not published in these elements and are not added from other directories.
-- Requests use the user agent `Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)`, recorded in each source's `acquisition.requestHeaders`. Several state sites reject curl's default agent.
+- HTTP requests use the user agent `Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)`, recorded in each source's `acquisition.requestHeaders`. Several state sites reject curl's default agent.
 
 A homepage reports the officeholder its publisher currently shows. After the November 2026 elections, governors-elect take office on dates set by each state. Until a site changes, the record continues to name the sitting governor, and the record does not establish a term end.
 
@@ -20,9 +20,17 @@ A homepage reports the officeholder its publisher currently shows. After the Nov
 
 Governors link to their state's Census feature with `matchingRule: "statewide-governor-state-fips"`, the same way U.S. senators link (`statewide-senate-state-fips`). `district_links.target_layer` checks for the governor office before the Nebraska unicameral rule, so the Nebraska governor is never joined to a legislative district.
 
+## Browser captures
+
+Kansas refuses automated retrieval, but its page was captured in a normal browser and imported with `tools/import_snapshot.py`. It is listed in `BROWSER` and is read from that observation. Like every browser-only source, it needs a capture from the last 24 hours before a `--browser-snapshots --fresh` publication. `import_snapshot.py --final-url` records a redirect, such as `governor.kansas.gov` → `www.governor.ks.gov`.
+
 ## Not collected
 
-These official governor sites refused retrieval with the agent above (a 403, a bot challenge, or a timeout): Colorado, Connecticut, Kansas, Massachusetts, Michigan, Minnesota, New Hampshire, New York, Rhode Island and Tennessee. Each is recorded as `not-collected`, with its URL in `stateExecutive.blockers`. None of them is filled from another publisher. Collecting them requires a captured browser observation, as described in [region D](region-d.md#reproducing-browser-evidence).
+These official governor sites refused retrieval with the agent above (a 403, a bot challenge, or a timeout), and have no imported capture: Colorado, Connecticut, Massachusetts, Michigan, Minnesota, New Hampshire, New York, Rhode Island and Tennessee. Each is recorded as `not-collected`, with its URL in `stateExecutive.blockers`. None of them is filled from another publisher. Colorado and Connecticut were unreachable even from a normal browser, and Tennessee returned 403 to one. The others load in a normal browser, and their identifying markers are listed in [the refresh runbook](../skills/refresh-governors/SKILL.md).
+
+## Refreshing
+
+The repeatable procedure (schedule, commands, failure handling, and the rule against evading access controls) is in [skills/refresh-governors/SKILL.md](../skills/refresh-governors/SKILL.md).
 
 ## Tests
 

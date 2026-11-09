@@ -37,6 +37,8 @@ RULES = {
  'IL': ('Office of the Governor of Illinois', 'https://gov.illinois.gov/', TITLE+N+r', Governor\s*</title>'),
  'IN': ('Office of the Governor of Indiana', 'https://www.in.gov/gov/', r'<h1\s*>Indiana Governor '+N+r'</h1>'),
  'IA': ('Office of the Governor of Iowa', 'https://governor.iowa.gov/', r'<meta property="og:site_name" content="Governor '+N+r'" />'),
+ # Browser-captured (see BROWSER); the menu link to the governor's page carries the name. Redirects to www.governor.ks.gov.
+ 'KS': ('Office of the Governor of Kansas', 'https://governor.kansas.gov/', r'<a class="megamenu_level1" href="/about-the-office/governor-[a-z-]+" aria-label="Governor '+N+r'"'),
  'KY': ('Office of the Governor of Kentucky', 'https://governor.ky.gov/', TITLE+r'Welcome - Kentucky Governor '+N+r'\s*</title>'),
  'LA': ('Office of the Governor of Louisiana', 'https://gov.louisiana.gov/', TITLE+r'Home \| Office of Governor '+N+r'\s*</title>'),
  'ME': ('Office of the Governor of Maine', 'https://www.maine.gov/governor/mills/', TITLE+r'Home \| Office of Governor '+N+r'\s*</title>'),
@@ -66,14 +68,17 @@ RULES = {
  'WI': ('Office of the Governor of Wisconsin', 'https://evers.wi.gov/Pages/Home.aspx', TITLE+r'Official site of Governor '+N+r'\s*</title>'),
  'WY': ('Office of the Governor of Wyoming', 'https://governor.wyo.gov/', TITLE+r'Wyoming Governor '+N+r'\s*</title>'),
 }
-# Official governor sites that refused retrieval with USER_AGENT (bot challenge, 403 or timeout).
-# They need a captured browser observation; no other publisher substitutes for them.
+# Sources read from an imported browser DOM observation (tools/import_snapshot.py), not over HTTP.
+BROWSER = {'gov-ks'}
+# Official governor sites with no collected observation: they refused retrieval with USER_AGENT
+# (bot challenge, 403 or timeout) and have no imported browser capture. No other publisher substitutes for them.
 BLOCKED = {
- 'CO': 'https://governor.colorado.gov/', 'CT': 'https://portal.ct.gov/governor', 'KS': 'https://governor.kansas.gov/',
+ 'CO': 'https://governor.colorado.gov/', 'CT': 'https://portal.ct.gov/governor',
  'MA': 'https://www.mass.gov/orgs/office-of-the-governor', 'MI': 'https://www.michigan.gov/whitmer', 'MN': 'https://mn.gov/governor/', 'NH': 'https://www.governor.nh.gov/',
  'NY': 'https://www.governor.ny.gov/', 'RI': 'https://governor.ri.gov/', 'TN': 'https://www.tn.gov/governor.html',
 }
 assert set(RULES) | set(BLOCKED) == set(NAMES) and not set(RULES) & set(BLOCKED)
+assert all(k.removeprefix('gov-').upper() in RULES for k in BROWSER)
 
 SOURCES = {'gov-'+st.lower(): (publisher, url) for st, (publisher, url, _) in RULES.items()}
 EXECUTIVE = {st: dict(governor='collected' if st in RULES else 'not-collected',
@@ -104,7 +109,7 @@ def parse(key, raw, source):
 def collect(acquire, offline):
     rows, sources = [], []
     for key, (publisher, url) in SOURCES.items():
-        raw, source = acquire(key, publisher, url, offline, user_agent=USER_AGENT)
+        raw, source = acquire(key, publisher, url, offline, **({} if key in BROWSER else dict(user_agent=USER_AGENT)))
         rows.extend(parse(key, raw, source))
         sources.append(source)
     return rows, sources
