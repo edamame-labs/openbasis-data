@@ -1,0 +1,31 @@
+# State executive officers
+
+`tools/regions/executive.py` collects sitting governors from each state's own governor website. Lieutenant governors, secretaries of state, attorneys general and other statewide offices are not collected yet, and `coverage.json` lists them under `stateExecutive.notCollected`.
+
+Governor records enter `data/` the next time the release is rebuilt and published with `--browser-snapshots --fresh`. Until then the checked-in snapshot has none.
+
+## Sources and extraction
+
+There is one source per state: the governor's official homepage, or a governor biography page on that site where the homepage names the governor only inside news items (North Dakota, South Dakota). Each rule in `RULES` names a single element that identifies the officeholder: the page `<title>`, a heading, or a meta description. Its pattern runs on the HTML-unescaped page with whitespace collapsed.
+
+- The pattern must match at least once and produce exactly one distinct name. Zero matches or two different names stop the build.
+- A name must have two to five words and must not contain `Office`, `Governor`, `Home`, `Welcome` or `State`.
+- The North Dakota source URL contains the governor's name. When the office changes hands that page disappears, the fetch fails, and the rule needs review.
+- Records carry `office: "Governor"`, `body: "<State> Executive"`, `level: "state"`, and `website` set to the source page. Party, contact details and term dates are not published in these elements and are not added from other directories.
+- Requests use the user agent `Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)`, recorded in each source's `acquisition.requestHeaders`. Several state sites reject curl's default agent.
+
+A homepage reports the officeholder its publisher currently shows. After the November 2026 elections, governors-elect take office on dates set by each state. Until a site changes, the record continues to name the sitting governor, and the record does not establish a term end.
+
+## Boundary links
+
+Governors link to their state's Census feature with `matchingRule: "statewide-governor-state-fips"`, the same way U.S. senators link (`statewide-senate-state-fips`). `district_links.target_layer` checks for the governor office before the Nebraska unicameral rule, so the Nebraska governor is never joined to a legislative district.
+
+## Not collected
+
+These official governor sites refused retrieval with the agent above (a 403, a bot challenge, or a timeout): Colorado, Connecticut, Kansas, Massachusetts, Michigan, Minnesota, New Hampshire, New York, Rhode Island and Tennessee. Each is recorded as `not-collected`, with its URL in `stateExecutive.blockers`. None of them is filled from another publisher. Collecting them requires a captured browser observation, as described in [region D](region-d.md#reproducing-browser-evidence).
+
+## Tests
+
+```sh
+.venv-geo/bin/python -B -m unittest discover -s tools -p 'test_executive.py'
+```

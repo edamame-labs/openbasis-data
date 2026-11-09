@@ -295,7 +295,7 @@ def region_modules():
     if __name__ == '__main__':
         sys.modules['build'] = sys.modules[__name__]
     return [importlib.import_module('regions.' + name)
-            for name in ['region_a','region_b','region_c','region_d']]
+            for name in ['region_a','region_b','region_c','region_d','executive']]
 
 
 def source_allowed(source):
@@ -324,6 +324,17 @@ def legislative_chamber(row):
     raise ValueError('Unrecognized legislative body: ' + row['body'])
 
 
+def is_executive(row):
+    return row['level'] == 'state' and row['body'].endswith(' Executive')
+
+
+def executive_coverage(st, declared, governors):
+    assert (declared['governor'] == 'collected') == (governors == 1), 'Executive coverage disagrees with parsed rows: '+st
+    return dict(offices=dict(governor=dict(status=declared['governor'], records=governors)),
+                notCollected=['lieutenantGovernor','secretaryOfState','attorneyGeneral','otherStatewideOffices'],
+                blockers=declared['blockers'])
+
+
 def legislative_coverage(rows):
     declared = {'CA':{'upper':'collected','lower':'collected','blockers':[]},
                 'NC':{'upper':'collected','lower':'collected','blockers':[]}}
@@ -335,7 +346,9 @@ def legislative_coverage(rows):
         for st, updates in getattr(module, 'COVERAGE_OVERRIDES', {}).items():
             assert st in declared and all(declared[st].get(ch)=='not-collected' for ch in updates if ch!='blockers'), 'Coverage override must only resolve a previously uncollected chamber'
             declared[st] = {**declared[st], **updates}
-    observed = collections.Counter((r['state'],legislative_chamber(r)) for r in rows if r['level']=='state')
+    executive = next(m for m in region_modules() if m.__name__.endswith('.executive'))
+    observed = collections.Counter((r['state'],legislative_chamber(r)) for r in rows if r['level']=='state' and not is_executive(r))
+    governors = collections.Counter(r['state'] for r in rows if is_executive(r) and r['office']=='Governor')
     result = []
     for st in sorted(STATE_CODES):
         expected = ['unicameral'] if st == 'NE' else ['upper','lower']
@@ -351,7 +364,7 @@ def legislative_coverage(rows):
         result.append(dict(state=st, federal='collected',
             stateLegislature='collected' if collected==len(expected) else 'partial' if collected else 'not-collected',
             legislativeChambers=chambers, blockers=item.get('blockers', []),
-            stateExecutive='not-collected', countyOfficials='not-collected'))
+            stateExecutive=executive_coverage(st, executive.EXECUTIVE[st], governors[st]), countyOfficials='not-collected'))
     return result
 
 
