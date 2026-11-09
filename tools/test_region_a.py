@@ -70,9 +70,24 @@ class RegionATest(unittest.TestCase):
  def test_florida_house_pending_and_former_sections_excluded(self):
   card='<div class="team-box"><a href="/Sections/Representatives/details.aspx?MemberId=1"><h5>Current, Ann</h5></a>Democrat — District: 1</div>'
   pending='<div class="team-box">Pending Election — District: 2</div>'
-  html=card+pending+'<h1>Representatives for 2024 - 2026 ( Speaker Perez ) who served a partial term</h1>'+card.replace('Current','Former')
+  html=card+pending+'<h1>Representatives for 2026 - 2028 ( Speaker Perez ) who served a partial term</h1>'+card.replace('Current','Former')
   rows=self.parse('fl-lower',html)
   self.assertEqual([r['name'] for r in rows],['Ann Current'])
+
+ def test_florida_house_new_term_without_partial_section_checks_card_dates(self):
+  def card(name,dates):
+   return '<div class="team-box"><a href="/Sections/Representatives/details.aspx?MemberId=1&amp;LegislativeTermId=92"><h5>'+name+'</h5><p>Democrat — District: 1</p><p> '+dates+' </p></a></div>'
+  title='<title>Representatives for 2026 - 2028</title>'
+  with patch.object(a,'finish',lambda rows,lo,hi:rows):
+   rows=a.parse('fl-lower',(title+card('Current, Ann','11/04/26 - 11/07/28')).encode(),{'id':'fl-lower','url':a.SOURCES['fl-lower'][1],'retrievedAt':'2026-11-09T00:00:00+00:00'})
+   self.assertEqual([r['name'] for r in rows],['Ann Current'])
+   with self.assertRaisesRegex(AssertionError,'service dates'):
+    a.parse('fl-lower',(title+card('Elect, Bob','11/08/28 - 11/03/30')).encode(),{'id':'fl-lower','url':a.SOURCES['fl-lower'][1],'retrievedAt':'2026-11-09T00:00:00+00:00'})
+
+ def test_term_begun_rosters_are_withheld_and_reported_not_collected(self):
+  for key,(st,chambers,_) in a.TERM_BEGUN.items():
+   for ch in chambers:self.assertEqual(a.COVERAGE[st][ch],'not-collected')
+   self.assertTrue(any(a.SOURCES[key][1] in b for b in a.COVERAGE[st]['blockers']))
 
  def test_illinois_desktop_mobile_dedup_and_former_section(self):
   card='<div class="member-card"><h2 class="card-title"><a href="/House/Members/Details/1">Ann Person</a> (D)</h2><p class="card-text">Majority Leader 1st District</p></div>'

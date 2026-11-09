@@ -12,7 +12,7 @@ vacancies. Ohio and Pennsylvania are implemented separately in `region_d.py`.
 | Rhode Island | 38 | 74 | [Official roster list](https://www.rilegislature.gov/Lists/legislationInformation/AllItems.aspx): follow its exact next-page URLs; include only `ActiveFlag=Yes`, with the explicit `chamber`, `district`, `legislator_name`, `political_party`, biography URL and list ID. Five pages checked. |
 | South Carolina | 46 | 124 | [Senate](https://www.scstatehouse.gov/member.php?chamber=S), [House](https://www.scstatehouse.gov/member.php?chamber=H): the pages explicitly identify “Current Session By Last Name”; one `memberOutline` per person. |
 | South Dakota | 35 | 70 | [Official sessions API](https://sdlegislature.gov/api/Sessions) explicitly identifies 2026, SessionId 71, as `CurrentSession=true`; [official address-list CSV](https://sdlegislature.gov/api/SessionMembers/71.csv) provides `Body`, names, party and district. Future visible 2027 session excluded. |
-| Tennessee | 33 | 97 | [Senate](https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=S&ga=114), [House](https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=H&ga=114): explicitly select 114th General Assembly, 2025–2026. Exclude vacant placeholders. Default directory now selects 115, while the [official homepage](https://www.capitol.tn.gov/) says the 115th convenes January 12, 2027; therefore the default future session is not used. |
+| Tennessee | 33 | 99 | [Senate](https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=S&ga=115), [House](https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=H&ga=115): explicitly select the 115th General Assembly. Tenn. Const. art. II, s. 3 runs terms from the day of the general election, so members elected November 3, 2026 hold office although the 115th convenes January 12, 2027. Exclude vacant placeholders and the district-less Lieutenant Governor row. |
 | Texas | 30 | 148 | [Senate](https://senate.texas.gov/members.php) explicitly identifies 89th Legislature and defines `*` as a currently vacant seat; starred placeholders are excluded; [House](https://house.texas.gov/members) embeds structured `get-members` data; only `active=1`. |
 | Utah | 29 | 74 | [Government legislator JSON](https://le.utah.gov/data/legislators.json), directly requested by the [Senate roster](https://senate.utah.gov/senate-roster/) page's published JavaScript. Require each record's legislation link to identify `sess=2026GS`; split explicit `house=S/H`. |
 | Vermont | 30 | 150 | [Senate JSON](https://legislature.vermont.gov/people/loadAll/2026/Senate), [House JSON](https://legislature.vermont.gov/people/loadAll/2026/House), exact AJAX URLs from [Senate directory](https://legislature.vermont.gov/people/all/2026/Senate) and [House directory](https://legislature.vermont.gov/people/all/2026/House), labeled 2025–2026 session. Exclude nonempty `TerminationReason`: 2 former senators and 8 former representatives. |
@@ -100,3 +100,19 @@ Rhode Island's anonymous REST API and XML export were inaccessible; the public
 HTML list view remains accessible and supplies active flags and pagination.
 The downloadable XLS/XLSX contact files are not used: they lack the live list's
 explicit active-state filtering.
+
+## 2026 general election term transitions
+
+- **Tennessee**: switched from the 114th to the 115th General Assembly directory (see table).
+- **South Carolina House** (S.C. Const. art. III, s. 10: terms begin the Monday following the general election,
+  November 9, 2026): the directory still shows the members elected in 2024 and has no session selector. The
+  House roster is withheld (`TERM_BEGUN`) and reported not collected. The Senate was not elected in 2026 and is
+  collected unchanged.
+- **Wyoming** (Wyo. Const. art. 3, s. 2: terms begin the first Monday of January): the 2026 roster also marks
+  some members-elect `legStatus=C`, giving two occupants for one district. For each such district only, the
+  member's own record (`https://api.wyoleg.gov/v1/Legislator/<legID>`) is read; a member whose `senateYears` /
+  `houseYears` shows no service in that chamber during the retrieval year is excluded (`excludedEntries`) when
+  exactly one other listed member is serving. Otherwise the duplicate district stops the build.
+- **Texas** (Tex. Const. art. III, ss. 3-4: terms begin with the regular session, January 12, 2027),
+  **Washington** (second Monday of January), **Oregon** (Or. Const. art. IV, s. 4: second Monday of January)
+  and **Oklahoma** (15 days after the general election, November 18, 2026) keep their current rosters.

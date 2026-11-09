@@ -37,6 +37,8 @@ SOURCES['ga-lower'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/mem
 SOURCES['ga-upper'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/members/senate')
 SOURCES['in-roster'] = ('Indiana General Assembly', 'https://iga.in.gov/legislative/2026/legislators')
 SOURCE_HOSTS = {'www.kslegislature.gov','www.arkleg.state.ar.us'}
+# Florida's legislative term; members take office upon election (Fla. Const. art. III, s. 15(d)).
+FL_TERM = '2026-2028'
 # Party for the Arkansas House: arkleg's list omits it; the House's own member list publishes it.
 AUX = {'ar-house-members': ('Arkansas House of Representatives', 'https://www.arkansashouse.org/representatives/members/')}
 SOURCES.update(AUX)
@@ -55,6 +57,19 @@ COVERAGE['GA']['blockers']=[]
 COVERAGE['HI']['blockers']=[]
 COVERAGE['IL']['blockers']=[]
 COVERAGE['IN']['blockers']=['The official 2026 roster contains one additional Senate entry without a district (Andy Zay); that unsupported entry is excluded pending explicit current-office evidence: https://iga.in.gov/legislative/2026/legislators/legislator_andy_zay_1']
+
+# Rosters withheld because the 2026 general election began new terms (Nov. 3-4, 2026) while the official
+# directory still lists the previous membership. Publishing it would present departed members as sitting;
+# the chamber is reported not collected until the publisher lists the new membership. Key -> (state, chambers, basis).
+TERM_BEGUN = {
+ 'al-roster': ('AL', ['upper','lower'], 'Ala. Const. art. IV, s. 46: legislative terms begin the day after the general election (November 4, 2026). The official directory still lists the members elected in 2022.'),
+ 'in-roster': ('IN', ['upper','lower'], 'Ind. Const. art. 4, s. 3: terms run from the day after the general election (November 4, 2026). The official directory still reads "Legislators for 2026 Session".'),
+ 'hi-lower': ('HI', ['lower'], 'Haw. Const. art. III, s. 4: a term begins on the day of the general election (November 3, 2026). The official directory still shows Representatives for the 2026 regular session.'),
+ 'hi-upper': ('HI', ['upper'], 'Haw. Const. art. III, s. 4: a term begins on the day of the general election (November 3, 2026). The official directory still shows Senators for the 2026 regular session.'),
+}
+for key,(st,chambers,basis) in TERM_BEGUN.items():
+ for ch in chambers:COVERAGE[st][ch]='not-collected'
+ COVERAGE[st]['blockers']=COVERAGE[st]['blockers']+[basis+' Withheld source: '+SOURCES[key][1]]
 
 
 def cells(node):
@@ -316,10 +331,14 @@ def parse(key,raw,source):
    seen[identity]=r
   return finish(list(seen.values()),90 if chamber=='lower' else 32,100 if chamber=='lower' else 38)
  if st=='FL' and chamber=='lower':
-  assert 'Representatives for 2024 - 2026' in tree.text(),'Term changed'
-  source['effectivePeriod']='2024-2026 House term; current directory section only'
-  current=re.split(rb'<h1[^>]*>Representatives for 2024 - 2026 .*?who served a partial term</h1>',raw)
-  assert len(current)==2,'Former-member section boundary changed'
+  # Fla. Const. art. III, s. 15(d): members take office upon election, so the
+  # 2026-2028 term began at the November 3, 2026 general election.
+  assert 'Representatives for '+FL_TERM.replace('-',' - ') in tree.text(),'Term changed'
+  source['effectivePeriod']=FL_TERM+' House term (members take office upon election, Fla. Const. art. III s. 15(d)); current directory section only'
+  current=re.split(rb'<h1[^>]*>Representatives for '+FL_TERM.replace('-',' - ').encode()+rb' .*?who served a partial term</h1>',raw)
+  # Early in a term the partial-term section is absent; every card's own service dates are then checked.
+  assert len(current) in {1,2},'Former-member section boundary changed'
+  observed=dt.datetime.fromisoformat(source['retrievedAt']).date() if source.get('retrievedAt') else dt.datetime.now(dt.timezone.utc).date()
   for card in HTML(current[0]).root.find(lambda n:has_class(n,'team-box')):
    if card.text().startswith('Pending Election — District:'):continue
    names=card.find(lambda n:n.tag=='h5');assert len(names)==1
@@ -327,16 +346,21 @@ def parse(key,raw,source):
    links=card.find(lambda n:n.tag=='a' and '/Sections/Representatives/details.aspx?' in n.attrs.get('href',''));assert len(links)==1
    match=re.search(r'(Republican|Democrat|Independent) — District: (\d+)',card.text());assert match
    assert 'Resigned' not in card.text() and 'Deceased' not in card.text()
+   served=re.search(r'(\d\d/\d\d/\d\d) - (\d\d/\d\d/\d\d)',card.text())
+   if len(current)==1:assert served,'Florida House service dates missing'
+   if served:
+    start,end=(dt.datetime.strptime(x,'%m/%d/%y').date() for x in served.groups())
+    assert start<=observed<=end,'Florida House member service dates exclude retrieval date'
    rows.append(row(source,st,chamber,normal_name(names[0].text()),match.group(2),match.group(1),links[0].attrs['href']))
   return finish(rows,100,120)
  if st=='FL':
   tables=tree.find(lambda n:n.attrs.get('id')=='Senators');assert len(tables)==1
-  source['effectivePeriod']='2024-2026 Senate; former senators excluded by directory link structure'
+  source['effectivePeriod']=FL_TERM+' Senate (members take office upon election, Fla. Const. art. III s. 15(d)); former senators excluded by directory link structure'
   for tr in tables[0].find(lambda n:n.tag=='tr'):
    c=cells(tr)
    if not c or c[0].text()=='Senator':continue
    assert len(c)==5
-   a=c[0].find(lambda n:n.tag=='a' and re.fullmatch(r'/Senators/2024-2026/S\d+',n.attrs.get('href','')))
+   a=c[0].find(lambda n:n.tag=='a' and re.fullmatch(r'/Senators/'+FL_TERM+r'/S\d+',n.attrs.get('href','')))
    # Former senators have an additional person-ID path component.
    if not a:continue
    assert len(a)==1
@@ -429,7 +453,7 @@ def arkansas_senate_party(fetch,offline,rows):
 def collect(fetch,offline=False):
  rows=[]; sources=[]; profiles=[]
  for key,(publisher,url) in SOURCES.items():
-  if key in AUX:continue
+  if key in AUX or key in TERM_BEGUN:continue
   if key.startswith('de-'):
    raw,source=fetch(key,publisher,url,offline,method='POST',data='page=1&pageSize=100&sort=DistrictNumber-asc')
   else:raw,source=fetch(key,publisher,url,offline)
@@ -453,7 +477,8 @@ def collect(fetch,offline=False):
    profiles.extend(chamber_profiles)
   else:rows.extend(parse(key,raw,source))
  if any(r['state']=='AR' for r in rows):
-  sources.extend(arkansas_house_party(fetch,offline,rows));sources.extend(arkansas_senate_party(fetch,offline,rows))
+  # The Arkansas House member list (AUX) returned an access block in November 2026; House party stays empty.
+  sources.extend(arkansas_senate_party(fetch,offline,rows))
  def profile(item):
   key,publisher,url=item;raw,source=fetch(key,publisher,url,offline)
   return parse('-'.join(key.split('-')[:2]),raw,source),source

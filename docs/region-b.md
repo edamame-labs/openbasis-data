@@ -15,7 +15,7 @@ November 2, 2026 (America/Los_Angeles).
 | Michigan | 110 | 38 | [House](https://www.house.mi.gov/AllRepresentatives), [Senate](https://senate.michigan.gov/senators/all-senators/) |
 | Minnesota | 134 | 67 | [House](https://www.house.mn.gov/members/list), [Senate API](https://www.mnsenate.gov/api/members), [Senate biennium](https://www.mnsenate.gov/api/bienniumYears) |
 | Mississippi | 120 | 51 | [House](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=H), [Senate](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=S) |
-| Missouri | 155 | 33 | [House](https://house.mo.gov/listmembers.aspx?year=2026&code=R), [Senate](https://www.senate.mo.gov/Senators); party/phone from the [House member grid](https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R) and [Senator Directory](https://www.senate.mo.gov/Senators/SenatorDirectory/) |
+| Missouri | 155 | 33 | [House](https://house.mo.gov/listmembers.aspx?year=2026&code=R), [Senate](https://www.senate.mo.gov/Senators); party/phone from the [Senator Directory](https://www.senate.mo.gov/Senators/SenatorDirectory/); the [House member grid](https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R) returned HTTP 403 to HTTP and browser retrieval in November 2026 and is not joined |
 | Montana | 100 | 50 | [Legislature current-member feed](https://www.legmt.gov/wp-json/legmt/v1/people/legislators) |
 | Nebraska | — | — | [Unicameral legislature: 49](https://nebraskalegislature.gov/senators/senator_list.php) |
 | Nevada | 42 | 21 | [Assembly](https://www.leg.state.nv.us/App/Legislator/A/Assembly/Current), [Senate](https://www.leg.state.nv.us/App/Legislator/A/Senate/Current) |
@@ -196,3 +196,18 @@ session periods and active term dates are retained in provenance where available
 These adapters verify faithful source extraction and explicit eligibility filters;
 they do not certify that an official website cannot contain an omission or delay.
 Missing records are never converted into vacancy assertions.
+
+## 2026 general election term transitions
+
+- **Montana** (MCA 5-2-102: terms begin the first Monday of January, January 4, 2027): after the election
+  the feed reports 87 active legislators only by their next term (`startDate` 2027-01-04), including members
+  moving between chambers, and no longer reports the seat they hold now. Those records are excluded and
+  counted in `sources.json` `excludedEntries`; they are not placed in their future seat. Only records whose
+  own term contains the retrieval date are published. While such records exist the lower roster-size bound is
+  suspended for Montana (upper bounds remain). The official Legislator Explorer's API
+  (`api.legmt.gov/legislators/v1/legislators/search`) carries the same latest-term chamber and district and is
+  not a substitute.
+- **Nevada** (Nev. Const. art. 4, ss. 3-4: terms run from the day after the election, November 4, 2026): the
+  `Current` directories list the new members; collected unchanged.
+- **New Hampshire** (N.H. Const. Pt. II, Art. 2 and RSA 14:2-b: the new General Court assembles the first
+  Wednesday of December, December 2, 2026) keeps its current roster.

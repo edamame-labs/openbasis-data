@@ -26,8 +26,8 @@ SOURCES = {
     'sc-lower': ('South Carolina Legislature', 'https://www.scstatehouse.gov/member.php?chamber=H'),
     'sd-session': ('South Dakota Legislative Research Council', 'https://sdlegislature.gov/api/Sessions'),
     'sd-roster': ('South Dakota Legislative Research Council', 'https://sdlegislature.gov/api/SessionMembers/71.csv'),
-    'tn-upper': ('Tennessee General Assembly', 'https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=S&ga=114'),
-    'tn-lower': ('Tennessee General Assembly', 'https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=H&ga=114'),
+    'tn-upper': ('Tennessee General Assembly', 'https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=S&ga=115'),
+    'tn-lower': ('Tennessee General Assembly', 'https://wapp.capitol.tn.gov/apps/LegislatorInfo/Directory?chamber=H&ga=115'),
     'tx-upper': ('Texas Senate', 'https://senate.texas.gov/members.php'),
     'tx-lower': ('Texas House of Representatives', 'https://house.texas.gov/members'),
     'ut-roster': ('Utah State Legislature', 'https://le.utah.gov/data/legislators.json'),
@@ -52,10 +52,19 @@ JOINS = {'or-legislators', 'wa-sponsors'}
 TX_PAGES = {'tx-upper-member-d'+str(d): ('Texas Senate', 'https://senate.texas.gov/member.php?d='+str(d)) for d in range(1,32)}
 SOURCES.update(TX_PAGES)
 WY_SITE = 'https://wyoleg.gov/'  # siteURL in the application's published config
-SOURCE_HOSTS = {'www.rilegislature.gov'}
+SOURCE_HOSTS = {'www.rilegislature.gov','api.wyoleg.gov'}
+WY_MEMBER = 'https://api.wyoleg.gov/v1/Legislator/'  # per-legislator record with service years
 COVERAGE = {s: {'upper':'collected', 'lower':'collected', 'blockers':[]} for s in NAMES}
 COVERAGE['OK']['upper'] = 'not-collected'
 COVERAGE['OK']['blockers'] = ['https://oksenate.gov/senators and https://www.oksenate.gov/senators return an HTTP 307 JavaScript challenge instead of a roster. No Senate records are imported.']
+# Rosters withheld because the 2026 general election began new terms while the official directory still lists
+# the previous membership (see region_a.TERM_BEGUN). Key -> (state, chamber, basis).
+TERM_BEGUN = {
+    'sc-lower': ('SC', 'lower', 'S.C. Const. art. III, s. 10: terms begin on the Monday following the general election (November 9, 2026). The official House directory still lists the members elected in 2024.'),
+}
+for _key,(_st,_ch,_basis) in TERM_BEGUN.items():
+    COVERAGE[_st][_ch]='not-collected'
+    COVERAGE[_st]['blockers']=COVERAGE[_st]['blockers']+[_basis+' Withheld source: '+SOURCES[_key][1]]
 # Structural bounds are parser guards, not vacancy estimates or completeness claims.
 LIMITS = {'OK':(48,101), 'OR':(30,60), 'RI':(38,75), 'SC':(46,124),
           'SD':(35,70), 'TN':(33,99), 'TX':(31,150), 'UT':(29,75),
@@ -162,9 +171,15 @@ def parse(key, raw, source):
                              ids=m['PersonID'],email=m.get('Email'),phone=m.get('HomePhone')))
     elif st=='WY':
         source['effectivePeriod']='2026 legislative roster'
+        # Wyo. Const. art. 3, s. 2: terms begin the first Monday of January after the election. After the
+        # election the 2026 roster also marks members-elect current; collect() reads each conflicting
+        # member's official record and passes the ids whose service in this chamber has not begun.
+        future=source.pop('_notYetServing',{})
         for m in json.loads(raw):
             assert m['chamber']==('S' if chamber=='upper' else 'H')
             if m['legStatus']!='C': continue
+            if m['legID'] in future:
+                source.setdefault('excludedEntries',[]).append(future[m['legID']]);continue
             assert re.fullmatch('[SH][0-9]+',m['district'])
             rows.append(make(source,st,chamber,m['name'],str(int(m['district'][1:])),m['legID'],m['party'],ids=str(m['legID']),
                              base=WY_SITE,email=m['eMail'],phone=m['phone'],photo=m['legPhoto']))
@@ -224,8 +239,10 @@ def parse(key, raw, source):
                 rows.append(make(source,st,chamber,name,district,a.attrs['href'],party.group(1) if party else None,a.attrs['href'],
                                  ids=code.group(1) if code else None,photo=pics[0].attrs.get('src') if len(pics)==1 else None))
         elif st=='TN':
-            assert 'ga=114' in raw.decode() and 'ga=115' not in raw.decode(), 'Tennessee session changed'
-            source['effectivePeriod']='114th General Assembly (2025-2026)'
+            # Tenn. Const. art. II, s. 3: terms run from the day of the general election, so members of the
+            # 115th General Assembly elected November 3, 2026 hold office although it convenes in January 2027.
+            assert 'ga=115' in raw.decode() and 'ga=116' not in raw.decode(), 'Tennessee session changed'
+            source['effectivePeriod']='115th General Assembly (2027-2028); terms began at the November 3, 2026 general election (Tenn. Const. art. II, s. 3)'
             for tr in tree.find(lambda n:n.tag=='tr'):
                 links=tr.find(lambda n:n.tag=='a'and'/LegislatorInfo/Member?' in n.attrs.get('href',''))
                 if not links:continue
@@ -234,7 +251,13 @@ def parse(key, raw, source):
                 if 'vacant' in a.text().lower():continue
                 cells=[n.text() for n in tr.children if isinstance(n,Node)and n.tag=='td']
                 assert len(cells)==7
-                district=re.search(r'District (\d+)',tr.text()).group(1)
+                district=re.search(r'District (\d+)',tr.text())
+                if not district:
+                    # The Senate directory lists the Lieutenant Governor (Speaker of the Senate) without a district.
+                    assert chamber=='upper' and 'Lt. Governor' in tr.text(), 'Tennessee member row without district'
+                    source.setdefault('excludedEntries',[]).append({'sourceLabel':clean(tr.text()),'reason':'Row lists the Lieutenant Governor title and no Senate district'})
+                    continue
+                district=district.group(1)
                 rows.append(make(source,st,chamber,given_first(a.text()),district,a.attrs['href'],cells[2],a.attrs['href'],phone=cells[6]))
         elif st=='TX':
             if chamber=='upper':
@@ -336,6 +359,44 @@ def delegate_party(card, link):
     return party_name(found.group(1).upper())
 
 
+def wyoming_service(raw, chamber, year):
+    """'serving', 'not-yet' or None from a Wyoming member record's own service years for this chamber."""
+    m=json.loads(raw)
+    label='Senate' if chamber=='upper' else 'House'
+    text=clean(m.get('senateYears' if chamber=='upper' else 'houseYears') or '')
+    spans=re.findall(label+r':\s*(\d{4})-(\d{4}|Present)',text)
+    if not spans: return None
+    start,end=spans[-1]
+    if int(start)>year: return 'not-yet'
+    if int(start)<=year<=(9999 if end=='Present' else int(end)): return 'serving'
+    return None
+
+
+def wyoming_conflicts(fetch, key, raw, source, offline):
+    """Resolve districts the roster lists twice from each member's own official record; unresolved ones stay conflicts."""
+    chamber=key.split('-')[1]
+    members=[m for m in json.loads(raw) if m['legStatus']=='C']
+    by_district=collections.defaultdict(list)
+    for m in members: by_district[m['district']].append(m)
+    future,proofs={},[]
+    for district,group in sorted(by_district.items()):
+        if len(group)<2: continue
+        year=int(source['retrievedAt'][:4]);states={}
+        for m in group:
+            url=WY_MEMBER+str(int(m['legID']))
+            child,proof=fetch(key+'-member-'+str(m['legID']),'Wyoming Legislature',url,offline)
+            proof['effectivePeriod']='Member record service years';proofs.append(proof)
+            assert json.loads(child)['legID']==m['legID'] and json.loads(child)['currentDistrict']==district, 'Wyoming member record mismatch'
+            states[m['legID']]=wyoming_service(child,chamber,year),url
+        serving=[i for i,(state,_) in states.items() if state=='serving']
+        if len(serving)!=1: continue  # left in place: the roster check then stops the build
+        for i,(state,url) in states.items():
+            if i not in serving:
+                future[i]={'legID':i,'district':district,'url':url,'reason':'Listed current in the 2026 roster, but its own record shows no service in this chamber during '+str(year)+' (member-elect); another listed member is serving'}
+    source['_notYetServing']=future
+    return proofs
+
+
 def join_texas_senate(row, raw, source):
     """Party from the district member page, only if the page names the same person."""
     tree=HTML(raw).root
@@ -381,10 +442,11 @@ def join_washington(rows, raw, source):
 def collect(fetch, offline=False):
     rows,sources,joins=[],[],{}
     for key,(publisher,url) in SOURCES.items():
-        if key in TX_PAGES: continue
+        if key in TX_PAGES or key in TERM_BEGUN: continue
         raw,source=fetch(key,publisher,url,offline)
         if key in JOINS:
             joins[key]=raw,source;sources.append(source);continue
+        if key.startswith('wy-'): sources.extend(wyoming_conflicts(fetch,key,raw,source,offline))
         batch=parse(key,raw,source)
         rows.extend(batch);sources.append(source)
         if key=='ri-roster':

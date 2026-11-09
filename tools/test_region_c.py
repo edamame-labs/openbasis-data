@@ -39,9 +39,19 @@ class RegionC(unittest.TestCase):
             rows=r.parse('tx-lower',raw,self.source('tx-lower'))
         self.assertEqual([row['name']for row in rows],['Current Person'])
 
-    def test_future_tennessee_general_assembly_is_rejected(self):
+    def test_tennessee_requires_115th_assembly_and_skips_district_less_lt_governor(self):
         with self.assertRaisesRegex(AssertionError,'session changed'):
-            r.parse('tn-upper',b'<a href="?ga=115">Future assembly</a>',self.source('tn-upper'))
+            r.parse('tn-upper',b'<a href="?ga=114">Previous assembly</a>',self.source('tn-upper'))
+        with self.assertRaisesRegex(AssertionError,'session changed'):
+            r.parse('tn-upper',b'<a href="?ga=115"></a><a href="?ga=116">Future assembly</a>',self.source('tn-upper'))
+        def tr(name,label):
+            return '<tr><td><a href="/apps/LegislatorInfo/Member?ga=115&amp;id=1">'+name+'</a></td><td>'+label+'</td><td>R</td><td>x</td><td>x</td><td>x</td><td>(615) 741-0000</td></tr>'
+        raw=('<a href="?ga=115"></a><table>'+tr('Person, Ann','District 4')+tr('Officer, Lee','Lt. Governor')+'</table>').encode()
+        source=self.source('tn-upper')
+        with patch.dict(r.LIMITS,{'TN':(1,1)}):
+            rows=r.parse('tn-upper',raw,source)
+        self.assertEqual([(x['name'],x['district']) for x in rows],[('Ann Person','4')])
+        self.assertEqual(len(source['excludedEntries']),1)
 
     def test_missing_structure_never_publishes_empty_roster(self):
         with self.assertRaises(AssertionError):
@@ -150,6 +160,23 @@ class RegionC(unittest.TestCase):
         self.assertEqual(sum('photo' in row for row in rows),29)
         self.assertEqual(rows[4]['photo'],'https://wyoleg.gov/LegislatorSummary/Photos/5.jpg')
 
+
+    def test_wyoming_member_elect_listed_current_is_excluded_by_own_record(self):
+        people=[dict(legID=i,name='Person '+str(i),chamber='S',district='S'+str(i),legStatus='C',party='R',eMail='',phone='',legPhoto='')for i in range(1,32)]
+        people.append(dict(people[10],legID=99,name='Member Elect'))
+        records={11:{'legID':11,'currentDistrict':'S11','senateYears':'Senate: 2011-2026','houseYears':''},
+                 99:{'legID':99,'currentDistrict':'S11','senateYears':'Senate: 2027-Present','houseYears':'House:  2023-2026'}}
+        def fetch(key,publisher,url,offline=False):
+            if url.rsplit('/',1)[1].isdigit():return json.dumps(records[int(url.rsplit('/',1)[1])]).encode(),dict(id=key,name=publisher,url=url)
+            return json.dumps(people).encode(),dict(id=key,name=publisher,url=url,retrievedAt='2026-11-09T00:00:00+00:00')
+        with patch.dict(r.SOURCES,{'wy-upper':r.SOURCES['wy-upper']},clear=True):
+            rows,sources=r.collect(fetch)
+        self.assertEqual(len(rows),31)
+        self.assertEqual([x['name'] for x in rows if x['district']=='11'],['Person 11'])
+        self.assertEqual(sources[-1]['excludedEntries'][0]['legID'],99)
+        records[11]['senateYears']='Senate: 2027-Present'  # neither serving: the duplicate stays and the build stops
+        with patch.dict(r.SOURCES,{'wy-upper':r.SOURCES['wy-upper']},clear=True),self.assertRaises(AssertionError):
+            r.collect(fetch)
 
     @staticmethod
     def tx_page(name, party='Republican'):
