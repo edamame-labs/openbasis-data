@@ -70,9 +70,24 @@ class RegionATest(unittest.TestCase):
  def test_florida_house_pending_and_former_sections_excluded(self):
   card='<div class="team-box"><a href="/Sections/Representatives/details.aspx?MemberId=1"><h5>Current, Ann</h5></a>Democrat — District: 1</div>'
   pending='<div class="team-box">Pending Election — District: 2</div>'
-  html=card+pending+'<h1>Representatives for 2024 - 2026 ( Speaker Perez ) who served a partial term</h1>'+card.replace('Current','Former')
+  html=card+pending+'<h1>Representatives for 2026 - 2028 ( Speaker Perez ) who served a partial term</h1>'+card.replace('Current','Former')
   rows=self.parse('fl-lower',html)
   self.assertEqual([r['name'] for r in rows],['Ann Current'])
+
+ def test_florida_house_new_term_without_partial_section_checks_card_dates(self):
+  def card(name,dates):
+   return '<div class="team-box"><a href="/Sections/Representatives/details.aspx?MemberId=1&amp;LegislativeTermId=92"><h5>'+name+'</h5><p>Democrat — District: 1</p><p> '+dates+' </p></a></div>'
+  title='<title>Representatives for 2026 - 2028</title>'
+  with patch.object(a,'finish',lambda rows,lo,hi:rows):
+   rows=a.parse('fl-lower',(title+card('Current, Ann','11/04/26 - 11/07/28')).encode(),{'id':'fl-lower','url':a.SOURCES['fl-lower'][1],'retrievedAt':'2026-11-09T00:00:00+00:00'})
+   self.assertEqual([r['name'] for r in rows],['Ann Current'])
+   with self.assertRaisesRegex(AssertionError,'service dates'):
+    a.parse('fl-lower',(title+card('Elect, Bob','11/08/28 - 11/03/30')).encode(),{'id':'fl-lower','url':a.SOURCES['fl-lower'][1],'retrievedAt':'2026-11-09T00:00:00+00:00'})
+
+ def test_term_begun_rosters_are_withheld_and_reported_not_collected(self):
+  for key,(st,chambers,_) in a.TERM_BEGUN.items():
+   for ch in chambers:self.assertEqual(a.COVERAGE[st][ch],'not-collected')
+   self.assertTrue(any(a.SOURCES[key][1] in b for b in a.COVERAGE[st]['blockers']))
 
  def test_illinois_desktop_mobile_dedup_and_former_section(self):
   card='<div class="member-card"><h2 class="card-title"><a href="/House/Members/Details/1">Ann Person</a> (D)</h2><p class="card-text">Majority Leader 1st District</p></div>'
@@ -127,6 +142,18 @@ class RegionATest(unittest.TestCase):
   self.assertEqual(rows[0]['fieldEvidence']['party'],{'value':'Republican','sourceIds':['ar-house-members']})
   self.assertEqual([s['id'] for s in rows[0]['sources']],['ar-roster','ar-house-members'])
   self.assertNotIn('party',rows[1]);self.assertNotIn('party',rows[2])
+
+ def test_arkansas_members_elect_are_excluded_not_seated(self):
+  def r(title,name,ch,sen,d):
+   cell=lambda i,t:'<div aria-colindex="'+i+'" role="gridcell">'+t+'</div>'
+   return '<div class="row tableRow" data-fixed="true" role="row">'+cell('1',title+' <a href="/Legislators/Detail?member='+name.split()[-1]+'&amp;ddBienniumSession=2025%2F2026F">'+name+'</a>')+cell('2','<span>Chamber:</span> '+ch)+cell('3','<span>Seniority:</span> '+sen)+cell('4','<span>District:</span> '+d)+'</div>'
+  body=''.join(r('Representative','Rep '+str(i)+' Sitting','House',str(i),str(i)) for i in range(1,101))+''.join(r('Senator','Sen '+str(i)+' Sitting','Senate',str(i),str(i)) for i in range(1,36))
+  html='95th General Assembly - Fiscal Session, 2026'+body+r('Representative-Elect','New Person','House','N/A','10')+r('Senator-Elect','Other New','Senate','N/A','0')
+  rows=self.parse('ar-roster',html)
+  self.assertEqual(len(rows),135)
+  self.assertNotIn('New Person',[x['name'] for x in rows])
+  self.assertEqual([(e['sourceLabel'],e['count']) for e in rows[0]['sources'][0]['excludedEntries']],[('Representative-Elect',1),('Senator-Elect',1)])
+  with self.assertRaises(AssertionError):self.parse('ar-roster','95th General Assembly - Fiscal Session, 2026'+body+r('Representative-Elect','New Person','House','3','10'))
 
  def test_kansas_profile_contact_skips_fallback_photo_and_obfuscated_email(self):
   html='<img class="leg-hero-photo" src="/static/li_pics/fallback.1.jpg"><h2 class="leg-hero-title">Ann Smith</h2><span class="leg-chamber-badge">House — District 1, County County</span><p class="leg-hero-party">Republican</p><div class="leg-card"><h3 class="leg-card-heading">Contact &amp; Info</h3><div class="detail-row"><span class="label">Phone</span><span class="value">785 296-0000</span></div><div class="detail-row"><span class="label">Email</span><span class="value"><a href="/cdn-cgi/l/email-protection#00">[email protected]</a></span></div></div>'

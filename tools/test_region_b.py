@@ -29,6 +29,18 @@ class RegionBTests(unittest.TestCase):
             with self.assertRaisesRegex(AssertionError,'Active flag/term date conflict'):
                 roster.parse('mt-roster',json.dumps({'content':[person],'recordCount':1,'pageable':{'paged':False}}).encode(),self.proof('mt-roster'))
 
+    def test_montana_future_term_record_is_excluded_not_seated(self):
+        today=self.proof('mt-roster')['retrievedAt'][:10]
+        person=dict(type='LEGISLATOR',isActive=True,startDate='2000-01-01',endDate='2099-12-31',chamber='House',district='HOUSE DISTRICT 1',firstName='Current',lastName='Person',id=1,politicalParty='Republican',links={'profileUrl':'https://legislators.legmt.gov/#/legislator/1'})
+        elect=dict(person,id=2,lastName='Switching',chamber='Senate',district='SENATE DISTRICT 1',startDate='2099-01-04',endDate='2099-12-31',termOfOffice={'startDate':'2099-01-04','endDate':'2099-12-31'})
+        payload={'content':[person,elect],'recordCount':2,'pageable':{'paged':False}}
+        with patch.dict(roster.MAXIMUM, MT=(1,1)):
+            proof=self.proof('mt-roster')
+            rows=roster.parse('mt-roster',json.dumps(payload).encode(),proof)
+        self.assertLess(person['startDate'],today)
+        self.assertEqual([x['name'] for x in rows],['Current Person'])
+        self.assertEqual(proof['excludedEntries'][0]['count'],1)
+
     def test_new_jersey_two_people_in_one_district_have_distinct_ids(self):
         def person(id,name):
             return dict(First_Name=name,Last_Name='Person',RosterHouseCode='A',Roster_District=1,Party='D',BioLink='/legislative-roster/'+str(id)+'/assembly-member',VacantSort=0)

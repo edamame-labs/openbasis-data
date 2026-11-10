@@ -196,3 +196,18 @@ session periods and active term dates are retained in provenance where available
 These adapters verify faithful source extraction and explicit eligibility filters;
 they do not certify that an official website cannot contain an omission or delay.
 Missing records are never converted into vacancy assertions.
+
+## 2026 general election term transitions
+
+- **Montana** (MCA 5-2-102: terms begin the first Monday of January, January 4, 2027): after the election
+  the feed reports 87 active legislators only by their next term (`startDate` 2027-01-04), including members
+  moving between chambers, and no longer reports the seat they hold now. Those records are excluded and
+  counted in `sources.json` `excludedEntries`; they are not placed in their future seat. Only records whose
+  own term contains the retrieval date are published. While such records exist the lower roster-size bound is
+  suspended for Montana (upper bounds remain). The official Legislator Explorer's API
+  (`api.legmt.gov/legislators/v1/legislators/search`) carries the same latest-term chamber and district and is
+  not a substitute.
+- **Nevada** (Nev. Const. art. 4, ss. 3-4: terms run from the day after the election, November 4, 2026): the
+  `Current` directories list the new members; collected unchanged.
+- **New Hampshire** (N.H. Const. Pt. II, Art. 2 and RSA 14:2-b: the new General Court assembles the first
+  Wednesday of December, December 2, 2026) keeps its current roster.

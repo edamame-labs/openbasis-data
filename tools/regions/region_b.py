@@ -111,7 +111,7 @@ def match(pattern, text):
     return m
 
 
-def check(rows, states=None):
+def check(rows, states=None, floor=.85, floors=None):
     assert rows, 'Empty legislative roster'
     ids = [r['id'] for r in rows]
     assert len(ids)==len(set(ids)), 'Duplicate person identifiers'
@@ -120,7 +120,7 @@ def check(rows, states=None):
     for state,chamber in {(r['state'],r['id'].split('-')[1]) for r in rows}:
         count = sum(r['state']==state and r['id'].split('-')[1]==chamber for r in rows)
         maximum = MAXIMUM[state][1 if chamber in {'upper','unicameral'} else 0]
-        assert maximum*.85 <= count <= maximum, ('Unexpected roster size',state,chamber,count,maximum)
+        assert max(1,maximum*(floors or {}).get(state,floor)) <= count <= maximum, ('Unexpected roster size',state,chamber,count,maximum)
         if not (chamber=='lower' and state in {'MD','NJ','NH','ND'}):
             districts=[r['district'] for r in rows if r['state']==state and r['id'].split('-')[1]==chamber]
             assert len(districts)==len(set(districts)), ('Conflicting district occupants',state,chamber)
@@ -147,17 +147,29 @@ def parse(key, raw, source):
         today=dt.date.fromisoformat(source['retrievedAt'][:10])
         payload=json.loads(raw)
         assert payload['recordCount']==len(payload['content']) and payload['pageable']['paged'] is False, 'Incomplete Montana roster'
+        future=[]
         for m in payload['content']:
             assert m['type']=='LEGISLATOR'
             if m['isActive'] is not True: continue
-            assert dt.date.fromisoformat(m['startDate'])<=today<=dt.date.fromisoformat(m['endDate']), 'Active flag/term date conflict'
+            start,end=dt.date.fromisoformat(m['startDate']),dt.date.fromisoformat(m['endDate'])
+            assert end>=today, 'Active flag/term date conflict'
+            # After a general election the feed reports some sitting legislators only by their next term
+            # (MCA 5-2-102: terms begin the first Monday of January). That record does not establish the
+            # seat held now, so the person is excluded rather than placed in the future term's seat.
+            if start>today:
+                assert (m['termOfOffice']['startDate'],m['termOfOffice']['endDate'])==(m['startDate'],m['endDate']), 'Montana term fields disagree'
+                future.append(m);continue
             c={'House':'lower','Senate':'upper'}[m['chamber']]
             d=match(r'(?:HOUSE|SENATE) DISTRICT (\d+)',m['district'])[1]
             name=' '.join(str(m[x]).strip() for x in ['firstName','middleName','lastName','nameSuffix'] if m.get(x))
             rows.append(enrich(make(source,state,c,name,d,m['politicalParty'],m['links']['profileUrl'],m['id']),source,m['id'],
               email=m.get('emailAddress'),phone=m.get('phoneNumber'),photo=(m.get('photo') or {}).get('url')))
         source['effectivePeriod']='Active members with source term dates containing retrieval date'
-        return check(rows)
+        if future:
+            starts=sorted({m['startDate'] for m in future})
+            source['excludedEntries']=[{'count':len(future),'termStart':start,'reason':'Active record reports only a term beginning after retrieval; the seat currently held is not reported'} for start in starts]
+        # While future-term records displace current ones, only the upper bounds remain structural.
+        return check(rows,floor=0 if future else .85)
     if key=='nh-roster':
         data=list(csv.DictReader(io.StringIO(raw.decode('cp1252')),delimiter='\t'))
         assert data and {'LastName','FirstName','LegislativeBody','electedStatus','District','County'} <= set(data[0])
@@ -556,4 +568,5 @@ def collect(fetch, offline=False):
                 child,proof=fetch('nd-roster-page-'+str(page),publisher,pageurl,offline)
                 sources.append(proof)
                 rows.extend(parse('nd-page',child,proof))
-    return check(rows),sources
+    # Montana's feed may report future terms only for some sitting members (see parse); keep its upper bounds only.
+    return check(rows,floors={'MT':0} if any(s['id']=='mt-roster' and s.get('excludedEntries') for s in sources) else None),sources

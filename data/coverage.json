@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-08T08:19:17.434016+00:00",
+  "generatedAt": "2026-11-10T03:43:26.753650+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
-    "state": 7321,
+    "state": 6794,
     "federal": 533
   },
   "rosters": [
@@ -80,10 +80,6 @@
       "records": 39
     },
     {
-      "source": "al-roster",
-      "records": 140
-    },
-    {
       "source": "de-lower",
       "records": 41
     },
@@ -93,7 +89,7 @@
     },
     {
       "source": "fl-lower",
-      "records": 116
+      "records": 119
     },
     {
       "source": "il-lower",
@@ -104,14 +100,6 @@
       "records": 59
     },
     {
-      "source": "hi-lower",
-      "records": 51
-    },
-    {
-      "source": "hi-upper",
-      "records": 25
-    },
-    {
       "source": "ga-lower",
       "records": 180
     },
@@ -120,20 +108,12 @@
       "records": 56
     },
     {
-      "source": "in-roster",
-      "records": 150
-    },
-    {
       "source": "ak-upper",
       "records": 20
     },
     {
       "source": "ak-lower",
       "records": 40
-    },
-    {
-      "source": "ar-house-members",
-      "records": 99
     },
     {
       "source": "ar-member-j-boyd",
@@ -356,11 +336,11 @@
       "records": 1
     },
     {
-      "source": "ks-lower-rep_carpenter_blake_1",
+      "source": "ks-lower-rep_carpenter_will_1",
       "records": 1
     },
     {
-      "source": "ks-lower-rep_carpenter_will_1",
+      "source": "ks-lower-rep_carpenter_blake_1",
       "records": 1
     },
     {
@@ -425,10 +405,6 @@
     },
     {
       "source": "ks-lower-rep_gardner_fred_1",
-      "records": 1
-    },
-    {
-      "source": "ks-lower-rep_goddard_dan_1",
       "records": 1
     },
     {
@@ -1649,7 +1625,7 @@
     },
     {
       "source": "mt-roster",
-      "records": 150
+      "records": 62
     },
     {
       "source": "ne-unicameral",
@@ -1761,11 +1737,7 @@
     },
     {
       "source": "sc-upper",
-      "records": 46
-    },
-    {
-      "source": "sc-lower",
-      "records": 124
+      "records": 45
     },
     {
       "source": "sd-roster",
@@ -1777,7 +1749,7 @@
     },
     {
       "source": "tn-lower",
-      "records": 97
+      "records": 99
     },
     {
       "source": "tx-upper",
@@ -1805,11 +1777,11 @@
     },
     {
       "source": "va-lower",
-      "records": 99
+      "records": 100
     },
     {
       "source": "wa-roster",
-      "records": 147
+      "records": 146
     },
     {
       "source": "wv-upper",
@@ -1833,7 +1805,7 @@
     },
     {
       "source": "wy-lower",
-      "records": 62
+      "records": 60
     },
     {
       "source": "or-legislators",
@@ -1841,7 +1813,7 @@
     },
     {
       "source": "wa-sponsors",
-      "records": 147
+      "records": 146
     },
     {
       "source": "tx-upper-member-d1",
@@ -1976,6 +1948,206 @@
       "records": 203
     },
     {
+      "source": "gov-al",
+      "records": 1
+    },
+    {
+      "source": "gov-ak",
+      "records": 1
+    },
+    {
+      "source": "gov-az",
+      "records": 1
+    },
+    {
+      "source": "gov-ar",
+      "records": 1
+    },
+    {
+      "source": "gov-ca",
+      "records": 1
+    },
+    {
+      "source": "gov-co",
+      "records": 1
+    },
+    {
+      "source": "gov-ct",
+      "records": 1
+    },
+    {
+      "source": "gov-de",
+      "records": 1
+    },
+    {
+      "source": "gov-fl",
+      "records": 1
+    },
+    {
+      "source": "gov-ga",
+      "records": 1
+    },
+    {
+      "source": "gov-hi",
+      "records": 1
+    },
+    {
+      "source": "gov-id",
+      "records": 1
+    },
+    {
+      "source": "gov-il",
+      "records": 1
+    },
+    {
+      "source": "gov-in",
+      "records": 1
+    },
+    {
+      "source": "gov-ia",
+      "records": 1
+    },
+    {
+      "source": "gov-ks",
+      "records": 1
+    },
+    {
+      "source": "gov-ky",
+      "records": 1
+    },
+    {
+      "source": "gov-la",
+      "records": 1
+    },
+    {
+      "source": "gov-me",
+      "records": 1
+    },
+    {
+      "source": "gov-ma",
+      "records": 1
+    },
+    {
+      "source": "gov-md",
+      "records": 1
+    },
+    {
+      "source": "gov-mi",
+      "records": 1
+    },
+    {
+      "source": "gov-mn",
+      "records": 1
+    },
+    {
+      "source": "gov-ms",
+      "records": 1
+    },
+    {
+      "source": "gov-mo",
+      "records": 1
+    },
+    {
+      "source": "gov-mt",
+      "records": 1
+    },
+    {
+      "source": "gov-ne",
+      "records": 1
+    },
+    {
+      "source": "gov-nv",
+      "records": 1
+    },
+    {
+      "source": "gov-nh",
+      "records": 1
+    },
+    {
+      "source": "gov-nj",
+      "records": 1
+    },
+    {
+      "source": "gov-nm",
+      "records": 1
+    },
+    {
+      "source": "gov-ny",
+      "records": 1
+    },
+    {
+      "source": "gov-nc",
+      "records": 1
+    },
+    {
+      "source": "gov-nd",
+      "records": 1
+    },
+    {
+      "source": "gov-oh",
+      "records": 1
+    },
+    {
+      "source": "gov-ok",
+      "records": 1
+    },
+    {
+      "source": "gov-or",
+      "records": 1
+    },
+    {
+      "source": "gov-pa",
+      "records": 1
+    },
+    {
+      "source": "gov-ri",
+      "records": 1
+    },
+    {
+      "source": "gov-sc",
+      "records": 1
+    },
+    {
+      "source": "gov-sd",
+      "records": 1
+    },
+    {
+      "source": "gov-tn",
+      "records": 1
+    },
+    {
+      "source": "gov-tx",
+      "records": 1
+    },
+    {
+      "source": "gov-ut",
+      "records": 1
+    },
+    {
+      "source": "gov-vt",
+      "records": 1
+    },
+    {
+      "source": "gov-va",
+      "records": 1
+    },
+    {
+      "source": "gov-wa",
+      "records": 1
+    },
+    {
+      "source": "gov-wv",
+      "records": 1
+    },
+    {
+      "source": "gov-wi",
+      "records": 1
+    },
+    {
+      "source": "gov-wy",
+      "records": 1
+    },
+    {
       "source": "nd-district-directory",
       "records": 2
     }
@@ -1996,25 +2168,55 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
       "state": "AL",
       "federal": "collected",
-      "stateLegislature": "collected",
+      "stateLegislature": "not-collected",
       "legislativeChambers": {
         "upper": {
-          "status": "collected",
-          "records": 35
+          "status": "not-collected",
+          "records": 0
         },
         "lower": {
-          "status": "collected",
-          "records": 105
+          "status": "not-collected",
+          "records": 0
         }
       },
-      "blockers": [],
-      "stateExecutive": "not-collected",
+      "blockers": [
+        "Ala. Const. art. IV, s. 46: legislative terms begin the day after the general election (November 4, 2026). The official directory still lists the members elected in 2022. Withheld source: https://alison.legislature.state.al.us/graphql?query=%7BlegislativeMembers%28where%3A%7Bactive%3A%7Beq%3Atrue%7D%2Celected%3A%7Beq%3Atrue%7D%7D%29%7Bdata%7Bid+body+fullName+district+honorificFullNameAffiliation+phone+email+imageUrl%7D%7D%7D"
+      ],
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2032,7 +2234,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2050,7 +2266,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2068,7 +2298,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2086,7 +2330,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2104,7 +2362,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2122,7 +2394,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2136,11 +2422,25 @@
         },
         "lower": {
           "status": "collected",
-          "records": 116
+          "records": 119
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2158,25 +2458,56 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
       "state": "HI",
       "federal": "collected",
-      "stateLegislature": "collected",
+      "stateLegislature": "not-collected",
       "legislativeChambers": {
         "upper": {
-          "status": "collected",
-          "records": 25
+          "status": "not-collected",
+          "records": 0
         },
         "lower": {
-          "status": "collected",
-          "records": 51
+          "status": "not-collected",
+          "records": 0
         }
       },
-      "blockers": [],
-      "stateExecutive": "not-collected",
+      "blockers": [
+        "Haw. Const. art. III, s. 4: a term begins on the day of the general election (November 3, 2026). The official directory still shows Representatives for the 2026 regular session. Withheld source: https://www.capitol.hawaii.gov/legislature/legislators.aspx?chamber=H",
+        "Haw. Const. art. III, s. 4: a term begins on the day of the general election (November 3, 2026). The official directory still shows Senators for the 2026 regular session. Withheld source: https://www.capitol.hawaii.gov/legislature/legislators.aspx?chamber=S"
+      ],
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2194,7 +2525,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2212,7 +2557,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2230,27 +2589,56 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
       "state": "IN",
       "federal": "collected",
-      "stateLegislature": "collected",
+      "stateLegislature": "not-collected",
       "legislativeChambers": {
         "upper": {
-          "status": "collected",
-          "records": 50
+          "status": "not-collected",
+          "records": 0
         },
         "lower": {
-          "status": "collected",
-          "records": 100
+          "status": "not-collected",
+          "records": 0
         }
       },
       "blockers": [
-        "The official 2026 roster contains one additional Senate entry without a district (Andy Zay); that unsupported entry is excluded pending explicit current-office evidence: https://iga.in.gov/legislative/2026/legislators/legislator_andy_zay_1"
+        "The official 2026 roster contains one additional Senate entry without a district (Andy Zay); that unsupported entry is excluded pending explicit current-office evidence: https://iga.in.gov/legislative/2026/legislators/legislator_andy_zay_1",
+        "Ind. Const. art. 4, s. 3: terms run from the day after the general election (November 4, 2026). The official directory still reads \"Legislators for 2026 Session\". Withheld source: https://iga.in.gov/legislative/2026/legislators"
       ],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2264,11 +2652,25 @@
         },
         "lower": {
           "status": "collected",
-          "records": 125
+          "records": 124
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2286,7 +2688,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2304,7 +2720,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2322,7 +2752,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2340,7 +2784,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2358,7 +2816,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2376,7 +2848,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2394,7 +2880,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2412,7 +2912,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2430,7 +2944,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2440,15 +2968,29 @@
       "legislativeChambers": {
         "upper": {
           "status": "collected",
-          "records": 50
+          "records": 40
         },
         "lower": {
           "status": "collected",
-          "records": 100
+          "records": 22
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2466,7 +3008,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2484,7 +3040,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2498,7 +3068,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2516,7 +3100,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2534,7 +3132,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2552,7 +3164,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2570,7 +3196,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2588,7 +3228,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2606,7 +3260,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2624,7 +3292,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2642,7 +3324,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2660,7 +3356,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2678,25 +3388,55 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
       "state": "SC",
       "federal": "collected",
-      "stateLegislature": "collected",
+      "stateLegislature": "partial",
       "legislativeChambers": {
         "upper": {
           "status": "collected",
-          "records": 46
+          "records": 45
         },
         "lower": {
-          "status": "collected",
-          "records": 124
+          "status": "not-collected",
+          "records": 0
         }
       },
-      "blockers": [],
-      "stateExecutive": "not-collected",
+      "blockers": [
+        "S.C. Const. art. III, s. 10: terms begin on the Monday following the general election (November 9, 2026). The official House directory still lists the members elected in 2024. Withheld source: https://www.scstatehouse.gov/member.php?chamber=H"
+      ],
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2714,7 +3454,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2728,11 +3482,25 @@
         },
         "lower": {
           "status": "collected",
-          "records": 97
+          "records": 99
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2750,7 +3518,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2768,7 +3550,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2782,11 +3578,25 @@
         },
         "lower": {
           "status": "collected",
-          "records": 99
+          "records": 100
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2804,7 +3614,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2818,11 +3642,25 @@
         },
         "lower": {
           "status": "collected",
-          "records": 98
+          "records": 97
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2840,7 +3678,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2858,7 +3710,21 @@
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     },
     {
@@ -2872,11 +3738,25 @@
         },
         "lower": {
           "status": "collected",
-          "records": 62
+          "records": 60
         }
       },
       "blockers": [],
-      "stateExecutive": "not-collected",
+      "stateExecutive": {
+        "offices": {
+          "governor": {
+            "status": "collected",
+            "records": 1
+          }
+        },
+        "notCollected": [
+          "lieutenantGovernor",
+          "secretaryOfState",
+          "attorneyGeneral",
+          "otherStatewideOffices"
+        ],
+        "blockers": []
+      },
       "countyOfficials": "not-collected"
     }
   ],
@@ -2895,14 +3775,14 @@
     },
     "areaIntersectionPairs": 62399,
     "officialGeometryLinks": {
-      "officials": 7854,
-      "matched": 7854,
+      "officials": 7327,
+      "matched": 7327,
       "unmatched": 0,
       "matchedByLayer": {
         "cd": 433,
-        "state": 100,
-        "sldu": 1961,
-        "sldl": 5305,
+        "state": 150,
+        "sldu": 1840,
+        "sldl": 4849,
         "sldl_floterial": 55
       },
       "unmatchedByReason": {}
