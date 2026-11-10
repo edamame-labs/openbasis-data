@@ -130,6 +130,12 @@ BLOCKED = {
     'MN': 'https://mncourts.gov/supremecourt/justices refused automated retrieval (Cloudflare challenge, HTTP 403).',
     'MO': 'https://www.courts.mo.gov/ refused automated retrieval (HTTP 403).',
 }
+# Courts whose working rule is kept but whose site was down at the last refresh. Remove the entry when it answers again.
+OUTAGES = {
+    'MS': 'https://courts.ms.gov/appellatecourts/sc/scjustices.php returned HTTP 520 (origin error) repeatedly on 2026-11-10.',
+}
+BLOCKED.update(OUTAGES)
+RULES = {st: rule for st, rule in RULES.items() if st not in OUTAGES}
 assert set(RULES) | set(BLOCKED) == set(COURT_NAMES) and not set(RULES) & set(BLOCKED)
 
 SOURCES = {'court-'+st.lower(): (rule['publisher'], rule['url']) for st, rule in RULES.items()}
