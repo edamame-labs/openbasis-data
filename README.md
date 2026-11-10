@@ -19,15 +19,15 @@ Counts below describe source observations from November 2–3, 2026 (UTC). `data
 | State geography | 50 states | [Census TIGERweb](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer) |
 | County and county-equivalent geography | 3,143 areas within the 50 states | Same Census service |
 
-Counts describe the checked-in snapshot, not a guarantee that every occupied office is present. State executive officers and county officeholders are **not collected**. All state legislative chambers have a directly collected official roster; Nebraska has one unicameral chamber. `collected` means source extraction completed, not that a statutory seat shortfall is a verified vacancy. DC and territories are outside this release. County equivalents include entities such as independent cities and statistical areas; their inclusion does not establish a county government or supervisor district.
+Counts describe the checked-in snapshot, not a guarantee that every occupied office is present. State executive officers and county officeholders are **not collected**. All state legislative chambers have a directly collected official roster; Nebraska has one unicameral chamber. `collected` means source extraction completed, not that a statutory seat shortfall is a verified vacancy. `officials.json` excludes DC and the territories; their non-voting House members are in `national.json`. County equivalents include entities such as independent cities and statistical areas; their inclusion does not establish a county government or supervisor district.
 
 The current geography vintage is **January 1, 2026**, as reported in Census layer metadata. Source publication dates differ from retrieval dates: the House XML reports **October 1, 2026**. Sources without a publication date have `publishedAt: null`. A recently fetched page may still contain older information.
 
 ## Files and evidence
 
-- `data/officials.json`: 7,854 source-backed records, with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available.
+- `data/officials.json`: 7,854 source-backed records, with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available. Optional contact fields are `website`, `email`, `phone`, `address` and `photo`.
 - `data/officials.csv`: the same records, with provenance encoded as JSON in `sources`.
-- `data/national.json`: the President and Vice President, from the White House administration page. These offices belong to no state, so they are kept out of `officials.json`; see [national offices](docs/NATIONAL.md).
+- `data/national.json`: the President and Vice President (White House administration page; party from the FEC and the Senate's list of Vice Presidents) and the non-voting House members for DC, PR, GU, VI, AS and MP (`territory`, `office` `Delegate` or `Resident Commissioner`). These offices belong to no state, so they are kept out of `officials.json`; see [national offices](docs/NATIONAL.md).
 - `data/sources.json`: direct URLs, final URLs, publishers, retrieval timestamps, SHA-256 checksums of the acquired representation, and reported publication/session metadata. `representation` distinguishes HTTP response bodies from browser DOM captures; POST sources include their request method and body.
 - `data/geography/{states,counties}.geojson`: Census features, source identifiers and names, with collection-level query URL, checksum, metadata reference and vintage.
 - `data/coverage.json`: collected rosters, analytical boundary counts and explicitly uncollected offices by state.
@@ -56,7 +56,7 @@ python3 -B tools/build.py --verify --fresh
 .venv-geo/bin/python -B -m unittest discover -s tools -p 'test_*.py'
 ```
 
-The builder reads **only its explicit government source allowlist**, starts from those acquired responses, and replaces `data/` only after all fetches and checks succeed. It never reads a previous directory, third-party roster, manual correction seed, or legacy contact file. A failed source stops the build; the prior published snapshot remains intact with its original timestamps.
+The builder reads **only its explicit government source allowlist**, starts from those acquired responses, and replaces `data/` only after all fetches and checks succeed. It never reads a previous directory, third-party roster, manual correction seed, or legacy contact file. A failed source stops the build; the prior published snapshot remains intact with its original timestamps. A curl transport failure (DNS, connect, timeout, TLS, empty reply or receive error) is retried once after five seconds; HTTP errors are not retried ([details](docs/FEDERAL.md#fetch-retry)).
 
 For the checked-in nationwide release, acquire HTTP sources and the required live browser DOM snapshots, then run `--browser-snapshots` to use those fresh observations while fetching the HTTP sources live. Use `--offline` to replay all exact observations. A missing or invalid source stops the build. Online fetching never substitutes browser challenge pages or a prior directory for a required live observation. See [browser acquisition instructions](docs/region-d.md#reproducing-browser-evidence).
 
@@ -72,7 +72,8 @@ For comparison against a pinned release, first check out its Git commit. Fresh d
 
 ## Extraction rules
 
-- House identity uses the official Bioguide ID and `official-name`; Senate identity uses its XML Bioguide ID and first/last name fields. Only the 50 state postal codes are included. The House parser requires Congress 119 and stops for review when the congress changes.
+- House identity uses the official Bioguide ID and `official-name`; Senate identity uses its XML Bioguide ID and first/last name fields. Only the 50 state postal codes are included in `officials.json`. The House parser requires Congress 119 and stops for review when the congress changes.
+- U.S. House and Senate rows carry an office `address`. House rows add `website` from the [house.gov directory](https://www.house.gov/representatives) and `photo` from each member's Clerk page, with `fieldEvidence`; Senate photos are not collected. See [U.S. House and Senate fields](docs/FEDERAL.md).
 - California records come from chamber roster cards. Assembly `Family, Given` names are reordered without enriching names. Explicitly labeled vacant cards are excluded.
 - North Carolina records come from the official 2025–2026 session member tables. Explicit `Resigned` or `Deceased` entries are excluded; biography anchor text supplies the name. District duplicates or a changed session label stop the build.
 - State record IDs identify source-specific roster entries, not permanent cross-release person identities. Multi-member districts use distinct source-person identifiers; CA/NC use chamber/district row IDs. Party labels preserve publisher wording and can differ between chambers.

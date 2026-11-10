@@ -16,6 +16,8 @@ from pathlib import Path
 import shutil
 import subprocess
 import tempfile
+import time
+import unicodedata
 from urllib.parse import unquote, urlencode, urljoin, urlparse
 import xml.etree.ElementTree as ET
 
@@ -31,10 +33,33 @@ SOURCES = {
 CENSUS = 'https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/'
 # Excludes DC and territories; identifiers are checked against the Census response.
 STATE_CODES = set('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY'.split())
+# Postal codes of the District of Columbia and the territories with a non-voting House member.
+TERRITORIES = {'DC','PR','GU','VI','AS','MP'}
+# Second House sources: the house.gov directory (room-code key and member websites)
+# and each member's Clerk page (photo, and the office address it states).
+HOUSE_DIRECTORY = ('U.S. House of Representatives', 'https://www.house.gov/representatives')
+CLERK_MEMBER = 'https://clerk.house.gov/members/'
+CLERK_MEMBER_URL = re.compile(r'https://clerk\.house\.gov/members/[A-Z]\d{6}')
+USER_AGENT = 'Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)'
+# curl exit codes for transport failures worth one retry: could not resolve host (6),
+# could not connect (7), timeout (28), TLS handshake (35), empty reply (52), receive error (56).
+# HTTP errors (--fail, exit 22) are answers from the publisher and are never retried.
+TRANSIENT_CURL = {6, 7, 28, 35, 52, 56}
+RETRY_DELAY = 5
 
 
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
+
+
+def run_curl(command):
+    """Run curl, retrying once after RETRY_DELAY seconds on a transient transport error."""
+    try:
+        return subprocess.run(command, check=True, capture_output=True)
+    except subprocess.CalledProcessError as error:
+        if error.returncode not in TRANSIENT_CURL: raise
+    time.sleep(RETRY_DELAY)
+    return subprocess.run(command, check=True, capture_output=True)
 
 
 def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browser_snapshots=False, user_agent=None):
@@ -57,7 +82,7 @@ def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browse
         command = ['curl', '--fail', '--silent', '--show-error', '--location', '--max-time', '120', '--proto', '=https', '--proto-redir', '=https', '--write-out', '\n%{url_effective}']
         if user_agent: command.extend(['--user-agent',user_agent])
         if method=='POST': command.extend(['--request','POST','--data-raw',data])
-        result = subprocess.run(command+[url], check=True, capture_output=True)
+        result = run_curl(command+[url])
         raw, final = result.stdout.rsplit(b'\n', 1)
         final_url = final.decode()
         assert urlparse(final_url).hostname.removeprefix('www.') == urlparse(url).hostname.removeprefix('www.'), 'Unexpected publisher redirect'
@@ -128,8 +153,8 @@ def record(source, id, name, state, level, body, district=None, **extra):
 
 # Contact fields copied from the same official roster as the record (or, with
 # fieldEvidence, from another allowlisted official page about that member).
-FIELDS = {'id','name','state','level','jurisdiction','body','office','district','party','website','email','phone','photo','ids','sources','fieldEvidence'}
-EVIDENCED = {'district','party','website','email','phone','photo'}
+FIELDS = {'id','name','state','level','jurisdiction','body','office','district','party','website','email','phone','address','photo','ids','sources','fieldEvidence'}
+EVIDENCED = {'district','party','website','email','phone','address','photo'}
 EMAIL = re.compile(r'[a-z0-9._%+\'-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}')
 PHONE = re.compile(r'\d{3}-\d{3}-\d{4}')
 
@@ -150,7 +175,7 @@ def contact(base_url, email=None, phone=None, photo=None):
     return out
 
 
-CSV_COLUMNS = ['id','name','level','state','jurisdiction','body','office','district','party','website','email','phone','photo','ids','sources','fieldEvidence']
+CSV_COLUMNS = ['id','name','level','state','jurisdiction','body','office','district','party','website','email','phone','address','photo','ids','sources','fieldEvidence']
 JSON_COLUMNS = {'ids','sources','fieldEvidence'}
 
 
@@ -215,30 +240,183 @@ def party_name(party):
     return '/'.join(', '.join(one(t) for t in part.split(',')) for part in party.split('/'))
 
 
-def parse_federal(key, raw, source):
+def folded(text):
+    """Letters only, without accents or case, to compare one person's name across two official lists."""
+    text = unicodedata.normalize('NFKD', text)
+    return re.sub(r'[^a-z]', '', ''.join(c for c in text if not unicodedata.combining(c)).casefold())
+
+
+def same_member(a, b):
+    """Two 'Family, Given' names agree: the same family name and the same first given name."""
+    parts = [n.split(',') for n in (a, b)]
+    assert all(len(p) == 2 and p[0].strip() and p[1].split() for p in parts), ('Expected "Family, Given" names', a, b)
+    (fa, ga), (fb, gb) = parts
+    return folded(fa) == folded(fb) and folded(ga.split()[0]) == folded(gb.split()[0])
+
+
+DIRECTORY_COLUMNS = ['District', 'Name', 'Party', 'Office Room', 'Phone', 'Committee Assignment']
+
+
+def parse_house_directory(raw, expected_tables=len(STATE_CODES) + len(TERRITORIES), size=(400, 441)):
+    """Room-code key {code: building} and seats {(state name, district label): ('Family, Given', website)} from house.gov."""
+    tree = HTML(raw).root
+    boxes = [n for n in tree.find(lambda n: n.tag == 'div')
+             if any(isinstance(c, Node) and c.tag == 'h2' and c.text() == 'Key to Room Codes' for c in n.children)]
+    assert len(boxes) == 1, 'Room-code key missing'
+    buildings = {}
+    for li in boxes[0].find(lambda n: n.tag == 'li'):
+        match = re.fullmatch(r'([A-Z]{2,5}): ([A-Z][a-z]+ House Office Building)', li.text())
+        if match:
+            assert match[1] not in buildings, 'Duplicate room code: '+match[1]
+            buildings[match[1]] = match[2]
+    assert len(buildings) >= 3, 'Room-code key changed'
+    seats = {}
+    tables = tree.find(lambda n: n.tag == 'table' and n.attrs.get('id', '').startswith('housegov_reps_by_state-'))
+    assert len(tables) == expected_tables, 'Unexpected number of state and territory tables'
+    for table in tables:
+        captions = table.find(lambda n: n.tag == 'caption')
+        assert len(captions) == 1 and captions[0].text(), 'Directory caption missing'
+        assert [n.text() for n in table.find(lambda n: n.tag == 'th')] == DIRECTORY_COLUMNS, 'Directory columns changed'
+        for tr in table.find(lambda n: n.tag == 'tr'):
+            cells = [c for c in tr.children if isinstance(c, Node) and c.tag == 'td']
+            if not cells: continue
+            assert len(cells) == len(DIRECTORY_COLUMNS), 'Directory row changed'
+            # A vacant seat keeps the former member's name, labeled "- Vacancy"; it names no current member.
+            if cells[1].text().endswith(' - Vacancy'): continue
+            links = cells[1].find(lambda n: n.tag == 'a' and 'href' in n.attrs)
+            assert len(links) == 1 and links[0].text() == cells[1].text(), 'Directory name link changed'
+            seat = (captions[0].text(), cells[0].text())
+            assert seat not in seats, ('Duplicate directory seat', seat)
+            seats[seat] = (cells[1].text(), links[0].attrs['href'].strip())
+    assert size[0] <= len(seats) <= size[1], 'Unexpected directory size'
+    return buildings, seats
+
+
+def parse_house(raw, source, buildings):
+    """(rows for the 50 states, rows for DC and the territories, {id: (seat, 'Family, Given', address)}) from MemberData.xml."""
     root = ET.fromstring(raw)
-    rows = []
+    source['publishedAt'] = root.attrib.get('publish-date')
+    source['congress'] = root.findtext('title-info/congress-num')
+    assert source['congress'] == '119', 'Congress changed; review applicability before rebuilding'
+    rows, delegates, details = [], [], {}
+    for m in root.findall('members/member'):
+        info = m.find('member-info')
+        st = info.find('state').attrib['postal-code']
+        assert st in STATE_CODES or st in TERRITORIES, 'Unknown House state code: '+st
+        bio = info.findtext('bioguideID')
+        if not bio: continue  # An absent person is not an inferred vacancy record.
+        building = info.findtext('office-building')
+        assert building in buildings, 'Unknown House office building code: '+str(building)
+        room, zip5, plus4 = (' '.join((info.findtext(k) or '').split()) for k in ('office-room', 'office-zip', 'office-zip-suffix'))
+        assert re.fullmatch(r'\d+[A-Z]?', room) and zip5 == '20515' and re.fullmatch(r'\d{4}', plus4), ('House office address changed', bio)
+        fields = dict(party=info.findtext('party'), ids={'bioguide':bio}, **contact(source['url'], phone=info.findtext('phone')))
+        if st in TERRITORIES:
+            # <district> holds the title of a non-voting seat.
+            office = info.findtext('district')
+            assert office in {'Delegate', 'Resident Commissioner'}, ('Unexpected non-voting House office', st, office)
+            row = dict(id='us-house-'+bio, name=info.findtext('official-name'), level='federal', jurisdiction='United States',
+                       body='U.S. House', office=office, territory=st, sources=[source], **{k:v for k,v in fields.items() if v})
+            assert row['name'], 'Missing House member name'
+            delegates.append(row)
+        else:
+            row = record(source, 'us-house-'+bio, info.findtext('official-name'), st, 'federal', 'U.S. House', m.findtext('statedistrict')[2:], **fields)
+            rows.append(row)
+        assert row['id'] not in details, 'Duplicate House Bioguide ID'
+        details[row['id']] = ((info.findtext('state/state-fullname'), info.findtext('district')), info.findtext('namelist'),
+                              f'{room} {buildings[building]}, Washington, DC {zip5}-{plus4}')
+    assert rows and 1 <= len(delegates) <= len(TERRITORIES) and len({r['territory'] for r in delegates}) == len(delegates), 'Unexpected House roster'
+    return rows, delegates, details
+
+
+SENATE_ADDRESS = re.compile(r'(\d+[A-Z]?) (Russell|Hart|Dirksen) Senate Office Building Washington DC (20510)')
+
+
+def parse_federal(key, raw, source, buildings=None):
     if key == 'house':
-        source['publishedAt'] = root.attrib.get('publish-date')
-        source['congress'] = root.findtext('title-info/congress-num')
-        assert source['congress'] == '119', 'Congress changed; review applicability before rebuilding'
-        for m in root.findall('members/member'):
-            info = m.find('member-info')
-            st = info.find('state').attrib['postal-code']
-            if st not in STATE_CODES: continue
-            bio = info.findtext('bioguideID')
-            if not bio: continue  # An absent person is not an inferred vacancy record.
-            code = m.findtext('statedistrict')
-            rows.append(record(source, 'us-house-'+bio, info.findtext('official-name'), st, 'federal', 'U.S. House', code[2:], party=info.findtext('party'), ids={'bioguide':bio}, **contact(source['url'], phone=info.findtext('phone'))))
+        rows = parse_house(raw, source, buildings)[0]
     else:
-        for m in root.findall('member'):
+        rows = []
+        for m in ET.fromstring(raw).findall('member'):
             st = m.findtext('state')
             if st not in STATE_CODES: continue
             # <email> holds a contact-form URL, not an address.
             website = m.findtext('website')
-            rows.append(record(source, 'us-senate-'+m.findtext('bioguide_id'), m.findtext('first_name')+' '+m.findtext('last_name'), st, 'federal', 'U.S. Senate', party=m.findtext('party'), ids={'bioguide':m.findtext('bioguide_id')}, website=website if website and urlparse(website).hostname.endswith('.senate.gov') else None, **contact(source['url'], phone=m.findtext('phone'))))
+            text = ' '.join((m.findtext('address') or '').split())
+            office = SENATE_ADDRESS.fullmatch(text)
+            assert office, 'Senate office address changed: '+text
+            rows.append(record(source, 'us-senate-'+m.findtext('bioguide_id'), m.findtext('first_name')+' '+m.findtext('last_name'), st, 'federal', 'U.S. Senate', party=m.findtext('party'), ids={'bioguide':m.findtext('bioguide_id')}, website=website if website and urlparse(website).hostname.endswith('.senate.gov') else None,
+                               address=f'{office[1]} {office[2]} Senate Office Building, Washington, DC {office[3]}', **contact(source['url'], phone=m.findtext('phone'))))
     assert rows, 'Empty federal roster'
     return rows
+
+
+def parse_clerk_member(raw, bio, name):
+    """(photo URL or None, the office address stated) from a member's Clerk page, clerk.house.gov/members/<bioguide>."""
+    tree = HTML(raw).root
+    photo = 'https://clerk.house.gov/images/members/'+bio+'.jpg'
+    images = [n for n in tree.find(lambda n: n.tag == 'img') if urljoin(CLERK_MEMBER, n.attrs.get('src', '').strip()) == photo]
+    assert len(images) <= 1, ('Several member photos', bio)
+    if images: assert images[0].attrs.get('alt') == 'Photo of '+name, ('Member photo names someone else', bio, images[0].attrs.get('alt'))
+    boxes = [n for n in tree.find(lambda n: n.tag == 'div' and has_class(n, 'member'))
+             if any(isinstance(c, Node) and c.tag == 'h3' and c.text() == 'Contact' for c in n.children)]
+    assert len(boxes) == 1, ('Clerk contact block missing', bio)
+    rooms = [n.text() for n in boxes[0].children if isinstance(n, Node) and n.tag == 'span' and re.fullmatch(r'\d+[A-Z]? [A-Z][a-z]+ House Office Building', n.text())]
+    cities = [n.text() for n in boxes[0].children if isinstance(n, Node) and n.tag == 'span' and has_class(n, 'address')]
+    assert len(rooms) == 1 and len(cities) == 1, ('Clerk contact address changed', bio)
+    city = re.fullmatch(r'(Washington), (DC), (\d{5}-\d{4})', cities[0])
+    assert city, ('Clerk contact address changed', bio, cities[0])
+    return (photo if images else None), f'{rooms[0]}, {city[1]}, {city[2]} {city[3]}'
+
+
+def add_house_fields(row, detail, seats, directory, page_raw, page_source):
+    """Website from the house.gov directory and photo from the member's Clerk page, each with field evidence.
+
+    The address combines MemberData's room, building code and ZIP with the directory's room-code key,
+    and must equal the address the member's Clerk page states.
+    """
+    seat, listed_name, address = detail
+    assert seat in seats, ('Member missing from the house.gov directory', row['id'], seat)
+    name, website = seats[seat]
+    assert same_member(name, listed_name), ('house.gov directory names a different member', seat, name, listed_name)
+    host = urlparse(website).hostname or ''
+    # Published as the directory gives it (a few links use http://).
+    assert urlparse(website).scheme in {'http', 'https'} and (host == 'house.gov' or host.endswith('.house.gov')), ('Member website outside house.gov', website)
+    photo, stated = parse_clerk_member(page_raw, row['ids']['bioguide'], row['name'])
+    assert stated == address, ('Clerk page and MemberData disagree on the office address', row['id'], stated, address)
+    row['sources'] = row['sources'] + [directory, page_source]
+    evidence = row.setdefault('fieldEvidence', {})
+    row['website'] = website
+    evidence['website'] = dict(value=website, sourceIds=[directory['id']])
+    row['address'] = address
+    evidence['address'] = dict(value=address, sourceIds=[row['sources'][0]['id'], directory['id'], page_source['id']])
+    if photo:
+        row['photo'] = photo
+        evidence['photo'] = dict(value=photo, sourceIds=[page_source['id']])
+    return row
+
+
+def collect_federal(acquire, offline):
+    """(U.S. House and Senate rows for the 50 states, non-voting House members, sources)."""
+    from concurrent.futures import ThreadPoolExecutor
+    sources = []
+    def get(key, publisher, url, **options):
+        raw, source = acquire(key, publisher, url, offline, **options)
+        sources.append(source)
+        return raw, source
+    house_raw, house = get('house', *SOURCES['house'])
+    directory_raw, directory = get('house-directory', *HOUSE_DIRECTORY, user_agent=USER_AGENT)
+    buildings, seats = parse_house_directory(directory_raw)
+    rows, delegates, details = parse_house(house_raw, house, buildings)
+    def page(row):
+        bio = row['ids']['bioguide']
+        return row, *acquire('house-member-'+bio, SOURCES['house'][0], CLERK_MEMBER+bio, offline, user_agent=USER_AGENT)
+    # One request per member page, a few at a time.
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for row, page_raw, page_source in pool.map(page, rows + delegates):
+            add_house_fields(row, details[row['id']], seats, directory, page_raw, page_source)
+            sources.append(page_source)
+    senate_raw, senate = get('senate', *SOURCES['senate'])
+    return rows + parse_federal('senate', senate_raw, senate), delegates, sources
 
 
 def parse_state(key, raw, source):
@@ -326,7 +504,7 @@ def source_allowed(source):
     if url in {url for _,url in geography_exceptions.SOURCES.values()}: return True
     import district_sources
     if url in {rule['url'] for rules in district_sources.WITHHELD.values() for rule in rules.values()}: return True
-    if url in {url for _,url in SOURCES.values()}: return True
+    if url in {url for _,url in SOURCES.values()} or url == HOUSE_DIRECTORY[1] or CLERK_MEMBER_URL.fullmatch(url): return True
     import committees
     if url == committees.HOUSE[1] or committees.allowed(url): return True
     import national
@@ -439,6 +617,7 @@ def validate(folder, fresh=False):
         assert not r.get('email') or EMAIL.fullmatch(r['email']), r['email']
         assert not r.get('phone') or PHONE.fullmatch(r['phone']), r['phone']
         assert not r.get('photo') or urlparse(r['photo']).scheme == 'https', r['photo']
+        assert not r.get('address') or (isinstance(r['address'], str) and r['address'] == ' '.join(r['address'].split())), r['address']
         assert not r.get('ids') or all(isinstance(k,str) and isinstance(v,str) and v for k,v in r['ids'].items())
         for field, proof in r.get('fieldEvidence', {}).items():
             assert field in EVIDENCED, 'Unsupported field evidence: '+field
@@ -504,9 +683,13 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
     stage = Path(tempfile.mkdtemp(prefix='primary-data-', dir=ROOT))
     try:
         sources, rows = [], []
+        federal_rows, delegates, federal_sources = collect_federal(acquire, offline)
+        rows.extend(federal_rows)
+        sources.extend(federal_sources)
         for key, (publisher, url) in SOURCES.items():
+            if key in {'house','senate'}: continue
             raw, source = acquire(key, publisher, url, offline)
-            rows.extend(parse_federal(key, raw, source) if key in {'house','senate'} else parse_state(key, raw, source))
+            rows.extend(parse_state(key, raw, source))
             sources.append(source)
         for module in region_modules():
             if hasattr(module, 'collect'):
@@ -519,10 +702,9 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
                     rows.extend(module.parse(key, raw, source))
                     sources.append(source)
         import national
-        national_rows,national_sources=national.collect(acquire,offline)
-        for row in national_rows: row['name']=person_name(row['name'])
+        national_rows,national_sources=national.collect(acquire,offline,delegates)
         sources.extend(national_sources)
-        for row in rows:
+        for row in rows+national_rows:
             row['name']=person_name(row['name'])
             if row.get('party'):
                 row['party']=party_name(row['party'])
