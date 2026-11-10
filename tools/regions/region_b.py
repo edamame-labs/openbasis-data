@@ -32,6 +32,7 @@ SOURCES = {
  'ms-lower-index': ('Mississippi Legislature','https://billstatus.ls.state.ms.us/members/hr_membs.xml'),
  'ms-upper-index': ('Mississippi Legislature','https://billstatus.ls.state.ms.us/members/ss_membs.xml'),
  'mo-lower': ('Missouri House of Representatives','https://house.mo.gov/listmembers.aspx?year=2026&code=R'),
+ 'mo-lower-grid': ('Missouri House of Representatives','https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R'),
  'mo-upper': ('Missouri Senate','https://www.senate.mo.gov/Senators'),
  'mo-upper-directory': ('Missouri Senate','https://www.senate.mo.gov/Senators/SenatorDirectory/'),
  'mt-roster': ('Montana Legislature','https://www.legmt.gov/wp-json/legmt/v1/people/legislators'),
@@ -453,7 +454,7 @@ def mo_upper_directory(raw):
 # key -> (roster key, table parser, row join key). A field is joined only when the
 # publisher's own id or district matches and the published name is identical.
 JOINS = {
- # mo-lower-grid (house.mo.gov/MemberGridCluster.aspx) returned HTTP 403 to HTTP and browser retrieval in November 2026; not joined.
+ 'mo-lower-grid': ('mo-lower', mo_lower_grid, lambda r:r['district']),
  'mo-upper-directory': ('mo-upper', mo_upper_directory, lambda r:r['ids']['mo-upper']),
 }
 

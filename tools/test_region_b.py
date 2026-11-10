@@ -127,7 +127,8 @@ class RegionBTests(unittest.TestCase):
         grid=b'''<table id="theTable"><tr><th>x</th></tr>
           <tr><td></td><td>Allen</td><td>Bill</td><td>017</td><td>R</td><td>Kansas City</td><td>573-751-1218</td><td>235</td></tr>
           <tr><td></td><td>Other</td><td>Person</td><td>018</td><td>D</td><td>X</td><td>573-751-0000</td><td>1</td></tr></table>'''
-        proof={'id':'mo-lower-grid','url':'https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R','retrievedAt':'2026-11-01T00:00:00+00:00'}
+        proof=self.proof('mo-lower-grid')
+        self.assertEqual(roster.parse('mo-lower-grid',grid,proof),[])
         roster.join(rows,'mo-lower',roster.mo_lower_grid(grid),lambda r:r['district'],proof)
         self.assertEqual((rows[0]['party'],rows[0]['phone']),('R','573-751-1218'))
         self.assertEqual(rows[0]['fieldEvidence']['party'],{'value':'R','sourceIds':['mo-lower-grid']})

@@ -15,7 +15,7 @@ November 2, 2026 (America/Los_Angeles).
 | Michigan | 110 | 38 | [House](https://www.house.mi.gov/AllRepresentatives), [Senate](https://senate.michigan.gov/senators/all-senators/) |
 | Minnesota | 134 | 67 | [House](https://www.house.mn.gov/members/list), [Senate API](https://www.mnsenate.gov/api/members), [Senate biennium](https://www.mnsenate.gov/api/bienniumYears) |
 | Mississippi | 120 | 51 | [House](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=H), [Senate](https://www.legislature.ms.gov/member/?fiscalyear=26&chamber=S) |
-| Missouri | 155 | 33 | [House](https://house.mo.gov/listmembers.aspx?year=2026&code=R), [Senate](https://www.senate.mo.gov/Senators); party/phone from the [Senator Directory](https://www.senate.mo.gov/Senators/SenatorDirectory/); the [House member grid](https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R) returned HTTP 403 to HTTP and browser retrieval in November 2026 and is not joined |
+| Missouri | 155 | 33 | [House](https://house.mo.gov/listmembers.aspx?year=2026&code=R), [Senate](https://www.senate.mo.gov/Senators); party/phone from the [House member grid](https://house.mo.gov/MemberGridCluster.aspx?year=2026&code=R) and [Senator Directory](https://www.senate.mo.gov/Senators/SenatorDirectory/) |
 | Montana | 100 | 50 | [Legislature current-member feed](https://www.legmt.gov/wp-json/legmt/v1/people/legislators) |
 | Nebraska | — | — | [Unicameral legislature: 49](https://nebraskalegislature.gov/senators/senator_list.php) |
 | Nevada | 42 | 21 | [Assembly](https://www.leg.state.nv.us/App/Legislator/A/Assembly/Current), [Senate](https://www.leg.state.nv.us/App/Legislator/A/Senate/Current) |
