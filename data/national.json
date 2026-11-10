@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T05:56:04.209653+00:00",
+  "officials": [
+    {
+      "id": "us-president",
+      "name": "Donald J. Trump",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. Executive",
+      "office": "President",
+      "website": "https://www.whitehouse.gov/administration/donald-j-trump/",
+      "sources": [
+        {
+          "id": "us-executive",
+          "name": "The White House",
+          "url": "https://www.whitehouse.gov/administration/",
+          "retrievedAt": "2026-11-10T05:39:26.704820+00:00",
+          "sha256": "8e4a90740d57010a0399b397ebe69f4166d4369c0755278b3034ec0a3f4289bd",
+          "finalUrl": "https://www.whitehouse.gov/administration/",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ],
+      "photo": "https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-J.-Trump.png"
+    },
+    {
+      "id": "us-vice-president",
+      "name": "JD Vance",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. Executive",
+      "office": "Vice President",
+      "website": "https://www.whitehouse.gov/administration/jd-vance/",
+      "sources": [
+        {
+          "id": "us-executive",
+          "name": "The White House",
+          "url": "https://www.whitehouse.gov/administration/",
+          "retrievedAt": "2026-11-10T05:39:26.704820+00:00",
+          "sha256": "8e4a90740d57010a0399b397ebe69f4166d4369c0755278b3034ec0a3f4289bd",
+          "finalUrl": "https://www.whitehouse.gov/administration/",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

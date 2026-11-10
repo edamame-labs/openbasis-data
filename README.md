@@ -27,6 +27,7 @@ The current geography vintage is **January 1, 2026**, as reported in Census laye
 
 - `data/officials.json`: 7,854 source-backed records, with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available.
 - `data/officials.csv`: the same records, with provenance encoded as JSON in `sources`.
+- `data/national.json`: the President and Vice President, from the White House administration page. These offices belong to no state, so they are kept out of `officials.json`; see [national offices](docs/NATIONAL.md).
 - `data/sources.json`: direct URLs, final URLs, publishers, retrieval timestamps, SHA-256 checksums of the acquired representation, and reported publication/session metadata. `representation` distinguishes HTTP response bodies from browser DOM captures; POST sources include their request method and body.
 - `data/geography/{states,counties}.geojson`: Census features, source identifiers and names, with collection-level query URL, checksum, metadata reference and vintage.
 - `data/coverage.json`: collected rosters, analytical boundary counts and explicitly uncollected offices by state.
