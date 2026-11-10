@@ -63,7 +63,7 @@ MULTI = {'publicServiceCommissioner', 'corporationCommissioner', 'railroadCommis
          'executiveCouncilor', 'stateBoardOfEducationMember', 'universityRegent', 'universityTrustee', 'universityGovernor',
          'officeOfHawaiianAffairsTrustee'}
 TITLES = {title: key for key, (title, _) in OFFICES.items()}
-COURT_OFFICES = {'Chief Justice', 'Justice', 'Presiding Judge', 'Judge'}
+COURT_OFFICES = {'Chief Justice', 'Justice', 'Presiding Judge', 'Chief Judge', 'Judge'}
 STATUSES = {'collected', 'not-collected'}
 
 

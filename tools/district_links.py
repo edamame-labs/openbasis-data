@@ -41,7 +41,7 @@ def source_ids(value):
     return []
 
 
-COURT_OFFICES = {'Chief Justice', 'Justice', 'Presiding Judge', 'Judge'}
+COURT_OFFICES = {'Chief Justice', 'Justice', 'Presiding Judge', 'Chief Judge', 'Judge'}
 
 
 def statewide_rule(row):
