@@ -24,7 +24,7 @@ The November 3, 2026 general election elected new holders of several of these of
 | MT | `https://mt.gov/govt/elected_officials`, "Statewide Elected Officials": Governor and Lieutenant Governor, Attorney General, Secretary of State, State Auditor, Superintendent of Public Instruction. The page also lists Public Service Commissioners, who are elected from five districts and are not declared as statewide. |
 | NE | `https://www.nebraska.gov/government/executive-branch/`: the page lists the Lieutenant Governor, Secretary of State, Treasurer, Attorney General and Auditor of Public Accounts and describes the auditor as "one of five elected constitutional officers". |
 | NV | Nevada Constitution, `https://www.leg.state.nv.us/Const/NvConst.html`, Art. 5 §17 (Lieutenant Governor) and §19 (Secretary of State, Treasurer, Controller, Attorney General). |
-| NH | The Executive Council is the only elected executive body besides the governor (its five councilors are elected by district). The Secretary of State and Treasurer are chosen by the legislature and are not declared. The council's site refused retrieval (see below). |
+| NH | No executive officer besides the governor is elected statewide. The Executive Council's five councilors are elected by district, which is outside statewide scope. The Secretary of State and Treasurer are chosen by the legislature. NH is declared with no further offices. |
 | NJ | New Jersey Constitution, `https://www.njleg.state.nj.us/constitution`, Art. V §I ¶4 (Governor and Lieutenant Governor elected jointly) and §IV ¶3 (Secretary of State and Attorney General appointed). |
 | NM | `https://www.sos.nm.gov/about-new-mexico/nm-government/`: "statewide elected officials including the Lieutenant Governor ..., Attorney General, Secretary of State, State Auditor, State Treasurer, and Commissioner of Public Lands". |
 | NY | `https://elections.ny.gov/new-york-state-elected-officials` refused retrieval (Cloudflare challenge). Declared: Lieutenant Governor, Attorney General, Comptroller. |
@@ -61,7 +61,6 @@ The November 3, 2026 general election elected new holders of several of these of
 | NV | Attorney General | https://ag.nv.gov/ | header `<span>Nevada Attorney General NAME</span>` |
 | NV | Treasurer | https://www.nevadatreasurer.nv.gov/ | portrait `alt="Treasurer NAME"` |
 | NV | Controller | https://www.controller.nv.gov/ | header `<span class="AgencyTitle">Nevada State Controller NAME</span>` |
-| NH | Executive Councilor | https://www.council.nh.gov/ | not collected: Access Denied (HTTP 403); `www.nh.gov` refuses the same way |
 | NJ | Lieutenant Governor | https://www.nj.gov/governor/admin/ltgovernor/ | `<title>Lt. Governor NAME</title>` |
 | NM | Lieutenant Governor | https://www.ltgov.nm.gov/ | `<h1><span class="hero-kicker">Lieutenant Governor</span> NAME</h1>` |
 | NM | Secretary of State | https://www.sos.nm.gov/ | `<title>NAME - New Mexico Secretary of State \| …</title>` |
@@ -101,7 +100,6 @@ The November 3, 2026 general election elected new holders of several of these of
 Each office in `BLOCKED` is `not-collected`, with a blocker naming the URL and the refusal:
 
 - MS Secretary of State, MT Secretary of State, NV Secretary of State, NM Attorney General: bot challenge or firewall page.
-- NH Executive Council (5 councilors): Access Denied.
 - NY Lieutenant Governor: the governor's site returns "Access denied" for its lieutenant governor page, and no other page there names the officeholder.
 
 They are never filled from another publisher. North Dakota's Tax Commissioner is elected but has no office key in `tools/statewide.py`, so it is not declared.

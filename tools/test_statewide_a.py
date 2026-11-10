@@ -88,26 +88,13 @@ class StatewideATests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             region.parse('sw-co', block * 2, source('sw-co'))
 
-    def test_districts_and_suffixes(self):
+    def test_controller_and_suffixes(self):
         boe = b''.join(f'<div class="text-center text-white m-y-sm">{n}<br><span class="h5 text-white">{d}</span></div>'.encode()
-                       for n, d in [('Ted Gaines', 'First District'), ('Sally J. Lieber', 'Second District'), ('Antonio Vazquez', 'Third District'),
-                                    ('Mike Schaefer', 'Fourth District'), ('Malia M. Cohen', 'Controller')])
+                       for n, d in [('Ted Gaines', 'First District'), ('Malia M. Cohen', 'Controller')])
         rows = region.parse('sw-ca-boe', boe, source('sw-ca-boe'))
-        self.assertEqual([(r['id'], r.get('district')) for r in rows],
-                         [('ca-boardOfEqualizationMember-1', '1'), ('ca-boardOfEqualizationMember-2', '2'), ('ca-boardOfEqualizationMember-3', '3'),
-                          ('ca-boardOfEqualizationMember-4', '4'), ('ca-controller', None)])
+        self.assertEqual([(r['id'], r['name']) for r in rows], [('ca-controller', 'Malia M. Cohen')])
         page = b'<div id="header-office">\n California Secretary of State\n</div>\n<div id="header-name">\n Shirley N. Weber, Ph.D.\n</div>'
         self.assertEqual(region.parse('sw-ca-sos', page, source('sw-ca-sos'))[0]['name'], 'Shirley N. Weber')
-        regent = ('<div class="field field--name-node-title x"> {} </div> <div class="field field--name-field-job-title y">{}</div>')
-        page = ''.join(regent.format(f'Regent Number{n}', f'{n}th Congressional District, Democrat, Current Term 2021-27') for n in range(4, 9))
-        page += regent.format('Ken Montera', 'Chair, 1st Congressional District, Republican, Current Term 2025-31')
-        page += regent.format('Callie Rennison', 'Vice Chair, 2nd Congressional District, Democrat, Current Term 2021-27')
-        page += regent.format('Ray Scott', '3rd Congressional District, Republican, Current Term 2025-31')
-        page += regent.format('Elliott Hood', 'At Large, Democrat, Current Term 2025-31')
-        rows = region.parse('sw-co-regents', page.encode(), source('sw-co-regents'))
-        self.assertEqual(sorted(r['district'] for r in rows), ['1', '2', '3', '4', '5', '6', '7', '8', 'At-Large'])
-        with self.assertRaises(AssertionError):  # two regents for one seat
-            region.parse('sw-co-regents', page.replace('3rd Congressional', '2nd Congressional').encode(), source('sw-co-regents'))
 
     def test_declarations(self):
         vocabulary.check_declarations(region.STATEWIDE, {}, build.STATE_CODES)

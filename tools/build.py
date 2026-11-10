@@ -535,6 +535,10 @@ def executive_coverage(st, declared, governors):
                 blockers=declared['blockers'])
 
 
+# A state no statewide module declares (as opposed to one declared with no further elected offices).
+UNDECLARED = object()
+
+
 def state_executive(st, declared, governors, legacy, statewide=None, rows=()):
     """Coverage value for a state's executive offices; releases without executive rows keep their published value.
 
@@ -544,11 +548,13 @@ def state_executive(st, declared, governors, legacy, statewide=None, rows=()):
     if legacy: return 'not-collected'
     base = executive_coverage(st, declared, governors)
     if statewide is None: return base
+    if statewide is UNDECLARED: statewide_decl = {}
+    else: statewide_decl = statewide
     import statewide as vocabulary
-    offices = vocabulary.executive_offices(st, statewide, [r for r in rows if r['office'] != 'Governor'])
+    offices = vocabulary.executive_offices(st, statewide_decl, [r for r in rows if r['office'] != 'Governor'])
     base['offices'].update(offices)
-    base['notCollected'] = [k for k, v in offices.items() if v['status'] == 'not-collected'] + ([] if statewide else ['otherStatewideOffices'])
-    base['blockers'] = base['blockers'] + statewide.get('blockers', [])
+    base['notCollected'] = [k for k, v in offices.items() if v['status'] == 'not-collected'] + (['otherStatewideOffices'] if statewide is UNDECLARED else [])
+    base['blockers'] = base['blockers'] + statewide_decl.get('blockers', [])
     return base
 
 
@@ -595,7 +601,7 @@ def legislative_coverage(rows):
             stateLegislature='collected' if collected==len(expected) else 'partial' if collected else 'not-collected',
             legislativeChambers=chambers, blockers=item.get('blockers', []),
             stateExecutive=state_executive(st, executive.EXECUTIVE[st], governors[st], legacy,
-                                           None if legacy_statewide else statewide.get(st, {}),
+                                           None if legacy_statewide else statewide.get(st, UNDECLARED),
                                            [r for r in rows if r['state'] == st and is_executive(r)]),
             **({} if legacy_courts else dict(stateCourts=court_coverage_for(st, courts, rows))),
             countyOfficials='not-collected'))

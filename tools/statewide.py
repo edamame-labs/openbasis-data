@@ -49,10 +49,19 @@ OFFICES = {
     'executiveCouncilor': ('Executive Councilor', 'executiveCouncil'),
     'stateBoardOfEducationMember': ('State Board of Education Member', 'schoolBoard'),
     'universityRegent': ('University Regent', 'specialPurposeOfficer'),
+    'universityTrustee': ('University Trustee', 'specialPurposeOfficer'),
+    'universityGovernor': ('University Board of Governors Member', 'specialPurposeOfficer'),
+    'chiefFinancialOfficer': ('Chief Financial Officer', 'governmentOfficer'),
+    'taxCommissioner': ('Tax Commissioner', 'governmentOfficer'),
+    'officeOfHawaiianAffairsTrustee': ('Office of Hawaiian Affairs Trustee', 'specialPurposeOfficer'),
 }
+# Scope: offices elected by the voters of the whole state. Boards whose members are elected by district
+# (state boards of education in AL/CO, CA Board of Equalization, CU Regents, NH Executive Council, district PSCs)
+# are excluded: a district seat belongs to the residents of that district, and their district geography is not published.
 # Offices that have several holders at once; their ids carry a suffix.
 MULTI = {'publicServiceCommissioner', 'corporationCommissioner', 'railroadCommissioner', 'boardOfEqualizationMember',
-         'executiveCouncilor', 'stateBoardOfEducationMember', 'universityRegent'}
+         'executiveCouncilor', 'stateBoardOfEducationMember', 'universityRegent', 'universityTrustee', 'universityGovernor',
+         'officeOfHawaiianAffairsTrustee'}
 TITLES = {title: key for key, (title, _) in OFFICES.items()}
 COURT_OFFICES = {'Chief Justice', 'Justice', 'Presiding Judge', 'Judge'}
 STATUSES = {'collected', 'not-collected'}

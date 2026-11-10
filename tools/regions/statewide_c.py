@@ -189,7 +189,6 @@ BLOCKED = {
  ('MS', 'secretaryOfState'): ('Mississippi Secretary of State', 'https://www.sos.ms.gov/', 'Cloudflare block page (HTTP 403)'),
  ('MT', 'secretaryOfState'): ('Montana Secretary of State', 'https://sosmt.gov/', 'firewall block page (HTTP 403)'),
  ('NV', 'secretaryOfState'): ('Nevada Secretary of State', 'https://www.nvsos.gov/sos', 'Incapsula request-unsuccessful page'),
- ('NH', 'executiveCouncilor'): ('New Hampshire Executive Council', 'https://www.council.nh.gov/', 'Access Denied (HTTP 403)'),
  ('NM', 'attorneyGeneral'): ('New Mexico Department of Justice', 'https://nmdoj.gov/', 'Cloudflare challenge (HTTP 403)'),
  ('NY', 'lieutenantGovernor'): ('Office of the Governor of New York', 'https://www.governor.ny.gov/about-lieutenant-governor', 'Access denied (HTTP 403); no other page of the governor\'s site names the lieutenant governor'),
 }
@@ -209,6 +208,7 @@ def _statewide():
 
 
 STATEWIDE = _statewide()
+# New Hampshire elects no executive officer statewide besides the governor (the Executive Council is elected by district).
 assert all(len([r for r in RULES if r[1:3] == (st, office)]) == 1 for st, office in {r[1:3] for r in RULES}), 'One rule per office'
 assert all((holders > 1) == (office in MULTI) for _, _, office, _, holders in RULES)
 assert {key for key, *_ in RULES} == set(SOURCES)

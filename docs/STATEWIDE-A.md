@@ -29,7 +29,6 @@ Each rule reads the officeholder its page shows as serving. No rule reads electi
 | AL | Auditor | https://auditor.alabama.gov/ | signed quote "- …, State Auditor" |
 | AL | Commissioner of Agriculture and Industries | https://agi.alabama.gov/ | `h3.section-title` "Meet Commissioner …" |
 | AL | Public Service Commission (3) | https://psc.alabama.gov/ | image captions "Commissioner …, President / Place One / Place Two" |
-| AL | State Board of Education (8 district members) | https://www.alabamaachieves.org/state-board-of-education/ | member cards `h2.sptp-name` + `h4.sptp-profession-text` "…, District NN". The governor, the board's ex officio president, is excluded. |
 | AK | Lieutenant Governor | https://ltgov.alaska.gov/ | menu link "Meet Lt. Governor …" |
 | AZ | Attorney General | https://www.azag.gov/ | menu link "…, Attorney General" |
 | AZ | Treasurer | https://www.aztreasury.gov/ | "The Honorable … serves as the NNth Treasurer of Arizona." |
@@ -44,11 +43,8 @@ Each rule reads the officeholder its page shows as serving. No rule reads electi
 | CA | Treasurer | https://www.treasurer.ca.gov/bio | "… is California's NNth State Treasurer." |
 | CA | Insurance Commissioner | https://www.insurance.ca.gov/0500-about-us/ | "Information about Commissioner …" |
 | CA | Controller | https://www.boe.ca.gov/ | the Board of Equalization member card labelled "Controller" (the Controller is an ex officio BOE member). The Controller's own site, sco.ca.gov, answered `USER_AGENT` with HTTP 403 and a Cloudflare challenge. |
-| CA | Board of Equalization (4 district members) | https://www.boe.ca.gov/ | member cards "…<br>First/Second/Third/Fourth District" |
 | CA | Superintendent of Public Instruction | https://www.cde.ca.gov/ | **not collected**: cde.ca.gov answered with a Radware bot-manager captcha page |
 | CO | Lt. Governor, Attorney General, Secretary of State, Treasurer | https://www.colorado.gov/ | the portal's footer "Government" block (`#block-footergovernment`), which must appear once: links "Lt. Governor …", "Attorney General …", "Secretary of State …", "State Treasurer …" |
-| CO | State Board of Education (9: one per congressional district plus one at large) | https://ed.cde.state.co.us/cdeboard | the "Congressional Districts" list: "NNth Congressional District, City: Name" or "At-Large, City: Name" |
-| CO | University of Colorado Regents (9: one per congressional district plus one at large) | https://regents.cu.edu/meet-the-regents | member cards: name field + job title "…Congressional District / At Large, Party, Current Term YYYY-YY" |
 | CT | Lieutenant Governor | https://portal.ct.gov/lt-governor | `<title>` "Lieutenant Governor … \| Office of the Lieutenant Governor \| CT.GOV" |
 | CT | Secretary of the State | https://portal.ct.gov/sots | `h2.cg-c-section-title` "Secretary of the State …" |
 | CT | Attorney General | https://portal.ct.gov/ag/about-the-ag/william-tong-biography-page | h1 "Attorney General …". This page is the target of the AG homepage's "About the Attorney General" link, and its URL names the officeholder: when the office changes hands, the fetch fails and the rule needs review. |
@@ -67,7 +63,7 @@ Offices filled by appointment are left out entirely. The list pages used here ar
 
 - **Alaska**: Article III ([ltgov.alaska.gov](https://ltgov.alaska.gov/information/alaskas-constitution/)). The lieutenant governor is elected jointly with the governor. Heads of principal departments, including the attorney general's department, are appointed by the governor. The only declared office is the lieutenant governor.
 - **Arizona**: Article 5 §1 (governor, lieutenant governor, secretary of state, attorney general, treasurer, superintendent of public instruction) and Article 15 (Corporation Commission, elected). The mine inspector is declared under Article 19. That text was not retrieved at the URL tried, and the inspector's own site is blocked, so this declaration needs confirming from an official source.
-- **California**: the Secretary of State's California Roster, "Constitutional Officers" ([PDF](https://admin.cdn.sos.ca.gov/ca-roster/2022/constitutional-officers.pdf)), lists eight elected statewide constitutional officers: Governor, Lieutenant Governor, Secretary of State, Attorney General, Controller, Treasurer, Insurance Commissioner and Superintendent of Public Instruction. The Board of Equalization's homepage shows its four elected district members.
+- **California**: the Secretary of State's California Roster, "Constitutional Officers" ([PDF](https://admin.cdn.sos.ca.gov/ca-roster/2022/constitutional-officers.pdf)), lists eight elected statewide constitutional officers: Governor, Lieutenant Governor, Secretary of State, Attorney General, Controller, Treasurer, Insurance Commissioner and Superintendent of Public Instruction. The Board of Equalization's four members are elected by district.
 - **Florida**: Article IV §4–5 ([flsenate.gov](https://www.flsenate.gov/Laws/Constitution)). The cabinet (attorney general, chief financial officer, commissioner of agriculture) and the lieutenant governor are elected. The secretary of state is appointed and is not declared.
 - **Hawaii**: Article V §2 ([lrb.hawaii.gov](https://lrb.hawaii.gov/constitution/)) for the lieutenant governor, and Article XII §5 for the Office of Hawaiian Affairs trustees (see below).
 - **Colorado**: the State Board of Education page says the board is "composed of nine elected officials representing Colorado's congressional districts". The Regents page says one regent is elected from each congressional district and one from the state at large.
@@ -99,3 +95,7 @@ These offices are listed in `BLOCKED`, recorded as `not-collected` with the bloc
 ```
 
 The tests use fixtures to cover: title extraction across whitespace and entities, title-to-office mapping with the governor skipped, an unknown title, a missing office, a wrong member count, a missing marker, conflicting names, placeholder text, a duplicated page block, district normalization, suffix removal, two holders for one seat, and the module's declarations and discovery by `build.py`. Each rule was also checked live on November 10, 2026 with `build.fetch(key, publisher, url, user_agent=USER_AGENT)` followed by `parse`. All 33 sources parsed, giving 89 records.
+
+## Scope: district-elected boards
+
+Boards whose members are elected by district are outside statewide scope (see `tools/statewide.py`): the Alabama and Colorado State Boards of Education, the California Board of Equalization, and the University of Colorado Regents. A district seat belongs to that district's residents, and the districts' boundaries are not published here.
