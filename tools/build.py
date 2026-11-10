@@ -294,8 +294,28 @@ def region_modules():
     # and helpers rather than importing a second copy of the program.
     if __name__ == '__main__':
         sys.modules['build'] = sys.modules[__name__]
+    # Statewide-office and high-court modules are discovered by filename (tools/statewide.py documents them).
+    extra = sorted(p.stem for pattern in ('statewide_*.py', 'courts_*.py') for p in (Path(__file__).parent/'regions').glob(pattern))
     return [importlib.import_module('regions.' + name)
-            for name in ['region_a','region_b','region_c','region_d','executive']]
+            for name in ['region_a','region_b','region_c','region_d','executive', *extra]]
+
+
+def declared_statewide():
+    """(statewide offices, courts) declared by the regional modules, by state."""
+    statewide, courts = {}, {}
+    for module in region_modules():
+        for name, target in (('STATEWIDE', statewide), ('COURTS', courts)):
+            for st, item in getattr(module, name, {}).items():
+                assert st not in target, 'Two modules declare '+name+' for '+st
+                target[st] = item
+    import statewide as vocabulary
+    vocabulary.check_declarations(statewide, courts, STATE_CODES)
+    return statewide, courts
+
+
+def is_court(row, courts=None):
+    courts = declared_statewide()[1] if courts is None else courts
+    return row['level'] == 'state' and row['body'] in {k for k in courts.get(row['state'], {}) if k != 'blockers'}
 
 
 def source_allowed(source):
@@ -337,9 +357,27 @@ def executive_coverage(st, declared, governors):
                 blockers=declared['blockers'])
 
 
-def state_executive(st, declared, governors, legacy):
-    """Coverage value for a state's executive offices; releases without executive rows keep their published value."""
-    return 'not-collected' if legacy else executive_coverage(st, declared, governors)
+def state_executive(st, declared, governors, legacy, statewide=None, rows=()):
+    """Coverage value for a state's executive offices; releases without executive rows keep their published value.
+
+    statewide is None for a release with no statewide-office rows (published before tools/regions/statewide_*.py),
+    which keeps the governor-only format. Otherwise it is the state's STATEWIDE declaration (possibly {}).
+    """
+    if legacy: return 'not-collected'
+    base = executive_coverage(st, declared, governors)
+    if statewide is None: return base
+    import statewide as vocabulary
+    offices = vocabulary.executive_offices(st, statewide, [r for r in rows if r['office'] != 'Governor'])
+    base['offices'].update(offices)
+    base['notCollected'] = [k for k, v in offices.items() if v['status'] == 'not-collected'] + ([] if statewide else ['otherStatewideOffices'])
+    base['blockers'] = base['blockers'] + statewide.get('blockers', [])
+    return base
+
+
+def court_coverage_for(st, courts, rows):
+    import statewide as vocabulary
+    if st not in courts: return 'not-collected'
+    return vocabulary.court_coverage(st, courts[st], [r for r in rows if r['state'] == st and is_court(r, courts)])
 
 
 def legislative_coverage(rows):
@@ -354,7 +392,11 @@ def legislative_coverage(rows):
             assert st in declared and all(declared[st].get(ch)=='not-collected' for ch in updates if ch!='blockers'), 'Coverage override must only resolve a previously uncollected chamber'
             declared[st] = {**declared[st], **updates}
     executive = next(m for m in region_modules() if m.__name__.endswith('.executive'))
-    observed = collections.Counter((r['state'],legislative_chamber(r)) for r in rows if r['level']=='state' and not is_executive(r))
+    statewide, courts = declared_statewide()
+    observed = collections.Counter((r['state'],legislative_chamber(r)) for r in rows if r['level']=='state' and not is_executive(r) and not is_court(r, courts))
+    # Releases built before the statewide-office and court modules keep their published coverage format.
+    legacy_statewide = not any(is_executive(r) and r['office'] != 'Governor' for r in rows)
+    legacy_courts = not any(is_court(r, courts) for r in rows)
     governors = collections.Counter(r['state'] for r in rows if is_executive(r) and r['office']=='Governor')
     # A release built before tools/regions/executive.py existed has no executive rows; describe it as it was published.
     # A new build cannot reach this state: every governor source must parse to exactly one row or the build stops.
@@ -374,7 +416,11 @@ def legislative_coverage(rows):
         result.append(dict(state=st, federal='collected',
             stateLegislature='collected' if collected==len(expected) else 'partial' if collected else 'not-collected',
             legislativeChambers=chambers, blockers=item.get('blockers', []),
-            stateExecutive=state_executive(st, executive.EXECUTIVE[st], governors[st], legacy), countyOfficials='not-collected'))
+            stateExecutive=state_executive(st, executive.EXECUTIVE[st], governors[st], legacy,
+                                           None if legacy_statewide else statewide.get(st, {}),
+                                           [r for r in rows if r['state'] == st and is_executive(r)]),
+            **({} if legacy_courts else dict(stateCourts=court_coverage_for(st, courts, rows))),
+            countyOfficials='not-collected'))
     return result
 
 
