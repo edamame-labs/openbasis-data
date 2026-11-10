@@ -81,8 +81,9 @@ KS = (r'<a class="elementor-cta" href="(?P<website>https://[^"]+)" target="_blan
       r'<div class="elementor-cta__title elementor-cta__content-item elementor-content-item"> ' + N +
       r' </div> <div class="elementor-cta__description elementor-cta__content-item elementor-content-item"> {} </div>')
 # Mass.gov organization page header: leadership link to the person's page, then the title it carries.
+# Matches both the HTTP body and the browser DOM capture of the same page (the DOM drops the space before '>').
 MA = (r'<li class="ma__page-header__link"> <span class="ma__decorative-link ma__decorative-link--inverse"> '
-      r'<a href="https://www\.mass\.gov/person/[a-z0-9-]+" class="js-clickable-link" > <span> ' + N +
+      r'<a href="https://www\.mass\.gov/person/[a-z0-9-]+" class="js-clickable-link" ?> <span> ' + N +
       r'</span> <svg [^>]*><use [^>]*></use></svg></a> </span> <div class="ma__page-header-legacy__description"> {} </div>')
 # Minnesota LRL officer lists: the first row of the state table (the only one with a <colgroup>) is the most recent holder.
 MN_LG = (r'</colgroup> <thead> <tr> <th>ASSUMED OFFICE</th> <th>NAME</th> <th>PARTY</th> <th>RESIDENCE</th> <th>OCCUPATION</th> </tr> </thead> '
