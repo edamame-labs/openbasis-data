@@ -108,7 +108,7 @@ New legislative terms begin on dates set by each state's constitution or statute
 | Alabama | Day after the election, November 4, 2026 (Ala. Const. art. IV, s. 46) | The directory still lists the members elected in 2022. Withheld (`TERM_BEGUN`); both chambers not collected. |
 | Indiana | Day after the election, November 4, 2026 (Ind. Const. art. 4, s. 3) | The directory still reads `Legislators for 2026 Session`; no 2027 directory exists. Withheld; both chambers not collected. |
 | Hawaii | Day of the general election, November 3, 2026 ([Haw. Const. art. III, s. 4](https://lrb.hawaii.gov/constitution/)) | Both directories still show the 2026 regular session and offer no later year. Withheld; both chambers not collected. |
-| Arkansas | January 1, 2027 (Ark. Const. art. 8, s. 6; members continue until successors qualify, art. 19, s. 5) | Current directory still lists sitting members; collected unchanged. |
+| Arkansas | January 1, 2027 (Ark. Const. art. 8, s. 6; members continue until successors qualify, art. 19, s. 5) | Directory lists sitting members plus rows titled "Representative-Elect" / "Senator-Elect" (seniority N/A). Sitting members collected; member-elect rows counted in `excludedEntries`, never seated. |
 | Kansas | Second Monday of January 2027 (K.S.A. 46-156) | 2025-2026 biennium profiles; collected unchanged. |
 
 Withheld rosters are not fetched. A previous roster is never retained to cover a chamber whose new term has begun; the chamber is reported `not-collected` with the constitutional basis and source URL in `coverage.json` blockers until the publisher lists the new membership.

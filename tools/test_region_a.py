@@ -143,6 +143,18 @@ class RegionATest(unittest.TestCase):
   self.assertEqual([s['id'] for s in rows[0]['sources']],['ar-roster','ar-house-members'])
   self.assertNotIn('party',rows[1]);self.assertNotIn('party',rows[2])
 
+ def test_arkansas_members_elect_are_excluded_not_seated(self):
+  def r(title,name,ch,sen,d):
+   cell=lambda i,t:'<div aria-colindex="'+i+'" role="gridcell">'+t+'</div>'
+   return '<div class="row tableRow" data-fixed="true" role="row">'+cell('1',title+' <a href="/Legislators/Detail?member='+name.split()[-1]+'&amp;ddBienniumSession=2025%2F2026F">'+name+'</a>')+cell('2','<span>Chamber:</span> '+ch)+cell('3','<span>Seniority:</span> '+sen)+cell('4','<span>District:</span> '+d)+'</div>'
+  body=''.join(r('Representative','Rep '+str(i)+' Sitting','House',str(i),str(i)) for i in range(1,101))+''.join(r('Senator','Sen '+str(i)+' Sitting','Senate',str(i),str(i)) for i in range(1,36))
+  html='95th General Assembly - Fiscal Session, 2026'+body+r('Representative-Elect','New Person','House','N/A','10')+r('Senator-Elect','Other New','Senate','N/A','0')
+  rows=self.parse('ar-roster',html)
+  self.assertEqual(len(rows),135)
+  self.assertNotIn('New Person',[x['name'] for x in rows])
+  self.assertEqual([(e['sourceLabel'],e['count']) for e in rows[0]['sources'][0]['excludedEntries']],[('Representative-Elect',1),('Senator-Elect',1)])
+  with self.assertRaises(AssertionError):self.parse('ar-roster','95th General Assembly - Fiscal Session, 2026'+body+r('Representative-Elect','New Person','House','3','10'))
+
  def test_kansas_profile_contact_skips_fallback_photo_and_obfuscated_email(self):
   html='<img class="leg-hero-photo" src="/static/li_pics/fallback.1.jpg"><h2 class="leg-hero-title">Ann Smith</h2><span class="leg-chamber-badge">House — District 1, County County</span><p class="leg-hero-party">Republican</p><div class="leg-card"><h3 class="leg-card-heading">Contact &amp; Info</h3><div class="detail-row"><span class="label">Phone</span><span class="value">785 296-0000</span></div><div class="detail-row"><span class="label">Email</span><span class="value"><a href="/cdn-cgi/l/email-protection#00">[email protected]</a></span></div></div>'
   with patch.object(a,'finish',lambda rows,*args:rows):

@@ -241,16 +241,24 @@ def parse(key,raw,source):
  if st=='AR':
   assert '95th General Assembly' in tree.text() and '2026' in tree.text(),'Session changed'
   source['effectivePeriod']='95th General Assembly, 2026 fiscal session'
+  elected={'Representative':0,'Senator':0}
   for tr in tree.find(lambda n:n.attrs.get('role')=='row' and n.attrs.get('data-fixed')=='true'):
    c={n.attrs['aria-colindex']:n for n in tr.children if isinstance(n,Node) and n.attrs.get('aria-colindex')}
    assert set(c)=={'1','2','3','4'}
    if c['1'].attrs.get('role')=='columnheader':continue
    if re.search(r'\((?:Resigned|Deceased)\)',c['1'].text(),re.I):continue
+   elect=re.match(r'\s*(Representative|Senator)-Elect\b',c['1'].text())
+   if elect:
+    # Ark. Const. art. 8, s. 6 / art. 19, s. 5: terms begin January 1, 2027; members hold over until then.
+    assert c['3'].text().replace('Seniority:','').strip()=='N/A','Member-elect row reports seniority'
+    elected[elect.group(1)]+=1;continue
    a=c['1'].find(lambda n:n.tag=='a' and '/Legislators/Detail?' in n.attrs.get('href',''))
    assert len(a)==1
    ch={'House':'lower','Senate':'upper'}[c['2'].text().replace('Chamber:','').strip()]
    mail=c['1'].find(lambda n:n.tag=='a' and n.attrs.get('href','').startswith('mailto:'))
    rows.append(row(source,st,ch,a[0].text(),c['4'].text().replace('District:','').strip(),website=a[0].attrs['href'],pid=query(a[0].attrs['href'],'member'),**contact(source['url'],email=mail[0].attrs['href'] if len(mail)==1 else None)))
+  excluded=[{'count':n,'sourceLabel':t+'-Elect','termStart':'2027-01-01','reason':'Member-elect; Arkansas legislative terms begin January 1 following the election'} for t,n in elected.items() if n]
+  if excluded:source['excludedEntries']=excluded
   return finish(rows,125,135)
  if st=='CO':
   assert '2026 Regular Session' in tree.text(),'Session changed'
