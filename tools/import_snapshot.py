@@ -7,7 +7,7 @@ from pathlib import Path
 import build
 
 
-def import_snapshot(path, url, observed_at):
+def import_snapshot(path, url, observed_at, final_url=None):
     assert build.source_allowed({'url':url}), 'Only allowlisted official URLs can be imported'
     observed=dt.datetime.fromisoformat(observed_at.replace('Z','+00:00'))
     assert observed.tzinfo is not None
@@ -18,7 +18,7 @@ def import_snapshot(path, url, observed_at):
     cache.mkdir(exist_ok=True)
     filename=build.digest(raw)+'.raw'
     (cache/filename).write_bytes(raw)
-    evidence=dict(url=url,finalUrl=url,retrievedAt=observed.isoformat(),sha256=build.digest(raw),file=filename,representation='browser-dom',acquisition='Live official page serialized from document.documentElement.outerHTML; operator-supplied observation time')
+    evidence=dict(url=url,finalUrl=final_url or url,retrievedAt=observed.isoformat(),sha256=build.digest(raw),file=filename,representation='browser-dom',acquisition='Live official page serialized from document.documentElement.outerHTML; operator-supplied observation time')
     (cache/(build.digest(url.encode())+'.json')).write_text(json.dumps(evidence,indent=2)+'\n')
     print('Imported browser DOM evidence:',url,len(raw),'bytes')
 
@@ -28,5 +28,6 @@ if __name__=='__main__':
     p.add_argument('--input',required=True)
     p.add_argument('--url',required=True)
     p.add_argument('--observed-at',required=True)
+    p.add_argument('--final-url',help='Address the browser showed after redirects, if it differs from --url')
     args=p.parse_args()
-    import_snapshot(args.input,args.url,args.observed_at)
+    import_snapshot(args.input,args.url,args.observed_at,args.final_url)

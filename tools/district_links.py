@@ -46,6 +46,8 @@ def target_layer(row):
         return {'U.S. House': 'cd', 'U.S. Senate': 'states'}.get(row.get('body'))
     if row.get('level') != 'state':
         return None
+    if row.get('office') == 'Governor':
+        return 'states'
     if row['state'] == 'NE':
         return 'sldu'
     body = row.get('body', '').casefold()
@@ -147,7 +149,7 @@ def link(officials, collections):
                 p = feature['properties']
                 entry.update(districtKey=('state' if layer=='states' else layer) + ':' + str(p.get('GEOID') or p['boundaryId']), GEOID=p.get('GEOID'),boundaryId=p.get('GEOID') or p['boundaryId'],
                              geometrySourceIds=refs, stateCrosswalkSourceIds=state_refs[st],
-                             matchingRule=('statewide-senate-state-fips' if layer == 'states' else
+                             matchingRule=(('statewide-governor-state-fips' if row.get('office') == 'Governor' else 'statewide-senate-state-fips') if layer == 'states' else
                                            '119th-congress-numeric-code' if layer == 'cd' else
                                            'state-chamber-canonical-basename'),
                              geometryDistrictLabel=p.get('BASENAME', p.get('NAME')))
