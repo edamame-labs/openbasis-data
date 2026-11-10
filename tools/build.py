@@ -309,6 +309,8 @@ def source_allowed(source):
     if url in {url for _,url in SOURCES.values()}: return True
     import committees
     if url == committees.HOUSE[1] or committees.allowed(url): return True
+    import national
+    if url in {url for _,url in national.SOURCES.values()}: return True
     for module in region_modules():
         if url in {url for _,url in module.SOURCES.values()}: return True
         if urlparse(url).hostname in getattr(module, 'SOURCE_HOSTS', set()): return True
@@ -412,6 +414,16 @@ def validate(folder, fresh=False):
     coverage = json.loads((folder/'coverage.json').read_text())
     assert coverage['counts'] == dict(collections.Counter(r['level'] for r in rows))
     assert coverage['states'] == legislative_coverage(rows), 'Coverage does not describe the current rows and adapters'
+    import national
+    if (folder/'national.json').exists():
+        national_rows = json.loads((folder/'national.json').read_text())['officials']
+        national.validate(national_rows, source_allowed)
+        for r in national_rows:
+            for src in r['sources']:
+                assert src == source_index[src['id']]
+        assert coverage['national'] == national.coverage(national_rows), 'National coverage disagrees with national.json'
+    else:
+        assert 'national' not in coverage, 'National coverage without national.json'
     with (folder/'officials.csv').open(newline='') as f:
         exported = list(csv.DictReader(f))
     assert [r['id'] for r in exported] == [r['id'] for r in rows]
@@ -460,6 +472,10 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
                     raw, source = acquire(key, publisher, url, offline)
                     rows.extend(module.parse(key, raw, source))
                     sources.append(source)
+        import national
+        national_rows,national_sources=national.collect(acquire,offline)
+        for row in national_rows: row['name']=person_name(row['name'])
+        sources.extend(national_sources)
         for row in rows:
             row['name']=person_name(row['name'])
             if row.get('party'):
@@ -504,6 +520,8 @@ def build(offline=False, browser_snapshots=False, require_fresh=False):
             writer.writeheader()
             writer.writerows({**r, **{k:json.dumps(r[k],ensure_ascii=False) for k in JSON_COLUMNS if r.get(k)}} for r in rows)
         coverage = dict(schemaVersion=2,generatedAt=now,policy='government-primary-only; federal/state/county',counts=dict(collections.Counter(r['level'] for r in rows)),rosters=[dict(source=s['id'],records=sum(any(ref['id']==s['id'] for ref in r['sources']) for r in rows)) for s in sources if any(any(ref['id']==s['id'] for ref in r['sources']) for r in rows)],states=legislative_coverage(rows),geography=dict(states=50,counties=len(geo['features']),vintage='2026-01-01'),limitations=['Official publication is evidence of what the publisher reports; retrieval does not establish an independent factual check.','Roster omission is not classified as a vacancy.','Contact details (email, phone, photo) appear only where an official roster publishes them; mailboxes or numbers shared across members are omitted.','No city/town records, secondary-source records, population estimates or population-weighted overlaps.','County and county-equivalent geography does not establish county governing structures or officeholder districts.'])
+        (stage/'national.json').write_text(json.dumps(dict(schemaVersion=2,generatedAt=now,officials=national_rows),ensure_ascii=False,indent=2)+'\n')
+        coverage['national'] = national.coverage(national_rows)
         coverage['geography'].update(analyticalDistricts=analytical_report['analyticalCounts'],areaIntersectionPairs=analytical_report['intersectionPairs'],officialGeometryLinks=analytical_report['linkage'])
         (stage/'coverage.json').write_text(json.dumps(coverage,indent=2)+'\n')
         (stage/'sources.json').write_text(json.dumps(sources,indent=2)+'\n')

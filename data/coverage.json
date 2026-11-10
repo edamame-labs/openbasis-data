@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T03:43:26.753650+00:00",
+  "generatedAt": "2026-11-10T05:56:04.209653+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
     "state": 6794,
@@ -3794,5 +3794,15 @@
     "Contact details (email, phone, photo) appear only where an official roster publishes them; mailboxes or numbers shared across members are omitted.",
     "No city/town records, secondary-source records, population estimates or population-weighted overlaps.",
     "County and county-equivalent geography does not establish county governing structures or officeholder districts."
-  ]
+  ],
+  "national": {
+    "president": {
+      "status": "collected",
+      "records": 1
+    },
+    "vicePresident": {
+      "status": "collected",
+      "records": 1
+    }
+  }
 }
