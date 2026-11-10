@@ -22,7 +22,9 @@ ORDINAL = r'(?P<district>\d+(?:st|nd|rd|th) Congressional District|At[- ]Large)'
 WORDS = dict(First='1', Second='2', Third='3', Fourth='4')
 
 # key: dict(state, publisher, url, read=[(pattern, office key | {source title: office key or None}), ...],
-#           expect={office key: number of holders}, within=optional pattern whose 'block' group is searched).
+#           expect={office key: number of holders}, within=optional pattern whose 'block' group is searched,
+#           shared=seat labels several holders may hold at once, such as at-large seats).
+# A 'seat' group is recorded verbatim as the row's district; a 'district' group is normalized by district().
 # A title mapped to None (the governor) is read but not published by this module.
 RULES = {
  'sw-al-ltgov': dict(state='AL', publisher='Office of the Lieutenant Governor of Alabama', url='https://ltgov.alabama.gov/',
@@ -95,6 +97,8 @@ RULES = {
      read=[(r'<li><a href="/ag-bio">Attorney General '+NAME+r'</a></li>', 'attorneyGeneral')]),
  'sw-fl-agriculture': dict(state='FL', publisher='Florida Department of Agriculture and Consumer Services', url='https://www.fdacs.gov/',
      read=[(r'<a href="https://www\.fdacs\.gov/About-Us/Meet-Commissioner-[A-Za-z-]+" [^<>]*>Learn More About Commissioner '+NAME+r'</a>', 'agricultureCommissioner')]),
+ 'sw-fl-cfo': dict(state='FL', publisher='Florida Department of Financial Services', url='https://www.myfloridacfo.com/about/meet-the-cfo',
+     read=[(r'<h2 class="oh3"><strong>Meet your Chief Financial Officer '+NAME+r'</strong> ?</h2>', 'chiefFinancialOfficer')]),
  'sw-ga': dict(state='GA', publisher='State of Georgia', url='https://georgia.gov/elected-officials',
      read=[(r'<h2 class="global-teaser__title"> '+NAME+r' </h2> <p class="global-teaser__description"> (?P<title>[^<>]+?) </p>',
             {'Governor': None, 'Lieutenant Governor': 'lieutenantGovernor', 'Attorney General': 'attorneyGeneral',
@@ -105,6 +109,13 @@ RULES = {
      expect={'publicServiceCommissioner': 5}),
  'sw-hi-ltgov': dict(state='HI', publisher='Office of the Lieutenant Governor of Hawaii', url='https://ltgov.hawaii.gov/',
      read=[(r'<title>\s*Lieutenant Governor '+NAME+r'\s*</title>', 'lieutenantGovernor')]),
+ # The page states that all nine trustees "are elected in public elections open to all State of Hawai'i voters":
+ # four hold at-large seats and five represent island districts.
+ # Each trustee card gives the name, an optional board officer line and the seat label.
+ 'sw-hi-oha': dict(state='HI', publisher='Office of Hawaiian Affairs', url='https://www.oha.org/about/leadership/board-of-trustees/',
+     read=[(r'<p class="center"><strong><a href=https://www\.oha\.org/\?post_type=trustee&p=\d+>'+NAME+r'</a></strong><br />(?:(?:Chair|Vice-Chair)<br />)?'
+            r'(?P<seat>At-Large|Hawaiʻi Island|Kauaʻi & Niʻihau|Oʻahu|Molokaʻi & Lānaʻi|Maui) Trustee</p>', 'officeOfHawaiianAffairsTrustee')],
+     expect={'officeOfHawaiianAffairsTrustee': 9}, shared={'At-Large'}),
 }
 
 # Elected offices whose official site refused retrieval with USER_AGENT. No other publisher substitutes for them.
@@ -158,6 +169,7 @@ def clean_name(text):
 
 
 def district(match):
+    if match.groupdict().get('seat'): return match.group('seat')
     value = match.groupdict().get('district')
     if not value: return None
     if value in WORDS: return WORDS[value]
@@ -194,7 +206,7 @@ def holders(key, raw):
         names = found[office]
         assert len(names) == n, (key, office, f'Expected {n} distinct holder(s)', names)
         assert len({name for name, _ in names}) == n, (key, office, 'Repeated holder name', names)
-        seats = [d for _, d in names if d]
+        seats = [d for _, d in names if d and d not in rule.get('shared', ())]
         assert len(seats) == len(set(seats)), (key, office, 'Two holders for one seat', names)
     return found
 

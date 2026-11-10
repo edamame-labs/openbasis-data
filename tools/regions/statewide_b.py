@@ -5,7 +5,8 @@ elected officer where one exists (Idaho, Kansas), otherwise each office's own
 website, or the Minnesota Legislative Reference Library's officer lists where the
 office's site refuses retrieval. Each rule names one element that identifies the
 officeholder, with a pattern that must match at least once and yield exactly one
-distinct name. A missing or ambiguous match stops the build. Offices whose
+distinct name (a multi-member board: exactly its HOLDERS count of distinct
+names). A missing or ambiguous match stops the build. Offices whose
 official site refused plain HTTP retrieval with USER_AGENT are recorded as
 not-collected with a blocker and are never filled from another publisher.
 
@@ -62,6 +63,8 @@ SOURCES = {
     'sw-ma-ag': ('Commonwealth of Massachusetts', 'https://www.mass.gov/orgs/office-of-the-attorney-general'),
     'sw-ma-treasurer': ('Commonwealth of Massachusetts', 'https://www.mass.gov/orgs/office-of-the-treasurer-and-receiver-general'),
     'sw-ma-auditor': ('Commonwealth of Massachusetts', 'https://www.mass.gov/orgs/office-of-the-state-auditor'),
+    'sw-mi-msu': ('Michigan State University Board of Trustees', 'https://trustees.msu.edu/about/meet-the-trustees'),
+    'sw-mi-wsu': ('Wayne State University Board of Governors', 'https://bog.wayne.edu/members'),
     'sw-mn-ltgov': ('Minnesota Legislative Reference Library', 'https://www.lrl.mn.gov/mngov/ltgov'),
     'sw-mn-sos': ('Minnesota Legislative Reference Library', 'https://www.lrl.mn.gov/mngov/secstate'),
     'sw-mn-ag': ('Office of the Minnesota Attorney General', 'https://www.ag.state.mn.us/'),
@@ -143,6 +146,11 @@ RULES = [
     ('MA', 'treasurer', 'sw-ma-treasurer', r'<h1 class="ma__page-header__title"> Office of State Treasurer and Receiver General ' + N + r' </h1>'),
     ('MA', 'auditor', 'sw-ma-auditor', MA.format('State Auditor')),
 
+    # Both boards are elected statewide (Mich. Const. art. VIII, sec. 5). The member pages list the eight elected
+    # members only; the university president, an ex officio member, has no card on either page.
+    ('MI', 'universityTrustee', 'sw-mi-msu', r'<h2 class="line">' + N + r'</h2><div class="mixed-content-text"><div class="ck-content"><p[^<>]*>(?:<span[^<>]*>)*(?:Chair \| |Vice Chair \| )?Term ends [A-Z][a-z]+\.? \d{1,2}, \d{4}</'),
+    ('MI', 'universityGovernor', 'sw-mi-wsu', r'<div id="promo-\d+" class="my-1 font-bold text-lg [^"]*"> ' + N + r'(?:, (?:Chair|Vice Chair))? </div>'),
+
     ('MN', 'lieutenantGovernor', 'sw-mn-ltgov', MN_LG),
     ('MN', 'secretaryOfState', 'sw-mn-sos', MN_SOS),
     ('MN', 'attorneyGeneral', 'sw-mn-ag', r'alt="Portrait of Attorney General ' + N + r'"'),
@@ -161,7 +169,10 @@ BLOCKED = {
     ('MI', 'stateBoardOfEducationMember'): 'https://www.michigan.gov/mde returned Access Denied (HTTP 403)',
     ('MI', 'universityRegent'): 'https://regents.umich.edu/regents/ returned a bot challenge (HTTP 403)',
 }
+# Multi-member boards: (state, office key) -> number of elected members the source must list.
+HOLDERS = {('MI', 'universityTrustee'): 8, ('MI', 'universityGovernor'): 8}
 assert len({(st, office) for st, office, _, _ in RULES}) == len(RULES)
+assert set(HOLDERS) <= {(st, office) for st, office, _, _ in RULES}
 assert not {(st, office) for st, office, _, _ in RULES} & set(BLOCKED)
 assert {key for _, _, key, _ in RULES} == set(SOURCES)
 
@@ -191,9 +202,9 @@ def lrl_date(text):
     raise AssertionError(('Unparseable assumed-office date', text))
 
 
-def extract(st, office, pattern, page, retrieved):
-    """The single officeholder (name, details) that the rule's pattern yields on the page."""
-    found = set()
+def extract(st, office, pattern, page, retrieved, holders=1):
+    """The officeholders [(name, party, website), ...] that the rule's pattern yields on the page: exactly `holders`."""
+    found = []  # distinct (name, party, website) in page order
     for m in re.finditer(pattern, page):
         g = m.groupdict()
         name = f"{g['first']} {g['last']}" if g.get('last') else g['name']
@@ -202,11 +213,13 @@ def extract(st, office, pattern, page, retrieved):
             # A list row dated after retrieval would be an officeholder-elect, not the incumbent.
             assert lrl_date(g['date']) <= retrieved, (st, office, 'Assumed-office date is after retrieval', g['date'])
         party = g.get('party')
-        found.add((name, PARTIES.get(party, party), g.get('website')))
-    assert len(found) == 1, (st, office, 'Expected exactly one officeholder', sorted(found))
-    name, party, website = found.pop()
-    assert 2 <= len(name.split()) <= 5 and not NOT_A_NAME.search(name), (st, office, name)
-    return name, party, website
+        item = (name, PARTIES.get(party, party), g.get('website'))
+        if item not in found: found.append(item)
+    assert len(found) == holders, (st, office, f'Expected exactly {holders} officeholder(s)', sorted(found))
+    assert len({name for name, _, _ in found}) == holders, (st, office, 'Conflicting details for one officeholder', sorted(found))
+    for name, _, _ in found:
+        assert 2 <= len(name.split()) <= 5 and not NOT_A_NAME.search(name), (st, office, name)
+    return found
 
 
 def parse(key, raw, source):
@@ -216,10 +229,12 @@ def parse(key, raw, source):
     rows = []
     for st, office, src, pattern in RULES:
         if src != key: continue
-        name, party, website = extract(st, office, pattern, page, retrieved)
-        row = record(source, f'{st.lower()}-{office}', name, st, 'state', BODY.format(NAMES[st]),
-                     office=vocabulary.OFFICES[office][0], party=party, website=website or source['url'])
-        rows.append(row)
+        holders = HOLDERS.get((st, office), 1)
+        found = extract(st, office, pattern, page, retrieved, holders)
+        for i, (name, party, website) in enumerate(found, 1):
+            id = f'{st.lower()}-{office}' + (f'-{i}' if office in vocabulary.MULTI else '')
+            rows.append(record(source, id, name, st, 'state', BODY.format(NAMES[st]),
+                               office=vocabulary.OFFICES[office][0], party=party, website=website or source['url']))
     assert rows, ('No statewide rules for source', key)
     return rows
 

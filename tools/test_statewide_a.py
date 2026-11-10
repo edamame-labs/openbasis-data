@@ -26,6 +26,16 @@ def ga_page(items=GA_OFFICES):
     return ''.join(ga_item(n, t) for n, t in items).encode()
 
 
+OHA = [('Kaiali’i Kahele', 'Chair<br />Hawaiʻi Island'), ('Keoni Souza', 'Vice-Chair<br />At-Large'), ('Dan Ahuna', 'Kauaʻi &amp; Niʻihau'),
+       ('Kalei Akaka', 'Oʻahu'), ('Keli‘i Akina', 'At-Large'), ('Luana Alapa', 'Molokaʻi &amp; Lānaʻi'), ('Brickwood Galuteria', 'At-Large'),
+       ('Carmen Hulu Lindsey', 'Maui'), ('John D. Waiheʻe IV', 'At-Large')]
+
+
+def oha_page(items=OHA):
+    card = '<div class="col-3"> <img src="x.jpg" /> <p class="center"><strong><a href=https://www.oha.org/?post_type=trustee&p={0}>{1}</a></strong><br />{2} Trustee</p> </div>'
+    return ''.join(card.format(17000 + i, n, seat) for i, (n, seat) in enumerate(items)).encode()
+
+
 class StatewideATests(unittest.TestCase):
     def test_single_office_title_rule(self):
         page = b'<html><head><title>\n  Lieutenant Governor Sylvia Luke\n</title></head></html>'
@@ -95,6 +105,37 @@ class StatewideATests(unittest.TestCase):
         self.assertEqual([(r['id'], r['name']) for r in rows], [('ca-controller', 'Malia M. Cohen')])
         page = b'<div id="header-office">\n California Secretary of State\n</div>\n<div id="header-name">\n Shirley N. Weber, Ph.D.\n</div>'
         self.assertEqual(region.parse('sw-ca-sos', page, source('sw-ca-sos'))[0]['name'], 'Shirley N. Weber')
+
+    def test_florida_cfo_heading(self):
+        page = '<h2 class="oh3"><strong>Meet your Chief Financial Officer Blaise Ingoglia</strong> </h2>'.encode()
+        row, = region.parse('sw-fl-cfo', page, source('sw-fl-cfo'))
+        self.assertEqual((row['id'], row['name'], row['office']), ('fl-chiefFinancialOfficer', 'Blaise Ingoglia', 'Chief Financial Officer'))
+        with self.assertRaises(AssertionError):  # the seal alt text alone is not read
+            region.parse('sw-fl-cfo', b'<img alt="Official Seal of CFO Blaise Ingoglia" />', source('sw-fl-cfo'))
+        with self.assertRaises(AssertionError):
+            region.parse('sw-fl-cfo', page + b'<h2 class="oh3"><strong>Meet your Chief Financial Officer Jane Roe</strong></h2>', source('sw-fl-cfo'))
+
+    def test_oha_trustees_keep_seat_labels(self):
+        rows = region.parse('sw-hi-oha', oha_page(), source('sw-hi-oha'))
+        self.assertEqual([(r['id'], r['name'], r['district']) for r in rows][:3],
+                         [('hi-officeOfHawaiianAffairsTrustee-1', 'Kaiali’i Kahele', 'Hawaiʻi Island'),
+                          ('hi-officeOfHawaiianAffairsTrustee-2', 'Keoni Souza', 'At-Large'),
+                          ('hi-officeOfHawaiianAffairsTrustee-3', 'Dan Ahuna', 'Kauaʻi & Niʻihau')])
+        self.assertEqual(sum(r['district'] == 'At-Large' for r in rows), 4)
+        self.assertEqual({r['office'] for r in rows}, {'Office of Hawaiian Affairs Trustee'})
+        ltgov = region.parse('sw-hi-ltgov', b'<title>Lieutenant Governor Sylvia Luke</title>', source('sw-hi-ltgov'))
+        self.assertEqual(vocabulary.executive_offices('HI', region.STATEWIDE['HI'], rows + ltgov)['officeOfHawaiianAffairsTrustee'],
+                         dict(status='collected', records=9))
+
+    def test_oha_wrong_count_unknown_seat_or_shared_island_seat_stops(self):
+        with self.assertRaises(AssertionError):  # eight trustees
+            region.parse('sw-hi-oha', oha_page(OHA[:-1]), source('sw-hi-oha'))
+        with self.assertRaises(AssertionError):  # ten trustees
+            region.parse('sw-hi-oha', oha_page(OHA + [('Jane Roe', 'At-Large')]), source('sw-hi-oha'))
+        with self.assertRaises(AssertionError):  # unknown seat label: the card is not matched, so eight trustees
+            region.parse('sw-hi-oha', oha_page(OHA[:-1] + [('John D. Waiheʻe IV', 'Kahoʻolawe')]), source('sw-hi-oha'))
+        with self.assertRaises(AssertionError):  # two holders of the Maui seat
+            region.parse('sw-hi-oha', oha_page(OHA[:-1] + [('John D. Waiheʻe IV', 'Maui')]), source('sw-hi-oha'))
 
     def test_declarations(self):
         vocabulary.check_declarations(region.STATEWIDE, {}, build.STATE_CODES)

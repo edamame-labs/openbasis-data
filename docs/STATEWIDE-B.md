@@ -29,7 +29,7 @@ Which offices are elected was taken from these official state sources:
 
 ## Sources and extraction
 
-Each rule names one element that identifies the officeholder. Its pattern runs on the HTML-unescaped page, with zero-width characters (U+200B–U+200D, U+FEFF) removed and whitespace collapsed. A pattern must match at least once and produce exactly one distinct officeholder. Zero matches, or two different names, stop the build. A name must have two to five words and must not contain words such as `Office`, `Governor`, `State`, `General`, `Treasurer` or `Commissioner`. Rows carry `office` set to the vocabulary title, `body: "<State> Executive"` and `level: "state"`. `website` is the office link from the list page (Idaho, Kansas), or otherwise the source page. `party` is set only where the source element gives it: Idaho `(R)`/`(D)` is mapped to Republican/Democratic, and the Minnesota LRL party column is copied as written. HTTP requests use `USER_AGENT`.
+Each rule names one element that identifies the officeholder. Its pattern runs on the HTML-unescaped page, with zero-width characters (U+200B–U+200D, U+FEFF) removed and whitespace collapsed. A pattern must match at least once and produce exactly one distinct officeholder, or, for a multi-member board listed in `HOLDERS`, exactly its member count; multi-member ids get `-<n>` in page order. Zero matches, or two different names, stop the build. A name must have two to five words and must not contain words such as `Office`, `Governor`, `State`, `General`, `Treasurer` or `Commissioner`. Rows carry `office` set to the vocabulary title, `body: "<State> Executive"` and `level: "state"`. `website` is the office link from the list page (Idaho, Kansas), or otherwise the source page. `party` is set only where the source element gives it: Idaho `(R)`/`(D)` is mapped to Republican/Democratic, and the Minnesota LRL party column is copied as written. HTTP requests use `USER_AGENT`.
 
 | State | Office (key) | Source | Element read | Status |
 |---|---|---|---|---|
@@ -74,6 +74,8 @@ Each rule names one element that identifies the officeholder. Its pattern runs o
 | MA | auditor | https://www.mass.gov/orgs/office-of-the-state-auditor | page-header leadership link, description `State Auditor` | collected |
 | MI | lieutenantGovernor, secretaryOfState, attorneyGeneral, stateBoardOfEducationMember | https://www.michigan.gov/ (whitmer, sos, ag, mde) | — | not-collected: Access Denied (HTTP 403) |
 | MI | universityRegent (University of Michigan Board of Regents) | https://regents.umich.edu/regents/ | — | not-collected: bot challenge (HTTP 403) |
+| MI | universityTrustee (Michigan State University Board of Trustees, 8) | https://trustees.msu.edu/about/meet-the-trustees | member card `<h2 class="line">Name</h2>` followed by `Term ends Mon. D, YYYY` (optionally prefixed `Chair \| ` or `Vice Chair \| `); exactly 8 | collected |
+| MI | universityGovernor (Wayne State University Board of Governors, 8) | https://bog.wayne.edu/members | member card `<div id="promo-N" class="my-1 font-bold text-lg …"> Name[, Chair\|, Vice Chair] </div>`; exactly 8 | collected |
 | MN | lieutenantGovernor | https://www.lrl.mn.gov/mngov/ltgov | first row of the table under `</colgroup>`: assumed-office date, name, party | collected |
 | MN | secretaryOfState | https://www.lrl.mn.gov/mngov/secstate | first row of the state table (the territorial table has no `<colgroup>`), `Last, First` reordered to `First Last` | collected |
 | MN | attorneyGeneral | https://www.ag.state.mn.us/ | `alt="Portrait of Attorney General Name"` | collected |
@@ -89,9 +91,9 @@ The Massachusetts Attorney General page's meta description still names a former 
 
 These pages were read on 2026-11-09, after the November 3 general election. Each shows the sitting officeholder. Officers-elect take office on dates set by each state, mostly in January 2027. Until a source changes, the record names the incumbent, and the record does not establish a term end.
 
-## Not covered by the vocabulary
+## Michigan university boards
 
-Michigan State University's Board of Trustees and Wayne State University's Board of Governors are elected statewide (Mich. Const. art. VIII §5). They are not declared because `tools/statewide.py` has no key for them. `universityRegent` is used only for the University of Michigan Board of Regents. Their official pages were readable: https://trustees.msu.edu/ and https://bog.wayne.edu/.
+Michigan State University's Board of Trustees and Wayne State University's Board of Governors are elected statewide (Mich. Const. art. VIII §5; the Wayne State page https://bog.wayne.edu/about says each member is "elected by the people of the state of Michigan"). They use `universityTrustee` and `universityGovernor`; `universityRegent` is used only for the University of Michigan Board of Regents. The university president sits on each board ex officio and is not elected; neither member page has a card for the president, so only the eight elected members are read. Both rules were checked live on 2026-11-09 and yielded 8 names each. Members elected on November 3, 2026 take office on January 1, 2027; until the pages change the records name the sitting members.
 
 ## Refreshing
 

@@ -76,6 +76,17 @@ class StatewideCTests(unittest.TestCase):
         page = ''.join(tab.format(i, n) for i, n in enumerate(['Ann One (Current Chair)', 'Bob Two-Three', 'Cal Four']))
         self.assertEqual([r['name'] for r in parse('sw-nd-psc', page.encode())], ['Ann One', 'Bob Two-Three', 'Cal Four'])
 
+    def test_nd_tax_commissioner_portrait_title(self):
+        img = ('<img class="align-left" src="/sites/www/files/documents/about/commissioner-pics/{0}.jpg" data-entity-uuid '
+               'alt="Headshot photo of {1}" width="221" height="332" title="Photo of Commissioner {1}">')
+        row, = parse('sw-nd-tax', img.format('Ann-One', 'Ann One').encode())
+        self.assertEqual((row['id'], row['name'], row['office'], row['body']),
+                         ('nd-taxCommissioner', 'Ann One', 'Tax Commissioner', 'North Dakota Executive'))
+        with self.assertRaises(AssertionError):
+            parse('sw-nd-tax', b'<h1>Commissioner Bio</h1>')
+        with self.assertRaises(AssertionError):
+            parse('sw-nd-tax', (img.format('Ann-One', 'Ann One') + img.format('Bob-Two', 'Bob Two')).encode())
+
     def test_nickname_and_suffix_markers(self):
         self.assertEqual(parse('sw-nc', b''.join([
             b'<h3 class="app-card__title"><a href="https://ltgov.nc.gov/">Lieutenant Governor A Bee</a></h3>',
