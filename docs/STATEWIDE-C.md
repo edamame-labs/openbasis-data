@@ -81,6 +81,7 @@ The November 3, 2026 general election elected new holders of several of these of
 | ND | Superintendent of Public Instruction | https://www.nd.gov/dpi/state-superintendent | portrait `alt="North Dakota State Superintendent NAME"` |
 | ND | Treasurer | https://www.treasurer.nd.gov/ | slider button `Meet NAME, State Treasurer` |
 | ND | Commissioner of Agriculture | https://www.ndda.nd.gov/divisions/office-agriculture-commissioner | portrait `alt="NAME, Agriculture Commissioner"` |
+| ND | Tax Commissioner | https://www.tax.nd.gov/about/commissioner-bio | commissioner portrait `<img class="align-left" src="/sites/www/files/documents/about/commissioner-pics/…" … title="Photo of Commissioner NAME">` |
 | OH | Lieutenant Governor, Attorney General, Auditor, Secretary of State, Treasurer | https://ohio.gov/government/elected-officials | bio tile `<h3 class="… oh-bio__name …">TITLE NAME</h3>` |
 | OK | Lieutenant Governor | https://oklahoma.gov/ltgovpinnell.html | `<title>Lieutenant Governor NAME (440)</title>` |
 | OK | Attorney General | https://oklahoma.gov/oag.html | menu description `Learn about Oklahoma Attorney General NAME — …` |
@@ -102,7 +103,7 @@ Each office in `BLOCKED` is `not-collected`, with a blocker naming the URL and t
 - MS Secretary of State, MT Secretary of State, NV Secretary of State, NM Attorney General: bot challenge or firewall page.
 - NY Lieutenant Governor: the governor's site returns "Access denied" for its lieutenant governor page, and no other page there names the officeholder.
 
-They are never filled from another publisher. North Dakota's Tax Commissioner is elected but has no office key in `tools/statewide.py`, so it is not declared.
+They are never filled from another publisher.
 
 ## Live check, November 2026
 

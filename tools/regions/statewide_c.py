@@ -81,6 +81,7 @@ SOURCES = {
  'sw-nd-dpi': ('North Dakota Department of Public Instruction', 'https://www.nd.gov/dpi/state-superintendent'),
  'sw-nd-tre': ('North Dakota State Treasurer', 'https://www.treasurer.nd.gov/'),
  'sw-nd-agr': ('North Dakota Department of Agriculture', 'https://www.ndda.nd.gov/divisions/office-agriculture-commissioner'),
+ 'sw-nd-tax': ('North Dakota Office of State Tax Commissioner', 'https://www.tax.nd.gov/about/commissioner-bio'),
  # Ohio: one page lists every statewide elected official.
  'sw-oh': ('State of Ohio', 'https://ohio.gov/government/elected-officials'),
  # Oklahoma
@@ -161,6 +162,7 @@ RULES = [
  ('sw-nd-dpi', 'ND', 'superintendentOfPublicInstruction', r'alt="North Dakota State Superintendent '+N+r'"', 1),
  ('sw-nd-tre', 'ND', 'treasurer', r'<a href="/meet-treasurer-0" class="btn btn-slider" > Meet '+N+r', State Treasurer </a>', 1),
  ('sw-nd-agr', 'ND', 'agricultureCommissioner', r'alt="'+N+r', Agriculture Commissioner"', 1),
+ ('sw-nd-tax', 'ND', 'taxCommissioner', r'<img class="align-left" src="/sites/www/files/documents/about/commissioner-pics/[\w-]+\.jpg" [^<>]*title="Photo of Commissioner '+N+r'">', 1),
 
  ('sw-oh', 'OH', 'lieutenantGovernor', r'oh-bio__name oh-clamped-txt">Lt\. Governor '+N+r'</h3>', 1),
  ('sw-oh', 'OH', 'attorneyGeneral', r'oh-bio__name oh-clamped-txt">Attorney General '+N+r'</h3>', 1),

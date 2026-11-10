@@ -7,9 +7,9 @@
 - Each source is one official state page. Arkansas, Colorado, Delaware and Georgia publish one state page that lists the statewide officials. The other states' offices are read from each office's own website.
 - A rule runs a pattern on the page after HTML entities are unescaped, HTML comments are removed and whitespace is collapsed. Each pattern names one element per officeholder: a `<title>`, a heading, a meta tag, an image caption or a menu link.
 - Every pattern must match. On state list pages, every matched office title must be a known title. The governor's entry is read but not published. An unknown title stops the build.
-- Each office must yield exactly its expected number of distinct holders: one for a single-holder office, or the full membership of a multi-member body. Two different names for one office, a missing member, or two holders for one district all stop the build. The same name repeated in several menus counts as one record.
+- Each office must yield exactly its expected number of distinct holders: one for a single-holder office, or the full membership of a multi-member body. Two different names for one office, a missing member, or two holders for one district all stop the build (a rule may list `shared` seat labels, such as the Office of Hawaiian Affairs at-large seats, that several holders hold at once). The same name repeated in several menus counts as one record.
 - Names must have two to six words and must not contain office words such as `Office`, `Commissioner` or `State`. Trailing academic or professional suffixes (`Ph.D.`, `Ed.D.`, `M.D.`, `CPA`) are dropped. Generational suffixes such as `Jr` are kept.
-- Records carry `office` (the vocabulary title), `body: "<State> Executive"`, `level: "state"`, `website` set to the source page and, for district-elected boards, `district` (a number, or `At-Large`). Ids are `<st>-<officeKey>`, with `-<n>` added for multi-member offices, numbered in page order. Party, contact details and term dates are not read.
+- Records carry `office` (the vocabulary title), `body: "<State> Executive"`, `level: "state"`, `website` set to the source page and, for district-elected boards, `district` (a number, or `At-Large`). Office of Hawaiian Affairs trustees carry the seat label the card gives (`At-Large`, `Hawaiʻi Island`, `Kauaʻi & Niʻihau`, `Oʻahu`, `Molokaʻi & Lānaʻi`, `Maui`). Ids are `<st>-<officeKey>`, with `-<n>` added for multi-member offices, numbered in page order. Party, contact details and term dates are not read.
 - Requests use the shared `USER_AGENT` and go through `build.fetch`. Two pages are requested at their final hostnames, `ed.cde.state.co.us` and `regents.cu.edu`, because the shorter URLs redirect to another hostname and `build.fetch` rejects cross-host redirects.
 
 ## Incumbents and the November 2026 election
@@ -54,8 +54,10 @@ Each rule reads the officeholder its page shows as serving. No rule reads electi
 | FL | Lieutenant Governor | https://www.flgov.com/eog/leadership/people/jay-collins | `div.administration` h2 "Lieutenant Governor …" followed by "… – Present". This page is the target of the EOG site's "Lieutenant Governor" menu link, and its URL names the officeholder. |
 | FL | Attorney General | https://www.myfloridalegal.com/ | menu link to `/ag-bio` "Attorney General …" |
 | FL | Commissioner of Agriculture | https://www.fdacs.gov/ | link to `/About-Us/Meet-Commissioner-…` "Learn More About Commissioner …" |
+| FL | Chief Financial Officer | https://www.myfloridacfo.com/about/meet-the-cfo | `<h2 class="oh3"><strong>Meet your Chief Financial Officer …</strong></h2>`. The homepage's only name is the seal's image alt text ("Official Seal of CFO …"); its "Meet the CFO" banner links to this page, whose heading is more precise. |
 | GA | Lt. Governor, Attorney General, Secretary of State, School Superintendent, Agriculture, Insurance, Labor, Public Service Commission (5) | https://georgia.gov/elected-officials | `h2.global-teaser__title` (name) + `p.global-teaser__description` (office title). "Public Service Commission Chairman" and "Public Service Commissioner" both map to `publicServiceCommissioner`. |
 | HI | Lieutenant Governor | https://ltgov.hawaii.gov/ | `<title>` "Lieutenant Governor …" |
+| HI | Office of Hawaiian Affairs Trustee (9) | https://www.oha.org/about/leadership/board-of-trustees/ | trustee card `<p class="center"><strong><a href=…?post_type=trustee&p=N>NAME</a></strong><br />[Chair\|Vice-Chair<br />]SEAT Trustee</p>`; SEAT must be one of the six known labels and is recorded in `district`. Exactly nine trustees; the five island seats must be distinct, while the four `At-Large` seats are shared. The page states that the trustees are elected in elections open to all State of Hawaiʻi voters. |
 
 ## Which offices are elected
 
@@ -71,11 +73,6 @@ Offices filled by appointment are left out entirely. The list pages used here ar
 For Alabama, Connecticut and Colorado's executive officers, no constitution text was retrieved. Their declarations follow the offices' own official sites and need confirming against constitution text.
 
 The Delaware secretary of state, the Florida secretary of state and the Alaska attorney general are appointed, so they are not declared.
-
-## Elected offices without a vocabulary key (not declared)
-
-- **Florida Chief Financial Officer**: an elected cabinet officer (Florida Constitution Article IV §4). Source: https://www.myfloridacfo.com/. The homepage text includes "CFO Blaise Ingoglia", but no rule has been written for it yet. Needs a key such as `chiefFinancialOfficer`.
-- **Hawaii Office of Hawaiian Affairs trustees**: a board of at least nine elected trustees (Hawaii Constitution Article XII §5). Needs a key such as `officeOfHawaiianAffairsTrustee` (multi-member). Not collected in this module.
 
 ## Blockers
 
@@ -94,7 +91,7 @@ These offices are listed in `BLOCKED`, recorded as `not-collected` with the bloc
 .venv-geo/bin/python -B -m unittest discover -s tools -p 'test_statewide_a.py'
 ```
 
-The tests use fixtures to cover: title extraction across whitespace and entities, title-to-office mapping with the governor skipped, an unknown title, a missing office, a wrong member count, a missing marker, conflicting names, placeholder text, a duplicated page block, district normalization, suffix removal, two holders for one seat, and the module's declarations and discovery by `build.py`. Each rule was also checked live on November 10, 2026 with `build.fetch(key, publisher, url, user_agent=USER_AGENT)` followed by `parse`. All 33 sources parsed, giving 89 records.
+The tests use fixtures to cover: title extraction across whitespace and entities, title-to-office mapping with the governor skipped, an unknown title, a missing office, a wrong member count, a missing marker, conflicting names, placeholder text, a duplicated page block, district normalization, suffix removal, two holders for one seat, and the module's declarations and discovery by `build.py`. Each rule was also checked live on November 10, 2026 with `build.fetch(key, publisher, url, user_agent=USER_AGENT)` followed by `parse`. All 33 sources parsed, giving 89 records. The Florida Chief Financial Officer (1 record) and Office of Hawaiian Affairs (9 records) rules were added later and checked live the same way on November 9, 2026.
 
 ## Scope: district-elected boards
 

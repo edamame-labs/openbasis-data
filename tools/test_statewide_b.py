@@ -98,6 +98,31 @@ class StatewideBTests(unittest.TestCase):
         page = b'<meta name="description" content="Office of the Comptroller of Maryland, led by Comptroller Brooke E. Lierman. Working towards a more equitable Maryland."/>'
         self.assertEqual(region.parse('sw-md-comptroller', page, source('sw-md-comptroller'))[0]['name'], 'Brooke E. Lierman')
 
+    def test_michigan_university_boards_need_eight_members(self):
+        msu_card = ('<h2 class="line">{}</h2><div class="mixed-content-text"><div class="ck-content"><p style="margin-left:0px;">'
+                    '{}Term ends Jan. 1, 2031</p></div></div>')
+        msu = [('Ann One', 'Chair | '), ('Bob Two', 'Vice Chair | ')] + [(f'Member {w}', '') for w in 'Cee Dee Eee Fee Gee Hee'.split()]
+        page = ''.join(msu_card.format(n, label) for n, label in msu)
+        # A span-wrapped term line and the "Committees" card (no term line) are handled.
+        page = page.replace('<p style="margin-left:0px;">Term', '<p><span style="x"><span style="y">Term', 1)
+        page += '<h2 class="line">Committees</h2><a href="/committees" class="cta green">View Members</a>'
+        rows = region.parse('sw-mi-msu', page.encode(), source('sw-mi-msu'))
+        self.assertEqual([(r['id'], r['name']) for r in rows][:3],
+                         [('mi-universityTrustee-1', 'Ann One'), ('mi-universityTrustee-2', 'Bob Two'), ('mi-universityTrustee-3', 'Member Cee')])
+        self.assertEqual(len(rows), 8)
+        msu_rows = rows
+        with self.assertRaises(AssertionError):
+            region.parse('sw-mi-msu', ''.join(msu_card.format(n, l) for n, l in msu[:7]).encode(), source('sw-mi-msu'))
+        wsu_card = '<div id="promo-{}" class="my-1 font-bold text-lg group-hover:underline leading-snug"> {} </div>'
+        wsu = ['Bryan C. Barnhill II, Chair'] + [f'Member {w}' for w in 'Bee Cee Dee Eee Fee Gee Hee'.split()]
+        rows = region.parse('sw-mi-wsu', ''.join(wsu_card.format(i, n) for i, n in enumerate(wsu)).encode(), source('sw-mi-wsu'))
+        self.assertEqual((rows[0]['id'], rows[0]['name'], rows[0]['office']),
+                         ('mi-universityGovernor-1', 'Bryan C. Barnhill II', 'University Board of Governors Member'))
+        coverage = statewide.executive_offices('MI', region.STATEWIDE['MI'], msu_rows + rows)
+        self.assertEqual((coverage['universityTrustee'], coverage['universityGovernor']), (dict(status='collected', records=8),) * 2)
+        with self.assertRaises(AssertionError):  # a ninth card, such as an ex officio president, stops the build
+            region.parse('sw-mi-wsu', ''.join(wsu_card.format(i, n) for i, n in enumerate(wsu + ['Jane Roe'])).encode(), source('sw-mi-wsu'))
+
     def test_declarations(self):
         statewide.check_declarations(region.STATEWIDE, {}, build.STATE_CODES)
         self.assertEqual(set(region.STATEWIDE), set(region.NAMES))
@@ -107,6 +132,9 @@ class StatewideBTests(unittest.TestCase):
                 if office == 'blockers': continue
                 self.assertEqual(status == 'collected', any(r[:2] == (st, office) for r in region.RULES), (st, office))
         self.assertEqual(region.STATEWIDE['MI'].get('lieutenantGovernor'), 'not-collected')
+        for st, office in region.HOLDERS:
+            self.assertIn(office, statewide.MULTI)
+        self.assertTrue(all(office not in statewide.MULTI or (st, office) in region.HOLDERS for st, office, _, _ in region.RULES))
 
     def test_every_source_is_read(self):
         self.assertEqual({key for _, _, key, _ in region.RULES}, set(region.SOURCES))
