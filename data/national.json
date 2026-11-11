@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T05:56:04.209653+00:00",
+  "generatedAt": "2026-11-10T07:34:36.059944+00:00",
   "officials": [
     {
       "id": "us-president",
@@ -15,9 +15,27 @@
           "id": "us-executive",
           "name": "The White House",
           "url": "https://www.whitehouse.gov/administration/",
-          "retrievedAt": "2026-11-10T05:39:26.704820+00:00",
-          "sha256": "8e4a90740d57010a0399b397ebe69f4166d4369c0755278b3034ec0a3f4289bd",
+          "retrievedAt": "2026-11-10T07:16:14.375592+00:00",
+          "sha256": "253310a222c478cb1c4b3baf8c03f1229e5c1c97d9ec9f72fcde3e992e4140b3",
           "finalUrl": "https://www.whitehouse.gov/administration/",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        },
+        {
+          "id": "us-president-fec",
+          "name": "Federal Election Commission",
+          "url": "https://api.open.fec.gov/v1/candidate/P80001571/?api_key=DEMO_KEY",
+          "retrievedAt": "2026-11-10T07:16:14.766039+00:00",
+          "sha256": "d28c8418020875ff55ef559f8c057d7b5e4344e6e855890cc8021c5591694053",
+          "finalUrl": "https://api.open.fec.gov/v1/candidate/P80001571/?api_key=DEMO_KEY",
           "publishedAt": null,
           "representation": "http-response-body",
           "requestMethod": "GET",
@@ -30,7 +48,16 @@
           }
         }
       ],
-      "photo": "https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-J.-Trump.png"
+      "photo": "https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-J.-Trump.png",
+      "party": "Republican",
+      "fieldEvidence": {
+        "party": {
+          "value": "Republican",
+          "sourceIds": [
+            "us-president-fec"
+          ]
+        }
+      }
     },
     {
       "id": "us-vice-president",
@@ -45,8 +72,8 @@
           "id": "us-executive",
           "name": "The White House",
           "url": "https://www.whitehouse.gov/administration/",
-          "retrievedAt": "2026-11-10T05:39:26.704820+00:00",
-          "sha256": "8e4a90740d57010a0399b397ebe69f4166d4369c0755278b3034ec0a3f4289bd",
+          "retrievedAt": "2026-11-10T07:16:14.375592+00:00",
+          "sha256": "253310a222c478cb1c4b3baf8c03f1229e5c1c97d9ec9f72fcde3e992e4140b3",
           "finalUrl": "https://www.whitehouse.gov/administration/",
           "publishedAt": null,
           "representation": "http-response-body",
@@ -58,8 +85,575 @@
               "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
             }
           }
+        },
+        {
+          "id": "us-vice-presidents",
+          "name": "United States Senate",
+          "url": "https://www.senate.gov/about/officers-staff/vice-president/vice-presidents.htm",
+          "retrievedAt": "2026-11-10T07:16:14.959385+00:00",
+          "sha256": "a44c55b0a25e58c05f079dbe255b98f72e8eed41d24c2d7671099985d737d68e",
+          "finalUrl": "https://www.senate.gov/about/officers-staff/vice-president/vice-presidents.htm",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
         }
-      ]
+      ],
+      "party": "Republican",
+      "fieldEvidence": {
+        "party": {
+          "value": "Republican",
+          "sourceIds": [
+            "us-vice-presidents"
+          ]
+        }
+      }
+    },
+    {
+      "id": "us-house-R000600",
+      "name": "Aumua Amata Coleman Radewagen",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. House",
+      "office": "Delegate",
+      "territory": "AS",
+      "sources": [
+        {
+          "id": "house",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "retrievedAt": "2026-11-10T07:09:33.176013+00:00",
+          "sha256": "84458803178118dd612e41ff119daf2976e59d9f96780d8c794eba52d717711d",
+          "finalUrl": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "publishedAt": "November 3, 2026",
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "congress": "119"
+        },
+        {
+          "id": "house-directory",
+          "name": "U.S. House of Representatives",
+          "url": "https://www.house.gov/representatives",
+          "retrievedAt": "2026-11-10T07:09:33.524463+00:00",
+          "sha256": "0f267c96e0812a357cb98cfaa6e5e3fd9dffaa8355b6a6c67df71eef3975d566",
+          "finalUrl": "https://www.house.gov/representatives",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        },
+        {
+          "id": "house-member-R000600",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/members/R000600",
+          "retrievedAt": "2026-11-10T07:10:33.016494+00:00",
+          "sha256": "47bb29fba33f2b0d84c48d88182c455de1b56e5c6083c5a638bf33d9762b4fb2",
+          "finalUrl": "https://clerk.house.gov/members/R000600",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ],
+      "party": "Republican",
+      "ids": {
+        "bioguide": "R000600"
+      },
+      "phone": "202-225-8577",
+      "fieldEvidence": {
+        "website": {
+          "value": "https://radewagen.house.gov",
+          "sourceIds": [
+            "house-directory"
+          ]
+        },
+        "address": {
+          "value": "2001 Rayburn House Office Building, Washington, DC 20515-5200",
+          "sourceIds": [
+            "house",
+            "house-directory",
+            "house-member-R000600"
+          ]
+        },
+        "photo": {
+          "value": "https://clerk.house.gov/images/members/R000600.jpg",
+          "sourceIds": [
+            "house-member-R000600"
+          ]
+        }
+      },
+      "website": "https://radewagen.house.gov",
+      "address": "2001 Rayburn House Office Building, Washington, DC 20515-5200",
+      "photo": "https://clerk.house.gov/images/members/R000600.jpg"
+    },
+    {
+      "id": "us-house-N000147",
+      "name": "Eleanor Holmes Norton",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. House",
+      "office": "Delegate",
+      "territory": "DC",
+      "sources": [
+        {
+          "id": "house",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "retrievedAt": "2026-11-10T07:09:33.176013+00:00",
+          "sha256": "84458803178118dd612e41ff119daf2976e59d9f96780d8c794eba52d717711d",
+          "finalUrl": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "publishedAt": "November 3, 2026",
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "congress": "119"
+        },
+        {
+          "id": "house-directory",
+          "name": "U.S. House of Representatives",
+          "url": "https://www.house.gov/representatives",
+          "retrievedAt": "2026-11-10T07:09:33.524463+00:00",
+          "sha256": "0f267c96e0812a357cb98cfaa6e5e3fd9dffaa8355b6a6c67df71eef3975d566",
+          "finalUrl": "https://www.house.gov/representatives",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        },
+        {
+          "id": "house-member-N000147",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/members/N000147",
+          "retrievedAt": "2026-11-10T07:10:33.022512+00:00",
+          "sha256": "caf3b191b5eadfc170c23805b33c5f669fbede0171047f64527c0a0cd5f5a06e",
+          "finalUrl": "https://clerk.house.gov/members/N000147",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ],
+      "party": "Democratic",
+      "ids": {
+        "bioguide": "N000147"
+      },
+      "phone": "202-225-8050",
+      "fieldEvidence": {
+        "website": {
+          "value": "https://norton.house.gov/",
+          "sourceIds": [
+            "house-directory"
+          ]
+        },
+        "address": {
+          "value": "2136 Rayburn House Office Building, Washington, DC 20515-5101",
+          "sourceIds": [
+            "house",
+            "house-directory",
+            "house-member-N000147"
+          ]
+        },
+        "photo": {
+          "value": "https://clerk.house.gov/images/members/N000147.jpg",
+          "sourceIds": [
+            "house-member-N000147"
+          ]
+        }
+      },
+      "website": "https://norton.house.gov/",
+      "address": "2136 Rayburn House Office Building, Washington, DC 20515-5101",
+      "photo": "https://clerk.house.gov/images/members/N000147.jpg"
+    },
+    {
+      "id": "us-house-M001219",
+      "name": "James C. Moylan",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. House",
+      "office": "Delegate",
+      "territory": "GU",
+      "sources": [
+        {
+          "id": "house",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "retrievedAt": "2026-11-10T07:09:33.176013+00:00",
+          "sha256": "84458803178118dd612e41ff119daf2976e59d9f96780d8c794eba52d717711d",
+          "finalUrl": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "publishedAt": "November 3, 2026",
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "congress": "119"
+        },
+        {
+          "id": "house-directory",
+          "name": "U.S. House of Representatives",
+          "url": "https://www.house.gov/representatives",
+          "retrievedAt": "2026-11-10T07:09:33.524463+00:00",
+          "sha256": "0f267c96e0812a357cb98cfaa6e5e3fd9dffaa8355b6a6c67df71eef3975d566",
+          "finalUrl": "https://www.house.gov/representatives",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        },
+        {
+          "id": "house-member-M001219",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/members/M001219",
+          "retrievedAt": "2026-11-10T07:10:33.009214+00:00",
+          "sha256": "faadbb07be801b0a2870a4c949587a82ce5124afb8b2bf5932e87951d2d54daa",
+          "finalUrl": "https://clerk.house.gov/members/M001219",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ],
+      "party": "Republican",
+      "ids": {
+        "bioguide": "M001219"
+      },
+      "phone": "202-225-1188",
+      "fieldEvidence": {
+        "website": {
+          "value": "https://moylan.house.gov",
+          "sourceIds": [
+            "house-directory"
+          ]
+        },
+        "address": {
+          "value": "228 Cannon House Office Building, Washington, DC 20515-5301",
+          "sourceIds": [
+            "house",
+            "house-directory",
+            "house-member-M001219"
+          ]
+        },
+        "photo": {
+          "value": "https://clerk.house.gov/images/members/M001219.jpg",
+          "sourceIds": [
+            "house-member-M001219"
+          ]
+        }
+      },
+      "website": "https://moylan.house.gov",
+      "address": "228 Cannon House Office Building, Washington, DC 20515-5301",
+      "photo": "https://clerk.house.gov/images/members/M001219.jpg"
+    },
+    {
+      "id": "us-house-K000404",
+      "name": "Kimberlyn King-Hinds",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. House",
+      "office": "Delegate",
+      "territory": "MP",
+      "sources": [
+        {
+          "id": "house",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "retrievedAt": "2026-11-10T07:09:33.176013+00:00",
+          "sha256": "84458803178118dd612e41ff119daf2976e59d9f96780d8c794eba52d717711d",
+          "finalUrl": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "publishedAt": "November 3, 2026",
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "congress": "119"
+        },
+        {
+          "id": "house-directory",
+          "name": "U.S. House of Representatives",
+          "url": "https://www.house.gov/representatives",
+          "retrievedAt": "2026-11-10T07:09:33.524463+00:00",
+          "sha256": "0f267c96e0812a357cb98cfaa6e5e3fd9dffaa8355b6a6c67df71eef3975d566",
+          "finalUrl": "https://www.house.gov/representatives",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        },
+        {
+          "id": "house-member-K000404",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/members/K000404",
+          "retrievedAt": "2026-11-10T07:10:33.009288+00:00",
+          "sha256": "922e68b0999d06fde93c3957984354bd8d2deacbfe3a4f11a2a2016dd1cde205",
+          "finalUrl": "https://clerk.house.gov/members/K000404",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ],
+      "party": "Republican",
+      "ids": {
+        "bioguide": "K000404"
+      },
+      "phone": "202-225-2646",
+      "fieldEvidence": {
+        "website": {
+          "value": "https://king-hinds.house.gov/",
+          "sourceIds": [
+            "house-directory"
+          ]
+        },
+        "address": {
+          "value": "425 Cannon House Office Building, Washington, DC 20515-5201",
+          "sourceIds": [
+            "house",
+            "house-directory",
+            "house-member-K000404"
+          ]
+        },
+        "photo": {
+          "value": "https://clerk.house.gov/images/members/K000404.jpg",
+          "sourceIds": [
+            "house-member-K000404"
+          ]
+        }
+      },
+      "website": "https://king-hinds.house.gov/",
+      "address": "425 Cannon House Office Building, Washington, DC 20515-5201",
+      "photo": "https://clerk.house.gov/images/members/K000404.jpg"
+    },
+    {
+      "id": "us-house-H001103",
+      "name": "Pablo José Hernández",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. House",
+      "office": "Resident Commissioner",
+      "territory": "PR",
+      "sources": [
+        {
+          "id": "house",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "retrievedAt": "2026-11-10T07:09:33.176013+00:00",
+          "sha256": "84458803178118dd612e41ff119daf2976e59d9f96780d8c794eba52d717711d",
+          "finalUrl": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "publishedAt": "November 3, 2026",
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "congress": "119"
+        },
+        {
+          "id": "house-directory",
+          "name": "U.S. House of Representatives",
+          "url": "https://www.house.gov/representatives",
+          "retrievedAt": "2026-11-10T07:09:33.524463+00:00",
+          "sha256": "0f267c96e0812a357cb98cfaa6e5e3fd9dffaa8355b6a6c67df71eef3975d566",
+          "finalUrl": "https://www.house.gov/representatives",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        },
+        {
+          "id": "house-member-H001103",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/members/H001103",
+          "retrievedAt": "2026-11-10T07:10:33.533587+00:00",
+          "sha256": "e38fbc4823dadefad56d28248e5bc5589478003a249309ac8c072db8ce760068",
+          "finalUrl": "https://clerk.house.gov/members/H001103",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ],
+      "party": "Democratic",
+      "ids": {
+        "bioguide": "H001103"
+      },
+      "phone": "202-225-2615",
+      "fieldEvidence": {
+        "website": {
+          "value": "https://hernandez.house.gov/",
+          "sourceIds": [
+            "house-directory"
+          ]
+        },
+        "address": {
+          "value": "1419 Longworth House Office Building, Washington, DC 20515-5401",
+          "sourceIds": [
+            "house",
+            "house-directory",
+            "house-member-H001103"
+          ]
+        },
+        "photo": {
+          "value": "https://clerk.house.gov/images/members/H001103.jpg",
+          "sourceIds": [
+            "house-member-H001103"
+          ]
+        }
+      },
+      "website": "https://hernandez.house.gov/",
+      "address": "1419 Longworth House Office Building, Washington, DC 20515-5401",
+      "photo": "https://clerk.house.gov/images/members/H001103.jpg"
+    },
+    {
+      "id": "us-house-P000610",
+      "name": "Stacey E. Plaskett",
+      "level": "federal",
+      "jurisdiction": "United States",
+      "body": "U.S. House",
+      "office": "Delegate",
+      "territory": "VI",
+      "sources": [
+        {
+          "id": "house",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "retrievedAt": "2026-11-10T07:09:33.176013+00:00",
+          "sha256": "84458803178118dd612e41ff119daf2976e59d9f96780d8c794eba52d717711d",
+          "finalUrl": "https://clerk.house.gov/xml/lists/MemberData.xml",
+          "publishedAt": "November 3, 2026",
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "congress": "119"
+        },
+        {
+          "id": "house-directory",
+          "name": "U.S. House of Representatives",
+          "url": "https://www.house.gov/representatives",
+          "retrievedAt": "2026-11-10T07:09:33.524463+00:00",
+          "sha256": "0f267c96e0812a357cb98cfaa6e5e3fd9dffaa8355b6a6c67df71eef3975d566",
+          "finalUrl": "https://www.house.gov/representatives",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        },
+        {
+          "id": "house-member-P000610",
+          "name": "Office of the Clerk, U.S. House of Representatives",
+          "url": "https://clerk.house.gov/members/P000610",
+          "retrievedAt": "2026-11-10T07:10:33.533616+00:00",
+          "sha256": "ca5c055bcbe3ec1c052b0cc9fa7adf7800a6805ae9a8a3d092cabe52f18aac67",
+          "finalUrl": "https://clerk.house.gov/members/P000610",
+          "publishedAt": null,
+          "representation": "http-response-body",
+          "requestMethod": "GET",
+          "requestBody": null,
+          "acquisition": {
+            "method": "http-get",
+            "requestHeaders": {
+              "User-Agent": "Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)"
+            }
+          }
+        }
+      ],
+      "party": "Democratic",
+      "ids": {
+        "bioguide": "P000610"
+      },
+      "phone": "202-225-1790",
+      "fieldEvidence": {
+        "website": {
+          "value": "https://plaskett.house.gov/",
+          "sourceIds": [
+            "house-directory"
+          ]
+        },
+        "address": {
+          "value": "2059 Rayburn House Office Building, Washington, DC 20515-5500",
+          "sourceIds": [
+            "house",
+            "house-directory",
+            "house-member-P000610"
+          ]
+        },
+        "photo": {
+          "value": "https://clerk.house.gov/images/members/P000610.jpg",
+          "sourceIds": [
+            "house-member-P000610"
+          ]
+        }
+      },
+      "website": "https://plaskett.house.gov/",
+      "address": "2059 Rayburn House Office Building, Washington, DC 20515-5500",
+      "photo": "https://clerk.house.gov/images/members/P000610.jpg"
     }
   ]
 }

@@ -41,12 +41,25 @@ def source_ids(value):
     return []
 
 
+COURT_OFFICES = {'Chief Justice', 'Justice', 'Presiding Judge', 'Chief Judge', 'Judge'}
+
+
+def statewide_rule(row):
+    if row.get('office') == 'Governor': return 'statewide-governor-state-fips'
+    if row.get('body', '').endswith(' Executive'): return 'statewide-executive-state-fips'
+    if row.get('office') in COURT_OFFICES: return 'statewide-court-state-fips'
+    return 'statewide-senate-state-fips'
+
+
 def target_layer(row):
     if row.get('level') == 'federal':
         return {'U.S. House': 'cd', 'U.S. Senate': 'states'}.get(row.get('body'))
     if row.get('level') != 'state':
         return None
-    if row.get('office') == 'Governor':
+    if row.get('office') == 'Governor' or row.get('body', '').endswith(' Executive'):
+        return 'states'
+    if row.get('office') in COURT_OFFICES:
+        # Court of last resort: statewide jurisdiction, even where justices are elected from judicial districts.
         return 'states'
     if row['state'] == 'NE':
         return 'sldu'
@@ -149,7 +162,7 @@ def link(officials, collections):
                 p = feature['properties']
                 entry.update(districtKey=('state' if layer=='states' else layer) + ':' + str(p.get('GEOID') or p['boundaryId']), GEOID=p.get('GEOID'),boundaryId=p.get('GEOID') or p['boundaryId'],
                              geometrySourceIds=refs, stateCrosswalkSourceIds=state_refs[st],
-                             matchingRule=(('statewide-governor-state-fips' if row.get('office') == 'Governor' else 'statewide-senate-state-fips') if layer == 'states' else
+                             matchingRule=(statewide_rule(row) if layer == 'states' else
                                            '119th-congress-numeric-code' if layer == 'cd' else
                                            'state-chamber-canonical-basename'),
                              geometryDistrictLabel=p.get('BASENAME', p.get('NAME')))

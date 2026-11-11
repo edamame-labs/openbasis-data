@@ -1,15 +1,1751 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T05:56:04.209653+00:00",
+  "generatedAt": "2026-11-10T07:34:36.059944+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
-    "state": 6794,
+    "state": 7316,
     "federal": 533
   },
   "rosters": [
     {
       "source": "house",
       "records": 433
+    },
+    {
+      "source": "house-directory",
+      "records": 433
+    },
+    {
+      "source": "house-member-B001323",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001212",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000481",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000575",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000055",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001220",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000609",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001185",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001087",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001072",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000809",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000821",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001183",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001132",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000381",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001211",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001302",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001133",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000606",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001098",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000565",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000607",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001068",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000401",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000460",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001177",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001287",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001163",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000559",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001090",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000623",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000197",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001231",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000605",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000832",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001225",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000607",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000389",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000397",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000613",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000480",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001059",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000129",
+      "records": 1
+    },
+    {
+      "source": "house-member-O000019",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001112",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000599",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001285",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000830",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001080",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000620",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000483",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001123",
+      "records": 1
+    },
+    {
+      "source": "house-member-S000344",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000371",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000585",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000474",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000582",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000400",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001156",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000472",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000397",
+      "records": 1
+    },
+    {
+      "source": "house-member-C000059",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000598",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000187",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001300",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000491",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001110",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001241",
+      "records": 1
+    },
+    {
+      "source": "house-member-I000056",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000593",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000608",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000305",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000130",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000197",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000191",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001100",
+      "records": 1
+    },
+    {
+      "source": "house-member-B000825",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001137",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001121",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000620",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000300",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000557",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001069",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000216",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001047",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001081",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001238",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000622",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000628",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001039",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001314",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000609",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000484",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001216",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001099",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001200",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000476",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000806",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001257",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000596",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001066",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000597",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001260",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001214",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000472",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000032",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001199",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000462",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001217",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000808",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000797",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000600",
+      "records": 1
+    },
+    {
+      "source": "house-member-S000168",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000593",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001103",
+      "records": 1
+    },
+    {
+      "source": "house-member-B000490",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000311",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000288",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000788",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001208",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001218",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001189",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001116",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001129",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000583",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000372",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001328",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000485",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001055",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000487",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001215",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001091",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000193",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000446",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000469",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001148",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000309",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000385",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000617",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000586",
+      "records": 1
+    },
+    {
+      "source": "house-member-Q000023",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001117",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000096",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000391",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001145",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001190",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000454",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001295",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001315",
+      "records": 1
+    },
+    {
+      "source": "house-member-U000040",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001211",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000585",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001225",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001214",
+      "records": 1
+    },
+    {
+      "source": "house-member-Y000067",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001188",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001307",
+      "records": 1
+    },
+    {
+      "source": "house-member-S000929",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001229",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001072",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001233",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001093",
+      "records": 1
+    },
+    {
+      "source": "house-member-M000871",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001228",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000629",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000298",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001108",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000558",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001220",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001184",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000395",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001282",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001176",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001125",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001077",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000299",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000595",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000110",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000015",
+      "records": 1
+    },
+    {
+      "source": "house-member-M000312",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000482",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000148",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001101",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001196",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000617",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000562",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000375",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001052",
+      "records": 1
+    },
+    {
+      "source": "house-member-O000176",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000301",
+      "records": 1
+    },
+    {
+      "source": "house-member-I000058",
+      "records": 1
+    },
+    {
+      "source": "house-member-H000874",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001232",
+      "records": 1
+    },
+    {
+      "source": "house-member-M000687",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000606",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000597",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000592",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001301",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001194",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001221",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001058",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000798",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000624",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001321",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001237",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001136",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000307",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001215",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000481",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000488",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000475",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001119",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001234",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001143",
+      "records": 1
+    },
+    {
+      "source": "house-member-O000173",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000294",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000470",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001212",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001324",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000812",
+      "records": 1
+    },
+    {
+      "source": "house-member-O000177",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000379",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001061",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000546",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001316",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001195",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000388",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000193",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000591",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000235",
+      "records": 1
+    },
+    {
+      "source": "house-member-Z000018",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000634",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000230",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000305",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001210",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000477",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000450",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001240",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000603",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001102",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001067",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001101",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000246",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000370",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000405",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001236",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000482",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000474",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001298",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001172",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000614",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000604",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000188",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000133",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001136",
+      "records": 1
+    },
+    {
+      "source": "house-member-S000522",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000583",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000034",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000398",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001226",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000621",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001229",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001246",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000822",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001218",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000136",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000273",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000468",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000369",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000590",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001066",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000598",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000597",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001201",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000602",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001137",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001188",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000081",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000294",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001067",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000599",
+      "records": 1
+    },
+    {
+      "source": "house-member-M000317",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000002",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000297",
+      "records": 1
+    },
+    {
+      "source": "house-member-O000172",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000486",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000606",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000599",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000579",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000622",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000469",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001196",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001231",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000600",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000478",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001206",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000402",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000601",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000490",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001281",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000289",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000566",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000619",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001222",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000626",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000009",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000463",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001313",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001306",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001223",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000295",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001126",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001082",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001317",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000491",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001053",
+      "records": 1
+    },
+    {
+      "source": "house-member-B000740",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001278",
+      "records": 1
+    },
+    {
+      "source": "house-member-B000668",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000635",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001094",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001326",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001226",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000466",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001296",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000296",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000631",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001205",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001085",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001230",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001327",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001204",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000605",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001199",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000602",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000302",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000610",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000467",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000376",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000530",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000380",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001223",
+      "records": 1
+    },
+    {
+      "source": "house-member-M000194",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000795",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001325",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000480",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000190",
+      "records": 1
+    },
+    {
+      "source": "house-member-C000537",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000478",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000301",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001086",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001309",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000459",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000616",
+      "records": 1
+    },
+    {
+      "source": "house-member-O000175",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000612",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000139",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000392",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001068",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001224",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001120",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001224",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000246",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000589",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000071",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000468",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000603",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000553",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001157",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000048",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000601",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000304",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000814",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000594",
+      "records": 1
+    },
+    {
+      "source": "house-member-E000299",
+      "records": 1
+    },
+    {
+      "source": "house-member-S000250",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001245",
+      "records": 1
+    },
+    {
+      "source": "house-member-A000375",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001091",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000614",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000026",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000134",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000816",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000603",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001115",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001063",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000587",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001130",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001051",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000310",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000131",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000581",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001131",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001291",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000399",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001095",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001213",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001228",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000403",
+      "records": 1
+    },
+    {
+      "source": "house-member-O000086",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000804",
+      "records": 1
+    },
+    {
+      "source": "house-member-K000399",
+      "records": 1
+    },
+    {
+      "source": "house-member-S000185",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001227",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001239",
+      "records": 1
+    },
+    {
+      "source": "house-member-C001118",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000138",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001292",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000568",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001230",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000831",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001318",
+      "records": 1
+    },
+    {
+      "source": "house-member-D000617",
+      "records": 1
+    },
+    {
+      "source": "house-member-L000560",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000600",
+      "records": 1
+    },
+    {
+      "source": "house-member-N000189",
+      "records": 1
+    },
+    {
+      "source": "house-member-B001322",
+      "records": 1
+    },
+    {
+      "source": "house-member-R000621",
+      "records": 1
+    },
+    {
+      "source": "house-member-J000298",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001216",
+      "records": 1
+    },
+    {
+      "source": "house-member-S000510",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001159",
+      "records": 1
+    },
+    {
+      "source": "house-member-S001213",
+      "records": 1
+    },
+    {
+      "source": "house-member-P000607",
+      "records": 1
+    },
+    {
+      "source": "house-member-V000135",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001160",
+      "records": 1
+    },
+    {
+      "source": "house-member-F000471",
+      "records": 1
+    },
+    {
+      "source": "house-member-G000576",
+      "records": 1
+    },
+    {
+      "source": "house-member-T000165",
+      "records": 1
+    },
+    {
+      "source": "house-member-W000829",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001205",
+      "records": 1
+    },
+    {
+      "source": "house-member-M001235",
+      "records": 1
+    },
+    {
+      "source": "house-member-H001096",
+      "records": 1
     },
     {
       "source": "senate",
@@ -2148,6 +3884,834 @@
       "records": 1
     },
     {
+      "source": "court-al",
+      "records": 9
+    },
+    {
+      "source": "court-ak",
+      "records": 5
+    },
+    {
+      "source": "court-az",
+      "records": 7
+    },
+    {
+      "source": "court-ar",
+      "records": 7
+    },
+    {
+      "source": "court-ca",
+      "records": 6
+    },
+    {
+      "source": "court-co",
+      "records": 7
+    },
+    {
+      "source": "court-ct",
+      "records": 7
+    },
+    {
+      "source": "court-de",
+      "records": 5
+    },
+    {
+      "source": "court-fl",
+      "records": 7
+    },
+    {
+      "source": "court-ga",
+      "records": 9
+    },
+    {
+      "source": "court-id",
+      "records": 5
+    },
+    {
+      "source": "court-il",
+      "records": 7
+    },
+    {
+      "source": "court-in",
+      "records": 5
+    },
+    {
+      "source": "court-ia",
+      "records": 7
+    },
+    {
+      "source": "court-ky",
+      "records": 7
+    },
+    {
+      "source": "court-me",
+      "records": 7
+    },
+    {
+      "source": "court-ma",
+      "records": 7
+    },
+    {
+      "source": "court-mi",
+      "records": 7
+    },
+    {
+      "source": "court-ga-names",
+      "records": 9
+    },
+    {
+      "source": "court-mt",
+      "records": 7
+    },
+    {
+      "source": "court-ne",
+      "records": 7
+    },
+    {
+      "source": "court-nj",
+      "records": 7
+    },
+    {
+      "source": "court-nm",
+      "records": 5
+    },
+    {
+      "source": "court-nc",
+      "records": 7
+    },
+    {
+      "source": "court-nd",
+      "records": 5
+    },
+    {
+      "source": "court-oh",
+      "records": 7
+    },
+    {
+      "source": "court-ok-cca",
+      "records": 5
+    },
+    {
+      "source": "court-or",
+      "records": 7
+    },
+    {
+      "source": "court-pa",
+      "records": 7
+    },
+    {
+      "source": "court-sd",
+      "records": 5
+    },
+    {
+      "source": "court-tx-supreme",
+      "records": 9
+    },
+    {
+      "source": "court-tx-cca",
+      "records": 9
+    },
+    {
+      "source": "court-ut",
+      "records": 7
+    },
+    {
+      "source": "court-vt",
+      "records": 5
+    },
+    {
+      "source": "court-va",
+      "records": 7
+    },
+    {
+      "source": "court-wa",
+      "records": 9
+    },
+    {
+      "source": "court-wv",
+      "records": 5
+    },
+    {
+      "source": "court-wi",
+      "records": 7
+    },
+    {
+      "source": "court-wy",
+      "records": 5
+    },
+    {
+      "source": "sw-al-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-al-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-al-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-al-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-al-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-al-agriculture",
+      "records": 1
+    },
+    {
+      "source": "sw-al-psc",
+      "records": 3
+    },
+    {
+      "source": "sw-ak-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-az-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-az-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-az-acc",
+      "records": 5
+    },
+    {
+      "source": "sw-ar",
+      "records": 6
+    },
+    {
+      "source": "sw-ca-ltg",
+      "records": 1
+    },
+    {
+      "source": "sw-ca-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-ca-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ca-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-ca-insurance",
+      "records": 1
+    },
+    {
+      "source": "sw-ca-boe",
+      "records": 1
+    },
+    {
+      "source": "sw-co",
+      "records": 4
+    },
+    {
+      "source": "sw-ct-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-ct-sots",
+      "records": 1
+    },
+    {
+      "source": "sw-ct-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ct-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-ct-comptroller",
+      "records": 1
+    },
+    {
+      "source": "sw-de",
+      "records": 5
+    },
+    {
+      "source": "sw-fl-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-fl-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-fl-agriculture",
+      "records": 1
+    },
+    {
+      "source": "sw-fl-cfo",
+      "records": 1
+    },
+    {
+      "source": "sw-ga",
+      "records": 12
+    },
+    {
+      "source": "sw-hi-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-hi-oha",
+      "records": 9
+    },
+    {
+      "source": "sw-id-officials",
+      "records": 6
+    },
+    {
+      "source": "sw-il-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-il-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-il-comptroller",
+      "records": 1
+    },
+    {
+      "source": "sw-il-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-in-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-in-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-in-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-in-comptroller",
+      "records": 1
+    },
+    {
+      "source": "sw-in-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-ia-governor",
+      "records": 1
+    },
+    {
+      "source": "sw-ia-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ia-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-ia-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-ia-agriculture",
+      "records": 1
+    },
+    {
+      "source": "sw-ks-officials",
+      "records": 5
+    },
+    {
+      "source": "sw-ky-governor",
+      "records": 1
+    },
+    {
+      "source": "sw-ky-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-ky-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ky-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-ky-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-ky-agriculture",
+      "records": 1
+    },
+    {
+      "source": "sw-la-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-la-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-la-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-la-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-la-agriculture",
+      "records": 1
+    },
+    {
+      "source": "sw-md-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-md-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-md-comptroller",
+      "records": 1
+    },
+    {
+      "source": "sw-ma-governor",
+      "records": 1
+    },
+    {
+      "source": "sw-ma-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ma-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-ma-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-mi-msu",
+      "records": 8
+    },
+    {
+      "source": "sw-mi-wsu",
+      "records": 8
+    },
+    {
+      "source": "sw-mn-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-mn-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-mn-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-mn-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-ms-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-ms-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ms-tre",
+      "records": 1
+    },
+    {
+      "source": "sw-ms-aud",
+      "records": 1
+    },
+    {
+      "source": "sw-ms-agr",
+      "records": 1
+    },
+    {
+      "source": "sw-ms-ins",
+      "records": 1
+    },
+    {
+      "source": "sw-mo-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-mo-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-mo-aud",
+      "records": 1
+    },
+    {
+      "source": "sw-mo-tre",
+      "records": 1
+    },
+    {
+      "source": "sw-mo-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-mt-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-mt-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-mt-aud",
+      "records": 1
+    },
+    {
+      "source": "sw-mt-opi",
+      "records": 1
+    },
+    {
+      "source": "sw-ne",
+      "records": 5
+    },
+    {
+      "source": "sw-nv-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-nv-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-nv-tre",
+      "records": 1
+    },
+    {
+      "source": "sw-nv-con",
+      "records": 1
+    },
+    {
+      "source": "sw-nj-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-nm-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-nm-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-nm-tre",
+      "records": 1
+    },
+    {
+      "source": "sw-nm-aud",
+      "records": 1
+    },
+    {
+      "source": "sw-nm-slo",
+      "records": 1
+    },
+    {
+      "source": "sw-ny-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ny-osc",
+      "records": 1
+    },
+    {
+      "source": "sw-nc",
+      "records": 9
+    },
+    {
+      "source": "sw-nd-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-aud",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-ins",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-psc",
+      "records": 3
+    },
+    {
+      "source": "sw-nd-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-dpi",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-tre",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-agr",
+      "records": 1
+    },
+    {
+      "source": "sw-nd-tax",
+      "records": 1
+    },
+    {
+      "source": "sw-oh",
+      "records": 5
+    },
+    {
+      "source": "sw-ok-lg",
+      "records": 1
+    },
+    {
+      "source": "sw-ok-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ok-tre",
+      "records": 1
+    },
+    {
+      "source": "sw-ok-aud",
+      "records": 1
+    },
+    {
+      "source": "sw-ok-sde",
+      "records": 1
+    },
+    {
+      "source": "sw-ok-lab",
+      "records": 1
+    },
+    {
+      "source": "sw-ok-oid",
+      "records": 1
+    },
+    {
+      "source": "sw-ok-occ",
+      "records": 3
+    },
+    {
+      "source": "sw-or-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-or-tre",
+      "records": 1
+    },
+    {
+      "source": "sw-or-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-or-boli",
+      "records": 1
+    },
+    {
+      "source": "sw-pa-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-pa-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-pa-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-pa-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-ri-officials",
+      "records": 4
+    },
+    {
+      "source": "sw-sc-officers",
+      "records": 7
+    },
+    {
+      "source": "sw-sd-officials",
+      "records": 9
+    },
+    {
+      "source": "sw-tx-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-tx-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-tx-comptroller",
+      "records": 1
+    },
+    {
+      "source": "sw-tx-glo",
+      "records": 1
+    },
+    {
+      "source": "sw-tx-agriculture",
+      "records": 1
+    },
+    {
+      "source": "sw-tx-rrc",
+      "records": 3
+    },
+    {
+      "source": "sw-ut-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-ut-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-ut-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-ut-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-vt-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-vt-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-vt-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-vt-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-vt-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-va-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-va-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-lands",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-ospi",
+      "records": 1
+    },
+    {
+      "source": "sw-wa-insurance",
+      "records": 1
+    },
+    {
+      "source": "sw-wv-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-wv-ag",
+      "records": 1
+    },
+    {
+      "source": "sw-wv-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-wv-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-wv-agriculture",
+      "records": 1
+    },
+    {
+      "source": "sw-wi-ltgov",
+      "records": 1
+    },
+    {
+      "source": "sw-wi-bcpl",
+      "records": 3
+    },
+    {
+      "source": "sw-wi-dpi",
+      "records": 1
+    },
+    {
+      "source": "sw-wy-sos",
+      "records": 1
+    },
+    {
+      "source": "sw-wy-auditor",
+      "records": 1
+    },
+    {
+      "source": "sw-wy-treasurer",
+      "records": 1
+    },
+    {
+      "source": "sw-wy-education",
+      "records": 1
+    },
+    {
       "source": "nd-district-directory",
       "records": 2
     }
@@ -2173,14 +4737,22 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Alaska Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2207,14 +4779,46 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "publicServiceCommissioner": {
+            "status": "collected",
+            "records": 3
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Alabama": {
+            "status": "collected",
+            "records": 9
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2239,14 +4843,42 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "landCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Arkansas Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2271,14 +4903,50 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "corporationCommissioner": {
+            "status": "collected",
+            "records": 5
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "not-collected",
+            "records": 0
+          },
+          "mineInspector": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
           "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "superintendentOfPublicInstruction",
+          "mineInspector"
         ],
+        "blockers": [
+          "Secretary of State: azsos.gov answered USER_AGENT with HTTP 403 and a Cloudflare challenge page (Nov 2026).",
+          "Superintendent of Public Instruction: azed.gov answered USER_AGENT with HTTP 403 and a Cloudflare challenge page (Nov 2026).",
+          "Mine Inspector: asmi.az.gov answered USER_AGENT with HTTP 403 and a Cloudflare challenge page (Nov 2026)."
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Arizona Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2303,14 +4971,50 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "controller": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "superintendentOfPublicInstruction"
         ],
+        "blockers": [
+          "Superintendent of Public Instruction: cde.ca.gov answered USER_AGENT with a Radware bot-manager captcha page (Nov 2026)."
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of California": {
+            "status": "collected",
+            "records": 6
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2335,14 +5039,34 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Colorado Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2367,14 +5091,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "comptroller": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Connecticut Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2399,14 +5147,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Delaware Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2431,14 +5203,34 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "chiefFinancialOfficer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Florida": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2463,14 +5255,50 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "laborCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "publicServiceCommissioner": {
+            "status": "collected",
+            "records": 5
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Georgia": {
+            "status": "collected",
+            "records": 9
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2498,15 +5326,29 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "officeOfHawaiianAffairsTrustee": {
+            "status": "collected",
+            "records": 9
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Hawaii Supreme Court": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "The official court website could not be read: https://www.courts.state.hi.us/courts/supreme/justices/justices lists four members (one Chief Justice, three Associate Justices) for the five seats it describes and marks no vacancy."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -2530,14 +5372,46 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "secretaryOfState"
         ],
+        "blockers": [
+          "secretaryOfState: the official source refused automated retrieval: https://sos.iowa.gov/ returned a Cloudflare challenge (HTTP 403)"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Iowa Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2562,14 +5436,42 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "controller": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Idaho Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2594,14 +5496,42 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "comptroller": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "secretaryOfState"
         ],
+        "blockers": [
+          "secretaryOfState: the official source refused automated retrieval: https://www.ilsos.gov/ reset every HTTP/2 stream and timed out over HTTP/1.1"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Illinois Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2629,14 +5559,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "comptroller": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Indiana Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2661,15 +5615,41 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Kansas Supreme Court": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "The official court website could not be read: https://kscourts.gov/About-the-Courts/Supreme-Court/Justices refused automated retrieval (Cloudflare block page, HTTP 403)."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -2693,14 +5673,42 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Kentucky": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2725,15 +5733,49 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "insuranceCommissioner"
         ],
-        "blockers": []
+        "blockers": [
+          "insuranceCommissioner: the official source refused automated retrieval: https://www.ldi.la.gov/ returned a bot challenge (HTTP 403)"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Louisiana Supreme Court": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "The official court website could not be read: https://www.lasc.org/Justices is a Blazor Server application; its HTTP response carries no member list, which is rendered in the browser over a live connection."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -2757,14 +5799,42 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "secretaryOfState"
         ],
+        "blockers": [
+          "secretaryOfState: the official source refused automated retrieval: https://www.sec.state.ma.us/ redirected to itself until the redirect limit (it requires a cookie session)"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Massachusetts Supreme Judicial Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2789,15 +5859,33 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "comptroller": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Maryland": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "The official court website could not be read: https://www.mdcourts.gov/scm/judges refused automated retrieval (bot challenge, HTTP 403)."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -2823,12 +5911,16 @@
             "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Maine Supreme Judicial Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2853,14 +5945,58 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "universityTrustee": {
+            "status": "collected",
+            "records": 8
+          },
+          "universityGovernor": {
+            "status": "collected",
+            "records": 8
+          },
+          "lieutenantGovernor": {
+            "status": "not-collected",
+            "records": 0
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
+          },
+          "attorneyGeneral": {
+            "status": "not-collected",
+            "records": 0
+          },
+          "stateBoardOfEducationMember": {
+            "status": "not-collected",
+            "records": 0
+          },
+          "universityRegent": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
           "lieutenantGovernor",
           "secretaryOfState",
           "attorneyGeneral",
-          "otherStatewideOffices"
+          "stateBoardOfEducationMember",
+          "universityRegent"
         ],
+        "blockers": [
+          "lieutenantGovernor: the official source refused automated retrieval: https://www.michigan.gov/ returned Access Denied (HTTP 403) for every office page",
+          "secretaryOfState: the official source refused automated retrieval: https://www.michigan.gov/sos returned Access Denied (HTTP 403)",
+          "attorneyGeneral: the official source refused automated retrieval: https://www.michigan.gov/ag returned Access Denied (HTTP 403)",
+          "stateBoardOfEducationMember: the official source refused automated retrieval: https://www.michigan.gov/mde returned Access Denied (HTTP 403)",
+          "universityRegent: the official source refused automated retrieval: https://regents.umich.edu/regents/ returned a bot challenge (HTTP 403)"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Michigan Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -2885,15 +6021,37 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Minnesota Supreme Court": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "The official court website could not be read: https://mncourts.gov/supremecourt/justices refused automated retrieval (Cloudflare challenge, HTTP 403)."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -2917,15 +6075,41 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Missouri": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "The official court website could not be read: https://www.courts.mo.gov/ refused automated retrieval (HTTP 403)."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -2949,15 +6133,53 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "secretaryOfState"
         ],
-        "blockers": []
+        "blockers": [
+          "Secretary of State: Mississippi Secretary of State (https://www.sos.ms.gov/) refused automated retrieval: Cloudflare block page (HTTP 403)"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Mississippi": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "The official court website could not be read: https://courts.ms.gov/appellatecourts/sc/scjustices.php returned HTTP 520 (origin error) repeatedly on 2026-11-10."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -2981,14 +6203,42 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "secretaryOfState"
         ],
+        "blockers": [
+          "Secretary of State: Montana Secretary of State (https://sosmt.gov/) refused automated retrieval: firewall block page (HTTP 403)"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Montana Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3013,14 +6263,54 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "laborCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of North Carolina": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3045,14 +6335,58 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "publicServiceCommissioner": {
+            "status": "collected",
+            "records": 3
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "taxCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "North Dakota Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3073,14 +6407,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Nebraska Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3107,13 +6465,19 @@
             "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "New Hampshire Supreme Court": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "New Hampshire Supreme Court (https://www.courts.nh.gov/our-courts/supreme-court): courts.nh.gov refused USER_AGENT with HTTP 403 \"Access Denied\" in November 2026."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -3137,14 +6501,22 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of New Jersey": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3169,14 +6541,46 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "landCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "attorneyGeneral"
         ],
+        "blockers": [
+          "Attorney General: New Mexico Department of Justice (https://nmdoj.gov/) refused automated retrieval: Cloudflare challenge (HTTP 403)"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "New Mexico Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3201,15 +6605,45 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "controller": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "secretaryOfState"
         ],
-        "blockers": []
+        "blockers": [
+          "Secretary of State: Nevada Secretary of State (https://www.nvsos.gov/sos) refused automated retrieval: Incapsula request-unsuccessful page"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Nevada": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "Supreme Court of Nevada (https://nvcourts.gov/supreme/justices): nvcourts.gov answered USER_AGENT with a bot challenge (HTTP 403, \"Just a moment...\") in November 2026."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -3233,15 +6667,37 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "comptroller": {
+            "status": "collected",
+            "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
+          "lieutenantGovernor"
         ],
-        "blockers": []
+        "blockers": [
+          "Lieutenant Governor: Office of the Governor of New York (https://www.governor.ny.gov/about-lieutenant-governor) refused automated retrieval: Access denied (HTTP 403); no other page of the governor's site names the lieutenant governor"
+        ]
+      },
+      "stateCourts": {
+        "courts": {
+          "New York Court of Appeals": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "New York Court of Appeals (https://www.nycourts.gov/ctapps/): nycourts.gov answered USER_AGENT with a bot challenge (HTTP 403, \"Just a moment...\") in November 2026. The court titles its members Chief Judge and Associate Judge; statewide.COURT_OFFICES has no Chief Judge."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -3265,14 +6721,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Ohio": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3297,15 +6777,57 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
+          },
+          "laborCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "corporationCommissioner": {
+            "status": "collected",
+            "records": 3
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Oklahoma Court of Criminal Appeals": {
+            "status": "collected",
+            "records": 5
+          },
+          "Supreme Court of Oklahoma": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "Supreme Court of Oklahoma (https://www.oscn.net/static/JudicialDirectory.pdf): oscn.net lists the current justices only in the PDF Judicial Directory; the build has no PDF text extraction."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -3329,14 +6851,34 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "laborCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Oregon Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3361,14 +6903,34 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Pennsylvania": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3393,15 +6955,37 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Rhode Island Supreme Court": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "Rhode Island Supreme Court (https://www.courts.ri.gov/Courts/SupremeCourt/Pages/default.aspx): courts.ri.gov publishes no current list of the justices in its HTTP responses (November 2026); the only roster document, AboutTheSupremeCourt.pdf, was last modified in 2023."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -3427,15 +7011,49 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "comptroller": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of South Carolina": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "Supreme Court of South Carolina (https://www.sccourts.org/courts/supreme-court/justices/): The justices page listed 4 members for 5 seats (S.C. Code 14-3-10) and showed no vacancy marker (November 2026)."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -3459,14 +7077,46 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "landCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "publicServiceCommissioner": {
+            "status": "collected",
+            "records": 3
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "South Dakota Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3493,13 +7143,19 @@
             "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
         "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Tennessee Supreme Court": {
+            "status": "not-collected",
+            "records": 0
+          }
+        },
+        "blockers": [
+          "Tennessee Supreme Court (https://www.tncourts.gov/courts/supreme-court/judges): tncourts.gov answered USER_AGENT with a JavaScript challenge page instead of content in November 2026."
+        ]
       },
       "countyOfficials": "not-collected"
     },
@@ -3523,14 +7179,46 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "comptroller": {
+            "status": "collected",
+            "records": 1
+          },
+          "landCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "railroadCommissioner": {
+            "status": "collected",
+            "records": 3
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Texas": {
+            "status": "collected",
+            "records": 9
+          },
+          "Texas Court of Criminal Appeals": {
+            "status": "collected",
+            "records": 9
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3555,14 +7243,34 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Utah Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3587,14 +7295,26 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Virginia": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3619,14 +7339,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Vermont Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3651,14 +7395,50 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "landCommissioner": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
+          },
+          "insuranceCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Washington Supreme Court": {
+            "status": "collected",
+            "records": 9
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3683,14 +7463,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "lieutenantGovernor": {
+            "status": "collected",
+            "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Wisconsin Supreme Court": {
+            "status": "collected",
+            "records": 7
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3715,14 +7519,38 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "attorneyGeneral": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "agricultureCommissioner": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Supreme Court of Appeals of West Virginia": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3747,14 +7575,34 @@
           "governor": {
             "status": "collected",
             "records": 1
+          },
+          "secretaryOfState": {
+            "status": "collected",
+            "records": 1
+          },
+          "auditor": {
+            "status": "collected",
+            "records": 1
+          },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
+          "superintendentOfPublicInstruction": {
+            "status": "collected",
+            "records": 1
           }
         },
-        "notCollected": [
-          "lieutenantGovernor",
-          "secretaryOfState",
-          "attorneyGeneral",
-          "otherStatewideOffices"
-        ],
+        "notCollected": [],
+        "blockers": []
+      },
+      "stateCourts": {
+        "courts": {
+          "Wyoming Supreme Court": {
+            "status": "collected",
+            "records": 5
+          }
+        },
         "blockers": []
       },
       "countyOfficials": "not-collected"
@@ -3775,12 +7623,12 @@
     },
     "areaIntersectionPairs": 62399,
     "officialGeometryLinks": {
-      "officials": 7327,
-      "matched": 7327,
+      "officials": 7849,
+      "matched": 7849,
       "unmatched": 0,
       "matchedByLayer": {
         "cd": 433,
-        "state": 150,
+        "state": 672,
         "sldu": 1840,
         "sldl": 4849,
         "sldl_floterial": 55
@@ -3803,6 +7651,10 @@
     "vicePresident": {
       "status": "collected",
       "records": 1
+    },
+    "delegates": {
+      "status": "collected",
+      "records": 6
     }
   }
 }

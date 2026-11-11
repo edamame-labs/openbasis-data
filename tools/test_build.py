@@ -69,9 +69,10 @@ class RosterTests(unittest.TestCase):
             build.parse_state('nc-upper',duplicate.encode(),SOURCE)
 
     def test_senate_email_field_is_not_published_as_email(self):
-        raw=b'<contact_information><member><first_name>Jane</first_name><last_name>Doe</last_name><state>CA</state><bioguide_id>D123</bioguide_id><party>D</party><email>https://example.gov/</email></member></contact_information>'
+        raw=b'<contact_information><member><first_name>Jane</first_name><last_name>Doe</last_name><state>CA</state><bioguide_id>D123</bioguide_id><party>D</party><email>https://example.gov/</email><address>374 Russell Senate Office Building Washington DC\n 20510</address></member></contact_information>'
         r=build.parse_federal('senate',raw,SOURCE)[0]
         self.assertNotIn('email',r)
+        self.assertEqual(r['address'],'374 Russell Senate Office Building, Washington, DC 20510')
         self.assertEqual(r['sources'],[SOURCE])
 
     def test_named_and_alphanumeric_districts_are_preserved(self):
