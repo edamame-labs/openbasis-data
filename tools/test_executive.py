@@ -82,5 +82,72 @@ class GovernorTests(unittest.TestCase):
         self.assertEqual(build.executive_coverage('TX', region.EXECUTIVE['TX'], 1)['offices']['governor'], dict(status='collected', records=1))
 
 
+def party_source(st):
+    pub, url = region.PARTY_SOURCES['gov-party-'+st.lower()]
+    return dict(id='gov-party-'+st.lower(), name=pub, url=url, retrievedAt='2026-11-11T01:00:00+00:00', sha256='b'*64, representation='http-response-body')
+
+
+class GovernorPartyTests(unittest.TestCase):
+    ND = (b'<a href="/exhibits/governors/governors33.html">Doug Burgum</a> (R) 2016-2024<br />\n'
+          b'<a href="/exhibits/governors/governors34.html">Kelly Armstrong</a> (R) 2024-present</p>')
+
+    def test_party_is_read_from_the_entry_naming_the_governor(self):
+        self.assertEqual(region.governor_party('ND', self.ND, 'Kelly Armstrong'), 'Republican')
+        page = (b'<tr><td data-label="Candidate">MATT MEYER</td><td data-label="Party">Democratic Party</td>'
+                b'<tr><td data-label="Candidate">MIKE RAMONE</td><td data-label="Party">Republican Party</td>')
+        self.assertEqual(region.governor_party('DE', page, 'Matt Meyer'), 'Democratic')
+
+    def test_minnesota_label_is_kept(self):
+        page = (b'<th scope="row">Tim Walz</th><td> <span id="x_assumedoffice">1/7/2019</span> </td><td> <span id="x_govnum">41</span> </td><td>Democratic-Farmer-Labor</td>'
+                b'<th scope="row">Alexander Ramsey</th><td> <span id="y_assumedoffice">1/2/1860</span> </td><td> <span id="y_govnum">2</span> </td><td>Republican</td>')
+        self.assertEqual(region.governor_party('MN', page, 'Tim Walz'), 'Democratic-Farmer-Labor')
+
+    def test_page_that_does_not_name_the_governor_stops(self):
+        with self.assertRaises(AssertionError):
+            region.governor_party('ND', self.ND, 'Someone Else')
+
+    def test_page_with_no_entries_stops(self):
+        with self.assertRaises(AssertionError):
+            region.governor_party('ND', b'<p>Governors</p>', 'Kelly Armstrong')
+
+    def test_two_parties_for_the_governor_stop(self):
+        page = self.ND + b'<a href="/exhibits/governors/governors35.html">Kelly Armstrong</a> (D) 2028-present'
+        with self.assertRaises(AssertionError):
+            region.governor_party('ND', page, 'Kelly Armstrong')
+
+    def test_unmapped_label_stops(self):
+        page = b'<a href="/exhibits/governors/governors34.html">Kelly Armstrong</a> (Pop) 2024-present'
+        with self.assertRaises(AssertionError):
+            region.governor_party('ND', page, 'Kelly Armstrong')
+
+    def test_same_person(self):
+        same = [('Kay Ivey', 'IVEY, KAY'), ('J. Kevin Stitt', 'Kevin Stitt'), ('JB Pritzker', 'J.B. PRITZKER'), ('Brian P. Kemp', 'Brian Kemp'),
+                ('Michelle Lujan Grisham', 'MICHELLE LUJAN GRISHAM'), ('Dan McKee', 'Daniel J. McKee'), ('Josh Shapiro', 'SHAPIRO, JOSHUA D'),
+                ('Jeff Landry', '\\"Jeff\\" Landry'), ('Ned Lamont', 'Edward M. "Ned" Lamont, Jr.'), ('Wes Moore', 'WESTLEY WATENDE OMARI (WES) MOORE')]
+        different = [('Mike Dunleavy', 'Dunleavy'), ('Mike Dunleavy', 'Michael J. Dunleavy'), ('Phil Scott', 'Rick Scott'), ('Kelly Ayotte', 'Kelly Armstrong'),
+                     ('Jim Pillen', 'Jo Pillen'), ('Josh Green', 'Josh Greene')]
+        for governor, listed in same: self.assertTrue(region.same_person(governor, listed), (governor, listed))
+        for governor, listed in different: self.assertFalse(region.same_person(governor, listed), (governor, listed))
+
+    def test_party_carries_field_evidence_and_both_references(self):
+        gov = region.parse('gov-nd', b'<title>Governor Kelly Armstrong | North Dakota Office of the Governor</title>', source('gov-nd'))[0]
+        row = region.add_party(gov, region.governor_party('ND', self.ND, gov['name']), party_source('ND'))
+        self.assertEqual(row['party'], 'Republican')
+        self.assertEqual(row['fieldEvidence'], {'party': {'value': 'Republican', 'sourceIds': ['gov-party-nd']}})
+        self.assertEqual([s['id'] for s in row['sources']], ['gov-nd', 'gov-party-nd'])
+        self.assertTrue(set(row) <= build.FIELDS and 'party' in build.EVIDENCED)
+
+    def test_every_state_has_a_party_rule_or_a_reason(self):
+        self.assertEqual(set(region.PARTY_RULES) | set(region.PARTY_NOT_COLLECTED), build.STATE_CODES)
+        self.assertFalse(set(region.PARTY_RULES) & set(region.PARTY_NOT_COLLECTED))
+        for st, (publisher, url, pattern, period) in region.PARTY_RULES.items():
+            self.assertTrue(publisher and url.startswith('https://'), st)
+            self.assertTrue(build.source_allowed(dict(url=url)), st)
+            self.assertTrue({'name', 'party'} <= set(__import__('re').compile(pattern).groupindex), st)
+
+    def test_party_sources_are_not_governor_sources(self):
+        self.assertFalse(set(region.PARTY_SOURCES) & set(region.SOURCES))
+
+
 if __name__ == '__main__':
     unittest.main()

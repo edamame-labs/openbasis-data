@@ -10,7 +10,8 @@ This skill refreshes `office: "Governor"` records. The adapter is `tools/regions
 ## Rules that never bend
 
 - **Use only official state governor websites.** Never fill a missing or blocked state from Wikipedia, NGA, Ballotpedia, news articles, a search engine, a previous release or memory. If a state can't be read, it stays `not-collected`, with the reason in `BLOCKED`.
-- **Don't evade access controls.** If a site answers automated requests with a 403, a bot challenge or a CAPTCHA, don't rotate user agents, imitate a browser, run headless browsers to get through, use proxies, or solve challenges. Requests send `USER_AGENT`, which identifies the project. Those states need a capture made by a person (step 3), or they stay blocked.
+- **Party comes only from a page of the same state's government.** The governor sites don't state a party. `PARTY_RULES` names, per state, an officials roster, a list of governors, or official election results or candidate records that do. A state with no such readable page stays in `PARTY_NOT_COLLECTED`, and its governor has no `party`. The sources ruled out above are never used for party either.
+- **Don't evade access controls.** If a site answers automated requests with a 403, a bot challenge or a CAPTCHA, don't rotate user agents, imitate a browser, run headless browsers to get through, use proxies, or solve challenges. Requests send `USER_AGENT`, which identifies the project. Those states need a capture made by a person (step 4), or they stay blocked.
 - **Fail closed.** If a rule finds zero names or two different names, the build stops. Investigate the page; never loosen a pattern until it "passes".
 - **No private context in the public repo.** Commit messages and PRs describe the code and data changes and the validation results, and nothing else.
 
@@ -56,11 +57,36 @@ Every line should print a name. Compare the names with the last published `data/
 - **FAIL with an AssertionError (no match or ambiguous).** The page changed. Open it, find one element that names the governor (the `<title>`, a single `<h1>`, `og:title`/`og:site_name`, or a meta description), and update that state's pattern. Prefer elements that name the office holder over news headlines. Add or adjust a case in `tools/test_executive.py`.
 - **North Dakota 404.** Its source URL contains the governor's name (`/governor-<name>`). Follow the "Governor" link in the homepage menu and update the URL.
 
-### 2. Re-check blocked states
+### 2. Probe the party sources
+
+```sh
+python3 -B - <<'EOF'
+import sys, json; sys.path.insert(0, 'tools')
+import build; sys.modules['build'] = build
+from regions import executive as e
+governors = {o['state']: o['name'] for o in json.load(open('data/officials.json'))['officials'] if o['office'] == 'Governor'}
+for st in sorted(e.PARTY_RULES):
+    key = 'gov-party-' + st.lower()
+    try:
+        raw, src = build.fetch(key, *e.PARTY_SOURCES[key], user_agent=e.USER_AGENT)
+        print(st, governors[st], e.governor_party(st, raw, governors[st]))
+    except Exception as x:
+        print(st, 'FAIL', type(x).__name__, str(x)[:200])
+EOF
+```
+
+Every line should print a party. If step 1 found a new governor, check that state with the new name.
+
+- **FAIL because no entry names the governor.** Either the office changed hands or the page changed. After a change, find the new governor's page of the same kind (official results of the election that began the term, the state's list of governors, or a current roster) and update the rule. Rules that point at one person's page (CA, KS, FL, WV) always need this.
+- **FAIL with an HTTP error or a bot challenge.** Retry once later. If it keeps failing, move the state from `PARTY_RULES` to `PARTY_NOT_COLLECTED` with the reason. The governor record stays, without `party`.
+- **FAIL on an unmapped label.** Read the page. Add the label to `PARTY_LABELS` only if the page states it as the governor's party.
+- **A state in `PARTY_NOT_COLLECTED`.** Re-check its reason. A new rule needs a page of that state's government, fetched with `USER_AGENT`, that states the party beside the governor's name in the response body (no PDF, no script-rendered content). Add a case to `tools/test_executive.py`.
+
+### 3. Re-check blocked states
 
 For each URL in `BLOCKED`, run `curl -sS -o /dev/null -w '%{http_code}\n' -A "<USER_AGENT>" <url>`. If one now returns 200, inspect the page, write a rule, move the state from `BLOCKED` to `RULES`, and add a test.
 
-### 3. Captures made by a person (browser-only states)
+### 4. Captures made by a person (browser-only states)
 
 States in `BROWSER` are read from a DOM snapshot that a person captured in a normal browser and imported. A snapshot counts for 24 hours. An automated agent must not produce these itself (see the rules above). It should open an issue or PR comment listing the states that need a capture and the instructions below, then continue without them.
 
@@ -97,13 +123,13 @@ If a browser state becomes readable over HTTP with `USER_AGENT`, remove it from 
 
 Colorado is read from `https://www.colorado.gov/governor/` because `governor.colorado.gov` stopped accepting connections. On each run, re-check the subdomain. If it responds again, either URL is fine.
 
-### 4. Test
+### 5. Test
 
 ```sh
 .venv-geo/bin/python -B -m unittest discover -s tools -p 'test_*.py'
 ```
 
-### 5. Rebuild and verify
+### 6. Rebuild and verify
 
 Publication needs fresh observations of every source:
 
@@ -119,13 +145,15 @@ Check the result:
 - `data/coverage.json` → `states[].stateExecutive.offices.governor` is `collected` with `records: 1` exactly for the states in `RULES`.
 - `data/district-links.json` → every `*-governor` record uses `matchingRule: "statewide-governor-state-fips"`.
 - `git diff data/officials.json` shows governor changes only where step 1 found them.
+- Every governor in `PARTY_RULES` has `party` with `fieldEvidence.party.sourceIds: ["gov-party-<st>"]`, and no governor in `PARTY_NOT_COLLECTED` has one.
 
-### 6. Pull request
+### 7. Pull request
 
 Branch from `main`, commit `tools/`, `docs/` and `data/` together, and open a PR. State in the body:
 
 - governors added, removed or renamed, with the official URL for each
 - states moved between `RULES`, `BROWSER` and `BLOCKED`, and why
+- states moved between `PARTY_RULES` and `PARTY_NOT_COLLECTED`, and why
 - test and `--verify --fresh` results
 - browser captures that were missing, if any
 
