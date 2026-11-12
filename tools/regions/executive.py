@@ -7,11 +7,13 @@ ambiguous match stops the build. Sites that refuse plain HTTP retrieval are
 listed in BLOCKED and recorded as not collected rather than filled from another
 publisher.
 
-The governor sites do not state a party. Where a second page published by the
-same state's government does (PARTY_RULES), `party` comes from that page and
-carries field evidence; other governors have no party.
+The governor sites do not state a party. Where a second page or PDF published by
+the same state's government does (PARTY_RULES), `party` comes from that document
+and carries field evidence; other governors have no party.
 """
 import html
+import io
+import logging
 import re
 import unicodedata
 from build import record
@@ -93,16 +95,20 @@ assert set(RULES) | set(BLOCKED) == set(NAMES) and not set(RULES) & set(BLOCKED)
 assert all(k.removeprefix('gov-').upper() in RULES for k in BROWSER)
 
 
-# Party. state: (publisher, url, pattern, effective period or None). Each page is published by a government body of
-# the same state and states a party beside a person's name: an officials roster, a list of the state's governors, or the
+# Party. state: (publisher, url, pattern, effective period or None). Each page or PDF is published by a government body
+# of the same state (in Ohio, a county board of elections) and states a party beside a person's name: an officials roster, a list of the state's governors, or the
 # official results or candidate list of the election that began the governor's term. The pattern's name and
-# party groups list the people the page names; it runs on the HTML-unescaped page with whitespace collapsed (JSON bodies as
-# served). The governor's party is that of the entries naming the governor (same_person), which must agree.
+# party groups list the people the document names; it runs on the HTML-unescaped page with whitespace collapsed (JSON bodies
+# as served, PDFs as the text pdf_text extracts). The governor's party is that of the entries naming the governor
+# (same_person), which must agree.
+W = r"(?:[A-Z]\.|[A-Z][a-z][A-Za-z'\-]*)"  # a capitalised word or an initial, for names in PDF text
 PARTY_RULES = {
  'AK': ('Alaska Division of Elections', 'https://www.elections.alaska.gov/candidates/?election=22genr',
         r'</a><strong>(?P<name>[^<(/]+?) \(Registered (?P<party>[^)]+)\)(?: / [^<]*)?</strong>', '2022-11-08 general election candidate list'),
  'AL': ('Alabama Department of Archives and History', 'https://archives.alabama.gov/research/guidance/fast-facts/officials/governor.aspx',
         r'<tr> <td>[^<]*</td> <td>(?:<a [^>]*>)?(?P<name>[^<]+?)(?:</a>)?</td> <td>[^<]*</td> <td>[^<]*</td> <td>(?P<party>[^<]+?)</td>', None),
+ 'AR': ('Arkansas House of Representatives', 'https://www.arkleg.state.ar.us/Home/FTPDocument?path=%2Fassembly%2F2023%2F2023R%2FDocuments%2F2023R+House+Journal.pdf',
+        r'(?P<name>[A-Z][a-z]+(?:[ -](?:[A-Z][a-z]+,?|[A-Z][a-z]{0,2}\.))+) \( ?(?P<party>[A-Z]{3})\) [\d,]+ \( ?\d+\.\d+%\)', '2022-11-08 general election'),
  'AZ': ('Arizona Citizens Clean Elections Commission', 'https://www.azcleanelections.gov/Custom/ElectionDataSearch?type=G&sw=A&part=A&inc=A&win=A&cycles=18&offices=2&page=1',
         r'"Party":"(?P<party>[^"]+)","PartyAbbrev":"[^"]*","Initial":[\d.]+,"Matching":[\d.]+,"Independent":[\d.]+,"FullName":"(?P<name>[^"]+)"', '2022-11-08 general election candidate record'),
  'CA': ('California State Library', 'https://governors.library.ca.gov/40-Newsom.html',
@@ -119,6 +125,8 @@ PARTY_RULES = {
         r'"name":"(?P<name>[^"()]+?)(?: \(I\))? \([A-Za-z]+\)","ballotOrder":\d+,"voteCount":\d+,"politicalParty":"(?P<party>[A-Za-z]+)"', '2022-11-08 general election'),
  'HI': ('Hawaii Office of Elections', 'https://elections.hawaii.gov/governor-and-lieutenant-governor/',
         r'<td class="column-1">[^<]*</td><td class="column-2">\((?P<party>[A-Z]+)\) (?P<name>[^<*]+)\*?</td>', None),
+ 'IA': ('Iowa Legislative Services Agency', 'https://www.legis.iowa.gov/docs/publications/RDBKI/1597053.pdf',
+        r"(?P<name>[A-Z][A-Za-z.' ]+?) \((?P<party>[A-Z])\) \d{4} –", None),
  'ID': ('Idaho Secretary of State', 'https://voteidaho.gov/idaho-elected-officials/',
         r'<h3 class="elementor-heading-title[^"]*">(?P<name>[^<(]+?) \((?P<party>[A-Z])\)</h3>', None),
  'IL': ('Illinois State Board of Elections', 'https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=62',
@@ -127,6 +135,8 @@ PARTY_RULES = {
         r',Governor & Lt\. Governor,(?P<name>[^,]+),(?P<party>[^,]+),Indiana,\d+', '2024-11-05 general election'),
  'KS': ('Kansas Historical Society', 'https://www.kansashistory.gov/kansapedia/laura-kelly/20157',
         r'<h1>(?P<name>[^<]+)</h1> <p[^>]*> (?:<strong>)?(?:<img[^>]*>)?Politician\. (?P<party>[A-Z][a-z]+)\. Born:', None),
+ 'KY': ('Kentucky State Board of Elections', 'https://elect.ky.gov/results/2020-2029/Documents/Certification%20of%20Election%20Results%20for%202023%20General%20Election%20Final.pdf',
+        r'(?P<party>[A-Z][a-z]+) Party (?:[A-Z][a-z]+ Party )*(?:Write-In )?(?P<name>[A-Z][A-Za-z.\'"“” ]*? [A-Z]{2,})(?= )', '2023-11-07 general election'),
  'LA': ('Louisiana Secretary of State', 'https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20231014/RacesCandidates_Multiparish.htm',
         r'"Desc":"(?P<name>(?:[^"\\(]|\\.)+?) \((?P<party>[A-Z]+)\)"(?=(?:(?!"SpecificTitle").)*"SpecificTitle":"Lieutenant Governor")', '2023-10-14 gubernatorial primary election'),
  'MA': ('Secretary of the Commonwealth of Massachusetts', 'https://electionstats.state.ma.us/elections/view/154338/',
@@ -135,20 +145,32 @@ PARTY_RULES = {
         r'<td class="NameCol"[^>]*> <div> (?P<name>[^<]+?) and [^<]+? (?:<img[^>]*> )?</div> </td> <td class="PartyCol"[^>]*> (?P<party>[^<]+?) </td>', '2022-11-08 general election'),
  'ME': ('Maine State Law and Legislative Reference Library', 'https://legislature.maine.gov/lawlibrary/governors-of-maine-1820/9197',
         r'<tr> <td class="smalllinksblack"[^>]*>(?P<name>[^<]+?)</td> <td class="smalllinksblack"[^>]*>[^<]*\b20\d\d\b[^<]*</td> <td class="smalllinksblack"[^>]*>(?P<party>[^<]+?)</td> </tr>', None),
+ 'MI': ('Michigan Legislative Service Bureau', 'https://legislature.mi.gov/documents/2025-2026/michiganmanual/Chapter%204.pdf',
+        r"(?P<party>[A-Z]) — (?P<name>[A-Z][A-Za-z.' ]+?) ?\.{3,}", None),
  'MN': ('Minnesota Legislative Reference Library', 'https://www.lrl.mn.gov/mngov/gov',
         r'<th[^>]*scope="row"[^>]*>(?P<name>[^<]+)</th><td[^>]*> <span id="[^"]*assumedoffice">[^<]*</span> </td><td> <span id="[^"]*govnum">[^<]*</span> </td><td>(?P<party>[^<]+)</td>', None),
  'MO': ('Missouri State Archives', 'https://www.sos.mo.gov/archives/history/historicallistings/governors',
         r'<td> <p>(?:<span[^>]*>)?\d+\.(?: |<span[^>]*>)*(?:<a [^>]*>)?(?P<name>[^<]+?)(?:</a>)? ?(?:</span>)? ?\((?P<party>[A-Za-z-]+)\)(?=<)', None),
+ 'MS': ('Mississippi Secretary of State', 'https://www.sos.ms.gov/elections/electionresults/2023General/State%20Certified%20Results/2023%20Statewide%20Recapitulation%20Sheet.pdf',
+        r"(?P<name>[A-Z][A-Za-z.'\"\- ]+?) (?P<party>[A-Z][a-z]+) \d+ \d+", '2023-11-07 general election'),
  'MT': ('Montana Historical Society', 'https://mhs.mt.gov/Research/Compass/Facts',
         r'<td[^>]*>[^<]*\d{4}[^<]*</td> <td[^>]*>(?P<name>[^<]+)</td> <td[^>]*>(?: <p>)?(?P<party>[A-Za-z][A-Za-z -]*?)(?:</p> )?</td> </tr>', None),
  'NC': ('North Carolina State Board of Elections', 'https://er.ncsbe.gov/enr/20241105/data/results_0.txt',
         r'"cnm":"NC GOVERNOR[^"]*"[^{}]*?"bnm":"(?P<name>[^"]+)"[^{}]*?"pty":"(?P<party>[^"]+)"', '2024-11-05 general election'),
  'ND': ('State Historical Society of North Dakota', 'https://www.history.nd.gov/exhibits/governors/index.html',
         r'<a href="/exhibits/governors/governors\d+\.html">(?P<name>[^<]+)</a> \((?P<party>[^)]+)\) \d{4}-(?:\d{4}|present)', None),
+ 'NE': ('Nebraska Legislature', 'https://nebraskalegislature.gov/pdf/bluebook/407-431.pdf',
+        r"(?P<name>[A-Z][A-Za-z.' ]+?) \((?P<party>[A-Z])\) ?\.{3,} ?\d{4}", None),
+ 'NH': ('New Hampshire House of Representatives', 'https://gc.nh.gov/house/calendars_journals/journals/2025/HJ%2002%20January%208,%202025.pdf',
+        rf'(?P<name>{W}(?: {W})+), (?P<party>[a-z])(?= )', '2024-11-05 general election'),
+ 'NJ': ('New Jersey Division of Elections', 'https://www.nj.gov/state/elections/assets/pdf/election-results/2025/2025-official-general-results-governor.pdf',
+        r"Name Address (?P<name>[A-Z][A-Z.'\- ]+?)(?: \(w\))? (?=P\.O\.|\d).{5,80}? NJ \d{5} (?P<party>[A-Z][A-Za-z ]+?) ATLANTIC", '2025-11-04 general election'),
  'NM': ('New Mexico Secretary of State', 'https://electionresults.sos.nm.gov/resultsSW.aspx?type=SW&map=CTY&eid=2838',
         r'<div class="col display-results-box-d"> <h1>(?P<name>[^<]+?)(?: AND [^<]+)?</h1> <h2 class="[^"]*">(?P<party>[^<]+)</h2>', '2022-11-08 general election'),
  'NV': ('Nevada State Library, Archives and Public Records', 'https://nsla.nv.gov/archives-governor',
         r'<tr> <td[^>]*>(?P<name>[^<]+)</td> <td[^>]*>(?: <p>)?[^<]*\d{4}[^<]*(?:</p> )?</td> <td[^>]*>(?P<party>[^<]+)</td> </tr>', None),
+ 'OH': ('Logan County Board of Elections', 'https://www.boe.ohio.gov/logan/c/elecres/20221108results.pdf',
+        r"\b(?P<party>[A-Z]{3}) (?P<name>[A-Z][A-Za-z.'\-]+(?: [A-Z][A-Za-z.'\-]+)+?)(?= and [A-Z]| [\d,]+ )", '2022-11-08 general election'),
  'OK': ('Oklahoma Historical Society', 'https://www.okhistory.org/research/governors',
         r'<tr> <td>(?:<strong>)?(?:<a [^>]*>)?(?P<name>[^<]+)(?:</a>)?(?:</strong>)?</td> <td>(?P<party>[A-Za-z][A-Za-z -]*)</td> <td>[^<]*\d{4}[^<]*</td>', None),
  'OR': ('Oregon Secretary of State', 'https://sos.oregon.gov/blue-book/government/Pages/governor-bio.aspx',
@@ -157,8 +179,12 @@ PARTY_RULES = {
         r'\\"OfficeName\\":\\"Governor\\",\\"CandidateName\\":\\"(?P<name>[^"\\]+?) *\\",\\"PartyName\\":\\"(?P<party>[^"\\]+)\\"', '2022-11-08 general election'),
  'RI': ('Rhode Island Board of Elections', 'https://www.ri.gov/election/results/2022/general_election/races/3.html',
         r'<td scope="row" class="candidate" data-title="Candidate">(?P<party>[A-Za-z]+) (?P<name>[^<]+?) <span class="smalltext">\((?P=party)\)</span>', '2022-11-08 general election'),
+ 'SC': ('South Carolina Legislature', 'https://www.scstatehouse.gov/man26/04_Gov.pdf',
+        r"(?P<name>[A-Z][A-Za-z'\-]+, [A-Z][A-Za-z. ]+?) \[(?P<party>[A-Z])\]—\(", None),
  'SD': ('South Dakota Secretary of State', 'https://sdsos.gov/elections-voting/election-resources/current-elected-officials.aspx',
         r'<strong>(?P<office>U\.S\. Senator|U\.S\. Representative|Governor|Lt\. Governor|Secretary of State|Attorney General|State Auditor|State Treasurer) (?P<name>[^<(]+?) \((?P<party>[A-Z])\)\s*</strong>', None),
+ 'TN': ('Tennessee Secretary of State', 'https://publications.tnsosfiles.com/pub/blue_book/25-26/25-26_Executive.pdf',
+        rf'(?P<name>{W}(?: {W})+) \((?P<party>[A-Z])\) Governor of Tennessee', None),
  'TX': ('Legislative Reference Library of Texas', 'https://lrl.texas.gov/legeLeaders/governors/govBrowse.cfm',
         r'<th scope="row"><a href="govPage\.cfm\?governorID=\d+">\s*(?P<name>[^<]+?)\s*</a>\s*</th>\s*<td align="center">\s*(?P<party>[^<]*?)\s*<br>', None),
  'UT': ('Utah Historical Society', 'https://historytogo.utah.gov/post/governors/',
@@ -169,26 +195,20 @@ PARTY_RULES = {
         r'"party":\{"id":"\d+","name":"(?P<party>[^"]+)"[^{}]*\},"party2":(?:null|\{[^{}]*\}),"party3":(?:null|\{[^{}]*\}),"party4":(?:null|\{[^{}]*\}),"__typename":"CandidateInContest","voteChannelId":\d+,"candidate":\{[^{}]*\},"shortDisplayName":"(?:[^"\\]|\\.)*","displayName":"(?P<name>(?:[^"\\]|\\.)+)"', '2024-11-05 general election'),
  'WA': ('Washington State Library', 'https://www.sos.wa.gov/library/research-collections/washington-territorial-and-state-governors',
         r'<tr> <td>(?P<name>[^<]+?)\s*</td> <td>\s*(?P<party>[A-Za-z][^<]*?)\s*</td> <td>\s*\d', None),
+ 'WI': ('Wisconsin Legislative Reference Bureau', 'https://docs.legis.wisconsin.gov/misc/lrb/blue_book/2025_2026/020_elected_officials.pdf',
+        rf'(?P<name>{W}(?: {W})+), (?:Governor|Lieutenant Governor|Attorney General|Secretary of State|State Treasurer) (?P<party>[A-Z][a-z]+) Personal:', None),
  'WV': ('West Virginia Secretary of State', 'https://apps.sos.wv.gov/elections/candidate-search/candidate.aspx?candidate=22761',
         r'<tr><td><strong>(?P<name>[^<]+?)\s*(?:</?strong>)+<br ?/?></td><td>(?P<party>[^<]+?)</td>', '2024 election candidate record'),
+ 'WY': ('Wyoming Secretary of State', 'https://sos.wyo.gov/Services/docs/GovernorRoster.pdf',
+        rf'(?:(?<=\d{{4}} )|(?<=Office ))(?P<name>{W}(?: {W})+) \((?P<party>[A-Z])\) [A-Z][a-z]{{2}}\. \d', None),
 }
-# Governors with no party: no page of the state's government that states it could be read over plain HTTP with USER_AGENT.
+# Governors with no party: no page or PDF of the state's government that states it could be read over plain HTTP with USER_AGENT.
 # Nothing else substitutes for one (no association, encyclopedia, news or party source).
+# PDFs read only in part: the pages (a slice, from 0) that hold the entries. The Arkansas journal has 3,547 pages and
+# prints the declared results of the 2022 general election in the second day's proceedings.
+PDF_PAGES = {'AR': slice(0, 200)}
 PARTY_NOT_COLLECTED = {
- 'AR': 'Secretary of State results are PDFs or a script-rendered vendor application; its elected-officials page names no party.',
- 'IA': 'sos.iowa.gov answered USER_AGENT with a Cloudflare challenge (HTTP 403); the results site is script-rendered; the canvass and Official Register are PDFs.',
- 'KY': 'State Board of Elections results are PDFs; its live-results host returned HTTP 403.',
- 'MI': 'www.michigan.gov and mvic.sos.state.mi.us returned HTTP 403; the Michigan Manual is a PDF.',
- 'MS': 'The Secretary of State results application returned HTTP 403; certified results are PDFs.',
- 'NE': 'Certified 2022 results are PDFs; the Secretary of State results site serves only the latest election.',
- 'NH': 'www.nh.gov and www.sos.nh.gov returned HTTP 403.',
- 'NJ': 'Division of Elections 2025 results are PDFs; no readable state page names a party.',
- 'NY': 'State Board of Elections hosts returned a Cloudflare challenge (HTTP 403).',
- 'OH': 'ohiosos.gov returned a JavaScript security check (HTTP 403).',
- 'SC': 'State Election Commission results are on a vendor host that sends only gzip-encoded bodies; the Legislative Manual is a PDF.',
- 'TN': 'Results and the Blue Book are PDF or XLSX; the state roster names no party.',
- 'WI': 'The Elections Commission returned a bot challenge (HTTP 403); the Blue Book is a PDF.',
- 'WY': "Secretary of State roster and 2022 results are PDFs; the state's list of governors gives no party for the incumbent.",
+ 'NY': "State Board of Elections hosts returned a Cloudflare challenge (HTTP 403); the State Library's list of governors, the Governor's site and the open-data campaign filer records name no party.",
 }
 assert set(PARTY_RULES) | set(PARTY_NOT_COLLECTED) == set(NAMES) and not set(PARTY_RULES) & set(PARTY_NOT_COLLECTED)
 # Labels the party pages use, as published. An unlisted label stops the build.
@@ -257,9 +277,16 @@ def same_person(governor, listed):
     return any(given_names_agree(given_a[0], t) for t in given_b) or any(given_names_agree(given_b[0], t) for t in given_a)
 
 
+def pdf_text(raw, pages=slice(None)):
+    """The text of a PDF's pages, page by page in reading order. Needs pypdf (requirements-geo.txt)."""
+    import pypdf
+    logging.getLogger('pypdf').setLevel(logging.ERROR)
+    return '\n'.join(page.extract_text() for page in pypdf.PdfReader(io.BytesIO(raw)).pages[pages])
+
+
 def governor_party(state, raw, governor):
     """The one party the state's party page states for the entries that name the governor."""
-    page = ' '.join(html.unescape(raw.decode('utf-8', 'replace')).split())
+    page = ' '.join((pdf_text(raw, PDF_PAGES.get(state, slice(None))) if raw[:5] == b'%PDF-' else html.unescape(raw.decode('utf-8', 'replace'))).split())
     listed = [(' '.join(m.group('name').split()), ' '.join(m.group('party').split())) for m in re.finditer(PARTY_RULES[state][2], page)]
     assert listed, (state, 'Party page lists nobody; the page changed')
     labels = {party for name, party in listed if same_person(governor, name)}

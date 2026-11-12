@@ -10,7 +10,7 @@ This skill refreshes `office: "Governor"` records. The adapter is `tools/regions
 ## Rules that never bend
 
 - **Use only official state governor websites.** Never fill a missing or blocked state from Wikipedia, NGA, Ballotpedia, news articles, a search engine, a previous release or memory. If a state can't be read, it stays `not-collected`, with the reason in `BLOCKED`.
-- **Party comes only from a page of the same state's government.** The governor sites don't state a party. `PARTY_RULES` names, per state, an officials roster, a list of governors, or official election results or candidate records that do. A state with no such readable page stays in `PARTY_NOT_COLLECTED`, and its governor has no `party`. The sources ruled out above are never used for party either.
+- **Party comes only from a document of a government body in the same state.** The governor sites don't state a party. `PARTY_RULES` names, per state, an officials roster, a list of governors, or official election results or candidate records that do, as a web page or a PDF. Ohio's is a county board of elections' official canvass, because no state body's document could be read. A state with no such readable document stays in `PARTY_NOT_COLLECTED`, and its governor has no `party`. The sources ruled out above are never used for party either.
 - **Don't evade access controls.** If a site answers automated requests with a 403, a bot challenge or a CAPTCHA, don't rotate user agents, imitate a browser, run headless browsers to get through, use proxies, or solve challenges. Requests send `USER_AGENT`, which identifies the project. Those states need a capture made by a person (step 4), or they stay blocked.
 - **Fail closed.** If a rule finds zero names or two different names, the build stops. Investigate the page; never loosen a pattern until it "passes".
 - **No private context in the public repo.** Commit messages and PRs describe the code and data changes and the validation results, and nothing else.
@@ -59,8 +59,10 @@ Every line should print a name. Compare the names with the last published `data/
 
 ### 2. Probe the party sources
 
+Several party sources are PDFs, so run this with the `.venv-geo` interpreter, which has `pypdf`.
+
 ```sh
-python3 -B - <<'EOF'
+.venv-geo/bin/python -B - <<'EOF'
 import sys, json; sys.path.insert(0, 'tools')
 import build; sys.modules['build'] = build
 from regions import executive as e
@@ -77,10 +79,10 @@ EOF
 
 Every line should print a party. If step 1 found a new governor, check that state with the new name.
 
-- **FAIL because no entry names the governor.** Either the office changed hands or the page changed. After a change, find the new governor's page of the same kind (official results of the election that began the term, the state's list of governors, or a current roster) and update the rule. Rules that point at one person's page (CA, KS, FL, WV) always need this.
+- **FAIL because no entry names the governor.** Either the office changed hands or the page changed. After a change, find the new governor's page of the same kind (official results of the election that began the term, the state's list of governors, or a current roster) and update the rule. Rules that point at one person's page (CA, KS, FL, WV) always need this, as do rules that read a dated edition of a manual or blue book (IA, MI, NE, SC, TN, WI): look for the new edition on the publisher's index page.
 - **FAIL with an HTTP error or a bot challenge.** Retry once later. If it keeps failing, move the state from `PARTY_RULES` to `PARTY_NOT_COLLECTED` with the reason. The governor record stays, without `party`.
 - **FAIL on an unmapped label.** Read the page. Add the label to `PARTY_LABELS` only if the page states it as the governor's party.
-- **A state in `PARTY_NOT_COLLECTED`.** Re-check its reason. A new rule needs a page of that state's government, fetched with `USER_AGENT`, that states the party beside the governor's name in the response body (no PDF, no script-rendered content). Add a case to `tools/test_executive.py`.
+- **A state in `PARTY_NOT_COLLECTED`.** Re-check its reason. A new rule needs a page of that state's government, fetched with `USER_AGENT`, that states the party beside the governor's name in the response body: a web page or a text PDF, not script-rendered content or a scanned image. Add a case to `tools/test_executive.py`.
 
 ### 3. Re-check blocked states
 
