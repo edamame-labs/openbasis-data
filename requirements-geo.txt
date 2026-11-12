@@ -2,3 +2,5 @@
 shapely==2.2.0
 pyproj==3.8.0
 numpy==2.5.4
+# Text of government PDFs that state a governor's party (tools/regions/executive.py); pure Python.
+pypdf==7.0.1

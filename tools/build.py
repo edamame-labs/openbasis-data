@@ -511,6 +511,7 @@ def source_allowed(source):
     if url in {url for _,url in national.SOURCES.values()}: return True
     for module in region_modules():
         if url in {url for _,url in module.SOURCES.values()}: return True
+        if url in {url for _,url in getattr(module, 'PARTY_SOURCES', {}).values()}: return True
         if urlparse(url).hostname in getattr(module, 'SOURCE_HOSTS', set()): return True
     return False
 
