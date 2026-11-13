@@ -6,7 +6,7 @@ import hashlib
 import json
 import re
 from urllib.parse import parse_qs, urljoin, urlencode, urlparse
-from build import HTML, Node, contact, has_class, party_name
+from build import HTML, Node, USER_AGENT, contact, has_class, party_name
 
 SOURCES = {
  'az-roster': ('Arizona Legislature', 'https://www.azleg.gov/MemberRoster/'),
@@ -37,6 +37,9 @@ SOURCES['ga-lower'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/mem
 SOURCES['ga-upper'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/members/senate')
 SOURCES['in-roster'] = ('Indiana General Assembly', 'https://iga.in.gov/legislative/2026/legislators')
 SOURCE_HOSTS = {'www.kslegislature.gov','www.arkleg.state.ar.us'}
+# Rosters requested with the project user agent. Their publishers answer it with the roster page and answer
+# curl's default user agent with HTTP 403 (November 2026).
+IDENTIFIED = {'fl-lower','il-lower','il-upper'}
 # Florida's legislative term; members take office upon election (Fla. Const. art. III, s. 15(d)).
 FL_TERM = '2026-2028'
 # Party for the Arkansas House: arkleg's list omits it; the House's own member list publishes it.
@@ -458,13 +461,18 @@ def arkansas_senate_party(fetch,offline,rows):
  return [source for _,_,source,_ in results]
 
 
+def identified(key):
+ """Extra fetch arguments for a roster requested with the project user agent."""
+ return dict(user_agent=USER_AGENT) if key in IDENTIFIED else {}
+
+
 def collect(fetch,offline=False):
  rows=[]; sources=[]; profiles=[]
  for key,(publisher,url) in SOURCES.items():
   if key in AUX or key in TERM_BEGUN:continue
   if key.startswith('de-'):
    raw,source=fetch(key,publisher,url,offline,method='POST',data='page=1&pageSize=100&sort=DistrictNumber-asc')
-  else:raw,source=fetch(key,publisher,url,offline)
+  else:raw,source=fetch(key,publisher,url,offline,**identified(key))
   sources.append(source)
   if key.startswith('ks-'):
    tree=HTML(raw).root

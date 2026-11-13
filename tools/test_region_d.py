@@ -1,5 +1,7 @@
 """Regression checks for browser-compatible government roster card parsing."""
 import unittest
+from unittest.mock import patch
+import build
 from regions import region_d as region
 
 
@@ -61,5 +63,20 @@ class OklahomaTests(unittest.TestCase):
         rows=region.parse('ok-upper',''.join(cards).encode(),source('ok-upper'))
         self.assertEqual(len(rows),47)
         self.assertNotIn('24',[r['district'] for r in rows])
+
+class CollectTests(unittest.TestCase):
+    def test_ohio_and_pennsylvania_are_requested_with_the_project_user_agent(self):
+        requests={}
+        def fetch(key, publisher, url, offline, **kwargs):
+            requests[key]=kwargs
+            return b'', dict(id=key)
+        with patch.object(region,'parse',lambda key,raw,source:[dict(id=key)]):
+            rows,sources=region.collect(fetch)
+        self.assertEqual([r['id'] for r in rows],list(region.SOURCES))
+        self.assertEqual([s['id'] for s in sources],list(region.SOURCES))
+        for key in ['oh-upper','oh-lower','pa-upper','pa-lower']:
+            self.assertEqual(requests[key],dict(user_agent=build.USER_AGENT))
+        self.assertEqual(requests['ok-upper'],{})
+
 
 if __name__=='__main__': unittest.main()

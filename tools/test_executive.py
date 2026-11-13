@@ -52,7 +52,7 @@ class GovernorTests(unittest.TestCase):
         cases = {
             'gov-ma': (b'<title>Governor Maura Healey and Lt. Governor Kim Driscoll | Mass.gov</title>', 'Maura Healey'),
             'gov-mn': (b'<meta property="og:site_name" content="Office of Governor Tim Walz and Lt. Governor Peggy Flanagan">', 'Tim Walz'),
-            'gov-ny': (b'<meta property="og:site_name" content="Governor Kathy Hochul">', 'Kathy Hochul'),
+            'gov-ny': (b'<meta property="og:site_name" content="Governor Kathy Hochul" />', 'Kathy Hochul'),
             'gov-ri': (b"<title>Welcome to the Office of Governor Dan McKee | Governor's Office, State of Rhode Island</title>", 'Dan McKee'),
         }
         cases.update({
@@ -66,6 +66,8 @@ class GovernorTests(unittest.TestCase):
     def test_browser_sources_are_registered(self):
         for key in region.BROWSER:
             self.assertIn(key, region.SOURCES)
+        self.assertNotIn('gov-ma', region.BROWSER)  # readable over HTTP with USER_AGENT
+        self.assertNotIn('gov-ny', region.BROWSER)  # the served tag ends ' />', a serialized DOM's ends '>'
 
     def test_governor_links_to_state_not_legislative_district(self):
         row = dict(level='state', state='NE', body='Nebraska Executive', office='Governor')

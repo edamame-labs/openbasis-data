@@ -46,7 +46,7 @@ Contact values are normalized by `build.contact`; values that do not parse are o
 | Kansas | Capitol `phone` (`Contact & Info` card), `photo` (the `fallback` placeholder is skipped), `ids` (profile path). Emails are Cloudflare-obfuscated and are not decoded. |
 | Kentucky | `photo` (directory thumbnail). |
 
-Browser-DOM sources (Florida House, Georgia, Hawaii, Illinois, Indiana) are unchanged; their contact fields need fresh DOM evidence to develop against.
+The Florida House, Georgia, Hawaii, Illinois and Indiana records are unchanged: no contact fields are read from those rosters yet.
 
 ## API discovery and reproduction
 
@@ -85,13 +85,15 @@ python3 tools/build.py
 python3 tools/build.py --verify
 ```
 
-Florida House, Illinois, Hawaii, Georgia and Indiana use live official browser DOM snapshots because curl receives access blocks or an unrendered shell. These sources are explicitly labeled `representation: browser-dom`; their SHA-256 covers the serialized DOM, not an HTTP response body. `tools/import_snapshot.py` imports a complete DOM exported from the exact allowlisted official URL and requires its actual observation timestamp within 24 hours. An online curl refresh cannot replace this browser acquisition step. To reproduce this snapshot from saved evidence, use `python3 tools/build.py --offline`.
+The Florida House and Illinois rosters are requested over HTTP with the project user agent (`USER_AGENT`, listed per source in `IDENTIFIED`). Their publishers answer it with the full roster page and answer curl's default user agent with HTTP 403. Until November 2026 they were read from browser DOM observations.
+
+Hawaii, Georgia and Indiana use live official browser DOM snapshots because curl receives an access block (Hawaii) or an unrendered shell (Georgia, Indiana) with either user agent. These sources are explicitly labeled `representation: browser-dom`; their SHA-256 covers the serialized DOM, not an HTTP response body. `tools/import_snapshot.py` imports a complete DOM exported from the exact allowlisted official URL and requires its actual observation timestamp within 24 hours. An online curl refresh cannot replace this browser acquisition step. To reproduce this snapshot from saved evidence, use `python3 tools/build.py --offline`.
 
 An offline rebuild uses the recorded snapshots. Missing snapshots, checksum mismatches, changed session markers, malformed responses, unhandled pagination, missing columns and incompatible district occupants stop collection. Tests cover inactive members, explicit resignations/deaths, current-versus-former tables, letter districts, multi-member district identity, and rejection of access-block pages.
 
 ## Source access and unresolved entries
 
-Both chambers were collected for all 16 states covered by this adapter. Access blocks are handled by acquiring the exact government page through a browser; they are not handled by substituting another publisher or retaining legacy records. The API variants remain described above so acquisition can be reproduced without guessing endpoints.
+Both chambers were collected for all 16 states covered by this adapter. Where a publisher refuses the project user agent or serves an unrendered shell, a person acquires the exact government page through a browser; access blocks are not handled by substituting another publisher or retaining legacy records. The API variants remain described above so acquisition can be reproduced without guessing endpoints.
 
 Indiana's official current-session roster displays 151 entries. Exactly 150 cards supply districts: 100 House and 50 Senate, each district unique within its chamber. The additional [Andy Zay card](https://iga.in.gov/legislative/2026/legislators/legislator_andy_zay_1) says only `Sen. Andy Zay (R) Senate` and provides no district. The district-17 card explicitly names Nick McKinley. The district-less entry is excluded because its current district assignment is unsupported; absence of a district is not itself evidence of resignation or another departure. `sources.json` records the excluded source label and reason, and `COVERAGE` retains this limitation.
 

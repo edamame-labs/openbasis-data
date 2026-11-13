@@ -187,4 +187,11 @@ class RegionATest(unittest.TestCase):
   self.assertNotIn('party',rows[1])
   self.assertEqual(len(evidence),2)
 
+ def test_florida_house_and_illinois_are_requested_with_the_project_user_agent(self):
+  for key in ['fl-lower','il-lower','il-upper']:
+   self.assertEqual(a.identified(key),dict(user_agent=a.USER_AGENT))
+  for key in ['fl-upper','ga-lower','hi-upper','in-roster','de-lower']:
+   self.assertEqual(a.identified(key),{})
+  self.assertLessEqual(a.IDENTIFIED,set(a.SOURCES))
+
 if __name__=='__main__':unittest.main()
