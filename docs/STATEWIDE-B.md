@@ -48,7 +48,7 @@ Each rule names one element that identifies the officeholder. Its pattern runs o
 | IA | secretaryOfState | https://sos.iowa.gov/ | — | not-collected: Cloudflare challenge (HTTP 403) |
 | IA | attorneyGeneral | https://www.iowaattorneygeneral.gov/ | `<h2>Name</h2> <p>Iowa Attorney General</p>` | collected |
 | IA | auditor | https://www.auditor.iowa.gov/ | `<div class="logo-text">IOWA AUDITOR OF STATE<br>Name</div>` | collected |
-| IA | treasurer | https://www.iowatreasurer.gov/ | `<p>Hi – I’m Name, Iowa’s State Treasurer.` | collected |
+| IA | treasurer | https://www.iowatreasurer.gov/ | — | not-collected: HTTP 503 (Error 503) to USER_AGENT and to a normal browser |
 | IA | agricultureCommissioner | https://iowaagriculture.gov/ | mega-menu link `Secretary of Agriculture Name </a>` | collected (title in source: Secretary of Agriculture) |
 | KS | lieutenantGovernor, secretaryOfState, treasurer, attorneyGeneral, insuranceCommissioner | https://portal.kansas.gov/government/ | "Elected State Officials" cards: `<a class="elementor-cta" href=…>` … `elementor-cta__title` Name, then `elementor-cta__description` office | collected |
 | KY | lieutenantGovernor | https://governor.ky.gov/ | `<h2 class="bottom"><small>LIEUTENANT GOVERNOR</small>Name</h2>` | collected |

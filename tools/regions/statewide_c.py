@@ -194,8 +194,8 @@ BLOCKED = {
  ('NM', 'attorneyGeneral'): ('New Mexico Department of Justice', 'https://nmdoj.gov/', 'Cloudflare challenge (HTTP 403)'),
  ('NY', 'lieutenantGovernor'): ('Office of the Governor of New York', 'https://www.governor.ny.gov/about-lieutenant-governor', 'Access denied (HTTP 403); no other page of the governor\'s site names the lieutenant governor'),
 }
-# Sources read from an imported browser DOM observation; none in this module.
-BROWSER = set()
+# Sources read from an imported browser DOM observation (tools/import_snapshot.py), not over HTTP.
+BROWSER = {'sw-mt-ag'}
 
 
 def _statewide():

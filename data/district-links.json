@@ -41051,7 +41051,7 @@
       "geometryDistrictLabel": "46"
     },
     {
-      "officialId": "fl-lower-37-240f03eaec4f",
+      "officialId": "fl-lower-37-87ae3c48c553",
       "state": "FL",
       "layer": "sldl",
       "district": "37",
@@ -41513,7 +41513,7 @@
       "geometryDistrictLabel": "109"
     },
     {
-      "officialId": "fl-lower-108-d5e22a9a5eea",
+      "officialId": "fl-lower-108-5ed961e1468e",
       "state": "FL",
       "layer": "sldl",
       "district": "108",
@@ -42633,6 +42633,28 @@
       ],
       "matchingRule": "state-chamber-canonical-basename",
       "geometryDistrictLabel": "87"
+    },
+    {
+      "officialId": "fl-lower-33-3c4c4494e5fe",
+      "state": "FL",
+      "layer": "sldl",
+      "district": "33",
+      "sourceIds": [
+        "fl-lower"
+      ],
+      "districtKey": "sldl:12033",
+      "GEOID": "12033",
+      "boundaryId": "12033",
+      "geometrySourceIds": [
+        "census-sldl-12-page-0",
+        "census-sldl-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-12-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "state-chamber-canonical-basename",
+      "geometryDistrictLabel": "33"
     },
     {
       "officialId": "fl-lower-73-c785b5d0a6a8",
@@ -89999,28 +90021,6 @@
       "geometryDistrictLabel": "80"
     },
     {
-      "officialId": "mt-lower-1434",
-      "state": "MT",
-      "layer": "sldl",
-      "district": "48",
-      "sourceIds": [
-        "mt-roster"
-      ],
-      "districtKey": "sldl:30048",
-      "GEOID": "30048",
-      "boundaryId": "30048",
-      "geometrySourceIds": [
-        "census-sldl-30-page-0",
-        "census-sldl-metadata"
-      ],
-      "stateCrosswalkSourceIds": [
-        "census-state-30-page-0",
-        "census-state-metadata"
-      ],
-      "matchingRule": "state-chamber-canonical-basename",
-      "geometryDistrictLabel": "48"
-    },
-    {
       "officialId": "mt-lower-1442",
       "state": "MT",
       "layer": "sldl",
@@ -91737,7 +91737,7 @@
       "geometryDistrictLabel": "40"
     },
     {
-      "officialId": "nv-lower-f06c7797c6674172",
+      "officialId": "nv-lower-f0225e6902865823",
       "state": "NV",
       "layer": "sldl",
       "district": "2",
@@ -151281,6 +151281,28 @@
       "geometryDistrictLabel": "46"
     },
     {
+      "officialId": "wy-lower-e2b79c6b00bc97ebb7a3",
+      "state": "WY",
+      "layer": "sldl",
+      "district": "3",
+      "sourceIds": [
+        "wy-lower"
+      ],
+      "districtKey": "sldl:56003",
+      "GEOID": "56003",
+      "boundaryId": "56003",
+      "geometrySourceIds": [
+        "census-sldl-56-page-0",
+        "census-sldl-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-56-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "state-chamber-canonical-basename",
+      "geometryDistrictLabel": "3"
+    },
+    {
       "officialId": "wy-lower-6cf713e83ca48f8a190b",
       "state": "WY",
       "layer": "sldl",
@@ -151543,6 +151565,28 @@
       ],
       "matchingRule": "state-chamber-canonical-basename",
       "geometryDistrictLabel": "40"
+    },
+    {
+      "officialId": "wy-lower-17dc3303cd10e0824497",
+      "state": "WY",
+      "layer": "sldl",
+      "district": "47",
+      "sourceIds": [
+        "wy-lower"
+      ],
+      "districtKey": "sldl:56047",
+      "GEOID": "56047",
+      "boundaryId": "56047",
+      "geometrySourceIds": [
+        "census-sldl-56-page-0",
+        "census-sldl-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-56-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "state-chamber-canonical-basename",
+      "geometryDistrictLabel": "47"
     },
     {
       "officialId": "wy-lower-589f5ed0ac1c85dfee59",
@@ -156229,6 +156273,28 @@
       ],
       "matchingRule": "state-chamber-canonical-basename",
       "geometryDistrictLabel": "88"
+    },
+    {
+      "officialId": "oh-lower-89",
+      "state": "OH",
+      "layer": "sldl",
+      "district": "89",
+      "sourceIds": [
+        "oh-lower"
+      ],
+      "districtKey": "sldl:39089",
+      "GEOID": "39089",
+      "boundaryId": "39089",
+      "geometrySourceIds": [
+        "census-sldl-39-page-0",
+        "census-sldl-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-39-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "state-chamber-canonical-basename",
+      "geometryDistrictLabel": "89"
     },
     {
       "officialId": "oh-lower-90",
@@ -162022,7 +162088,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-al"
+        "gov-al",
+        "gov-party-al"
       ],
       "districtKey": "state:01",
       "GEOID": "01",
@@ -162044,7 +162111,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ak"
+        "gov-ak",
+        "gov-party-ak"
       ],
       "districtKey": "state:02",
       "GEOID": "02",
@@ -162066,7 +162134,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-az"
+        "gov-az",
+        "gov-party-az"
       ],
       "districtKey": "state:04",
       "GEOID": "04",
@@ -162088,7 +162157,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ar"
+        "gov-ar",
+        "gov-party-ar"
       ],
       "districtKey": "state:05",
       "GEOID": "05",
@@ -162110,7 +162180,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ca"
+        "gov-ca",
+        "gov-party-ca"
       ],
       "districtKey": "state:06",
       "GEOID": "06",
@@ -162132,7 +162203,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-co"
+        "gov-co",
+        "gov-party-co"
       ],
       "districtKey": "state:08",
       "GEOID": "08",
@@ -162154,7 +162226,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ct"
+        "gov-ct",
+        "gov-party-ct"
       ],
       "districtKey": "state:09",
       "GEOID": "09",
@@ -162176,7 +162249,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-de"
+        "gov-de",
+        "gov-party-de"
       ],
       "districtKey": "state:10",
       "GEOID": "10",
@@ -162198,7 +162272,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-fl"
+        "gov-fl",
+        "gov-party-fl"
       ],
       "districtKey": "state:12",
       "GEOID": "12",
@@ -162220,7 +162295,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ga"
+        "gov-ga",
+        "gov-party-ga"
       ],
       "districtKey": "state:13",
       "GEOID": "13",
@@ -162242,7 +162318,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-hi"
+        "gov-hi",
+        "gov-party-hi"
       ],
       "districtKey": "state:15",
       "GEOID": "15",
@@ -162264,7 +162341,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-id"
+        "gov-id",
+        "gov-party-id"
       ],
       "districtKey": "state:16",
       "GEOID": "16",
@@ -162286,7 +162364,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-il"
+        "gov-il",
+        "gov-party-il"
       ],
       "districtKey": "state:17",
       "GEOID": "17",
@@ -162308,7 +162387,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-in"
+        "gov-in",
+        "gov-party-in"
       ],
       "districtKey": "state:18",
       "GEOID": "18",
@@ -162330,7 +162410,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ia"
+        "gov-ia",
+        "gov-party-ia"
       ],
       "districtKey": "state:19",
       "GEOID": "19",
@@ -162352,7 +162433,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ks"
+        "gov-ks",
+        "gov-party-ks"
       ],
       "districtKey": "state:20",
       "GEOID": "20",
@@ -162374,7 +162456,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ky"
+        "gov-ky",
+        "gov-party-ky"
       ],
       "districtKey": "state:21",
       "GEOID": "21",
@@ -162396,7 +162479,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-la"
+        "gov-la",
+        "gov-party-la"
       ],
       "districtKey": "state:22",
       "GEOID": "22",
@@ -162418,7 +162502,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-me"
+        "gov-me",
+        "gov-party-me"
       ],
       "districtKey": "state:23",
       "GEOID": "23",
@@ -162440,7 +162525,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ma"
+        "gov-ma",
+        "gov-party-ma"
       ],
       "districtKey": "state:25",
       "GEOID": "25",
@@ -162462,7 +162548,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-md"
+        "gov-md",
+        "gov-party-md"
       ],
       "districtKey": "state:24",
       "GEOID": "24",
@@ -162484,7 +162571,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-mi"
+        "gov-mi",
+        "gov-party-mi"
       ],
       "districtKey": "state:26",
       "GEOID": "26",
@@ -162506,7 +162594,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-mn"
+        "gov-mn",
+        "gov-party-mn"
       ],
       "districtKey": "state:27",
       "GEOID": "27",
@@ -162528,7 +162617,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ms"
+        "gov-ms",
+        "gov-party-ms"
       ],
       "districtKey": "state:28",
       "GEOID": "28",
@@ -162550,7 +162640,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-mo"
+        "gov-mo",
+        "gov-party-mo"
       ],
       "districtKey": "state:29",
       "GEOID": "29",
@@ -162572,7 +162663,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-mt"
+        "gov-mt",
+        "gov-party-mt"
       ],
       "districtKey": "state:30",
       "GEOID": "30",
@@ -162594,7 +162686,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ne"
+        "gov-ne",
+        "gov-party-ne"
       ],
       "districtKey": "state:31",
       "GEOID": "31",
@@ -162616,7 +162709,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-nv"
+        "gov-nv",
+        "gov-party-nv"
       ],
       "districtKey": "state:32",
       "GEOID": "32",
@@ -162638,7 +162732,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-nh"
+        "gov-nh",
+        "gov-party-nh"
       ],
       "districtKey": "state:33",
       "GEOID": "33",
@@ -162660,7 +162755,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-nj"
+        "gov-nj",
+        "gov-party-nj"
       ],
       "districtKey": "state:34",
       "GEOID": "34",
@@ -162682,7 +162778,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-nm"
+        "gov-nm",
+        "gov-party-nm"
       ],
       "districtKey": "state:35",
       "GEOID": "35",
@@ -162726,7 +162823,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-nc"
+        "gov-nc",
+        "gov-party-nc"
       ],
       "districtKey": "state:37",
       "GEOID": "37",
@@ -162748,7 +162846,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-nd"
+        "gov-nd",
+        "gov-party-nd"
       ],
       "districtKey": "state:38",
       "GEOID": "38",
@@ -162770,7 +162869,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-oh"
+        "gov-oh",
+        "gov-party-oh"
       ],
       "districtKey": "state:39",
       "GEOID": "39",
@@ -162792,7 +162892,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-ok"
+        "gov-ok",
+        "gov-party-ok"
       ],
       "districtKey": "state:40",
       "GEOID": "40",
@@ -162814,7 +162915,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-or"
+        "gov-or",
+        "gov-party-or"
       ],
       "districtKey": "state:41",
       "GEOID": "41",
@@ -162836,7 +162938,8 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
-        "gov-pa"
+        "gov-pa",
+        "gov-party-pa"
       ],
       "districtKey": "state:42",
       "GEOID": "42",
@@ -162858,6 +162961,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-ri",
         "gov-ri"
       ],
       "districtKey": "state:44",
@@ -162880,6 +162984,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-sc",
         "gov-sc"
       ],
       "districtKey": "state:45",
@@ -162902,6 +163007,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-sd",
         "gov-sd"
       ],
       "districtKey": "state:46",
@@ -162924,6 +163030,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-tn",
         "gov-tn"
       ],
       "districtKey": "state:47",
@@ -162946,6 +163053,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-tx",
         "gov-tx"
       ],
       "districtKey": "state:48",
@@ -162968,6 +163076,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-ut",
         "gov-ut"
       ],
       "districtKey": "state:49",
@@ -162990,6 +163099,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-vt",
         "gov-vt"
       ],
       "districtKey": "state:50",
@@ -163012,6 +163122,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-va",
         "gov-va"
       ],
       "districtKey": "state:51",
@@ -163034,6 +163145,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-wa",
         "gov-wa"
       ],
       "districtKey": "state:53",
@@ -163056,6 +163168,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-wv",
         "gov-wv"
       ],
       "districtKey": "state:54",
@@ -163078,6 +163191,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-wi",
         "gov-wi"
       ],
       "districtKey": "state:55",
@@ -163100,6 +163214,7 @@
       "layer": "state",
       "district": null,
       "sourceIds": [
+        "gov-party-wy",
         "gov-wy"
       ],
       "districtKey": "state:56",
@@ -170606,28 +170721,6 @@
       "geometryDistrictLabel": "Iowa"
     },
     {
-      "officialId": "ia-treasurer",
-      "state": "IA",
-      "layer": "state",
-      "district": null,
-      "sourceIds": [
-        "sw-ia-treasurer"
-      ],
-      "districtKey": "state:19",
-      "GEOID": "19",
-      "boundaryId": "19",
-      "geometrySourceIds": [
-        "census-state-19-page-0",
-        "census-state-metadata"
-      ],
-      "stateCrosswalkSourceIds": [
-        "census-state-19-page-0",
-        "census-state-metadata"
-      ],
-      "matchingRule": "statewide-executive-state-fips",
-      "geometryDistrictLabel": "Iowa"
-    },
-    {
       "officialId": "ia-agricultureCommissioner",
       "state": "IA",
       "layer": "state",
@@ -174612,14 +174705,14 @@
   ],
   "unmatched": [],
   "summary": {
-    "officials": 7849,
-    "matched": 7849,
+    "officials": 7851,
+    "matched": 7851,
     "unmatched": 0,
     "matchedByLayer": {
       "cd": 433,
-      "state": 672,
+      "state": 671,
       "sldu": 1840,
-      "sldl": 4849,
+      "sldl": 4852,
       "sldl_floterial": 55
     },
     "unmatchedByReason": {}
