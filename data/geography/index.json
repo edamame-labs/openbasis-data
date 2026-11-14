@@ -1945,14 +1945,14 @@
     }
   ],
   "linkageSummary": {
-    "officials": 7849,
-    "matched": 7849,
+    "officials": 7851,
+    "matched": 7851,
     "unmatched": 0,
     "matchedByLayer": {
       "cd": 433,
-      "state": 672,
+      "state": 671,
       "sldu": 1840,
-      "sldl": 4849,
+      "sldl": 4852,
       "sldl_floterial": 55
     },
     "unmatchedByReason": {}

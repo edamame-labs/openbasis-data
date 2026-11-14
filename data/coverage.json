@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T07:34:36.059944+00:00",
+  "generatedAt": "2026-11-14T07:38:30.034192+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
-    "state": 7316,
+    "state": 7318,
     "federal": 533
   },
   "rosters": [
@@ -1825,7 +1825,7 @@
     },
     {
       "source": "fl-lower",
-      "records": 119
+      "records": 120
     },
     {
       "source": "il-lower",
@@ -3361,7 +3361,7 @@
     },
     {
       "source": "mt-roster",
-      "records": 62
+      "records": 61
     },
     {
       "source": "ne-unicameral",
@@ -3541,7 +3541,7 @@
     },
     {
       "source": "wy-lower",
-      "records": 60
+      "records": 62
     },
     {
       "source": "or-legislators",
@@ -3673,7 +3673,7 @@
     },
     {
       "source": "oh-lower",
-      "records": 98
+      "records": 99
     },
     {
       "source": "pa-upper",
@@ -3688,7 +3688,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-al",
+      "records": 1
+    },
+    {
       "source": "gov-ak",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ak",
       "records": 1
     },
     {
@@ -3696,7 +3704,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-az",
+      "records": 1
+    },
+    {
       "source": "gov-ar",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ar",
       "records": 1
     },
     {
@@ -3704,7 +3720,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-ca",
+      "records": 1
+    },
+    {
       "source": "gov-co",
+      "records": 1
+    },
+    {
+      "source": "gov-party-co",
       "records": 1
     },
     {
@@ -3712,7 +3736,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-ct",
+      "records": 1
+    },
+    {
       "source": "gov-de",
+      "records": 1
+    },
+    {
+      "source": "gov-party-de",
       "records": 1
     },
     {
@@ -3720,7 +3752,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-fl",
+      "records": 1
+    },
+    {
       "source": "gov-ga",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ga",
       "records": 1
     },
     {
@@ -3728,7 +3768,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-hi",
+      "records": 1
+    },
+    {
       "source": "gov-id",
+      "records": 1
+    },
+    {
+      "source": "gov-party-id",
       "records": 1
     },
     {
@@ -3736,7 +3784,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-il",
+      "records": 1
+    },
+    {
       "source": "gov-in",
+      "records": 1
+    },
+    {
+      "source": "gov-party-in",
       "records": 1
     },
     {
@@ -3744,7 +3800,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-ia",
+      "records": 1
+    },
+    {
       "source": "gov-ks",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ks",
       "records": 1
     },
     {
@@ -3752,7 +3816,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-ky",
+      "records": 1
+    },
+    {
       "source": "gov-la",
+      "records": 1
+    },
+    {
+      "source": "gov-party-la",
       "records": 1
     },
     {
@@ -3760,7 +3832,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-me",
+      "records": 1
+    },
+    {
       "source": "gov-ma",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ma",
       "records": 1
     },
     {
@@ -3768,7 +3848,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-md",
+      "records": 1
+    },
+    {
       "source": "gov-mi",
+      "records": 1
+    },
+    {
+      "source": "gov-party-mi",
       "records": 1
     },
     {
@@ -3776,7 +3864,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-mn",
+      "records": 1
+    },
+    {
       "source": "gov-ms",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ms",
       "records": 1
     },
     {
@@ -3784,7 +3880,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-mo",
+      "records": 1
+    },
+    {
       "source": "gov-mt",
+      "records": 1
+    },
+    {
+      "source": "gov-party-mt",
       "records": 1
     },
     {
@@ -3792,7 +3896,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-ne",
+      "records": 1
+    },
+    {
       "source": "gov-nv",
+      "records": 1
+    },
+    {
+      "source": "gov-party-nv",
       "records": 1
     },
     {
@@ -3800,11 +3912,23 @@
       "records": 1
     },
     {
+      "source": "gov-party-nh",
+      "records": 1
+    },
+    {
       "source": "gov-nj",
       "records": 1
     },
     {
+      "source": "gov-party-nj",
+      "records": 1
+    },
+    {
       "source": "gov-nm",
+      "records": 1
+    },
+    {
+      "source": "gov-party-nm",
       "records": 1
     },
     {
@@ -3816,7 +3940,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-nc",
+      "records": 1
+    },
+    {
       "source": "gov-nd",
+      "records": 1
+    },
+    {
+      "source": "gov-party-nd",
       "records": 1
     },
     {
@@ -3824,7 +3956,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-oh",
+      "records": 1
+    },
+    {
       "source": "gov-ok",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ok",
       "records": 1
     },
     {
@@ -3832,7 +3972,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-or",
+      "records": 1
+    },
+    {
       "source": "gov-pa",
+      "records": 1
+    },
+    {
+      "source": "gov-party-pa",
       "records": 1
     },
     {
@@ -3840,7 +3988,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-ri",
+      "records": 1
+    },
+    {
       "source": "gov-sc",
+      "records": 1
+    },
+    {
+      "source": "gov-party-sc",
       "records": 1
     },
     {
@@ -3848,7 +4004,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-sd",
+      "records": 1
+    },
+    {
       "source": "gov-tn",
+      "records": 1
+    },
+    {
+      "source": "gov-party-tn",
       "records": 1
     },
     {
@@ -3856,7 +4020,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-tx",
+      "records": 1
+    },
+    {
       "source": "gov-ut",
+      "records": 1
+    },
+    {
+      "source": "gov-party-ut",
       "records": 1
     },
     {
@@ -3864,7 +4036,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-vt",
+      "records": 1
+    },
+    {
       "source": "gov-va",
+      "records": 1
+    },
+    {
+      "source": "gov-party-va",
       "records": 1
     },
     {
@@ -3872,7 +4052,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-wa",
+      "records": 1
+    },
+    {
       "source": "gov-wv",
+      "records": 1
+    },
+    {
+      "source": "gov-party-wv",
       "records": 1
     },
     {
@@ -3880,7 +4068,15 @@
       "records": 1
     },
     {
+      "source": "gov-party-wi",
+      "records": 1
+    },
+    {
       "source": "gov-wy",
+      "records": 1
+    },
+    {
+      "source": "gov-party-wy",
       "records": 1
     },
     {
@@ -4217,10 +4413,6 @@
     },
     {
       "source": "sw-ia-auditor",
-      "records": 1
-    },
-    {
-      "source": "sw-ia-treasurer",
       "records": 1
     },
     {
@@ -5194,7 +5386,7 @@
         },
         "lower": {
           "status": "collected",
-          "records": 119
+          "records": 120
         }
       },
       "blockers": [],
@@ -5385,10 +5577,6 @@
             "status": "collected",
             "records": 1
           },
-          "treasurer": {
-            "status": "collected",
-            "records": 1
-          },
           "agricultureCommissioner": {
             "status": "collected",
             "records": 1
@@ -5396,13 +5584,19 @@
           "secretaryOfState": {
             "status": "not-collected",
             "records": 0
+          },
+          "treasurer": {
+            "status": "not-collected",
+            "records": 0
           }
         },
         "notCollected": [
-          "secretaryOfState"
+          "secretaryOfState",
+          "treasurer"
         ],
         "blockers": [
-          "secretaryOfState: the official source refused automated retrieval: https://sos.iowa.gov/ returned a Cloudflare challenge (HTTP 403)"
+          "secretaryOfState: the official source refused automated retrieval: https://sos.iowa.gov/ returned a Cloudflare challenge (HTTP 403)",
+          "treasurer: the official source refused automated retrieval: https://www.iowatreasurer.gov/ returned HTTP 503 (Error 503) to USER_AGENT and to a normal browser"
         ]
       },
       "stateCourts": {
@@ -6194,7 +6388,7 @@
         },
         "lower": {
           "status": "collected",
-          "records": 22
+          "records": 21
         }
       },
       "blockers": [],
@@ -6712,7 +6906,7 @@
         },
         "lower": {
           "status": "collected",
-          "records": 98
+          "records": 99
         }
       },
       "blockers": [],
@@ -7566,7 +7760,7 @@
         },
         "lower": {
           "status": "collected",
-          "records": 60
+          "records": 62
         }
       },
       "blockers": [],
@@ -7623,14 +7817,14 @@
     },
     "areaIntersectionPairs": 62399,
     "officialGeometryLinks": {
-      "officials": 7849,
-      "matched": 7849,
+      "officials": 7851,
+      "matched": 7851,
       "unmatched": 0,
       "matchedByLayer": {
         "cd": 433,
-        "state": 672,
+        "state": 671,
         "sldu": 1840,
-        "sldl": 4849,
+        "sldl": 4852,
         "sldl_floterial": 55
       },
       "unmatchedByReason": {}

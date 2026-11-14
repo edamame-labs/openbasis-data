@@ -132,6 +132,7 @@ class StatewideBTests(unittest.TestCase):
                 if office == 'blockers': continue
                 self.assertEqual(status == 'collected', any(r[:2] == (st, office) for r in region.RULES), (st, office))
         self.assertEqual(region.STATEWIDE['MI'].get('lieutenantGovernor'), 'not-collected')
+        self.assertEqual(region.STATEWIDE['IA'].get('treasurer'), 'not-collected')
         for st, office in region.HOLDERS:
             self.assertIn(office, statewide.MULTI)
         self.assertTrue(all(office not in statewide.MULTI or (st, office) in region.HOLDERS for st, office, _, _ in region.RULES))

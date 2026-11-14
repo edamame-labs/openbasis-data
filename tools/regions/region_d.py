@@ -1,7 +1,7 @@
-"""Ohio and Pennsylvania current official roster cards; HTTP or browser DOM."""
+"""Ohio, Oklahoma Senate and Pennsylvania current official roster cards; HTTP or browser DOM."""
 import re
 from urllib.parse import urljoin
-from build import HTML, has_class, record
+from build import HTML, USER_AGENT, has_class, record
 
 SOURCES = {
  'ok-upper':('Oklahoma Senate','https://www.oksenate.gov/senators'),
@@ -11,6 +11,10 @@ SOURCES = {
  'pa-lower':('Pennsylvania General Assembly','https://www.palegis.us/house/members'),
 }
 SOURCE_HOSTS = set()
+# Rosters requested with the project user agent. Their publishers answer it with the roster page and answer
+# curl's default user agent with HTTP 403 (November 2026). The Oklahoma Senate answers both with a JavaScript
+# challenge, so it is read from an imported browser DOM observation (tools/import_snapshot.py).
+IDENTIFIED = {'oh-upper','oh-lower','pa-upper','pa-lower'}
 COVERAGE = {st:{'upper':'collected','lower':'collected','blockers':[]} for st in ['OH','PA']}
 COVERAGE_OVERRIDES = {'OK':{'upper':'collected','blockers':[]}}
 BODIES = {'oh-upper':'Ohio Senate','oh-lower':'Ohio House of Representatives',
@@ -75,3 +79,12 @@ def parse(key, raw, source):
     assert maximum*.9 <= len(rows) <= maximum,(key,'Unexpected roster size',len(rows))
     assert len(rows)==len({r['id'] for r in rows}), 'Duplicate district cards or incomplete DOM capture'
     return rows
+
+
+def collect(fetch, offline=False):
+    rows, sources = [], []
+    for key, (publisher, url) in SOURCES.items():
+        raw, source = fetch(key, publisher, url, offline, **(dict(user_agent=USER_AGENT) if key in IDENTIFIED else {}))
+        rows.extend(parse(key, raw, source))
+        sources.append(source)
+    return rows, sources

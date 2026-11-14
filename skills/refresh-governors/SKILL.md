@@ -114,11 +114,9 @@ The current browser states and the element each rule reads:
 | State | Source URL | Marker |
 | --- | --- | --- |
 | KS | `https://governor.kansas.gov/` (redirects to `www.governor.ks.gov`) | menu link `aria-label="Governor <name>"` to `/about-the-office/governor-…` |
-| MA | `https://www.mass.gov/orgs/office-of-the-governor` (redirects to a page named after the governor) | `<title>Governor <name> and Lt. Governor … \| Mass.gov</title>` |
 | MI | `https://www.michigan.gov/whitmer` (the path is the governor's surname; after a change, follow the state's menu to the new path) | `<title>Governor <name></title>` |
 | MN | `https://mn.gov/governor/` | `<meta property="og:site_name" content="Office of Governor <name> and Lt. Governor …">` |
 | NH | `https://www.governor.nh.gov/` | `<meta property="og:site_name" content="Governor <name>">` |
-| NY | `https://www.governor.ny.gov/` | `<meta property="og:site_name" content="Governor <name>">` |
 | RI | `https://governor.ri.gov/` | `<title>Welcome to the Office of Governor <name> \| Governor's Office, State of Rhode Island</title>` |
 
 If a browser state becomes readable over HTTP with `USER_AGENT`, remove it from `BROWSER` and delete its cache mapping, so it is collected over HTTP and labeled `http-response-body`.
@@ -140,7 +138,7 @@ Publication needs fresh observations of every source:
 python3 -B tools/build.py --verify --fresh
 ```
 
-`--browser-snapshots` fails if any browser-only source in the repo (including the legislative ones in `docs/region-d.md`) lacks a capture from the last 24 hours. If a person can't capture them, don't publish. Report which captures are missing and stop. `--offline` rebuilds are for development only and must not be published.
+`--browser-snapshots` fails if any browser-only source in the repo (including the legislative ones in `docs/region-a.md` and `docs/region-d.md`) lacks a capture from the last 24 hours. If a person can't capture them, don't publish. Report which captures are missing and stop. `--offline` rebuilds are for development only and must not be published.
 
 Check the result:
 

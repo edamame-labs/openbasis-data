@@ -113,7 +113,9 @@ Governors link to their state's Census feature with `matchingRule: "statewide-go
 
 ## Browser captures
 
-Seven official governor sites refuse automated retrieval but load in a normal browser: Kansas, Massachusetts, Michigan, Minnesota, New Hampshire, New York and Rhode Island. Each page was captured in a normal browser and imported with `tools/import_snapshot.py`, and these states are listed in `BROWSER`. Their sources are recorded with `representation: "browser-dom"` and the observation time. Like every browser-only source, they need captures from the last 24 hours before a `--browser-snapshots --fresh` publication. `import_snapshot.py --final-url` records a redirect, such as `governor.kansas.gov` → `www.governor.ks.gov` and `mass.gov/orgs/office-of-the-governor` → a page named after the current governor.
+Five official governor sites refuse automated retrieval but load in a normal browser: Kansas, Michigan, Minnesota, New Hampshire and Rhode Island. They answer `USER_AGENT` with HTTP 403 or a bot challenge. Each page was captured in a normal browser and imported with `tools/import_snapshot.py`, and these states are listed in `BROWSER`. Their sources are recorded with `representation: "browser-dom"` and the observation time. Like every browser-only source, they need captures from the last 24 hours before a `--browser-snapshots --fresh` publication. `import_snapshot.py --final-url` records a redirect, such as `governor.kansas.gov` → `www.governor.ks.gov`.
+
+Massachusetts was a browser capture until November 2026. `mass.gov/orgs/office-of-the-governor` now answers `USER_AGENT` over HTTP, redirecting to a page named after the current governor, so it is read like the other HTTP sources. New York was one as well: its site answers `USER_AGENT` over HTTP, and the served tag ends ` />` where a serialized DOM's ends `>`. The rule accepts both.
 
 ## Colorado
 

@@ -64,7 +64,7 @@ RULES = {
  'NH': ('Office of the Governor of New Hampshire', 'https://www.governor.nh.gov/', r'<meta property="og:site_name" content="Governor '+N+r'">'),
  'NJ': ('Office of the Governor of New Jersey', 'https://www.nj.gov/governor/', TITLE+r'Office of New Jersey Governor '+N+r'\s*</title>'),
  'NM': ('Office of the Governor of New Mexico', 'https://www.governor.state.nm.us/', TITLE+r'Home - Office of the Governor - '+N+r'\s*</title>'),
- 'NY': ('Office of the Governor of New York', 'https://www.governor.ny.gov/', r'<meta property="og:site_name" content="Governor '+N+r'">'),
+ 'NY': ('Office of the Governor of New York', 'https://www.governor.ny.gov/', r'<meta property="og:site_name" content="Governor '+N+r'"\s*/?>'),
  'NC': ('Office of the Governor of North Carolina', 'https://governor.nc.gov/', r'<meta name="description" content="The official website for North Carolina Governor '+N+r'\." />'),
  # The homepage names the governor only in news items; its "Governor" menu links to this biography page.
  'ND': ('Office of the Governor of North Dakota', 'https://www.governor.nd.gov/governor-kelly-armstrong', TITLE+r'Governor '+N+r' \| North Dakota Office of the Governor\s*</title>'),
@@ -87,7 +87,7 @@ RULES = {
  'WY': ('Office of the Governor of Wyoming', 'https://governor.wyo.gov/', TITLE+r'Wyoming Governor '+N+r'\s*</title>'),
 }
 # Sources read from an imported browser DOM observation (tools/import_snapshot.py), not over HTTP.
-BROWSER = {'gov-ks', 'gov-ma', 'gov-mi', 'gov-mn', 'gov-nh', 'gov-ny', 'gov-ri'}
+BROWSER = {'gov-ks', 'gov-mi', 'gov-mn', 'gov-nh', 'gov-ri'}
 # Official governor sites with no collected observation: they refused retrieval with USER_AGENT
 # (bot challenge, 403 or timeout) and have no imported browser capture. No other publisher substitutes for them.
 BLOCKED = {}
