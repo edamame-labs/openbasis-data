@@ -52,7 +52,7 @@ The November 3, 2026 general election elected new holders of several of these of
 | MO | Attorney General | https://ago.mo.gov/about-us/about-ag-hanaway/ | portrait caption `NAME <br>Missouri Attorney General` |
 | MT | Lieutenant Governor | https://governor.mt.gov/ | menu `Meet Lieutenant Governor NAME` |
 | MT | Secretary of State | https://sosmt.gov/ | not collected: firewall block page (HTTP 403) |
-| MT | Attorney General | https://dojmt.gov/ | menu `About NAME` linking to `/attorney-generals-office/about-…/` |
+| MT | Attorney General | https://dojmt.gov/ | menu `About NAME` linking to `/attorney-generals-office/about-…/`. Read from a browser DOM snapshot: `USER_AGENT` receives a Cloudflare challenge (HTTP 403). |
 | MT | Auditor | https://csimt.gov/meet-commissioner-brown/ | meta description `NAME was elected as the Treasure State's Nth State Auditor` |
 | MT | Superintendent of Public Instruction | https://opi.mt.gov/ | header `<span class="agency-slogan">NAME, State Superintendent</span>` |
 | NE | Lieutenant Governor, Secretary of State, Treasurer, Attorney General, Auditor | https://www.nebraska.gov/government/executive-branch/ | `<h2 class="h3">TITLE NAME</h2>` for each |

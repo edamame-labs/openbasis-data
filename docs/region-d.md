@@ -10,7 +10,9 @@
 
 Counts refer to live official page observations on November 2, 2026 (UTC), not statutory seat totals. Ohio identifies the 136th General Assembly; Pennsylvania identifies the 2025–2026 session. Oklahoma's current Senate directory has 48 cards, one identifying only District 24 without a person's name. That card is excluded without generating a vacancy record.
 
-The pages returned access-denied responses to curl in this collection environment, while normal browser navigation loaded the government-published directories. Evidence was acquired directly from the official sites in a browser. The cached representation is explicitly `browser-dom`, serialized from the live document after roster loading, rather than described as HTTP response bytes. No search-result snippets, archived third-party copies, or prior directory records supply these data.
+The Ohio and Pennsylvania directories are requested over HTTP with the project user agent (`USER_AGENT` in `tools/build.py`, listed per source in `IDENTIFIED`). Their publishers answer it with the full roster page and answer curl's default user agent with HTTP 403. Their sources are recorded as `http-response-body` with the request header. Until November 2026 they were read from browser DOM observations.
+
+The Oklahoma Senate answers both user agents with a JavaScript challenge (HTTP 307), while normal browser navigation loads the government-published directory. A person acquires its evidence from the official site in a browser. The cached representation is explicitly `browser-dom`, serialized from the live document after roster loading, rather than described as HTTP response bytes. No search-result snippets, archived third-party copies, or prior directory records supply these data.
 
 For Ohio, the parser reads each portrait card's explicit name, district, party and profile href. Named vacant cards are excluded. For Pennsylvania it reads `.member[data-district]` cards, their name and official biography link. Duplicate occupied districts, unexpected card totals and changed session context stop extraction. Each record links to the directory supporting its fields.
 
@@ -22,7 +24,7 @@ For Ohio, the parser reads each portrait card's explicit name, district, party a
 
 ```sh
 python3 -B tools/import_snapshot.py --input /path/to/live-dom.html \
-  --url https://www.palegis.us/house/members \
+  --url https://www.oksenate.gov/senators \
   --observed-at '<actual ISO-8601 UTC observation time>'
 python3 -B tools/build.py --offline
 python3 -B tools/build.py --verify --fresh

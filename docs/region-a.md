@@ -11,7 +11,7 @@ Counts below were obtained from official responses retrieved on 2026-11-02 (UTC)
 | Alabama | 105 / 35 | [House directory](https://alison.legislature.state.al.us/house-leaders-members); public government GraphQL endpoint filters `active.eq=true` and `elected.eq=true`. |
 | Alaska | 40 / 20 | [House](https://w3.akleg.gov/house.php), [Senate](https://w3.akleg.gov/senate.php). Current-member cards link to 34th Legislature member profiles. Leadership cards are not counted twice. Senate districts retain official letters. |
 | Arizona | 60 / 30 | [Member roster](https://www.azleg.gov/MemberRoster/). `HouseRoster` and `SenateRoster` tables; rows explicitly marked `inactive` are excluded. Leadership titles following ` -- ` are removed from the name field. |
-| Arkansas | 99 / 33 | [Legislators list](https://www.arkleg.state.ar.us/Legislators/List), explicitly 95th General Assembly, 2026 fiscal session. `(Resigned)` and `(Deceased)` records are excluded. |
+| Arkansas | 99 / 33 | [Legislators list](https://www.arkleg.state.ar.us/Legislators/List), explicitly 96th General Assembly, Regular Session 2027. `(Resigned)` and `(Deceased)` records are excluded. Sitting members are collected; `-Elect` rows are not. |
 | Colorado | 65 / 35 | [Legislators](https://leg.colorado.gov/legislators), 2026 regular session. Resignation/death notes in the name cell exclude departed members. |
 | Connecticut | 151 / 36 | [House](https://www.cga.ct.gov/asp/menu/hlist.asp), [Senate](https://www.cga.ct.gov/asp/menu/slist.asp), current member lists. Senate `S01`-style district codes become `1`; caucus or personal websites are not used as independent sources. |
 | Delaware | 41 / 21 | [House](https://legis.delaware.gov/Chambers/House/AssemblyMembers), [Senate](https://legis.delaware.gov/Chambers/Senate/AssemblyMembers), government Kendo grid JSON transport detailed below. Null person IDs do not create person records. |
@@ -46,7 +46,7 @@ Contact values are normalized by `build.contact`; values that do not parse are o
 | Kansas | Capitol `phone` (`Contact & Info` card), `photo` (the `fallback` placeholder is skipped), `ids` (profile path). Emails are Cloudflare-obfuscated and are not decoded. |
 | Kentucky | `photo` (directory thumbnail). |
 
-Browser-DOM sources (Florida House, Georgia, Hawaii, Illinois, Indiana) are unchanged; their contact fields need fresh DOM evidence to develop against.
+The Florida House, Georgia, Hawaii, Illinois and Indiana records are unchanged: no contact fields are read from those rosters yet.
 
 ## API discovery and reproduction
 
@@ -85,13 +85,15 @@ python3 tools/build.py
 python3 tools/build.py --verify
 ```
 
-Florida House, Illinois, Hawaii, Georgia and Indiana use live official browser DOM snapshots because curl receives access blocks or an unrendered shell. These sources are explicitly labeled `representation: browser-dom`; their SHA-256 covers the serialized DOM, not an HTTP response body. `tools/import_snapshot.py` imports a complete DOM exported from the exact allowlisted official URL and requires its actual observation timestamp within 24 hours. An online curl refresh cannot replace this browser acquisition step. To reproduce this snapshot from saved evidence, use `python3 tools/build.py --offline`.
+The Florida House and Illinois rosters are requested over HTTP with the project user agent (`USER_AGENT`, listed per source in `IDENTIFIED`). Their publishers answer it with the full roster page and answer curl's default user agent with HTTP 403. Until November 2026 they were read from browser DOM observations.
+
+Hawaii, Georgia and Indiana use live official browser DOM snapshots because curl receives an access block (Hawaii) or an unrendered shell (Georgia, Indiana) with either user agent. These sources are explicitly labeled `representation: browser-dom`; their SHA-256 covers the serialized DOM, not an HTTP response body. `tools/import_snapshot.py` imports a complete DOM exported from the exact allowlisted official URL and requires its actual observation timestamp within 24 hours. An online curl refresh cannot replace this browser acquisition step. To reproduce this snapshot from saved evidence, use `python3 tools/build.py --offline`.
 
 An offline rebuild uses the recorded snapshots. Missing snapshots, checksum mismatches, changed session markers, malformed responses, unhandled pagination, missing columns and incompatible district occupants stop collection. Tests cover inactive members, explicit resignations/deaths, current-versus-former tables, letter districts, multi-member district identity, and rejection of access-block pages.
 
 ## Source access and unresolved entries
 
-Both chambers were collected for all 16 states covered by this adapter. Access blocks are handled by acquiring the exact government page through a browser; they are not handled by substituting another publisher or retaining legacy records. The API variants remain described above so acquisition can be reproduced without guessing endpoints.
+Both chambers were collected for all 16 states covered by this adapter. Where a publisher refuses the project user agent or serves an unrendered shell, a person acquires the exact government page through a browser; access blocks are not handled by substituting another publisher or retaining legacy records. The API variants remain described above so acquisition can be reproduced without guessing endpoints.
 
 Indiana's official current-session roster displays 151 entries. Exactly 150 cards supply districts: 100 House and 50 Senate, each district unique within its chamber. The additional [Andy Zay card](https://iga.in.gov/legislative/2026/legislators/legislator_andy_zay_1) says only `Sen. Andy Zay (R) Senate` and provides no district. The district-17 card explicitly names Nick McKinley. The district-less entry is excluded because its current district assignment is unsupported; absence of a district is not itself evidence of resignation or another departure. `sources.json` records the excluded source label and reason, and `COVERAGE` retains this limitation.
 
@@ -108,7 +110,7 @@ New legislative terms begin on dates set by each state's constitution or statute
 | Alabama | Day after the election, November 4, 2026 (Ala. Const. art. IV, s. 46) | The directory still lists the members elected in 2022. Withheld (`TERM_BEGUN`); both chambers not collected. |
 | Indiana | Day after the election, November 4, 2026 (Ind. Const. art. 4, s. 3) | The directory still reads `Legislators for 2026 Session`; no 2027 directory exists. Withheld; both chambers not collected. |
 | Hawaii | Day of the general election, November 3, 2026 ([Haw. Const. art. III, s. 4](https://lrb.hawaii.gov/constitution/)) | Both directories still show the 2026 regular session and offer no later year. Withheld; both chambers not collected. |
-| Arkansas | January 1, 2027 (Ark. Const. art. 8, s. 6; members continue until successors qualify, art. 19, s. 5) | Directory lists sitting members plus rows titled "Representative-Elect" / "Senator-Elect" (seniority N/A). Sitting members collected; member-elect rows counted in `excludedEntries`, never seated. |
+| Arkansas | January 1, 2027 (Ark. Const. art. 8, s. 6; members continue until successors qualify, art. 19, s. 5) | Directory banner is 96th General Assembly, Regular Session 2027. It lists sitting members plus rows titled "Representative-Elect" / "Senator-Elect". Some elect rows now carry a seniority number; the `-Elect` title is the status. Sitting members collected; member-elect rows counted in `excludedEntries`, never seated. |
 | Kansas | Second Monday of January 2027 (K.S.A. 46-156) | 2025-2026 biennium profiles; collected unchanged. |
 
 Withheld rosters are not fetched. A previous roster is never retained to cover a chamber whose new term has begun; the chamber is reported `not-collected` with the constitutional basis and source URL in `coverage.json` blockers until the publisher lists the new membership.

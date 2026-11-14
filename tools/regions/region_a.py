@@ -6,7 +6,7 @@ import hashlib
 import json
 import re
 from urllib.parse import parse_qs, urljoin, urlencode, urlparse
-from build import HTML, Node, contact, has_class, party_name
+from build import HTML, Node, USER_AGENT, contact, has_class, party_name
 
 SOURCES = {
  'az-roster': ('Arizona Legislature', 'https://www.azleg.gov/MemberRoster/'),
@@ -37,6 +37,9 @@ SOURCES['ga-lower'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/mem
 SOURCES['ga-upper'] = ('Georgia General Assembly', 'https://www.legis.ga.gov/members/senate')
 SOURCES['in-roster'] = ('Indiana General Assembly', 'https://iga.in.gov/legislative/2026/legislators')
 SOURCE_HOSTS = {'www.kslegislature.gov','www.arkleg.state.ar.us'}
+# Rosters requested with the project user agent. Their publishers answer it with the roster page and answer
+# curl's default user agent with HTTP 403 (November 2026).
+IDENTIFIED = {'fl-lower','il-lower','il-upper'}
 # Florida's legislative term; members take office upon election (Fla. Const. art. III, s. 15(d)).
 FL_TERM = '2026-2028'
 # Party for the Arkansas House: arkleg's list omits it; the House's own member list publishes it.
@@ -239,8 +242,8 @@ def parse(key,raw,source):
     rows.append(row(source,st,ch,name,c[1].text(),c[2].text(),a[0].attrs['href'],query(a[0].attrs['href'],'legislator'),**contact(source['url'],email=local and local.group(1)+'@azleg.gov',phone=c[5].text(),photo=imgs[0].attrs.get('src') if imgs else None)))
   return finish(rows,80,90)
  if st=='AR':
-  assert '95th General Assembly' in tree.text() and '2026' in tree.text(),'Session changed'
-  source['effectivePeriod']='95th General Assembly, 2026 fiscal session'
+  assert '96th General Assembly - Regular Session, 2027' in tree.text(),'Session changed'
+  source['effectivePeriod']='96th General Assembly, Regular Session 2027; sitting members until 2027-01-01'
   elected={'Representative':0,'Senator':0}
   for tr in tree.find(lambda n:n.attrs.get('role')=='row' and n.attrs.get('data-fixed')=='true'):
    c={n.attrs['aria-colindex']:n for n in tr.children if isinstance(n,Node) and n.attrs.get('aria-colindex')}
@@ -250,7 +253,7 @@ def parse(key,raw,source):
    elect=re.match(r'\s*(Representative|Senator)-Elect\b',c['1'].text())
    if elect:
     # Ark. Const. art. 8, s. 6 / art. 19, s. 5: terms begin January 1, 2027; members hold over until then.
-    assert c['3'].text().replace('Seniority:','').strip()=='N/A','Member-elect row reports seniority'
+    # Some 96th-session elect rows now carry a seniority number; the -Elect title is the status.
     elected[elect.group(1)]+=1;continue
    a=c['1'].find(lambda n:n.tag=='a' and '/Legislators/Detail?' in n.attrs.get('href',''))
    assert len(a)==1
@@ -434,7 +437,7 @@ def arkansas_house_party(fetch,offline,rows):
 
 def senate_party(raw,name):
  """Party from an arkleg member page title, only if it names the same senator."""
- tree=HTML(raw).root;assert '95th General Assembly - Fiscal Session, 2026' in tree.text(),'Session changed'
+ tree=HTML(raw).root;assert '96th General Assembly - Regular Session, 2027' in tree.text(),'Session changed'
  titles=tree.find(lambda n:n.tag=='title');assert len(titles)==1,'Member page changed'
  match=re.fullmatch(r'Senator (.+) \(([RDI])\) - Arkansas State Legislature',titles[0].text())
  return party_name(match.group(2)) if match and match.group(1)==name else None
@@ -447,7 +450,7 @@ def arkansas_senate_party(fetch,offline,rows):
   member=query(r['website'],'member');assert member and r['website'].startswith('https://www.arkleg.state.ar.us/Legislators/Detail?')
   key='ar-member-'+re.sub(r'[^a-z0-9]+','-',member.lower()).strip('-')
   raw,source=fetch(key,'Arkansas General Assembly',r['website'],offline)
-  source['effectivePeriod']='95th General Assembly, 2026 fiscal session member page'
+  source['effectivePeriod']='96th General Assembly, Regular Session 2027 member page'
   return r,key,source,senate_party(raw,r['name'])
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(page,senators))
  assert len({key for _,key,_,_ in results})==len(results),'Ambiguous Arkansas member page id'
@@ -458,13 +461,18 @@ def arkansas_senate_party(fetch,offline,rows):
  return [source for _,_,source,_ in results]
 
 
+def identified(key):
+ """Extra fetch arguments for a roster requested with the project user agent."""
+ return dict(user_agent=USER_AGENT) if key in IDENTIFIED else {}
+
+
 def collect(fetch,offline=False):
  rows=[]; sources=[]; profiles=[]
  for key,(publisher,url) in SOURCES.items():
   if key in AUX or key in TERM_BEGUN:continue
   if key.startswith('de-'):
    raw,source=fetch(key,publisher,url,offline,method='POST',data='page=1&pageSize=100&sort=DistrictNumber-asc')
-  else:raw,source=fetch(key,publisher,url,offline)
+  else:raw,source=fetch(key,publisher,url,offline,**identified(key))
   sources.append(source)
   if key.startswith('ks-'):
    tree=HTML(raw).root

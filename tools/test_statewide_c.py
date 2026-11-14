@@ -125,7 +125,7 @@ class StatewideCTests(unittest.TestCase):
     def test_sources_are_official_https(self):
         for key, (pub, url) in region.SOURCES.items():
             self.assertTrue(url.startswith('https://'), key)
-        self.assertFalse(region.BROWSER)
+        self.assertEqual(region.BROWSER, {'sw-mt-ag'})
 
 
 if __name__ == '__main__':
