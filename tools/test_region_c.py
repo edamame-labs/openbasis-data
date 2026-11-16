@@ -52,6 +52,12 @@ class RegionC(unittest.TestCase):
             rows=r.parse('tn-upper',raw,source)
         self.assertEqual([(x['name'],x['district']) for x in rows],[('Ann Person','4')])
         self.assertEqual(len(source['excludedEntries']),1)
+        house=('<a href="?ga=115"></a><table>'+tr('Person, Ann','District 4')+tr('McNally, Randy','Lt. Governor R District 00')+'</table>').encode()
+        house_source=self.source('tn-lower')
+        with patch.dict(r.LIMITS,{'TN':(1,1)}):
+            house_rows=r.parse('tn-lower',house,house_source)
+        self.assertEqual([(x['name'],x['district']) for x in house_rows],[('Ann Person','4')])
+        self.assertEqual(len(house_source['excludedEntries']),1)
 
     def test_missing_structure_never_publishes_empty_roster(self):
         with self.assertRaises(AssertionError):

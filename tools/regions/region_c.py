@@ -252,10 +252,11 @@ def parse(key, raw, source):
                 cells=[n.text() for n in tr.children if isinstance(n,Node)and n.tag=='td']
                 assert len(cells)==7
                 district=re.search(r'District (\d+)',tr.text())
-                if not district:
-                    # The Senate directory lists the Lieutenant Governor (Speaker of the Senate) without a district.
-                    assert chamber=='upper' and 'Lt. Governor' in tr.text(), 'Tennessee member row without district'
-                    source.setdefault('excludedEntries',[]).append({'sourceLabel':clean(tr.text()),'reason':'Row lists the Lieutenant Governor title and no Senate district'})
+                # Both chamber directories list the Lieutenant Governor (Speaker of the Senate). The Senate
+                # row has no district; the House directory labels it District 00. It is not a House seat.
+                if not district or district.group(1) in {'0','00'} or 'Lt. Governor' in tr.text():
+                    assert 'Lt. Governor' in tr.text(), 'Tennessee member row without a chamber district'
+                    source.setdefault('excludedEntries',[]).append({'sourceLabel':clean(tr.text()),'reason':'Row lists the Lieutenant Governor, not a chamber seat'})
                     continue
                 district=district.group(1)
                 rows.append(make(source,st,chamber,given_first(a.text()),district,a.attrs['href'],cells[2],a.attrs['href'],phone=cells[6]))

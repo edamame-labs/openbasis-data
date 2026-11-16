@@ -84,7 +84,7 @@ A party read from election results or a candidate record is the party the govern
 | VA | Virginia Department of Elections | [historical.elections.virginia.gov](https://historical.elections.virginia.gov/contest/164996) | 2025-11-04 general election | `Abigail D. Spanberger`, `Democratic` |
 | VT | Vermont Secretary of State | [electionarchive.vermont.gov](https://electionarchive.vermont.gov/contest/160972) | 2024-11-05 general election | `Phil Scott`, `Republican` |
 | WA | Washington State Library | [www.sos.wa.gov](https://www.sos.wa.gov/library/research-collections/washington-territorial-and-state-governors) | list of governors | `Bob Ferguson`, `Democrat` |
-| WI | Wisconsin Legislative Reference Bureau | [docs.legis.wisconsin.gov](https://docs.legis.wisconsin.gov/misc/lrb/blue_book/2025_2026/020_elected_officials.pdf) (PDF) | elected officials in the Wisconsin Blue Book 2025-2026 | `Tony Evers`, `Democrat` |
+| WI | Wisconsin Legislative Reference Bureau | [legis.wisconsin.gov](https://legis.wisconsin.gov/lrb/media/pkudaahd/2025020-elected-officials.pdf) (PDF) | elected officials in the Wisconsin Blue Book 2025-2026 | `Tony Evers`, `Democrat` |
 | WV | West Virginia Secretary of State | [apps.sos.wv.gov](https://apps.sos.wv.gov/elections/candidate-search/candidate.aspx?candidate=22761) | 2024 election candidate record | `Patrick Morrisey`, `Republican` |
 | WY | Wyoming Secretary of State | [sos.wyo.gov](https://sos.wyo.gov/Services/docs/GovernorRoster.pdf) (PDF) | roster of governors | `Mark Gordon`, `R` |
 
@@ -92,7 +92,7 @@ Alaska and Florida publish their results under family names only (`Dunleavy/Dahl
 
 Notes on the PDF sources:
 
-- **Editions.** The Iowa, Michigan, South Carolina, Tennessee and Wisconsin documents are chapters of a dated edition of the state's manual or blue book. A later edition has a new address, and the rule keeps reading the old one until it is updated. The Nebraska address is a page range of the online Blue Book and can change when the book is repaginated. The South Carolina and Tennessee rules read the governor's own entry, so they list one person.
+- **Editions.** The Iowa, Michigan, South Carolina, Tennessee and Wisconsin documents are chapters of a dated edition of the state's manual or blue book. A later edition has a new address, and the rule keeps reading the old one until it is updated. The Nebraska address is a page range of the online Blue Book and can change when the book is repaginated. The South Carolina and Tennessee rules read the governor's own entry, so they list one person. Wisconsin's 2025-2026 elected-officials chapter is the PDF the Legislative Reference Bureau publishes at `/lrb/media/pkudaahd/2025020-elected-officials.pdf`; the `docs.legis.wisconsin.gov/misc/lrb/blue_book/2025_2026/020_elected_officials.pdf` path listed on the edition index returned HTTP 404.
 - **Kentucky.** The certification prints the party headings above the slates (`Democratic Party  Republican Party  Write-In`, then the names in the same column order). The rule reads the first heading with the first slate of each contest, which are adjacent in the extracted text, and lists nobody from the other columns. It stops the build if the governor is not the first-column candidate.
 - **New Jersey.** Each page of the official list has one candidate, with the party on the line after the address.
 - **New Hampshire.** The House Journal of 8 January 2025 prints the return of votes for governor that the Secretary of State presented to the joint convention. It marks candidates `r`, `d` and `i`.

@@ -62,13 +62,15 @@ def run_curl(command):
     return subprocess.run(command, check=True, capture_output=True)
 
 
-def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browser_snapshots=False, user_agent=None):
+def fetch(key, publisher, url, offline=False, *, method="GET", data=None, browser_snapshots=False, user_agent=None, require_browser=False):
     cache = ROOT / '.source-cache'
     cache.mkdir(exist_ok=True)
     assert method in {'GET','POST'} and ((method=='GET' and data is None) or (method=='POST' and isinstance(data,str) and data)), 'Unsupported source request'
     request_key = url if method=='GET' else url+'\nPOST\n'+data
     path = cache / (digest(request_key.encode()) + '.json')
     browser_evidence = path.exists() and json.loads(path.read_text()).get('representation')=='browser-dom'
+    if require_browser and not browser_evidence and not offline:
+        raise RuntimeError('Source requires a fresh browser DOM capture; import evidence and use --browser-snapshots: '+url)
     if not offline and browser_evidence and not browser_snapshots:
         raise RuntimeError('Source requires a fresh browser DOM capture; import evidence and use --browser-snapshots: '+url)
     if offline or (browser_snapshots and browser_evidence):

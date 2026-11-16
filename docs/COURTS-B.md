@@ -10,7 +10,7 @@
 - Source titles map to row offices. `Associate Justice`, `Associate Chief Justice` (WA) and `Vice Chief Justice` become `Justice`. `Vice Presiding Judge` (OK) becomes `Judge`. `Interim Chief Justice` (UT) becomes `Chief Justice`.
 - Rows: `id` is `<st>-court-<slug of the member's name>`, `body` is the court's name, `office` is the mapped title, `level` is `state`, and `website` is the source URL. Party, districts, contact details and terms are not taken.
 - Utah and Washington print names in capitals. `display_name` converts them to title case but keeps initials, Roman numerals and the `Mc` prefix (`McCLOUD` becomes `McCloud`). Washington breaks names with `<br>` at varying points, and the rule reads each `<br>` as a space.
-- Requests use the user agent `Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)`.
+- Requests use the user agent `Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)`. PDF sources are read with `pypdf` (same extraction as governor party PDFs).
 
 ## Per-state sources
 
@@ -26,7 +26,7 @@
 | NC | Supreme Court of North Carolina | 7: G.S. 7A-10 (ncleg.gov) | https://www.nccourts.gov/courts/supreme-court/meet-the-justices | `judge__title` + `judge__full-name` spans | collected |
 | ND | North Dakota Supreme Court | 5: ndcourts.gov/supreme-court ("has five justices") | https://www.ndcourts.gov/supreme-court/justices | `<h5 class="card-title">` | collected |
 | OH | Supreme Court of Ohio | 7: stated on the source page (Ohio Constitution sets the size at seven) | https://www.supremecourt.ohio.gov/courts/judicial-system/supreme-court-of-ohio/justices-overview/ | "Supreme Court Justices" link list entries | collected |
-| OK | Supreme Court of Oklahoma | n/a | https://www.oscn.net/static/JudicialDirectory.pdf | n/a | not collected: roster only in a PDF |
+| OK | Supreme Court of Oklahoma | 9: Okla. Const. art. VII §2 | https://www.oscn.net/static/JudicialDirectory.pdf | PDF text: `Chief Justice\|Vice Chief Justice\|Justice {name} Oklahoma Supreme Court` | collected |
 | OK | Oklahoma Court of Criminal Appeals | 5: 20 O.S. §31 (oscn.net) | https://www.okcca.net/judges/ | Photo caption links `Presiding Judge/Vice Presiding Judge/Judge <name>` | collected |
 | OR | Oregon Supreme Court | 7: ORS 2.010 (oregonlegislature.gov) | `https://www.courts.oregon.gov/courts/_api/web/GetList('/courts/Lists/Judges')/items?$filter=Category eq 'Supreme'&$select=...` | The Judges list that the justices page renders, as XML: `FirstName`, `Middle_x0020_Initial`, `Title` (surname), `Suffix`, and `Job_x0020_Title` (`Supreme Court Chief Justice` / `Supreme Court Justice`); `Category` must be `Supreme` | collected |
 | PA | Supreme Court of Pennsylvania | 7: pacourts.us/learn ("the seven justices") | https://www.pacourts.us/courts/supreme-court/supreme-court-justices | Portrait link spans `Chief Justice/Justice<br/> <name>` | collected |
@@ -44,7 +44,7 @@
 | WI | Wisconsin Supreme Court | 7: stated on the source page ("composed of seven justices") | https://www.wicourts.gov/courts/supreme/justices/index.htm | `team-title-heading` links | collected |
 | WY | Wyoming Supreme Court | 5: stated on the source page ("There are five justices") | https://www.wyocourts.gov/supreme-court/ | `team-member-name` headings followed by the matching role line | collected |
 
-20 of the 27 courts are collected. All 20 rules were checked against live pages on 9 November 2026, and each yielded its full seat count with one chief or presiding member.
+21 of the 27 courts are collected. The 20 HTML rules were checked against live pages on 9 November 2026; the Oklahoma Supreme Court PDF directory was read on 15 November 2026. Each yielded its full seat count with one chief or presiding member.
 
 ## Not collected
 
@@ -54,7 +54,6 @@ These courts are recorded as `not-collected`, with the reason in `COURTS[st]['bl
 - **New Hampshire**: `courts.nh.gov` returned HTTP 403 "Access Denied" for every path tried.
 - **Tennessee**: `tncourts.gov` returned a JavaScript challenge page instead of content. Solving it is not permitted.
 - **Rhode Island**: the Supreme Court page builds its content with scripts, and no HTTP response from `courts.ri.gov` lists the current justices. The only roster document, `AboutTheSupremeCourt.pdf`, was last modified in 2023, so it doesn't establish current membership.
-- **Oklahoma Supreme Court**: `oscn.net` publishes the current justices only in the PDF Judicial Directory (`/static/JudicialDirectory.pdf`), and the build has no PDF text extraction.
 - **South Carolina**: the justices page listed four members, but S.C. Code 14-3-10 provides five seats, and the page shows no vacancy marker. Under the fail-closed rule the court is not collected. Once the page lists five members or marks the vacancy, move the court from `BLOCKED` to `RULES` with a rule for its `small-title` headings (`<h3 class="small-title"><span class="d-block">Chief Justice|Justice</span> <name></h3>`). If the page marks a vacancy, also add a `vacancy` pattern.
 
 New York's Court of Appeals titles its members Chief Judge and Associate Judge. `statewide.COURT_OFFICES` has no `Chief Judge`, so the vocabulary needs that entry before New York can be collected.

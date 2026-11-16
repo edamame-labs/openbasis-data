@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-14T07:38:30.034192+00:00",
+  "generatedAt": "2026-11-16T04:40:31.295755+00:00",
   "policy": "government-primary-only; federal/state/county",
   "counts": {
-    "state": 7318,
+    "state": 7337,
     "federal": 533
   },
   "rosters": [
@@ -4152,6 +4152,10 @@
       "records": 7
     },
     {
+      "source": "court-ms",
+      "records": 9
+    },
+    {
       "source": "court-ga-names",
       "records": 9
     },
@@ -4186,6 +4190,10 @@
     {
       "source": "court-ok-cca",
       "records": 5
+    },
+    {
+      "source": "court-ok-supreme",
+      "records": 9
     },
     {
       "source": "court-or",
@@ -4405,6 +4413,10 @@
     },
     {
       "source": "sw-ia-governor",
+      "records": 1
+    },
+    {
+      "source": "sw-ia-treasurer",
       "records": 1
     },
     {
@@ -5569,6 +5581,10 @@
             "status": "collected",
             "records": 1
           },
+          "treasurer": {
+            "status": "collected",
+            "records": 1
+          },
           "attorneyGeneral": {
             "status": "collected",
             "records": 1
@@ -5584,19 +5600,13 @@
           "secretaryOfState": {
             "status": "not-collected",
             "records": 0
-          },
-          "treasurer": {
-            "status": "not-collected",
-            "records": 0
           }
         },
         "notCollected": [
-          "secretaryOfState",
-          "treasurer"
+          "secretaryOfState"
         ],
         "blockers": [
-          "secretaryOfState: the official source refused automated retrieval: https://sos.iowa.gov/ returned a Cloudflare challenge (HTTP 403)",
-          "treasurer: the official source refused automated retrieval: https://www.iowatreasurer.gov/ returned HTTP 503 (Error 503) to USER_AGENT and to a normal browser"
+          "secretaryOfState: the official source refused automated retrieval: https://sos.iowa.gov/ returned a Cloudflare challenge (HTTP 403)"
         ]
       },
       "stateCourts": {
@@ -6367,13 +6377,11 @@
       "stateCourts": {
         "courts": {
           "Supreme Court of Mississippi": {
-            "status": "not-collected",
-            "records": 0
+            "status": "collected",
+            "records": 9
           }
         },
-        "blockers": [
-          "The official court website could not be read: https://courts.ms.gov/appellatecourts/sc/scjustices.php returned HTTP 520 (origin error) repeatedly on 2026-11-10."
-        ]
+        "blockers": []
       },
       "countyOfficials": "not-collected"
     },
@@ -7015,13 +7023,11 @@
             "records": 5
           },
           "Supreme Court of Oklahoma": {
-            "status": "not-collected",
-            "records": 0
+            "status": "collected",
+            "records": 9
           }
         },
-        "blockers": [
-          "Supreme Court of Oklahoma (https://www.oscn.net/static/JudicialDirectory.pdf): oscn.net lists the current justices only in the PDF Judicial Directory; the build has no PDF text extraction."
-        ]
+        "blockers": []
       },
       "countyOfficials": "not-collected"
     },
@@ -7817,12 +7823,12 @@
     },
     "areaIntersectionPairs": 62399,
     "officialGeometryLinks": {
-      "officials": 7851,
-      "matched": 7851,
+      "officials": 7870,
+      "matched": 7870,
       "unmatched": 0,
       "matchedByLayer": {
         "cd": 433,
-        "state": 671,
+        "state": 690,
         "sldu": 1840,
         "sldl": 4852,
         "sldl_floterial": 55

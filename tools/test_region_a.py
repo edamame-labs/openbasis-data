@@ -190,8 +190,11 @@ class RegionATest(unittest.TestCase):
  def test_florida_house_and_illinois_are_requested_with_the_project_user_agent(self):
   for key in ['fl-lower','il-lower','il-upper']:
    self.assertEqual(a.identified(key),dict(user_agent=a.USER_AGENT))
-  for key in ['fl-upper','ga-lower','hi-upper','in-roster','de-lower']:
+  for key in ['fl-upper','hi-upper','in-roster','de-lower']:
    self.assertEqual(a.identified(key),{})
+  for key in ['ga-lower','ga-upper']:
+   self.assertEqual(a.identified(key),dict(require_browser=True))
   self.assertLessEqual(a.IDENTIFIED,set(a.SOURCES))
+  self.assertLessEqual(a.BROWSER,set(a.SOURCES))
 
 if __name__=='__main__':unittest.main()
