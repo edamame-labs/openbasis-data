@@ -1,8 +1,6 @@
 # State executive officers
 
-`tools/regions/executive.py` collects sitting governors from each state's own governor website. Lieutenant governors, secretaries of state, attorneys general and other statewide offices are not collected yet, and `coverage.json` lists them under `stateExecutive.notCollected`.
-
-Governor records enter `data/` the next time the release is rebuilt and published with `--browser-snapshots --fresh`. Until then the checked-in snapshot has none.
+`tools/regions/executive.py` collects sitting governors from each state's own governor website into `data/officials.json`. Other statewide elected executive offices are collected by `tools/regions/statewide_{a,b,c,d}.py` (see [STATEWIDE-A](STATEWIDE-A.md), [STATEWIDE-B](STATEWIDE-B.md), [STATEWIDE-C](STATEWIDE-C.md), and [STATEWIDE-D](STATEWIDE-D.md)); `data/coverage.json` lists uncollected offices under `stateExecutive.notCollected`.
 
 ## Sources and extraction
 
@@ -26,8 +24,6 @@ The governor sites don't state a party. For 49 states, `party` comes from a seco
 Each rule's pattern lists the people the document names, with `name` and `party` groups. It runs on the HTML-unescaped page with whitespace collapsed; JSON bodies are read as served. The governor's party is the party of the entries that name the governor.
 
 A response that is a PDF is read as the text `pypdf` extracts (`pdf_text`), page by page, with whitespace collapsed. `pypdf` is pinned in `requirements-geo.txt`. The checksum in the source record is of the PDF as served. Extracted text can split a word where the PDF kerns it (`T erry E. Branstad`), so a name split that way matches no governor and stops the build.
-
-Party values enter `data/` the next time the release is rebuilt and published with `--browser-snapshots --fresh`. Until then the checked-in governor records have none.
 
 - **Matching.** An entry names the governor when the family names (the last word, after dropping `Jr.`, `Sr.`, `II`, `III`, `IV`) are equal and one name's first given name is among the other's given names. Case, accents and punctuation are ignored, and `Family, Given` order is accepted. Two given names agree when they are equal or one is a prefix of the other of at least three letters (`Dan` / `Daniel`, `Josh` / `Joshua`). Nothing else is treated as a nickname: `Mike` does not match `Michael`, and an entry that gives only a family name does not match.
 - **Fail closed.** The build stops when the pattern matches nothing, when no entry names the governor, when the governor's entries state two different parties, or when the label is not in `PARTY_LABELS`.
@@ -84,7 +80,7 @@ A party read from election results or a candidate record is the party the govern
 | VA | Virginia Department of Elections | [historical.elections.virginia.gov](https://historical.elections.virginia.gov/contest/164996) | 2025-11-04 general election | `Abigail D. Spanberger`, `Democratic` |
 | VT | Vermont Secretary of State | [electionarchive.vermont.gov](https://electionarchive.vermont.gov/contest/160972) | 2024-11-05 general election | `Phil Scott`, `Republican` |
 | WA | Washington State Library | [www.sos.wa.gov](https://www.sos.wa.gov/library/research-collections/washington-territorial-and-state-governors) | list of governors | `Bob Ferguson`, `Democrat` |
-| WI | Wisconsin Legislative Reference Bureau | [docs.legis.wisconsin.gov](https://docs.legis.wisconsin.gov/misc/lrb/blue_book/2025_2026/020_elected_officials.pdf) (PDF) | elected officials in the Wisconsin Blue Book 2025-2026 | `Tony Evers`, `Democrat` |
+| WI | Wisconsin Legislative Reference Bureau | [legis.wisconsin.gov](https://legis.wisconsin.gov/lrb/media/pkudaahd/2025020-elected-officials.pdf) (PDF) | elected officials in the Wisconsin Blue Book 2025-2026 | `Tony Evers`, `Democrat` |
 | WV | West Virginia Secretary of State | [apps.sos.wv.gov](https://apps.sos.wv.gov/elections/candidate-search/candidate.aspx?candidate=22761) | 2024 election candidate record | `Patrick Morrisey`, `Republican` |
 | WY | Wyoming Secretary of State | [sos.wyo.gov](https://sos.wyo.gov/Services/docs/GovernorRoster.pdf) (PDF) | roster of governors | `Mark Gordon`, `R` |
 
@@ -92,7 +88,7 @@ Alaska and Florida publish their results under family names only (`Dunleavy/Dahl
 
 Notes on the PDF sources:
 
-- **Editions.** The Iowa, Michigan, South Carolina, Tennessee and Wisconsin documents are chapters of a dated edition of the state's manual or blue book. A later edition has a new address, and the rule keeps reading the old one until it is updated. The Nebraska address is a page range of the online Blue Book and can change when the book is repaginated. The South Carolina and Tennessee rules read the governor's own entry, so they list one person.
+- **Editions.** The Iowa, Michigan, South Carolina, Tennessee and Wisconsin documents are chapters of a dated edition of the state's manual or blue book. A later edition has a new address, and the rule keeps reading the old one until it is updated. The Nebraska address is a page range of the online Blue Book and can change when the book is repaginated. The South Carolina and Tennessee rules read the governor's own entry, so they list one person. Wisconsin's 2025-2026 elected-officials chapter is the PDF the Legislative Reference Bureau publishes at `/lrb/media/pkudaahd/2025020-elected-officials.pdf`; the `docs.legis.wisconsin.gov/misc/lrb/blue_book/2025_2026/020_elected_officials.pdf` path listed on the edition index returned HTTP 404.
 - **Kentucky.** The certification prints the party headings above the slates (`Democratic Party  Republican Party  Write-In`, then the names in the same column order). The rule reads the first heading with the first slate of each contest, which are adjacent in the extracted text, and lists nobody from the other columns. It stops the build if the governor is not the first-column candidate.
 - **New Jersey.** Each page of the official list has one candidate, with the party on the line after the address.
 - **New Hampshire.** The House Journal of 8 January 2025 prints the return of votes for governor that the Secretary of State presented to the joint convention. It marks candidates `r`, `d` and `i`.

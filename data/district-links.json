@@ -91693,6 +91693,28 @@
       "geometryDistrictLabel": "37"
     },
     {
+      "officialId": "nv-lower-f5a0d068401311df",
+      "state": "NV",
+      "layer": "sldl",
+      "district": "22",
+      "sourceIds": [
+        "nv-lower"
+      ],
+      "districtKey": "sldl:32022",
+      "GEOID": "32022",
+      "boundaryId": "32022",
+      "geometrySourceIds": [
+        "census-sldl-32-page-0",
+        "census-sldl-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-32-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "state-chamber-canonical-basename",
+      "geometryDistrictLabel": "22"
+    },
+    {
       "officialId": "nv-lower-ba6c7be96eba6b5a",
       "state": "NV",
       "layer": "sldl",
@@ -92087,28 +92109,6 @@
       ],
       "matchingRule": "state-chamber-canonical-basename",
       "geometryDistrictLabel": "32"
-    },
-    {
-      "officialId": "nv-lower-3da243edb0149cac",
-      "state": "NV",
-      "layer": "sldl",
-      "district": "22",
-      "sourceIds": [
-        "nv-lower"
-      ],
-      "districtKey": "sldl:32022",
-      "GEOID": "32022",
-      "boundaryId": "32022",
-      "geometrySourceIds": [
-        "census-sldl-32-page-0",
-        "census-sldl-metadata"
-      ],
-      "stateCrosswalkSourceIds": [
-        "census-state-32-page-0",
-        "census-state-metadata"
-      ],
-      "matchingRule": "state-chamber-canonical-basename",
-      "geometryDistrictLabel": "22"
     },
     {
       "officialId": "nv-lower-d2d69616b8c5f580",
@@ -165903,6 +165903,204 @@
       "geometryDistrictLabel": "Michigan"
     },
     {
+      "officialId": "ms-court-michael-k-randolph",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-leslie-d-king",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-josiah-d-coleman",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-david-m-ishee",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-t-kenneth-griffis",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-david-p-sullivan",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-jenifer-b-branning",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-celeste-embrey-wilson",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
+      "officialId": "ms-court-amanda-jones-tollison",
+      "state": "MS",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ms"
+      ],
+      "districtKey": "state:28",
+      "GEOID": "28",
+      "boundaryId": "28",
+      "geometrySourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-28-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Mississippi"
+    },
+    {
       "officialId": "mt-court-cory-swanson",
       "state": "MT",
       "layer": "state",
@@ -166987,6 +167185,204 @@
       "district": null,
       "sourceIds": [
         "court-ok-cca"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-dustin-p-rowe",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-dana-kuehn",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-james-winchester",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-james-edmondson",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-douglas-combs",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-noma-gurich",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-richard-darby",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-john-kane",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
+      ],
+      "districtKey": "state:40",
+      "GEOID": "40",
+      "boundaryId": "40",
+      "geometrySourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-40-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-court-state-fips",
+      "geometryDistrictLabel": "Oklahoma"
+    },
+    {
+      "officialId": "ok-court-travis-jett",
+      "state": "OK",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "court-ok-supreme"
       ],
       "districtKey": "state:40",
       "GEOID": "40",
@@ -170661,6 +171057,28 @@
       "district": null,
       "sourceIds": [
         "sw-ia-governor"
+      ],
+      "districtKey": "state:19",
+      "GEOID": "19",
+      "boundaryId": "19",
+      "geometrySourceIds": [
+        "census-state-19-page-0",
+        "census-state-metadata"
+      ],
+      "stateCrosswalkSourceIds": [
+        "census-state-19-page-0",
+        "census-state-metadata"
+      ],
+      "matchingRule": "statewide-executive-state-fips",
+      "geometryDistrictLabel": "Iowa"
+    },
+    {
+      "officialId": "ia-treasurer",
+      "state": "IA",
+      "layer": "state",
+      "district": null,
+      "sourceIds": [
+        "sw-ia-treasurer"
       ],
       "districtKey": "state:19",
       "GEOID": "19",
@@ -174705,12 +175123,12 @@
   ],
   "unmatched": [],
   "summary": {
-    "officials": 7851,
-    "matched": 7851,
+    "officials": 7870,
+    "matched": 7870,
     "unmatched": 0,
     "matchedByLayer": {
       "cd": 433,
-      "state": 671,
+      "state": 690,
       "sldu": 1840,
       "sldl": 4852,
       "sldl_floterial": 55

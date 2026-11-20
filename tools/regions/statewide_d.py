@@ -204,7 +204,7 @@ def parse(key, raw, source):
 def collect(acquire, offline):
     rows, sources = [], []
     for key, (publisher, url) in SOURCES.items():
-        raw, source = acquire(key, publisher, url, offline, **({} if key in BROWSER else dict(user_agent=USER_AGENT)))
+        raw, source = acquire(key, publisher, url, offline, **(dict(require_browser=True) if key in BROWSER else dict(user_agent=USER_AGENT)))
         rows.extend(parse(key, raw, source))
         sources.append(source)
     return rows, sources

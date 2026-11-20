@@ -40,6 +40,7 @@ SOURCES = {
     'sw-in-comptroller': ('Office of the Indiana State Comptroller', 'https://www.in.gov/comptroller/'),
     'sw-in-treasurer': ('Office of the Indiana Treasurer of State', 'https://www.in.gov/tos/'),
     'sw-ia-governor': ('Office of the Governor of Iowa', 'https://governor.iowa.gov/'),
+    'sw-ia-treasurer': ('Office of the Treasurer of State of Iowa', 'https://www.iowatreasurer.gov/'),
     'sw-ia-ag': ('Office of the Iowa Attorney General', 'https://www.iowaattorneygeneral.gov/'),
     'sw-ia-auditor': ('Office of the Auditor of State of Iowa', 'https://www.auditor.iowa.gov/'),
     'sw-ia-agriculture': ('Iowa Department of Agriculture and Land Stewardship', 'https://iowaagriculture.gov/'),
@@ -112,6 +113,7 @@ RULES = [
     ('IN', 'treasurer', 'sw-in-treasurer', r'<h2>Welcome to the Office of Treasurer ' + N + r'</h2>'),
 
     ('IA', 'lieutenantGovernor', 'sw-ia-governor', r'alt="Lt\. Governor ' + N + r' headshot"'),
+    ('IA', 'treasurer', 'sw-ia-treasurer', r"Hi [–—-] I['’]m " + N + r", Iowa['’]s State Treasurer"),
     ('IA', 'attorneyGeneral', 'sw-ia-ag', r'<h2>' + N + r'</h2> <p>Iowa Attorney General</p>'),
     ('IA', 'auditor', 'sw-ia-auditor', r'<div class="logo-text">IOWA AUDITOR OF STATE<br>' + N + r'</div>'),
     # Iowa titles the office Secretary of Agriculture; it is the elected head of the state agriculture department.
@@ -160,7 +162,6 @@ RULES = [
 BLOCKED = {
     ('IL', 'secretaryOfState'): 'https://www.ilsos.gov/ reset every HTTP/2 stream and timed out over HTTP/1.1',
     ('IA', 'secretaryOfState'): 'https://sos.iowa.gov/ returned a Cloudflare challenge (HTTP 403)',
-    ('IA', 'treasurer'): 'https://www.iowatreasurer.gov/ returned HTTP 503 (Error 503) to USER_AGENT and to a normal browser',
     ('LA', 'insuranceCommissioner'): 'https://www.ldi.la.gov/ returned a bot challenge (HTTP 403)',
     ('MA', 'secretaryOfState'): 'https://www.sec.state.ma.us/ redirected to itself until the redirect limit (it requires a cookie session)',
     ('MI', 'lieutenantGovernor'): 'https://www.michigan.gov/ returned Access Denied (HTTP 403) for every office page',

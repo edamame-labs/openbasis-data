@@ -195,7 +195,7 @@ PARTY_RULES = {
         r'"party":\{"id":"\d+","name":"(?P<party>[^"]+)"[^{}]*\},"party2":(?:null|\{[^{}]*\}),"party3":(?:null|\{[^{}]*\}),"party4":(?:null|\{[^{}]*\}),"__typename":"CandidateInContest","voteChannelId":\d+,"candidate":\{[^{}]*\},"shortDisplayName":"(?:[^"\\]|\\.)*","displayName":"(?P<name>(?:[^"\\]|\\.)+)"', '2024-11-05 general election'),
  'WA': ('Washington State Library', 'https://www.sos.wa.gov/library/research-collections/washington-territorial-and-state-governors',
         r'<tr> <td>(?P<name>[^<]+?)\s*</td> <td>\s*(?P<party>[A-Za-z][^<]*?)\s*</td> <td>\s*\d', None),
- 'WI': ('Wisconsin Legislative Reference Bureau', 'https://docs.legis.wisconsin.gov/misc/lrb/blue_book/2025_2026/020_elected_officials.pdf',
+ 'WI': ('Wisconsin Legislative Reference Bureau', 'https://legis.wisconsin.gov/lrb/media/pkudaahd/2025020-elected-officials.pdf',
         rf'(?P<name>{W}(?: {W})+), (?:Governor|Lieutenant Governor|Attorney General|Secretary of State|State Treasurer) (?P<party>[A-Z][a-z]+) Personal:', None),
  'WV': ('West Virginia Secretary of State', 'https://apps.sos.wv.gov/elections/candidate-search/candidate.aspx?candidate=22761',
         r'<tr><td><strong>(?P<name>[^<]+?)\s*(?:</?strong>)+<br ?/?></td><td>(?P<party>[^<]+?)</td>', '2024 election candidate record'),
@@ -307,7 +307,7 @@ def add_party(row, party, source):
 def collect(acquire, offline):
     rows, sources = [], []
     for key, (publisher, url) in SOURCES.items():
-        raw, source = acquire(key, publisher, url, offline, **({} if key in BROWSER else dict(user_agent=USER_AGENT)))
+        raw, source = acquire(key, publisher, url, offline, **(dict(require_browser=True) if key in BROWSER else dict(user_agent=USER_AGENT)))
         row, = parse(key, raw, source)
         sources.append(source)
         if row['state'] in PARTY_RULES:

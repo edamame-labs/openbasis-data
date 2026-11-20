@@ -8,26 +8,30 @@ The separate [media outcome table](docs/MEDIA-RESULTS.md) contains the November 
 
 ## Included snapshot
 
-Counts below describe source observations from November 2–3, 2026 (UTC). `data/coverage.json` is the authority for subsequent refreshes.
+Counts below describe the checked-in snapshot generated on November 16, 2026 (UTC). `data/coverage.json` is the authority for subsequent refreshes.
 
 | Dataset | Coverage | Direct publisher |
 | --- | --- | --- |
-| U.S. House members | 433 records, 50 states | [House Clerk XML](https://clerk.house.gov/xml/lists/MemberData.xml) |
+| President, Vice President, and non-voting House members | 8 records (President, Vice President, and 6 delegates/resident commissioner for DC, PR, GU, VI, AS, MP) in `national.json` | [White House](https://www.whitehouse.gov/administration/) and [House Clerk XML](https://clerk.house.gov/xml/lists/MemberData.xml); see [national offices](docs/NATIONAL.md) |
+| U.S. House members | 433 records, 50 states | [House Clerk XML](https://clerk.house.gov/xml/lists/MemberData.xml); see [federal fields](docs/FEDERAL.md) |
 | U.S. senators | 100 records, 50 states | [Senate XML](https://www.senate.gov/general/contact_information/senators_cfm.xml) |
-| State legislators | 7,321 people across all 50 states and 99 chambers | Direct official legislative websites; see [regional source notes](#state-source-notes) |
+| Governors | 50 states | Direct official governor websites; see [executive notes](docs/EXECUTIVE.md) |
+| Other statewide elected executive officers | 269 records across 229 collected offices (18 `not-collected` due to automated retrieval blocks) | Direct official state websites; see [statewide notes](#state-source-notes) |
+| State courts of last resort | 271 members across 40 of 52 courts (12 `not-collected`) | Direct official judiciary websites; see [court notes](#state-source-notes) |
+| State legislators | 6,747 records across 92 of 99 chambers (7 chambers in AL, HI, IN, and SC House withheld `not-collected` pending post-election roster updates) | Direct official legislative websites; see [regional source notes](#state-source-notes) |
 | Congressional and state legislative boundaries | Original Census polygons for all 50 states; Nebraska has no lower chamber | [Census Legislative service](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer) |
 | State geography | 50 states | [Census TIGERweb](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer) |
 | County and county-equivalent geography | 3,143 areas within the 50 states | Same Census service |
 
-Counts describe the checked-in snapshot, not a guarantee that every occupied office is present. State executive officers and county officeholders are **not collected**. All state legislative chambers have a directly collected official roster; Nebraska has one unicameral chamber. `collected` means source extraction completed, not that a statutory seat shortfall is a verified vacancy. `officials.json` excludes DC and the territories; their non-voting House members are in `national.json`. County equivalents include entities such as independent cities and statistical areas; their inclusion does not establish a county government or supervisor district.
+Counts describe the checked-in snapshot, not a guarantee that every occupied office is present. County officeholders remain **not collected**. Post-election state legislative chambers whose official directories still list the prior term after November 2026 terms began (`AL`, `HI`, `IN`, and `SC` House — 7 chambers total) are withheld (`not-collected` with blockers in `data/coverage.json`), and statewide executive offices and high courts whose official sites refuse automated retrieval or omit seats without marking vacancies are also marked `not-collected`. Nebraska has one unicameral chamber. `collected` means source extraction completed, not that a statutory seat shortfall is a verified vacancy. `officials.json` excludes DC and the territories; their non-voting House members are in `national.json`. County equivalents include entities such as independent cities and statistical areas; their inclusion does not establish a county government or supervisor district.
 
 The current geography vintage is **January 1, 2026**, as reported in Census layer metadata. Source publication dates differ from retrieval dates: the House XML reports **October 1, 2026**. Sources without a publication date have `publishedAt: null`. A recently fetched page may still contain older information.
 
 ## Files and evidence
 
-- `data/officials.json`: 7,854 source-backed records, with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available. Optional contact fields are `website`, `email`, `phone`, `address` and `photo`.
+- `data/officials.json`: 7,870 source-backed records (533 federal, 7,337 state), with name, office/body, jurisdiction, state, and source-reported party/district/profile link where available. Optional contact fields are `website`, `email`, `phone`, `address` and `photo`.
 - `data/officials.csv`: the same records, with provenance encoded as JSON in `sources`.
-- `data/national.json`: the President and Vice President (White House administration page; party from the FEC and the Senate's list of Vice Presidents) and the non-voting House members for DC, PR, GU, VI, AS and MP (`territory`, `office` `Delegate` or `Resident Commissioner`). These offices belong to no state, so they are kept out of `officials.json`; see [national offices](docs/NATIONAL.md).
+- `data/national.json`: 8 records — the President and Vice President (White House administration page; party from the FEC and the Senate's list of Vice Presidents) and the 6 non-voting House members for DC, PR, GU, VI, AS and MP (`territory`, `office` `Delegate` or `Resident Commissioner`). These offices belong to no state, so they are kept out of `officials.json`; see [national offices](docs/NATIONAL.md).
 - `data/sources.json`: direct URLs, final URLs, publishers, retrieval timestamps, SHA-256 checksums of the acquired representation, and reported publication/session metadata. `representation` distinguishes HTTP response bodies from browser DOM captures; POST sources include their request method and body.
 - `data/geography/{states,counties}.geojson`: Census features, source identifiers and names, with collection-level query URL, checksum, metadata reference and vintage.
 - `data/coverage.json`: collected rosters, analytical boundary counts and explicitly uncollected offices by state.
@@ -84,10 +88,14 @@ For comparison against a pinned release, first check out its Git commit. Fresh d
 
 ### State source notes
 
-- [AL, AK, AZ, AR, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY](docs/region-a.md)
-- [LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, ND](docs/region-b.md)
-- [OK House, OR, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY](docs/region-c.md)
-- [OH, OK Senate and PA, including browser evidence reproduction](docs/region-d.md)
+- Federal and national: [U.S. House and Senate fields](docs/FEDERAL.md), [National offices (President, VP, delegates)](docs/NATIONAL.md)
+- Governors and statewide executive officers: [Governors](docs/EXECUTIVE.md), [AL–HI](docs/STATEWIDE-A.md), [ID–MN](docs/STATEWIDE-B.md), [MS–OR](docs/STATEWIDE-C.md), [PA–WY](docs/STATEWIDE-D.md)
+- State courts of last resort: [AL–MO](docs/COURTS-A.md), [MT–WY](docs/COURTS-B.md)
+- State legislatures:
+  - [AL, AK, AZ, AR, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY](docs/region-a.md)
+  - [LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, ND](docs/region-b.md)
+  - [OK House, OR, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY](docs/region-c.md)
+  - [OH, OK Senate and PA, including browser evidence reproduction](docs/region-d.md)
 
 Each note lists direct government endpoints, parsed counts and exclusions. `data/coverage.json` has per-state, per-chamber record counts and collection status. The exact supporting references for each person are in `sources`; records relying on a separate current-membership index include both references. For New Hampshire, the TSV's `Former` label is not treated as resignation: House membership is joined to the chamber's actual current roster.
 
