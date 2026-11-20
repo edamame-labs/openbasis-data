@@ -56,7 +56,7 @@ These courts are recorded as `not-collected`, with the reason in `COURTS[st]['bl
 - **Rhode Island**: the Supreme Court page builds its content with scripts, and no HTTP response from `courts.ri.gov` lists the current justices. The only roster document, `AboutTheSupremeCourt.pdf`, was last modified in 2023, so it doesn't establish current membership.
 - **South Carolina**: the justices page listed four members, but S.C. Code 14-3-10 provides five seats, and the page shows no vacancy marker. Under the fail-closed rule the court is not collected. Once the page lists five members or marks the vacancy, move the court from `BLOCKED` to `RULES` with a rule for its `small-title` headings (`<h3 class="small-title"><span class="d-block">Chief Justice|Justice</span> <name></h3>`). If the page marks a vacancy, also add a `vacancy` pattern.
 
-New York's Court of Appeals titles its members Chief Judge and Associate Judge. `statewide.COURT_OFFICES` has no `Chief Judge`, so the vocabulary needs that entry before New York can be collected.
+New York's Court of Appeals titles its members Chief Judge and Associate Judge. `statewide.COURT_OFFICES` already includes `Chief Judge`, while `courts_b.py` (`TITLES`, `CHIEFS`, `FAMILIES`) will need `Chief Judge` and `Associate Judge` mapped when New York is collected (and the note in `BLOCKED['court-ny']` updated on the next data rebuild).
 
 ## Tests
 

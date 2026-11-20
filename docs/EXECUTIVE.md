@@ -1,8 +1,6 @@
 # State executive officers
 
-`tools/regions/executive.py` collects sitting governors from each state's own governor website. Lieutenant governors, secretaries of state, attorneys general and other statewide offices are not collected yet, and `coverage.json` lists them under `stateExecutive.notCollected`.
-
-Governor records enter `data/` the next time the release is rebuilt and published with `--browser-snapshots --fresh`. Until then the checked-in snapshot has none.
+`tools/regions/executive.py` collects sitting governors from each state's own governor website into `data/officials.json`. Other statewide elected executive offices are collected by `tools/regions/statewide_{a,b,c,d}.py` (see [STATEWIDE-A](STATEWIDE-A.md), [STATEWIDE-B](STATEWIDE-B.md), [STATEWIDE-C](STATEWIDE-C.md), and [STATEWIDE-D](STATEWIDE-D.md)); `data/coverage.json` lists uncollected offices under `stateExecutive.notCollected`.
 
 ## Sources and extraction
 
@@ -26,8 +24,6 @@ The governor sites don't state a party. For 49 states, `party` comes from a seco
 Each rule's pattern lists the people the document names, with `name` and `party` groups. It runs on the HTML-unescaped page with whitespace collapsed; JSON bodies are read as served. The governor's party is the party of the entries that name the governor.
 
 A response that is a PDF is read as the text `pypdf` extracts (`pdf_text`), page by page, with whitespace collapsed. `pypdf` is pinned in `requirements-geo.txt`. The checksum in the source record is of the PDF as served. Extracted text can split a word where the PDF kerns it (`T erry E. Branstad`), so a name split that way matches no governor and stops the build.
-
-Party values enter `data/` the next time the release is rebuilt and published with `--browser-snapshots --fresh`. Until then the checked-in governor records have none.
 
 - **Matching.** An entry names the governor when the family names (the last word, after dropping `Jr.`, `Sr.`, `II`, `III`, `IV`) are equal and one name's first given name is among the other's given names. Case, accents and punctuation are ignored, and `Family, Given` order is accepted. Two given names agree when they are equal or one is a prefix of the other of at least three letters (`Dan` / `Daniel`, `Josh` / `Joshua`). Nothing else is treated as a nickname: `Mike` does not match `Michael`, and an entry that gives only a family name does not match.
 - **Fail closed.** The build stops when the pattern matches nothing, when no entry names the governor, when the governor's entries state two different parties, or when the label is not in `PARTY_LABELS`.
