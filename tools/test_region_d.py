@@ -76,7 +76,8 @@ class CollectTests(unittest.TestCase):
         self.assertEqual([s['id'] for s in sources],list(region.SOURCES))
         for key in ['oh-upper','oh-lower','pa-upper','pa-lower']:
             self.assertEqual(requests[key],dict(user_agent=build.USER_AGENT))
-        self.assertEqual(requests['ok-upper'],{})
+        self.assertEqual(requests['ok-upper'],dict(require_browser=True))
+        self.assertEqual(region.BROWSER, {'ok-upper'})
 
 
 if __name__=='__main__': unittest.main()

@@ -132,7 +132,13 @@ class StatewideBTests(unittest.TestCase):
                 if office == 'blockers': continue
                 self.assertEqual(status == 'collected', any(r[:2] == (st, office) for r in region.RULES), (st, office))
         self.assertEqual(region.STATEWIDE['MI'].get('lieutenantGovernor'), 'not-collected')
-        self.assertEqual(region.STATEWIDE['IA'].get('treasurer'), 'not-collected')
+        self.assertEqual(region.STATEWIDE['IA'].get('treasurer'), 'collected')
+
+    def test_iowa_treasurer_welcome_line(self):
+        page = "Hi – I’m Roby Smith, Iowa’s State Treasurer. I’d like to welcome you.".encode()
+        row = region.parse('sw-ia-treasurer', page, source('sw-ia-treasurer'))[0]
+        self.assertEqual((row['id'], row['name'], row['office']),
+                         ('ia-treasurer', 'Roby Smith', 'Treasurer'))
         for st, office in region.HOLDERS:
             self.assertIn(office, statewide.MULTI)
         self.assertTrue(all(office not in statewide.MULTI or (st, office) in region.HOLDERS for st, office, _, _ in region.RULES))

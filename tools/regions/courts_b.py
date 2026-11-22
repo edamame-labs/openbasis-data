@@ -35,6 +35,9 @@ RULES = {
               r'<li><a href="/courts/judicial-system/supreme-court-of-ohio/justices-overview/[a-z-]+/"><span class="float-right"><i class="fas fa-angle-right ml-3"></i></span>(?P<title>Chief Justice|Justice) '+N+r'</a></li>', 7, {}),
  'court-ok-cca': ('OK', 'Oklahoma Court of Criminal Appeals', 'Oklahoma Court of Criminal Appeals', 'https://www.okcca.net/judges/',
               r'<a href="https://www\.okcca\.net/judges/[a-z-]+/" data-type="page" data-id="\d+"> ?(?P<title>Vice Presiding Judge|Presiding Judge|Judge) '+N+r'</a>', 5, {}),
+ # The directory is a PDF (Okla. Const. art. VII §2: nine justices). Vice Chief Justice is mapped to Justice.
+ 'court-ok-supreme': ('OK', 'Supreme Court of Oklahoma', 'Supreme Court of Oklahoma', 'https://www.oscn.net/static/JudicialDirectory.pdf',
+              r'(?P<title>Vice Chief Justice|Chief Justice|Justice) (?P<name>[A-Z][A-Za-z.\'\-]+(?: [A-Z][A-Za-z.\'\-]+){1,3}) Oklahoma Supreme Court', 9, dict(pages=slice(0, 1))),
  # The roster page renders this list with scripts; the URL reads the same official list (view "Supreme") as XML. See parse_oregon.
  'court-or': ('OR', 'Oregon Supreme Court', 'Oregon Judicial Department',
               "https://www.courts.oregon.gov/courts/_api/web/GetList('/courts/Lists/Judges')/items?%24filter=Category%20eq%20%27Supreme%27&%24select=Title,FirstName,Middle_x0020_Initial,Suffix,Job_x0020_Title,Category",
@@ -76,8 +79,6 @@ BLOCKED = {
  'court-ny': ('NY', 'New York Court of Appeals', 'https://www.nycourts.gov/ctapps/',
               'nycourts.gov answered USER_AGENT with a bot challenge (HTTP 403, "Just a moment...") in November 2026. '
               'The court titles its members Chief Judge and Associate Judge; statewide.COURT_OFFICES has no Chief Judge.'),
- 'court-ok-supreme': ('OK', 'Supreme Court of Oklahoma', 'https://www.oscn.net/static/JudicialDirectory.pdf',
-              'oscn.net lists the current justices only in the PDF Judicial Directory; the build has no PDF text extraction.'),
  'court-ri': ('RI', 'Rhode Island Supreme Court', 'https://www.courts.ri.gov/Courts/SupremeCourt/Pages/default.aspx',
               'courts.ri.gov publishes no current list of the justices in its HTTP responses (November 2026); '
               'the only roster document, AboutTheSupremeCourt.pdf, was last modified in 2023.'),
@@ -100,9 +101,9 @@ for _key, (_st, _court, _url, _reason) in BLOCKED.items():
 USER_AGENT = 'Mozilla/5.0 (compatible; OpenBasisData/1.0; +https://github.com/edamame-labs/openbasis-data)'
 
 # Source title -> row office. Associate, vice and interim titles keep the member's seat type.
-TITLES = {'Chief Justice': 'Chief Justice', 'Interim Chief Justice': 'Chief Justice', 'Justice': 'Justice',
-          'Associate Justice': 'Justice', 'Associate Chief Justice': 'Justice', 'Presiding Judge': 'Presiding Judge',
-          'Vice Presiding Judge': 'Judge', 'Judge': 'Judge'}
+TITLES = {'Chief Justice': 'Chief Justice', 'Interim Chief Justice': 'Chief Justice', 'Vice Chief Justice': 'Justice',
+          'Justice': 'Justice', 'Associate Justice': 'Justice', 'Associate Chief Justice': 'Justice',
+          'Presiding Judge': 'Presiding Judge', 'Vice Presiding Judge': 'Judge', 'Judge': 'Judge'}
 CHIEFS = {'Chief Justice', 'Presiding Judge'}
 FAMILIES = ({'Chief Justice', 'Justice'}, {'Presiding Judge', 'Judge'})
 ROMAN = re.compile(r'(?:[IVX]+|[A-Z]\.(?:[A-Z]\.)*),?')
@@ -124,14 +125,21 @@ def slug(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
 
-def page_text(raw):
+def page_text(raw, pages=None):
+    if raw[:5] == b'%PDF-':
+        import io, logging, pypdf
+        logging.getLogger('pypdf').setLevel(logging.ERROR)
+        selected = pypdf.PdfReader(io.BytesIO(raw)).pages
+        if pages is not None: selected = selected[pages]
+        text = '\n'.join(page.extract_text() or '' for page in selected)
+        return ' '.join(text.split())
     return ' '.join(html.unescape(raw.decode('utf-8', 'replace')).split())
 
 
 def members_from_page(key, raw):
     """[(source title, name)] the rule extracts from the court's roster page."""
     _, _, _, _, pattern, _, extra = RULES[key]
-    page = page_text(raw)
+    page = page_text(raw, extra.get('pages'))
     if 'strip' in extra:
         page = ' '.join(re.sub(extra['strip'], ' ', page).split())
     found = []
@@ -196,7 +204,7 @@ def parse(key, raw, source):
 def collect(acquire, offline):
     rows, sources = [], []
     for key, (publisher, url) in SOURCES.items():
-        raw, source = acquire(key, publisher, url, offline, **({} if key in BROWSER else dict(user_agent=USER_AGENT)))
+        raw, source = acquire(key, publisher, url, offline, **(dict(require_browser=True) if key in BROWSER else dict(user_agent=USER_AGENT)))
         rows.extend(parse(key, raw, source))
         sources.append(source)
     assert len({r['id'] for r in rows}) == len(rows), 'Duplicate court member ids'

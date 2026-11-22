@@ -109,12 +109,24 @@ class CourtTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             region.parse('court-or', bad.encode(), source('court-or'))
 
+    def test_oklahoma_supreme_court_pdf_directory(self):
+        people = [('Chief Justice', 'Dustin P. Rowe'), ('Vice Chief Justice', 'Dana Kuehn'),
+                  ('Justice', 'James Winchester'), ('Justice', 'James Edmondson'), ('Justice', 'Douglas Combs'),
+                  ('Justice', 'Noma Gurich'), ('Justice', 'Richard Darby'), ('Justice', 'John Kane'),
+                  ('Justice', 'Travis Jett')]
+        page = 'THE SUPREME COURT OF OKLAHOMA ' + ' '.join(f'{t} {n} Oklahoma Supreme Court Dist. X' for t, n in people)
+        rows = region.parse('court-ok-supreme', page.encode(), source('court-ok-supreme'))
+        self.assertEqual(len(rows), 9)
+        self.assertEqual((rows[0]['name'], rows[0]['office'], rows[1]['office']),
+                         ('Dustin P. Rowe', 'Chief Justice', 'Justice'))
+        self.assertEqual(rows[1]['name'], 'Dana Kuehn')
+
     def test_declarations_cover_assigned_states(self):
         self.assertEqual(set(region.COURTS), set('MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY'.split()))
         statewide.check_declarations({}, region.COURTS, build.STATE_CODES)
         self.assertEqual(region.COURTS['TX'], {'Supreme Court of Texas': 'collected', 'Texas Court of Criminal Appeals': 'collected', 'blockers': []})
         self.assertEqual(region.COURTS['OK']['Oklahoma Court of Criminal Appeals'], 'collected')
-        self.assertEqual(region.COURTS['OK']['Supreme Court of Oklahoma'], 'not-collected')
+        self.assertEqual(region.COURTS['OK']['Supreme Court of Oklahoma'], 'collected')
         for key, (st, court, url, reason) in region.BLOCKED.items():
             self.assertTrue(any(url in b for b in region.COURTS[st]['blockers']), key)
 

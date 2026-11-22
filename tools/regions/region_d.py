@@ -15,6 +15,7 @@ SOURCE_HOSTS = set()
 # curl's default user agent with HTTP 403 (November 2026). The Oklahoma Senate answers both with a JavaScript
 # challenge, so it is read from an imported browser DOM observation (tools/import_snapshot.py).
 IDENTIFIED = {'oh-upper','oh-lower','pa-upper','pa-lower'}
+BROWSER = {'ok-upper'}
 COVERAGE = {st:{'upper':'collected','lower':'collected','blockers':[]} for st in ['OH','PA']}
 COVERAGE_OVERRIDES = {'OK':{'upper':'collected','blockers':[]}}
 BODIES = {'oh-upper':'Ohio Senate','oh-lower':'Ohio House of Representatives',
@@ -84,7 +85,9 @@ def parse(key, raw, source):
 def collect(fetch, offline=False):
     rows, sources = [], []
     for key, (publisher, url) in SOURCES.items():
-        raw, source = fetch(key, publisher, url, offline, **(dict(user_agent=USER_AGENT) if key in IDENTIFIED else {}))
+        extra = dict(user_agent=USER_AGENT) if key in IDENTIFIED else {}
+        if key in BROWSER: extra['require_browser'] = True
+        raw, source = fetch(key, publisher, url, offline, **extra)
         rows.extend(parse(key, raw, source))
         sources.append(source)
     return rows, sources

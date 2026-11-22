@@ -40,6 +40,8 @@ SOURCE_HOSTS = {'www.kslegislature.gov','www.arkleg.state.ar.us'}
 # Rosters requested with the project user agent. Their publishers answer it with the roster page and answer
 # curl's default user agent with HTTP 403 (November 2026).
 IDENTIFIED = {'fl-lower','il-lower','il-upper'}
+# Rosters whose HTTP response is an unrendered shell; a person-made DOM snapshot is required.
+BROWSER = {'ga-lower','ga-upper'}
 # Florida's legislative term; members take office upon election (Fla. Const. art. III, s. 15(d)).
 FL_TERM = '2026-2028'
 # Party for the Arkansas House: arkleg's list omits it; the House's own member list publishes it.
@@ -462,8 +464,10 @@ def arkansas_senate_party(fetch,offline,rows):
 
 
 def identified(key):
- """Extra fetch arguments for a roster requested with the project user agent."""
- return dict(user_agent=USER_AGENT) if key in IDENTIFIED else {}
+ """Extra fetch arguments for a roster requested with the project user agent, or a browser snapshot."""
+ extra=dict(user_agent=USER_AGENT) if key in IDENTIFIED else {}
+ if key in BROWSER: extra['require_browser']=True
+ return extra
 
 
 def collect(fetch,offline=False):
